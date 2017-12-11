@@ -29,6 +29,24 @@ def load_csv(csv_name=None, folder_path=None):
     
     return(data_frame)
 
+def load_dataframes(**kwargs):
+    frame_dict = {}
+    for frame_name in kwargs:
+        pickle_path = saves_folder + 'pickle/' + frame_name + '.pickle'
+        if not os.path.isfile(pickle_path):
+            csv_folder = saves_folder + 'csv/'
+            csv_path = csv_folder + frame_name + '.csv'
+            if not os.path.isfile(csv_path):
+                csv_path = data_folder + 'csv/' + frame_name + '.csv'
+                if not os.path.isfile(csv_path):
+                    frame_dict[frame_name] = None
+                else:
+                    frame_dict[frame_name] = load_csv(csv_name=frame_name)
+            else:
+                frame_dict[frame_name] = load_csv(csv_name=frame_name, folder_path=csv_folder)
+        else:
+            frame_dict[frame_name] = load_object(frame_name)
+
 def load_object(obj_name):
     pickle_path = saves_folder + 'pickle/' + obj_name + '.pickle'
     try:
