@@ -46,6 +46,8 @@ def load_dataframes(**kwargs):
                 frame_dict[frame_name] = load_csv(csv_name=frame_name, folder_path=csv_folder)
         else:
             frame_dict[frame_name] = load_object(frame_name)
+    
+    return frame_dict
 
 def load_object(obj_name):
     pickle_path = saves_folder + 'pickle/' + obj_name + '.pickle'
