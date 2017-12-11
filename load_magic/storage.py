@@ -15,8 +15,11 @@ encoding = ['latin1', 'iso8859-1', 'utf-8'][2]
 data_folder = r'../data/'
 saves_folder = r'../saves/'
 
-def load_csv(csv_name=None):
-    csv_folder = data_folder + 'csv/'
+def load_csv(csv_name=None, folder_path=None):
+    if folder_path is None:
+        csv_folder = data_folder + 'csv/'
+    else:
+        csv_folder = folder_path + 'csv/'
     if csv_name is None:
         csv_path = max([os.path.join(csv_folder, f) for f in os.listdir(csv_folder)],
                        key=os.path.getmtime)
