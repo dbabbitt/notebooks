@@ -49,13 +49,22 @@ def load_dataframes(**kwargs):
     
     return frame_dict
 
-def load_object(obj_name):
+def load_object(obj_name, download_url=None):
     pickle_path = saves_folder + 'pickle/' + obj_name + '.pickle'
-    try:
-        object = pd.read_pickle(pickle_path)
-    except:
-        with open(pickle_path, 'rb') as handle:
-            object = pickle.load(handle)
+    if not os.path.isfile(pickle_path):
+        csv_path = saves_folder + 'csv/' + obj_name + '.csv'
+        if not os.path.isfile(pickle_path):
+            object = pd.read_csv(download_url, low_memory=False,
+                                 encoding=encoding)
+        else:
+            object = pd.read_csv(csv_path, low_memory=False,
+                                 encoding=encoding)
+    else:
+        try:
+            object = pd.read_pickle(pickle_path)
+        except:
+            with open(pickle_path, 'rb') as handle:
+                object = pickle.load(handle)
     
     return(object)
 
