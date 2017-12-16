@@ -59,6 +59,11 @@ def load_object(obj_name, download_url=None):
         else:
             object = pd.read_csv(csv_path, low_memory=False,
                                  encoding=encoding)
+        if isinstance(object, pd.DataFrame):
+            object.to_pickle(pickle_path)
+        else:
+            with open(pickle_path, 'wb') as handle:
+                pickle.dump(object, handle, pickle.HIGHEST_PROTOCOL)
     else:
         try:
             object = pd.read_pickle(pickle_path)
