@@ -1,14 +1,15 @@
 
 # /Users/davebabbitt/Documents/Data Science Projects/Airline Sentiment/Airline Sentiment Solution.R
 #Install libraries
-library(caret)
-library(tm)
-library(SnowballC)
-library(Hmisc)
-library(plyr)
+if(!require('caret')) install.packages('caret'); require('caret')
+if(!require('tm')) install.packages('tm'); require('tm')
+if(!require('SnowballC')) install.packages('SnowballC'); require('SnowballC')
+if(!require('Hmisc')) install.packages('Hmisc'); require('Hmisc')
+if(!require('plyr')) install.packages('plyr'); require('plyr')
 
 # Read in raw data. Split data set into a training dataset (train) to train the model and a testing dataset (test) to test the model.
-raw <- read.csv("hackathon_data/train.csv")
+getwd()
+raw <- read.csv("./hackathon_data/train.csv")
 inTrain <- createDataPartition(y=raw$airline_sentiment, p=0.7, list=FALSE)
 test <- raw[-inTrain,]
 train <- raw[inTrain,]
@@ -23,7 +24,7 @@ processText = function(text_to_analyze){
   CorpusTranscript = Corpus(VectorSource(text_to_analyze))
   #CorpusTranscript = tm_map(CorpusTranscript, content_transformer(function(x) iconv(x, to='UTF-8-MAC', sub='byte')),
                             #mc.cores=1)
-  CorpusTranscript = tm_map(CorpusTranscript, content_transformer(tolower), mc.cores=1) # Convert string to lower case
+  CorpusTranscript = tm_map(CorpusTranscript, content_transformer(tolower), lazy=T) # Convert string to lower case
   CorpusTranscript = tm_map(CorpusTranscript, PlainTextDocument, lazy = T)
   CorpusTranscript = tm_map(CorpusTranscript, removePunctuation, lazy = T) # Remove punctuation
   CorpusTranscript = tm_map(CorpusTranscript, removeNumbers, lazy = T) # Remove numbers
@@ -38,7 +39,7 @@ processText = function(text_to_analyze){
 
 # Process text on training set
 docTM_pos <- processText(train$text[train$airline_sentiment=='positive'])
-docTM_neg <- processText(train$text[train$airline_sentiment=='negative'])
+  docTM_neg <- processText(train$text[train$airline_sentiment=='negative'])
 
 # Calculate word frequency vector for tweets with positive and negative sentiment
 freq_pos <- colSums(docTM_pos)
