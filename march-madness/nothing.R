@@ -1,0 +1,163 @@
+urls <- c("http://en.wikipedia.org/wiki/2015_NCAA_Men's_Division_I_Basketball_Tournament",
+          "http://www.ncaa.com/interactive-bracket/basketball-men/d1")
+dir.create("MMdocs")
+for (i in 1:length(urls)) {
+  print(paste0(i, "/", length(urls)))
+  download.file(urls[i], paste0('MMdocs/index0', i, '.html'))
+}
+
+if (!require('twitteR')) install.packages('twitteR'); require('twitteR')
+if (!require('rjson')) install.packages('rjson'); require('rjson')
+
+
+file.list <- list.files("TwitterDATA", full.names=TRUE)
+tweets.df <- data.frame(tweetID=character(0), text=character(0), tweetTime=character(0), userID=character(0),
+                       userName=character(0), lat=numeric(0), lon=numeric(0), tweetLoc=character(0),
+                       locType=character(0), stringsAsFactors=FALSE)
+for (file in file.list) {
+  print(paste("Reading", file, "..."))
+  for(line in readLines(file)) {
+    if(line != "") {
+      file.json <- fromJSON(json_str=line)
+      tweetID <- file.json[["id_str"]]
+      text <- file.json[["text"]]
+      tweetTime <- file.json[["created_at"]]
+      userID <- file.json[["user"]]$id_str
+      userName <- file.json[["user"]]$screen_name
+      lat <- file.json[["geo"]]$coordinates[1]
+      if(is.null(lat)) lat <- 0
+      lon <- file.json[["geo"]]$coordinates[2]
+      if(is.null(lon)) lon <- 0
+      tweetLoc <- file.json[["place"]]$full_name
+      locType <- file.json[["place"]]$place_type
+      if(!is.null(tweetID)) {
+        tweets.df <- rbind(tweets.df, data.frame(tweetID=tweetID, text=text, tweetTime=tweetTime, userID=userID,
+                                                 userName=userName, lat=lat, lon=lon, tweetLoc=tweetLoc,
+                                                 locType=locType, stringsAsFactors=FALSE))
+      }
+    }
+  }
+}
+if (!require('XML')) install.packages('XML'); require('XML')
+load("html_parse_url.RData")
+htmlParse(html_parse_url)
+
+dir.create("TwitterDATA")
+load("URL.folder.RData")
+download.file(paste0(URL.folder, "tweets_20150326_1_0136-0704_1(2).zip"), "TwitterDATA/tweets_20150326_1_0136-0704_1(2).zip")
+download.file(paste0(URL.folder, "tweets_20150326_1_0136-0704_1(2).zip"), "TwitterDATA/tweets_20150326_1_0136-0704_1(2).zip")
+download.file(paste0(URL.folder, "tweets_20150326_1_0136-0704_2(2).zip"), "TwitterDATA/tweets_20150326_1_0136-0704_2(2).zip")
+download.file(paste0(URL.folder, "tweets_20150326_1_0136-0704_2(2).zip"), "TwitterDATA/tweets_20150326_1_0136-0704_2(2).zip")
+download.file(paste0(URL.folder, "tweets_20150326_2_1814-2301_1(8).zip"), "TwitterDATA/tweets_20150326_2_1814-2301_1(8).zip")
+download.file(paste0(URL.folder, "tweets_20150326_2_1814-2301_1(8).zip"), "TwitterDATA/tweets_20150326_2_1814-2301_1(8).zip")
+download.file(paste0(URL.folder, "tweets_20150326_2_1814-2301_2(8).zip"), "TwitterDATA/tweets_20150326_2_1814-2301_2(8).zip")
+download.file(paste0(URL.folder, "tweets_20150326_2_1814-2301_2(8).zip"), "TwitterDATA/tweets_20150326_2_1814-2301_2(8).zip")
+download.file(paste0(URL.folder, "tweets_20150326_2_1814-2301_3(8).zip"), "TwitterDATA/tweets_20150326_2_1814-2301_3(8).zip")
+download.file(paste0(URL.folder, "tweets_20150326_2_1814-2301_3(8).zip"), "TwitterDATA/tweets_20150326_2_1814-2301_3(8).zip")
+download.file(paste0(URL.folder, "tweets_20150326_2_1814-2301_4(8).zip"), "TwitterDATA/tweets_20150326_2_1814-2301_4(8).zip")
+download.file(paste0(URL.folder, "tweets_20150326_2_1814-2301_4(8).zip"), "TwitterDATA/tweets_20150326_2_1814-2301_4(8).zip")
+download.file(paste0(URL.folder, "tweets_20150326_2_1814-2301_5(8).zip"), "TwitterDATA/tweets_20150326_2_1814-2301_5(8).zip")
+download.file(paste0(URL.folder, "tweets_20150326_2_1814-2301_5(8).zip"), "TwitterDATA/tweets_20150326_2_1814-2301_5(8).zip")
+download.file(paste0(URL.folder, "tweets_20150326_2_1814-2301_6(8).zip"), "TwitterDATA/tweets_20150326_2_1814-2301_6(8).zip")
+download.file(paste0(URL.folder, "tweets_20150326_2_1814-2301_6(8).zip"), "TwitterDATA/tweets_20150326_2_1814-2301_6(8).zip")
+download.file(paste0(URL.folder, "tweets_20150326_2_1814-2301_7(8).zip"), "TwitterDATA/tweets_20150326_2_1814-2301_7(8).zip")
+download.file(paste0(URL.folder, "tweets_20150326_2_1814-2301_7(8).zip"), "TwitterDATA/tweets_20150326_2_1814-2301_7(8).zip")
+download.file(paste0(URL.folder, "tweets_20150326_2_1814-2301_8(8).zip"), "TwitterDATA/tweets_20150326_2_1814-2301_8(8).zip")
+download.file(paste0(URL.folder, "tweets_20150326_2_1814-2301_8(8).zip"), "TwitterDATA/tweets_20150326_2_1814-2301_8(8).zip")
+download.file(paste0(URL.folder, "tweets_20150326_3_2301-0537_1(4).zip"), "TwitterDATA/tweets_20150326_3_2301-0537_1(4).zip")
+download.file(paste0(URL.folder, "tweets_20150326_3_2301-0537_1(4).zip"), "TwitterDATA/tweets_20150326_3_2301-0537_1(4).zip")
+download.file(paste0(URL.folder, "tweets_20150326_3_2301-0537_2(4).zip"), "TwitterDATA/tweets_20150326_3_2301-0537_2(4).zip")
+download.file(paste0(URL.folder, "tweets_20150326_3_2301-0537_2(4).zip"), "TwitterDATA/tweets_20150326_3_2301-0537_2(4).zip")
+download.file(paste0(URL.folder, "tweets_20150326_3_2301-0537_3(4).zip"), "TwitterDATA/tweets_20150326_3_2301-0537_3(4).zip")
+download.file(paste0(URL.folder, "tweets_20150326_3_2301-0537_3(4).zip"), "TwitterDATA/tweets_20150326_3_2301-0537_3(4).zip")
+download.file(paste0(URL.folder, "tweets_20150326_3_2301-0537_4(4).zip"), "TwitterDATA/tweets_20150326_3_2301-0537_4(4).zip")
+download.file(paste0(URL.folder, "tweets_20150326_3_2301-0537_4(4).zip"), "TwitterDATA/tweets_20150326_3_2301-0537_4(4).zip")
+download.file(paste0(URL.folder, "tweets_20150327_1_0537-0932_1(3).zip"), "TwitterDATA/tweets_20150327_1_0537-0932_1(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_1_0537-0932_1(3).zip"), "TwitterDATA/tweets_20150327_1_0537-0932_1(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_1_0537-0932_2(3).zip"), "TwitterDATA/tweets_20150327_1_0537-0932_2(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_1_0537-0932_2(3).zip"), "TwitterDATA/tweets_20150327_1_0537-0932_2(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_1_0537-0932_3(3).zip"), "TwitterDATA/tweets_20150327_1_0537-0932_3(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_1_0537-0932_3(3).zip"), "TwitterDATA/tweets_20150327_1_0537-0932_3(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_2_0933-1701_1(8).zip"), "TwitterDATA/tweets_20150327_2_0933-1701_1(8).zip")
+download.file(paste0(URL.folder, "tweets_20150327_2_0933-1701_1(8).zip"), "TwitterDATA/tweets_20150327_2_0933-1701_1(8).zip")
+download.file(paste0(URL.folder, "tweets_20150327_2_0933-1701_2(8).zip"), "TwitterDATA/tweets_20150327_2_0933-1701_2(8).zip")
+download.file(paste0(URL.folder, "tweets_20150327_2_0933-1701_2(8).zip"), "TwitterDATA/tweets_20150327_2_0933-1701_2(8).zip")
+download.file(paste0(URL.folder, "tweets_20150327_2_0933-1701_3(8).zip"), "TwitterDATA/tweets_20150327_2_0933-1701_3(8).zip")
+download.file(paste0(URL.folder, "tweets_20150327_2_0933-1701_3(8).zip"), "TwitterDATA/tweets_20150327_2_0933-1701_3(8).zip")
+download.file(paste0(URL.folder, "tweets_20150327_2_0933-1701_4(8).zip"), "TwitterDATA/tweets_20150327_2_0933-1701_4(8).zip")
+download.file(paste0(URL.folder, "tweets_20150327_2_0933-1701_4(8).zip"), "TwitterDATA/tweets_20150327_2_0933-1701_4(8).zip")
+download.file(paste0(URL.folder, "tweets_20150327_2_0933-1701_5(8).zip"), "TwitterDATA/tweets_20150327_2_0933-1701_5(8).zip")
+download.file(paste0(URL.folder, "tweets_20150327_2_0933-1701_5(8).zip"), "TwitterDATA/tweets_20150327_2_0933-1701_5(8).zip")
+download.file(paste0(URL.folder, "tweets_20150327_2_0933-1701_6(8).zip"), "TwitterDATA/tweets_20150327_2_0933-1701_6(8).zip")
+download.file(paste0(URL.folder, "tweets_20150327_2_0933-1701_6(8).zip"), "TwitterDATA/tweets_20150327_2_0933-1701_6(8).zip")
+download.file(paste0(URL.folder, "tweets_20150327_2_0933-1701_7(8).zip"), "TwitterDATA/tweets_20150327_2_0933-1701_7(8).zip")
+download.file(paste0(URL.folder, "tweets_20150327_2_0933-1701_7(8).zip"), "TwitterDATA/tweets_20150327_2_0933-1701_7(8).zip")
+download.file(paste0(URL.folder, "tweets_20150327_2_0933-1701_8(8).zip"), "TwitterDATA/tweets_20150327_2_0933-1701_8(8).zip")
+download.file(paste0(URL.folder, "tweets_20150327_2_0933-1701_8(8).zip"), "TwitterDATA/tweets_20150327_2_0933-1701_8(8).zip")
+download.file(paste0(URL.folder, "tweets_20150327_3_1702-1915_1(3).zip"), "TwitterDATA/tweets_20150327_3_1702-1915_1(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_3_1702-1915_1(3).zip"), "TwitterDATA/tweets_20150327_3_1702-1915_1(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_3_1702-1915_2(3).zip"), "TwitterDATA/tweets_20150327_3_1702-1915_2(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_3_1702-1915_2(3).zip"), "TwitterDATA/tweets_20150327_3_1702-1915_2(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_3_1702-1915_3(3).zip"), "TwitterDATA/tweets_20150327_3_1702-1915_3(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_3_1702-1915_3(3).zip"), "TwitterDATA/tweets_20150327_3_1702-1915_3(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_4_1915-2122_1(3).zip"), "TwitterDATA/tweets_20150327_4_1915-2122_1(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_4_1915-2122_1(3).zip"), "TwitterDATA/tweets_20150327_4_1915-2122_1(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_4_1915-2122_2(3).zip"), "TwitterDATA/tweets_20150327_4_1915-2122_2(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_4_1915-2122_2(3).zip"), "TwitterDATA/tweets_20150327_4_1915-2122_2(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_4_1915-2122_3(3).zip"), "TwitterDATA/tweets_20150327_4_1915-2122_3(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_4_1915-2122_3(3).zip"), "TwitterDATA/tweets_20150327_4_1915-2122_3(3).zip")
+download.file(paste0(URL.folder, "tweets_20150327_5_2127-0026_1(4).zip"), "TwitterDATA/tweets_20150327_5_2127-0026_1(4).zip")
+download.file(paste0(URL.folder, "tweets_20150327_5_2127-0026_1(4).zip"), "TwitterDATA/tweets_20150327_5_2127-0026_1(4).zip")
+download.file(paste0(URL.folder, "tweets_20150327_5_2127-0026_2(4).zip"), "TwitterDATA/tweets_20150327_5_2127-0026_2(4).zip")
+download.file(paste0(URL.folder, "tweets_20150327_5_2127-0026_2(4).zip"), "TwitterDATA/tweets_20150327_5_2127-0026_2(4).zip")
+download.file(paste0(URL.folder, "tweets_20150327_5_2127-0026_3(4).zip"), "TwitterDATA/tweets_20150327_5_2127-0026_3(4).zip")
+download.file(paste0(URL.folder, "tweets_20150327_5_2127-0026_3(4).zip"), "TwitterDATA/tweets_20150327_5_2127-0026_3(4).zip")
+download.file(paste0(URL.folder, "tweets_20150327_5_2127-0026_4(4).zip"), "TwitterDATA/tweets_20150327_5_2127-0026_4(4).zip")
+download.file(paste0(URL.folder, "tweets_20150327_5_2127-0026_4(4).zip"), "TwitterDATA/tweets_20150327_5_2127-0026_4(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_1_0026-0916_1(4).zip"), "TwitterDATA/tweets_20150328_1_0026-0916_1(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_1_0026-0916_1(4).zip"), "TwitterDATA/tweets_20150328_1_0026-0916_1(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_1_0026-0916_2(4).zip"), "TwitterDATA/tweets_20150328_1_0026-0916_2(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_1_0026-0916_2(4).zip"), "TwitterDATA/tweets_20150328_1_0026-0916_2(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_1_0026-0916_3(4).zip"), "TwitterDATA/tweets_20150328_1_0026-0916_3(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_1_0026-0916_3(4).zip"), "TwitterDATA/tweets_20150328_1_0026-0916_3(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_1_0026-0916_4(4).zip"), "TwitterDATA/tweets_20150328_1_0026-0916_4(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_1_0026-0916_4(4).zip"), "TwitterDATA/tweets_20150328_1_0026-0916_4(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_2_0916-1307_1(5).zip"), "TwitterDATA/tweets_20150328_2_0916-1307_1(5).zip")
+download.file(paste0(URL.folder, "tweets_20150328_2_0916-1307_1(5).zip"), "TwitterDATA/tweets_20150328_2_0916-1307_1(5).zip")
+download.file(paste0(URL.folder, "tweets_20150328_2_0916-1307_2(5).zip"), "TwitterDATA/tweets_20150328_2_0916-1307_2(5).zip")
+download.file(paste0(URL.folder, "tweets_20150328_2_0916-1307_2(5).zip"), "TwitterDATA/tweets_20150328_2_0916-1307_2(5).zip")
+download.file(paste0(URL.folder, "tweets_20150328_2_0916-1307_3(5).zip"), "TwitterDATA/tweets_20150328_2_0916-1307_3(5).zip")
+download.file(paste0(URL.folder, "tweets_20150328_2_0916-1307_3(5).zip"), "TwitterDATA/tweets_20150328_2_0916-1307_3(5).zip")
+download.file(paste0(URL.folder, "tweets_20150328_2_0916-1307_4(5).zip"), "TwitterDATA/tweets_20150328_2_0916-1307_4(5).zip")
+download.file(paste0(URL.folder, "tweets_20150328_2_0916-1307_4(5).zip"), "TwitterDATA/tweets_20150328_2_0916-1307_4(5).zip")
+download.file(paste0(URL.folder, "tweets_20150328_2_0916-1307_5(5).zip"), "TwitterDATA/tweets_20150328_2_0916-1307_5(5).zip")
+download.file(paste0(URL.folder, "tweets_20150328_2_0916-1307_5(5).zip"), "TwitterDATA/tweets_20150328_2_0916-1307_5(5).zip")
+download.file(paste0(URL.folder, "tweets_20150328_3_1307-1503_1(3).zip"), "TwitterDATA/tweets_20150328_3_1307-1503_1(3).zip")
+download.file(paste0(URL.folder, "tweets_20150328_3_1307-1503_1(3).zip"), "TwitterDATA/tweets_20150328_3_1307-1503_1(3).zip")
+download.file(paste0(URL.folder, "tweets_20150328_3_1307-1503_2(3).zip"), "TwitterDATA/tweets_20150328_3_1307-1503_2(3).zip")
+download.file(paste0(URL.folder, "tweets_20150328_3_1307-1503_2(3).zip"), "TwitterDATA/tweets_20150328_3_1307-1503_2(3).zip")
+download.file(paste0(URL.folder, "tweets_20150328_3_1307-1503_3(3).zip"), "TwitterDATA/tweets_20150328_3_1307-1503_3(3).zip")
+download.file(paste0(URL.folder, "tweets_20150328_3_1307-1503_3(3).zip"), "TwitterDATA/tweets_20150328_3_1307-1503_3(3).zip")
+download.file(paste0(URL.folder, "tweets_20150328_4_1504-1756_1(4).zip"), "TwitterDATA/tweets_20150328_4_1504-1756_1(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_4_1504-1756_1(4).zip"), "TwitterDATA/tweets_20150328_4_1504-1756_1(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_4_1504-1756_2(4).zip"), "TwitterDATA/tweets_20150328_4_1504-1756_2(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_4_1504-1756_2(4).zip"), "TwitterDATA/tweets_20150328_4_1504-1756_2(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_4_1504-1756_3(4).zip"), "TwitterDATA/tweets_20150328_4_1504-1756_3(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_4_1504-1756_3(4).zip"), "TwitterDATA/tweets_20150328_4_1504-1756_3(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_4_1504-1756_4(4).zip"), "TwitterDATA/tweets_20150328_4_1504-1756_4(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_4_1504-1756_4(4).zip"), "TwitterDATA/tweets_20150328_4_1504-1756_4(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_5_1756-1945_1(3).zip"), "TwitterDATA/tweets_20150328_5_1756-1945_1(3).zip")
+download.file(paste0(URL.folder, "tweets_20150328_5_1756-1945_1(3).zip"), "TwitterDATA/tweets_20150328_5_1756-1945_1(3).zip")
+download.file(paste0(URL.folder, "tweets_20150328_5_1756-1945_2(3).zip"), "TwitterDATA/tweets_20150328_5_1756-1945_2(3).zip")
+download.file(paste0(URL.folder, "tweets_20150328_5_1756-1945_2(3).zip"), "TwitterDATA/tweets_20150328_5_1756-1945_2(3).zip")
+download.file(paste0(URL.folder, "tweets_20150328_5_1756-1945_3(3).zip"), "TwitterDATA/tweets_20150328_5_1756-1945_3(3).zip")
+download.file(paste0(URL.folder, "tweets_20150328_5_1756-1945_3(3).zip"), "TwitterDATA/tweets_20150328_5_1756-1945_3(3).zip")
+download.file(paste0(URL.folder, "tweets_20150328_6_1945-2204_1(4).zip"), "TwitterDATA/tweets_20150328_6_1945-2204_1(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_6_1945-2204_1(4).zip"), "TwitterDATA/tweets_20150328_6_1945-2204_1(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_6_1945-2204_2(4).zip"), "TwitterDATA/tweets_20150328_6_1945-2204_2(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_6_1945-2204_2(4).zip"), "TwitterDATA/tweets_20150328_6_1945-2204_2(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_6_1945-2204_3(4).zip"), "TwitterDATA/tweets_20150328_6_1945-2204_3(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_6_1945-2204_3(4).zip"), "TwitterDATA/tweets_20150328_6_1945-2204_3(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_6_1945-2204_4(4).zip"), "TwitterDATA/tweets_20150328_6_1945-2204_4(4).zip")
+download.file(paste0(URL.folder, "tweets_20150328_6_1945-2204_4(4).zip"), "TwitterDATA/tweets_20150328_6_1945-2204_4(4).zip")
+

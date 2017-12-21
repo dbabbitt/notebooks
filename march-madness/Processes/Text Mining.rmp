@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<process version="6.3.000">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="6.3.000" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="retrieve" compatibility="6.3.000" expanded="true" height="60" name="Retrieve tweets" width="90" x="45" y="75">
+        <parameter key="repository_entry" value="../Data/tweets"/>
+      </operator>
+      <operator activated="true" class="set_role" compatibility="6.3.000" expanded="true" height="76" name="Set Role" width="90" x="179" y="75">
+        <parameter key="attribute_name" value="tweetID"/>
+        <parameter key="target_role" value="id"/>
+        <list key="set_additional_roles">
+          <parameter key="text" value="regular"/>
+        </list>
+      </operator>
+      <operator activated="true" class="text:process_documents" compatibility="6.1.000" expanded="true" height="94" name="Process Documents" width="90" x="313" y="75">
+        <parameter key="create_word_vector" value="true"/>
+        <parameter key="vector_creation" value="TF-IDF"/>
+        <parameter key="add_meta_information" value="true"/>
+        <parameter key="keep_text" value="false"/>
+        <parameter key="prune_method" value="none"/>
+        <parameter key="prune_below_percent" value="3.0"/>
+        <parameter key="prune_above_percent" value="30.0"/>
+        <parameter key="prune_below_rank" value="0.05"/>
+        <parameter key="prune_above_rank" value="0.95"/>
+        <parameter key="datamanagement" value="double_sparse_array"/>
+        <process expanded="true">
+          <portSpacing port="source_document" spacing="0"/>
+          <portSpacing port="sink_document 1" spacing="0"/>
+        </process>
+      </operator>
+      <connect from_op="Retrieve tweets" from_port="output" to_op="Set Role" to_port="example set input"/>
+      <connect from_op="Set Role" from_port="example set output" to_op="Process Documents" to_port="documents 1"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+    </process>
+  </operator>
+</process>
