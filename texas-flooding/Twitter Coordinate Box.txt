@@ -1,0 +1,12 @@
+Degrees Decimal Minutes
+
+upper left: long -107 19.792
+	  lat    36 36.423
+lower left: long  -107 18.97
+	  lat     25 37.9
+
+upper right: long -88 52.836
+                 lat    36 37.37
+
+lower right: long  -88 52.014
+                 lat    25 38.964
