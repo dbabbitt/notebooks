@@ -37,13 +37,13 @@ team.csv <- read.csv('extractedlocationdata_20150111_cowboys_summary.csv')
 team.clean <- clean.text(team.csv$Sentence)
 
 # Association Rules
-require(arules, quietly=TRUE)
+require(arules, quietly = TRUE)
 
 # Show tweet words broken up into vectors
 team.list <- sapply(team.clean, function(x) {names(table(unlist(strsplit(x, '\\s+'))))})
 
 # Set transaction names
-names(team.list) <- paste('Tr', c(1:length(team.list)), sep='')
+names(team.list) <- paste('Tr', c(1:length(team.list)), sep = '')
 
 # Coerce into transactions
 team.xact <- as(team.list, 'transactions')
@@ -56,10 +56,10 @@ team.xact <- as(team.list, 'transactions')
 
 # Generate the association rules
 team.apriori <- apriori(team.xact,
-                        parameter=list(support=0.04, confidence=0.100, minlen=3))
+                        parameter = list(support = 0.04, confidence = 0.100, minlen = 3))
 
 # Analyze association rules
-sink(file='apriori.txt')
+sink(file = 'apriori.txt')
 inspect(team.apriori)
 sink()
 # summary(team.apriori)

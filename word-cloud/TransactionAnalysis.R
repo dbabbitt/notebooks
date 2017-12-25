@@ -35,19 +35,19 @@ clean.text <- function(x)
 generate.rules <- function(name)
 {
 	# Import the files and clean them
-	team.csv <- read.csv(paste(name, '.csv', sep=''))
+	team.csv <- read.csv(paste(name, '.csv', sep = ''))
 	team.csv$text <- as.factor(team.csv$text)
 	team.clean <- clean.text(team.csv$text)
-	team.clean <- gsub(paste('\\s*\\b', name, '?\\b\\s*', sep=''), ' ', team.clean)
+	team.clean <- gsub(paste('\\s*\\b', name, '?\\b\\s*', sep = ''), ' ', team.clean)
 
 	# Association Rules
-	require(arules, quietly=TRUE)
+	require(arules, quietly = TRUE)
 
 	# Show tweet words broken up into vectors
 	team.list <- sapply(team.clean, function(x) {names(table(unlist(strsplit(x, '\\s+'))))})
 
 	# Set transaction names
-	names(team.list) <- paste('Tr', c(1:length(team.list)), sep='')
+	names(team.list) <- paste('Tr', c(1:length(team.list)), sep = '')
 
 	# Coerce into transactions
 	team.xact <- as(team.list, 'transactions')
@@ -60,10 +60,10 @@ generate.rules <- function(name)
 
 	# Generate the association rules
 	team.apriori <- apriori(team.xact,
-							 parameter=list(support=0.004, confidence=0.100, minlen=3))
+							 parameter = list(support = 0.004, confidence = 0.100, minlen = 3))
 
 	# Analyze association rules
-	sink(file=paste(name, '.apriori.txt', sep=''))
+	sink(file = paste(name, '.apriori.txt', sep = ''))
 	inspect(team.apriori)
 	sink()
 	# summary(team.apriori)

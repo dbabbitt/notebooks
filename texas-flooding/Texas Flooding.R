@@ -2,11 +2,11 @@
 if (!require('tm')) install.packages('tm', repos = 'http://cran.us.r-project.org'); require('tm')
 
 # Get the file names
-tweets.files <- list.files(path=paste(sep='/', getwd(), 'tweets_wordfiltered'))
+tweets.files <- list.files(path = paste(sep = '/', getwd(), 'tweets_wordfiltered'))
 
 # First apply read.csv, then rbind
 tweets.csv <- do.call('rbind', lapply(tweets.files, function(x) {
-  read.csv(paste(sep='/', getwd(), 'tweets_wordfiltered', x), stringsAsFactors=FALSE)}))
+  read.csv(paste(sep = '/', getwd(), 'tweets_wordfiltered', x), stringsAsFactors = FALSE)}))
 tweets.csv <- unique(tweets.csv)
 
 tweets.corpus <- VCorpus(VectorSource(tweets.csv$text))
@@ -25,7 +25,7 @@ tweets.mx <- as.matrix(tweets.tdm)
 
 # Add up the counts on each row to create a frequency table
 if (!require('wordcloud')) install.packages('wordcloud', repos = 'http://cran.us.r-project.org'); require('wordcloud')
-tweets.sorted <- sort(rowSums(tweets.mx), decreasing=TRUE)
+tweets.sorted <- sort(rowSums(tweets.mx), decreasing = TRUE)
 tweets.sorted[1:50]
 tweets.sorted.df <- as.data.frame(tweets.sorted)
 tweets.sorted.df$Terms <- names(tweets.sorted)
@@ -89,7 +89,7 @@ english.stop.words <- c(
 tweets.clean <- tweets.csv$text
 tweets.clean <- tolower(tweets.clean)
 for(i in 1:length(english.stop.words)) {
-  tweets.clean <- gsub(paste('\\b', english.stop.words[i], '\\b\\s*', sep=''), '', tweets.clean)
+  tweets.clean <- gsub(paste('\\b', english.stop.words[i], '\\b\\s*', sep = ''), '', tweets.clean)
 }
 tweets.clean <- gsub('[^A-Za-z ]+', '', tweets.clean)
 tweets.clean <- gsub('\\s+', ' ', tweets.clean)
@@ -98,7 +98,7 @@ tweets.clean <- gsub('\\s+', ' ', tweets.clean)
 tweets.list <- sapply(tweets.clean, function(x) {names(table(unlist(strsplit(x, '\\s+'))))})
 
 # Set transaction names
-names(tweets.list) <- paste('Tr', c(1:length(tweets.list)), sep='')
+names(tweets.list) <- paste('Tr', c(1:length(tweets.list)), sep = '')
 
 # Coerce into transactions
 tweets.xact <- as(tweets.list, 'transactions')
@@ -110,53 +110,53 @@ image(tweets.xact)
 
 # Generate the association rules
 tweets.apriori <- apriori(tweets.xact,
-                        parameter=list(support=0.015, confidence=0.800, minlen=3))
+                        parameter = list(support = 0.015, confidence = 0.800, minlen = 3))
 
 # Analyze association rules
-sink(file='tweets.apriori.txt')
+sink(file = 'tweets.apriori.txt')
 inspect(tweets.apriori)
 sink()
 
 if (!require('zoo')) install.packages('zoo', repos = 'http://cran.us.r-project.org'); require('zoo')
-tweets.csv$tweetTime <- as.POSIXct(tweets.csv$tweetTime, format='%a %b %d %H:%M:%S %Y')
+tweets.csv$tweetTime <- as.POSIXct(tweets.csv$tweetTime, format = '%a %b %d %H:%M:%S %Y')
 x <- zoo(tweets.csv$tweetTime)
 x.agg <- aggregate(x, time(x) - as.numeric(time(x)) %% 600, mean)
-max(strftime(tweets.csv$tweetTime, format='%H:%M'))
+max(strftime(tweets.csv$tweetTime, format = '%H:%M'))
 
-x.min <- min(strftime(tweets.csv$tweetTime, format='%H:%M'))
-x.min <- as.numeric(strftime(as.POSIXct(x.min, format='%H:%M'), format='%H'))*60 +
-  as.numeric(strftime(as.POSIXct(x.min, format='%H:%M'), format='%M'))
-x.max <- max(strftime(tweets.csv$tweetTime, format='%H:%M'))
-x.max <- as.numeric(strftime(as.POSIXct(x.max, format='%H:%M'), format='%H'))*60 +
-  as.numeric(strftime(as.POSIXct(x.max, format='%H:%M'), format='%M'))
+x.min <- min(strftime(tweets.csv$tweetTime, format = '%H:%M'))
+x.min <- as.numeric(strftime(as.POSIXct(x.min, format = '%H:%M'), format = '%H'))*60 +
+  as.numeric(strftime(as.POSIXct(x.min, format = '%H:%M'), format = '%M'))
+x.max <- max(strftime(tweets.csv$tweetTime, format = '%H:%M'))
+x.max <- as.numeric(strftime(as.POSIXct(x.max, format = '%H:%M'), format = '%H'))*60 +
+  as.numeric(strftime(as.POSIXct(x.max, format = '%H:%M'), format = '%M'))
 seq(x.min, x.max)
-y.min <- as.numeric(min(strftime(tweets.csv$tweetTime, format='%u')))
-y.max <- as.numeric(max(strftime(tweets.csv$tweetTime, format='%u')))
+y.min <- as.numeric(min(strftime(tweets.csv$tweetTime, format = '%u')))
+y.max <- as.numeric(max(strftime(tweets.csv$tweetTime, format = '%u')))
 seq(y.min, y.max)
 
-data <- data.frame(x=seq(x.min, x.max),
-                   y=rep(y.min:y.max, each=x.max-x.min+1),
-                   z=0,
-                   stringsAsFactors=FALSE)
+data <- data.frame(x = seq(x.min, x.max),
+                   y = rep(y.min:y.max, each = x.max-x.min+1),
+                   z = 0,
+                   stringsAsFactors = FALSE)
 
 # Loop through all the tweets and tally the minutes
 for(i in 1:nrow(tweets.csv)) {
-  x <- as.numeric(strftime(tweets.csv[i, 'tweetTime'], format='%H'))*60 +
-    as.numeric(strftime(tweets.csv[i, 'tweetTime'], format='%M'))
-  y <- as.numeric(strftime(tweets.csv[i, 'tweetTime'], format='%u'))
-  row <- which(data$x==x & data$y==y)
+  x <- as.numeric(strftime(tweets.csv[i, 'tweetTime'], format = '%H'))*60 +
+    as.numeric(strftime(tweets.csv[i, 'tweetTime'], format = '%M'))
+  y <- as.numeric(strftime(tweets.csv[i, 'tweetTime'], format = '%u'))
+  row <- which(data$x == x & data$y == y)
   data[row, 'z'] <- data[row, 'z'] + 1
 }
 
 if (!require('akima')) install.packages('akima', repos = 'http://cran.us.r-project.org'); require('akima')
 resolution <- 0.1 # you can increase the resolution by decreasing this number
-a <- interp(x=data$x, y=data$y, z=data$z, 
-            xo=seq(min(data$x), max(data$x), by=resolution), 
-            yo=seq(min(data$y), max(data$y), by=resolution), duplicate='mean')
-a <- interp(x=data$x, y=data$y, z=data$z)
+a <- interp(x = data$x, y = data$y, z = data$z, 
+            xo = seq(min(data$x), max(data$x), by = resolution), 
+            yo = seq(min(data$y), max(data$y), by = resolution), duplicate = 'mean')
+a <- interp(x = data$x, y = data$y, z = data$z)
 image(a) #you can of course modify the color palette and the color categories. See ?image for more explanation
 
-filled.contour(a, color.palette=heat.colors, plot.axes={ axis(1, seq(x.min, x.max, by=60))
+filled.contour(a, color.palette = heat.colors, plot.axes = { axis(1, seq(x.min, x.max, by = 60))
                                                          axis(2, y.min:y.max)})
 
 if (!require('qdap')) install.packages('qdap', repos = 'http://cran.us.r-project.org'); require('qdap')

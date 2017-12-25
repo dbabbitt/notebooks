@@ -7,7 +7,7 @@ library(plyr)
 
 # Read in raw data. Split data set into a training dataset (train) to train the model and a testing dataset (test) to test the model.
 raw <- read.csv('/Users/melissahedberg/airline-twitter-sentiment/hackathon_data/train.csv')
-inTrain <- createDataPartition(y=raw$airline_sentiment, p=0.7, list=FALSE)
+inTrain <- createDataPartition(y = raw$airline_sentiment, p = 0.7, list = FALSE)
 test <- raw[-inTrain,]
 train <- raw[inTrain,]
 
@@ -19,9 +19,9 @@ head(train)
 # Generate a function to preprocess tweets and create a tf-idf matrix
 processText = function(text_to_analyze){
   CorpusTranscript = Corpus(VectorSource(text_to_analyze))
-  CorpusTranscript = tm_map(CorpusTranscript, content_transformer(function(x) iconv(x, to='UTF-8-MAC', sub='byte')),
-                            mc.cores=1)
-  CorpusTranscript = tm_map(CorpusTranscript, content_transformer(tolower), mc.cores=1) # Convert string to lower case
+  CorpusTranscript = tm_map(CorpusTranscript, content_transformer(function(x) iconv(x, to = 'UTF-8-MAC', sub = 'byte')),
+                            mc.cores = 1)
+  CorpusTranscript = tm_map(CorpusTranscript, content_transformer(tolower), mc.cores = 1) # Convert string to lower case
   CorpusTranscript = tm_map(CorpusTranscript, PlainTextDocument, lazy = T)
   CorpusTranscript = tm_map(CorpusTranscript, removePunctuation, lazy = T) # Remove punctuation
   CorpusTranscript = tm_map(CorpusTranscript, removeNumbers, lazy = T) # Remove numbers
@@ -41,7 +41,7 @@ train_tfIdf = processText(train$text)
 training = cbind(train, train_tfIdf)
 n = length(training)
 training <- training[,c(9:n)]
-modelFit_rf = train(airline_sentiment ~ ., data=training, method='rf', preProcess = c('center', 'scale'), prox=TRUE)
+modelFit_rf = train(airline_sentiment ~ ., data = training, method = 'rf', preProcess = c('center', 'scale'), prox = TRUE)
 modelFit_rf
 # Random Forest 
 # 
@@ -68,9 +68,9 @@ terms = names(train_tfIdf)
 #Define new function to create tf-idf matrix that takes a dictionary of terms for the tf-idf as a second argument.
 analyzeText = function(text_to_analyze, terms){  
   CorpusTranscript = Corpus(VectorSource(text_to_analyze))
-  CorpusTranscript = tm_map(CorpusTranscript, content_transformer(function(x) iconv(x, to='UTF-8-MAC', sub='byte')),
-                            mc.cores=1)
-  CorpusTranscript = tm_map(CorpusTranscript, content_transformer(tolower), mc.cores=1) # Convert string to lower case
+  CorpusTranscript = tm_map(CorpusTranscript, content_transformer(function(x) iconv(x, to = 'UTF-8-MAC', sub = 'byte')),
+                            mc.cores = 1)
+  CorpusTranscript = tm_map(CorpusTranscript, content_transformer(tolower), mc.cores = 1) # Convert string to lower case
   CorpusTranscript = tm_map(CorpusTranscript, PlainTextDocument, lazy = T)
   CorpusTranscript = tm_map(CorpusTranscript, removePunctuation, lazy = T) # Remove punctuation
   CorpusTranscript = tm_map(CorpusTranscript, removeNumbers, lazy = T) # Remove numbers

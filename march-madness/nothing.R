@@ -10,15 +10,15 @@ if (!require('twitteR')) install.packages('twitteR', repos = 'http://cran.us.r-p
 if (!require('rjson')) install.packages('rjson', repos = 'http://cran.us.r-project.org'); require('rjson')
 
 
-file.list <- list.files('TwitterDATA', full.names=TRUE)
-tweets.df <- data.frame(tweetID=character(0), text=character(0), tweetTime=character(0), userID=character(0),
-                       userName=character(0), lat=numeric(0), lon=numeric(0), tweetLoc=character(0),
-                       locType=character(0), stringsAsFactors=FALSE)
+file.list <- list.files('TwitterDATA', full.names = TRUE)
+tweets.df <- data.frame(tweetID = character(0), text = character(0), tweetTime = character(0), userID = character(0),
+                       userName = character(0), lat = numeric(0), lon = numeric(0), tweetLoc = character(0),
+                       locType = character(0), stringsAsFactors = FALSE)
 for (file in file.list) {
   print(paste('Reading', file, '...'))
   for(line in readLines(file)) {
-    if(line != '') {
-      file.json <- fromJSON(json_str=line)
+    if(line ! = '') {
+      file.json <- fromJSON(json_str = line)
       tweetID <- file.json[['id_str']]
       text <- file.json[['text']]
       tweetTime <- file.json[['created_at']]
@@ -31,9 +31,9 @@ for (file in file.list) {
       tweetLoc <- file.json[['place']]$full_name
       locType <- file.json[['place']]$place_type
       if(!is.null(tweetID)) {
-        tweets.df <- rbind(tweets.df, data.frame(tweetID=tweetID, text=text, tweetTime=tweetTime, userID=userID,
-                                                 userName=userName, lat=lat, lon=lon, tweetLoc=tweetLoc,
-                                                 locType=locType, stringsAsFactors=FALSE))
+        tweets.df <- rbind(tweets.df, data.frame(tweetID = tweetID, text = text, tweetTime = tweetTime, userID = userID,
+                                                 userName = userName, lat = lat, lon = lon, tweetLoc = tweetLoc,
+                                                 locType = locType, stringsAsFactors = FALSE))
       }
     }
   }
