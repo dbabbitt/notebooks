@@ -53,8 +53,9 @@ def load_dataframes(**kwargs):
 def load_object(obj_name, download_url=None):
     pickle_path = saves_folder + 'pickle/' + obj_name + '.pickle'
     if not os.path.isfile(pickle_path):
-        csv_path = saves_folder + 'csv/' + obj_name + '.csv'
+        csv_path = data_folder + 'csv/' + obj_name + '.csv'
         if not os.path.isfile(csv_path):
+            print('Not in', csv_path)
             object = pd.read_csv(download_url, low_memory=False,
                                  encoding=encoding)
         else:
