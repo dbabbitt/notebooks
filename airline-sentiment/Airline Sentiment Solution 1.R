@@ -6,14 +6,14 @@ library(Hmisc)
 library(plyr)
 
 # Read in raw data. Split data set into a training dataset (train) to train the model and a testing dataset (test) to test the model.
-raw <- read.csv("/Users/melissahedberg/airline-twitter-sentiment/hackathon_data/train.csv")
+raw <- read.csv('/Users/melissahedberg/airline-twitter-sentiment/hackathon_data/train.csv')
 inTrain <- createDataPartition(y=raw$airline_sentiment, p=0.7, list=FALSE)
 test <- raw[-inTrain,]
 train <- raw[inTrain,]
 
 # Remove the @airline bit of the text of the tweet
-train$text = gsub("^@\\w+ *", "", train$text)
-test$text = gsub("^@\\w+ *", "", test$text)
+train$text = gsub('^@\\w+ *', '', train$text)
+test$text = gsub('^@\\w+ *', '', test$text)
 head(train)
 
 # Generate a function to preprocess tweets and create a tf-idf matrix
@@ -25,7 +25,7 @@ processText = function(text_to_analyze){
   CorpusTranscript = tm_map(CorpusTranscript, PlainTextDocument, lazy = T)
   CorpusTranscript = tm_map(CorpusTranscript, removePunctuation, lazy = T) # Remove punctuation
   CorpusTranscript = tm_map(CorpusTranscript, removeNumbers, lazy = T) # Remove numbers
-  CorpusTranscript = tm_map(CorpusTranscript, removeWords, stopwords("english"), lazy = T) # Remove english stop words
+  CorpusTranscript = tm_map(CorpusTranscript, removeWords, stopwords('english'), lazy = T) # Remove english stop words
   CorpusTranscript = tm_map(CorpusTranscript, stemDocument, lazy = T)  # Remove endings such as -ing and -ed from words
   docTM = DocumentTermMatrix(CorpusTranscript, control = list(weighting = function(x) weightTfIdf(x, normalize = FALSE)))
   docTM = removeSparseTerms(docTM, 0.98)
@@ -41,7 +41,7 @@ train_tfIdf = processText(train$text)
 training = cbind(train, train_tfIdf)
 n = length(training)
 training <- training[,c(9:n)]
-modelFit_rf = train(airline_sentiment ~ ., data=training, method="rf", preProcess = c("center", "scale"), prox=TRUE)
+modelFit_rf = train(airline_sentiment ~ ., data=training, method='rf', preProcess = c('center', 'scale'), prox=TRUE)
 modelFit_rf
 # Random Forest 
 # 
@@ -74,7 +74,7 @@ analyzeText = function(text_to_analyze, terms){
   CorpusTranscript = tm_map(CorpusTranscript, PlainTextDocument, lazy = T)
   CorpusTranscript = tm_map(CorpusTranscript, removePunctuation, lazy = T) # Remove punctuation
   CorpusTranscript = tm_map(CorpusTranscript, removeNumbers, lazy = T) # Remove numbers
-  CorpusTranscript = tm_map(CorpusTranscript, removeWords, stopwords("english"), lazy = T) # Remove english stop words
+  CorpusTranscript = tm_map(CorpusTranscript, removeWords, stopwords('english'), lazy = T) # Remove english stop words
   CorpusTranscript = tm_map(CorpusTranscript, stemDocument, lazy = T)  # Remove endings such as -ing and -ed from words
   docTM = DocumentTermMatrix(CorpusTranscript, list(dictionary = terms))
   docTM = as.data.frame(as.matrix(docTM))

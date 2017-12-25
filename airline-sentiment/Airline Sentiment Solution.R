@@ -9,14 +9,14 @@ if(!require('plyr')) install.packages('plyr', repos = 'http://cran.us.r-project.
 
 # Read in raw data. Split data set into a training dataset (train) to train the model and a testing dataset (test) to test the model.
 getwd()
-raw <- read.csv("./hackathon_data/train.csv")
+raw <- read.csv('./hackathon_data/train.csv')
 inTrain <- createDataPartition(y=raw$airline_sentiment, p=0.7, list=FALSE)
 test <- raw[-inTrain,]
 train <- raw[inTrain,]
 
 # Remove the @airline bit of the text of the tweet
-train$text = gsub("^@\\w+ *", "", train$text)
-test$text = gsub("^@\\w+ *", "", test$text)
+train$text = gsub('^@\\w+ *', '', train$text)
+test$text = gsub('^@\\w+ *', '', test$text)
 head(train)
 
 # Generate a function to preprocess tweets and create a term frequency matrix
@@ -28,7 +28,7 @@ processText = function(text_to_analyze){
   CorpusTranscript = tm_map(CorpusTranscript, PlainTextDocument, lazy = T)
   CorpusTranscript = tm_map(CorpusTranscript, removePunctuation, lazy = T) # Remove punctuation
   CorpusTranscript = tm_map(CorpusTranscript, removeNumbers, lazy = T) # Remove numbers
-  CorpusTranscript = tm_map(CorpusTranscript, removeWords, stopwords("english"), lazy = T) # Remove english stop words
+  CorpusTranscript = tm_map(CorpusTranscript, removeWords, stopwords('english'), lazy = T) # Remove english stop words
   CorpusTranscript = tm_map(CorpusTranscript, stemDocument, lazy = T)  # Remove endings such as -ing and -ed from words
   docTM = DocumentTermMatrix(CorpusTranscript)
   docTM = removeSparseTerms(docTM, 0.99)
@@ -50,7 +50,7 @@ freq_neg <- data.frame(word=names(freq_neg), freq=freq_neg)
 rownames(freq_neg) <- NULL
 
 # merge by word
-freq <- merge(freq_neg, freq_pos, by.x="word", by.y="word", all=TRUE, suffixes=c("_neg","_pos"))
+freq <- merge(freq_neg, freq_pos, by.x='word', by.y='word', all=TRUE, suffixes=c('_neg','_pos'))
 head(freq)
 
 # clean up
@@ -86,7 +86,7 @@ analyzeText = function(text_to_analyze, terms){
   CorpusTranscript = tm_map(CorpusTranscript, PlainTextDocument, lazy = T)
   CorpusTranscript = tm_map(CorpusTranscript, removePunctuation, lazy = T) # Remove punctuation
   CorpusTranscript = tm_map(CorpusTranscript, removeNumbers, lazy = T) # Remove numbers
-  CorpusTranscript = tm_map(CorpusTranscript, removeWords, stopwords("english"), lazy = T) # Remove english stop words
+  CorpusTranscript = tm_map(CorpusTranscript, removeWords, stopwords('english'), lazy = T) # Remove english stop words
   CorpusTranscript = tm_map(CorpusTranscript, stemDocument, lazy = T)  # Remove endings such as -ing and -ed from words
   docTM = DocumentTermMatrix(CorpusTranscript, list(dictionary = terms))
   docTM = as.data.frame(as.matrix(docTM))
@@ -101,7 +101,7 @@ train_tfIdf = analyzeText(train$text, terms)
 training = cbind(train, train_tfIdf)
 n = length(training)
 training <- training[,c(9:n)]
-modelFit_rf = train(airline_sentiment ~ ., data=training, method="rf", preProcess = c("center", "scale"), prox=TRUE)
+modelFit_rf = train(airline_sentiment ~ ., data=training, method='rf', preProcess = c('center', 'scale'), prox=TRUE)
 modelFit_rf
 # Random Forest 
 # 

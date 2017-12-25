@@ -1,25 +1,25 @@
 
 
-# install.packages("twitteR")
+# install.packages('twitteR')
 if(!require('twitteR')) install.packages('twitteR', repos = 'http://cran.us.r-project.org'); require('twitteR')
 
-# install.packages("stringr")
+# install.packages('stringr')
 if(!require('stringr')) install.packages('stringr', repos = 'http://cran.us.r-project.org'); require('stringr')
 
-# install.packages("igraph")
+# install.packages('igraph')
 if(!require('igraph')) install.packages('igraph', repos = 'http://cran.us.r-project.org'); require('igraph')
 
 as.hexavigesimal <- function(number) {
-  converted <- ""
+  converted <- ''
   # Repeatedly divide the number by 26 and convert the
   # remainder into the appropriate letter.
   while(number > 0) {
     remainder <- (number - 1) %% 26
-    converted <- paste(letters[remainder+1], converted, sep="")
+    converted <- paste(letters[remainder+1], converted, sep='')
     number <- (number - remainder) %/% 26
   }
   
-  class(converted) <- "hexavigesimal"
+  class(converted) <- 'hexavigesimal'
   return(converted)
 }
 
@@ -39,7 +39,7 @@ tweeter.abbrv <- function(tweeter) {
   
   return(abbrv)
 }
-# tweeter.abbrv("@Hibachi11")
+# tweeter.abbrv('@Hibachi11')
 
 # Build a graph with the @names for vertices
 build.graph <- function(tweeters.list, tweeters.top, is.directed=FALSE, is.isolates.deleted=TRUE) {
@@ -60,14 +60,14 @@ build.graph <- function(tweeters.list, tweeters.top, is.directed=FALSE, is.isola
   # plot(g)
   if(is.isolates.deleted) {
     if(is.directed) {
-      g <- delete.vertices(g, which(degree(g, mode="out")<1))
-      g <- delete.vertices(g, which(degree(g, mode="in")<1))
-      g <- delete.vertices(g, which(degree(g, mode="out")<1))
-      g <- delete.vertices(g, which(degree(g, mode="in")<1))
-      g <- delete.vertices(g, which(degree(g, mode="out")<1))
-      g <- delete.vertices(g, which(degree(g, mode="in")<1))
-      g <- delete.vertices(g, which(degree(g, mode="out")<1))
-      g <- delete.vertices(g, which(degree(g, mode="in")<1))
+      g <- delete.vertices(g, which(degree(g, mode='out')<1))
+      g <- delete.vertices(g, which(degree(g, mode='in')<1))
+      g <- delete.vertices(g, which(degree(g, mode='out')<1))
+      g <- delete.vertices(g, which(degree(g, mode='in')<1))
+      g <- delete.vertices(g, which(degree(g, mode='out')<1))
+      g <- delete.vertices(g, which(degree(g, mode='in')<1))
+      g <- delete.vertices(g, which(degree(g, mode='out')<1))
+      g <- delete.vertices(g, which(degree(g, mode='in')<1))
     } else {
       g <- delete.vertices(g, which(degree(g)<2))
       g <- delete.vertices(g, which(degree(g)<2))
@@ -82,24 +82,24 @@ build.graph <- function(tweeters.list, tweeters.top, is.directed=FALSE, is.isola
 random.conversations <- function() {
   g <- build.graph(big.list, sample(tweeters.top, 80), is.directed=TRUE)
   l <- layout.auto(g)
-  plot(g, main="Big Talkers", vertex.shape="rectangle", vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
+  plot(g, main='Big Talkers', vertex.shape='rectangle', vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
   sort(V(g)$name)
 }
 
 # Get the file names
-tweets.files <- list.files(path=paste(sep="/", getwd(), "tweets_preOscars"),
-                           pattern="^tweets_preOscars_.+_key\\.csv$", ignore.case=TRUE)
+tweets.files <- list.files(path=paste(sep='/', getwd(), 'tweets_preOscars'),
+                           pattern='^tweets_preOscars_.+_key\\.csv$', ignore.case=TRUE)
 
 # First apply read.csv, then rbind
-team.csv <- do.call("rbind", lapply(tweets.files, function(x) {
-  read.csv(paste(sep="/", getwd(), "tweets_preOscars", x), stringsAsFactors=FALSE, fileEncoding="macroman")}))
+team.csv <- do.call('rbind', lapply(tweets.files, function(x) {
+  read.csv(paste(sep='/', getwd(), 'tweets_preOscars', x), stringsAsFactors=FALSE, fileEncoding='macroman')}))
 team.csv <- unique(team.csv)
 
 # Prepend the tweeter to the front of the tweet
-team.csv$text <- as.factor(paste("@", team.csv$userName, " ", team.csv$text, sep=""))
+team.csv$text <- as.factor(paste('@', team.csv$userName, ' ', team.csv$text, sep=''))
 
 # Extact all the @names (tweeter will be in the front)
-team.clean <- str_extract_all(team.csv$text, "@\\w+")
+team.clean <- str_extract_all(team.csv$text, '@\\w+')
 
 # Show tweeters who are mentioning someone else
 big.list <- as.matrix(team.clean)
@@ -111,26 +111,26 @@ big.tweeters.top <- as.matrix(get.tweeters.top(big.list, 1000))
 # Big List
 g <- build.graph(big.list, big.tweeters.top, is.directed=TRUE)
 l <- layout.auto(g)
-plot(g, main="Everybody", vertex.shape="rectangle", vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
-plot(g, main="Everybody", vertex.shape="rectangle", vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l,
+plot(g, main='Everybody', vertex.shape='rectangle', vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
+plot(g, main='Everybody', vertex.shape='rectangle', vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l,
      vertex.label=sapply(V(g)$name, tweeter.abbrv))
 tweeters.top <- V(g)$name
 
 # Cull out the triangles of conversation
-triangle.tweeters <- c("@TheEllenShow", "@ActuallyNPH", "@ABC", "@neilmeron",
-                       "@TheAcademy", "@craigzadan", "@ABCNetwork",
-                       "@GMA", "@ladygaga")
+triangle.tweeters <- c('@TheEllenShow', '@ActuallyNPH', '@ABC', '@neilmeron',
+                       '@TheAcademy', '@craigzadan', '@ABCNetwork',
+                       '@GMA', '@ladygaga')
 random.conversations()
 
 # Get all triangle tweeter tweets
-triangle.tweets <- team.csv[which(paste(sep="", "@", team.csv$userName) %in% triangle.tweeters),
-                            c("tweetID", "text", "tweetTime", "userID", "userName")]
+triangle.tweets <- team.csv[which(paste(sep='', '@', team.csv$userName) %in% triangle.tweeters),
+                            c('tweetID', 'text', 'tweetTime', 'userID', 'userName')]
 
 # Extact all the @names (tweeter will be in the front)
-triangle.tweets$tweeters <- str_extract_all(triangle.tweets$text, "@\\w+")
-triangle.tweets$tweetTime <- strptime(triangle.tweets$tweetTime, format="%a %b %d %H:%M:%S %Y")
+triangle.tweets$tweeters <- str_extract_all(triangle.tweets$text, '@\\w+')
+triangle.tweets$tweetTime <- strptime(triangle.tweets$tweetTime, format='%a %b %d %H:%M:%S %Y')
 triangle.tweets$tweeters[1:2]
-triangle.tweets[1:2, c("userName", "tweeters", "tweetTime")]
+triangle.tweets[1:2, c('userName', 'tweeters', 'tweetTime')]
 triangle.tweets <- triangle.tweets[order(triangle.tweets$tweetTime), ]
 
 # Build a graph with the @names for vertices
@@ -145,9 +145,9 @@ plot(g, layout=l)
 # Get list of tweets worth making edges for
 edged <- FALSE
 for(i in 1:length(triangle.tweets$tweeters)) {
-  tweeters <- triangle.tweets[i, "tweeters"][[1]]
+  tweeters <- triangle.tweets[i, 'tweeters'][[1]]
   originator <- tweeters[1]
-  tweetTime <- triangle.tweets[i, "tweetTime"]
+  tweetTime <- triangle.tweets[i, 'tweetTime']
   for(tweeter in tweeters) {
     if(tweeter != originator) {
       if(tweeter %in% triangle.tweeters) {
@@ -157,14 +157,14 @@ for(i in 1:length(triangle.tweets$tweeters)) {
     }
   }
   if(edged) {
-    png(filename=strftime(tweetTime, format="%m_%d_%H_%M.png"))
-    plot(g, main=strftime(tweetTime, format="%m/%d %H:%M"), layout=l)
+    png(filename=strftime(tweetTime, format='%m_%d_%H_%M.png'))
+    plot(g, main=strftime(tweetTime, format='%m/%d %H:%M'), layout=l)
     dev.off()
     edged <- FALSE
   }
 }
 # g <- simplify(g)
-plot(optimal.community(g), g, main="Pre-Oscars", layout=l, vertex.label=" ")
+plot(optimal.community(g), g, main='Pre-Oscars', layout=l, vertex.label=' ')
 
 lapply(triangle.tweets$tweeters, function(x) {
   if(length(x)>1 {
@@ -178,60 +178,60 @@ triangle.tweeters.list <- triangle.tweeters.list[sapply(triangle.tweeters.list, 
 # Triangle tweeters
 g <- build.graph(triangle.tweeters.list, unique(triangle.tweets$userName), is.directed=TRUE, is.isolates.deleted=FALSE)
 l <- layout.auto(g)
-plot(g, main="Triangle tweeters", vertex.shape="rectangle", vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l,
+plot(g, main='Triangle tweeters', vertex.shape='rectangle', vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l,
      vertex.label=sapply(V(g)$name, tweeter.abbrv))
-plot(g, main="Triangle tweeters", vertex.shape="rectangle", vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
+plot(g, main='Triangle tweeters', vertex.shape='rectangle', vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
 
 
 # Colts vs Broncos
 tweeters.top <- get.tweeters.top(colts.vs.broncos.tweeters.list)
 g <- build.graph(colts.vs.broncos.tweeters.list, tweeters.top, is.directed=TRUE)
 l <- layout.auto(g)
-plot(g, main="Colts vs Broncos", vertex.shape="rectangle", vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l,
+plot(g, main='Colts vs Broncos', vertex.shape='rectangle', vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l,
      vertex.label=sapply(V(g)$name, tweeter.abbrv))
-plot(g, main="Colts vs Broncos", vertex.shape="rectangle", vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
+plot(g, main='Colts vs Broncos', vertex.shape='rectangle', vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
 # plot(g, layout=layout.random(g))
-# plot(g, vertex.shape="rectangle", layout=layout.kamada.kawai(g),
+# plot(g, vertex.shape='rectangle', layout=layout.kamada.kawai(g),
 #      vertex.label=sapply(row(layout.random(g))[, 1], as.hexavigesimal))
 
 # Remove the colts and broncos @names and anaylze the communities
-g <- delete.vertices(g, c("@Colts", "@Broncos"))
+g <- delete.vertices(g, c('@Colts', '@Broncos'))
 l <- layout.auto(g)
-plot(g, main="Colts vs Broncos", vertex.shape="rectangle", vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l,
+plot(g, main='Colts vs Broncos', vertex.shape='rectangle', vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l,
      vertex.label=sapply(V(g)$name, tweeter.abbrv))
-plot(g, main="Colts vs Broncos", vertex.shape="rectangle", vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
-plot(optimal.community(g), g, main="Colts vs Broncos Community Structure", vertex.shape="rectangle",
+plot(g, main='Colts vs Broncos', vertex.shape='rectangle', vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
+plot(optimal.community(g), g, main='Colts vs Broncos Community Structure', vertex.shape='rectangle',
      vertex.size=10, vertex.size2=10, vertex.label=sapply(V(g)$name, tweeter.abbrv), layout=l)
 # l <- layout.fruchterman.reingold(g)
-# plot(g, vertex.shape="rectangle", layout=l, vertex.size=10, vertex.size2=10,
+# plot(g, vertex.shape='rectangle', layout=l, vertex.size=10, vertex.size2=10,
 #      vertex.label=sapply(row(layout.random(g))[, 1], as.hexavigesimal))
 # plot(g, layout=layout.spring(g))
 
 # Colts vs Broncos: See how db, dc, cx, bt, and dd are doing
-tweeters.top <- c("@DetFrankFrank", "@Dc5fanMary", "@4eyesJohnny", "@SoxOnTheBrain", "@FanForumsTV",
-                  "@Colts", "@Broncos", "@Patriots", "@Ravens")
+tweeters.top <- c('@DetFrankFrank', '@Dc5fanMary', '@4eyesJohnny', '@SoxOnTheBrain', '@FanForumsTV',
+                  '@Colts', '@Broncos', '@Patriots', '@Ravens')
 g <- build.graph(colts.vs.broncos.tweeters.list, tweeters.top, TRUE, FALSE)
 l <- layout.auto(g)
-plot(g, main="Colts vs Broncos", vertex.shape="rectangle", vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
+plot(g, main='Colts vs Broncos', vertex.shape='rectangle', vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
 
 # Colts vs Patriots: See how db, dc, cx, bt, and dd are doing
-tweeters.top <- c("@DetFrankFrank", "@Dc5fanMary", "@4eyesJohnny", "@SoxOnTheBrain", "@FanForumsTV",
-                  "@Colts", "@Broncos", "@Patriots", "@Ravens")
+tweeters.top <- c('@DetFrankFrank', '@Dc5fanMary', '@4eyesJohnny', '@SoxOnTheBrain', '@FanForumsTV',
+                  '@Colts', '@Broncos', '@Patriots', '@Ravens')
 g <- build.graph(colts.vs.pats.tweeters.list, tweeters.top, TRUE, FALSE)
 l <- layout.auto(g)
-plot(g, main="Colts vs Patriots", vertex.shape="rectangle", vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
+plot(g, main='Colts vs Patriots', vertex.shape='rectangle', vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
 
 # Patriots vs Colts: See how db, dc, cx, bt, and dd are doing
-tweeters.top <- c("@DetFrankFrank", "@Dc5fanMary", "@4eyesJohnny", "@SoxOnTheBrain", "@FanForumsTV",
-                  "@Colts", "@Broncos", "@Patriots", "@Ravens")
+tweeters.top <- c('@DetFrankFrank', '@Dc5fanMary', '@4eyesJohnny', '@SoxOnTheBrain', '@FanForumsTV',
+                  '@Colts', '@Broncos', '@Patriots', '@Ravens')
 g <- build.graph(pats.vs.colts.tweeters.list, tweeters.top, TRUE, FALSE)
 l <- layout.auto(g)
-plot(g, main="Patriots vs Colts", vertex.shape="rectangle", vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
+plot(g, main='Patriots vs Colts', vertex.shape='rectangle', vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
 
 
 # Analyze the relationships between Patriots and Seahawks tweeters
-hawks.vs.panthers <- "tweets/tweets_1_10_seahawks.csv" # playing the Panthers
-hawks.vs.packers <- "tweets/tweets_1_18_packers.csv" # playing the Packers
+hawks.vs.panthers <- 'tweets/tweets_1_10_seahawks.csv' # playing the Panthers
+hawks.vs.packers <- 'tweets/tweets_1_18_packers.csv' # playing the Packers
 hawks.vs.panthers.tweeters.list <- get.tweeters.list(hawks.vs.panthers)
 hawks.vs.packers.tweeters.list <- get.tweeters.list(hawks.vs.packers)
 big.list <- mapply(hawks.vs.panthers.tweeters.list, hawks.vs.packers.tweeters.list,
@@ -250,29 +250,29 @@ big.tweeters.top <- as.matrix(get.tweeters.top(big.list))
 tweeters.top <- get.tweeters.top(hawks.vs.panthers.tweeters.list, 8)
 g <- build.graph(hawks.vs.panthers.tweeters.list, tweeters.top)
 l <- layout.auto(g)
-plot(g, main="Seahawks vs Panthers", vertex.shape="rectangle", vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l,
+plot(g, main='Seahawks vs Panthers', vertex.shape='rectangle', vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l,
      vertex.label=sapply(V(g)$name, tweeter.abbrv))
-plot(g, main="Seahawks vs Panthers", vertex.shape="rectangle", vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
-plot(optimal.community(g), g, main="Seahawks vs Panthers Community Structure", vertex.shape="rectangle",
+plot(g, main='Seahawks vs Panthers', vertex.shape='rectangle', vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
+plot(optimal.community(g), g, main='Seahawks vs Panthers Community Structure', vertex.shape='rectangle',
      vertex.size=10, vertex.size2=10, vertex.label=sapply(V(g)$name, tweeter.abbrv), layout=l)
 
 # Remove the seahawks and panthers @names and anaylze the communities
-g <- delete.vertices(g, c("@Seahawks", "@Panthers"))
+g <- delete.vertices(g, c('@Seahawks', '@Panthers'))
 l <- layout.auto(g)
-plot(g, main="Seahawks vs Panthers", vertex.shape="rectangle", vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l,
+plot(g, main='Seahawks vs Panthers', vertex.shape='rectangle', vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l,
      vertex.label=sapply(V(g)$name, tweeter.abbrv))
-plot(g, main="Seahawks vs Panthers", vertex.shape="rectangle", vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
-plot(optimal.community(g), g, main="Seahawks vs Panthers Community Structure", vertex.shape="rectangle",
+plot(g, main='Seahawks vs Panthers', vertex.shape='rectangle', vertex.size=10, vertex.size2=10, rescale=TRUE, layout=l)
+plot(optimal.community(g), g, main='Seahawks vs Panthers Community Structure', vertex.shape='rectangle',
      vertex.size=10, vertex.size2=10, vertex.label=sapply(V(g)$name, tweeter.abbrv), layout=l)
 
 ####################################################################################################################
 
 # Authenticate user
-reqURL <- "https://api.twitter.com/oauth/request_token"
-accessURL <- "http://api.twitter.com/oauth/access_token"
-authURL <- "http://api.twitter.com/oauth/authorize"
-load(file="consumerKey.RData")
-load(file="consumerSecret.RData")
+reqURL <- 'https://api.twitter.com/oauth/request_token'
+accessURL <- 'http://api.twitter.com/oauth/access_token'
+authURL <- 'http://api.twitter.com/oauth/authorize'
+load(file='consumerKey.RData')
+load(file='consumerSecret.RData')
 twitCred <- OAuthFactory$new(consumerKey=consumerKey,
                              consumerSecret=consumerSecret,
                              requestURL=reqURL,
@@ -280,18 +280,18 @@ twitCred <- OAuthFactory$new(consumerKey=consumerKey,
                              authURL=authURL)
 
 # Complete the handshake
-# Gets "SSL certificate problem: unable to get local issuer certificate"
+# Gets 'SSL certificate problem: unable to get local issuer certificate'
 twitCred$handshake()
 
 registerTwitterOAuth(twitCred)
 
-searchTwitter("patriots")
+searchTwitter('patriots')
 
 # Create a social network in gephi format
 # Download the Zachary Karate Club network from Nexus
-# paste(sep = "", getIgraphOpt("nexus.url"), "/api/dataset?id=karate&format=R-igraph")
-# karate <- nexus.get("karate")
-load("karate.Rdata")
+# paste(sep = '', getIgraphOpt('nexus.url'), '/api/dataset?id=karate&format=R-igraph')
+# karate <- nexus.get('karate')
+load('karate.Rdata')
 karate
 
 # Optimalize modularity
@@ -318,14 +318,14 @@ ihrg$layout <- layout.reingold.tilford
 plot(ihrg, vertex.size=10, edge.arrow.size=0.2)
 
 # Customize the plot a bit, show probabilities and communities
-vn <- sub("Actor ", "", V(ihrg)$name)
+vn <- sub('Actor ', '', V(ihrg)$name)
 colbar <- rainbow(length(optcom))
-vc <- ifelse(is.na(V(ihrg)$prob), colbar[V(karate)$comm], "darkblue")
+vc <- ifelse(is.na(V(ihrg)$prob), colbar[V(karate)$comm], 'darkblue')
 V(ihrg)$label <- ifelse(is.na(V(ihrg)$prob), vn, round(V(ihrg)$prob, 2))
 par(mar=c(0,0,3,0))
 plot(ihrg, vertex.size=10, edge.arrow.size=0.2,
-     vertex.shape="none", vertex.label.color=vc,
-     main="Hierarchical network model of the Karate Club")
+     vertex.shape='none', vertex.label.color=vc,
+     main='Hierarchical network model of the Karate Club')
 
 # Plot it as a dendrogram, looks better if the 'ape' package is installed
 dendPlot(hrg)
@@ -352,16 +352,16 @@ pred <- hrg.predict(g)
 pred
 
 # Add some the top 5 predicted edges to the graph, colored red
-E(g)$color <- "grey"
+E(g)$color <- 'grey'
 lay <- layout.auto(g)
-g2 <- add.edges(g, t(pred$edges[1:5,]), color="red")
+g2 <- add.edges(g, t(pred$edges[1:5,]), color='red')
 plot(g2, layout=lay)
 
 # Add four more predicted edges, colored orange
-g3 <- add.edges(g2, t(pred$edges[6:9,]), color="orange")
+g3 <- add.edges(g2, t(pred$edges[6:9,]), color='orange')
 plot(g3, layout=lay)
 
-el <- matrix(data=c("foo", "bar", "bar", "foobar"), ncol=2, byrow=TRUE)
+el <- matrix(data=c('foo', 'bar', 'bar', 'foobar'), ncol=2, byrow=TRUE)
 g13 <- graph.edgelist(el)
 plot(g13)
 

@@ -1,21 +1,21 @@
 
 # temp <- tempfile()
-# download.file("https://www.kaggle.com/c/word2vec-nlp-tutorial/download/labeledTrainData.tsv.zip", temp)
-# train.labeled <- read.delim(unz(temp, "labeledTrainData.tsv"), header=TRUE, quote='', stringsAsFactors=FALSE)
+# download.file('https://www.kaggle.com/c/word2vec-nlp-tutorial/download/labeledTrainData.tsv.zip', temp)
+# train.labeled <- read.delim(unz(temp, 'labeledTrainData.tsv'), header=TRUE, quote='', stringsAsFactors=FALSE)
 # unlink(temp)
-train.labeled <- read.delim("labeledTrainData.tsv", header=TRUE, quote='', stringsAsFactors=FALSE)
+train.labeled <- read.delim('labeledTrainData.tsv', header=TRUE, quote='', stringsAsFactors=FALSE)
 
 # temp <- tempfile()
-# download.file("https://www.kaggle.com/c/word2vec-nlp-tutorial/download/unlabeledTrainData.tsv.zip", temp)
-# train.unlabeled <- read.delim(unz(temp, "unlabeledTrainData.tsv"), header=TRUE, quote='', stringsAsFactors=FALSE)
+# download.file('https://www.kaggle.com/c/word2vec-nlp-tutorial/download/unlabeledTrainData.tsv.zip', temp)
+# train.unlabeled <- read.delim(unz(temp, 'unlabeledTrainData.tsv'), header=TRUE, quote='', stringsAsFactors=FALSE)
 # unlink(temp)
-train.unlabeled <- read.delim("unlabeledTrainData.tsv", header=TRUE, quote='', stringsAsFactors=FALSE)
+train.unlabeled <- read.delim('unlabeledTrainData.tsv', header=TRUE, quote='', stringsAsFactors=FALSE)
 
 # temp <- tempfile()
-# download.file("https://www.kaggle.com/c/word2vec-nlp-tutorial/download/testData.tsv.zip", temp)
-# test <- read.delim(unz(temp, "testData.tsv"), header=TRUE, quote='', stringsAsFactors=FALSE)
+# download.file('https://www.kaggle.com/c/word2vec-nlp-tutorial/download/testData.tsv.zip', temp)
+# test <- read.delim(unz(temp, 'testData.tsv'), header=TRUE, quote='', stringsAsFactors=FALSE)
 # unlink(temp)
-test <- read.delim("testData.tsv", header=TRUE, quote='', stringsAsFactors=FALSE)
+test <- read.delim('testData.tsv', header=TRUE, quote='', stringsAsFactors=FALSE)
 
 # combine the data
 all.data <- rbind(train.labeled[, -2], train.unlabeled, test)
@@ -35,15 +35,15 @@ all.data$review.clean <- gsub('<.*?>', ' ', all.data$review)
 all.data$review.clean <- tolower(gsub('[[:punct:]]', '', all.data$review.clean))
 
 # read in the AFINN list
-afinn <- read.delim("https://raw.githubusercontent.com/uwescience/datasci_course_materials/master/assignment1/AFINN-111.txt",
+afinn <- read.delim('https://raw.githubusercontent.com/uwescience/datasci_course_materials/master/assignment1/AFINN-111.txt',
                     header=TRUE, quote='', stringsAsFactors=FALSE)
 names(afinn) <- c('word', 'score')
 
-# spaces are denoted by "-", so we need to clean it up a bit
+# spaces are denoted by '-', so we need to clean it up a bit
 afinn$word.clean <- gsub('-', ' ', afinn$word)
 
 # one phrase in the list includes an apostrophe.
-afinn$word.clean <- gsub("[[:punct:]]", '', afinn$word.clean)
+afinn$word.clean <- gsub('[[:punct:]]', '', afinn$word.clean)
 
 # find the text frequency matrix
 
@@ -176,7 +176,7 @@ head(word.freq.neg)
 head(word.freq.neg[order(-word.freq.neg$freq), ])
 
 # merge by word
-freq.all <- merge(word.freq.neg, word.freq.pos, by='word', all=TRUE, suffixes=c(".neg",".pos"))
+freq.all <- merge(word.freq.neg, word.freq.pos, by='word', all=TRUE, suffixes=c('.neg','.pos'))
 head(freq.all)
 
 # clean up

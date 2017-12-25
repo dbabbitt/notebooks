@@ -1,6 +1,6 @@
 
 # Read in the big data file
-tweets.csv <- read.csv("tweets.csv")
+tweets.csv <- read.csv('tweets.csv')
 
 # Make a data frame to hold the loyalty scores
 loyalty.df <- data.frame(userName=unique(tweets.csv$userName),
@@ -10,9 +10,9 @@ teams <- names(loyalty.df)[2:length(names(loyalty.df))]
 
 # Loop through all the tweets and inspect for and tally the team mentions
 for(i in 1:nrow(tweets.csv)) {
-  user.name <- tweets.csv[i, "userName"]
+  user.name <- tweets.csv[i, 'userName']
   user.row <- which(loyalty.df$userName==user.name)
-  tweet.text <- tweets.csv[i, "text"]
+  tweet.text <- tweets.csv[i, 'text']
   for(team.col in teams) {
     if(grepl(team.col, tweet.text, ignore.case=TRUE)) {
       loyalty.df[user.row, team.col] <- loyalty.df[user.row, team.col] + 1
@@ -21,12 +21,12 @@ for(i in 1:nrow(tweets.csv)) {
 }
 
 # Save a copy to manipulate in Java
-write.csv(loyalty.df, file="loyalty.csv", row.names=FALSE)
+write.csv(loyalty.df, file='loyalty.csv', row.names=FALSE)
 
 loyalty.df$rownumber <- NULL
-loyalty.df$loyalty <- ""
+loyalty.df$loyalty <- ''
 for(i in 1:nrow(loyalty.df)) {
-  loyalty.df[i, "loyalty"] <- names(which.max(loyalty.df[i, teams]))
+  loyalty.df[i, 'loyalty'] <- names(which.max(loyalty.df[i, teams]))
 }
 
 loyalty.df[with(loyalty.df, order(-patriots)), ][1, ]

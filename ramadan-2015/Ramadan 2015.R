@@ -33,14 +33,14 @@ build.graph <- function(tweeters.list, tweeters.top, is.directed=FALSE, is.isola
   # plot(g)
   if(is.isolates.deleted) {
     if(is.directed) {
-      g <- delete.vertices(g, which(degree(g, mode="out")<1))
-      g <- delete.vertices(g, which(degree(g, mode="in")<1))
-      g <- delete.vertices(g, which(degree(g, mode="out")<1))
-      g <- delete.vertices(g, which(degree(g, mode="in")<1))
-      g <- delete.vertices(g, which(degree(g, mode="out")<1))
-      g <- delete.vertices(g, which(degree(g, mode="in")<1))
-      g <- delete.vertices(g, which(degree(g, mode="out")<1))
-      g <- delete.vertices(g, which(degree(g, mode="in")<1))
+      g <- delete.vertices(g, which(degree(g, mode='out')<1))
+      g <- delete.vertices(g, which(degree(g, mode='in')<1))
+      g <- delete.vertices(g, which(degree(g, mode='out')<1))
+      g <- delete.vertices(g, which(degree(g, mode='in')<1))
+      g <- delete.vertices(g, which(degree(g, mode='out')<1))
+      g <- delete.vertices(g, which(degree(g, mode='in')<1))
+      g <- delete.vertices(g, which(degree(g, mode='out')<1))
+      g <- delete.vertices(g, which(degree(g, mode='in')<1))
     } else {
       g <- delete.vertices(g, which(degree(g)<2))
       g <- delete.vertices(g, which(degree(g)<2))
@@ -53,15 +53,15 @@ build.graph <- function(tweeters.list, tweeters.top, is.directed=FALSE, is.isola
 }
 
 
-ramadan.df <- read.csv("Ramadan2015.csv", fileEncoding="",
-                       numerals="no.loss", as.is=TRUE, stringsAsFactors=FALSE)
+ramadan.df <- read.csv('Ramadan2015.csv', fileEncoding='',
+                       numerals='no.loss', as.is=TRUE, stringsAsFactors=FALSE)
 
 # Prepend the tweeter to the front of the tweet
-ramadan.df$text <- as.factor(paste("@", ramadan.df$userName, " ",
-                                 ramadan.df$text, sep=""))
+ramadan.df$text <- as.factor(paste('@', ramadan.df$userName, ' ',
+                                 ramadan.df$text, sep=''))
 
 # Extact all the @names (tweeter will be in the front)
-userName.list <- str_extract_all(ramadan.df$text, "@\\w+")
+userName.list <- str_extract_all(ramadan.df$text, '@\\w+')
 userName.mx <- as.matrix(userName.list)
 
 # Show tweeters who are mentioning someone else
@@ -71,12 +71,12 @@ top.tweeters.mx <- as.matrix(get.tweeters.top(userName.list, 0))
 # Big List
 g <- build.graph(userName.list, top.tweeters.mx, is.directed=TRUE)
 l <- layout.auto(g)
-plot(g, main="Top Tweeters", vertex.shape="rectangle", vertex.size=10,
+plot(g, main='Top Tweeters', vertex.shape='rectangle', vertex.size=10,
      vertex.size2=10, rescale=TRUE, layout=l)
 
 
 # Heat Map
-ramadan.df$tweetTime <- as.POSIXct(ramadan.df$tweetTime, format="%a %b %d %H:%M:%S +0000 %Y")
+ramadan.df$tweetTime <- as.POSIXct(ramadan.df$tweetTime, format='%a %b %d %H:%M:%S +0000 %Y')
 
 #Adjust time minus 5 hours
 ramadan.df$tweetTime <- ramadan.df$tweetTime - 18000
@@ -89,15 +89,15 @@ if (!require('zoo')) install.packages('zoo', repos = 'http://cran.us.r-project.o
 x <- zoo(ramadan.df$tweetTime)
 x.agg <- aggregate(x, time(x) - as.numeric(time(x)) %% 600, mean)
 
-x.min <- min(strftime(ramadan.df$tweetTime, format="%H:%M"))
-x.min <- as.numeric(strftime(as.POSIXct(x.min, format="%H:%M"), format="%H"))*60 +
-  as.numeric(strftime(as.POSIXct(x.min, format="%H:%M"), format="%M"))
-x.max <- max(strftime(ramadan.df$tweetTime, format="%H:%M"))
-x.max <- as.numeric(strftime(as.POSIXct(x.max, format="%H:%M"), format="%H"))*60 +
-  as.numeric(strftime(as.POSIXct(x.max, format="%H:%M"), format="%M"))
+x.min <- min(strftime(ramadan.df$tweetTime, format='%H:%M'))
+x.min <- as.numeric(strftime(as.POSIXct(x.min, format='%H:%M'), format='%H'))*60 +
+  as.numeric(strftime(as.POSIXct(x.min, format='%H:%M'), format='%M'))
+x.max <- max(strftime(ramadan.df$tweetTime, format='%H:%M'))
+x.max <- as.numeric(strftime(as.POSIXct(x.max, format='%H:%M'), format='%H'))*60 +
+  as.numeric(strftime(as.POSIXct(x.max, format='%H:%M'), format='%M'))
 
-y.min <- as.numeric(min(strftime(ramadan.df$tweetTime, format="%u")))
-y.max <- as.numeric(max(strftime(ramadan.df$tweetTime, format="%u")))
+y.min <- as.numeric(min(strftime(ramadan.df$tweetTime, format='%u')))
+y.max <- as.numeric(max(strftime(ramadan.df$tweetTime, format='%u')))
 
 data <- data.frame(x=seq(x.min, x.max),
                    y=rep(y.min:y.max, each=x.max-x.min+1),
@@ -106,11 +106,11 @@ data <- data.frame(x=seq(x.min, x.max),
 
 # Loop through all the tweets and tally the minutes
 for(i in 1:nrow(ramadan.df)) {
-  x <- as.numeric(strftime(ramadan.df[i, "tweetTime"], format="%H"))*60 +
-    as.numeric(strftime(ramadan.df[i, "tweetTime"], format="%M"))
-  y <- as.numeric(strftime(ramadan.df[i, "tweetTime"], format="%u"))
+  x <- as.numeric(strftime(ramadan.df[i, 'tweetTime'], format='%H'))*60 +
+    as.numeric(strftime(ramadan.df[i, 'tweetTime'], format='%M'))
+  y <- as.numeric(strftime(ramadan.df[i, 'tweetTime'], format='%u'))
   row <- which(data$x==x & data$y==y)
-  data[row, "z"] <- data[row, "z"] + 1
+  data[row, 'z'] <- data[row, 'z'] + 1
 }
 
 if (!require('akima')) install.packages('akima', repos = 'http://cran.us.r-project.org'); require('akima')
