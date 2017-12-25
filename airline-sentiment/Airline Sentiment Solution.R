@@ -1,11 +1,11 @@
 
 # /Users/davebabbitt/Documents/Data Science Projects/Airline Sentiment/Airline Sentiment Solution.R
 #Install libraries
-if(!require('caret')) install.packages('caret'); require('caret')
-if(!require('tm')) install.packages('tm'); require('tm')
-if(!require('SnowballC')) install.packages('SnowballC'); require('SnowballC')
-if(!require('Hmisc')) install.packages('Hmisc'); require('Hmisc')
-if(!require('plyr')) install.packages('plyr'); require('plyr')
+if(!require('caret')) install.packages('caret', repos = 'http://cran.us.r-project.org'); require('caret')
+if(!require('tm')) install.packages('tm', repos = 'http://cran.us.r-project.org'); require('tm')
+if(!require('SnowballC')) install.packages('SnowballC', repos = 'http://cran.us.r-project.org'); require('SnowballC')
+if(!require('Hmisc')) install.packages('Hmisc', repos = 'http://cran.us.r-project.org'); require('Hmisc')
+if(!require('plyr')) install.packages('plyr', repos = 'http://cran.us.r-project.org'); require('plyr')
 
 # Read in raw data. Split data set into a training dataset (train) to train the model and a testing dataset (test) to test the model.
 getwd()

@@ -48,16 +48,16 @@ afinn$word.clean <- gsub("[[:punct:]]", '', afinn$word.clean)
 # find the text frequency matrix
 
 # this may take a while ...
-if (!require('stringr')) install.packages('stringr'); require('stringr')
+if (!require('stringr')) install.packages('stringr', repos = 'http://cran.us.r-project.org'); require('stringr')
 tf <- t(apply(t(all.data$review.clean), 2, function(x) str_count(x, afinn$word.clean)))
 
 # sentiment rating for each row
 all.data$afinn.rating <- as.vector(tf %*% afinn$score)
 
-if (!require('ggplot2')) install.packages('ggplot2'); require('ggplot2')
+if (!require('ggplot2')) install.packages('ggplot2', repos = 'http://cran.us.r-project.org'); require('ggplot2')
 ggplot(all.data[train.labeled.ind, ], aes(afinn.rating, fill=as.factor(sentiment))) + geom_density(alpha=.2)
 
-if (!require('e1071')) install.packages('e1071'); require('e1071')
+if (!require('e1071')) install.packages('e1071', repos = 'http://cran.us.r-project.org'); require('e1071')
 
 # fit a naive bayes classifier
 nb.model <- naiveBayes(sentiment ~ afinn.rating, data=all.data[train.labeled.ind, ])
@@ -93,7 +93,7 @@ score.data <- as.data.frame(t(apply(t(all.data$review.clean), 2,
 # name columns
 names(score.data) <- c('n5', 'n4', 'n3', 'n2', 'n1', 'zero', 'p1', 'p2', 'p3', 'p4', 'p5')
 
-if (!require('randomForest')) install.packages('randomForest'); require('randomForest')
+if (!require('randomForest')) install.packages('randomForest', repos = 'http://cran.us.r-project.org'); require('randomForest')
 
 bag.of.scores.forest <- randomForest(score.data[train.labeled.ind, ], as.factor(train.labeled$sentiment))
 bag.of.scores.forest.pred <- predict(bag.of.scores.forest, newdata=score.data[test.ind, ], type='prob')
@@ -120,7 +120,7 @@ results <- data.frame(id=all.data$id[test.ind], sentiment=tfidf.forest.pred[, 2]
 results$id <- gsub('"', '', results$id)
 write.table(results, file='tfidf_afinn.csv', sep=',', row.names=FALSE, quote=FALSE)
 
-if (!require('tm')) install.packages('tm'); require('tm')
+if (!require('tm')) install.packages('tm', repos = 'http://cran.us.r-project.org'); require('tm')
 
 # construct corpus (using only training data)
 corpus <- Corpus(VectorSource(all.data$review.clean[train.ind]))

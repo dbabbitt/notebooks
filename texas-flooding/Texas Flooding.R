@@ -1,5 +1,5 @@
 
-if (!require('tm')) install.packages('tm'); require('tm')
+if (!require('tm')) install.packages('tm', repos = 'http://cran.us.r-project.org'); require('tm')
 
 # Get the file names
 tweets.files <- list.files(path=paste(sep="/", getwd(), "tweets_wordfiltered"))
@@ -24,7 +24,7 @@ tweets.tdm <- TermDocumentMatrix(tweets.corpus)
 tweets.mx <- as.matrix(tweets.tdm)
 
 # Add up the counts on each row to create a frequency table
-if (!require('wordcloud')) install.packages('wordcloud'); require('wordcloud')
+if (!require('wordcloud')) install.packages('wordcloud', repos = 'http://cran.us.r-project.org'); require('wordcloud')
 tweets.sorted <- sort(rowSums(tweets.mx), decreasing=TRUE)
 tweets.sorted[1:50]
 tweets.sorted.df <- as.data.frame(tweets.sorted)
@@ -33,7 +33,7 @@ colnames(tweets.sorted.df) <- c("Count", "Terms")
 wordcloud(tweets.sorted.df$Terms[1:50], tweets.sorted.df$Count[1:50])
 
 # Remove stop words
-if (!require('arules')) install.packages('arules'); require('arules')
+if (!require('arules')) install.packages('arules', repos = 'http://cran.us.r-project.org'); require('arules')
 english.stop.words <- c(
   "a", "able", "about", "above", "abst", "accordance", "according", "accordingly", "across", "act", "actually", "added", "adj",
   "affected", "affecting", "affects", "after", "afterwards", "again", "against", "ah", "all", "almost", "alone", "along",
@@ -117,7 +117,7 @@ sink(file="tweets.apriori.txt")
 inspect(tweets.apriori)
 sink()
 
-if (!require('zoo')) install.packages('zoo'); require('zoo')
+if (!require('zoo')) install.packages('zoo', repos = 'http://cran.us.r-project.org'); require('zoo')
 tweets.csv$tweetTime <- as.POSIXct(tweets.csv$tweetTime, format="%a %b %d %H:%M:%S %Y")
 x <- zoo(tweets.csv$tweetTime)
 x.agg <- aggregate(x, time(x) - as.numeric(time(x)) %% 600, mean)
@@ -148,7 +148,7 @@ for(i in 1:nrow(tweets.csv)) {
   data[row, "z"] <- data[row, "z"] + 1
 }
 
-if (!require('akima')) install.packages('akima'); require('akima')
+if (!require('akima')) install.packages('akima', repos = 'http://cran.us.r-project.org'); require('akima')
 resolution <- 0.1 # you can increase the resolution by decreasing this number
 a <- interp(x=data$x, y=data$y, z=data$z, 
             xo=seq(min(data$x), max(data$x), by=resolution), 
@@ -159,6 +159,6 @@ image(a) #you can of course modify the color palette and the color categories. S
 filled.contour(a, color.palette=heat.colors, plot.axes={ axis(1, seq(x.min, x.max, by=60))
                                                          axis(2, y.min:y.max)})
 
-if (!require('qdap')) install.packages('qdap'); require('qdap')
+if (!require('qdap')) install.packages('qdap', repos = 'http://cran.us.r-project.org'); require('qdap')
 tweets.wfm <- as.wfm(tweets.corpus)
 summary(tweets.wfm)

@@ -11,7 +11,7 @@ tweets.csv$tweetTime <- tweets.csv$tweetTime - 172800
 write.csv(tweets.csv, file="a.csv", row.names=FALSE)
 
 # aggregate POSIXct seconds data every 10 minutes
-if (!require('zoo')) install.packages('zoo'); require('zoo')
+if (!require('zoo')) install.packages('zoo', repos = 'http://cran.us.r-project.org'); require('zoo')
 x <- zoo(tweets.csv$tweetTime)
 x.agg <- aggregate(x, time(x) - as.numeric(time(x)) %% 600, mean)
 max(strftime(tweets.csv$tweetTime, format="%H:%M"))
@@ -43,7 +43,7 @@ for(i in 1:nrow(tweets.csv)) {
 
 resolution <- 0.1 # you can increase the resolution by decreasing this number
 
-if (!require('akima')) install.packages('akima'); require('akima')
+if (!require('akima')) install.packages('akima', repos = 'http://cran.us.r-project.org'); require('akima')
 a <- interp(x=data$x, y=data$y, z=data$z, 
             xo=seq(min(data$x), max(data$x), by=resolution), 
             yo=seq(min(data$y), max(data$y), by=resolution), duplicate="mean")

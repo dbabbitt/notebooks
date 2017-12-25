@@ -1,13 +1,13 @@
 
 
 # install.packages("twitteR")
-if(!require('twitteR')) install.packages('twitteR'); require('twitteR')
+if(!require('twitteR')) install.packages('twitteR', repos = 'http://cran.us.r-project.org'); require('twitteR')
 
 # install.packages("stringr")
-if(!require('stringr')) install.packages('stringr'); require('stringr')
+if(!require('stringr')) install.packages('stringr', repos = 'http://cran.us.r-project.org'); require('stringr')
 
 # install.packages("igraph")
-if(!require('igraph')) install.packages('igraph'); require('igraph')
+if(!require('igraph')) install.packages('igraph', repos = 'http://cran.us.r-project.org'); require('igraph')
 
 as.hexavigesimal <- function(number) {
   converted <- ""

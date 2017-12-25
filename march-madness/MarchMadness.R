@@ -1,6 +1,6 @@
 
-if (!require('akima')) install.packages('akima'); require('akima')
-if (!require('rjson')) install.packages('rjson'); require('rjson')
+if (!require('akima')) install.packages('akima', repos = 'http://cran.us.r-project.org'); require('akima')
+if (!require('rjson')) install.packages('rjson', repos = 'http://cran.us.r-project.org'); require('rjson')
 
 tweets.csv <- read.csv(file="tweets.csv", numerals="no.loss", stringsAsFactors=FALSE)
 tweets.csv$tweetTime <- as.POSIXct(tweets.csv$tweetTime, format="%Y-%m-%d %H:%M:%S")
@@ -51,7 +51,7 @@ build.heatmap <- function(sample.df) {
     data[row, "z"] <- data[row, "z"] + 1
   }
   
-  if (!require('akima')) install.packages('akima'); require('akima')
+  if (!require('akima')) install.packages('akima', repos = 'http://cran.us.r-project.org'); require('akima')
   a <- interp(x=data$x, y=data$y, z=data$z)
   filled.contour(a, color.palette=rainbow, plot.axes={axis(1, seq(x.min, x.max, by=60))
                                                       axis(2, y.min:y.max)})

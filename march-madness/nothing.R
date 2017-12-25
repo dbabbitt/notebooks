@@ -6,8 +6,8 @@ for (i in 1:length(urls)) {
   download.file(urls[i], paste0('MMdocs/index0', i, '.html'))
 }
 
-if (!require('twitteR')) install.packages('twitteR'); require('twitteR')
-if (!require('rjson')) install.packages('rjson'); require('rjson')
+if (!require('twitteR')) install.packages('twitteR', repos = 'http://cran.us.r-project.org'); require('twitteR')
+if (!require('rjson')) install.packages('rjson', repos = 'http://cran.us.r-project.org'); require('rjson')
 
 
 file.list <- list.files("TwitterDATA", full.names=TRUE)
@@ -38,7 +38,7 @@ for (file in file.list) {
     }
   }
 }
-if (!require('XML')) install.packages('XML'); require('XML')
+if (!require('XML')) install.packages('XML', repos = 'http://cran.us.r-project.org'); require('XML')
 load("html_parse_url.RData")
 htmlParse(html_parse_url)
 

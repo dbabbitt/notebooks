@@ -1,7 +1,7 @@
 
-if (!require('igraph')) install.packages('igraph'); require('igraph')
-if (!require('stringr')) install.packages('stringr'); require('stringr')
-if (!require('Unicode')) install.packages('Unicode'); require('Unicode')
+if (!require('igraph')) install.packages('igraph', repos = 'http://cran.us.r-project.org'); require('igraph')
+if (!require('stringr')) install.packages('stringr', repos = 'http://cran.us.r-project.org'); require('stringr')
+if (!require('Unicode')) install.packages('Unicode', repos = 'http://cran.us.r-project.org'); require('Unicode')
 
 
 get.tweeters.top <- function(tweeters.list, threshold=0) {
@@ -85,7 +85,7 @@ ramadan.df$tweetTime <- ramadan.df$tweetTime - 18000
 ramadan.df$tweetTime <- ramadan.df$tweetTime - 172800
 
 # aggregate POSIXct seconds data every 10 minutes
-if (!require('zoo')) install.packages('zoo'); require('zoo')
+if (!require('zoo')) install.packages('zoo', repos = 'http://cran.us.r-project.org'); require('zoo')
 x <- zoo(ramadan.df$tweetTime)
 x.agg <- aggregate(x, time(x) - as.numeric(time(x)) %% 600, mean)
 
@@ -113,7 +113,7 @@ for(i in 1:nrow(ramadan.df)) {
   data[row, "z"] <- data[row, "z"] + 1
 }
 
-if (!require('akima')) install.packages('akima'); require('akima')
+if (!require('akima')) install.packages('akima', repos = 'http://cran.us.r-project.org'); require('akima')
 a <- interp(x=data$x, y=data$y, z=data$z)
 filled.contour(a, color.palette=rainbow, plot.axes={axis(1, seq(x.min, x.max, by=60))
                                                     axis(2, y.min:y.max)})

@@ -1,5 +1,5 @@
 
-if (!require('akima')) install.packages('akima'); require('akima')
+if (!require('akima')) install.packages('akima', repos = 'http://cran.us.r-project.org'); require('akima')
 data <- data.frame(x=c(1,1,2,2,3,4,5,6,7,7,8,9),
                    y=c(2,4,5,1,3,8,4,8,1,1,6,9),
                    distance=c(66,84,93,76,104,29,70,19,60,50,46,36))
