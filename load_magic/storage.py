@@ -7,6 +7,7 @@
 import pickle
 import pandas as pd
 import os
+from os.path import join
 
 # Handy list of the different types of encodings
 encoding = ['latin1', 'iso8859-1', 'utf-8'][2]
@@ -52,8 +53,9 @@ def load_dataframes(**kwargs):
 def load_object(obj_name, download_url=None):
     pickle_path = saves_folder + 'pickle/' + obj_name + '.pickle'
     if not os.path.isfile(pickle_path):
-        csv_path = saves_folder + 'csv/' + obj_name + '.csv'
+        csv_path = data_folder + 'csv/' + obj_name + '.csv'
         if not os.path.isfile(csv_path):
+            print('Not in', csv_path)
             object = pd.read_csv(download_url, low_memory=False,
                                  encoding=encoding)
         else:
@@ -93,3 +95,10 @@ def store_objects(**kwargs):
         else:
             with open(pickle_path, 'wb') as handle:
                 pickle.dump(kwargs[obj_name], handle, pickle.HIGHEST_PROTOCOL)
+
+def find_file_name(file_name_pattern, root_path=r'C:\\'):
+    for dir_path, dir_name_list, file_name_list in os.walk(root_path):
+        for file_name in file_name_list:
+            if file_name_pattern in file_name:
+                file_path = join(dir_path, file_name)
+                print(file_path)
