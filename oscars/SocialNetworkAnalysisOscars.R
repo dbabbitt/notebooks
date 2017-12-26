@@ -1,13 +1,13 @@
 
 
 # install.packages("twitteR")
-require(twitteR)
+if(!require('twitteR')) install.packages('twitteR'); require('twitteR')
 
 # install.packages("stringr")
-require(stringr)
+if(!require('stringr')) install.packages('stringr'); require('stringr')
 
 # install.packages("igraph")
-require(igraph)
+if(!require('igraph')) install.packages('igraph'); require('igraph')
 
 as.hexavigesimal <- function(number) {
   converted <- ""
@@ -92,7 +92,7 @@ tweets.files <- list.files(path=paste(sep="/", getwd(), "tweets_preOscars"),
 
 # First apply read.csv, then rbind
 team.csv <- do.call("rbind", lapply(tweets.files, function(x) {
-  read.csv(paste(sep="/", getwd(), "tweets_preOscars", x), stringsAsFactors=FALSE)}))
+  read.csv(paste(sep="/", getwd(), "tweets_preOscars", x), stringsAsFactors=FALSE, fileEncoding="macroman")}))
 team.csv <- unique(team.csv)
 
 # Prepend the tweeter to the front of the tweet
@@ -105,7 +105,7 @@ team.clean <- str_extract_all(team.csv$text, "@\\w+")
 big.list <- as.matrix(team.clean)
 big.list <- big.list[sapply(big.list, function(x) {length(x)>1})]
 
-# Show tweeters who are mentioning someone else
+# Show tweeters who are mentioned alot
 big.tweeters.top <- as.matrix(get.tweeters.top(big.list, 1000))
 
 # Big List
@@ -271,8 +271,8 @@ plot(optimal.community(g), g, main="Seahawks vs Panthers Community Structure", v
 reqURL <- "https://api.twitter.com/oauth/request_token"
 accessURL <- "http://api.twitter.com/oauth/access_token"
 authURL <- "http://api.twitter.com/oauth/authorize"
-load("consumerKey.RData")
-load("consumerSecret.RData")
+load(file="consumerKey.RData")
+load(file="consumerSecret.RData")
 twitCred <- OAuthFactory$new(consumerKey=consumerKey,
                              consumerSecret=consumerSecret,
                              requestURL=reqURL,
