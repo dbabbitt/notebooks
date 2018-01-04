@@ -93,3 +93,13 @@ def store_objects(**kwargs):
         else:
             with open(pickle_path, 'wb') as handle:
                 pickle.dump(kwargs[obj_name], handle, pickle.HIGHEST_PROTOCOL)
+
+def attempt_to_pickle(df, pickle_path, raise_exception=False):
+    try:
+        print('Pickling to ' + pickle_path)
+        df.to_pickle(pickle_path)
+    except Exception as e:
+        os.remove(pickle_path)
+        print(e, ': Couldn\'t save ' + '{:,}'.format(df.shape[0]*df.shape[1]) + ' cells as a pickle.')
+        if raise_exception:
+            raise
