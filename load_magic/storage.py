@@ -1,9 +1,9 @@
 
-!mkdir ../data
-!mkdir ../data/csv
-!mkdir ../saves
-!mkdir ../saves/pickle
-!mkdir ../saves/csv
+!mkdir ..\data
+!mkdir ..\data\csv
+!mkdir ..\saves
+!mkdir ..\saves\pickle
+!mkdir ..\saves\csv
 import pickle
 import pandas as pd
 import os
