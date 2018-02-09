@@ -34,11 +34,14 @@ def load_dataframes(**kwargs):
     for frame_name in kwargs:
         pickle_path = saves_folder + 'pickle/' + frame_name + '.pickle'
         if not os.path.isfile(pickle_path):
+			print('No pickle exists at ' + pickle_path + ' - attempting to load a saves folder csv.')
             csv_folder = saves_folder + 'csv/'
             csv_path = csv_folder + frame_name + '.csv'
             if not os.path.isfile(csv_path):
+				print('No csv exists at ' + csv_path + ' - trying the data folder.')
                 csv_path = data_folder + 'csv/' + frame_name + '.csv'
                 if not os.path.isfile(csv_path):
+                    print('No csv exists at ' + csv_path + ' - just forget it.')
                     frame_dict[frame_name] = None
                 else:
                     frame_dict[frame_name] = load_csv(csv_name=frame_name)
@@ -52,15 +55,17 @@ def load_dataframes(**kwargs):
 def load_object(obj_name, download_url=None):
     pickle_path = saves_folder + 'pickle/' + obj_name + '.pickle'
     if not os.path.isfile(pickle_path):
+        print('No pickle exists at ' + pickle_path + ' - attempting to load as csv.')
         csv_path = saves_folder + 'csv/' + obj_name + '.csv'
         if not os.path.isfile(csv_path):
+            print('No csv exists at ' + csv_path + ' - attempting to download from URL.')
             object = pd.read_csv(download_url, low_memory=False,
                                  encoding=encoding)
         else:
             object = pd.read_csv(csv_path, low_memory=False,
                                  encoding=encoding)
         if isinstance(object, pd.DataFrame):
-            object.to_pickle(pickle_path)
+			attempt_to_pickle(object, pickle_path, raise_exception=False)
         else:
             with open(pickle_path, 'wb') as handle:
                 pickle.dump(object, handle, pickle.HIGHEST_PROTOCOL)
@@ -89,7 +94,7 @@ def store_objects(**kwargs):
         obj_path = saves_folder + 'pickle/' + str(obj_name)
         pickle_path = obj_path + '.pickle'
         if isinstance(kwargs[obj_name], pd.DataFrame):
-            kwargs[obj_name].to_pickle(pickle_path)
+			attempt_to_pickle(kwargs[obj_name], pickle_path, raise_exception=False)
         else:
             with open(pickle_path, 'wb') as handle:
                 pickle.dump(kwargs[obj_name], handle, pickle.HIGHEST_PROTOCOL)
