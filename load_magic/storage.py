@@ -1,19 +1,19 @@
 
-!mkdir ..\data
-!mkdir ..\data\csv
-!mkdir ..\saves
-!mkdir ..\saves\pickle
-!mkdir ..\saves\csv
 import pickle
 import pandas as pd
 import os
 
-# Handy list of the different types of encodings
-encoding = ['latin1', 'iso8859-1', 'utf-8'][2]
-
 # Change this to your data and saves folders
 data_folder = r'../data/'
 saves_folder = r'../saves/'
+
+# Create the assumed directories
+os.makedirs(name=data_folder+'csv', exist_ok=True)
+os.makedirs(name=saves_folder+'pickle', exist_ok=True)
+os.makedirs(name=saves_folder+'csv', exist_ok=True)
+
+# Handy list of the different types of encodings
+encoding = ['latin1', 'iso8859-1', 'utf-8'][2]
 
 def load_csv(csv_name=None, folder_path=None):
     if folder_path is None:
