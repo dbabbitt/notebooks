@@ -34,11 +34,11 @@ def load_dataframes(**kwargs):
     for frame_name in kwargs:
         pickle_path = saves_folder + 'pickle/' + frame_name + '.pickle'
         if not os.path.isfile(pickle_path):
-			print('No pickle exists at ' + pickle_path + ' - attempting to load a saves folder csv.')
+            print('No pickle exists at ' + pickle_path + ' - attempting to load a saves folder csv.')
             csv_folder = saves_folder + 'csv/'
             csv_path = csv_folder + frame_name + '.csv'
             if not os.path.isfile(csv_path):
-				print('No csv exists at ' + csv_path + ' - trying the data folder.')
+                print('No csv exists at ' + csv_path + ' - trying the data folder.')
                 csv_path = data_folder + 'csv/' + frame_name + '.csv'
                 if not os.path.isfile(csv_path):
                     print('No csv exists at ' + csv_path + ' - just forget it.')
@@ -65,7 +65,7 @@ def load_object(obj_name, download_url=None):
             object = pd.read_csv(csv_path, low_memory=False,
                                  encoding=encoding)
         if isinstance(object, pd.DataFrame):
-			attempt_to_pickle(object, pickle_path, raise_exception=False)
+            attempt_to_pickle(object, pickle_path, raise_exception=False)
         else:
             with open(pickle_path, 'wb') as handle:
                 pickle.dump(object, handle, pickle.HIGHEST_PROTOCOL)
@@ -94,7 +94,7 @@ def store_objects(**kwargs):
         obj_path = saves_folder + 'pickle/' + str(obj_name)
         pickle_path = obj_path + '.pickle'
         if isinstance(kwargs[obj_name], pd.DataFrame):
-			attempt_to_pickle(kwargs[obj_name], pickle_path, raise_exception=False)
+            attempt_to_pickle(kwargs[obj_name], pickle_path, raise_exception=False)
         else:
             with open(pickle_path, 'wb') as handle:
                 pickle.dump(kwargs[obj_name], handle, pickle.HIGHEST_PROTOCOL)
