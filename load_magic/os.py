@@ -31,7 +31,8 @@ for subdir, dirs, files in os.walk(rootdir):
         if all(map(lambda x: x not in subdir, black_list)):
             if src_file.endswith('.wav'):
                 src_path = os.path.join(subdir, src_file)
-                dst_dir = os.path.normpath(os.getcwd() + '../data/wav' + '/'.join(subdir.rsplit(rootdir)))
+                dst_dir = os.path.normpath(os.getcwd() + '../data/wav' +
+                                           '/'.join(subdir.rsplit(rootdir)))
                 if not os.path.isdir(dst_dir):
                     os.makedirs(dst_dir)
                 dst_path = dst_dir + '/' + src_file
