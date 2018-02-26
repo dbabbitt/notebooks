@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<NotepadPlus>
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="yes" wrap="yes" directionDown="no" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no">
+        <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
+        <Filter name="*.py;" />
+        <Find name="update_query_params" />
+        <Find name="OAuth2WebServerFlow" />
+        <Find name="redirect_uri" />
+        <Find name="save_credentials" />
+        <Find name="GetFlow" />
+        <Find name="step1_get_authorize_url" />
+        <Find name="GetAuthUrl" />
+        <Find name="access_type" />
+        <Find name="&apos;" />
+        <Find name="ApiAttributeMixin" />
+        <Replace name='&quot;' />
+        <Replace name="validation_" />
+        <Replace name="train_" />
+        <Replace name="&apos;t10k-labels-idx1-ubyte.gz&apos;" />
+        <Replace name="&apos;t10k-images-idx3-ubyte.gz&apos;" />
+        <Replace name="&apos;train-labels-idx1-ubyte.gz&apos;" />
+        <Replace name="&apos;train-images-idx3-ubyte.gz&apos;" />
+        <Replace name="DEFAULT_SOURCE_URL" />
+        <Replace name="None" />
+        <Replace name="5000" />
+    </FindHistory>
+    <History nbMaxFile="10" inSubMenu="no" customLength="-1">
+        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\oauth2client\_helpers.py" />
+        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\oauth2client\client.py" />
+        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive\auth.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\notebooks\Miscellaneous\json\reddit_client_secrets.json" />
+        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive\apiattr.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\notebooks\Miscellaneous\json\reddit_web_app_client_secrets.json" />
+        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive\files.py" />
+        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive\test\test_file.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\notebooks\Miscellaneous\json\quickstart.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\bat\start_forDave.bat" />
+    </History>
+    <GUIConfigs>
+        <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
+        <GUIConfig name="StatusBar">show</GUIConfig>
+        <GUIConfig name="TabBar" dragAndDrop="yes" drawTopBar="yes" drawInactiveTab="yes" reduce="yes" closeButton="yes" doubleClick2Close="no" vertical="no" multiLine="no" hide="no" quitOnEmpty="no" />
+        <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
+        <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
+        <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
+        <GUIConfig name="AppPosition" x="0" y="0" width="1100" height="700" isMaximized="yes" />
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180301">no</GUIConfig>
+        <GUIConfig name="Auto-detection">yes</GUIConfig>
+        <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
+        <GUIConfig name="TrayIcon">no</GUIConfig>
+        <GUIConfig name="MaitainIndent">yes</GUIConfig>
+        <GUIConfig name="TagsMatchHighLight" TagAttrHighLight="yes" HighLightNonHtmlZone="no">yes</GUIConfig>
+        <GUIConfig name="RememberLastSession">yes</GUIConfig>
+        <GUIConfig name="DetectEncoding">yes</GUIConfig>
+        <GUIConfig name="NewDocDefaultSettings" format="0" encoding="4" lang="0" codepage="-1" openAnsiAsUTF8="yes" />
+        <GUIConfig name="langsExcluded" gr0="254" gr1="110" gr2="191" gr3="255" gr4="255" gr5="111" gr6="191" gr7="249" gr8="255" gr9="255" gr10="31" gr11="0" gr12="0" langMenuCompact="yes" />
+        <GUIConfig name="Print" lineNumber="yes" printOption="3" headerLeft="" headerMiddle="" headerRight="" footerLeft="" footerMiddle="" footerRight="" headerFontName="" headerFontStyle="0" headerFontSize="0" footerFontName="" footerFontStyle="0" footerFontSize="0" margeLeft="0" margeRight="0" margeTop="0" margeBottom="0" />
+        <GUIConfig name="Backup" action="0" useCustumDir="no" dir="" isSnapshotMode="yes" snapshotBackupTiming="7000" />
+        <GUIConfig name="TaskList">yes</GUIConfig>
+        <GUIConfig name="MRU">yes</GUIConfig>
+        <GUIConfig name="URL">2</GUIConfig>
+        <GUIConfig name="globalOverride" fg="no" bg="no" font="no" fontSize="no" bold="no" italic="no" underline="no" />
+        <GUIConfig name="auto-completion" autoCAction="0" triggerFromNbChar="1" autoCIgnoreNumbers="no" funcParams="yes" />
+        <GUIConfig name="auto-insert" parentheses="no" brackets="no" curlyBrackets="no" quotes="no" doubleQuotes="no" htmlXmlTag="no" />
+        <GUIConfig name="sessionExt"></GUIConfig>
+        <GUIConfig name="workspaceExt"></GUIConfig>
+        <GUIConfig name="MenuBar">show</GUIConfig>
+        <GUIConfig name="Caret" width="1" blinkRate="600" />
+        <GUIConfig name="ScintillaGlobalSettings" enableMultiSelection="no" />
+        <GUIConfig name="openSaveDir" value="0" defaultDirPath="" />
+        <GUIConfig name="titleBar" short="no" />
+        <GUIConfig name="stylerTheme" path="C:\Users\577342\AppData\Roaming\Notepad++\stylers.xml" />
+        <GUIConfig name="wordCharList" useDefault="yes" charsAdded="" />
+        <GUIConfig name="delimiterSelection" leftmostDelimiter="40" rightmostDelimiter="41" delimiterSelectionOnEntireDocument="no" />
+        <GUIConfig name="multiInst" setting="0" />
+        <GUIConfig name="MISC" fileSwitcherWithoutExtColumn="no" backSlashIsEscapeCharacterForSql="yes" newStyleSaveDlg="no" isFolderDroppedOpenFiles="no" docPeekOnTab="no" docPeekOnMap="no" />
+        <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
+        <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
+        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="0" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
+        <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="240">
+            <PluginDlg pluginName="dummy" id="0" curr="3" prev="-1" isVisible="yes" />
+            <ActiveTabs cont="0" activeTab="-1" />
+            <ActiveTabs cont="1" activeTab="-1" />
+            <ActiveTabs cont="2" activeTab="-1" />
+            <ActiveTabs cont="3" activeTab="-1" />
+        </GUIConfig>
+    </GUIConfigs>
+    <ProjectPanels>
+        <ProjectPanel id="0" workSpaceFile="" />
+        <ProjectPanel id="1" workSpaceFile="" />
+        <ProjectPanel id="2" workSpaceFile="" />
+    </ProjectPanels>
+</NotepadPlus>
