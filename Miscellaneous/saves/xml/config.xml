@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
     <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="yes" wrap="yes" directionDown="no" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no">
+        <Path name="C:\users\dev\Anaconda3\Lib\site-packages\networkx" />
+        <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
+        <Find name="random_state" />
+        <Find name="influences_" />
+        <Find name="_dir" />
         <Find name="update_query_params" />
         <Find name="OAuth2WebServerFlow" />
         <Find name="redirect_uri" />
@@ -10,9 +15,7 @@
         <Find name="GetFlow" />
         <Find name="step1_get_authorize_url" />
         <Find name="GetAuthUrl" />
-        <Find name="access_type" />
-        <Find name="&apos;" />
-        <Find name="ApiAttributeMixin" />
+        <Replace name="influenced_" />
         <Replace name='&quot;' />
         <Replace name="validation_" />
         <Replace name="train_" />
@@ -22,10 +25,8 @@
         <Replace name="&apos;train-images-idx3-ubyte.gz&apos;" />
         <Replace name="DEFAULT_SOURCE_URL" />
         <Replace name="None" />
-        <Replace name="5000" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\oauth2client\_helpers.py" />
         <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\oauth2client\client.py" />
         <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive\auth.py" />
         <File filename="C:\Users\577342\Documents\Repositories\notebooks\Miscellaneous\json\reddit_client_secrets.json" />
@@ -35,6 +36,7 @@
         <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive\test\test_file.py" />
         <File filename="C:\Users\577342\Documents\Repositories\notebooks\Miscellaneous\json\quickstart.py" />
         <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\bat\start_forDave.bat" />
+        <File filename="C:\Program Files\Notepad++\change.log" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -78,7 +80,7 @@
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
         <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="0" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
         <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="240">
-            <PluginDlg pluginName="dummy" id="0" curr="3" prev="-1" isVisible="yes" />
+            <PluginDlg pluginName="dummy" id="0" curr="3" prev="-1" isVisible="no" />
             <ActiveTabs cont="0" activeTab="-1" />
             <ActiveTabs cont="1" activeTab="-1" />
             <ActiveTabs cont="2" activeTab="-1" />
