@@ -1,0 +1,5 @@
+
+c.ContentsManager.root_dir = r'C:\Users\dev\Documents\repositories'
+c.ContentsManager.untitled_directory = '_Untitled_Folder_'
+c.FileContentsManager.root_dir = r'C:\Users\dev\Documents\repositories'
+c.MappingKernelManager.root_dir = r'C:\Users\dev\Documents\repositories'
