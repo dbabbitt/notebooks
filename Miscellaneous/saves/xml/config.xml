@@ -5,16 +5,17 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
+        <Find name="eccentricity" />
+        <Find name="def periphery" />
+        <Find name="def center" />
+        <Find name="\t" />
+        <Find name="strategy_independent_set" />
+        <Find name="Your browser has been opened to visit" />
         <Find name="random_state" />
         <Find name="influences_" />
         <Find name="_dir" />
         <Find name="update_query_params" />
-        <Find name="OAuth2WebServerFlow" />
-        <Find name="redirect_uri" />
-        <Find name="save_credentials" />
-        <Find name="GetFlow" />
-        <Find name="step1_get_authorize_url" />
-        <Find name="GetAuthUrl" />
+        <Replace name="    " />
         <Replace name="influenced_" />
         <Replace name='&quot;' />
         <Replace name="validation_" />
@@ -24,7 +25,6 @@
         <Replace name="&apos;train-labels-idx1-ubyte.gz&apos;" />
         <Replace name="&apos;train-images-idx3-ubyte.gz&apos;" />
         <Replace name="DEFAULT_SOURCE_URL" />
-        <Replace name="None" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
         <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\oauth2client\client.py" />
@@ -36,6 +36,7 @@
         <File filename="C:\Users\577342\Documents\Repositories\notebooks\Miscellaneous\json\quickstart.py" />
         <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\bat\start_forDave.bat" />
         <File filename="C:\Program Files\Notepad++\change.log" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\charts.py" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
