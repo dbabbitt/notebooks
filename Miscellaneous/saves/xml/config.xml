@@ -5,6 +5,8 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
+        <Find name="shortest" />
+        <Find name="17 c" />
         <Find name="eccentricity" />
         <Find name="def periphery" />
         <Find name="def center" />
@@ -13,8 +15,6 @@
         <Find name="Your browser has been opened to visit" />
         <Find name="random_state" />
         <Find name="influences_" />
-        <Find name="_dir" />
-        <Find name="update_query_params" />
         <Replace name="    " />
         <Replace name="influenced_" />
         <Replace name='&quot;' />
@@ -27,16 +27,16 @@
         <Replace name="DEFAULT_SOURCE_URL" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\oauth2client\client.py" />
-        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive\auth.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\notebooks\Miscellaneous\json\reddit_client_secrets.json" />
-        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive\apiattr.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\notebooks\Miscellaneous\json\reddit_web_app_client_secrets.json" />
-        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive\test\test_file.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\notebooks\Miscellaneous\json\quickstart.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\bat\start_forDave.bat" />
-        <File filename="C:\Program Files\Notepad++\change.log" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\charts.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\storage2.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\storage.py" />
+        <File filename="C:\Users\dev\Downloads\I Scraped Wikipedia to Build a Jungian-influenced Social Network Graph.py" />
+        <File filename="C:\Users\dev\Downloads\jordan_infobox.txt" />
+        <File filename="C:\Users\dev\Downloads\default_infobox.txt" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder (Manually).ipynb" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\networkx\drawing\layout.py" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\networkx\utils\random_sequence.py" />
+        <File filename="c:\users\dev\anaconda3\lib\site-packages\networkx\algorithms\coloring\greedy_coloring.py" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\pydrive\files.py" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
