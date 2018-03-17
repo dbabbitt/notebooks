@@ -99,6 +99,7 @@ def store_objects(**kwargs):
         if isinstance(kwargs[obj_name], pd.DataFrame):
             attempt_to_pickle(kwargs[obj_name], pickle_path, raise_exception=False)
         else:
+            print('Pickling to ' + pickle_path)
             with open(pickle_path, 'wb') as handle:
                 pickle.dump(kwargs[obj_name], handle, pickle.HIGHEST_PROTOCOL)
 
