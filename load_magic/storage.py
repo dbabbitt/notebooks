@@ -4,8 +4,10 @@ import pandas as pd
 import os
 
 # Change this to your data and saves folders
-data_folder = r'../data/'
-saves_folder = r'../saves/'
+data_folder = r'../../data/'
+print('data_folder:', data_folder)
+saves_folder = r'../../saves/'
+print('saves_folder:', saves_folder)
 
 # Create the assumed directories
 os.makedirs(name=data_folder+'csv', exist_ok=True)
@@ -96,6 +98,7 @@ def store_objects(**kwargs):
         if isinstance(kwargs[obj_name], pd.DataFrame):
             attempt_to_pickle(kwargs[obj_name], pickle_path, raise_exception=False)
         else:
+            print('Pickling to ' + pickle_path)
             with open(pickle_path, 'wb') as handle:
                 pickle.dump(kwargs[obj_name], handle, pickle.HIGHEST_PROTOCOL)
 

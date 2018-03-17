@@ -3,6 +3,9 @@ from difflib import SequenceMatcher
 import time
 import pandas as pd
 
+# Handy list of the different types of encodings
+encoding = ['latin1', 'iso8859-1', 'utf-8'][2]
+
 def check_4_doubles(item_list):
     t0 = time.time()
     rows_list = []
