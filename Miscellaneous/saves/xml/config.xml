@@ -5,6 +5,8 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
+        <Find name=" " />
+        <Find name="Egypt" />
         <Find name="shortest" />
         <Find name="17 c" />
         <Find name="eccentricity" />
@@ -13,8 +15,7 @@
         <Find name="\t" />
         <Find name="strategy_independent_set" />
         <Find name="Your browser has been opened to visit" />
-        <Find name="random_state" />
-        <Find name="influences_" />
+        <Replace name="_" />
         <Replace name="    " />
         <Replace name="influenced_" />
         <Replace name='&quot;' />
@@ -24,19 +25,18 @@
         <Replace name="&apos;t10k-images-idx3-ubyte.gz&apos;" />
         <Replace name="&apos;train-labels-idx1-ubyte.gz&apos;" />
         <Replace name="&apos;train-images-idx3-ubyte.gz&apos;" />
-        <Replace name="DEFAULT_SOURCE_URL" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\storage2.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\storage.py" />
-        <File filename="C:\Users\dev\Downloads\I Scraped Wikipedia to Build a Jungian-influenced Social Network Graph.py" />
-        <File filename="C:\Users\dev\Downloads\jordan_infobox.txt" />
-        <File filename="C:\Users\dev\Downloads\default_infobox.txt" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder (Manually).ipynb" />
         <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\networkx\drawing\layout.py" />
         <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\networkx\utils\random_sequence.py" />
         <File filename="c:\users\dev\anaconda3\lib\site-packages\networkx\algorithms\coloring\greedy_coloring.py" />
         <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\pydrive\files.py" />
+        <File filename="C:\Users\dev\Downloads\9816061e.txt" />
+        <File filename="C:\Users\dev\Downloads\cover.txt" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\networkx\algorithms\distance_measures.py" />
+        <File filename="C:\users\dev\Anaconda3\Lib\site-packages\networkx\utils\decorators.py" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\networkx\utils\__init__.py" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>

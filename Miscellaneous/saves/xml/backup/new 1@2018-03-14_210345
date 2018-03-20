@@ -1,6 +1,63 @@
-List names of any notable people who influenced the scientist significantly. Influences should be restricted to a small number, i.e. two or three, where the scientist was clearly and directly building on the work of a predecessor (for example, the scientist may have identified a predecessor as providing the foundation for one of their major achievements). Unless the scientist was clearly building on an earlier work, avoid adding influences that were only via study, as such influences are generally too many and hard to separate. Only list influences who are notable enough to warrant their own wiki article.
-
-
-Common errors to avoid
-Always copy and paste the infobox template from here, not another article, in order to guarantee the full correct version.
-If a field does not apply, leave it blank. Do not delete it. This is because is acts as a place-holder and future editors may find a field applies after all. You may put a comment in the blank field that it is not applicable if you are sure of this.
+<div><div class="buffering-controls reddit-video-controller-root" style="visibility: hidden; opacity: 0;"><div class="centered horizontal"><div class="buffering-indicator active"><div class="spinner-layer"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div></div></div><div class="pinned-controls show-only-when-pinned reddit-video-controller-root" style="opacity: 0;"><div class="centered horizontal"><button class="play-pause" data-control-type="click" data-action="pause" data-toggle-action="play" style="margin-right: 3.796875px;"><svg class="play-pause" viewBox="0 0 40 40"><path d="m5,5l12,0l0,30l-12,0l0,-30m18,0l12,0l0,30l-12,0l0,-30"><animate begin="indefinite" attributeType="XML" attributeName="d" fill="freeze" to="m5,5l12,0l0,30l-12,0l0,-30m18,0l12,0l0,30l-12,0l0,-30" from="m5,5l15,7.5l0,15l-15,7.5l0,-30m15,7.5l15,7.5l0,0l-15,7.5l0,-15" dur="0.1s" keySplines=".4 0 1 1" repeat="1"></animate></path></svg></button><button class="fullscreen" data-control-type="click" data-action="fullscreenRequest" data-toggle-action="fullscreenCancel" style="margin-left: 3.796875px;"><img class="expand" src="//www.redditstatic.com/video-expand.svg"><img class="collapse" src="//www.redditstatic.com/video-collapse.svg"></button></div></div><div class="playback-controls right bottom left hide-when-pinned reddit-video-controller-root" style="opacity: 0;"><button class="control-button play-pause has-tooltip" tooltip-string="Pause" tooltip-string-toggle="Play" data-control-type="click" data-action="pause" data-toggle-action="play"><svg class="play-pause" viewBox="0 0 40 40"><path d="m5,5l12,0l0,30l-12,0l0,-30m18,0l12,0l0,30l-12,0l0,-30"><animate begin="indefinite" attributeType="XML" attributeName="d" fill="freeze" to="m5,5l12,0l0,30l-12,0l0,-30m18,0l12,0l0,30l-12,0l0,-30" from="m5,5l15,7.5l0,15l-15,7.5l0,-30m15,7.5l15,7.5l0,0l-15,7.5l0,-15" dur="0.1s" keySplines=".4 0 1 1" repeat="1"></animate></path></svg><span class="tooltip" style="left: -16.0188px;">Pause</span></button><span class="time-label" data-control-type="text" data-action="elapsedTime">0:02</span><div data-control-type="seekBar" data-preview-video-src="https://v.redd.it/44ee42d0yxl01/DASH_600_K" class="reddit-video-seek-bar-root"><div class="seek-bar-bar seek-bar-background"></div><div class="seek-bar-bar seek-bar-lookahead"></div><div class="seek-bar-bar seek-bar-buffered" style="width: 100%; left: 0%;"></div><div class="seek-bar-bar seek-bar-progress" style="width: 36.0589%;"></div><div class="seek-bar-thumb seek-bar-progress" style="margin-left: calc(36.0589% - 8px);"></div><div class="seek-bar-floating"><video muted="" preload="" src="https://v.redd.it/44ee42d0yxl01/DASH_600_K" class="portrait"></video><span class="seek-bar-time"></span></div></div><span class="time-label" data-control-type="text" data-action="totalTime">0:04</span><div class="control-button settings-container has-tooltip" tooltip-string="Settings"><label class="settings has-submenu" data-control-type="click"><input class="settings" type="checkbox"><img class="settings-open" src="//www.redditstatic.com/video-settings.svg"><img class="settings-close" src="//www.redditstatic.com/video-settings-open.svg"><span class="submenu"><div data-control-type="settingsMenu" class="reddit-video-settings-root"><div class="video-settings-container"><label style="display: inherit;"><input type="radio" value="1080" name="quality-0" data-index="4"><img src="/static/checkmark.svg"><span>1080p</span>&nbsp;<span class="hd">HD</span></label><label style="display: inherit;"><input type="radio" value="720" name="quality-0" data-index="3"><img src="/static/checkmark.svg"><span>720p</span>&nbsp;<span class="hd">HD</span></label><label style="display: inherit;"><input type="radio" value="480" name="quality-0" data-index="2"><img src="/static/checkmark.svg"><span>480p</span></label><label style="display: inherit;"><input type="radio" value="360" name="quality-0" data-index="1"><img src="/static/checkmark.svg"><span>360p</span></label><label style="display: inherit;"><input type="radio" value="240" name="quality-0" data-index="0"><img src="/static/checkmark.svg"><span>240p</span></label><label><input type="radio" value="0" checked="checked" name="quality-0"><img src="/static/checkmark.svg"><span>Auto</span></label></div></div></span></label><span class="tooltip" style="left: -15.7125px;">Settings</span></div><button class="control-button fullscreen has-tooltip" tooltip-string="Fullscreen" tooltip-string-toggle="Exit Fullscreen" data-control-type="click" data-action="fullscreenRequest" data-toggle-action="fullscreenCancel"><img class="expand" src="//www.redditstatic.com/video-expand.svg"><img class="collapse" src="//www.redditstatic.com/video-collapse.svg"><span class="tooltip" style="left: -34.35px;">Fullscreen</span></button></div></div><div>
+    <div class="buffering-controls reddit-video-controller-root" style="visibility: hidden; opacity: 0;">
+        <div class="centered horizontal">
+            <div class="buffering-indicator active">
+                <div class="spinner-layer">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pinned-controls show-only-when-pinned reddit-video-controller-root" style="opacity: 0;">
+        <div class="centered horizontal">
+            <button class="play-pause" data-control-type="click" data-action="pause" data-toggle-action="play" style="margin-right: 3.796875px;">
+                <svg class="play-pause" viewBox="0 0 40 40">
+                    <path d="m5,5l12,0l0,30l-12,0l0,-30m18,0l12,0l0,30l-12,0l0,-30">
+                        <animate begin="indefinite" attributeType="XML" attributeName="d" fill="freeze" to="m5,5l12,0l0,30l-12,0l0,-30m18,0l12,0l0,30l-12,0l0,-30" from="m5,5l15,7.5l0,15l-15,7.5l0,-30m15,7.5l15,7.5l0,0l-15,7.5l0,-15" dur="0.1s" keySplines=".4 0 1 1" repeat="1"></animate>
+                    </path>
+                </svg>
+            </button>
+            <button class="fullscreen" data-control-type="click" data-action="fullscreenRequest" data-toggle-action="fullscreenCancel" style="margin-left: 3.796875px;"><img class="expand" src="//www.redditstatic.com/video-expand.svg"><img class="collapse" src="//www.redditstatic.com/video-collapse.svg"></button>
+        </div>
+    </div>
+    <div class="playback-controls right bottom left hide-when-pinned reddit-video-controller-root" style="opacity: 0;">
+        <button class="control-button play-pause has-tooltip" tooltip-string="Pause" tooltip-string-toggle="Play" data-control-type="click" data-action="pause" data-toggle-action="play">
+            <svg class="play-pause" viewBox="0 0 40 40">
+                <path d="m5,5l12,0l0,30l-12,0l0,-30m18,0l12,0l0,30l-12,0l0,-30">
+                    <animate begin="indefinite" attributeType="XML" attributeName="d" fill="freeze" to="m5,5l12,0l0,30l-12,0l0,-30m18,0l12,0l0,30l-12,0l0,-30" from="m5,5l15,7.5l0,15l-15,7.5l0,-30m15,7.5l15,7.5l0,0l-15,7.5l0,-15" dur="0.1s" keySplines=".4 0 1 1" repeat="1"></animate>
+                </path>
+            </svg>
+            <span class="tooltip" style="left: -16.0188px;">Pause</span>
+        </button>
+        <span class="time-label" data-control-type="text" data-action="elapsedTime">0:02</span>
+        <div data-control-type="seekBar" data-preview-video-src="https://v.redd.it/44ee42d0yxl01/DASH_600_K" class="reddit-video-seek-bar-root">
+            <div class="seek-bar-bar seek-bar-background"></div>
+            <div class="seek-bar-bar seek-bar-lookahead"></div>
+            <div class="seek-bar-bar seek-bar-buffered" style="width: 100%; left: 0%;"></div>
+            <div class="seek-bar-bar seek-bar-progress" style="width: 36.0589%;"></div>
+            <div class="seek-bar-thumb seek-bar-progress" style="margin-left: calc(36.0589% - 8px);"></div>
+            <div class="seek-bar-floating">
+                <video muted="" preload="" src="https://v.redd.it/44ee42d0yxl01/DASH_600_K" class="portrait"></video>
+                <span class="seek-bar-time"></span>
+            </div>
+        </div>
+        <span class="time-label" data-control-type="text" data-action="totalTime">0:04</span>
+        <div class="control-button settings-container has-tooltip" tooltip-string="Settings">
+            <label class="settings has-submenu" data-control-type="click">
+                <input class="settings" type="checkbox"><img class="settings-open" src="//www.redditstatic.com/video-settings.svg"><img class="settings-close" src="//www.redditstatic.com/video-settings-open.svg">
+                <span class="submenu">
+                    <div data-control-type="settingsMenu" class="reddit-video-settings-root">
+                        <div class="video-settings-container">
+            <label style="display: inherit;"><input type="radio" value="1080" name="quality-0" data-index="4"><img src="/static/checkmark.svg"><span>1080p</span>&nbsp;<span class="hd">HD</span></label><label style="display: inherit;"><input type="radio" value="720" name="quality-0" data-index="3"><img src="/static/checkmark.svg"><span>720p</span>&nbsp;<span class="hd">HD</span></label><label style="display: inherit;"><input type="radio" value="480" name="quality-0" data-index="2"><img src="/static/checkmark.svg"><span>480p</span></label><label style="display: inherit;"><input type="radio" value="360" name="quality-0" data-index="1"><img src="/static/checkmark.svg"><span>360p</span></label><label style="display: inherit;"><input type="radio" value="240" name="quality-0" data-index="0"><img src="/static/checkmark.svg"><span>240p</span></label><label><input type="radio" value="0" checked="checked" name="quality-0"><img src="/static/checkmark.svg"><span>Auto</span></label></div></div></span></label><span class="tooltip" style="left: -15.7125px;">Settings</span>
+        </div>
+        <button class="control-button fullscreen has-tooltip" tooltip-string="Fullscreen" tooltip-string-toggle="Exit Fullscreen" data-control-type="click" data-action="fullscreenRequest" data-toggle-action="fullscreenCancel"><img class="expand" src="//www.redditstatic.com/video-expand.svg"><img class="collapse" src="//www.redditstatic.com/video-collapse.svg"><span class="tooltip" style="left: -34.35px;">Fullscreen</span></button>
+    </div>
+</div>
