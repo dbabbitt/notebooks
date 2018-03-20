@@ -43,7 +43,6 @@ Miscellaneous/json/quickstart.py
 Miscellaneous/json/reddit_client_secrets.json
 Miscellaneous/json/reddit_web_app_client_secrets.json
 Miscellaneous/ipynb/Channel_Attribution_Building_Blocks_of_Interpretability.ipynb
-Miscellaneous/ipynb/Upload YouTube Videos to the Reading Material Folder (Manually).ipynb
 
 # Exclude Simulations notebooks that I didn't make
 Simulations/dsdemo1.ipynb
