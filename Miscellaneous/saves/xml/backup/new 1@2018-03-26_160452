@@ -1,0 +1,241 @@
+<tf-graph-scene id="scene" class="auto style-scope tf-graph">
+    <div class="titleContainer style-scope tf-graph-scene">
+        <div id="title" class="title style-scope tf-graph-scene" style="display: inline; left: 36px;">Main Graph</div>
+        <div id="auxTitle" class="auxTitle style-scope tf-graph-scene" style="display: none;">Auxiliary Nodes</div>
+        <div id="functionLibraryTitle" class="functionLibraryTitle style-scope tf-graph-scene" style="display: none;">Functions</div>
+    </div>
+    <svg id="svg" class="style-scope tf-graph-scene" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+        <defs class="style-scope tf-graph-scene">
+            <path id="reference-arrowhead-path" d="M 0,0 L 10,5 L 0,10 C 3,7 3,3 0,0" class="style-scope tf-graph-scene"></path>
+            <marker class="reference-arrowhead style-scope tf-graph-scene" id="reference-arrowhead-small" viewBox="0 0 10 10" markerWidth="5" markerHeight="5" refX="2" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#reference-arrowhead-path" class="style-scope tf-graph-scene"></use>
+            </marker>
+            <marker class="reference-arrowhead style-scope tf-graph-scene" id="reference-arrowhead-medium" viewBox="0 0 10 10" markerWidth="13" markerHeight="13" refX="2" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#reference-arrowhead-path" class="style-scope tf-graph-scene"></use>
+            </marker>
+            <marker class="reference-arrowhead style-scope tf-graph-scene" id="reference-arrowhead-large" viewBox="0 0 10 10" markerWidth="16" markerHeight="16" refX="2" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#reference-arrowhead-path" class="style-scope tf-graph-scene"></use>
+            </marker>
+            <marker class="reference-arrowhead style-scope tf-graph-scene" id="reference-arrowhead-xlarge" viewBox="0 0 10 10" markerWidth="20" markerHeight="20" refX="2" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#reference-arrowhead-path" class="style-scope tf-graph-scene"></use>
+            </marker>
+            <path id="dataflow-arrowhead-path" d="M 0,0 L 10,5 L 0,10 C 3,7 3,3 0,0" class="style-scope tf-graph-scene"></path>
+            <marker class="dataflow-arrowhead style-scope tf-graph-scene" id="dataflow-arrowhead-small" viewBox="0 0 10 10" markerWidth="5" markerHeight="5" refX="2" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#dataflow-arrowhead-path" class="style-scope tf-graph-scene"></use>
+            </marker>
+            <marker class="dataflow-arrowhead style-scope tf-graph-scene" id="dataflow-arrowhead-medium" viewBox="0 0 10 10" markerWidth="13" markerHeight="13" refX="2" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#dataflow-arrowhead-path" class="style-scope tf-graph-scene"></use>
+            </marker>
+            <marker class="dataflow-arrowhead style-scope tf-graph-scene" id="dataflow-arrowhead-large" viewBox="0 0 10 10" markerWidth="16" markerHeight="16" refX="2" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#dataflow-arrowhead-path" class="style-scope tf-graph-scene"></use>
+            </marker>
+            <marker class="dataflow-arrowhead style-scope tf-graph-scene" id="dataflow-arrowhead-xlarge" viewBox="0 0 10 10" markerWidth="20" markerHeight="20" refX="2" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#dataflow-arrowhead-path" class="style-scope tf-graph-scene"></use>
+            </marker>
+            <marker id="annotation-arrowhead" markerWidth="5" markerHeight="5" refX="5" refY="2.5" orient="auto" class="style-scope tf-graph-scene">
+                <path d="M 0,0 L 5,2.5 L 0,5 L 0,0" class="style-scope tf-graph-scene"></path>
+            </marker>
+            <marker id="annotation-arrowhead-faded" markerWidth="5" markerHeight="5" refX="5" refY="2.5" orient="auto" class="style-scope tf-graph-scene">
+                <path d="M 0,0 L 5,2.5 L 0,5 L 0,0" class="style-scope tf-graph-scene"></path>
+            </marker>
+            <marker id="ref-annotation-arrowhead" markerWidth="5" markerHeight="5" refX="0" refY="2.5" orient="auto" class="style-scope tf-graph-scene">
+                <path d="M 5,0 L 0,2.5 L 5,5 L 5,0" class="style-scope tf-graph-scene"></path>
+            </marker>
+            <marker id="ref-annotation-arrowhead-faded" markerWidth="5" markerHeight="5" refX="0" refY="2.5" orient="auto" class="style-scope tf-graph-scene">
+                <path d="M 5,0 L 0,2.5 L 5,5 L 5,0" class="style-scope tf-graph-scene"></path>
+            </marker>
+            <ellipse id="op-node-stamp" rx="7.5" ry="3" stroke="inherit" fill="inherit" class="style-scope tf-graph-scene"></ellipse>
+            <ellipse id="op-node-annotation-stamp" rx="5" ry="2" stroke="inherit" fill="inherit" class="style-scope tf-graph-scene"></ellipse>
+            <g id="op-series-vertical-stamp" class="style-scope tf-graph-scene">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#op-node-stamp" x="8" y="9" class="style-scope tf-graph-scene"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#op-node-stamp" x="8" y="6" class="style-scope tf-graph-scene"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#op-node-stamp" x="8" y="3" class="style-scope tf-graph-scene"></use>
+            </g>
+            <g id="op-series-horizontal-stamp" class="style-scope tf-graph-scene">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#op-node-stamp" x="16" y="4" class="style-scope tf-graph-scene"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#op-node-stamp" x="12" y="4" class="style-scope tf-graph-scene"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#op-node-stamp" x="8" y="4" class="style-scope tf-graph-scene"></use>
+            </g>
+            <g id="op-series-annotation-stamp" class="style-scope tf-graph-scene">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#op-node-annotation-stamp" x="9" y="2" class="style-scope tf-graph-scene"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#op-node-annotation-stamp" x="7" y="2" class="style-scope tf-graph-scene"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#op-node-annotation-stamp" x="5" y="2" class="style-scope tf-graph-scene"></use>
+            </g>
+            <svg id="summary-icon" fill="#848484" height="12" viewBox="0 0 24 24" width="12" class="style-scope tf-graph-scene">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" class="style-scope tf-graph-scene"></path>
+            </svg>
+            <g id="linearGradients" class="style-scope tf-graph-scene"></g>
+            <pattern id="rectHatch" patternTransform="rotate(45 0 0)" width="5" height="5" patternUnits="userSpaceOnUse" class="style-scope tf-graph-scene">
+                <line x1="0" y1="0" x2="0" y2="5" style="stroke-width: 1" class="style-scope tf-graph-scene"></line>
+            </pattern>
+            <pattern id="ellipseHatch" patternTransform="rotate(45 0 0)" width="2" height="2" patternUnits="userSpaceOnUse" class="style-scope tf-graph-scene">
+                <line x1="0" y1="0" x2="0" y2="2" style="stroke-width: 1" class="style-scope tf-graph-scene"></line>
+            </pattern>
+            <filter id="health-pill-shadow" x="-40%" y="-40%" width="180%" height="180%" class="style-scope tf-graph-scene">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="0.8" class="style-scope tf-graph-scene"></feGaussianBlur>
+                <feOffset dx="0" dy="0" result="offsetblur" class="style-scope tf-graph-scene"></feOffset>
+                <feFlood flood-color="#000000" class="style-scope tf-graph-scene"></feFlood>
+                <feComposite in2="offsetblur" operator="in" class="style-scope tf-graph-scene"></feComposite>
+                <feMerge class="style-scope tf-graph-scene">
+                    <feMergeNode class="style-scope tf-graph-scene"></feMergeNode>
+                    <feMergeNode in="SourceGraphic" class="style-scope tf-graph-scene"></feMergeNode>
+                </feMerge>
+            </filter>
+        </defs>
+        <rect fill="white" width="10000" height="10000" class="style-scope tf-graph-scene"></rect>
+        <g id="root" class="style-scope tf-graph-scene" transform="translate(36,72) scale(1.8)">
+            <g class="scene" opacity="1">
+                <g class="core" transform="translate(0,20)">
+                    <g class="edges">
+                        <g class="edge" data-edge="Placeholder--model">
+                            <path id="path_Placeholder--model" class="edgeline" d="M157.58870967741936,136.95979899497488L155.74059139784947,134.87646566164156C153.89247311827958,132.7931323283082,150.1962365591398,128.62646566164153,148.3481182795699,125.12646594918154C146.5,121.62646623672153,146.5,118.79313347846819,146.5,117.37646709934153L146.5,115.95980072021484" style="stroke-width: 1.07168px; marker-end: url(&quot;#dataflow-arrowhead-small&quot;);"></path>
+                            <text>
+                                <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path_Placeholder--model" startOffset="50%" text-anchor="middle" dominant-baseline="central">?×93</textPath>
+                            </text>
+                        </g>
+                        <g class="edge" data-edge="model--cost_function">
+                            <path id="path_model--cost_function" class="edgeline" d="M120.30282305005821,93.79396984924622L114.29401920838184,91.71063651591288C108.28521536670547,89.62730318257957,96.26760768335275,85.4606365159129,87.51248883923496,81.64904541066743C78.75736999511719,77.83745430542196,73.26473999023438,74.3809387615977,70.51842498779297,72.65268098968556L67.77210998535156,70.92442321777344" style="stroke-width: 0.85368px; marker-end: url(&quot;#dataflow-arrowhead-small&quot;);"></path>
+                            <text>
+                                <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path_model--cost_function" startOffset="50%" text-anchor="middle" dominant-baseline="central">?×9</textPath>
+                            </text>
+                        </g>
+                        <g class="edge" data-edge="Placeholder_1--cost_function">
+                            <path id="path_Placeholder_1--cost_function" class="edgeline" d="M8.090745052386495,99.87688442211055L8.700620876988745,96.77973199329983C9.310496701590997,93.6825795644891,10.530248350795498,87.48827470686767,14.621077391950484,82.61128852754781C18.71190643310547,77.73430234822796,25.673812866210938,74.17463484720967,29.154766082763672,72.39480109670053L32.635719299316406,70.6149673461914" style="stroke-width: 0.85368px; marker-end: url(&quot;#dataflow-arrowhead-small&quot;);"></path>
+                            <text>
+                                <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path_Placeholder_1--cost_function" startOffset="50%" text-anchor="middle" dominant-baseline="central">?×9</textPath>
+                            </text>
+                        </g>
+                        <g class="edge" data-edge="cost_function--train">
+                            <path id="path_cost_function--train" class="edgeline" d="M51.75,52.8894472361809L51.75,50.806113902847564C51.75,48.722780569514235,51.75,44.556113902847564,54.90960184733073,40.71373226255228C58.06920369466146,36.87135062225699,64.38840738932292,33.35325400833309,67.54800923665364,31.594205701371134L70.70761108398438,29.83515739440918" style="stroke-width: 0.944001px; marker-end: url(&quot;#dataflow-arrowhead-small&quot;);"></path>
+                            <text>
+                                <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path_cost_function--train" startOffset="50%" text-anchor="middle" dominant-baseline="central">5 tensors</textPath>
+                            </text>
+                        </g>
+                        <g class="edge" data-edge="Placeholder_1--train">
+                            <path id="path_Placeholder_1--train" class="edgeline" d="M8.785739231664726,99.87688442211055L10.113116026387273,96.77973199329983C11.44049282110982,93.6825795644891,14.095246410554909,87.48827470686767,15.422623205277453,80.9824120603015C16.75,74.47654941373533,16.75,67.65912897822444,16.75,60.84170854271357C16.75,54.02428810720267,16.75,47.20686767169178,24.865150451660156,41.1969101393043C32.98030090332031,35.186952606916826,49.210601806640625,29.98445797765275,57.32575225830078,27.38321066302071L65.44090270996094,24.781963348388672" style="stroke-width: 0.903326px; marker-end: url(&quot;#dataflow-arrowhead-small&quot;);"></path>
+                            <text>
+                                <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path_Placeholder_1--train" startOffset="50%" text-anchor="middle" dominant-baseline="central">2 tensors</textPath>
+                            </text>
+                        </g>
+                        <g class="edge" data-edge="model--train">
+                            <path id="path_model--train" class="edgeline" d="M148.70940046565775,93.79396984924622L149.2161670547148,91.71063651591288C149.72293364377182,89.62730318257957,150.7364668218859,85.4606365159129,151.24323341094296,79.96859296482411C151.75,74.47654941373533,151.75,67.65912897822444,151.75,60.84170854271357C151.75,54.02428810720267,151.75,47.20686767169178,148.20941162109375,42.01473164198985C144.6688232421875,36.82259561228792,137.587646484375,33.25574398839493,134.04705810546875,31.472318176448443L130.5064697265625,29.688892364501953" style="stroke-width: 1.67717px; marker-end: url(&quot;#dataflow-arrowhead-small&quot;);"></path>
+                            <text>
+                                <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path_model--train" startOffset="50%" text-anchor="middle" dominant-baseline="central">7 tensors</textPath>
+                            </text>
+                        </g>
+                        <g class="edge" data-edge="Placeholder--train">
+                            <path id="path_Placeholder--train" class="edgeline" d="M164.36290322580646,136.95979899497488L167.21908602150538,134.87646566164156C170.07526881720432,132.7931323283082,175.78763440860214,128.62646566164153,178.64381720430106,122.9459798994975C181.5,117.26549413735343,181.5,110.071189279732,181.5,102.87688442211055C181.5,95.6825795644891,181.5,88.48827470686767,181.5,81.4824120603015C181.5,74.47654941373533,181.5,67.65912897822444,181.5,60.84170854271357C181.5,54.02428810720267,181.5,47.20686767169178,173.42633565266928,41.202341950319116C165.35267130533853,35.197816228946444,149.2053426106771,30.00618522171199,141.13167826334634,27.410369718094767L133.05801391601562,24.81455421447754" style="stroke-width: 1.07168px; marker-end: url(&quot;#dataflow-arrowhead-small&quot;);"></path>
+                            <text>
+                                <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path_Placeholder--train" startOffset="50%" text-anchor="middle" dominant-baseline="central">?×93</textPath>
+                            </text>
+                        </g>
+                        <g class="edge" data-edge="model--Accuracy">
+                            <path id="path_model--Accuracy" class="edgeline" d="M153.86466821885915,93.79396984924622L155.55389018238262,91.71063651591288C157.2431121459061,89.62730318257957,160.62155607295304,85.4606365159129,158.10955275571482,81.55879348806C155.59754943847656,77.65695046020711,147.19509887695312,74.01993107116802,142.9938735961914,72.20142137664845L138.7926483154297,70.3829116821289" style="stroke-width: 0.85368px; marker-end: url(&quot;#dataflow-arrowhead-small&quot;);"></path>
+                            <text>
+                                <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path_model--Accuracy" startOffset="50%" text-anchor="middle" dominant-baseline="central">?×9</textPath>
+                            </text>
+                        </g>
+                        <g class="edge" data-edge="Placeholder_1--Accuracy">
+                            <path id="path_Placeholder_1--Accuracy" class="edgeline" d="M15,100.62083063400627L25.708333333333332,97.3996871698796C36.416666666666664,94.17854370575292,57.833333333333336,87.73625677749958,71.77625910441081,82.75098721463785C85.71918487548828,77.76571765177613,92.18836975097656,74.23746545430603,95.4229621887207,72.47333935557099L98.65755462646484,70.70921325683594" style="stroke-width: 0.85368px; marker-end: url(&quot;#dataflow-arrowhead-small&quot;);"></path>
+                            <text>
+                                <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path_Placeholder_1--Accuracy" startOffset="50%" text-anchor="middle" dominant-baseline="central">?×9</textPath>
+                            </text>
+                        </g>
+                    </g>
+                    <g class="nodes">
+                        <g data-name="Placeholder" class="node op">
+                            <g class="in-annotations"></g>
+                            <g class="out-annotations"></g>
+                            <g class="nodeshape">
+                                <ellipse class="nodecolortarget" cx="160.25" cy="139.95979899497488" rx="7.5" ry="3" style="fill: white; stroke: rgb(179, 179, 179);"></ellipse>
+                            </g>
+                            <text class="nodelabel" dy=".35em" text-anchor="middle" x="160.25" y="131.95979899497488">
+                                Placehol...
+                                <title>Placeholder</title>
+                            </text>
+                        </g>
+                        <g data-name="Placeholder_1" class="node op">
+                            <g class="in-annotations"></g>
+                            <g class="out-annotations"></g>
+                            <g class="nodeshape">
+                                <ellipse class="nodecolortarget" cx="7.5" cy="102.87688442211055" rx="7.5" ry="3" style="fill: white; stroke: rgb(179, 179, 179);"></ellipse>
+                            </g>
+                            <text class="nodelabel" dy=".35em" text-anchor="middle" x="7.5" y="94.87688442211055">
+                                Placehol...
+                                <title>Placeholder_1</title>
+                            </text>
+                        </g>
+                        <g data-name="model" class="node meta">
+                            <g class="in-annotations"></g>
+                            <g class="out-annotations"></g>
+                            <g class="nodeshape">
+                                <rect class="nodecolortarget" rx="5" ry="5" x="116.5" y="93.79396984924622" width="60" height="18.165829145728644" style="fill: rgb(238, 238, 238); stroke: rgb(167, 167, 167);"></rect>
+                                <g class="buttoncontainer">
+                                    <circle class="buttoncircle"></circle>
+                                    <path class="expandbutton" d="M0,-2.2 V2.2 M-2.2,0 H2.2" transform="translate(170.5, 99.7939682006836)"></path>
+                                    <path class="collapsebutton" d="M-2.2,0 H2.2" transform="translate(170.5, 99.7939682006836)"></path>
+                                </g>
+                            </g>
+                            <text class="nodelabel" dy=".35em" text-anchor="middle" font-size="9px" pointer-events="none" x="146.5" y="102.87688442211055">model</text>
+                        </g>
+                        <g data-name="cost_function" class="node meta">
+                            <g class="in-annotations"></g>
+                            <g class="out-annotations"></g>
+                            <g class="nodeshape">
+                                <rect class="nodecolortarget" rx="5" ry="5" x="21.75" y="52.8894472361809" width="60" height="15.904522613065327" style="fill: rgb(238, 238, 238); stroke: rgb(167, 167, 167);"></rect>
+                                <g class="buttoncontainer">
+                                    <circle class="buttoncircle"></circle>
+                                    <path class="expandbutton" d="M0,-2.2 V2.2 M-2.2,0 H2.2" transform="translate(75.75, 58.88944625854492)"></path>
+                                    <path class="collapsebutton" d="M-2.2,0 H2.2" transform="translate(75.75, 58.88944625854492)"></path>
+                                </g>
+                            </g>
+                            <text class="nodelabel" dy=".35em" text-anchor="middle" font-size="8.142857142857142px" pointer-events="none" x="51.75" y="60.84170854271356">cost_function</text>
+                        </g>
+                        <g data-name="train" class="node meta">
+                            <g class="in-annotations"></g>
+                            <g class="out-annotations"></g>
+                            <g class="nodeshape">
+                                <rect class="nodecolortarget" rx="5" ry="5" x="69.25" y="0" width="60" height="27.889447236180906" style="fill: rgb(238, 238, 238); stroke: rgb(167, 167, 167);"></rect>
+                                <g class="buttoncontainer">
+                                    <circle class="buttoncircle"></circle>
+                                    <path class="expandbutton" d="M0,-2.2 V2.2 M-2.2,0 H2.2" transform="translate(123.25, 6)"></path>
+                                    <path class="collapsebutton" d="M-2.2,0 H2.2" transform="translate(123.25, 6)"></path>
+                                </g>
+                            </g>
+                            <text class="nodelabel" dy=".35em" text-anchor="middle" font-size="9px" pointer-events="none" x="99.25" y="13.944723618090453">train</text>
+                        </g>
+                        <g data-name="Accuracy" class="node meta">
+                            <g class="in-annotations"></g>
+                            <g class="out-annotations"></g>
+                            <g class="nodeshape">
+                                <rect class="nodecolortarget" rx="5" ry="5" x="86.75" y="52.8894472361809" width="60" height="15.904522613065327" style="fill: rgb(238, 238, 238); stroke: rgb(167, 167, 167);"></rect>
+                                <g class="buttoncontainer">
+                                    <circle class="buttoncircle"></circle>
+                                    <path class="expandbutton" d="M0,-2.2 V2.2 M-2.2,0 H2.2" transform="translate(140.75, 58.88944625854492)"></path>
+                                    <path class="collapsebutton" d="M-2.2,0 H2.2" transform="translate(140.75, 58.88944625854492)"></path>
+                                </g>
+                            </g>
+                            <text class="nodelabel" dy=".35em" text-anchor="middle" font-size="9px" pointer-events="none" x="116.75" y="60.84170854271356">Accuracy</text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </svg>
+    <tf-graph-minimap id="minimap" class="style-scope tf-graph-scene hidden">
+        <svg class="style-scope tf-graph-minimap">
+            <defs class="style-scope tf-graph-minimap">
+                <filter id="minimapDropShadow" x="-20%" y="-20%" width="150%" height="150%" class="style-scope tf-graph-minimap">
+                    <feOffset result="offOut" in="SourceGraphic" dx="1" dy="1" class="style-scope tf-graph-minimap"></feOffset>
+                    <feColorMatrix result="matrixOut" in="offOut" type="matrix" values="0.1 0 0 0 0 0 0.1 0 0 0 0 0 0.1 0 0 0 0 0 0.5 0" class="style-scope tf-graph-minimap"></feColorMatrix>
+                    <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="2" class="style-scope tf-graph-minimap"></feGaussianBlur>
+                    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" class="style-scope tf-graph-minimap"></feBlend>
+                </filter>
+            </defs>
+            <rect class="style-scope tf-graph-minimap" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" x="-13.051458092583779" y="-26.102916185167558" width="163.77389926118212" height="205.19792445562277"></rect>
+        </svg>
+        <canvas class="first style-scope tf-graph-minimap" style="display: none;"></canvas>
+        <canvas class="second style-scope tf-graph-minimap"></canvas>
+        <canvas class="download style-scope tf-graph-minimap" style="display: none;" width="689.578125" height="548.8793792724609"></canvas>
+    </tf-graph-minimap>
+</tf-graph-scene>
