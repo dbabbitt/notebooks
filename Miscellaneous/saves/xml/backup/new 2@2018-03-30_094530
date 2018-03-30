@@ -1,0 +1,132 @@
+
+AWS
+ 
+Services
+ 
+ 
+
+Edit
+ 
+BAHSSO_Admin_Role/577342 @ 452015493275
+ 
+ 
+Support
+ 
+EC2 Dashboard
+Events
+Tags
+Limits
+INSTANCES
+Instances
+Reserved Instances
+Dedicated Hosts
+IMAGES
+AMIs
+Bundle Tasks
+ELASTIC BLOCK STORE
+Volumes
+Snapshots
+NETWORK & SECURITY
+Security Groups
+Elastic IPs
+Placement Groups
+Key Pairs
+Network Interfaces
+LOAD BALANCING
+Load Balancers
+Target Groups
+AUTO SCALING
+Launch Configurations
+Auto Scaling Groups
+SYSTEMS MANAGER SERVICES
+Run Command
+State Manager
+Configuration Compliance
+Automations
+Patch Compliance
+Patch Baselines
+SYSTEMS MANAGER SHARED RESOURCES
+Managed Instances
+Activations
+Documents
+Maintenance Windows
+Parameter Store
+Patches
+[Refresh] [Show/Hide Columns] [Help]
+ 
+	
+	
+	
+1 to 1 of 1
+		
+	
+Instance:  i-01c42e9d6c90af6ac (elite_df)Private IP: 10.194.54.232
+Description
+Status Checks
+Monitoring
+Tags
+Key
+	
+Value
+            
+Name
+	
+elite_df
+	
+	
+Name
+	
+Instance ID
+	
+Instance Type
+	
+Availability Zone
+	
+Instance State
+	
+Status Checks
+	
+Alarm Status
+	
+Public DNS (IPv4)
+	
+IPv4 Public IP
+	
+IPv6 IPs
+	
+Key Name
+	
+Monitoring
+	
+Launch Time
+	
+Security Groups
+elite_df
+	
+i-01c42e9d6c90af6ac
+	
+c4.4xlarge
+	
+us-gov-west-1a
+	
+running
+	
+2/2 checks passed
+	
+None
+	
+	
+-
+	
+-
+	
+awstemplate
+	
+disabled
+	
+March 30, 2018 at 9:13:01 AM UTC-4
+	
+CSN-ENV-C-110-ENVPrivateASG-10SI8AFAZD21Z
+Terms of Use
+Privacy Policy
+© 2008 - 2018, Amazon Web Services, Inc. or its affiliates. All rights reserved.
