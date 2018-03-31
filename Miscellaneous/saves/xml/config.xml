@@ -27,15 +27,16 @@
         <Replace name="train_" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\py\imageGenerator\synthetic_sweet.py" />
-        <File filename="C:\Users\577342\keys\dbabbitt2018mar19" />
-        <File filename="C:\Users\577342\keys\dbabbitt2018mar19.txt" />
         <File filename="C:\Users\577342\Downloads\test\sweet_data\model.ckpt-2000.index" />
         <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\saves\log\session19_1.log" />
         <File filename="C:\Users\577342\Downloads\ps_aux.txt" />
         <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\storage1.py" />
         <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\storage2.py" />
         <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\cv2\__init__.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\session\session30.log" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\storage.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\py\imageGenerator\synthetic_sweet.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\py\imageGenerator\create-image-detection-data.py" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
