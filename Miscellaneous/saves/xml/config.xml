@@ -34,7 +34,6 @@
         <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\storage2.py" />
         <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\cv2\__init__.py" />
         <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\session\session30.log" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\storage.py" />
         <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\py\imageGenerator\synthetic_sweet.py" />
         <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\py\imageGenerator\create-image-detection-data.py" />
     </History>
@@ -46,7 +45,7 @@
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
         <GUIConfig name="AppPosition" x="0" y="0" width="1100" height="700" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180403">no</GUIConfig>
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180419">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>

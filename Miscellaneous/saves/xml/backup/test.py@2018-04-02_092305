@@ -1,0 +1,19 @@
+
+import pickle
+import pandas as pd
+import os
+from sklearn.manifold import TSNE
+
+pickle_path = 'elite_df.pickle'
+try:
+    elite_df = pd.read_pickle(pickle_path)
+except:
+    with open(pickle_path, 'rb') as handle:
+        elite_df = pickle.load(handle)
+
+elite_ndarray = TSNE(n_components=3).fit_transform(elite_df)
+
+pickle_path = 'elite_ndarray.pickle'
+print('Pickling to ' + pickle_path)
+with open(pickle_path, 'wb') as handle:
+    pickle.dump(elite_ndarray, handle, pickle.HIGHEST_PROTOCOL)
