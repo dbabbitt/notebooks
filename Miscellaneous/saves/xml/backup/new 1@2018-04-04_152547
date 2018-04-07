@@ -1,0 +1,2363 @@
+<table>
+    <thead>
+        <tr>
+            <th>Country/Region</th>
+            <th>Average male height</th>
+            <th>Average female height</th>
+            <th>Stature ratio (male to female)</th>
+            <th>Sample population / age range</th>
+            <th data-sort-type="number">Share of pop. over 18 covered</th>
+            <th>Methodology</th>
+            <th>Year</th>
+            <th>Source</th></tr></thead>
+    <tbody>
+        <tr>
+            <td>Albania</td>
+            <td>174.0</td>
+            <td>161.8</td>
+            <td>1.08</td>
+            <td>20–29 (N= m:649 f:1,806)</td>
+            <td>23.5%</td>
+            <td>Measured</td>
+            <td>2008–2009</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Argentina</td>
+            <td>N/A</td>
+            <td>159.6</td>
+            <td>N/A</td>
+            <td>19–49</td>
+            <td>60.4%</td>
+            <td>Measured</td>
+            <td>2004–2005</td>
+            <td></td></tr>
+        <tr>
+            <td>Argentina</td>
+            <td>174.46</td>
+            <td>161.01</td>
+            <td>1.08</td>
+            <td>Healthy, 18 (N= m:90 f:97, SD= m:7.43&nbsp;cm (3&nbsp;in) f:6.99&nbsp;cm (3&nbsp;in))</td>
+            <td>2.9%</td>
+            <td>Measured</td>
+            <td>1998–2001</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Armenia</td>
+            <td>N/A</td>
+            <td>158.1</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:4,218, SD= f:5.7&nbsp;cm (2&nbsp;in))</td>
+            <td>48.6%</td>
+            <td>Self-reported</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Australia</td>
+            <td>175.6</td>
+            <td>161.8</td>
+            <td>1.09</td>
+            <td>18+</td>
+            <td>100.0%</td>
+            <td>Measured</td>
+            <td>2011–2012</td>
+            <td></td></tr>
+        <tr>
+            <td>Australia</td>
+            <td>177.8</td>
+            <td>163.8</td>
+            <td>1.09</td>
+            <td>18–24</td>
+            <td>12.4%</td>
+            <td>Measured</td>
+            <td>2011–2012</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Austria</td>
+            <td>179</td>
+            <td>166</td>
+            <td>1.08</td>
+            <td>20–49</td>
+            <td>54.3%</td>
+            <td>Measured</td>
+            <td>2006</td>
+            <td></td></tr>
+        <tr>
+            <td>Austria</td>
+            <td>180</td>
+            <td>167</td>
+            <td>1.08</td>
+            <td>20–24</td>
+            <td>7.7%</td>
+            <td>Measured</td>
+            <td>2006</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Austria</td>
+            <td>178.80</td>
+            <td>N/A</td>
+            <td>1.07</td>
+            <td>30–34</td>
+            <td>7.8%</td>
+            <td>Estimates</td>
+            <td>1976–1980</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Austria</td>
+            <td>179.2</td>
+            <td>167.6</td>
+            <td>1.07</td>
+            <td>21 (N= m:53 f:69, SD= m:6.1&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:5.6&nbsp;cm (2&nbsp;in))</td>
+            <td>1.5%</td>
+            <td>Self-reported</td>
+            <td>2001</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Azerbaijan</td>
+            <td>171.8</td>
+            <td>165.4</td>
+            <td>1.04</td>
+            <td>16+</td>
+            <td>106.5%</td>
+            <td>Measured</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Bahrain</td>
+            <td>165.1</td>
+            <td>154.2&nbsp;cm (5&nbsp;ft <span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in)</td>
+            <td>1.07</td>
+            <td>19+ (N= m:1,120 f:1,181, SD= m:9.0&nbsp;cm (<span>3<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:7.8&nbsp;cm (3&nbsp;in))</td>
+            <td>97.7%</td>
+            <td>Measured</td>
+            <td>2002</td>
+            <td></td></tr>
+        <tr>
+            <td>Bahrain</td>
+            <td>171.0</td>
+            <td>156.6</td>
+            <td>1.09</td>
+            <td>18</td>
+            <td>1.9%</td>
+            <td>Measured</td>
+            <td>2009</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Bangladesh</td>
+            <td>N/A</td>
+            <td>150.6</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:7,368, SD= f:5.5&nbsp;cm (2&nbsp;in))</td>
+            <td>56.2%</td>
+            <td>Self-reported</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Belgium</td>
+            <td>178.70</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>30–34</td>
+            <td>8.1%</td>
+            <td>Estimates</td>
+            <td>1976–1980</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Belgium</td>
+            <td>178.6</td>
+            <td>168.1</td>
+            <td>1.06</td>
+            <td>21 (N= m:20–49 f:20–49, SD= m:6.6&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:5.3&nbsp;cm (2&nbsp;in))</td>
+            <td>1.7%</td>
+            <td>Self-reported</td>
+            <td>2001</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Benin</td>
+            <td>N/A</td>
+            <td>159.3</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:11,015, SD= f:6.5&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>53.5%</td>
+            <td>Self-reported</td>
+            <td>2006</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Bolivia</td>
+            <td>N/A</td>
+            <td>151.8</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:10,302, SD= f:5.9&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>52.6%</td>
+            <td>Self-reported</td>
+            <td>2003</td>
+            <td></td></tr>
+        <tr>
+            <td>Bolivia</td>
+            <td>160.0</td>
+            <td>142.2</td>
+            <td>1.13</td>
+            <td>Aymara, 20–29</td>
+            <td>N/A</td>
+            <td>Measured</td>
+            <td>1970</td>
+            <td></td></tr>
+        <tr>
+            <td>Bosnia and Herzegovina</td>
+            <td>183.9&nbsp;cm (6&nbsp;ft <span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in)</td>
+            <td>171.1</td>
+            <td>1.07</td>
+            <td>Students at UBL,19–32 (N= m:178 f:34, SD= m:7.11&nbsp;cm (3&nbsp;in) f:6.56&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>0.4%</td>
+            <td>Measured</td>
+            <td>2014</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Brazil</td>
+            <td>170.7</td>
+            <td>158.8</td>
+            <td>1.07</td>
+            <td>18+ (N= m:62,037 f:65,696)</td>
+            <td>100.0%</td>
+            <td>Measured</td>
+            <td>2009</td>
+            <td></td></tr>
+        <tr>
+            <td>Brazil</td>
+            <td>173.0</td>
+            <td>161.1</td>
+            <td>1.07</td>
+            <td>20–24 (N= m:8,299 f:7,938)</td>
+            <td>13.0%</td>
+            <td>Measured</td>
+            <td>2009</td>
+            <td></td></tr>
+        <tr>
+            <td>Brazil – Urban</td>
+            <td>173.5</td>
+            <td>161.6</td>
+            <td>1.07</td>
+            <td>20–24 (N= m:6,360 f:6,305)</td>
+            <td>10.9%</td>
+            <td>Measured</td>
+            <td>2009</td>
+            <td></td></tr>
+        <tr>
+            <td>Brazil – Rural</td>
+            <td>170.9</td>
+            <td>158.9</td>
+            <td>1.07</td>
+            <td>20–24 (N= m:1,939 f:1,633)</td>
+            <td>2.1%</td>
+            <td>Measured</td>
+            <td>2009</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Bulgaria</td>
+            <td>175.2</td>
+            <td>163.2</td>
+            <td>1.07</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>2010</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Bulgaria – Sofia</td>
+            <td>178.1</td>
+            <td>164.8</td>
+            <td>1.08</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>2010</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Burkina Faso</td>
+            <td>N/A</td>
+            <td>161.6</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:7,337, SD= f:6.2&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>55.5%</td>
+            <td>Self-reported</td>
+            <td>2003</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Cambodia</td>
+            <td>N/A</td>
+            <td>152.4</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:5,081, SD= f:5.4&nbsp;cm (2&nbsp;in))</td>
+            <td>52.2%</td>
+            <td>Self-reported</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Cameroon – Urban</td>
+            <td>170.6</td>
+            <td>161.3</td>
+            <td>1.06</td>
+            <td>15+ (N= m:3,746 f:5,078)</td>
+            <td>53.6%</td>
+            <td>Measured</td>
+            <td>2003</td>
+            <td></td></tr>
+        <tr>
+            <td>Cameroon – Urban</td>
+            <td>172.1</td>
+            <td>162.0</td>
+            <td>1.06</td>
+            <td>35-44 (N= m:558 f:1,156)</td>
+            <td>8.7%</td>
+            <td>Measured</td>
+            <td>2003</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Canada</td>
+            <td>175.1</td>
+            <td>162.3</td>
+            <td>1.08</td>
+            <td>18–79</td>
+            <td>94.7%</td>
+            <td>Measured</td>
+            <td>2007–2009</td>
+            <td></td></tr>
+        <tr>
+            <td>Canada</td>
+            <td>176.0</td>
+            <td>163.3</td>
+            <td>1.08</td>
+            <td>25–44</td>
+            <td>36.5%</td>
+            <td>Measured</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Central African Republic</td>
+            <td>N/A</td>
+            <td>158.9</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:1,408, SD= f:6.6&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>50.0%</td>
+            <td>Self-reported</td>
+            <td>1994</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Chad</td>
+            <td>N/A</td>
+            <td>162.6</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:2,393, SD= f:6.4&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>51.9%</td>
+            <td>Self-reported</td>
+            <td>2004</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Chile</td>
+            <td>169.6</td>
+            <td>156.1</td>
+            <td>1.09</td>
+            <td>15+</td>
+            <td>107.2%</td>
+            <td>Measured</td>
+            <td>2009–2010</td>
+            <td></td></tr>
+        <tr>
+            <td>Chile</td>
+            <td>171.2</td>
+            <td>157.2</td>
+            <td>1.09</td>
+            <td>25–44</td>
+            <td>41.2%</td>
+            <td>Measured</td>
+            <td>2009–2010</td>
+            <td></td></tr>
+        <tr>
+            <td>Chile</td>
+            <td>171</td>
+            <td>159.1</td>
+            <td>1.07</td>
+            <td>15–24</td>
+            <td>23.7%</td>
+            <td>Measured</td>
+            <td>2009–2010</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>China, People's Republic of</td>
+            <td>167.1</td>
+            <td>155.8</td>
+            <td>1.07</td>
+            <td>18+</td>
+            <td>100.0%</td>
+            <td>Measured</td>
+            <td>2012</td>
+            <td></td></tr>
+        <tr>
+            <td>China, Mainland</td>
+            <td>172.1</td>
+            <td>160.1</td>
+            <td>1.07</td>
+            <td>19</td>
+            <td>2.1%</td>
+            <td>Measured</td>
+            <td>2010</td>
+            <td></td></tr>
+        <tr>
+            <td>China, People's Republic of – Urban</td>
+            <td>170.2</td>
+            <td>158.6</td>
+            <td>1.07</td>
+            <td>17</td>
+            <td>0.6%</td>
+            <td>Measured</td>
+            <td>2002</td>
+            <td></td></tr>
+        <tr>
+            <td>China, People's Republic of – Rural</td>
+            <td>166.3</td>
+            <td>157.0</td>
+            <td>1.06</td>
+            <td>17</td>
+            <td>1.6%</td>
+            <td>Measured</td>
+            <td>2002</td>
+            <td></td></tr>
+        <tr>
+            <td>China, People's Republic of – Beijing</td>
+            <td>174.7</td>
+            <td>161.3</td>
+            <td>1.08</td>
+            <td>21</td>
+            <td>0.2%</td>
+            <td>Measured</td>
+            <td>2010</td>
+            <td></td></tr>
+        <tr>
+            <td>China, People's Republic of – Sichuan</td>
+            <td>169.2</td>
+            <td>158.2</td>
+            <td>1.07</td>
+            <td>20–24</td>
+            <td>0.7%</td>
+            <td>Measured</td>
+            <td>2010</td>
+            <td></td></tr>
+        <tr>
+            <td>Colombia</td>
+            <td>170.6</td>
+            <td>158.7</td>
+            <td>1.07</td>
+            <td>18–22 (N= m:1,528,875 f:1,468,110)</td>
+            <td>14.1%</td>
+            <td>Measured</td>
+            <td>2002</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Colombia</td>
+            <td>N/A</td>
+            <td>155.0</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:22,947, SD= f:6.2&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>55.8%</td>
+            <td>Self-reported</td>
+            <td>2004</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Comoros</td>
+            <td>N/A</td>
+            <td>154.8</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:644, SD= f:5.8&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>49.8%</td>
+            <td>Self-reported</td>
+            <td>1996</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Congo, Democratic Republic of the</td>
+            <td>N/A</td>
+            <td>157.7</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:2,727, SD= f:8.0&nbsp;cm (3&nbsp;in))</td>
+            <td>52.7%</td>
+            <td>Self-reported</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Congo, Republic of the</td>
+            <td>N/A</td>
+            <td>159.0</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:3,922, SD= f:8.1&nbsp;cm (3&nbsp;in))</td>
+            <td>55.7%</td>
+            <td>Self-reported</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr>
+            <td>Croatia</td>
+            <td>180.4</td>
+            <td>166.49</td>
+            <td>1.09</td>
+            <td>18 (N= m:358 f:360, SD= m:6.8&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:6.1&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>1.6%</td>
+            <td>Measured</td>
+            <td>2006–2008</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Cuba – Urban</td>
+            <td>168</td>
+            <td>156</td>
+            <td>1.08</td>
+            <td>15+</td>
+            <td>79.2%</td>
+            <td>Measured</td>
+            <td>1999</td>
+            <td></td></tr>
+        <tr>
+            <td>Czech Republic</td>
+            <td>180.31</td>
+            <td>167.22</td>
+            <td>1.08</td>
+            <td>17</td>
+            <td>1.6%</td>
+            <td>Measured</td>
+            <td>2001</td>
+            <td></td></tr>
+        <tr>
+            <td>Denmark</td>
+            <td>180.4</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Conscripts, 18–20 (N= m:38,025)</td>
+            <td>5.3%</td>
+            <td>Measured</td>
+            <td>2012</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Denmark</td>
+            <td>181.4</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>30</td>
+            <td>1.5%</td>
+            <td>Estimates</td>
+            <td>1976–1980</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Denmark</td>
+            <td>182.6</td>
+            <td>168.7</td>
+            <td>1.08</td>
+            <td>23 (N= m:–20 f:20–49, SD= m:NA f:7.4&nbsp;cm (3&nbsp;in))</td>
+            <td>1.6%</td>
+            <td>Self-reported</td>
+            <td>2001</td>
+            <td></td></tr>
+        <tr>
+            <td>Dinaric Alps</td>
+            <td>185.6</td>
+            <td>171.8</td>
+            <td>1.08</td>
+            <td>17</td>
+            <td>N/A</td>
+            <td>Measured</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Dominican Republic</td>
+            <td>172.7</td>
+            <td>159</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:4,763, SD= f:6.3&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>54.8%</td>
+            <td>Self-reported</td>
+            <td>2014</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>El Salvador</td>
+            <td>N/A</td>
+            <td>160.3</td>
+            <td>N/A</td>
+            <td>25–49</td>
+            <td>50.9%</td>
+            <td>Self-reported</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr>
+            <td>Egypt</td>
+            <td>170.3</td>
+            <td>158.9</td>
+            <td>1.07</td>
+            <td>20–24 (N= m:845 f:1,059)</td>
+            <td>16.6%</td>
+            <td>Measured</td>
+            <td>2008</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Egypt</td>
+            <td>N/A</td>
+            <td>159.5</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:13,813, SD= f:6.0&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>53.2%</td>
+            <td>Self-reported</td>
+            <td>2008</td>
+            <td></td></tr>
+        <tr>
+            <td>Estonia</td>
+            <td>179.1</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>17</td>
+            <td>2.3%</td>
+            <td>Measured</td>
+            <td>2003</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Ethiopia</td>
+            <td>N/A</td>
+            <td>157.6</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:3,868, SD= f:6.6&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>53.8%</td>
+            <td>Self-reported</td>
+            <td>1997</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Europe</td>
+            <td>177.6</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>17–29</td>
+            <td>N/A</td>
+            <td>Measured and Self-reported</td>
+            <td>2001–2012</td>
+            <td></td></tr>
+        <tr>
+            <td>Finland</td>
+            <td>178.9</td>
+            <td>165.3</td>
+            <td>1.08</td>
+            <td>25–34 (N= m/f:2,305)</td>
+            <td>19.0%</td>
+            <td>Measured</td>
+            <td>1994</td>
+            <td></td></tr>
+        <tr>
+            <td>Finland</td>
+            <td>180.7</td>
+            <td>167.2</td>
+            <td>1.08</td>
+            <td>−25 (N= m/f:26,636)</td>
+            <td>9.2%</td>
+            <td>Measured</td>
+            <td>2010–2011</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Finland</td>
+            <td>177.9</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>30–34</td>
+            <td>8.4%</td>
+            <td>Estimates</td>
+            <td>1976–1980</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>France</td>
+            <td>175.6</td>
+            <td>162.5</td>
+            <td>1.08</td>
+            <td>18–70 (N= m/f:11,562)</td>
+            <td>85.9%</td>
+            <td>Measured</td>
+            <td>2003–2004</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>France</td>
+            <td>174.1</td>
+            <td>161.9</td>
+            <td>1.08</td>
+            <td>20+</td>
+            <td>96.6%</td>
+            <td>Measured</td>
+            <td>2001</td>
+            <td></td></tr>
+        <tr>
+            <td>France</td>
+            <td>177.0</td>
+            <td>164.6</td>
+            <td>1.08</td>
+            <td>20–29</td>
+            <td>17.5%</td>
+            <td>Measured</td>
+            <td>2001</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>France</td>
+            <td>176.2</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>30–34</td>
+            <td>8.3%</td>
+            <td>Estimates</td>
+            <td>1976–1980</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Gabon</td>
+            <td>N/A</td>
+            <td>158.4</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:1,576, SD= f:6.2&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>52.1%</td>
+            <td>Self-reported</td>
+            <td>2000</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Gambia – Rural</td>
+            <td>168.0</td>
+            <td>157.8</td>
+            <td>1.06</td>
+            <td>21–49 (N= m:9,559 f:13,160, SD= m:6.7&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:5.6&nbsp;cm (2&nbsp;in))</td>
+            <td>N/A</td>
+            <td>Measured</td>
+            <td>1950–1974</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Germany</td>
+            <td>175.4</td>
+            <td>162.8</td>
+            <td>1.08</td>
+            <td>18–79 (N= m/f:19,768)</td>
+            <td>94.3%</td>
+            <td>Measured</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr>
+            <td>Germany</td>
+            <td>178.9</td>
+            <td>166.1</td>
+            <td>1.08</td>
+            <td>18–37</td>
+            <td>29.2%</td>
+            <td>Measured</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr>
+            <td>Germany – Urban</td>
+            <td>180.6</td>
+            <td>168.5</td>
+            <td>1.08</td>
+            <td>18–37</td>
+            <td>7.1%</td>
+            <td>Measured</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Germany</td>
+            <td>180.17</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>30–34</td>
+            <td>7.2%</td>
+            <td>Estimates</td>
+            <td>1976–1980</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Germany</td>
+            <td>178</td>
+            <td>165</td>
+            <td>1.08</td>
+            <td>18+ (N= m:25,112 f:25,560)</td>
+            <td>100.0%</td>
+            <td>Self-reported</td>
+            <td>2009</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Germany</td>
+            <td>181</td>
+            <td>168</td>
+            <td>1.08</td>
+            <td>18–25 (N= m:2,501 f:2,227)</td>
+            <td>11.3%</td>
+            <td>Self-reported</td>
+            <td>2009</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Ghana</td>
+            <td>N/A</td>
+            <td>159.3</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:2,958, SD= f:6.7&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>54.4%</td>
+            <td>Self-reported</td>
+            <td>2008</td>
+            <td></td></tr>
+        <tr>
+            <td>Ghana</td>
+            <td>169.5</td>
+            <td>158.5</td>
+            <td>1.07</td>
+            <td>25–29</td>
+            <td>14.7%</td>
+            <td>Measured</td>
+            <td>1987–1989</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Greece</td>
+            <td>177</td>
+            <td>165</td>
+            <td>1.07</td>
+            <td>18–49</td>
+            <td>56.3%</td>
+            <td>Measured</td>
+            <td>2003</td>
+            <td></td></tr>
+        <tr>
+            <td>Greece</td>
+            <td>177</td>
+            <td>166</td>
+            <td>1.07</td>
+            <td>20–24</td>
+            <td>8.5%</td>
+            <td>Measured</td>
+            <td>2003</td>
+            <td></td></tr>
+        <tr>
+            <td>Greece</td>
+            <td>178.06</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Conscripts, 18–26 (N= m:3,982, SD= m:7.05&nbsp;cm (3&nbsp;in))</td>
+            <td>13.7%</td>
+            <td>Measured</td>
+            <td>2006–2007</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Greece</td>
+            <td>177.29</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>30–34</td>
+            <td>9.5%</td>
+            <td>Estimates</td>
+            <td>1976–1980</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Greece</td>
+            <td>178.3</td>
+            <td>166.6</td>
+            <td>1.07</td>
+            <td>21 (N= m:20–49 f:20–49, SD= m:6.6&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:5.3&nbsp;cm (2&nbsp;in))</td>
+            <td>1.8%</td>
+            <td>Self-reported</td>
+            <td>2001</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Guatemala</td>
+            <td>N/A</td>
+            <td>147.3</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:1,773, SD= f:6.3&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>52.3%</td>
+            <td>Self-reported</td>
+            <td>1998</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Guinea</td>
+            <td>N/A</td>
+            <td>158.8</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:2,563, SD= f:6.3&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>52.9%</td>
+            <td>Self-reported</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Haiti</td>
+            <td>N/A</td>
+            <td>158.6</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:2,932, SD= f:6.5&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>52.8%</td>
+            <td>Self-reported</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Honduras</td>
+            <td>N/A</td>
+            <td>152.0</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:11,219, SD= f:6.4&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>53.3%</td>
+            <td>Self-reported</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr>
+            <td>Hong Kong</td>
+            <td>171.7</td>
+            <td>158.7</td>
+            <td>1.08</td>
+            <td>18 (N= m:468 f:453, SD= m:5.5&nbsp;cm (2&nbsp;in) f:5.7&nbsp;cm (2&nbsp;in))</td>
+            <td>1.4%</td>
+            <td>Measured</td>
+            <td>2006</td>
+            <td></td></tr>
+        <tr>
+            <td>Hong Kong</td>
+            <td>173.4</td>
+            <td>160.1</td>
+            <td>1.08</td>
+            <td>University students, 19–20 (N= m:291 f:200, SD= m:6.1&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:5.2&nbsp;cm (2&nbsp;in))</td>
+            <td>0.6%</td>
+            <td>Measured</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Hungary</td>
+            <td>176</td>
+            <td>164</td>
+            <td>1.07</td>
+            <td>Adults</td>
+            <td>N/A</td>
+            <td>Measured</td>
+            <td>2000s</td>
+            <td></td></tr>
+        <tr>
+            <td>Hungary</td>
+            <td>177.3</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>18 (N= m:1,080, SD= m:5.99&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>1.7%</td>
+            <td>Measured</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>India</td>
+            <td>164.7</td>
+            <td>151.9</td>
+            <td>1.08</td>
+            <td>20–49 (N= m:69,245 f:118,796)</td>
+            <td>69.8%</td>
+            <td>Measured</td>
+            <td>2005–2006</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Iceland</td>
+            <td>181</td>
+            <td>168</td>
+            <td>1.08</td>
+            <td>20–49</td>
+            <td>43.6%</td>
+            <td>Self-reported</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr>
+            <td>India – Rural</td>
+            <td>161.2</td>
+            <td>152.1</td>
+            <td>1.06</td>
+            <td>17+ (SD= m:7.0&nbsp;cm (3&nbsp;in) f:6.3&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>72.1%</td>
+            <td>Measured</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>India</td>
+            <td>166.3</td>
+            <td>152.6</td>
+            <td>1.09</td>
+            <td>20</td>
+            <td>3.0%</td>
+            <td>Predicted</td>
+            <td>2005–2006</td>
+            <td></td></tr>
+        <tr style="color: #555">
+            <td>Indonesia</td>
+            <td>158</td>
+            <td>147</td>
+            <td>1.07</td>
+            <td>50+ (N= m:2,041 f:2,396, Median= m:158 f:147)</td>
+            <td>22.5%</td>
+            <td>Self-reported</td>
+            <td>1997</td>
+            <td></td></tr>
+        <tr>
+            <td>Iran</td>
+            <td>170.3</td>
+            <td>157.2</td>
+            <td>1.08</td>
+            <td>21+ (N= m/f:89,532, SD= m:8.05&nbsp;cm (3&nbsp;in) f:7.22&nbsp;cm (3&nbsp;in))</td>
+            <td>88.1%</td>
+            <td>Measured</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr>
+            <td>Iran</td>
+            <td>173.4</td>
+            <td>159.8</td>
+            <td>1.09</td>
+            <td>21–25</td>
+            <td>17.9%</td>
+            <td>Measured</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Iraq – Baghdad</td>
+            <td>165.4</td>
+            <td>155.8</td>
+            <td>1.06</td>
+            <td>18–44 (N= m:700 f:800, SD= m:5.6&nbsp;cm (2&nbsp;in) f:16.0&nbsp;cm (<span>6<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>76.3%</td>
+            <td>Measured</td>
+            <td>1999–2000</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Ireland</td>
+            <td>177</td>
+            <td>163</td>
+            <td>1.09</td>
+            <td>20–49</td>
+            <td>61.8%</td>
+            <td>Measured</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr>
+            <td>Ireland</td>
+            <td>179</td>
+            <td>163</td>
+            <td>1.10</td>
+            <td>20–24</td>
+            <td>10.4%</td>
+            <td>Measured</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Ireland</td>
+            <td>176.60</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>30</td>
+            <td>1.7%</td>
+            <td>Estimates</td>
+            <td>1976–1980</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Ireland</td>
+            <td>177.5</td>
+            <td>163.5</td>
+            <td>1.09</td>
+            <td>21 (N= m:54 f:20–49, SD= m:6.3&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:7.6&nbsp;cm (3&nbsp;in))</td>
+            <td>2.4%</td>
+            <td>Self-reported</td>
+            <td>2001</td>
+            <td></td></tr>
+        <tr>
+            <td>Israel</td>
+            <td>177</td>
+            <td>166</td>
+            <td>1.07</td>
+            <td>18–21</td>
+            <td>9.7%</td>
+            <td>Measured</td>
+            <td>2010</td>
+            <td></td></tr>
+        <tr>
+            <td>Italy</td>
+            <td>176.5</td>
+            <td>162.5</td>
+            <td>1.09</td>
+            <td>18</td>
+            <td>1.4%</td>
+            <td>Measured</td>
+            <td>1999–2004</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Italy</td>
+            <td>174.48</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>30</td>
+            <td>1.6%</td>
+            <td>Estimates</td>
+            <td>1976–1980</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Italy</td>
+            <td>177.2</td>
+            <td>167.8</td>
+            <td>1.06</td>
+            <td>21 (N= m:106 f:92, SD= m:6.0&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:6.1&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>1.4%</td>
+            <td>Self-reported</td>
+            <td>2001</td>
+            <td></td></tr>
+        <tr>
+            <td>Ivory Coast</td>
+            <td>170.1</td>
+            <td>159.1</td>
+            <td>1.07</td>
+            <td>25–29 (SD= m:6.7&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:5.67&nbsp;cm (2&nbsp;in))</td>
+            <td>14.6%</td>
+            <td>Measured</td>
+            <td>1985–1987</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Ivory Coast</td>
+            <td>N/A</td>
+            <td>159.8</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:1,600, SD= f:6.2&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>53.4%</td>
+            <td>Self-reported</td>
+            <td>1998</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Jamaica</td>
+            <td>171.8</td>
+            <td>160.8</td>
+            <td>1.07</td>
+            <td>25–74</td>
+            <td>71.4%</td>
+            <td>Measured</td>
+            <td>1994–1996</td>
+            <td></td></tr>
+        <tr>
+            <td>Japan</td>
+            <td>172</td>
+            <td>158</td>
+            <td>1.08</td>
+            <td>20–49</td>
+            <td>47.2%</td>
+            <td>Measured</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr>
+            <td>Japan</td>
+            <td>172.0</td>
+            <td>158.70</td>
+            <td>1.08</td>
+            <td>20–24 (N= m:1,708 f:1,559, SD= m:5.42&nbsp;cm (2&nbsp;in) f:5.30&nbsp;cm (2&nbsp;in))</td>
+            <td>7.2%</td>
+            <td>Measured</td>
+            <td>2004</td>
+            <td></td></tr>
+        <tr>
+            <td>Japan</td>
+            <td>170.7</td>
+            <td>158.0</td>
+            <td>1.08</td>
+            <td>17</td>
+            <td>1.2%</td>
+            <td>Measured</td>
+            <td>2013</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Jordan</td>
+            <td>N/A</td>
+            <td>158.2</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:4,484, SD= f:6.6&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>55.6%</td>
+            <td>Self-reported</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Kazakhstan</td>
+            <td>N/A</td>
+            <td>159.8</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:1,600, SD= f:6.3&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>53.7%</td>
+            <td>Self-reported</td>
+            <td>1999</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Kenya</td>
+            <td>169.6&nbsp;cm (5&nbsp;ft 7 in)</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:1,600, SD= f:6.3&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>53.7%</td>
+            <td>Summary</td>
+            <td>2016</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Kenya</td>
+            <td>N/A</td>
+            <td>158.2</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:4,856, SD= f:7.3&nbsp;cm (3&nbsp;in))</td>
+            <td>52.5%</td>
+            <td>Survey</td>
+            <td>2016</td>
+            <td></td></tr>
+        <tr>
+            <td><span>Korea, North</span>North Korea</td>
+            <td>165.6</td>
+            <td>154.9</td>
+            <td>1.07</td>
+            <td>Defectors, 20–39 (N= m/f:1,075)</td>
+            <td>46.4%</td>
+            <td>Measured</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td><span>Korea, South</span>South Korea</td>
+            <td>170.7</td>
+            <td>157.4</td>
+            <td>1.08</td>
+            <td>20+ (N= m:2,750 f:2,445, Median= m:170.7 f:157.4, SD= m:6.40&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:5.99&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>96.5%</td>
+            <td>Measured</td>
+            <td>2010</td>
+            <td></td></tr>
+        <tr>
+            <td><span>Korea, South</span>South Korea</td>
+            <td>173.5</td>
+            <td>160.4</td>
+            <td>1.08</td>
+            <td>20–24 (N= m:378 f:298, Median= m:174.0 f:160.5, SD= m:5.16&nbsp;cm (2&nbsp;in) f:5.26&nbsp;cm (2&nbsp;in))</td>
+            <td>8.0%</td>
+            <td>Measured</td>
+            <td>2010</td>
+            <td></td></tr>
+        <tr>
+            <td><span>Korea, South</span>South Korea</td>
+            <td>173.0</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Conscripts, 18–19 (N= m:339,716)</td>
+            <td>3.8%</td>
+            <td>Measured</td>
+            <td>2016</td>
+            <td></td></tr>
+        <tr>
+            <td><span>Korea, South</span>South Korea – Seoul</td>
+            <td>173.3</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Conscripts, 18–19 (N= m:60,039)</td>
+            <td>0.8%</td>
+            <td>Measured</td>
+            <td>2016</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Kosovo - Prishtina</td>
+            <td>179.52</td>
+            <td>165.72</td>
+            <td>N/A</td>
+            <td>Conscripts, 18-20 (N= m:830 f:793, SD= m:7.02&nbsp;cm, f:4.93&nbsp;cm )</td>
+            <td>63.0%</td>
+            <td>Measured</td>
+            <td>2017</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Kyrgyzstan</td>
+            <td>N/A</td>
+            <td>158.0</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:2,424, SD= f:5.8&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>55.4%</td>
+            <td>Self-reported</td>
+            <td>1997</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Lesotho</td>
+            <td>N/A</td>
+            <td>157.6</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:1,879, SD= f:6.7&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>49.8%</td>
+            <td>Self-reported</td>
+            <td>2004</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Liberia</td>
+            <td>N/A</td>
+            <td>157.3</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:4,281, SD= f:6.2&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>52.8%</td>
+            <td>Self-reported</td>
+            <td>2006</td>
+            <td></td></tr>
+        <tr>
+            <td>Lithuania</td>
+            <td>177.2</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Conscripts, 19–25 (N= m:197 SD= m:6.3&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>14.7%</td>
+            <td>Measured</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr>
+            <td>Lithuania – Urban</td>
+            <td>178.4</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Conscripts, 19–25 (N= m:91 SD= m:6.7&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>9.9%</td>
+            <td>Measured</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr>
+            <td>Lithuania – Rural</td>
+            <td>176.2</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Conscripts, 19–25 (N= m:106 SD= m:5.9&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>4.9%</td>
+            <td>Measured</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr>
+            <td>Lithuania</td>
+            <td>181.3</td>
+            <td>167.5</td>
+            <td>1.08</td>
+            <td>18</td>
+            <td>2.1%</td>
+            <td>Measured</td>
+            <td>2001</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Madagascar</td>
+            <td>N/A</td>
+            <td>154.3&nbsp;cm (5&nbsp;ft <span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in)</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:5,024, SD= f:6.0&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>53.6%</td>
+            <td>Self-reported</td>
+            <td>2003</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Malawi – Urban</td>
+            <td>166</td>
+            <td>155</td>
+            <td>1.07</td>
+            <td>16–60 (N= m:583 f:315, SD= m:6.0&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:9.4&nbsp;cm (<span>3<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>101.1%</td>
+            <td>Measured</td>
+            <td>2000</td>
+            <td></td></tr>
+        <tr>
+            <td>Malaysia</td>
+            <td>166.3</td>
+            <td>154.7</td>
+            <td>1.07</td>
+            <td>Malay, 20–24 (N= m:749 f:893, Median= m:166 f:155, SD= m:6.46&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:6.04&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>9.7%</td>
+            <td>Measured</td>
+            <td>1996</td>
+            <td></td></tr>
+        <tr>
+            <td>Malaysia</td>
+            <td>168.5</td>
+            <td>158.1</td>
+            <td>1.07</td>
+            <td>Chinese, 20–24 (N= m:407 f:453, Median= m:169 f:158, SD= m:6.98&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:6.72&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>4.1%</td>
+            <td>Measured</td>
+            <td>1996</td>
+            <td></td></tr>
+        <tr>
+            <td>Malaysia</td>
+            <td>169.1</td>
+            <td>155.4</td>
+            <td>1.09</td>
+            <td>Indian, 20–24 (N= m:113 f:140, Median= m:168 f:156, SD= m:5.84&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:6.18&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>1.2%</td>
+            <td>Measured</td>
+            <td>1996</td>
+            <td></td></tr>
+        <tr>
+            <td>Malaysia</td>
+            <td>163.3</td>
+            <td>151.9</td>
+            <td>1.08</td>
+            <td>Other indigenous, 20–24 (N= m:257 f:380, Median= m:163 f:152, SD= m:6.26&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:5.95&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>0.4%</td>
+            <td>Measured</td>
+            <td>1996</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Mali – Southern Mali</td>
+            <td>171.3</td>
+            <td>160.4</td>
+            <td>1.07</td>
+            <td>Rural adults (N= m:121 f:320, SD= m:6.6&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:5.7&nbsp;cm (2&nbsp;in))</td>
+            <td>N/A</td>
+            <td>Measured</td>
+            <td>1992</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Malta</td>
+            <td>169.9</td>
+            <td>159.9</td>
+            <td>1.06</td>
+            <td>18+</td>
+            <td>100.0%</td>
+            <td>Self-reported</td>
+            <td>2003</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Malta</td>
+            <td>175.2</td>
+            <td>163.8</td>
+            <td>1.07</td>
+            <td>25–34</td>
+            <td>17.5%</td>
+            <td>Self-reported</td>
+            <td>2003</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Mexico</td>
+            <td>167</td>
+            <td>154&nbsp;cm (5&nbsp;ft <span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in)</td>
+            <td>1.08</td>
+            <td>20–49</td>
+            <td>69.4%</td>
+            <td>Measured</td>
+            <td>2006</td>
+            <td></td></tr>
+        <tr>
+            <td>Mexico</td>
+            <td>169</td>
+            <td>155</td>
+            <td>1.08</td>
+            <td>20–24</td>
+            <td>14.5%</td>
+            <td>Measured</td>
+            <td>2006</td>
+            <td></td></tr>
+        <tr>
+            <td>Mexico</td>
+            <td>172</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Middle &amp; upper classes, young adults</td>
+            <td>N/A</td>
+            <td>Measured</td>
+            <td>N/A</td>
+            <td></td></tr>
+        <tr>
+            <td>Mexico – Bajío</td>
+            <td>172</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Adults</td>
+            <td>N/A</td>
+            <td>Measured</td>
+            <td>N/A</td>
+            <td></td></tr>
+        <tr>
+            <td>Mexico – Central</td>
+            <td>N/A</td>
+            <td>162</td>
+            <td>N/A</td>
+            <td>26–39</td>
+            <td>N/A</td>
+            <td>Measured</td>
+            <td>N/A</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Mexico – Morelos</td>
+            <td>167</td>
+            <td>155</td>
+            <td>1.08</td>
+            <td>18–76</td>
+            <td>1.6%</td>
+            <td>Self-reported</td>
+            <td>1998–1999</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Moldova</td>
+            <td>N/A</td>
+            <td>161.2</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:4,757, SD= f:6.2&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>45.9%</td>
+            <td>Self-reported</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr>
+            <td>Mongolia</td>
+            <td>168.4</td>
+            <td>157.7</td>
+            <td>1.07</td>
+            <td>25–34 (N= m:158 f:181)</td>
+            <td>27.6%</td>
+            <td>Measured</td>
+            <td>2006</td>
+            <td></td></tr>
+        <tr>
+            <td>Montenegro</td>
+            <td>183.2</td>
+            <td>168.4</td>
+            <td>1.09</td>
+            <td>Students at UCG,18–37 (N= m:178 f:107, SD= m:7.06&nbsp;cm (3&nbsp;in) f:5.27&nbsp;cm (2&nbsp;in))</td>
+            <td>3.2%</td>
+            <td>Measured</td>
+            <td>2011</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Morocco</td>
+            <td>N/A</td>
+            <td>158.5</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:10,334, SD= f:6.0&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>54.7%</td>
+            <td>Self-reported</td>
+            <td>2003</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Mozambique</td>
+            <td>N/A</td>
+            <td>156</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:6,912, SD= f:6.2&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>55.0%</td>
+            <td>Self-reported</td>
+            <td>2003</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Namibia</td>
+            <td>N/A</td>
+            <td>160.7</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:5,575, SD= f:7.1&nbsp;cm (3&nbsp;in))</td>
+            <td>50.4%</td>
+            <td>Self-reported</td>
+            <td>2006</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Nepal</td>
+            <td>163.0</td>
+            <td>150.8</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:6,280, SD= f:5.5&nbsp;cm (2&nbsp;in))</td>
+            <td>52.9%</td>
+            <td>Self-reported</td>
+            <td>2006</td>
+            <td></td></tr>
+        <tr>
+            <td>Netherlands</td>
+            <td>181</td>
+            <td>169</td>
+            <td>1.07</td>
+            <td>Caucasians,16–18 (N= m:37 f:52, SD= m:6&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:5&nbsp;cm (2&nbsp;in))</td>
+            <td>3.7%</td>
+            <td>Measured</td>
+            <td>2003</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Netherlands</td>
+            <td>182.70</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>30–34</td>
+            <td>7.8%</td>
+            <td>Estimates</td>
+            <td>1976–1980</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Netherlands</td>
+            <td>180.8</td>
+            <td>167.5</td>
+            <td>1.08</td>
+            <td>20+</td>
+            <td>96.8%</td>
+            <td>Self-reported</td>
+            <td>2010</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Netherlands</td>
+            <td>183.2</td>
+            <td>169.9</td>
+            <td>1.08</td>
+            <td>20–30</td>
+            <td>16.9%</td>
+            <td>Self-reported</td>
+            <td>2010</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Netherlands</td>
+            <td>183.8&nbsp;cm (6&nbsp;ft <span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in)</td>
+            <td>170.7</td>
+            <td>1.08</td>
+            <td>21 (N= m:74 f:50, SD= m:7.1&nbsp;cm (3&nbsp;in) f:6.3&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>1.5%</td>
+            <td>Self-reported</td>
+            <td>2009</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>New Zealand</td>
+            <td>177</td>
+            <td>164</td>
+            <td>1.08</td>
+            <td>20–49</td>
+            <td>56.9%</td>
+            <td>Measured</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr>
+            <td>New Zealand</td>
+            <td>178</td>
+            <td>164</td>
+            <td>1.09</td>
+            <td>20–24</td>
+            <td>9.1%</td>
+            <td>Measured</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Nicaragua</td>
+            <td>N/A</td>
+            <td>153.7&nbsp;cm (5&nbsp;ft <span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in)</td>
+            <td>N/A</td>
+            <td>25–49</td>
+            <td>54.1%</td>
+            <td>Self-reported</td>
+            <td>2001</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Nigeria</td>
+            <td>163.8</td>
+            <td>157.8</td>
+            <td>1.04</td>
+            <td>18–74</td>
+            <td>98.6%</td>
+            <td>Measured</td>
+            <td>1994–1996</td>
+            <td></td></tr>
+        <tr>
+            <td>Nigeria</td>
+            <td>167.2</td>
+            <td>160.3</td>
+            <td>1.04</td>
+            <td>20–29 (N= m:139 f:76, SD= m:6.5&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:5.7&nbsp;cm (2&nbsp;in))</td>
+            <td>33.2%</td>
+            <td>Measured</td>
+            <td>2011</td>
+            <td></td></tr>
+        <tr>
+            <td>Norway</td>
+            <td>180.0</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Conscripts, 18–44 (N= m:18,297)</td>
+            <td>36.0%</td>
+            <td>Measured</td>
+            <td>2011</td>
+            <td></td></tr>
+        <tr>
+            <td>Norway – Vest-Agder</td>
+            <td>181.7</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Conscripts, 18–44 (N= m:770)</td>
+            <td>1.33%</td>
+            <td>Measured</td>
+            <td>2011</td>
+            <td></td></tr>
+        <tr>
+            <td>Norway – Oslo</td>
+            <td>179.8</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Conscripts, 18–44 (N= m:1,297)</td>
+            <td>4.78%</td>
+            <td>Measured</td>
+            <td>2011</td>
+            <td></td></tr>
+        <tr>
+            <td>Norway – Finnmark</td>
+            <td>177.5</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Conscripts, 18–44 (N= m:218)</td>
+            <td>0.54%</td>
+            <td>Measured</td>
+            <td>2011</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Norway</td>
+            <td>179.63</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>30–34</td>
+            <td>8.5%</td>
+            <td>Estimates</td>
+            <td>1976–1980</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Norway</td>
+            <td>180.3</td>
+            <td>167</td>
+            <td>1.08</td>
+            <td>20–85 (N= m:1534 f:1743)</td>
+            <td>93.6%</td>
+            <td>Self-reported</td>
+            <td>2008–2009</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Norway</td>
+            <td>182.4</td>
+            <td>168</td>
+            <td>1.09</td>
+            <td>20–25 (SD= m:5.3&nbsp;cm (2&nbsp;in) f:6.5&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>9.5%</td>
+            <td>Self-reported</td>
+            <td>2008–2009</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Norway</td>
+            <td>181.6</td>
+            <td>168.2</td>
+            <td>1.08</td>
+            <td>26–35 (SD= m:6.3&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:6.3&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>17.0%</td>
+            <td>Self-reported</td>
+            <td>2008–2009</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Peru</td>
+            <td>164</td>
+            <td>151</td>
+            <td>1.09</td>
+            <td>20+</td>
+            <td>93.8%</td>
+            <td>Measured</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Philippines</td>
+            <td>165.6</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>18+</td>
+            <td>-</td>
+            <td>Measured</td>
+            <td>1980</td>
+            <td></td></tr>
+        <tr>
+            <td>Poland</td>
+            <td>178.7</td>
+            <td>165.1</td>
+            <td>1.08</td>
+            <td>18 (N= m:846 f:1,126)</td>
+            <td>1.6%</td>
+            <td>Measured</td>
+            <td>2010</td>
+            <td></td></tr>
+        <tr>
+            <td>Portugal</td>
+            <td>173.9</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>18 (N= m:696)</td>
+            <td>1.5%</td>
+            <td>Measured</td>
+            <td>2008</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Portugal</td>
+            <td>172.30</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>30–34</td>
+            <td>9.7%</td>
+            <td>Estimates</td>
+            <td>1976–1980</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Portugal</td>
+            <td>171</td>
+            <td>161</td>
+            <td>1.06</td>
+            <td>20–50</td>
+            <td>56.7%</td>
+            <td>Self-reported</td>
+            <td>2001</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Portugal</td>
+            <td>173.7</td>
+            <td>163.7</td>
+            <td>1.06</td>
+            <td>21 (N= m:87 f:106, SD= m:8.2&nbsp;cm (3&nbsp;in) f:5.3&nbsp;cm (2&nbsp;in))</td>
+            <td>1.9%</td>
+            <td>Self-reported</td>
+            <td>2001</td>
+            <td></td></tr>
+        <tr>
+            <td>Qatar</td>
+            <td>170.8</td>
+            <td>161.1</td>
+            <td>1.06</td>
+            <td>18</td>
+            <td>1.9%</td>
+            <td>Measured</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Rwanda</td>
+            <td>N/A</td>
+            <td>157.7</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:3,202, SD= f:6.5&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>54.2%</td>
+            <td>Self-reported</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr>
+            <td>Romania</td>
+            <td>172</td>
+            <td>157</td>
+            <td>1.10</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Measured</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr>
+            <td>Russia</td>
+            <td>177.2</td>
+            <td>164.1</td>
+            <td>1.08</td>
+            <td>24</td>
+            <td>1.9%</td>
+            <td>Measured</td>
+            <td>2004</td>
+            <td></td></tr>
+        <tr>
+            <td>Samoa</td>
+            <td>N/A</td>
+            <td>166.6</td>
+            <td>N/A</td>
+            <td>18–28 (N= f:55 SD= f:6.5&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>32.6%</td>
+            <td>Measured</td>
+            <td>2004</td>
+            <td></td></tr>
+        <tr>
+            <td>Saudi Arabia</td>
+            <td>168.9</td>
+            <td>156.3</td>
+            <td>1.08</td>
+            <td>18</td>
+            <td>3.0%</td>
+            <td>Measured</td>
+            <td>2010</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Senegal</td>
+            <td>N/A</td>
+            <td>163</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:2,533, SD= f:6.7&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>54.4%</td>
+            <td>Self-reported</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr>
+            <td>Serbia</td>
+            <td>182.0</td>
+            <td>166.8</td>
+            <td>1.09</td>
+            <td>Students at UNS,18–30 (N= m:318 f:76, SD= m:6.74&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:5.88&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>0.7%</td>
+            <td>Measured</td>
+            <td>2012</td>
+            <td></td></tr>
+        <tr>
+            <td>Singapore</td>
+            <td>171</td>
+            <td>160</td>
+            <td>1.07</td>
+            <td>Chinese students at TP,16–18 (N= m:52 f:49, SD= m:6&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:5&nbsp;cm (2&nbsp;in))</td>
+            <td>0.3%</td>
+            <td>Measured</td>
+            <td>2003</td>
+            <td></td></tr>
+        <tr>
+            <td>Slovakia</td>
+            <td>179.4</td>
+            <td>165.6</td>
+            <td>1.08</td>
+            <td>18</td>
+            <td>2.0%</td>
+            <td>Measured</td>
+            <td>2004</td>
+            <td></td></tr>
+        <tr>
+            <td>Slovenia – Ljubljana</td>
+            <td>180.3</td>
+            <td>167.4</td>
+            <td>1.08</td>
+            <td>19</td>
+            <td>0.2%</td>
+            <td>Measured</td>
+            <td>2011</td>
+            <td></td></tr>
+        <tr>
+            <td>South Africa</td>
+            <td>168</td>
+            <td>159</td>
+            <td>1.06</td>
+            <td>19 (N= m:121 f:118)</td>
+            <td>3.6%</td>
+            <td>Measured</td>
+            <td>2003</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Sri Lanka</td>
+            <td>163.6</td>
+            <td>151.4</td>
+            <td>1.08</td>
+            <td>18+ (N= m:1,768 f:2,709, SD= m:6.9&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:6.4&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>100.0%</td>
+            <td>Measured</td>
+            <td>2005–2006</td>
+            <td></td></tr>
+        <tr>
+            <td>Sri Lanka</td>
+            <td>165.6</td>
+            <td>154.0&nbsp;cm (5&nbsp;ft <span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in)</td>
+            <td>1.08</td>
+            <td>18–29 (N= m:312 f:427, SD= m:7.1&nbsp;cm (3&nbsp;in) f:5.9&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>30.7%</td>
+            <td>Measured</td>
+            <td>2005–2006</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Spain</td>
+            <td>173.1</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>18–70 (N= m:1,298  )</td>
+            <td>88.2%</td>
+            <td>Measured</td>
+            <td>2013–2014</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Spain</td>
+            <td>N/A</td>
+            <td>159.6</td>
+            <td>N/A</td>
+            <td>18–70 (N= f:8,217  )</td>
+            <td>83.5%</td>
+            <td>Measured</td>
+            <td>2007–2008</td>
+            <td></td></tr>
+        <tr>
+            <td>Spain</td>
+            <td>175.3</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>18–34 (N= m:554-1,061  )</td>
+            <td>26.8%</td>
+            <td>Measured</td>
+            <td>2013–2014</td>
+            <td></td></tr>
+        <tr>
+            <td>Spain</td>
+            <td>N/A</td>
+            <td>162.6</td>
+            <td>N/A</td>
+            <td>18–19 (N= f:656  )</td>
+            <td>2.4%</td>
+            <td>Measured</td>
+            <td>2007–2008</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Spain</td>
+            <td>175.5</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>30–34</td>
+            <td>11.1%</td>
+            <td>Estimates</td>
+            <td>1976–1980</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Spain</td>
+            <td>174</td>
+            <td>163</td>
+            <td>1.07</td>
+            <td>20–49</td>
+            <td>57.0%</td>
+            <td>Self-reported</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Spain</td>
+            <td>176</td>
+            <td>166</td>
+            <td>1.06</td>
+            <td>20–24</td>
+            <td>7.5%</td>
+            <td>Self-reported</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Spain</td>
+            <td>178</td>
+            <td>166.2</td>
+            <td>1.07</td>
+            <td>21 (N= m:111 f:94, SD= m:6.9&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:6.2&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>1.8%</td>
+            <td>Self-reported</td>
+            <td>2001</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Swaziland</td>
+            <td>N/A</td>
+            <td>159.1</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:2,612, SD= f:6.3&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>51.0%</td>
+            <td>Self-reported</td>
+            <td>2006</td>
+            <td></td></tr>
+        <tr>
+            <td>Sweden</td>
+            <td>181.5</td>
+            <td>166.8</td>
+            <td>1.09</td>
+            <td>20–29</td>
+            <td>15.6%</td>
+            <td>Measured</td>
+            <td>2008</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Sweden</td>
+            <td>180.4</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>30</td>
+            <td>8.0%</td>
+            <td>Estimates</td>
+            <td>1976–1980</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Sweden</td>
+            <td>177.9</td>
+            <td>164.6</td>
+            <td>1.08</td>
+            <td>20–74</td>
+            <td>86.3%</td>
+            <td>Self-reported</td>
+            <td>1987–1994</td>
+            <td></td></tr>
+        <tr>
+            <td>Switzerland</td>
+            <td>178.2</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Conscripts, 19 (N= m:12,447, Median= m:178.0, SD= m:6.52&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>1.5%</td>
+            <td>Measured</td>
+            <td>2009</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Switzerland</td>
+            <td>175.4</td>
+            <td>164</td>
+            <td>1.07</td>
+            <td>20–74</td>
+            <td>88.8%</td>
+            <td>Self-reported</td>
+            <td>1987–1994</td>
+            <td></td></tr>
+        <tr>
+            <td>Taiwan</td>
+            <td>171.4</td>
+            <td>159.9</td>
+            <td>1.07</td>
+            <td>17 (N= m:200 f:200)</td>
+            <td>1.7%</td>
+            <td>Measured</td>
+            <td>2011</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Tanzania</td>
+            <td>N/A</td>
+            <td>156.6</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:6,033, SD= f:6.5&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>52.8%</td>
+            <td>Self-reported</td>
+            <td>2004</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Thailand</td>
+            <td>170.3</td>
+            <td>159</td>
+            <td>1.07</td>
+            <td>STOU students, 15–19 (N= m:839 f:1,636, SD= m:6.3&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:5.9&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>0.2%</td>
+            <td>Self-reported</td>
+            <td>2005</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Togo</td>
+            <td>N/A</td>
+            <td>159.0</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:2,728, SD= f:6.1&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>53.4%</td>
+            <td>Self-reported</td>
+            <td>1998</td>
+            <td></td></tr>
+        <tr>
+            <td>Tonga</td>
+            <td>176.1</td>
+            <td>165.3</td>
+            <td>1.07</td>
+            <td>40 (N= m:241 f:299)</td>
+            <td>1.5%</td>
+            <td>Measured</td>
+            <td>2001</td>
+            <td></td></tr>
+        <tr>
+            <td>Turkey</td>
+            <td>173.6</td>
+            <td>161.9</td>
+            <td>1.07</td>
+            <td>20-22 (N= m:322 f:247)</td>
+            <td>8.3%</td>
+            <td>Measured</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr>
+            <td>Turkey – Ankara</td>
+            <td>174.1</td>
+            <td>158.9</td>
+            <td>1.10</td>
+            <td>18–59 (N= m:703 f:512, Median= m:169.7 f:157.5, SD= m:6.9&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:6.4&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>5.1%</td>
+            <td>Measured</td>
+            <td>2004–2006</td>
+            <td></td></tr>
+        <tr>
+            <td>Turkey – Ankara</td>
+            <td>176.1</td>
+            <td>162</td>
+            <td>1.09</td>
+            <td>18–29 (N= m:390 f:163, Median= m:173.9 f:164.5, SD= m:6.3&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:7.0&nbsp;cm (3&nbsp;in))</td>
+            <td>2.0%</td>
+            <td>Measured</td>
+            <td>2004–2006</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Turkey</td>
+            <td>N/A</td>
+            <td>156.4</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:2,393, SD= f:5.6&nbsp;cm (2&nbsp;in))</td>
+            <td>54.5%</td>
+            <td>Self-reported</td>
+            <td>2003</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Uganda</td>
+            <td>N/A</td>
+            <td>159.2</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:1,666, SD= f:6.5&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>53.4%</td>
+            <td>Self-reported</td>
+            <td>2006</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>United Arab Emirates</td>
+            <td>173.4</td>
+            <td>156.4</td>
+            <td>1.11</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>United Kingdom – England</td>
+            <td>175.3</td>
+            <td>161.9</td>
+            <td>1.08</td>
+            <td>16+ (N= m:3,154 f:3,956)</td>
+            <td>103.2%</td>
+            <td>Measured</td>
+            <td>2012</td>
+            <td></td></tr>
+        <tr>
+            <td>United Kingdom – England</td>
+            <td>177.8</td>
+            <td>164.5</td>
+            <td>1.08</td>
+            <td>25–34 (N= m:415 f:611)</td>
+            <td>17.2%</td>
+            <td>Measured</td>
+            <td>2012</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>United Kingdom – Scotland</td>
+            <td>175.0</td>
+            <td>161.3</td>
+            <td>1.08</td>
+            <td>16+ (N= m:2,512 f:3,180, Median= m:174.8 f:161.2)</td>
+            <td>103.0%</td>
+            <td>Measured</td>
+            <td>2008</td>
+            <td></td></tr>
+        <tr>
+            <td>United Kingdom – Scotland</td>
+            <td>178.2</td>
+            <td>163.5</td>
+            <td>1.09</td>
+            <td>25–34 (N= m:286 f:413, Median= m:178.0 f:163.9)</td>
+            <td>15.7%</td>
+            <td>Measured</td>
+            <td>2008</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>United Kingdom – Wales</td>
+            <td>177.0</td>
+            <td>162.0</td>
+            <td>1.09</td>
+            <td>16+</td>
+            <td>103.2%</td>
+            <td>Self-reported</td>
+            <td>2009</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>United States</td>
+            <td>175.7</td>
+            <td>161.8</td>
+            <td>1.09</td>
+            <td>All Americans, 20+ (N= m:5,232 f:5,547, Median= m:175.6 f:161.9)</td>
+            <td>69%</td>
+            <td>Measured</td>
+            <td>2011–2014</td>
+            <td></td></tr>
+        <tr>
+            <td>United States</td>
+            <td>176.4</td>
+            <td>162.9</td>
+            <td>1.08</td>
+            <td>All Americans, 20–29 (N= m:937 f:928, Median= m:176.2 f:162.9)</td>
+            <td>13.9%</td>
+            <td>Measured</td>
+            <td>2011–2014</td>
+            <td></td></tr>
+        <tr>
+            <td>United States – African Americans</td>
+            <td>177.4</td>
+            <td>163.6</td>
+            <td>1.08</td>
+            <td>African Americans, 20–39 (N= m:405 f:418, Median= m:177.2 f:163.7)</td>
+            <td>3.4%</td>
+            <td>Measured</td>
+            <td>2011–2014</td>
+            <td></td></tr>
+        <tr>
+            <td>United States – Hispanic and Latino Americans</td>
+            <td>172.4</td>
+            <td>158.9</td>
+            <td>1.08</td>
+            <td>Hispanic/Latino Americans, 20–39 (N= m:385 f:428, Median= m:172.3 f:159.1)</td>
+            <td>4.4%</td>
+            <td>Measured</td>
+            <td>2011–2014</td>
+            <td></td></tr>
+        <tr>
+            <td>United States – Mexican Americans</td>
+            <td>172.2</td>
+            <td>158.4</td>
+            <td>1.09</td>
+            <td>Mexican Americans, 20–39 (N= m:233 f:247, Median= m:172.1 f:158.7)</td>
+            <td>2.8%</td>
+            <td>Measured</td>
+            <td>2011–2014</td>
+            <td></td></tr>
+        <tr>
+            <td>United States – Asian Americans</td>
+            <td>172.3</td>
+            <td>158.4</td>
+            <td>1.09</td>
+            <td>Non-Hispanic Asians, 20–39 (N= m:260 f:272, Median= m:172.2 f:158.1)</td>
+            <td>1.3%</td>
+            <td>Measured</td>
+            <td>2011–2014</td>
+            <td></td></tr>
+        <tr>
+            <td>United States – Non-Hispanic whites</td>
+            <td>178.2</td>
+            <td>165.0</td>
+            <td>1.08</td>
+            <td>Non-Hispanic White Americans, 20–39 (N= m:715 f:689, Median= m:178.3 f:164.8)</td>
+            <td>17.1%</td>
+            <td>Measured</td>
+            <td>2011–2014</td>
+            <td></td></tr>
+        <tr style="background: #CBFECB;">
+            <td>Uruguay</td>
+            <td>170</td>
+            <td>158</td>
+            <td>1.08</td>
+            <td>Adults (N= m:2,249 f:2,114)</td>
+            <td>N/A</td>
+            <td>Measured</td>
+            <td>1990</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Uzbekistan</td>
+            <td>N/A</td>
+            <td>159.9</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:2,635, SD= f:6.1&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>54.6%</td>
+            <td>Self-reported</td>
+            <td>1996</td>
+            <td></td></tr>
+        <tr>
+            <td>Vietnam</td>
+            <td>162.1</td>
+            <td>152.2</td>
+            <td>1.07</td>
+            <td>25–29 (SD= m:5.39&nbsp;cm (2&nbsp;in) f:5.39&nbsp;cm (2&nbsp;in))</td>
+            <td>15.9%</td>
+            <td>Measured</td>
+            <td>1992–1993</td>
+            <td></td></tr>
+        <tr>
+            <td>Vietnam</td>
+            <td>165.7</td>
+            <td>155.2</td>
+            <td>1.07</td>
+            <td>Students, 20–25 (N= m:1,000 f:1,000, SD= m:6.55&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in) f:5.32&nbsp;cm (2&nbsp;in))</td>
+            <td>2.0%</td>
+            <td>Measured</td>
+            <td>2006–2007</td>
+            <td></td></tr>
+        <tr style="background:#cbfecb; color:#555;">
+            <td>Zambia</td>
+            <td>N/A</td>
+            <td>158.5</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:4,091, SD= f:6.5&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>54.2%</td>
+            <td>Self-reported</td>
+            <td>2007</td>
+            <td></td></tr>
+        <tr style="color:#555;">
+            <td>Zimbabwe</td>
+            <td>N/A</td>
+            <td>160.3</td>
+            <td>N/A</td>
+            <td>25–49 (N= f:4,746, SD= f:6.2&nbsp;cm (<span>2<span>&nbsp;</span><sup>1</sup>⁄<sub>2</sub></span>&nbsp;in))</td>
+            <td>47.3%</td>
+            <td>Self-reported</td>
+            <td>2005</td>
+            <td></td></tr></tbody></table>
