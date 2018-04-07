@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rxb:regexbuddy xmlns:rxb="http://www.regexbuddy.com/regexbuddy48.xsd" version="4.8">
 	<libraryfile>
+		<action id="LinesAppendcarriagereturntononblanklines" purpose="replace" multiline="1" namedduplicate="1">
+			<flavor>
+				<builtin>csharp20</builtin>
+			</flavor>
+			<regex>(?&lt;![\r\n])[\r\n]{1}(?![\r\n])</regex>
+			<replace>&#13;&#10;&#13;&#10;</replace>
+			<description>Lines: Append carriage return to non-blank lines</description>
+		</action>
+		<action id="LinesConverttabstospaces" purpose="replace" multiline="1" namedduplicate="1">
+			<flavor>
+				<builtin>csharp20</builtin>
+			</flavor>
+			<regex>\t</regex>
+			<replace>   </replace>
+			<description>Lines: Convert tabs to spaces</description>
+		</action>
+		<action id="LinesRemovesemicolonsatendings" purpose="replace" multiline="1" namedduplicate="1">
+			<flavor>
+				<builtin>csharp20</builtin>
+			</flavor>
+			<regex>;$</regex>
+			<description>Lines: Remove semicolons at endings</description>
+		</action>
+		<action id="LinesRemovetrailingspaces" purpose="replace" multiline="1" namedduplicate="1">
+			<flavor>
+				<builtin>csharp20</builtin>
+			</flavor>
+			<regex>[ \t]+$</regex>
+			<description>Lines: Remove trailing spaces</description>
+		</action>
+		<action id="Pythoncorrectlyspacecommas" purpose="replace" multiline="1" namedduplicate="1">
+			<flavor>
+				<builtin>csharp20</builtin>
+			</flavor>
+			<regex>\s*,\s*</regex>
+			<replace>, </replace>
+			<description>Python: correctly space commas</description>
+		</action>
+		<action id="PythonReplacecurlysinglequotes" purpose="replace" multiline="1" namedduplicate="1">
+			<flavor>
+				<builtin>csharp20</builtin>
+			</flavor>
+			<regex>‘|’</regex>
+			<replace>'</replace>
+			<description>Python: Replace curly single quotes</description>
+		</action>
+		<action id="PythonReplacedoublequoteswithsingle" purpose="replace" multiline="1" namedduplicate="1">
+			<flavor>
+				<builtin>csharp20</builtin>
+			</flavor>
+			<regex>"([^'"]+)"</regex>
+			<replace>'${1}'</replace>
+			<description>Python: Replace double quotes with single</description>
+		</action>
+		<action id="PythonUpdateprintto36" purpose="replace" multiline="1" namedduplicate="1">
+			<flavor>
+				<builtin>csharp20</builtin>
+			</flavor>
+			<regex>\bprint[ \t]+([^\\]+\\\s+[^\r\n]+|[^\r\n]+)</regex>
+			<replace>print(${1})</replace>
+			<description>Python: Update print to 3.6</description>
+		</action>
+		<action id="RegexEscapemetacharacters" purpose="replace" multiline="1" namedduplicate="1">
+			<flavor>
+				<builtin>perl526</builtin>
+			</flavor>
+			<regex>^([^ ()\r\n]+)[ (]+([^ ()\r\n]+)[ (]*(([^ ()\r\n]+))?\)?</regex>
+			<replace>&#13;&#10;\L${1}\E_\L${2}\E_\L${4}\E_df = dataframe_dict['$&amp;'].dropna(axis=1, how='all')&#13;&#10;&#13;&#10;duplicate_list = [column_name for column_name in \L${1}\E_\L${2}\E_\L${4}\E_df.columns if column_name.endswith('.1')]&#13;&#10;if len(duplicate_list) > 0:&#13;&#10;    print('In the $&amp; sheet, there are ' + str(len(duplicate_list)) +&#13;&#10;          ' repeated column names (which pandas added a ".1" to in order to distinguish them):')&#13;&#10;    for duplicate in duplicate_list:&#13;&#10;        print(duplicate)&#13;&#10;&#13;&#10;unnamed_list = [column_name for column_name in \L${1}\E_\L${2}\E_\L${4}\E_df.columns if column_name.startswith('Unnamed')]&#13;&#10;if len(unnamed_list) > 0:&#13;&#10;    print('In the $&amp; sheet, there are ' + str(len(unnamed_list)) +&#13;&#10;          ' columns with blank header rows with stuff in them.')&#13;&#10;&#13;&#10;\L${1}\E_\L${2}\E_\L${4}\E_df.sample(5).T&#13;&#10;</replace>
+			<description>Regex: Escape metacharacters</description>
+		</action>
 		<action id="URLDifferentURLpartsnamedcapture" caseless="1" namedduplicate="1">
 			<flavor>
 				<builtin>perl522</builtin>
