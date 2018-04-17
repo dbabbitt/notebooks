@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="yes" wrap="yes" directionDown="no" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="yes" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
         <Path name="C:\users\dev\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
-        <Find name="elite_df" />
-        <Find name="bounding_box\[3\]\[1\]" />
-        <Find name="x_left\+explosion_x_dim" />
-        <Find name="x_left+explosion_x_dim" />
-        <Find name="bounding_box\[0\]\[1\]" />
-        <Find name="xpl_x_offset" />
-        <Find name="bounding_box\[3\]\[0\]" />
-        <Find name="y_top\+explosion_y_dim" />
-        <Find name="bounding_box\[0\]\[0\]" />
-        <Find name="xpl_y_offset" />
-        <Replace name="x_right" />
-        <Replace name="x_left" />
-        <Replace name="y_bottom" />
-        <Replace name="y_top" />
-        <Replace name="104x104" />
-        <Replace name="    " />
-        <Replace name="influenced_" />
-        <Replace name='&quot;' />
-        <Replace name="validation_" />
-        <Replace name="train_" />
+        <Find name="get_random_clip" />
+        <Find name="xView_dir" />
+        <Find name="DisplayObject" />
+        <Find name="Image" />
+        <Find name="PNG" />
+        <Find name="SAVE" />
+        <Find name="files" />
+        <Find name="subdir" />
+        <Find name="Saving " />
+        <Find name="&lt;/h3&gt;" />
+        <Replace name="data_folder" />
+        <Replace name="file_list" />
+        <Replace name="sub_dir" />
+        <Replace name="\n" />
+        <Replace name="\n### " />
+        <Replace name="\n#### " />
+        <Replace name="png" />
+        <Replace name="&lt;/" />
+        <Replace name="&gt;" />
+        <Replace name="\n## " />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\577342\Downloads\test\sweet_data\model.ckpt-2000.index" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\saves\log\session19_1.log" />
-        <File filename="C:\Users\577342\Downloads\ps_aux.txt" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\storage1.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\storage2.py" />
-        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\cv2\__init__.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\session\session30.log" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\py\imageGenerator\synthetic_sweet.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\py\imageGenerator\create-image-detection-data.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\dataframes.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\paths.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\diux-xview-challenge\py\collage_therum.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\README.md" />
+        <File filename="C:\Users\577342\Downloads\README.md" />
+        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\IPython\core\display.py" />
+        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\PIL\Image.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\diux-xview-challenge\README.MD" />
+        <File filename="C:\Users\577342\Downloads\Max_Contour_Score_using_DEAP.py" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -44,7 +44,7 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="0" y="0" width="1100" height="700" isMaximized="yes" />
+        <GUIConfig name="AppPosition" x="1" y="0" width="1100" height="701" isMaximized="yes" />
         <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180419">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
