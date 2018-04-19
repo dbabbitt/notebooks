@@ -5,16 +5,16 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
-        <Find name="get_random_clip" />
-        <Find name="xView_dir" />
-        <Find name="DisplayObject" />
-        <Find name="Image" />
-        <Find name="PNG" />
-        <Find name="SAVE" />
-        <Find name="files" />
-        <Find name="subdir" />
-        <Find name="Saving " />
-        <Find name="&lt;/h3&gt;" />
+        <Find name="DBSCAN" />
+        <Find name="_df" />
+        <Find name="encoding" />
+        <Find name="saves_folder" />
+        <Find name="data_folder" />
+        <Find name="random" />
+        <Find name="pickle" />
+        <Find name="csv" />
+        <Find name="os" />
+        <Find name="math" />
         <Replace name="data_folder" />
         <Replace name="file_list" />
         <Replace name="sub_dir" />
@@ -27,15 +27,16 @@
         <Replace name="\n## " />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\dataframes.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\session\session14_9.log" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\session\session14_8.log" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\log.txt" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\session\session14.log" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\diux-xview-challenge\saves\csv\bounding_box_df.csv" />
+        <File filename="C:\Users\577342\Downloads\test\storage.py" />
         <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\paths.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\diux-xview-challenge\py\collage_therum.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\README.md" />
-        <File filename="C:\Users\577342\Downloads\README.md" />
-        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\IPython\core\display.py" />
-        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\PIL\Image.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\diux-xview-challenge\README.MD" />
-        <File filename="C:\Users\577342\Downloads\Max_Contour_Score_using_DEAP.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\notebooks\load_magic\dataframes.py" />
+        <File filename="C:\Users\577342\Downloads\DBSCAN.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\diux-xview-challenge\data\geojson\xView_train.geojson" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>

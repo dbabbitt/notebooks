@@ -17,7 +17,12 @@ def get_column_descriptions(df, column_list=None):
                 row_dict['column_name'] = column_name
                 row_dict['dtype'] = dtype
                 row_dict['count_blanks'] = df[column_name].isnull().sum()
-                row_dict['count_uniques'] = len(df[column_name].unique())
+                
+                # Count how many unique numbers there are
+                try:
+                    row_dict['count_uniques'] = len(df[column_name].unique())
+                except Exception:
+                    row_dict['count_uniques'] = math.nan
                 
                 # Count how many zeroes the column has
                 try:
