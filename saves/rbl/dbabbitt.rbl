@@ -43,7 +43,7 @@
 			<flavor>
 				<builtin>csharp20</builtin>
 			</flavor>
-			<regex>‘|’</regex>
+			<regex>Â‘|Â’</regex>
 			<replace>'</replace>
 			<description>Python: Replace curly single quotes</description>
 		</action>
@@ -77,6 +77,13 @@
 			</flavor>
 			<regex>\b(?&lt;protocol>https?|ftp)://(?&lt;domain>[-A-Z0-9.]+)(?&lt;file>/[-A-Z0-9+&amp;@#/%=~_|!:,.;]*)?(?&lt;parameters>\?[A-Z0-9+&amp;@#/%=~_|!:,.;]*)?</regex>
 			<description>URL: Different URL parts (named capture)</description>
+		</action>
+		<action id="URLFindinfulltextprotocoloptional" caseless="1" namedduplicate="1">
+			<flavor>
+				<builtin>perl522</builtin>
+			</flavor>
+			<regex>\b(?:(?:https?|ftp|file)://|www\.|ftp\.)[-A-Z0-9+&amp;@#/%=~_|$?!:,.]*[A-Z0-9+&amp;@#/%=~_|$]</regex>
+			<description>URL: Find in full text (protocol optional)</description>
 		</action>
 		<action id="WordsWrapat80characters" purpose="replace" multiline="1" namedduplicate="1" testautolinebreaks="1">
 			<flavor>
