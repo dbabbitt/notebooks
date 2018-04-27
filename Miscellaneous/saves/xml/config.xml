@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="yes" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
         <Path name="C:\users\dev\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
-        <Find name="DBSCAN" />
-        <Find name="_df" />
-        <Find name="encoding" />
-        <Find name="saves_folder" />
-        <Find name="data_folder" />
-        <Find name="random" />
-        <Find name="pickle" />
-        <Find name="csv" />
-        <Find name="os" />
-        <Find name="math" />
+        <Find name="snippet" />
+        <Find name="shinyServer" />
+        <Find name="weight" />
+        <Find name="xm" />
+        <Find name="_multires" />
+        <Find name="multi" />
+        <Find name="500" />
+        <Find name="convert_contour_str" />
+        <Find name="get_random_contour_str" />
+        <Find name="get_contours" />
         <Replace name="data_folder" />
         <Replace name="file_list" />
         <Replace name="sub_dir" />
@@ -27,16 +27,14 @@
         <Replace name="\n## " />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\session\session14_9.log" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\session\session14_8.log" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\log.txt" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\session\session14.log" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\diux-xview-challenge\saves\csv\bounding_box_df.csv" />
-        <File filename="C:\Users\577342\Downloads\test\storage.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\paths.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\notebooks\load_magic\dataframes.py" />
-        <File filename="C:\Users\577342\Downloads\DBSCAN.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\diux-xview-challenge\data\geojson\xView_train.geojson" />
+        <File filename="C:\Users\577342\Downloads\baseline-1.1\README.md" />
+        <File filename="C:\Users\577342\Downloads\baseline-1.1\xview_class_labels.txt" />
+        <File filename="C:\Users\577342\Downloads\test\label_list.py" />
+        <File filename="C:\Users\577342\Downloads\frozen_inference_graph.pb" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\ipynb\deepdream.ipynb" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\logs\sweet_data\model.ckpt-500.meta" />
+        <File filename="C:\Users\577342\Downloads\STARFADE_Beta\STARFADE_Data\boot.config" />
+        <File filename="C:\Users\577342\Downloads\STARFADE_Beta\STARFADE_Data\app.info" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -46,7 +44,7 @@
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
         <GUIConfig name="AppPosition" x="1" y="0" width="1100" height="701" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180419">no</GUIConfig>
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180511">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
