@@ -5,36 +5,46 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
-        <Find name="snippet" />
-        <Find name="shinyServer" />
-        <Find name="weight" />
-        <Find name="xm" />
-        <Find name="_multires" />
-        <Find name="multi" />
-        <Find name="500" />
-        <Find name="convert_contour_str" />
-        <Find name="get_random_contour_str" />
-        <Find name="get_contours" />
-        <Replace name="data_folder" />
-        <Replace name="file_list" />
-        <Replace name="sub_dir" />
+        <Find name="Function answer_" />
+        <Find name="&lt;" />
+        <Find name="&amp;nbsp;" />
+        <Find name="\s+" />
+        <Find name="(\d+)\s+&#x000A;&#x000A;hours ago" />
+        <Find name="1\s+day ago" />
+        <Find name="[\r\n]\s+" />
+        <Find name="^\(1 child\)" />
+        <Find name="^parent\b" />
+        <Find name="^\[\s+&#x000A;S\s+\&#x000A;]" />
+        <Replace name="\n\nFunction answer_" />
+        <Replace name="\n&lt;" />
+        <Replace name=" " />
+        <Replace name="{1}  &#x000A;&#x000A;hours ago" />
+        <Replace name="\1 &#x000A;&#x000A;hours ago" />
+        <Replace name="1 day ago" />
+        <Replace name="\n\n" />
+        <Replace name='&quot;' />
         <Replace name="\n" />
-        <Replace name="\n### " />
-        <Replace name="\n#### " />
-        <Replace name="png" />
-        <Replace name="&lt;/" />
-        <Replace name="&gt;" />
-        <Replace name="\n## " />
+        <Replace name=", " />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\577342\Downloads\baseline-1.1\README.md" />
-        <File filename="C:\Users\577342\Downloads\baseline-1.1\xview_class_labels.txt" />
-        <File filename="C:\Users\577342\Downloads\test\label_list.py" />
-        <File filename="C:\Users\577342\Downloads\frozen_inference_graph.pb" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\ipynb\deepdream.ipynb" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\logs\sweet_data\model.ckpt-500.meta" />
-        <File filename="C:\Users\577342\Downloads\STARFADE_Beta\STARFADE_Data\boot.config" />
-        <File filename="C:\Users\577342\Downloads\STARFADE_Beta\STARFADE_Data\app.info" />
+        <File filename="C:\Users\577342\Downloads\test\sweet_data\model.ckpt-2000.index" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\saves\log\session19_1.log" />
+        <File filename="C:\Users\577342\Downloads\ps_aux.txt" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\storage1.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\storage2.py" />
+        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\cv2\__init__.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\session\session30.log" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\py\imageGenerator\synthetic_sweet.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\py\imageGenerator\create-image-detection-data.py" />
+        <File filename="C:\Users\577342\Downloads\test\sweet_data\model.ckpt-2000.index" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\saves\log\session19_1.log" />
+        <File filename="C:\Users\577342\Downloads\ps_aux.txt" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\storage1.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\storage2.py" />
+        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\cv2\__init__.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\session\session30.log" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\py\imageGenerator\synthetic_sweet.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\py\imageGenerator\create-image-detection-data.py" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -43,8 +53,8 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="1" y="0" width="1100" height="701" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180511">no</GUIConfig>
+        <GUIConfig name="AppPosition" x="0" y="0" width="1100" height="700" isMaximized="yes" />
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180603">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -69,7 +79,7 @@
         <GUIConfig name="ScintillaGlobalSettings" enableMultiSelection="no" />
         <GUIConfig name="openSaveDir" value="0" defaultDirPath="" />
         <GUIConfig name="titleBar" short="no" />
-        <GUIConfig name="stylerTheme" path="C:\Users\577342\Documents\Repositories\notebooks\Miscellaneous\saves\xml\stylers.xml" />
+        <GUIConfig name="stylerTheme" path="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\saves\xml\stylers.xml" />
         <GUIConfig name="wordCharList" useDefault="yes" charsAdded="" />
         <GUIConfig name="delimiterSelection" leftmostDelimiter="40" rightmostDelimiter="41" delimiterSelectionOnEntireDocument="no" />
         <GUIConfig name="multiInst" setting="0" />

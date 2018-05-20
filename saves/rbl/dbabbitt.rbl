@@ -39,6 +39,22 @@
 			<replace>, </replace>
 			<description>Python: correctly space commas</description>
 		</action>
+		<action id="PythonFitcommentlinesagainstnextcodeline" purpose="replace" caseless="1" multiline="1">
+			<flavor>
+				<builtin>python36</builtin>
+			</flavor>
+			<regex>^([ \t]*)#([^\r\n]+)[\r\n]+\1([^#\r\n])</regex>
+			<replace>\g&lt;1>#\g&lt;2>\r\g&lt;3></replace>
+			<description>Python: Fit comment lines against next code line</description>
+		</action>
+		<action id="Pythonparenthprintstatement" purpose="replace" caseless="1">
+			<flavor>
+				<builtin>python36</builtin>
+			</flavor>
+			<regex>print\s+([^(])([^\r\n]+)</regex>
+			<replace>print(\g&lt;1>\g&lt;2>)</replace>
+			<description>Python: parenth print statement</description>
+		</action>
 		<action id="PythonReplacecurlysinglequotes" purpose="replace" multiline="1" namedduplicate="1">
 			<flavor>
 				<builtin>csharp20</builtin>
