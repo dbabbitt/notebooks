@@ -1,4 +1,0 @@
-
-Python: Convert a serialized TensorFlow GraphDef protocol buffer to Networkx format
-
-I can import the GraphDef into the current default graph in TensorFlow ( and visualize it in TensorBoard

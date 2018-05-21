@@ -1,0 +1,147 @@
+
+# coding: utf-8
+import os
+
+VERSION_NUM = 12
+STARFADE_SAMPLES_FOLDER = '../data/STARFADE_Samples/'
+STARFADE_FOLDER = STARFADE_SAMPLES_FOLDER + 'v' + str(VERSION_NUM) + '/'
+os.makedirs(name=STARFADE_FOLDER, exist_ok=True)
+
+
+# In[9]:
+
+
+
+import math
+from IPython.display import HTML
+
+HTML('I need something like {:,} images to have {:,} of them for each category.'.format(math.ceil(5000*10000/17), 5000))
+
+
+# In[14]:
+
+
+
+import pandas as pd
+
+MAX_COLUMNS = 207
+file_name = 'Building_Data.csv'
+src_path = os.path.join(STARFADE_FOLDER, file_name)
+
+# The problem here is that the first row has only the
+# Image, #Buildings, ID, X Pos, Y Pos, Rotation,
+# %Destroyed, and View Angle columns, not the 206 or
+# so columns that actually exist, and pd.read_csv infers
+# the number of columns from the first few rows.
+try:
+    Building_Data_df = pd.read_csv(src_path, header=None, low_memory=False,
+                                   skiprows=1, names=list(range(MAX_COLUMNS)))
+    Building_Data_df = Building_Data_df.dropna(axis=1, how='all')
+except Exception as e:
+    print(e)
+
+
+# In[16]:
+
+
+
+import numpy as np
+
+# <image name>,<number of buildings in this environment>,{<building id>,<building X pixel coordinate>,
+# <building Y pixel coordinate>,<building rotation 0-360>}
+rows_list = []
+for row_index, row_series in Building_Data_df.iterrows():
+    
+    # Get image array
+    image_name = row_series[0]
+    
+    # Get building count
+    building_count = row_series[1]
+    for column_index in range(building_count):
+        
+        # Get percent damaged
+        percent_damage = row_series[6+column_index*6]
+        try:
+            percent_damage = int(''.join(str(percent_damage).split('%')))/100
+        except Exception as e:
+            print(e)
+            percent_damage = 0.0
+        
+        # Get row information
+        row_dict = {}
+        row_dict['image_name'] = image_name
+        row_dict['percent_damage'] = percent_damage
+        rows_list.append(row_dict)
+
+percent_damage_df = pd.DataFrame(rows_list, columns=['image_name', 'percent_damage'])
+
+
+# In[17]:
+
+
+
+get_ipython().magic('matplotlib inline')
+
+match_series = (percent_damage_df['percent_damage'] > 0.0)
+axes_subplot = percent_damage_df[match_series]['percent_damage'].hist()
+
+
+# In[18]:
+
+
+
+percent_damage_df['percent_damage'].value_counts(sort=False, bins=10)
+
+
+# In[19]:
+
+
+
+match_series = (percent_damage_df['percent_damage'] > 0.8) & (percent_damage_df['percent_damage'] <= 0.9)
+percent_damage_df[match_series].head(10)
+
+
+# In[ ]:
+
+
+# Get interval info
+percent_damage_series = percent_damage_df['percent_damage'].value_counts(sort=False, bins=10)
+interval_tuple_list = percent_damage_series.index.to_tuples().tolist()
+minimum_interval_count = 5000
+image_set = set()
+for interval_tuple in interval_tuple_list:
+    
+    # Get dataset
+    upper_limit = interval_tuple[1]
+    match_series = (percent_damage_df['percent_damage'] > (upper_limit-0.1))
+    match_series = match_series & (percent_damage_df['percent_damage'] <= upper_limit)
+    damage_df = percent_damage_df[match_series].head(minimum_interval_count)
+    
+    for row_index, row_series in damage_df.iterrows():
+        image_path = row_series['image_name'] + '_after.jpg'
+        image_set.add(image_path)
+
+
+# In[23]:
+
+
+
+HTML('Attached is a list of {:,} images I need from that run.'.format(len(image_set)))
+
+
+# In[22]:
+
+
+
+file_path = r'C:\Users\577342\Downloads\image_list.txt'
+with open(file_path, 'w') as fid:
+    for image_path in image_set:
+        fid.write(image_path+'\n')
+
+
+# In[25]:
+
+
+
+HTML('You\'ll need to make a 4-million run {:,} times before I\'m done.'.format(math.ceil(5000/239)))
+
