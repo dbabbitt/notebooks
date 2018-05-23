@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="yes" wrap="yes" directionDown="no" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
         <Path name="C:\users\dev\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
-        <Find name="Function answer_" />
-        <Find name="&lt;" />
-        <Find name="&amp;nbsp;" />
-        <Find name="\s+" />
-        <Find name="(\d+)\s+&#x000A;&#x000A;hours ago" />
-        <Find name="1\s+day ago" />
-        <Find name="[\r\n]\s+" />
-        <Find name="^\(1 child\)" />
-        <Find name="^parent\b" />
-        <Find name="^\[\s+&#x000A;S\s+\&#x000A;]" />
+        <Find name="pbtxt" />
+        <Find name="_name" />
+        <Find name="_dict" />
+        <Find name="type_id_dict" />
+        <Find name="EXPLOSION_ID" />
+        <Find name="Building_Key_df = " />
+        <Find name="image_arr" />
+        <Find name="Building_Data.csv" />
+        <Find name="index" />
+        <Find name="JSONDIR" />
+        <Replace name="JSON_DIR" />
         <Replace name="\n\nFunction answer_" />
         <Replace name="\n&lt;" />
         <Replace name=" " />
@@ -24,27 +25,18 @@
         <Replace name="\n\n" />
         <Replace name='&quot;' />
         <Replace name="\n" />
-        <Replace name=", " />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\577342\Downloads\test\sweet_data\model.ckpt-2000.index" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\saves\log\session19_1.log" />
-        <File filename="C:\Users\577342\Downloads\ps_aux.txt" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\storage1.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\storage2.py" />
         <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\cv2\__init__.py" />
         <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\session\session30.log" />
         <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\py\imageGenerator\synthetic_sweet.py" />
         <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\py\imageGenerator\create-image-detection-data.py" />
-        <File filename="C:\Users\577342\Downloads\test\sweet_data\model.ckpt-2000.index" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\saves\log\session19_1.log" />
-        <File filename="C:\Users\577342\Downloads\ps_aux.txt" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\storage1.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\load_magic\storage2.py" />
-        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\cv2\__init__.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\session\session30.log" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\py\imageGenerator\synthetic_sweet.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\imagery-analysis\py\imageGenerator\create-image-detection-data.py" />
+        <File filename="C:\Users\577342\Downloads\som.R" />
+        <File filename="C:\Users\577342\Downloads\Find+Edge+Cases+from+STARFADE+CSV.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\session\session21.log" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\logs\session\session18.log" />
+        <File filename="C:\Users\577342\Downloads\machine_learning_flashcards_v1.10\Note_From_Chris.txt" />
+        <File filename="C:\Users\577342\Documents\Repositories\hub\examples\image_retraining\retrain.py" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -53,7 +45,7 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="0" y="0" width="1100" height="700" isMaximized="yes" />
+        <GUIConfig name="AppPosition" x="736" y="391" width="1100" height="700" isMaximized="yes" />
         <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180603">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
@@ -79,7 +71,7 @@
         <GUIConfig name="ScintillaGlobalSettings" enableMultiSelection="no" />
         <GUIConfig name="openSaveDir" value="0" defaultDirPath="" />
         <GUIConfig name="titleBar" short="no" />
-        <GUIConfig name="stylerTheme" path="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\saves\xml\stylers.xml" />
+        <GUIConfig name="stylerTheme" path="C:\Users\577342\Documents\Repositories\notebooks\Miscellaneous\saves\xml\stylers.xml" />
         <GUIConfig name="wordCharList" useDefault="yes" charsAdded="" />
         <GUIConfig name="delimiterSelection" leftmostDelimiter="40" rightmostDelimiter="41" delimiterSelectionOnEntireDocument="no" />
         <GUIConfig name="multiInst" setting="0" />

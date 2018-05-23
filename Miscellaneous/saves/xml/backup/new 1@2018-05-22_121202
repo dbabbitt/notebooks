@@ -1,0 +1,11 @@
+ python ./Create_GeoJSON_File_from_STARFADE_image_folder.py
+ 
+../starfade4/starfade4_final/Saved Images 1 Building_Key.csv ../starfade4/starfade4_final/Saved Images 1/Building_Key.csv
+
+File b'../starfade4/starfade4_final/Saved Images 1/Building_Key.csvBuilding_Key.csv' does not exist
+../starfade4/starfade4_final/Saved Images 1 Building_Data.csv ../starfade4/starfade4_final/Saved Images 1/Building_Data.csv
+Traceback (most recent call last):
+  File "./Create_GeoJSON_File_from_STARFADE_image_folder.py", line 246, in <module>
+    properties_dict['type_id'] = int(type_id_dict[EXPLOSION_ID])
+NameError: name 'type_id_dict' is not defined
+[dbabbitt@ip-10-194-54-218 py]$ 

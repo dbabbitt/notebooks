@@ -1,0 +1,337 @@
+
+# coding: utf-8
+# Given a high-resolution satellite image, the challenge task
+# is to predict a bounding box for each object in the image.
+
+
+from PIL import Image
+from datetime import datetime
+from json import dumps
+import csv
+import math
+import numpy as np
+import os
+import pandas as pd
+import pickle
+import getpass
+
+
+# Change this to your saves folder
+SAVES_FOLDER = r'../saves/'
+
+# Create the assumed directories
+os.makedirs(name=SAVES_FOLDER+'pickle', exist_ok=True)
+
+# Handy list of the different types of encodings
+FILE_ENCODING = ['latin1', 'iso8859-1', 'utf-8'][2]
+
+CAMERA_HEIGHT_IN_METERS = 500
+CAMERA_FIELD_OF_VIEW = 60
+IMAGE_DIAMETER_IN_METERS = CAMERA_HEIGHT_IN_METERS * math.tan(math.radians(CAMERA_FIELD_OF_VIEW/2)) * 2
+
+# /home/shared/starfade4/starfade4_final	
+VERSION_NUM = 4
+STARFADE_SAMPLES_FOLDER = '../starfade' + str(VERSION_NUM) + '/'
+STARFADE_FOLDER = STARFADE_SAMPLES_FOLDER + 'starfade' + str(VERSION_NUM) + '_final/'
+os.makedirs(name=STARFADE_FOLDER, exist_ok=True)
+PBTXT_DIR = '../data/pbtxt/'
+os.makedirs(name=PBTXT_DIR, exist_ok=True)
+
+JSON_DIR = r'../data/json/'
+os.makedirs(name=JSON_DIR, exist_ok=True)
+
+MAX_COLUMNS = 999
+
+starfade_data_dict = {}
+starfade_data_dict['type'] = 'FeatureCollection'
+starfade_data_dict['name'] = 'STARFADE_xView_v' + str(VERSION_NUM)
+feature_dict_list = []
+EXPLOSION_ID = 99
+EXPLODED_BUILDING_ID = 100
+UNEXPLODED_BUILDING_ID = 101
+
+
+def attempt_to_pickle(df, pickle_path, raise_exception=False):
+    try:
+        print('Pickling to ' + pickle_path)
+        df.to_pickle(pickle_path)
+    except Exception as e:
+        os.remove(pickle_path)
+        print(e, ': Couldn\'t save ' + '{:,}'.format(df.shape[0]*df.shape[1]) + ' cells as a pickle.')
+        if raise_exception:
+            raise
+
+
+# Classes, functions, and methods cannot be pickled
+def store_objects(**kwargs):
+    for obj_name in kwargs:
+        if hasattr(kwargs[obj_name], '__call__'):
+            raise RuntimeError('Functions cannot be pickled.')
+        obj_path = SAVES_FOLDER + 'pickle/' + str(obj_name)
+        pickle_path = obj_path + '.pickle'
+        if isinstance(kwargs[obj_name], pd.DataFrame):
+            attempt_to_pickle(kwargs[obj_name], pickle_path, raise_exception=False)
+        else:
+            print('Pickling to ' + pickle_path)
+            with open(pickle_path, 'wb') as handle:
+                pickle.dump(kwargs[obj_name], handle, pickle.HIGHEST_PROTOCOL)
+
+
+def get_image(fname):    
+    """
+    Get an image from a filepath in ndarray format
+    """
+    return np.array(Image.open(fname))
+
+def convert_meters_to_pixels(meters):
+    
+    # Assume all image_arr.shape[0]'s are 500
+    pixels = meters * 500 / IMAGE_DIAMETER_IN_METERS
+
+    return pixels
+
+def get_building_key_df(sample_folder):
+            Building_Key_df = pd.read_csv(sample_folder+'Building_Key.csv', header=0)
+            Building_Key_df = Building_Key_df.dropna(axis=1, how='all')
+            Building_Key_df.columns = ['type_name', 'type_id', 'x_diameter', 'y_diameter', 'z_diameter']
+            Building_Key_df['z_diameter'] = Building_Key_df['z_diameter'].map(lambda x: convert_meters_to_pixels(x))
+            rows_list = []
+            type_id_set = set(Building_Key_df['type_id'].tolist())
+            for row_index, row_series in Building_Key_df.iterrows():
+                
+                # Create previous rows
+                row_dict = {}
+                for column_index, column_value in row_series.iteritems():
+                    row_dict[column_index] = column_value
+                rows_list.append(row_dict)
+
+                # Create exploded buildings rows
+                row_dict = {}
+                for column_index, column_value in row_series.iteritems():
+                    row_dict[column_index] = column_value
+                row_dict['type_name'] = 'Exploded' + row_dict['type_name']
+                new_type_id = 100 + int(row_dict['type_id'])
+                row_dict['type_id'] = new_type_id
+                type_id_set.add(new_type_id)
+                rows_list.append(row_dict)
+            
+            # Create explosion row
+            row_dict = {}
+            row_dict['type_name'] = 'Explosion'
+            row_dict['type_id'] = EXPLOSION_ID
+            type_id_set.add(EXPLOSION_ID)
+            rows_list.append(row_dict)
+            
+            # Create exploded building row
+            row_dict = {}
+            row_dict['type_name'] = 'ExplodedBuilding'
+            row_dict['type_id'] = EXPLODED_BUILDING_ID
+            type_id_set.add(EXPLODED_BUILDING_ID)
+            rows_list.append(row_dict)
+            
+            # Create unexploded building row
+            row_dict = {}
+            row_dict['type_name'] = 'UnexplodedBuilding'
+            row_dict['type_id'] = UNEXPLODED_BUILDING_ID
+            type_id_set.add(UNEXPLODED_BUILDING_ID)
+            rows_list.append(row_dict)
+            
+            # Replace previous rows with previous+added rows
+            Building_Key_df = pd.DataFrame(rows_list, columns=Building_Key_df.columns.tolist())
+            
+            return Building_Key_df
+
+# Find the straight-line distance between two points
+def distance(ax, ay, bx, by):
+    return math.sqrt((by - ay)**2 + (bx - ax)**2)
+
+# Rotate point A about point B by angle radians clockwise.
+def rotate_about(ax, ay, bx, by, angle):
+    radius = distance(ax,ay,bx,by)
+    angle += math.atan2(ay-by, ax-bx)
+    return (
+        round(bx + radius * math.cos(angle)),
+        round(by + radius * math.sin(angle))
+    )
+
+def get_feature_dict(properties_dict):
+    feature_dict = {}
+    feature_dict['type'] = 'Feature'
+    feature_dict['properties'] = properties_dict
+    
+    return feature_dict
+
+def get_properties_dict(file_path, y_min, x_min, y_max, x_max):
+    properties_dict = {}
+    
+    # According to http://challenge.xviewdataset.org/data-format
+    # Bounding box in pixel coordinates [xmin, ymin, xmax, ymax]
+    # of the image chip in which it is marked
+    properties_dict['bounds_imcoords'] = '{},{},{},{}'.format(x_min, y_min, x_max, y_max)
+
+    properties_dict['edited_by'] = getpass.getuser()
+    
+    # '2017/07/27 19:25:12.335+00'
+    properties_dict['ingest_time'] = datetime.today().strftime('%Y/%m/%d %H:%M:%S.%f%z')
+
+    properties_dict['image_id'] = file_path
+    
+    return properties_dict
+
+
+for sub_dir, dir_list, file_list in os.walk(STARFADE_FOLDER):
+    
+    file_name = 'Building_Key.csv'
+    if file_name in file_list:
+        src_path = os.path.join(sub_dir, file_name)
+        try:
+            Building_Key_df = get_building_key_df(src_path)
+
+            name_dict = {row_series['type_id']: row_series['type_name'] for row_index, row_series in Building_Key_df.iterrows()}
+            type_id_dict = {row_series['type_id']: row_index+1 for row_index, row_series in Building_Key_df.iterrows()}
+
+            file_path = PBTXT_DIR + 'starfade_data_v' + str(VERSION_NUM) + '.pbtxt'
+            os.remove(file_path)
+            with open(file_path, 'w') as pbtxt:
+                for type_id in Building_Key_df['type_id'].tolist():
+                    pbtxt.write('item {\n')
+                    pbtxt.write('  name: "' + str(name_dict[type_id]) + '"\n')
+                    pbtxt.write('  id: ' + str(type_id_dict[type_id]) + '\n')
+                    pbtxt.write('}\n')
+        except Exception as e:
+            print(e)
+                
+    file_name = 'Building_Data.csv'
+    if file_name in file_list:
+        src_path = os.path.join(sub_dir, file_name)
+
+        # The problem here is that the first row has only the
+        # Image, #Buildings, ID, X Pos, Y Pos, Rotation,
+        # %Destroyed, and View Angle columns, not the 158 or
+        # so columns that actually exist, and pd.read_csv infers
+        # the number of columns from the first few rows.
+        try:
+            Building_Data_df = pd.read_csv(src_path, header=None, low_memory=False,
+                                           skiprows=1, names=list(range(MAX_COLUMNS)))
+            Building_Data_df = Building_Data_df.dropna(axis=1, how='all')
+        except Exception as e:
+            print(e)
+        
+        # <image name>,<number of buildings in this environment>,{<building id>,<building X pixel coordinate>,
+        # <building Y pixel coordinate>,<building rotation 0-360>}
+        for row_index, row_series in Building_Data_df.iterrows():
+            
+            # Get file name
+            image_name = row_series[0]
+            file_name = image_name + '_after.jpg'
+            
+            # Get the explosion bounding box
+            expl_pos_str = image_name.split('{')[1].split('}')[0]
+            expl_x = int(expl_pos_str.split('_')[0])
+            expl_y = int(expl_pos_str.split('_')[1])
+            radius = int(image_name.split('_')[-1])
+
+            # Expand to the radius
+            y_min = expl_y - radius
+            x_min = expl_x - radius
+            y_max = expl_y + radius
+            x_max = expl_x + radius
+            feature_dict = {}
+            feature_dict['type'] = 'Feature'
+            properties_dict = {}
+
+            # Detected boxes are to be interpreted as being in
+            # [y_min, x_min, y_max, x_max] format and normalized
+            # relative to the image window
+            properties_dict['bounds_imcoords'] = '{},{},{},{}'.format(y_min, x_min, y_max, x_max)
+
+            properties_dict['edited_by'] = 'dbabbitt'
+            properties_dict['type_id'] = explosion_id
+
+            # '2017/07/27 19:25:12.335+00'
+            properties_dict['ingest_time'] = datetime.today().strftime('%Y/%m/%d %H:%M:%S.%f%z')
+
+            properties_dict['image_id'] = file_name
+            feature_dict['properties'] = properties_dict
+            feature_dict_list.append(get_feature_dict(properties_dict))
+            
+            # Loop throught the buildings
+            building_count = row_series[1]
+            for column_index in range(building_count):
+                
+                # Get building info
+                building_id = int(row_series[2+column_index*6])
+                building_width = int(width_dict[building_id])/2
+                building_length = int(length_dict[building_id])/2
+                building_height = int(height_dict[building_id])
+                building_name = name_dict[building_id]
+                
+                # Get positional info
+                x_coordinate = int(row_series[3+column_index*6])
+                y_coordinate = int(row_series[4+column_index*6])
+                building_rotation = int(row_series[5+column_index*6])
+                view_angle = float(row_series[7+column_index*6])
+                building_offset = building_height * math.tan(math.radians(view_angle))
+                
+                # Get the rotated rectangle
+                square_vertices = (
+                    (x_coordinate + building_width, y_coordinate + building_length),
+                    (x_coordinate + building_width, y_coordinate - building_length),
+                    (x_coordinate - building_width, y_coordinate - building_length),
+                    (x_coordinate - building_width, y_coordinate + building_length)
+                )
+
+                square_vertices = [rotate_about(x, y, x_coordinate, y_coordinate,
+                                                math.radians(building_rotation)) for x, y in square_vertices]
+                
+                # Get the outer rectangle
+                xmax = max(square_vertices, key=lambda x: x[0])[0]
+                xmin = min(square_vertices, key=lambda x: x[0])[0]
+                ymax = max(square_vertices, key=lambda x: x[1])[1]
+                ymin = min(square_vertices, key=lambda x: x[1])[1]
+                outer_rectangle_vertices = (
+                    (xmax, ymax),
+                    (xmax, ymin),
+                    (xmin, ymin),
+                    (xmin, ymax)
+                )
+                
+                # Find the corner farthest away and extend it
+                max_tuple = max(outer_rectangle_vertices, key=lambda x: distance(250, 250, x[0], x[1]))
+                max_tuple_angle = np.arctan2(max_tuple[1] - 250, max_tuple[0] - 250)
+                new_x_diff = int(round(building_offset * math.cos(max_tuple_angle)))
+                new_y_diff = int(round(building_offset * math.sin(max_tuple_angle)))
+                
+                # Get the outer rectangle again with extension
+                x_max = max(xmax, max_tuple[0] + new_x_diff + np.sign(new_x_diff))
+                x_min = min(xmin, max_tuple[0] + new_x_diff + np.sign(new_x_diff))
+                y_max = max(ymax, max_tuple[1] + new_y_diff + np.sign(new_y_diff))
+                y_min = min(ymin, max_tuple[1] + new_y_diff + np.sign(new_y_diff))
+                
+                properties_dict = get_properties_dict(image_id, y_min, x_min, y_max, x_max)
+                
+                # The building ID unless it's damaged
+                percent_damage = row_series[6+column_index*6]
+                try:
+                    percent_damage = int(''.join(str(percent_damage).split('%')))/100
+                except Exception as e:
+                    percent_damage = 0.0
+                if percent_damage > 0.0:
+                    
+                    # Get damaged building ID
+                    building_id = 100 + int(building_id)
+                    
+                properties_dict['type_id'] = int(type_id_dict[building_id])
+
+                feature_dict_list.append(get_feature_dict(properties_dict))
+
+starfade_data_dict['features'] = feature_dict_list
+
+# write the GeoJSON file
+file_path = JSON_DIR + 'starfade_data.json'
+os.remove(file_path)
+geojson = open(file_path, 'w')
+geojson.write(dumps(starfade_data_dict, indent=2) + '\n')
+geojson.close()
+
+store_objects(starfade_data_dict=starfade_data_dict)
