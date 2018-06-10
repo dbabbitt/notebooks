@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="yes" wrap="yes" directionDown="no" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
         <Path name="C:\users\dev\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
-        <Find name="pbtxt" />
-        <Find name="_name" />
-        <Find name="_dict" />
-        <Find name="type_id_dict" />
-        <Find name="EXPLOSION_ID" />
-        <Find name="Building_Key_df = " />
-        <Find name="image_arr" />
-        <Find name="Building_Data.csv" />
-        <Find name="index" />
-        <Find name="JSONDIR" />
+        <Find name="Hicks" />
+        <Find name="&lt;body" />
+        <Find name="\s+" />
+        <Find name="&lt;\s+" />
+        <Find name="\s&gt;" />
+        <Find name="\\n" />
+        <Find name="Rubin" />
+        <Find name="&lt;title" />
+        <Find name="Damore" />
+        <Find name="On February 17, 2018" />
+        <Replace name=" " />
+        <Replace name="&lt;" />
+        <Replace name="&gt;" />
         <Replace name="JSON_DIR" />
         <Replace name="\n\nFunction answer_" />
         <Replace name="\n&lt;" />
-        <Replace name=" " />
         <Replace name="{1}  &#x000A;&#x000A;hours ago" />
         <Replace name="\1 &#x000A;&#x000A;hours ago" />
         <Replace name="1 day ago" />
         <Replace name="\n\n" />
-        <Replace name='&quot;' />
-        <Replace name="\n" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
         <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\cv2\__init__.py" />
