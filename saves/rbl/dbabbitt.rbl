@@ -31,6 +31,22 @@
 			<regex>[ \t]+$</regex>
 			<description>Lines: Remove trailing spaces</description>
 		</action>
+		<action id="PythonConvert2spaceindentationtotabs" purpose="replace" caseless="1" multiline="1">
+			<flavor>
+				<builtin>python36</builtin>
+			</flavor>
+			<regex>^(\t*)  </regex>
+			<replace>\g&lt;1>\t</replace>
+			<description>Python: Convert 2-space indentation to tabs</description>
+		</action>
+		<action id="PythonConverttabsto4spaces" purpose="replace" caseless="1" multiline="1">
+			<flavor>
+				<builtin>python36</builtin>
+			</flavor>
+			<regex>\t</regex>
+			<replace>    </replace>
+			<description>Python: Convert tabs to 4 spaces</description>
+		</action>
 		<action id="Pythoncorrectlyspacecommas" purpose="replace" multiline="1" namedduplicate="1">
 			<flavor>
 				<builtin>csharp20</builtin>
@@ -39,12 +55,12 @@
 			<replace>, </replace>
 			<description>Python: correctly space commas</description>
 		</action>
-		<action id="PythonFitcommentlinesagainstnextcodeline" purpose="replace" caseless="1" multiline="1">
+		<action id="PythonFitcommentlinesagainstnextcodeline" purpose="replace" caseless="1" multiline="1" namedduplicate="1">
 			<flavor>
-				<builtin>python36</builtin>
+				<builtin>perl526</builtin>
 			</flavor>
-			<regex>^([ \t]*)#([^\r\n]+)[\r\n]+\1([^#\r\n])</regex>
-			<replace>\g&lt;1>#\g&lt;2>\r\g&lt;3></replace>
+			<regex>^([ \t]*)#\s*([^\r\n]+)[\r\n]+\1([^#\r\n])</regex>
+			<replace>${1}# \u${2}\n${1}${3}</replace>
 			<description>Python: Fit comment lines against next code line</description>
 		</action>
 		<action id="Pythonparenthprintstatement" purpose="replace" caseless="1">
@@ -54,6 +70,13 @@
 			<regex>print\s+([^(])([^\r\n]+)</regex>
 			<replace>print(\g&lt;1>\g&lt;2>)</replace>
 			<description>Python: parenth print statement</description>
+		</action>
+		<action id="PythonRemoveendingsemicolons" purpose="replace" caseless="1" multiline="1">
+			<flavor>
+				<builtin>python36</builtin>
+			</flavor>
+			<regex>;$</regex>
+			<description>Python: Remove ending semicolons</description>
 		</action>
 		<action id="PythonReplacecurlysinglequotes" purpose="replace" multiline="1" namedduplicate="1">
 			<flavor>
@@ -70,6 +93,14 @@
 			<regex>"([^'"]+)"</regex>
 			<replace>'${1}'</replace>
 			<description>Python: Replace double quotes with single</description>
+		</action>
+		<action id="PythonSpacefirstequalssignonline" purpose="replace" caseless="1" multiline="1">
+			<flavor>
+				<builtin>python36</builtin>
+			</flavor>
+			<regex>^([^=\r\n]*)([^ \r\n])=([^ =\r\n])</regex>
+			<replace>\g&lt;1>\g&lt;2> = \g&lt;3></replace>
+			<description>Python: Space first equals sign on line</description>
 		</action>
 		<action id="PythonUpdateprintto36" purpose="replace" multiline="1" namedduplicate="1">
 			<flavor>
