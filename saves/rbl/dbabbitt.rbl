@@ -90,7 +90,7 @@
 			<flavor>
 				<builtin>csharp20</builtin>
 			</flavor>
-			<regex>"([^'"]+)"</regex>
+			<regex>"([^'"]*)"</regex>
 			<replace>'${1}'</replace>
 			<description>Python: Replace double quotes with single</description>
 		</action>

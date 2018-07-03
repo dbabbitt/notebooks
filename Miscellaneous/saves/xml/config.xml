@@ -1,42 +1,40 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="yes" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
         <Path name="C:\users\dev\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
-        <Find name="delta" />
-        <Find name="BOTTLENECK_FOLDER" />
-        <Find name="os.path." />
-        <Find name="ST" />
-        <Find name="HUB_STARFADE" />
-        <Find name="\." />
-        <Find name="." />
-        <Find name="get_certainty" />
-        <Find name="bounding_box_df9" />
-        <Find name="df\d" />
-        <Replace name="self.starfade" />
-        <Replace name="&lt;/th&gt;&lt;td&gt;" />
-        <Replace name="&lt;tr&gt;&lt;th&gt;" />
-        <Replace name="&amp;" />
-        <Replace name="&lt;/td&gt;&lt;td&gt;" />
-        <Replace name="&lt;/td&gt;&lt;/tr&gt;" />
-        <Replace name="table" />
-        <Replace name="\n" />
-        <Replace name="starfade" />
-        <Replace name="storage" />
+        <Find name="&apos;" />
+        <Find name="," />
+        <Find name="\)" />
+        <Find name="\(" />
+        <Find name=" +$" />
+        <Find name="&#x201D;" />
+        <Find name="&#x201C;" />
+        <Find name="ngrams_statistics_blank" />
+        <Find name="get_book_chapter_ngrams_statistics" />
+        <Find name="Ezek.1" />
+        <Replace name='&quot;' />
+        <Replace name="ML" />
+        <Replace name=" " />
+        <Replace name="&lt;" />
+        <Replace name="&gt;" />
+        <Replace name="JSON_DIR" />
+        <Replace name="\n\nFunction answer_" />
+        <Replace name="\n&lt;" />
+        <Replace name="{1}  &#x000A;&#x000A;hours ago" />
+        <Replace name="\1 &#x000A;&#x000A;hours ago" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\google\protobuf\pyext\__init__.py" />
-        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\google\protobuf\pyext\_message.cp36-win_amd64.pyd" />
-        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\PIL\Image.py" />
-        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\PIL\ImageMode.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\dlm_xViewBaselineModels\py\xview_code\tf_record.py" />
-        <File filename="C:\ProgramData\Anaconda3\Lib\site-packages\PIL\__init__.py" />
-        <File filename="C:\STARFADE\STARFADE_Data\config.txt" />
-        <File filename="C:\Users\577342\Documents\Repositories\dlm_xViewBaselineModels\py\Create_xView_Contour_tf_records.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\dlm_xViewBaselineModels\py\create_percent_damage_df.py" />
         <File filename="C:\Users\577342\Documents\Repositories\hub\examples\image_retraining\retrain.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\data-science-5k\data\adjlist\test.adjlist" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\data-science-5k\data\txt\email_prediction.txt" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\paths.py" />
+        <File filename="C:\Users\dev\Downloads\eng-kjv_html\ZEP03.htm" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\bible\data\txt\governing-text\4. Dealing with uncertainty.txt" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\html\aspect_ratios.html" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\pydrive\files.py" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -45,8 +43,8 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="652" y="390" width="1100" height="701" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180619">no</GUIConfig>
+        <GUIConfig name="AppPosition" x="0" y="68" width="962" height="700" isMaximized="yes" />
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180701">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -71,7 +69,7 @@
         <GUIConfig name="ScintillaGlobalSettings" enableMultiSelection="no" />
         <GUIConfig name="openSaveDir" value="0" defaultDirPath="" />
         <GUIConfig name="titleBar" short="no" />
-        <GUIConfig name="stylerTheme" path="C:\Users\577342\Documents\Repositories\notebooks\Miscellaneous\saves\xml\stylers.xml" />
+        <GUIConfig name="stylerTheme" path="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\saves\xml\stylers.xml" />
         <GUIConfig name="wordCharList" useDefault="yes" charsAdded="" />
         <GUIConfig name="delimiterSelection" leftmostDelimiter="40" rightmostDelimiter="41" delimiterSelectionOnEntireDocument="no" />
         <GUIConfig name="multiInst" setting="0" />
