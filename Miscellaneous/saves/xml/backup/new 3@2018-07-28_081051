@@ -1,0 +1,2 @@
+
+twarc search --geocode 42.315555555555555,-71.63,10mi > C:\Users\dev\Downloads\local_tweets.json

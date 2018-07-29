@@ -5,6 +5,7 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
+        <Find name=" +([\r\n]+)" />
         <Find name="&apos;" />
         <Find name="," />
         <Find name="\)" />
@@ -14,7 +15,7 @@
         <Find name="&#x201C;" />
         <Find name="ngrams_statistics_blank" />
         <Find name="get_book_chapter_ngrams_statistics" />
-        <Find name="Ezek.1" />
+        <Replace name="\1" />
         <Replace name='&quot;' />
         <Replace name="ML" />
         <Replace name=" " />
@@ -24,7 +25,6 @@
         <Replace name="\n\nFunction answer_" />
         <Replace name="\n&lt;" />
         <Replace name="{1}  &#x000A;&#x000A;hours ago" />
-        <Replace name="\1 &#x000A;&#x000A;hours ago" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
         <File filename="C:\Users\577342\Documents\Repositories\hub\examples\image_retraining\retrain.py" />
@@ -44,7 +44,7 @@
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
         <GUIConfig name="AppPosition" x="0" y="68" width="962" height="700" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180701">no</GUIConfig>
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180719">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
