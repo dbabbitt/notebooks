@@ -5,6 +5,7 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
+        <Find name="xmltodict" />
         <Find name=" +([\r\n]+)" />
         <Find name="&apos;" />
         <Find name="," />
@@ -14,7 +15,6 @@
         <Find name="&#x201D;" />
         <Find name="&#x201C;" />
         <Find name="ngrams_statistics_blank" />
-        <Find name="get_book_chapter_ngrams_statistics" />
         <Replace name="\1" />
         <Replace name='&quot;' />
         <Replace name="ML" />
@@ -35,6 +35,7 @@
         <File filename="C:\Users\dev\Documents\repositories\notebooks\bible\data\txt\governing-text\4. Dealing with uncertainty.txt" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\html\aspect_ratios.html" />
         <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\pydrive\files.py" />
+        <File filename="C:\Users\dev\Downloads\local_tweets.json" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -44,7 +45,7 @@
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
         <GUIConfig name="AppPosition" x="0" y="68" width="962" height="700" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180719">no</GUIConfig>
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180806">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
