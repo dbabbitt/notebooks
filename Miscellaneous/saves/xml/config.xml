@@ -1,51 +1,52 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="yes" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
         <Path name="C:\users\dev\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
-        <Find name="xmltodict" />
-        <Find name=" +([\r\n]+)" />
-        <Find name="&apos;" />
-        <Find name="," />
-        <Find name="\)" />
-        <Find name="\(" />
-        <Find name=" +$" />
-        <Find name="&#x201D;" />
-        <Find name="&#x201C;" />
-        <Find name="ngrams_statistics_blank" />
-        <Replace name="\1" />
-        <Replace name='&quot;' />
-        <Replace name="ML" />
+        <Find name="&apos;../saves/csv/" />
+        <Find name="../saves/csv/" />
+        <Find name="data" />
+        <Find name="\band\b" />
+        <Find name="\bas\b" />
+        <Find name="&#x0009;" />
+        <Find name=", " />
+        <Find name="postgresql.conf" />
+        <Find name="pgsql" />
+        <Find name="psql" />
+        <Replace name="DATA_FOLDER + &apos;" />
+        <Replace name="AND" />
+        <Replace name="AS" />
+        <Replace name=", " />
+        <Replace name=",\n" />
+        <Replace name="," />
+        <Replace name="\),\n\(" />
+        <Replace name="\),\n" />
         <Replace name=" " />
-        <Replace name="&lt;" />
-        <Replace name="&gt;" />
-        <Replace name="JSON_DIR" />
-        <Replace name="\n\nFunction answer_" />
-        <Replace name="\n&lt;" />
-        <Replace name="{1}  &#x000A;&#x000A;hours ago" />
+        <Replace name="\1" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\577342\Documents\Repositories\hub\examples\image_retraining\retrain.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\data-science-5k\data\adjlist\test.adjlist" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\data-science-5k\data\txt\email_prediction.txt" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\paths.py" />
-        <File filename="C:\Users\dev\Downloads\eng-kjv_html\ZEP03.htm" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\bible\data\txt\governing-text\4. Dealing with uncertainty.txt" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\html\aspect_ratios.html" />
-        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\pydrive\files.py" />
-        <File filename="C:\Users\dev\Downloads\local_tweets.json" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\saves\csv\w_santa_data.csv" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\saves\csv\fake_correlation.csv" />
+        <File filename="C:\Users\577342\Documents\Repositories\dlm_xViewBaselineModels\docker\docker_submission\inference_vanilla.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\saves\csv\c2_new_data_df.csv" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\saves\csv\p_new_data_df.csv" />
+        <File filename="C:\Users\577342\Downloads\export.json" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\saves\csv\w_new_data_df.csv" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\saves\csv\w_fake_data.csv" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\saves\csv\c2_fake_data.csv" />
+        <File filename="C:\Users\577342\Downloads\Correlator\esWrapper.py" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
         <GUIConfig name="StatusBar">show</GUIConfig>
-        <GUIConfig name="TabBar" dragAndDrop="yes" drawTopBar="yes" drawInactiveTab="yes" reduce="yes" closeButton="yes" doubleClick2Close="no" vertical="no" multiLine="no" hide="no" quitOnEmpty="no" />
+        <GUIConfig name="TabBar" dragAndDrop="yes" drawTopBar="yes" drawInactiveTab="yes" reduce="yes" closeButton="yes" doubleClick2Close="no" vertical="no" multiLine="yes" hide="no" quitOnEmpty="no" />
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="0" y="68" width="962" height="700" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180806">no</GUIConfig>
+        <GUIConfig name="AppPosition" x="-10" y="10" width="1787" height="1080" isMaximized="yes" />
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180810">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -70,7 +71,7 @@
         <GUIConfig name="ScintillaGlobalSettings" enableMultiSelection="no" />
         <GUIConfig name="openSaveDir" value="0" defaultDirPath="" />
         <GUIConfig name="titleBar" short="no" />
-        <GUIConfig name="stylerTheme" path="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\saves\xml\stylers.xml" />
+        <GUIConfig name="stylerTheme" path="C:\Users\577342\Documents\Repositories\notebooks\Miscellaneous\saves\xml\stylers.xml" />
         <GUIConfig name="wordCharList" useDefault="yes" charsAdded="" />
         <GUIConfig name="delimiterSelection" leftmostDelimiter="40" rightmostDelimiter="41" delimiterSelectionOnEntireDocument="no" />
         <GUIConfig name="multiInst" setting="0" />
@@ -78,8 +79,11 @@
         <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
         <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="0" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
-        <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="240">
+        <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="204">
+            <PluginDlg pluginName="MarkdownViewer++" id="0" curr="1" prev="-1" isVisible="no" />
             <PluginDlg pluginName="dummy" id="0" curr="3" prev="-1" isVisible="no" />
+            <PluginDlg pluginName="Snippets" id="-1" curr="1" prev="-1" isVisible="no" />
+            <PluginDlg pluginName="ComparePlugin.dll" id="11" curr="1" prev="-1" isVisible="no" />
             <ActiveTabs cont="0" activeTab="-1" />
             <ActiveTabs cont="1" activeTab="-1" />
             <ActiveTabs cont="2" activeTab="-1" />

@@ -1,0 +1,1384 @@
+Windows PowerShell
+Copyright (C) 2016 Microsoft Corporation. All rights reserved.
+
+PS C:\Users\577342> conda info --envs
+# conda environments:
+#
+base                  *  C:\ProgramData\Anaconda3
+Python27                 C:\ProgramData\Anaconda3\envs\Python27
+python2                  C:\ProgramData\Anaconda3\envs\python2
+
+PS C:\Users\577342> activate Python27
+PS C:\Users\577342> conda env list
+# conda environments:
+#
+base                  *  C:\ProgramData\Anaconda3
+Python27                 C:\ProgramData\Anaconda3\envs\Python27
+python2                  C:\ProgramData\Anaconda3\envs\python2
+
+PS C:\Users\577342> source activate Python27
+source : The term 'source' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ source activate Python27
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (source:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\577342> echo $PATH
+PS C:\Users\577342> echo %PATH%
+%PATH%
+PS C:\Users\577342> %PATH%
+%PATH% : The term '%PATH%' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ %PATH%
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (%PATH%:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\577342> $PATH
+PS C:\Users\577342> $env:Path
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files\G
+it\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Gitmingw64\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v
+9.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\libnvvp;C:\Program Files\NVIDIA GPU Computing Toolkit\CU
+DA\v9.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\libnvvp;C:\Program Files\Microsoft MPI\Bin\;C:\Progr
+amData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\
+Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Window
+s\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Pro
+gram Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ffmpeg\bin;C:\Program Files (x86)\Graphviz2.38\bin\dot.exe;C:\Progra
+m Files\PuTTY\;C:\Program Files\7-Zip\;C:\Users\577342\AppData\Local\Continuum\anaconda3;C:\Users\577342\AppData\Local\C
+ontinuum\anaconda3\Library\mingw-w64\bin;C:\Users\577342\AppData\Local\Continuum\anaconda3\Library\usr\bin;C:\Users\5773
+42\AppData\Local\Continuum\anaconda3\Library\bin;C:\Users\577342\AppData\Local\Continuum\anaconda3\Scripts;C:\Users\5773
+42\AppData\Local\VanDyke Software\Clients\;C:\Users\577342\AppData\Local\Microsoft\WindowsApps;C:\Users\577342\AppData\L
+ocal\GitHubDesktop\bin;C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\exe\chromedriver.exe;C:\Users\577
+342\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Graphviz 2.38;C:\Program Files (x86)\Graphviz2.38\bin;C:\Progr
+am Files\Microsoft VS Code\bin
+PS C:\Users\577342>
+
+conda remove --name Python27 --all
+
+cmd "/K" C:\ProgramData\Anaconda3\Scripts\activate.bat C:\ProgramData\Anaconda3
+
+conda create -n Python27 python=2.7.15 anaconda
+
+Windows PowerShell
+Copyright (C) 2016 Microsoft Corporation. All rights reserved.
+
+PS C:\Windows\system32> %windir%\System32\cmd.exe "/K" C:\ProgramData\Anaconda3\Scripts\activate.bat C:\ProgramData\Anaconda3\envs
+%windir%\System32\cmd.exe : The module '%windir%' could not be loaded. For more information, run 'Import-Module
+%windir%'.
+At line:1 char:1
++ %windir%\System32\cmd.exe "/K" C:\ProgramData\Anaconda3\Scripts\activ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (%windir%\System32\cmd.exe:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CouldNotAutoLoadModule
+
+PS C:\Windows\system32> cmd "/K" C:\ProgramData\Anaconda3\Scripts\activate.bat C:\ProgramData\Anaconda3\envs
+Not a conda environment: C:\ProgramData\Anaconda3\envs
+
+C:\Windows\system32>cmd "/K" C:\ProgramData\Anaconda3\Scripts\activate.bat C:\ProgramData\Anaconda3
+
+(base) C:\Windows\system32>conda env --list
+usage: conda-env [-h] {attach,create,export,list,remove,upload,update} ...
+conda-env: error: unrecognized arguments: --list
+
+(base) C:\Windows\system32>conda env list
+# conda environments:
+#
+base                  *  C:\ProgramData\Anaconda3
+
+
+(base) C:\Windows\system32>conda update conda
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: C:\ProgramData\Anaconda3
+
+  added / updated specs:
+    - conda
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    conda-4.5.5                |           py36_0         1.0 MB
+    openssl-1.0.2o             |       h8ea7d77_0         5.4 MB
+    certifi-2018.4.16          |           py36_0         143 KB
+    ------------------------------------------------------------
+                                           Total:         6.5 MB
+
+The following packages will be UPDATED:
+
+    ca-certificates: 2017.08.26-h94faf87_0 --> 2018.03.07-0
+    certifi:         2018.1.18-py36_0      --> 2018.4.16-py36_0
+    conda:           4.5.0-py36_0          --> 4.5.5-py36_0
+    openssl:         1.0.2n-h74b6da3_0     --> 1.0.2o-h8ea7d77_0
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+conda 4.5.5: ################################################################################################ | 100%
+openssl 1.0.2o: ############################################################################################# | 100%
+certifi 2018.4.16: ########################################################################################## | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+
+(base) C:\Windows\system32>conda create -n Python27 python=2.7.15 anaconda
+
+CondaValueError: prefix already exists: C:\ProgramData\Anaconda3\envs\Python27
+
+
+(base) C:\Windows\system32>conda remove --name Python27 --all
+
+EnvironmentLocationNotFound: Not a conda environment: C:\ProgramData\Anaconda3\envs\Python27
+
+
+(base) C:\Windows\system32>conda install --name Python27 scipy
+
+Windows PowerShell
+Copyright (C) 2016 Microsoft Corporation. All rights reserved.
+
+PS C:\Windows\system32> %windir%\System32\cmd.exe "/K" C:\ProgramData\Anaconda3\Scripts\activate.bat C:\ProgramData\Anaconda3\envs
+%windir%\System32\cmd.exe : The module '%windir%' could not be loaded. For more information, run 'Import-Module
+%windir%'.
+At line:1 char:1
++ %windir%\System32\cmd.exe "/K" C:\ProgramData\Anaconda3\Scripts\activ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (%windir%\System32\cmd.exe:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CouldNotAutoLoadModule
+
+PS C:\Windows\system32> cmd "/K" C:\ProgramData\Anaconda3\Scripts\activate.bat C:\ProgramData\Anaconda3\envs
+Not a conda environment: C:\ProgramData\Anaconda3\envs
+
+C:\Windows\system32>cmd "/K" C:\ProgramData\Anaconda3\Scripts\activate.bat C:\ProgramData\Anaconda3
+
+(base) C:\Windows\system32>conda env --list
+usage: conda-env [-h] {attach,create,export,list,remove,upload,update} ...
+conda-env: error: unrecognized arguments: --list
+
+(base) C:\Windows\system32>conda env list
+# conda environments:
+#
+base                  *  C:\ProgramData\Anaconda3
+
+
+(base) C:\Windows\system32>conda update conda
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: C:\ProgramData\Anaconda3
+
+  added / updated specs:
+    - conda
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    conda-4.5.5                |           py36_0         1.0 MB
+    openssl-1.0.2o             |       h8ea7d77_0         5.4 MB
+    certifi-2018.4.16          |           py36_0         143 KB
+    ------------------------------------------------------------
+                                           Total:         6.5 MB
+
+The following packages will be UPDATED:
+
+    ca-certificates: 2017.08.26-h94faf87_0 --> 2018.03.07-0
+    certifi:         2018.1.18-py36_0      --> 2018.4.16-py36_0
+    conda:           4.5.0-py36_0          --> 4.5.5-py36_0
+    openssl:         1.0.2n-h74b6da3_0     --> 1.0.2o-h8ea7d77_0
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+conda 4.5.5: ################################################################################################ | 100%
+openssl 1.0.2o: ############################################################################################# | 100%
+certifi 2018.4.16: ########################################################################################## | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+
+(base) C:\Windows\system32>conda create -n Python27 python=2.7.15 anaconda
+
+CondaValueError: prefix already exists: C:\ProgramData\Anaconda3\envs\Python27
+
+
+(base) C:\Windows\system32>conda remove --name Python27 --all
+
+EnvironmentLocationNotFound: Not a conda environment: C:\ProgramData\Anaconda3\envs\Python27
+
+
+(base) C:\Windows\system32>conda create -n Python27 python=2.7.15 anaconda
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: C:\ProgramData\Anaconda3\envs\Python27
+
+  added / updated specs:
+    - anaconda
+    - python=2.7.15
+
+
+The following NEW packages will be INSTALLED:
+
+    alabaster:                          0.7.10-py27h2cab13d_0
+    anaconda:                           5.2.0-py27_3
+    anaconda-client:                    1.6.14-py27_0
+    anaconda-project:                   0.8.2-py27he89e3ca_0
+    asn1crypto:                         0.24.0-py27_0
+    astroid:                            1.6.3-py27_0
+    astropy:                            2.0.6-py27hc997a72_1
+    attrs:                              18.1.0-py27_0
+    babel:                              2.5.3-py27_0
+    backports:                          1.0-py27h6492d98_1
+    backports.functools_lru_cache:      1.5-py27_1
+    backports.shutil_get_terminal_size: 1.0.0-py27h1657125_2
+    backports.shutil_which:             3.5.1-py27_2
+    backports_abc:                      0.5-py27h0ec6b72_0
+    beautifulsoup4:                     4.6.0-py27hc287451_1
+    bitarray:                           0.8.1-py27h0c8e037_1
+    bkcharts:                           0.2-py27h92b6de3_0
+    blas:                               1.0-mkl
+    blaze:                              0.11.3-py27h97e5449_0
+    bleach:                             2.1.3-py27_0
+    blosc:                              1.14.3-h95ae18b_0
+    bokeh:                              0.12.16-py27_0
+    boto:                               2.48.0-py27h1ccb131_1
+    bottleneck:                         1.2.1-py27hde90680_0
+    bzip2:                              1.0.6-h0c8e037_5
+    ca-certificates:                    2018.03.07-0
+    cdecimal:                           2.3-py27h0c8e037_3
+    certifi:                            2018.4.16-py27_0
+    cffi:                               1.11.5-py27hdb016f4_0
+    chardet:                            3.0.4-py27h56c3b73_1
+    click:                              6.7-py27hb6defca_0
+    cloudpickle:                        0.5.3-py27_0
+    clyent:                             1.2.2-py27h4424948_1
+    colorama:                           0.3.9-py27hdfe4ae1_0
+    comtypes:                           1.1.4-py27_0
+    configparser:                       3.5.0-py27h2fa79a8_0
+    console_shortcut:                   0.1.1-h6bb2dd7_3
+    contextlib2:                        0.5.5-py27h42efda5_0
+    cryptography:                       2.2.2-py27h0c8e037_0
+    curl:                               7.60.0-h7a46e7a_0
+    cycler:                             0.10.0-py27h59acbbf_0
+    cython:                             0.28.2-py27h0c8e037_0
+    cytoolz:                            0.9.0.1-py27h0c8e037_0
+    dask:                               0.17.5-py27_0
+    dask-core:                          0.17.5-py27_0
+    datashape:                          0.5.4-py27h3d6e61b_0
+    decorator:                          4.3.0-py27_0
+    distributed:                        1.21.8-py27_0
+    docutils:                           0.14-py27h8652d09_0
+    entrypoints:                        0.2.3-py27h0271f2b_2
+    enum34:                             1.1.6-py27h2aa175b_1
+    et_xmlfile:                         1.0.1-py27h1de5d23_0
+    fastcache:                          1.0.2-py27h0c8e037_2
+    filelock:                           3.0.4-py27_0
+    flask:                              1.0.2-py27_1
+    flask-cors:                         3.0.4-py27_0
+    freetype:                           2.8-hea645e0_1
+    funcsigs:                           1.0.2-py27h8885ae1_0
+    functools32:                        3.2.3.2-py27h0cdbcdb_1
+    futures:                            3.2.0-py27h8b2aecd_0
+    get_terminal_size:                  1.0.0-h38e98db_0
+    gevent:                             1.3.0-py27h0c8e037_0
+    glob2:                              0.6-py27hd4eee8c_0
+    greenlet:                           0.4.13-py27h0c8e037_0
+    grin:                               1.2.1-py27_4
+    h5py:                               2.7.1-py27h5f1a774_2
+    hdf5:                               1.10.2-h4b43f98_1
+    heapdict:                           1.0.0-py27_2
+    html5lib:                           1.0.1-py27h5a33001_0
+    icc_rt:                             2017.0.4-h97af966_0
+    icu:                                58.2-h2aa20d9_1
+    idna:                               2.6-py27h1ea29d3_1
+    imageio:                            2.3.0-py27_0
+    imagesize:                          1.0.0-py27_0
+    intel-openmp:                       2018.0.0-8
+    ipaddress:                          1.0.22-py27_0
+    ipykernel:                          4.8.2-py27_0
+    ipython:                            5.7.0-py27_0
+    ipython_genutils:                   0.2.0-py27hbe997df_0
+    ipywidgets:                         7.2.1-py27_0
+    isort:                              4.3.4-py27_0
+    itsdangerous:                       0.24-py27hcf63135_1
+    jdcal:                              1.4-py27_0
+    jedi:                               0.12.0-py27_1
+    jinja2:                             2.10-py27hba1794b_0
+    jpeg:                               9b-ha175dff_2
+    jsonschema:                         2.6.0-py27haaf3834_0
+    jupyter:                            1.0.0-py27_4
+    jupyter_client:                     5.2.3-py27_0
+    jupyter_console:                    5.2.0-py27h6ed736b_1
+    jupyter_core:                       4.4.0-py27h1619e65_0
+    jupyterlab:                         0.32.1-py27_0
+    jupyterlab_launcher:                0.10.5-py27_0
+    kiwisolver:                         1.0.1-py27h9815e84_0
+    lazy-object-proxy:                  1.3.1-py27ha5c8080_0
+    libcurl:                            7.60.0-h0990ea7_0
+    libiconv:                           1.15-hda2e4ec_7
+    libpng:                             1.6.34-h325896a_0
+    libsodium:                          1.0.16-h8b3e59e_0
+    libssh2:                            1.8.0-h77a7533_4
+    libtiff:                            4.0.9-h1c3b264_1
+    libxml2:                            2.9.8-hdfd6920_1
+    libxslt:                            1.1.32-h89dfad8_0
+    llvmlite:                           0.23.1-py27hf224fbf_0
+    locket:                             0.2.0-py27h1ca288a_1
+    lxml:                               4.2.1-py27h803002f_0
+    lzo:                                2.10-h0bb7fe3_2
+    m2w64-gcc-libgfortran:              5.3.0-6
+    m2w64-gcc-libs:                     5.3.0-7
+    m2w64-gcc-libs-core:                5.3.0-7
+    m2w64-gmp:                          6.1.0-2
+    m2w64-libwinpthread-git:            5.0.0.4634.697f757-2
+    markupsafe:                         1.0-py27h9d4480d_1
+    matplotlib:                         2.2.2-py27h8803d4e_1
+    mccabe:                             0.6.1-py27hde0bf6e_1
+    menuinst:                           1.4.14-py27h0c8e037_0
+    mistune:                            0.8.3-py27h0c8e037_1
+    mkl:                                2018.0.2-1
+    mkl-service:                        1.1.2-py27h3c6b6b0_4
+    mkl_fft:                            1.0.1-py27hc997a72_0
+    more-itertools:                     4.1.0-py27_0
+    mpmath:                             1.0.0-py27h0d59bc2_2
+    msgpack-python:                     0.5.6-py27hdc96acc_0
+    msys2-conda-epoch:                  20160418-1
+    multipledispatch:                   0.5.0-py27_0
+    nbconvert:                          5.3.1-py27h7a573cf_0
+    nbformat:                           4.4.0-py27hf49b375_0
+    networkx:                           2.1-py27_0
+    nltk:                               3.3.0-py27_0
+    nose:                               1.3.7-py27h84c72c6_2
+    notebook:                           5.5.0-py27_0
+    numba:                              0.38.0-py27h39f3610_0
+    numexpr:                            2.6.5-py27h3b259a0_0
+    numpy:                              1.14.3-py27h911edcf_1
+    numpy-base:                         1.14.3-py27h917549b_1
+    numpydoc:                           0.8.0-py27_0
+    odo:                                0.5.1-py27h64810b2_0
+    olefile:                            0.45.1-py27_0
+    openpyxl:                           2.5.3-py27_0
+    openssl:                            1.0.2o-h2c51139_0
+    packaging:                          17.1-py27_0
+    pandas:                             0.23.0-py27h39f3610_0
+    pandoc:                             1.19.2.1-hb2460c7_1
+    pandocfilters:                      1.4.2-py27h76461d3_1
+    parso:                              0.2.0-py27_0
+    partd:                              0.3.8-py27h1e0692f_0
+    path.py:                            11.0.1-py27_0
+    pathlib2:                           2.3.2-py27_0
+    patsy:                              0.5.0-py27_0
+    pep8:                               1.7.1-py27_0
+    pickleshare:                        0.7.4-py27hb5f6335_0
+    pillow:                             5.1.0-py27h901f87c_0
+    pip:                                10.0.1-py27_0
+    pkginfo:                            1.4.2-py27_1
+    pluggy:                             0.6.0-py27h89dc50b_0
+    ply:                                3.11-py27_0
+    prompt_toolkit:                     1.0.15-py27h3a8ec6a_0
+    psutil:                             5.4.5-py27h0c8e037_0
+    py:                                 1.5.3-py27_0
+    pycodestyle:                        2.4.0-py27_0
+    pycosat:                            0.6.3-py27hcd410c5_0
+    pycparser:                          2.18-py27hb43d16c_1
+    pycrypto:                           2.6.1-py27h0c8e037_8
+    pycurl:                             7.43.0.1-py27hc64555f_0
+    pyflakes:                           1.6.0-py27h34e7826_0
+    pygments:                           2.2.0-py27ha50f84f_0
+    pylint:                             1.8.4-py27_0
+    pyodbc:                             4.0.23-py27hc56fc5f_0
+    pyopenssl:                          18.0.0-py27_0
+    pyparsing:                          2.2.0-py27hc7d9fa6_1
+    pyqt:                               5.6.0-py27h224ed30_5
+    pysocks:                            1.6.8-py27_0
+    pytables:                           3.4.3-py27hdd5b532_1
+    pytest:                             3.5.1-py27_0
+    python:                             2.7.15-he216670_0
+    python-dateutil:                    2.7.3-py27_0
+    pytz:                               2018.4-py27_0
+    pywavelets:                         0.5.2-py27h0dc3f48_0
+    pywin32:                            223-py27h0c8e037_1
+    pywinpty:                           0.5.1-py27_0
+    pyyaml:                             3.12-py27ha287073_1
+    pyzmq:                              17.0.0-py27h0c8e037_1
+    qt:                                 5.6.2-vc9hc26998b_12
+    qtawesome:                          0.4.4-py27h766b13d_0
+    qtconsole:                          4.3.1-py27h77d40ac_0
+    qtpy:                               1.4.1-py27_0
+    requests:                           2.18.4-py27h3159eba_1
+    rope:                               0.10.7-py27hb65afb6_0
+    ruamel_yaml:                        0.15.35-py27h0c8e037_1
+    scandir:                            1.7-py27h0c8e037_0
+    scikit-image:                       0.13.1-py27h0c8e037_1
+    scikit-learn:                       0.19.1-py27he00e316_0
+    scipy:                              1.1.0-py27ha6b90e7_0
+    seaborn:                            0.8.1-py27hab56d54_0
+    send2trash:                         1.5.0-py27_0
+    setuptools:                         39.1.0-py27_0
+    simplegeneric:                      0.8.1-py27_2
+    singledispatch:                     3.4.0.3-py27h3f9d112_0
+    sip:                                4.18.1-py27h5ec1c1a_2
+    six:                                1.11.0-py27ha5e1701_1
+    snappy:                             1.1.7-he46498f_3
+    snowballstemmer:                    1.2.1-py27h28d3bf7_0
+    sortedcollections:                  0.6.1-py27_0
+    sortedcontainers:                   1.5.10-py27_0
+    sphinx:                             1.7.4-py27_0
+    sphinxcontrib:                      1.0-py27h0e2fb95_1
+    sphinxcontrib-websupport:           1.0.1-py27h0d0f901_1
+    spyder:                             3.2.8-py27_0
+    sqlalchemy:                         1.2.7-py27h9dc6b9e_0
+    sqlite:                             3.23.1-h0f31022_0
+    ssl_match_hostname:                 3.5.0.1-py27hea8a0f4_2
+    statsmodels:                        0.9.0-py27hc997a72_0
+    subprocess32:                       3.5.0-py27h0c8e037_0
+    sympy:                              1.1.1-py27hde44fae_0
+    tblib:                              1.3.2-py27h8ae915c_0
+    terminado:                          0.8.1-py27_1
+    testpath:                           0.3.1-py27h1cd488d_0
+    tk:                                 8.6.7-h144d9c4_3
+    toolz:                              0.9.0-py27_0
+    tornado:                            5.0.2-py27_0
+    traitlets:                          4.3.2-py27h1b1b3a5_0
+    typing:                             3.6.4-py27_0
+    unicodecsv:                         0.14.1-py27h0bf7bb0_0
+    urllib3:                            1.22-py27hb9f5a07_0
+    vc:                                 9-h7299396_1
+    vs2008_runtime:                     9.00.30729.1-hfaea7d5_1
+    vs2015_runtime:                     14.0.25123-3
+    wcwidth:                            0.1.7-py27hb1a0d82_0
+    webencodings:                       0.5.1-py27h4e224a2_1
+    werkzeug:                           0.14.1-py27_0
+    wheel:                              0.31.1-py27_0
+    widgetsnbextension:                 3.2.1-py27_0
+    win_inet_pton:                      1.0.1-py27hf41312a_1
+    win_unicode_console:                0.5-py27hc037021_0
+    wincertstore:                       0.2-py27hf04cefb_0
+    winpty:                             0.4.3-4
+    wrapt:                              1.10.11-py27hcd2b27d_0
+    xlrd:                               1.1.0-py27h2b87a7f_1
+    xlsxwriter:                         1.0.4-py27_0
+    xlwings:                            0.11.8-py27_0
+    xlwt:                               1.3.0-py27h2271735_0
+    yaml:                               0.1.7-h3e6d941_2
+    zeromq:                             4.2.5-h907ab29_0
+    zict:                               0.1.3-py27h0171463_0
+    zlib:                               1.2.11-hbc2faf4_2
+
+Proceed ([y]/n)? y
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: | DEBUG menuinst_win32:__init__(185): Menu: name: 'Anaconda${PY_VER} ${PLATFORM}', prefix: 'C:\ProgramData\Anaconda3\envs\Python27', env_name: 'Python27', mode: 'None', used_mode: 'system'
+DEBUG menuinst_win32:create(299): Shortcut cmd is %windir%\System32\cmd.exe, args are ['"/K"', 'C:\\ProgramData\\Anaconda3\\Scripts\\activate.bat', 'C:\\ProgramData\\Anaconda3\\envs\\Python27']                               \ DEBUG menuinst_win32:__init__(185): Menu: name: 'Anaconda${PY_VER} ${PLATFORM}', prefix: 'C:\ProgramData\Anaconda3\envs\Python27', env_name: 'Python27', mode: 'None', used_mode: 'system'
+DEBUG menuinst_win32:create(299): Shortcut cmd is C:\ProgramData\Anaconda3\python.exe, args are ['C:\\ProgramData\\Anaconda3\\cwp.py', 'C:\\ProgramData\\Anaconda3\\envs\\Python27', 'C:\\ProgramData\\Anaconda3\\envs\\Python27\\python.exe', 'C:\\ProgramData\\Anaconda3\\envs\\Python27\\Scripts\\jupyter-notebook-script.py', '%USERPROFILE%'\ DEBUG menuinst_win32:__init__(185): Menu: name: 'Anaconda${PY_VER} ${PLATFORM}', prefix: 'C:\ProgramData\Anaconda3\envs\Python27', env_name: 'Python27', mode: 'None', used_mode: 'system'
+DEBUG menuinst_win32:create(299): Shortcut cmd is C:\ProgramData\Anaconda3\pythonw.exe, args are ['C:\\ProgramData\\Anaconda3\\cwp.py', 'C:\\ProgramData\\Anaconda3\\envs\\Python27', 'C:\\ProgramData\\Anaconda3\\envs\\Python27\\pythonw.exe', 'C:\\ProgramData\\Anaconda3\\envs\\Python27\\Scripts\\spyder-script.py']                        DEBUG menuinst_win32:create(299): Shortcut cmd is C:\ProgramData\Anaconda3\python.exe, args are ['C:\\ProgramData\\Anaconda3\\cwp.py', 'C:\\ProgramData\\Anaconda3\\envs\\Python27', 'C:\\ProgramData\\Anaconda3\\envs\\Python27\\python.exe', 'C:\\ProgramData\\Anaconda3\\envs\\Python27\\Scripts\\spyder-script.py', '--reset']|                done
+#
+# To activate this environment, use
+#
+#     $ conda activate Python27
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+
+(base) C:\Windows\system32>conda activate Python27
+
+(Python27) C:\Windows\system32>python --version
+Python 2.7.15 :: Anaconda, Inc.
+
+(Python27) C:\Windows\system32>deactivate
+
+(base) C:\Windows\system32>activate Python27
+
+(Python27) C:\Windows\system32>deactivate
+
+(base) C:\Windows\system32>python2
+'python2' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Windows\system32>activate Python27
+
+(Python27) C:\Windows\system32>python2
+'python2' is not recognized as an internal or external command,
+operable program or batch file.
+
+(Python27) C:\Windows\system32>python -m pip install --upgrade ipykernel
+Requirement already up-to-date: ipykernel in c:\programdata\anaconda3\envs\python27\lib\site-packages (4.8.2)
+Requirement not upgraded as not directly required: ipython>=4.0.0 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipykernel) (5.7.0)
+Requirement not upgraded as not directly required: traitlets>=4.1.0 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipykernel) (4.3.2)
+Requirement not upgraded as not directly required: jupyter_client in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipykernel) (5.2.3)
+Requirement not upgraded as not directly required: tornado>=4.0 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipykernel) (5.0.2)
+Requirement not upgraded as not directly required: prompt-toolkit<2.0.0,>=1.0.4 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (1.0.15)
+Requirement not upgraded as not directly required: setuptools>=18.5 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (39.1.0)
+Requirement not upgraded as not directly required: decorator in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (4.3.0)
+Requirement not upgraded as not directly required: pickleshare in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (0.7.4)
+Requirement not upgraded as not directly required: win-unicode-console>=0.5; sys_platform == "win32" and python_version < "3.6" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (0.5)
+Requirement not upgraded as not directly required: pygments in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (2.2.0)
+Requirement not upgraded as not directly required: pathlib2; python_version == "2.7" or python_version == "3.3" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (2.3.2)
+Requirement not upgraded as not directly required: backports.shutil-get-terminal-size; python_version == "2.7" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (1.0.0)
+Requirement not upgraded as not directly required: colorama; sys_platform == "win32" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (0.3.9)
+Requirement not upgraded as not directly required: simplegeneric>0.8 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (0.8.1)
+Requirement not upgraded as not directly required: ipython_genutils in c:\programdata\anaconda3\envs\python27\lib\site-packages (from traitlets>=4.1.0->ipykernel) (0.2.0)
+Requirement not upgraded as not directly required: six in c:\programdata\anaconda3\envs\python27\lib\site-packages (from traitlets>=4.1.0->ipykernel) (1.11.0)
+Requirement not upgraded as not directly required: enum34 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from traitlets>=4.1.0->ipykernel) (1.1.6)
+Requirement not upgraded as not directly required: jupyter_core in c:\programdata\anaconda3\envs\python27\lib\site-packages (from jupyter_client->ipykernel) (4.4.0)
+Requirement not upgraded as not directly required: pyzmq>=13 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from jupyter_client->ipykernel) (17.0.0)
+Requirement not upgraded as not directly required: python-dateutil>=2.1 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from jupyter_client->ipykernel) (2.7.3)
+Requirement not upgraded as not directly required: futures in c:\programdata\anaconda3\envs\python27\lib\site-packages (from tornado>=4.0->ipykernel) (3.2.0)
+Requirement not upgraded as not directly required: singledispatch in c:\programdata\anaconda3\envs\python27\lib\site-packages (from tornado>=4.0->ipykernel) (3.4.0.3)
+Requirement not upgraded as not directly required: backports_abc>=0.4 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from tornado>=4.0->ipykernel) (0.5)
+Requirement not upgraded as not directly required: wcwidth in c:\programdata\anaconda3\envs\python27\lib\site-packages (from prompt-toolkit<2.0.0,>=1.0.4->ipython>=4.0.0->ipykernel) (0.1.7)
+Requirement not upgraded as not directly required: scandir in c:\programdata\anaconda3\envs\python27\lib\site-packages (from pathlib2; python_version == "2.7" or python_version == "3.3"->ipython>=4.0.0->ipykernel) (1.7)
+distributed 1.21.8 requires msgpack, which is not installed.
+grin 1.2.1 requires argparse>=1.1, which is not installed.
+
+(Python27) C:\Windows\system32>pip install --upgrade msgpack
+Collecting msgpack
+  Downloading https://files.pythonhosted.org/packages/9d/ac/6025755ec6a11a102ae1db92b064ecba0dfc792bcff5e97acc2939540bcf/msgpack-0.5.6-cp27-cp27m-win_amd64.whl (84kB)
+    100% |################################| 92kB 761kB/s
+grin 1.2.1 requires argparse>=1.1, which is not installed.
+Installing collected packages: msgpack
+Successfully installed msgpack-0.5.6
+
+(Python27) C:\Windows\system32>pip install --upgrade argparse
+Collecting argparse
+  Downloading https://files.pythonhosted.org/packages/f2/94/3af39d34be01a24a6e65433d19e107099374224905f1e0cc6bbe1fd22a2f/argparse-1.4.0-py2.py3-none-any.whl
+Installing collected packages: argparse
+Successfully installed argparse-1.4.0
+
+(Python27) C:\Windows\system32>pip install --upgrade distributed
+Collecting distributed
+  Downloading https://files.pythonhosted.org/packages/f0/5f/6a7f8e5810136c74a394fd099fd021f41b1e598c9415db4ff72e2e481a24/distributed-1.22.0-py2.py3-none-any.whl (471kB)
+    100% |################################| 481kB 1.9MB/s
+Requirement not upgraded as not directly required: msgpack in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (0.5.6)
+Requirement not upgraded as not directly required: pyyaml in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (3.12)
+Requirement not upgraded as not directly required: zict>=0.1.3 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (0.1.3)
+Requirement not upgraded as not directly required: singledispatch; python_version < "3.4" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (3.4.0.3)
+Collecting dask>=0.18.0 (from distributed)
+  Downloading https://files.pythonhosted.org/packages/d4/77/a22c04d952cdf2613d258d00a3d7560752cd4c8a16eee1d2c84ab45a220d/dask-0.18.1-py2.py3-none-any.whl (631kB)
+    100% |################################| 634kB 1.5MB/s
+Requirement not upgraded as not directly required: futures; python_version < "3.0" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (3.2.0)
+Requirement not upgraded as not directly required: psutil in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (5.4.5)
+Requirement not upgraded as not directly required: sortedcontainers!=2.0.0,!=2.0.1 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (1.5.10)
+Requirement not upgraded as not directly required: cloudpickle>=0.2.2 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (0.5.3)
+Requirement not upgraded as not directly required: toolz>=0.7.4 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (0.9.0)
+Requirement not upgraded as not directly required: click>=6.6 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (6.7)
+Requirement not upgraded as not directly required: six in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (1.11.0)
+Requirement not upgraded as not directly required: tornado>=4.5.1 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (5.0.2)
+Requirement not upgraded as not directly required: tblib in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (1.3.2)
+Requirement not upgraded as not directly required: heapdict in c:\programdata\anaconda3\envs\python27\lib\site-packages (from zict>=0.1.3->distributed) (1.0.0)
+Requirement not upgraded as not directly required: backports_abc>=0.4 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from tornado>=4.5.1->distributed) (0.5)
+Installing collected packages: dask, distributed
+  Found existing installation: dask 0.17.5
+    Uninstalling dask-0.17.5:
+      Successfully uninstalled dask-0.17.5
+  Found existing installation: distributed 1.21.8
+    Uninstalling distributed-1.21.8:
+      Successfully uninstalled distributed-1.21.8
+Successfully installed dask-0.18.1 distributed-1.22.0
+
+(Python27) C:\Windows\system32>pip install --upgrade grin
+Requirement already up-to-date: grin in c:\programdata\anaconda3\envs\python27\lib\site-packages (1.2.1)
+Requirement not upgraded as not directly required: argparse>=1.1 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from grin) (1.4.0)
+
+(Python27) C:\Windows\system32>python -m pip install --upgrade ipykernel
+Requirement already up-to-date: ipykernel in c:\programdata\anaconda3\envs\python27\lib\site-packages (4.8.2)
+Requirement not upgraded as not directly required: ipython>=4.0.0 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipykernel) (5.7.0)
+Requirement not upgraded as not directly required: traitlets>=4.1.0 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipykernel) (4.3.2)
+Requirement not upgraded as not directly required: jupyter_client in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipykernel) (5.2.3)
+Requirement not upgraded as not directly required: tornado>=4.0 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipykernel) (5.0.2)
+Requirement not upgraded as not directly required: prompt-toolkit<2.0.0,>=1.0.4 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (1.0.15)
+Requirement not upgraded as not directly required: setuptools>=18.5 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (39.1.0)
+Requirement not upgraded as not directly required: decorator in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (4.3.0)
+Requirement not upgraded as not directly required: pickleshare in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (0.7.4)
+Requirement not upgraded as not directly required: win-unicode-console>=0.5; sys_platform == "win32" and python_version < "3.6" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (0.5)
+Requirement not upgraded as not directly required: pygments in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (2.2.0)
+Requirement not upgraded as not directly required: pathlib2; python_version == "2.7" or python_version == "3.3" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (2.3.2)
+Requirement not upgraded as not directly required: backports.shutil-get-terminal-size; python_version == "2.7" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (1.0.0)
+Requirement not upgraded as not directly required: colorama; sys_platform == "win32" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (0.3.9)
+Requirement not upgraded as not directly required: simplegeneric>0.8 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (0.8.1)
+Requirement not upgraded as not directly required: ipython_genutils in c:\programdata\anaconda3\envs\python27\lib\site-packages (from traitlets>=4.1.0->ipykernel) (0.2.0)
+Requirement not upgraded as not directly required: six in c:\programdata\anaconda3\envs\python27\lib\site-packages (from traitlets>=4.1.0->ipykernel) (1.11.0)
+Requirement not upgraded as not directly required: enum34 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from traitlets>=4.1.0->ipykernel) (1.1.6)
+Requirement not upgraded as not directly required: jupyter_core in c:\programdata\anaconda3\envs\python27\lib\site-packages (from jupyter_client->ipykernel) (4.4.0)
+Requirement not upgraded as not directly required: pyzmq>=13 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from jupyter_client->ipykernel) (17.0.0)
+Requirement not upgraded as not directly required: python-dateutil>=2.1 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from jupyter_client->ipykernel) (2.7.3)
+Requirement not upgraded as not directly required: futures in c:\programdata\anaconda3\envs\python27\lib\site-packages (from tornado>=4.0->ipykernel) (3.2.0)
+Requirement not upgraded as not directly required: singledispatch in c:\programdata\anaconda3\envs\python27\lib\site-packages (from tornado>=4.0->ipykernel) (3.4.0.3)
+Requirement not upgraded as not directly required: backports_abc>=0.4 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from tornado>=4.0->ipykernel) (0.5)
+Requirement not upgraded as not directly required: wcwidth in c:\programdata\anaconda3\envs\python27\lib\site-packages (from prompt-toolkit<2.0.0,>=1.0.4->ipython>=4.0.0->ipykernel) (0.1.7)
+Requirement not upgraded as not directly required: scandir in c:\programdata\anaconda3\envs\python27\lib\site-packages (from pathlib2; python_version == "2.7" or python_version == "3.3"->ipython>=4.0.0->ipykernel) (1.7)
+
+(Python27) C:\Windows\system32>python -m ipykernel install
+Installed kernelspec python2 in C:\ProgramData\jupyter\kernels\python2
+
+(Python27) C:\Windows\system32>npm install
+'npm' is not recognized as an internal or external command,
+operable program or batch file.
+
+(Python27) C:\Windows\system32>cd C:\Users\577342\Documents\Repositories\nupic-history-server
+
+(Python27) C:\Users\577342\Documents\Repositories\nupic-history-server>ls -al
+total 114
+drwxr-xr-x 1 577342 1049089     0 Jul  3 08:26 .
+drwxr-xr-x 1 577342 1049089     0 Jul  5 17:43 ..
+drwxr-xr-x 1 577342 1049089     0 Jul 10 12:48 .git
+-rw-r--r-- 1 577342 1049089  1205 Jul  3 08:26 .gitignore
+-rw-r--r-- 1 577342 1049089 10145 Jul  3 08:26 .pylintrc
+-rw-r--r-- 1 577342 1049089 35181 Jul  3 08:26 LICENSE
+-rw-r--r-- 1 577342 1049089  4479 Jul  3 08:26 README.md
+-rw-r--r-- 1 577342 1049089     7 Jul  3 08:26 VERSION
+drwxr-xr-x 1 577342 1049089     0 Jul  3 08:26 nupic_history
+-rw-r--r-- 1 577342 1049089   118 Jul  3 08:26 requirements.txt
+-rw-r--r-- 1 577342 1049089 11451 Jul  3 08:26 webserver.py
+drwxr-xr-x 1 577342 1049089     0 Jul  3 08:26 working
+
+(Python27) C:\Users\577342\Documents\Repositories\nupic-history-server>pip install -r requirements.txt
+Collecting nupic>=1.0.0 (from -r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/44/fa/4b1a4f0c3a89b661241f668010dbc3133b700aa680cc575a6ffa4a3dba22/nupic-1.0.5-py2-none-any.whl (4.8MB)
+    100% |################################| 4.8MB 290kB/s
+Collecting nupic.bindings>=1.0.0 (from -r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/f9/35/3e7e6493d7147dbb20a8d454a10aa02a6c81a10edb55d7670700d207cea4/nupic.bindings-1.0.6-cp27-none-win_amd64.whl (4.8MB)
+    100% |################################| 4.8MB 1.0MB/s
+Collecting redis==2.10.5 (from -r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/08/c1/457428f7507e27ba7144758a7b716ea35766e6d602f4a0c16e443ab3d381/redis-2.10.5-py2.py3-none-any.whl (60kB)
+    100% |################################| 61kB 1.2MB/s
+Collecting web.py==0.38 (from -r requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/8b/95/66412912c8093e9167a58248fd646f95ff3d41f2e5be5300c27b0cb5de52/web.py-0.38.tar.gz (91kB)
+    100% |################################| 92kB 1.6MB/s
+Requirement already satisfied: wsgiref==0.1.2 in c:\programdata\anaconda3\envs\python27\lib (from -r requirements.txt (line 5)) (0.1.2)
+Collecting msgpack-python==0.4.1 (from -r requirements.txt (line 6))
+  Downloading https://files.pythonhosted.org/packages/41/5c/4f1393bef6650b14a4d48981caf9596aed673f45e73d56b0b9011d31797a/msgpack-python-0.4.1.tar.gz (111kB)
+    100% |################################| 112kB 2.5MB/s
+Collecting ujson==1.35 (from -r requirements.txt (line 7))
+  Downloading https://files.pythonhosted.org/packages/16/c4/79f3409bc710559015464e5f49b9879430d8f87498ecdc335899732e5377/ujson-1.35.tar.gz (192kB)
+    100% |################################| 194kB 2.0MB/s
+Collecting mock==1.0.1 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/a2/52/7edcd94f0afb721a2d559a5b9aae8af4f8f2c79bc63fdbe8a8a6c9b23bbe/mock-1.0.1.tar.gz (818kB)
+    100% |################################| 819kB 898kB/s
+Collecting pytest-cov==2.5.0 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/35/02/fb4e0f9b0423f26214eea9fd07f9fa0758ecf2bea0b8d8e61667a91e6298/pytest_cov-2.5.0-py2.py3-none-any.whl
+Collecting PyMySQL==0.6.2 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/04/65/c84eee72dcbf19d8050cf65157a15f68e0989620a00bf0b2a55a1a20b4cd/PyMySQL-0.6.2-py2.py3-none-any.whl (63kB)
+    100% |################################| 71kB 1.4MB/s
+Collecting pyproj==1.9.3 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/f9/7f/ee337f570e4c3ef4593709dcb63e813c359184ede249c4f79b761186bd08/pyproj-1.9.3.tar.gz (2.7MB)
+    100% |################################| 2.7MB 1.4MB/s
+    Complete output from command python setup.py egg_info:
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "c:\users\577342\appdata\local\temp\pip-install-m9wwx1\pyproj\setup.py", line 14, in <module>
+        objects = cc.compile(['nad2bin.c', 'src/pj_malloc.c'])
+      File "C:\ProgramData\Anaconda3\envs\Python27\lib\distutils\msvc9compiler.py", line 473, in compile
+        self.initialize()
+      File "C:\ProgramData\Anaconda3\envs\Python27\lib\distutils\msvc9compiler.py", line 383, in initialize
+        vc_env = query_vcvarsall(VERSION, plat_spec)
+      File "C:\ProgramData\Anaconda3\envs\Python27\lib\site-packages\setuptools\msvc.py", line 147, in msvc9_query_vcvarsall
+        return EnvironmentInfo(arch, ver).return_env()
+      File "C:\ProgramData\Anaconda3\envs\Python27\lib\site-packages\setuptools\msvc.py", line 1228, in return_env
+        [self.VCIncludes,
+      File "C:\ProgramData\Anaconda3\envs\Python27\lib\site-packages\setuptools\msvc.py", line 877, in VCIncludes
+        return [os.path.join(self.si.VCInstallDir, 'Include'),
+      File "C:\ProgramData\Anaconda3\envs\Python27\lib\site-packages\setuptools\msvc.py", line 556, in VCInstallDir
+        raise distutils.errors.DistutilsPlatformError(msg)
+    distutils.errors.DistutilsPlatformError: Microsoft Visual C++ 9.0 is required. Get it from http://aka.ms/vcpython27
+
+    ----------------------------------------
+Command "python setup.py egg_info" failed with error code 1 in c:\users\577342\appdata\local\temp\pip-install-m9wwx1\pyproj\
+
+(Python27) C:\Users\577342\Documents\Repositories\nupic-history-server>
+
+Windows PowerShell
+Copyright (C) 2016 Microsoft Corporation. All rights reserved.
+
+PS C:\Windows\system32> %windir%\System32\cmd.exe "/K" C:\ProgramData\Anaconda3\Scripts\activate.bat C:\ProgramData\Anaconda3\envs
+%windir%\System32\cmd.exe : The module '%windir%' could not be loaded. For more information, run 'Import-Module
+%windir%'.
+At line:1 char:1
++ %windir%\System32\cmd.exe "/K" C:\ProgramData\Anaconda3\Scripts\activ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (%windir%\System32\cmd.exe:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CouldNotAutoLoadModule
+
+PS C:\Windows\system32> cmd "/K" C:\ProgramData\Anaconda3\Scripts\activate.bat C:\ProgramData\Anaconda3\envs
+Not a conda environment: C:\ProgramData\Anaconda3\envs
+
+C:\Windows\system32>cmd "/K" C:\ProgramData\Anaconda3\Scripts\activate.bat C:\ProgramData\Anaconda3
+
+(base) C:\Windows\system32>conda env --list
+usage: conda-env [-h] {attach,create,export,list,remove,upload,update} ...
+conda-env: error: unrecognized arguments: --list
+
+(base) C:\Windows\system32>conda env list
+# conda environments:
+#
+base                  *  C:\ProgramData\Anaconda3
+
+
+(base) C:\Windows\system32>conda update conda
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: C:\ProgramData\Anaconda3
+
+  added / updated specs:
+    - conda
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    conda-4.5.5                |           py36_0         1.0 MB
+    openssl-1.0.2o             |       h8ea7d77_0         5.4 MB
+    certifi-2018.4.16          |           py36_0         143 KB
+    ------------------------------------------------------------
+                                           Total:         6.5 MB
+
+The following packages will be UPDATED:
+
+    ca-certificates: 2017.08.26-h94faf87_0 --> 2018.03.07-0
+    certifi:         2018.1.18-py36_0      --> 2018.4.16-py36_0
+    conda:           4.5.0-py36_0          --> 4.5.5-py36_0
+    openssl:         1.0.2n-h74b6da3_0     --> 1.0.2o-h8ea7d77_0
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+conda 4.5.5: ################################################################################################ | 100%
+openssl 1.0.2o: ############################################################################################# | 100%
+certifi 2018.4.16: ########################################################################################## | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+
+(base) C:\Windows\system32>conda create -n Python27 python=2.7.15 anaconda
+
+CondaValueError: prefix already exists: C:\ProgramData\Anaconda3\envs\Python27
+
+
+(base) C:\Windows\system32>conda remove --name Python27 --all
+
+EnvironmentLocationNotFound: Not a conda environment: C:\ProgramData\Anaconda3\envs\Python27
+
+
+(base) C:\Windows\system32>conda create -n Python27 python=2.7.15 anaconda
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: C:\ProgramData\Anaconda3\envs\Python27
+
+  added / updated specs:
+    - anaconda
+    - python=2.7.15
+
+
+The following NEW packages will be INSTALLED:
+
+    alabaster:                          0.7.10-py27h2cab13d_0
+    anaconda:                           5.2.0-py27_3
+    anaconda-client:                    1.6.14-py27_0
+    anaconda-project:                   0.8.2-py27he89e3ca_0
+    asn1crypto:                         0.24.0-py27_0
+    astroid:                            1.6.3-py27_0
+    astropy:                            2.0.6-py27hc997a72_1
+    attrs:                              18.1.0-py27_0
+    babel:                              2.5.3-py27_0
+    backports:                          1.0-py27h6492d98_1
+    backports.functools_lru_cache:      1.5-py27_1
+    backports.shutil_get_terminal_size: 1.0.0-py27h1657125_2
+    backports.shutil_which:             3.5.1-py27_2
+    backports_abc:                      0.5-py27h0ec6b72_0
+    beautifulsoup4:                     4.6.0-py27hc287451_1
+    bitarray:                           0.8.1-py27h0c8e037_1
+    bkcharts:                           0.2-py27h92b6de3_0
+    blas:                               1.0-mkl
+    blaze:                              0.11.3-py27h97e5449_0
+    bleach:                             2.1.3-py27_0
+    blosc:                              1.14.3-h95ae18b_0
+    bokeh:                              0.12.16-py27_0
+    boto:                               2.48.0-py27h1ccb131_1
+    bottleneck:                         1.2.1-py27hde90680_0
+    bzip2:                              1.0.6-h0c8e037_5
+    ca-certificates:                    2018.03.07-0
+    cdecimal:                           2.3-py27h0c8e037_3
+    certifi:                            2018.4.16-py27_0
+    cffi:                               1.11.5-py27hdb016f4_0
+    chardet:                            3.0.4-py27h56c3b73_1
+    click:                              6.7-py27hb6defca_0
+    cloudpickle:                        0.5.3-py27_0
+    clyent:                             1.2.2-py27h4424948_1
+    colorama:                           0.3.9-py27hdfe4ae1_0
+    comtypes:                           1.1.4-py27_0
+    configparser:                       3.5.0-py27h2fa79a8_0
+    console_shortcut:                   0.1.1-h6bb2dd7_3
+    contextlib2:                        0.5.5-py27h42efda5_0
+    cryptography:                       2.2.2-py27h0c8e037_0
+    curl:                               7.60.0-h7a46e7a_0
+    cycler:                             0.10.0-py27h59acbbf_0
+    cython:                             0.28.2-py27h0c8e037_0
+    cytoolz:                            0.9.0.1-py27h0c8e037_0
+    dask:                               0.17.5-py27_0
+    dask-core:                          0.17.5-py27_0
+    datashape:                          0.5.4-py27h3d6e61b_0
+    decorator:                          4.3.0-py27_0
+    distributed:                        1.21.8-py27_0
+    docutils:                           0.14-py27h8652d09_0
+    entrypoints:                        0.2.3-py27h0271f2b_2
+    enum34:                             1.1.6-py27h2aa175b_1
+    et_xmlfile:                         1.0.1-py27h1de5d23_0
+    fastcache:                          1.0.2-py27h0c8e037_2
+    filelock:                           3.0.4-py27_0
+    flask:                              1.0.2-py27_1
+    flask-cors:                         3.0.4-py27_0
+    freetype:                           2.8-hea645e0_1
+    funcsigs:                           1.0.2-py27h8885ae1_0
+    functools32:                        3.2.3.2-py27h0cdbcdb_1
+    futures:                            3.2.0-py27h8b2aecd_0
+    get_terminal_size:                  1.0.0-h38e98db_0
+    gevent:                             1.3.0-py27h0c8e037_0
+    glob2:                              0.6-py27hd4eee8c_0
+    greenlet:                           0.4.13-py27h0c8e037_0
+    grin:                               1.2.1-py27_4
+    h5py:                               2.7.1-py27h5f1a774_2
+    hdf5:                               1.10.2-h4b43f98_1
+    heapdict:                           1.0.0-py27_2
+    html5lib:                           1.0.1-py27h5a33001_0
+    icc_rt:                             2017.0.4-h97af966_0
+    icu:                                58.2-h2aa20d9_1
+    idna:                               2.6-py27h1ea29d3_1
+    imageio:                            2.3.0-py27_0
+    imagesize:                          1.0.0-py27_0
+    intel-openmp:                       2018.0.0-8
+    ipaddress:                          1.0.22-py27_0
+    ipykernel:                          4.8.2-py27_0
+    ipython:                            5.7.0-py27_0
+    ipython_genutils:                   0.2.0-py27hbe997df_0
+    ipywidgets:                         7.2.1-py27_0
+    isort:                              4.3.4-py27_0
+    itsdangerous:                       0.24-py27hcf63135_1
+    jdcal:                              1.4-py27_0
+    jedi:                               0.12.0-py27_1
+    jinja2:                             2.10-py27hba1794b_0
+    jpeg:                               9b-ha175dff_2
+    jsonschema:                         2.6.0-py27haaf3834_0
+    jupyter:                            1.0.0-py27_4
+    jupyter_client:                     5.2.3-py27_0
+    jupyter_console:                    5.2.0-py27h6ed736b_1
+    jupyter_core:                       4.4.0-py27h1619e65_0
+    jupyterlab:                         0.32.1-py27_0
+    jupyterlab_launcher:                0.10.5-py27_0
+    kiwisolver:                         1.0.1-py27h9815e84_0
+    lazy-object-proxy:                  1.3.1-py27ha5c8080_0
+    libcurl:                            7.60.0-h0990ea7_0
+    libiconv:                           1.15-hda2e4ec_7
+    libpng:                             1.6.34-h325896a_0
+    libsodium:                          1.0.16-h8b3e59e_0
+    libssh2:                            1.8.0-h77a7533_4
+    libtiff:                            4.0.9-h1c3b264_1
+    libxml2:                            2.9.8-hdfd6920_1
+    libxslt:                            1.1.32-h89dfad8_0
+    llvmlite:                           0.23.1-py27hf224fbf_0
+    locket:                             0.2.0-py27h1ca288a_1
+    lxml:                               4.2.1-py27h803002f_0
+    lzo:                                2.10-h0bb7fe3_2
+    m2w64-gcc-libgfortran:              5.3.0-6
+    m2w64-gcc-libs:                     5.3.0-7
+    m2w64-gcc-libs-core:                5.3.0-7
+    m2w64-gmp:                          6.1.0-2
+    m2w64-libwinpthread-git:            5.0.0.4634.697f757-2
+    markupsafe:                         1.0-py27h9d4480d_1
+    matplotlib:                         2.2.2-py27h8803d4e_1
+    mccabe:                             0.6.1-py27hde0bf6e_1
+    menuinst:                           1.4.14-py27h0c8e037_0
+    mistune:                            0.8.3-py27h0c8e037_1
+    mkl:                                2018.0.2-1
+    mkl-service:                        1.1.2-py27h3c6b6b0_4
+    mkl_fft:                            1.0.1-py27hc997a72_0
+    more-itertools:                     4.1.0-py27_0
+    mpmath:                             1.0.0-py27h0d59bc2_2
+    msgpack-python:                     0.5.6-py27hdc96acc_0
+    msys2-conda-epoch:                  20160418-1
+    multipledispatch:                   0.5.0-py27_0
+    nbconvert:                          5.3.1-py27h7a573cf_0
+    nbformat:                           4.4.0-py27hf49b375_0
+    networkx:                           2.1-py27_0
+    nltk:                               3.3.0-py27_0
+    nose:                               1.3.7-py27h84c72c6_2
+    notebook:                           5.5.0-py27_0
+    numba:                              0.38.0-py27h39f3610_0
+    numexpr:                            2.6.5-py27h3b259a0_0
+    numpy:                              1.14.3-py27h911edcf_1
+    numpy-base:                         1.14.3-py27h917549b_1
+    numpydoc:                           0.8.0-py27_0
+    odo:                                0.5.1-py27h64810b2_0
+    olefile:                            0.45.1-py27_0
+    openpyxl:                           2.5.3-py27_0
+    openssl:                            1.0.2o-h2c51139_0
+    packaging:                          17.1-py27_0
+    pandas:                             0.23.0-py27h39f3610_0
+    pandoc:                             1.19.2.1-hb2460c7_1
+    pandocfilters:                      1.4.2-py27h76461d3_1
+    parso:                              0.2.0-py27_0
+    partd:                              0.3.8-py27h1e0692f_0
+    path.py:                            11.0.1-py27_0
+    pathlib2:                           2.3.2-py27_0
+    patsy:                              0.5.0-py27_0
+    pep8:                               1.7.1-py27_0
+    pickleshare:                        0.7.4-py27hb5f6335_0
+    pillow:                             5.1.0-py27h901f87c_0
+    pip:                                10.0.1-py27_0
+    pkginfo:                            1.4.2-py27_1
+    pluggy:                             0.6.0-py27h89dc50b_0
+    ply:                                3.11-py27_0
+    prompt_toolkit:                     1.0.15-py27h3a8ec6a_0
+    psutil:                             5.4.5-py27h0c8e037_0
+    py:                                 1.5.3-py27_0
+    pycodestyle:                        2.4.0-py27_0
+    pycosat:                            0.6.3-py27hcd410c5_0
+    pycparser:                          2.18-py27hb43d16c_1
+    pycrypto:                           2.6.1-py27h0c8e037_8
+    pycurl:                             7.43.0.1-py27hc64555f_0
+    pyflakes:                           1.6.0-py27h34e7826_0
+    pygments:                           2.2.0-py27ha50f84f_0
+    pylint:                             1.8.4-py27_0
+    pyodbc:                             4.0.23-py27hc56fc5f_0
+    pyopenssl:                          18.0.0-py27_0
+    pyparsing:                          2.2.0-py27hc7d9fa6_1
+    pyqt:                               5.6.0-py27h224ed30_5
+    pysocks:                            1.6.8-py27_0
+    pytables:                           3.4.3-py27hdd5b532_1
+    pytest:                             3.5.1-py27_0
+    python:                             2.7.15-he216670_0
+    python-dateutil:                    2.7.3-py27_0
+    pytz:                               2018.4-py27_0
+    pywavelets:                         0.5.2-py27h0dc3f48_0
+    pywin32:                            223-py27h0c8e037_1
+    pywinpty:                           0.5.1-py27_0
+    pyyaml:                             3.12-py27ha287073_1
+    pyzmq:                              17.0.0-py27h0c8e037_1
+    qt:                                 5.6.2-vc9hc26998b_12
+    qtawesome:                          0.4.4-py27h766b13d_0
+    qtconsole:                          4.3.1-py27h77d40ac_0
+    qtpy:                               1.4.1-py27_0
+    requests:                           2.18.4-py27h3159eba_1
+    rope:                               0.10.7-py27hb65afb6_0
+    ruamel_yaml:                        0.15.35-py27h0c8e037_1
+    scandir:                            1.7-py27h0c8e037_0
+    scikit-image:                       0.13.1-py27h0c8e037_1
+    scikit-learn:                       0.19.1-py27he00e316_0
+    scipy:                              1.1.0-py27ha6b90e7_0
+    seaborn:                            0.8.1-py27hab56d54_0
+    send2trash:                         1.5.0-py27_0
+    setuptools:                         39.1.0-py27_0
+    simplegeneric:                      0.8.1-py27_2
+    singledispatch:                     3.4.0.3-py27h3f9d112_0
+    sip:                                4.18.1-py27h5ec1c1a_2
+    six:                                1.11.0-py27ha5e1701_1
+    snappy:                             1.1.7-he46498f_3
+    snowballstemmer:                    1.2.1-py27h28d3bf7_0
+    sortedcollections:                  0.6.1-py27_0
+    sortedcontainers:                   1.5.10-py27_0
+    sphinx:                             1.7.4-py27_0
+    sphinxcontrib:                      1.0-py27h0e2fb95_1
+    sphinxcontrib-websupport:           1.0.1-py27h0d0f901_1
+    spyder:                             3.2.8-py27_0
+    sqlalchemy:                         1.2.7-py27h9dc6b9e_0
+    sqlite:                             3.23.1-h0f31022_0
+    ssl_match_hostname:                 3.5.0.1-py27hea8a0f4_2
+    statsmodels:                        0.9.0-py27hc997a72_0
+    subprocess32:                       3.5.0-py27h0c8e037_0
+    sympy:                              1.1.1-py27hde44fae_0
+    tblib:                              1.3.2-py27h8ae915c_0
+    terminado:                          0.8.1-py27_1
+    testpath:                           0.3.1-py27h1cd488d_0
+    tk:                                 8.6.7-h144d9c4_3
+    toolz:                              0.9.0-py27_0
+    tornado:                            5.0.2-py27_0
+    traitlets:                          4.3.2-py27h1b1b3a5_0
+    typing:                             3.6.4-py27_0
+    unicodecsv:                         0.14.1-py27h0bf7bb0_0
+    urllib3:                            1.22-py27hb9f5a07_0
+    vc:                                 9-h7299396_1
+    vs2008_runtime:                     9.00.30729.1-hfaea7d5_1
+    vs2015_runtime:                     14.0.25123-3
+    wcwidth:                            0.1.7-py27hb1a0d82_0
+    webencodings:                       0.5.1-py27h4e224a2_1
+    werkzeug:                           0.14.1-py27_0
+    wheel:                              0.31.1-py27_0
+    widgetsnbextension:                 3.2.1-py27_0
+    win_inet_pton:                      1.0.1-py27hf41312a_1
+    win_unicode_console:                0.5-py27hc037021_0
+    wincertstore:                       0.2-py27hf04cefb_0
+    winpty:                             0.4.3-4
+    wrapt:                              1.10.11-py27hcd2b27d_0
+    xlrd:                               1.1.0-py27h2b87a7f_1
+    xlsxwriter:                         1.0.4-py27_0
+    xlwings:                            0.11.8-py27_0
+    xlwt:                               1.3.0-py27h2271735_0
+    yaml:                               0.1.7-h3e6d941_2
+    zeromq:                             4.2.5-h907ab29_0
+    zict:                               0.1.3-py27h0171463_0
+    zlib:                               1.2.11-hbc2faf4_2
+
+Proceed ([y]/n)? y
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: | DEBUG menuinst_win32:__init__(185): Menu: name: 'Anaconda${PY_VER} ${PLATFORM}', prefix: 'C:\ProgramData\Anaconda3\envs\Python27', env_name: 'Python27', mode: 'None', used_mode: 'system'
+DEBUG menuinst_win32:create(299): Shortcut cmd is %windir%\System32\cmd.exe, args are ['"/K"', 'C:\\ProgramData\\Anaconda3\\Scripts\\activate.bat', 'C:\\ProgramData\\Anaconda3\\envs\\Python27']                               \ DEBUG menuinst_win32:__init__(185): Menu: name: 'Anaconda${PY_VER} ${PLATFORM}', prefix: 'C:\ProgramData\Anaconda3\envs\Python27', env_name: 'Python27', mode: 'None', used_mode: 'system'
+DEBUG menuinst_win32:create(299): Shortcut cmd is C:\ProgramData\Anaconda3\python.exe, args are ['C:\\ProgramData\\Anaconda3\\cwp.py', 'C:\\ProgramData\\Anaconda3\\envs\\Python27', 'C:\\ProgramData\\Anaconda3\\envs\\Python27\\python.exe', 'C:\\ProgramData\\Anaconda3\\envs\\Python27\\Scripts\\jupyter-notebook-script.py', '%USERPROFILE%'\ DEBUG menuinst_win32:__init__(185): Menu: name: 'Anaconda${PY_VER} ${PLATFORM}', prefix: 'C:\ProgramData\Anaconda3\envs\Python27', env_name: 'Python27', mode: 'None', used_mode: 'system'
+DEBUG menuinst_win32:create(299): Shortcut cmd is C:\ProgramData\Anaconda3\pythonw.exe, args are ['C:\\ProgramData\\Anaconda3\\cwp.py', 'C:\\ProgramData\\Anaconda3\\envs\\Python27', 'C:\\ProgramData\\Anaconda3\\envs\\Python27\\pythonw.exe', 'C:\\ProgramData\\Anaconda3\\envs\\Python27\\Scripts\\spyder-script.py']                        DEBUG menuinst_win32:create(299): Shortcut cmd is C:\ProgramData\Anaconda3\python.exe, args are ['C:\\ProgramData\\Anaconda3\\cwp.py', 'C:\\ProgramData\\Anaconda3\\envs\\Python27', 'C:\\ProgramData\\Anaconda3\\envs\\Python27\\python.exe', 'C:\\ProgramData\\Anaconda3\\envs\\Python27\\Scripts\\spyder-script.py', '--reset']|                done
+#
+# To activate this environment, use
+#
+#     $ conda activate Python27
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+
+(base) C:\Windows\system32>conda activate Python27
+
+(Python27) C:\Windows\system32>python --version
+Python 2.7.15 :: Anaconda, Inc.
+
+(Python27) C:\Windows\system32>deactivate
+
+(base) C:\Windows\system32>activate Python27
+
+(Python27) C:\Windows\system32>deactivate
+
+(base) C:\Windows\system32>python2
+'python2' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Windows\system32>activate Python27
+
+(Python27) C:\Windows\system32>python2
+'python2' is not recognized as an internal or external command,
+operable program or batch file.
+
+(Python27) C:\Windows\system32>python -m pip install --upgrade ipykernel
+Requirement already up-to-date: ipykernel in c:\programdata\anaconda3\envs\python27\lib\site-packages (4.8.2)
+Requirement not upgraded as not directly required: ipython>=4.0.0 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipykernel) (5.7.0)
+Requirement not upgraded as not directly required: traitlets>=4.1.0 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipykernel) (4.3.2)
+Requirement not upgraded as not directly required: jupyter_client in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipykernel) (5.2.3)
+Requirement not upgraded as not directly required: tornado>=4.0 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipykernel) (5.0.2)
+Requirement not upgraded as not directly required: prompt-toolkit<2.0.0,>=1.0.4 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (1.0.15)
+Requirement not upgraded as not directly required: setuptools>=18.5 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (39.1.0)
+Requirement not upgraded as not directly required: decorator in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (4.3.0)
+Requirement not upgraded as not directly required: pickleshare in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (0.7.4)
+Requirement not upgraded as not directly required: win-unicode-console>=0.5; sys_platform == "win32" and python_version < "3.6" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (0.5)
+Requirement not upgraded as not directly required: pygments in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (2.2.0)
+Requirement not upgraded as not directly required: pathlib2; python_version == "2.7" or python_version == "3.3" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (2.3.2)
+Requirement not upgraded as not directly required: backports.shutil-get-terminal-size; python_version == "2.7" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (1.0.0)
+Requirement not upgraded as not directly required: colorama; sys_platform == "win32" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (0.3.9)
+Requirement not upgraded as not directly required: simplegeneric>0.8 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (0.8.1)
+Requirement not upgraded as not directly required: ipython_genutils in c:\programdata\anaconda3\envs\python27\lib\site-packages (from traitlets>=4.1.0->ipykernel) (0.2.0)
+Requirement not upgraded as not directly required: six in c:\programdata\anaconda3\envs\python27\lib\site-packages (from traitlets>=4.1.0->ipykernel) (1.11.0)
+Requirement not upgraded as not directly required: enum34 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from traitlets>=4.1.0->ipykernel) (1.1.6)
+Requirement not upgraded as not directly required: jupyter_core in c:\programdata\anaconda3\envs\python27\lib\site-packages (from jupyter_client->ipykernel) (4.4.0)
+Requirement not upgraded as not directly required: pyzmq>=13 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from jupyter_client->ipykernel) (17.0.0)
+Requirement not upgraded as not directly required: python-dateutil>=2.1 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from jupyter_client->ipykernel) (2.7.3)
+Requirement not upgraded as not directly required: futures in c:\programdata\anaconda3\envs\python27\lib\site-packages (from tornado>=4.0->ipykernel) (3.2.0)
+Requirement not upgraded as not directly required: singledispatch in c:\programdata\anaconda3\envs\python27\lib\site-packages (from tornado>=4.0->ipykernel) (3.4.0.3)
+Requirement not upgraded as not directly required: backports_abc>=0.4 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from tornado>=4.0->ipykernel) (0.5)
+Requirement not upgraded as not directly required: wcwidth in c:\programdata\anaconda3\envs\python27\lib\site-packages (from prompt-toolkit<2.0.0,>=1.0.4->ipython>=4.0.0->ipykernel) (0.1.7)
+Requirement not upgraded as not directly required: scandir in c:\programdata\anaconda3\envs\python27\lib\site-packages (from pathlib2; python_version == "2.7" or python_version == "3.3"->ipython>=4.0.0->ipykernel) (1.7)
+distributed 1.21.8 requires msgpack, which is not installed.
+grin 1.2.1 requires argparse>=1.1, which is not installed.
+
+(Python27) C:\Windows\system32>pip install --upgrade msgpack
+Collecting msgpack
+  Downloading https://files.pythonhosted.org/packages/9d/ac/6025755ec6a11a102ae1db92b064ecba0dfc792bcff5e97acc2939540bcf/msgpack-0.5.6-cp27-cp27m-win_amd64.whl (84kB)
+    100% |################################| 92kB 761kB/s
+grin 1.2.1 requires argparse>=1.1, which is not installed.
+Installing collected packages: msgpack
+Successfully installed msgpack-0.5.6
+
+(Python27) C:\Windows\system32>pip install --upgrade argparse
+Collecting argparse
+  Downloading https://files.pythonhosted.org/packages/f2/94/3af39d34be01a24a6e65433d19e107099374224905f1e0cc6bbe1fd22a2f/argparse-1.4.0-py2.py3-none-any.whl
+Installing collected packages: argparse
+Successfully installed argparse-1.4.0
+
+(Python27) C:\Windows\system32>pip install --upgrade distributed
+Collecting distributed
+  Downloading https://files.pythonhosted.org/packages/f0/5f/6a7f8e5810136c74a394fd099fd021f41b1e598c9415db4ff72e2e481a24/distributed-1.22.0-py2.py3-none-any.whl (471kB)
+    100% |################################| 481kB 1.9MB/s
+Requirement not upgraded as not directly required: msgpack in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (0.5.6)
+Requirement not upgraded as not directly required: pyyaml in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (3.12)
+Requirement not upgraded as not directly required: zict>=0.1.3 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (0.1.3)
+Requirement not upgraded as not directly required: singledispatch; python_version < "3.4" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (3.4.0.3)
+Collecting dask>=0.18.0 (from distributed)
+  Downloading https://files.pythonhosted.org/packages/d4/77/a22c04d952cdf2613d258d00a3d7560752cd4c8a16eee1d2c84ab45a220d/dask-0.18.1-py2.py3-none-any.whl (631kB)
+    100% |################################| 634kB 1.5MB/s
+Requirement not upgraded as not directly required: futures; python_version < "3.0" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (3.2.0)
+Requirement not upgraded as not directly required: psutil in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (5.4.5)
+Requirement not upgraded as not directly required: sortedcontainers!=2.0.0,!=2.0.1 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (1.5.10)
+Requirement not upgraded as not directly required: cloudpickle>=0.2.2 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (0.5.3)
+Requirement not upgraded as not directly required: toolz>=0.7.4 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (0.9.0)
+Requirement not upgraded as not directly required: click>=6.6 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (6.7)
+Requirement not upgraded as not directly required: six in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (1.11.0)
+Requirement not upgraded as not directly required: tornado>=4.5.1 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (5.0.2)
+Requirement not upgraded as not directly required: tblib in c:\programdata\anaconda3\envs\python27\lib\site-packages (from distributed) (1.3.2)
+Requirement not upgraded as not directly required: heapdict in c:\programdata\anaconda3\envs\python27\lib\site-packages (from zict>=0.1.3->distributed) (1.0.0)
+Requirement not upgraded as not directly required: backports_abc>=0.4 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from tornado>=4.5.1->distributed) (0.5)
+Installing collected packages: dask, distributed
+  Found existing installation: dask 0.17.5
+    Uninstalling dask-0.17.5:
+      Successfully uninstalled dask-0.17.5
+  Found existing installation: distributed 1.21.8
+    Uninstalling distributed-1.21.8:
+      Successfully uninstalled distributed-1.21.8
+Successfully installed dask-0.18.1 distributed-1.22.0
+
+(Python27) C:\Windows\system32>pip install --upgrade grin
+Requirement already up-to-date: grin in c:\programdata\anaconda3\envs\python27\lib\site-packages (1.2.1)
+Requirement not upgraded as not directly required: argparse>=1.1 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from grin) (1.4.0)
+
+(Python27) C:\Windows\system32>python -m pip install --upgrade ipykernel
+Requirement already up-to-date: ipykernel in c:\programdata\anaconda3\envs\python27\lib\site-packages (4.8.2)
+Requirement not upgraded as not directly required: ipython>=4.0.0 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipykernel) (5.7.0)
+Requirement not upgraded as not directly required: traitlets>=4.1.0 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipykernel) (4.3.2)
+Requirement not upgraded as not directly required: jupyter_client in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipykernel) (5.2.3)
+Requirement not upgraded as not directly required: tornado>=4.0 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipykernel) (5.0.2)
+Requirement not upgraded as not directly required: prompt-toolkit<2.0.0,>=1.0.4 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (1.0.15)
+Requirement not upgraded as not directly required: setuptools>=18.5 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (39.1.0)
+Requirement not upgraded as not directly required: decorator in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (4.3.0)
+Requirement not upgraded as not directly required: pickleshare in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (0.7.4)
+Requirement not upgraded as not directly required: win-unicode-console>=0.5; sys_platform == "win32" and python_version < "3.6" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (0.5)
+Requirement not upgraded as not directly required: pygments in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (2.2.0)
+Requirement not upgraded as not directly required: pathlib2; python_version == "2.7" or python_version == "3.3" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (2.3.2)
+Requirement not upgraded as not directly required: backports.shutil-get-terminal-size; python_version == "2.7" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (1.0.0)
+Requirement not upgraded as not directly required: colorama; sys_platform == "win32" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (0.3.9)
+Requirement not upgraded as not directly required: simplegeneric>0.8 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from ipython>=4.0.0->ipykernel) (0.8.1)
+Requirement not upgraded as not directly required: ipython_genutils in c:\programdata\anaconda3\envs\python27\lib\site-packages (from traitlets>=4.1.0->ipykernel) (0.2.0)
+Requirement not upgraded as not directly required: six in c:\programdata\anaconda3\envs\python27\lib\site-packages (from traitlets>=4.1.0->ipykernel) (1.11.0)
+Requirement not upgraded as not directly required: enum34 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from traitlets>=4.1.0->ipykernel) (1.1.6)
+Requirement not upgraded as not directly required: jupyter_core in c:\programdata\anaconda3\envs\python27\lib\site-packages (from jupyter_client->ipykernel) (4.4.0)
+Requirement not upgraded as not directly required: pyzmq>=13 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from jupyter_client->ipykernel) (17.0.0)
+Requirement not upgraded as not directly required: python-dateutil>=2.1 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from jupyter_client->ipykernel) (2.7.3)
+Requirement not upgraded as not directly required: futures in c:\programdata\anaconda3\envs\python27\lib\site-packages (from tornado>=4.0->ipykernel) (3.2.0)
+Requirement not upgraded as not directly required: singledispatch in c:\programdata\anaconda3\envs\python27\lib\site-packages (from tornado>=4.0->ipykernel) (3.4.0.3)
+Requirement not upgraded as not directly required: backports_abc>=0.4 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from tornado>=4.0->ipykernel) (0.5)
+Requirement not upgraded as not directly required: wcwidth in c:\programdata\anaconda3\envs\python27\lib\site-packages (from prompt-toolkit<2.0.0,>=1.0.4->ipython>=4.0.0->ipykernel) (0.1.7)
+Requirement not upgraded as not directly required: scandir in c:\programdata\anaconda3\envs\python27\lib\site-packages (from pathlib2; python_version == "2.7" or python_version == "3.3"->ipython>=4.0.0->ipykernel) (1.7)
+
+(Python27) C:\Windows\system32>python -m ipykernel install
+Installed kernelspec python2 in C:\ProgramData\jupyter\kernels\python2
+
+(Python27) C:\Windows\system32>npm install
+'npm' is not recognized as an internal or external command,
+operable program or batch file.
+
+(Python27) C:\Windows\system32>cd C:\Users\577342\Documents\Repositories\nupic-history-server
+
+(Python27) C:\Users\577342\Documents\Repositories\nupic-history-server>ls -al
+total 114
+drwxr-xr-x 1 577342 1049089     0 Jul  3 08:26 .
+drwxr-xr-x 1 577342 1049089     0 Jul  5 17:43 ..
+drwxr-xr-x 1 577342 1049089     0 Jul 10 12:48 .git
+-rw-r--r-- 1 577342 1049089  1205 Jul  3 08:26 .gitignore
+-rw-r--r-- 1 577342 1049089 10145 Jul  3 08:26 .pylintrc
+-rw-r--r-- 1 577342 1049089 35181 Jul  3 08:26 LICENSE
+-rw-r--r-- 1 577342 1049089  4479 Jul  3 08:26 README.md
+-rw-r--r-- 1 577342 1049089     7 Jul  3 08:26 VERSION
+drwxr-xr-x 1 577342 1049089     0 Jul  3 08:26 nupic_history
+-rw-r--r-- 1 577342 1049089   118 Jul  3 08:26 requirements.txt
+-rw-r--r-- 1 577342 1049089 11451 Jul  3 08:26 webserver.py
+drwxr-xr-x 1 577342 1049089     0 Jul  3 08:26 working
+
+(Python27) C:\Users\577342\Documents\Repositories\nupic-history-server>pip install -r requirements.txt
+Collecting nupic>=1.0.0 (from -r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/44/fa/4b1a4f0c3a89b661241f668010dbc3133b700aa680cc575a6ffa4a3dba22/nupic-1.0.5-py2-none-any.whl (4.8MB)
+    100% |################################| 4.8MB 290kB/s
+Collecting nupic.bindings>=1.0.0 (from -r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/f9/35/3e7e6493d7147dbb20a8d454a10aa02a6c81a10edb55d7670700d207cea4/nupic.bindings-1.0.6-cp27-none-win_amd64.whl (4.8MB)
+    100% |################################| 4.8MB 1.0MB/s
+Collecting redis==2.10.5 (from -r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/08/c1/457428f7507e27ba7144758a7b716ea35766e6d602f4a0c16e443ab3d381/redis-2.10.5-py2.py3-none-any.whl (60kB)
+    100% |################################| 61kB 1.2MB/s
+Collecting web.py==0.38 (from -r requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/8b/95/66412912c8093e9167a58248fd646f95ff3d41f2e5be5300c27b0cb5de52/web.py-0.38.tar.gz (91kB)
+    100% |################################| 92kB 1.6MB/s
+Requirement already satisfied: wsgiref==0.1.2 in c:\programdata\anaconda3\envs\python27\lib (from -r requirements.txt (line 5)) (0.1.2)
+Collecting msgpack-python==0.4.1 (from -r requirements.txt (line 6))
+  Downloading https://files.pythonhosted.org/packages/41/5c/4f1393bef6650b14a4d48981caf9596aed673f45e73d56b0b9011d31797a/msgpack-python-0.4.1.tar.gz (111kB)
+    100% |################################| 112kB 2.5MB/s
+Collecting ujson==1.35 (from -r requirements.txt (line 7))
+  Downloading https://files.pythonhosted.org/packages/16/c4/79f3409bc710559015464e5f49b9879430d8f87498ecdc335899732e5377/ujson-1.35.tar.gz (192kB)
+    100% |################################| 194kB 2.0MB/s
+Collecting mock==1.0.1 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/a2/52/7edcd94f0afb721a2d559a5b9aae8af4f8f2c79bc63fdbe8a8a6c9b23bbe/mock-1.0.1.tar.gz (818kB)
+    100% |################################| 819kB 898kB/s
+Collecting pytest-cov==2.5.0 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/35/02/fb4e0f9b0423f26214eea9fd07f9fa0758ecf2bea0b8d8e61667a91e6298/pytest_cov-2.5.0-py2.py3-none-any.whl
+Collecting PyMySQL==0.6.2 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/04/65/c84eee72dcbf19d8050cf65157a15f68e0989620a00bf0b2a55a1a20b4cd/PyMySQL-0.6.2-py2.py3-none-any.whl (63kB)
+    100% |################################| 71kB 1.4MB/s
+Collecting pyproj==1.9.3 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/f9/7f/ee337f570e4c3ef4593709dcb63e813c359184ede249c4f79b761186bd08/pyproj-1.9.3.tar.gz (2.7MB)
+    100% |################################| 2.7MB 1.4MB/s
+    Complete output from command python setup.py egg_info:
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "c:\users\577342\appdata\local\temp\pip-install-m9wwx1\pyproj\setup.py", line 14, in <module>
+        objects = cc.compile(['nad2bin.c', 'src/pj_malloc.c'])
+      File "C:\ProgramData\Anaconda3\envs\Python27\lib\distutils\msvc9compiler.py", line 473, in compile
+        self.initialize()
+      File "C:\ProgramData\Anaconda3\envs\Python27\lib\distutils\msvc9compiler.py", line 383, in initialize
+        vc_env = query_vcvarsall(VERSION, plat_spec)
+      File "C:\ProgramData\Anaconda3\envs\Python27\lib\site-packages\setuptools\msvc.py", line 147, in msvc9_query_vcvarsall
+        return EnvironmentInfo(arch, ver).return_env()
+      File "C:\ProgramData\Anaconda3\envs\Python27\lib\site-packages\setuptools\msvc.py", line 1228, in return_env
+        [self.VCIncludes,
+      File "C:\ProgramData\Anaconda3\envs\Python27\lib\site-packages\setuptools\msvc.py", line 877, in VCIncludes
+        return [os.path.join(self.si.VCInstallDir, 'Include'),
+      File "C:\ProgramData\Anaconda3\envs\Python27\lib\site-packages\setuptools\msvc.py", line 556, in VCInstallDir
+        raise distutils.errors.DistutilsPlatformError(msg)
+    distutils.errors.DistutilsPlatformError: Microsoft Visual C++ 9.0 is required. Get it from http://aka.ms/vcpython27
+
+    ----------------------------------------
+Command "python setup.py egg_info" failed with error code 1 in c:\users\577342\appdata\local\temp\pip-install-m9wwx1\pyproj\
+
+(Python27) C:\Users\577342\Documents\Repositories\nupic-history-server>pip install -r requirements.txt
+Collecting nupic>=1.0.0 (from -r requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/44/fa/4b1a4f0c3a89b661241f668010dbc3133b700aa680cc575a6ffa4a3dba22/nupic-1.0.5-py2-none-any.whl
+Collecting nupic.bindings>=1.0.0 (from -r requirements.txt (line 2))
+  Using cached https://files.pythonhosted.org/packages/f9/35/3e7e6493d7147dbb20a8d454a10aa02a6c81a10edb55d7670700d207cea4/nupic.bindings-1.0.6-cp27-none-win_amd64.whl
+Collecting redis==2.10.5 (from -r requirements.txt (line 3))
+  Using cached https://files.pythonhosted.org/packages/08/c1/457428f7507e27ba7144758a7b716ea35766e6d602f4a0c16e443ab3d381/redis-2.10.5-py2.py3-none-any.whl
+Collecting web.py==0.38 (from -r requirements.txt (line 4))
+  Using cached https://files.pythonhosted.org/packages/8b/95/66412912c8093e9167a58248fd646f95ff3d41f2e5be5300c27b0cb5de52/web.py-0.38.tar.gz
+Requirement already satisfied: wsgiref==0.1.2 in c:\programdata\anaconda3\envs\python27\lib (from -r requirements.txt (line 5)) (0.1.2)
+Collecting msgpack-python==0.4.1 (from -r requirements.txt (line 6))
+  Using cached https://files.pythonhosted.org/packages/41/5c/4f1393bef6650b14a4d48981caf9596aed673f45e73d56b0b9011d31797a/msgpack-python-0.4.1.tar.gz
+Collecting ujson==1.35 (from -r requirements.txt (line 7))
+  Using cached https://files.pythonhosted.org/packages/16/c4/79f3409bc710559015464e5f49b9879430d8f87498ecdc335899732e5377/ujson-1.35.tar.gz
+Collecting mock==1.0.1 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/a2/52/7edcd94f0afb721a2d559a5b9aae8af4f8f2c79bc63fdbe8a8a6c9b23bbe/mock-1.0.1.tar.gz
+Collecting pytest-cov==2.5.0 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/35/02/fb4e0f9b0423f26214eea9fd07f9fa0758ecf2bea0b8d8e61667a91e6298/pytest_cov-2.5.0-py2.py3-none-any.whl
+Collecting PyMySQL==0.6.2 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/04/65/c84eee72dcbf19d8050cf65157a15f68e0989620a00bf0b2a55a1a20b4cd/PyMySQL-0.6.2-py2.py3-none-any.whl
+Collecting pyproj==1.9.3 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/f9/7f/ee337f570e4c3ef4593709dcb63e813c359184ede249c4f79b761186bd08/pyproj-1.9.3.tar.gz
+Collecting ordereddict==1.1 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/53/25/ef88e8e45db141faa9598fbf7ad0062df8f50f881a36ed6a0073e1572126/ordereddict-1.1.tar.gz
+Collecting unittest2==0.5.1 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/86/e8/f31a7c9a3b471f6125abc8addd37c17760e00affb45d6db088394a360086/unittest2-0.5.1.tar.gz (62kB)
+    100% |################################| 71kB 907kB/s
+Collecting pytest==3.0.7 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/8e/81/40a4b62b1d15441c282db485f8f08c7c38edab9ffe750a31d77805cd5f6a/pytest-3.0.7-py2.py3-none-any.whl (172kB)
+    100% |################################| 174kB 922kB/s
+Collecting prettytable==0.7.2 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/ef/30/4b0746848746ed5941f052479e7c23d2b56d174b82f4fd34a25e389831f5/prettytable-0.7.2.tar.bz2
+Collecting asteval==0.9.1 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/63/26/c126345158a1c3d5c0b2c5447bc222f1380ff023eaed4d33edafef9eb1bf/asteval-0.9.1.tar.gz
+Collecting python-dateutil==2.1 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/65/52/9c18dac21f174ad31b65e22d24297864a954e6fe65876eba3f5773d2da43/python-dateutil-2.1.tar.gz (152kB)
+    100% |################################| 153kB 1.7MB/s
+Collecting pytest-xdist==1.16.0 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/0d/d0/58cacddb34f35dd3d447525061e431b00d842eef72d585cc1c9a97abec90/pytest-xdist-1.16.0.tar.gz (88kB)
+    100% |################################| 92kB 1.5MB/s
+Collecting validictory==0.9.1 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/aa/57/2b29d7886815854a648ad3503e616f2164a78467fdd603fa8adf0dee028e/validictory-0.9.1.tar.gz
+Collecting numpy==1.12.1 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/a0/61/02bbd10971adb84ba13cf642b7b2702c9d0e20a4432f6cbf0866274bac98/numpy-1.12.1-cp27-none-win_amd64.whl (7.5MB)
+    100% |################################| 7.5MB 591kB/s
+Collecting PyYAML==3.10 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/00/17/3b822893a1789a025d3f676a381338516a8f65e686d915b0834ecc9b4979/PyYAML-3.10.tar.gz (241kB)
+    100% |################################| 245kB 474kB/s
+Collecting DBUtils==1.1 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/65/65/89afee016aca7fbb5c1642e6ef3864d80af808dc5efa7367b328093eece9/DBUtils-1.1.tar.gz (109kB)
+    100% |################################| 112kB 1.8MB/s
+Collecting psutil==1.0.1 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/94/50/7c9e94cf6cdbf4e4e41d2e318094c2b0d58d3bb9196017fb6e4897adf277/psutil-1.0.1.tar.gz (156kB)
+    100% |################################| 163kB 2.4MB/s
+Collecting coverage==3.7.1 (from nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/df/e2/4587dcfec0ed87268dbc8b3b6fe9998e4025bf8f3f5574e213ba3efcc5db/coverage-3.7.1-cp27-none-win_amd64.whl (115kB)
+    100% |################################| 122kB 3.7MB/s
+Requirement already satisfied: colorama; sys_platform == "win32" in c:\programdata\anaconda3\envs\python27\lib\site-packages (from pytest==3.0.7->nupic>=1.0.0->-r requirements.txt (line 1)) (0.3.9)
+Requirement already satisfied: setuptools in c:\programdata\anaconda3\envs\python27\lib\site-packages (from pytest==3.0.7->nupic>=1.0.0->-r requirements.txt (line 1)) (39.1.0)
+Requirement already satisfied: py>=1.4.29 in c:\programdata\anaconda3\envs\python27\lib\site-packages (from pytest==3.0.7->nupic>=1.0.0->-r requirements.txt (line 1)) (1.5.3)
+Requirement already satisfied: six in c:\programdata\anaconda3\envs\python27\lib\site-packages (from python-dateutil==2.1->nupic>=1.0.0->-r requirements.txt (line 1)) (1.11.0)
+Collecting execnet>=1.1 (from pytest-xdist==1.16.0->nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/f9/76/3343e69a2a1602052f587898934e5fea395d22310d39c07955596597227c/execnet-1.5.0-py2.py3-none-any.whl
+Collecting apipkg>=1.4 (from execnet>=1.1->pytest-xdist==1.16.0->nupic>=1.0.0->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/67/08/4815a09603fc800209431bec5b8bd2acf2f95abdfb558a44a42507fb94da/apipkg-1.5-py2.py3-none-any.whl
+Building wheels for collected packages: web.py, msgpack-python, ujson, mock, pyproj, ordereddict, unittest2, prettytable, asteval, python-dateutil, pytest-xdist, validictory, PyYAML, DBUtils, psutil
+  Running setup.py bdist_wheel for web.py ... done
+  Stored in directory: C:\Users\577342\AppData\Local\pip\Cache\wheels\9d\99\a2\f2e0b2e589ade57ba5e7aca632990d4c8ecd6712918148ad48
+  Running setup.py bdist_wheel for msgpack-python ... done
+  Stored in directory: C:\Users\577342\AppData\Local\pip\Cache\wheels\69\21\fa\50294e5c0fd3cc547d18a19c4c4ec50df75f24572c90f6c84f
+  Running setup.py bdist_wheel for ujson ... done
+  Stored in directory: C:\Users\577342\AppData\Local\pip\Cache\wheels\28\77\e4\0311145b9c2e2f01470e744855131f9e34d6919687550f87d1
+  Running setup.py bdist_wheel for mock ... done
+  Stored in directory: C:\Users\577342\AppData\Local\pip\Cache\wheels\7e\72\92\744b532c779242b57aab4bcba80c312b30c069bbd60025e7e6
+  Running setup.py bdist_wheel for pyproj ... done
+  Stored in directory: C:\Users\577342\AppData\Local\pip\Cache\wheels\58\60\13\f561e29da5f1a15c8883075bd14fae8dbc7135d3c45b8db3ee
+  Running setup.py bdist_wheel for ordereddict ... done
+  Stored in directory: C:\Users\577342\AppData\Local\pip\Cache\wheels\78\d3\a8\9f52c7a389a0ffba6f575a3886b5f7a55461fb6ec34aa5fd38
+  Running setup.py bdist_wheel for unittest2 ... done
+  Stored in directory: C:\Users\577342\AppData\Local\pip\Cache\wheels\09\99\ff\8b21a50a1a3705f61065be055749a7d3f7cc1bcb6c2a954132
+  Running setup.py bdist_wheel for prettytable ... done
+  Stored in directory: C:\Users\577342\AppData\Local\pip\Cache\wheels\80\34\1c\3967380d9676d162cb59513bd9dc862d0584e045a162095606
+  Running setup.py bdist_wheel for asteval ... done
+  Stored in directory: C:\Users\577342\AppData\Local\pip\Cache\wheels\33\1f\b6\645fd651d459087304a50f97200983b5712be6de97a9fd27a5
+  Running setup.py bdist_wheel for python-dateutil ... done
+  Stored in directory: C:\Users\577342\AppData\Local\pip\Cache\wheels\a3\b4\9e\be446328c3728631f286e9cc832b8b00ca99480eefa1a6db4e
+  Running setup.py bdist_wheel for pytest-xdist ... done
+  Stored in directory: C:\Users\577342\AppData\Local\pip\Cache\wheels\a4\59\7d\3d8f490f3d06c661dd8bf439139f28f21d1da5d404daf272cb
+  Running setup.py bdist_wheel for validictory ... done
+  Stored in directory: C:\Users\577342\AppData\Local\pip\Cache\wheels\38\0f\6b\5ee7e1451eb2682d08cd7735c5f96c5eba78227dc10a01c7a1
+  Running setup.py bdist_wheel for PyYAML ... done
+  Stored in directory: C:\Users\577342\AppData\Local\pip\Cache\wheels\ab\da\46\2f3778bfc6d5ec360917e3eeff42bade7d0497ad6879b1c05c
+  Running setup.py bdist_wheel for DBUtils ... done
+  Stored in directory: C:\Users\577342\AppData\Local\pip\Cache\wheels\3a\9f\7d\828c53bd4df7a23f996e8e589052d38feb133551470fd47450
+  Running setup.py bdist_wheel for psutil ... done
+  Stored in directory: C:\Users\577342\AppData\Local\pip\Cache\wheels\d9\a5\0e\55eaa60cf7a3d7e6c53cc9305a74ad47f7832eae803f4f9c66
+Successfully built web.py msgpack-python ujson mock pyproj ordereddict unittest2 prettytable asteval python-dateutil pytest-xdist validictory PyYAML DBUtils psutil
+anaconda-client 1.6.14 has requirement python-dateutil>=2.6.1, but you'll have python-dateutil 2.1 which is incompatible.
+anaconda-client 1.6.14 has requirement PyYAML>=3.12, but you'll have pyyaml 3.10 which is incompatible.
+pandas 0.23.0 has requirement python-dateutil>=2.5.0, but you'll have python-dateutil 2.1 which is incompatible.
+Installing collected packages: mock, pytest, coverage, pytest-cov, PyMySQL, pyproj, ordereddict, unittest2, apipkg, execnet, pytest-xdist, numpy, nupic.bindings, prettytable, asteval, python-dateutil, validictory, PyYAML, DBUtils, psutil, nupic, redis, web.py, msgpack-python, ujson
+  Found existing installation: pytest 3.5.1
+    Uninstalling pytest-3.5.1:
+      Successfully uninstalled pytest-3.5.1
+  Found existing installation: numpy 1.14.3
+    Uninstalling numpy-1.14.3:
+      Successfully uninstalled numpy-1.14.3
+  Found existing installation: python-dateutil 2.7.3
+    Uninstalling python-dateutil-2.7.3:
+      Successfully uninstalled python-dateutil-2.7.3
+  Found existing installation: PyYAML 3.12
+Cannot uninstall 'PyYAML'. It is a distutils installed project and thus we cannot accurately determine which files belong to it which would lead to only a partial uninstall.
+
+(Python27) C:\Users\577342\Documents\Repositories\nupic-history-server>pip install --ignore-installed PyYAML==3.10
+
+find / -name "libcapnpc-0.6.1.so"
+
+echo $LD_LIBRARY_PATH
+
+mv /home/dbabbitt/capnproto-c++-0.6.1/ /opt/
+
+export LD_LIBRARY_PATH=/opt/capnproto-c++-0.6.1:$LD_LIBRARY_PATH
