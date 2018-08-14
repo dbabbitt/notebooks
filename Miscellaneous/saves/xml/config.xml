@@ -5,16 +5,19 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
-        <Find name="&apos;../saves/csv/" />
-        <Find name="../saves/csv/" />
-        <Find name="data" />
-        <Find name="\band\b" />
-        <Find name="\bas\b" />
-        <Find name="&#x0009;" />
-        <Find name=", " />
-        <Find name="postgresql.conf" />
-        <Find name="pgsql" />
-        <Find name="psql" />
+        <Find name="circle" />
+        <Find name="cyl" />
+        <Find name="score" />
+        <Find name="\s+&lt;/th&gt;" />
+        <Find name="&lt;th&gt;\s+" />
+        <Find name="\s*&lt;/?div&gt;" />
+        <Find name="\s*&lt;/?(a|span)&gt;" />
+        <Find name='\s+(style|class|href|data-index)=&quot;[^&quot;]*&quot;' />
+        <Find name="math.nan" />
+        <Find name="SSLError" />
+        <Replace name="&lt;/th&gt;" />
+        <Replace name="&lt;th&gt;" />
+        <Replace name="float(&apos;nan&apos;)" />
         <Replace name="DATA_FOLDER + &apos;" />
         <Replace name="AND" />
         <Replace name="AS" />
@@ -22,21 +25,18 @@
         <Replace name=",\n" />
         <Replace name="," />
         <Replace name="\),\n\(" />
-        <Replace name="\),\n" />
-        <Replace name=" " />
-        <Replace name="\1" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\saves\csv\w_santa_data.csv" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\saves\csv\fake_correlation.csv" />
-        <File filename="C:\Users\577342\Documents\Repositories\dlm_xViewBaselineModels\docker\docker_submission\inference_vanilla.py" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\saves\csv\c2_new_data_df.csv" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\saves\csv\p_new_data_df.csv" />
-        <File filename="C:\Users\577342\Downloads\export.json" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\saves\csv\w_new_data_df.csv" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\saves\csv\w_fake_data.csv" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\saves\csv\c2_fake_data.csv" />
-        <File filename="C:\Users\577342\Downloads\Correlator\esWrapper.py" />
+        <File filename="C:\Users\577342\Documents\Repositories\nupic.py\appveyor.yml" />
+        <File filename="C:\Users\577342\Documents\Repositories\nupic\appveyor.yml" />
+        <File filename="C:\Users\577342\Documents\Repositories\lizard-damage\docker-compose.yml" />
+        <File filename="C:\Users\577342\Documents\Repositories\htm-school-viz\node_modules\npm\node_modules\libnpx\node_modules\dotenv\appveyor.yml" />
+        <File filename="C:\Users\577342\Documents\Repositories\htm-school-viz\node_modules\handlebars\appveyor.yml" />
+        <File filename="C:\Users\577342\Documents\Repositories\htm-demo\docker-compose.yml" />
+        <File filename="C:\Users\577342\Documents\Repositories\dlm_xViewBaselineModels\docker\docker_training\docker-compose.yml" />
+        <File filename="C:\Users\577342\Documents\Repositories\building-htm-systems\node_modules\resolve\appveyor.yml" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\dracaris_docker\images\geoserver\Dockerfile" />
+        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\dracaris_docker\docker-compose.yml" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -45,7 +45,7 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="-10" y="10" width="1787" height="1080" isMaximized="yes" />
+        <GUIConfig name="AppPosition" x="0" y="0" width="1692" height="1080" isMaximized="yes" />
         <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180810">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
@@ -79,9 +79,9 @@
         <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
         <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="0" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
-        <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="204">
+        <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="991">
             <PluginDlg pluginName="MarkdownViewer++" id="0" curr="1" prev="-1" isVisible="no" />
-            <PluginDlg pluginName="dummy" id="0" curr="3" prev="-1" isVisible="no" />
+            <PluginDlg pluginName="dummy" id="0" curr="3" prev="-1" isVisible="yes" />
             <PluginDlg pluginName="Snippets" id="-1" curr="1" prev="-1" isVisible="no" />
             <PluginDlg pluginName="ComparePlugin.dll" id="11" curr="1" prev="-1" isVisible="no" />
             <ActiveTabs cont="0" activeTab="-1" />
