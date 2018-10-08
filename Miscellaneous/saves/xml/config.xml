@@ -5,19 +5,19 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
-        <Find name="circle" />
-        <Find name="cyl" />
-        <Find name="score" />
-        <Find name="\s+&lt;/th&gt;" />
-        <Find name="&lt;th&gt;\s+" />
-        <Find name="\s*&lt;/?div&gt;" />
-        <Find name="\s*&lt;/?(a|span)&gt;" />
-        <Find name='\s+(style|class|href|data-index)=&quot;[^&quot;]*&quot;' />
-        <Find name="math.nan" />
-        <Find name="SSLError" />
-        <Replace name="&lt;/th&gt;" />
-        <Replace name="&lt;th&gt;" />
-        <Replace name="float(&apos;nan&apos;)" />
+        <Find name='&quot;text&quot; : &quot;' />
+        <Find name="\]\]" />
+        <Find name="\[\n\[" />
+        <Find name="\[" />
+        <Find name="self.profile" />
+        <Find name="access_token" />
+        <Find name="consumer_secret" />
+        <Find name="twitter" />
+        <Find name="^" />
+        <Find name="&apos;../saves/csv/" />
+        <Replace name="[\n\t[" />
+        <Replace name="\n[" />
+        <Replace name="import " />
         <Replace name="DATA_FOLDER + &apos;" />
         <Replace name="AND" />
         <Replace name="AS" />
@@ -27,16 +27,15 @@
         <Replace name="\),\n\(" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\577342\Documents\Repositories\nupic.py\appveyor.yml" />
-        <File filename="C:\Users\577342\Documents\Repositories\nupic\appveyor.yml" />
-        <File filename="C:\Users\577342\Documents\Repositories\lizard-damage\docker-compose.yml" />
-        <File filename="C:\Users\577342\Documents\Repositories\htm-school-viz\node_modules\npm\node_modules\libnpx\node_modules\dotenv\appveyor.yml" />
-        <File filename="C:\Users\577342\Documents\Repositories\htm-school-viz\node_modules\handlebars\appveyor.yml" />
-        <File filename="C:\Users\577342\Documents\Repositories\htm-demo\docker-compose.yml" />
-        <File filename="C:\Users\577342\Documents\Repositories\dlm_xViewBaselineModels\docker\docker_training\docker-compose.yml" />
-        <File filename="C:\Users\577342\Documents\Repositories\building-htm-systems\node_modules\resolve\appveyor.yml" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\dracaris_docker\images\geoserver\Dockerfile" />
-        <File filename="C:\Users\577342\Documents\Repositories\hanscom-afb-data-science\dracaris\dracaris_docker\docker-compose.yml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\bible\py\get_isaiah_refs.py" />
+        <File filename="C:\Users\dev\.twarc" />
+        <File filename="C:\Users\dev\Downloads\simplegexf-0.1.5.tar\dist\simplegexf-0.1.5\simplegexf.py" />
+        <File filename="C:\Users\dev\Downloads\chrome extension tutorial\rapydjs based - serverless pure plugin (best)\src\compiledpythonextension\hello.js" />
+        <File filename="C:\Users\dev\Downloads\chrome extension tutorial\rapydjs based - serverless pure plugin (best)\src\make.sh" />
+        <File filename="C:\Users\dev\Anaconda3\node_modules\rapydscript\src\lib\operator.pyj" />
+        <File filename="C:\Users\dev\Anaconda3\node_modules\rapydscript\src\lib\math.pyj" />
+        <File filename="C:\Users\dev\Google Drive\dbabbitt_tweets\data\js\tweets\2007_03.js" />
+        <File filename="C:\Users\dev\Google Drive\dbabbitt_tweets\data\js\tweets\2018_07.js" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -45,8 +44,8 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="0" y="0" width="1692" height="1080" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180810">no</GUIConfig>
+        <GUIConfig name="AppPosition" x="-10" y="10" width="1787" height="1080" isMaximized="yes" />
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20180923">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -71,7 +70,7 @@
         <GUIConfig name="ScintillaGlobalSettings" enableMultiSelection="no" />
         <GUIConfig name="openSaveDir" value="0" defaultDirPath="" />
         <GUIConfig name="titleBar" short="no" />
-        <GUIConfig name="stylerTheme" path="C:\Users\577342\Documents\Repositories\notebooks\Miscellaneous\saves\xml\stylers.xml" />
+        <GUIConfig name="stylerTheme" path="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\saves\xml\stylers.xml" />
         <GUIConfig name="wordCharList" useDefault="yes" charsAdded="" />
         <GUIConfig name="delimiterSelection" leftmostDelimiter="40" rightmostDelimiter="41" delimiterSelectionOnEntireDocument="no" />
         <GUIConfig name="multiInst" setting="0" />
@@ -79,9 +78,9 @@
         <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
         <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="0" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
-        <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="991">
+        <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="204">
             <PluginDlg pluginName="MarkdownViewer++" id="0" curr="1" prev="-1" isVisible="no" />
-            <PluginDlg pluginName="dummy" id="0" curr="3" prev="-1" isVisible="yes" />
+            <PluginDlg pluginName="dummy" id="0" curr="3" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Snippets" id="-1" curr="1" prev="-1" isVisible="no" />
             <PluginDlg pluginName="ComparePlugin.dll" id="11" curr="1" prev="-1" isVisible="no" />
             <ActiveTabs cont="0" activeTab="-1" />

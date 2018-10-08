@@ -34,6 +34,12 @@ def get_column_descriptions(df, column_list=None):
                 date_series = pd.to_datetime(df[column_name], errors='coerce')
                 null_series = date_series[~date_series.notnull()]
                 row_dict['has_dates'] = (null_series.shape[0] < date_series.shape[0])
+                
+                # Show whether the column contains only integers
+                try:
+                    row_dict['only_integers'] = (df[column_name].apply(lambda x: float(x).is_integer())).all()
+                except Exception:
+                    row_dict['only_integers'] = float('nan')
 
                 rows_list.append(row_dict)
 
