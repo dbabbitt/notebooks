@@ -43,7 +43,7 @@ def get_column_descriptions(df, column_list=None):
 
                 rows_list.append(row_dict)
 
-    ranking_columns = ['column_name', 'dtype', 'count_blanks', 'count_uniques', 'count_zeroes', 'has_dates']
+    ranking_columns = ['column_name', 'dtype', 'count_blanks', 'count_uniques', 'count_zeroes', 'has_dates', 'only_integers']
     blank_ranking_df = pd.DataFrame(rows_list, columns=ranking_columns)
     
     return(blank_ranking_df)
