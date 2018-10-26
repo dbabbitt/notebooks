@@ -1,0 +1,41 @@
+
+      File "/opt/anaconda3/lib/python3.6/site-packages/tornado/web.py", line 1510, in _execute
+        return
+      File "/opt/anaconda3/lib/python3.6/site-packages/tornado/web.py", line 2898, in wrapper
+        # type: (int, httputil.HTTPHeaders, bytes, bool) -> typing.Tuple[int, httputil.HTTPHeaders, bytes] # noqa: E501
+      File "/opt/anaconda3/lib/python3.6/site-packages/notebook/notebook/handlers.py", line 43, in get
+        except web.HTTPError as e:
+      File "/opt/anaconda3/lib/python3.6/site-packages/notebook/base/handlers.py", line 424, in render_template
+        host = re.match(r'^(.*?)(:\d+)?$', self.request.host).group(1)
+      File "/opt/anaconda3/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+        return original_render(self, *args, **kwargs)
+      File "/opt/anaconda3/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+        return self.environment.handle_exception(exc_info, True)
+      File "/opt/anaconda3/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+        reraise(exc_type, exc_value, tb)
+      File "/opt/anaconda3/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+        raise value.with_traceback(tb)
+      File "/opt/anaconda3/lib/python3.6/site-packages/notebook/templates/notebook.html", line 1, in top-level template code
+        {% extends "page.html" %}
+      File "/opt/anaconda3/lib/python3.6/site-packages/notebook/templates/page.html", line 154, in top-level template code
+        {% block header %}
+      File "/opt/anaconda3/lib/python3.6/site-packages/notebook/templates/notebook.html", line 120, in block "header"
+        {% for exporter in get_custom_frontend_exporters() %}
+    jinja2.exceptions.UndefinedError: 'get_custom_frontend_exporters' is undefined
+[E 15:38:42.740 NotebookApp] {
+      "Host": "localhost:8888",
+      "Connection": "keep-alive",
+      "Cache-Control": "max-age=0",
+      "Upgrade-Insecure-Requests": "1",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+      "Referer": "http://localhost:8888/tree/dbabbitt/ipynb",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,en-GB;q=0.8",
+      "Cookie": "username-localhost-28888=\"2|1:0|10:1533568922|24:username-localhost-28888|44:MjgzNTg2ODkzZGVmNGZmNDkxNzlmMmFkZjkwMDY3YmU=|388caf086a46fd6c791d1328f169fc099de07cb6e5e4d3ba6923cd5a27a74b95\"; username-localhost-18888=\"2|1:0|10:1534792458|24:username-localhost-18888|44:ZmI1MWZmNjQ4MDVkNDE1ZDlhMDAwNzk4NDc0YmJmNWM=|83f88a6c8b06ed7c31a326bccb4a82b9732f9235b59ea369eeb5b423a8d99114\"; _xsrf=2|47ae4922|3779f60df37e44d871b29c13ed542c6b|1535549825; username-localhost-8888=\"2|1:0|10:1535826286|23:username-localhost-8888|44:ZmJiNDZjZDMxMTI2NGY5ZjlmMjYxZjU3NjQ5NzZiNmI=|8770a8d041bbf8abed53e8cda011417ca62fa7db31794c704355531d3be6e898\"",
+      "If-None-Match": "\"670bc36d979c358239f052976e916ccb7c9fcbd1\""
+    }
+[E 15:38:42.740 NotebookApp] 500 GET /notebooks/dbabbitt/ipynb/Infrastructure_metrics.ipynb (127.0.0.1) 4.29ms referer=http://localhost:8888/tree/dbabbitt/ipynb
+[I 15:38:42.885 NotebookApp] Starting buffering for d723e9d1-611b-4ab8-a982-d42d9ac4a4d8:ddef66446ce8458a84462f1bb9e4b1b2
+
+[jupyter] 0:dbabbitt@ip-10-194-54-244:~*                                                                        "ip-10-194-54-244" 15:39 03-Sep-18
