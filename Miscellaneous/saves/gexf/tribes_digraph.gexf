@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
+  <meta lastmodifieddate="2018-10-27">
+    <creator>Gephi 0.9</creator>
+    <description></description>
+  </meta>
+  <graph defaultedgetype="directed" mode="static">
+    <nodes>
+      <node id="SJAs (Social Justice Activists)" label="SJAs (Social Justice Activists)">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="346.86243" y="-48.065834"></viz:position>
+      </node>
+      <node id="Black Lives Matter" label="Black Lives Matter">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-385.82053" y="386.35626"></viz:position>
+      </node>
+      <node id="#MeToo" label="#MeToo">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-341.65903" y="-115.84437"></viz:position>
+      </node>
+      <node id="Gender-Critical Feminists" label="Gender-Critical Feminists">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-1184.3358" y="-125.889404"></viz:position>
+      </node>
+      <node id="Modern Neo-Marxists" label="Modern Neo-Marxists">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="1158.56" y="449.50272"></viz:position>
+      </node>
+      <node id="Antifa" label="Antifa">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-462.45874" y="303.03366"></viz:position>
+      </node>
+      <node id="Occupy" label="Occupy">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="144.16095" y="869.54333"></viz:position>
+      </node>
+      <node id="Dirtbag Left" label="Dirtbag Left">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="350.05014" y="121.72442"></viz:position>
+      </node>
+      <node id="DSA (Democratic Socialists of America)" label="DSA (Democratic Socialists of America)">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-362.77832" y="506.43155"></viz:position>
+      </node>
+      <node id="Establishment Left" label="Establishment Left">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="591.67584" y="354.88898"></viz:position>
+      </node>
+      <node id="Optimists" label="Optimists">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="151.01445" y="67.81769"></viz:position>
+      </node>
+      <node id="New Atheists" label="New Atheists">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="440.04306" y="-395.40472"></viz:position>
+      </node>
+      <node id="Street Epistemologists" label="Street Epistemologists">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="767.64996" y="-300.9092"></viz:position>
+      </node>
+      <node id="Rationalist Diaspora" label="Rationalist Diaspora">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-304.9768" y="-662.45416"></viz:position>
+      </node>
+      <node id="Post-Rationalists" label="Post-Rationalists">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="134.74355" y="-857.40674"></viz:position>
+      </node>
+      <node id="Integral Theorists" label="Integral Theorists">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-492.70444" y="699.53955"></viz:position>
+      </node>
+      <node id="Sorters" label="Sorters">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="289.70102" y="-227.95345"></viz:position>
+      </node>
+      <node id="Intellectual Dark Web" label="Intellectual Dark Web">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-947.2181" y="126.736984"></viz:position>
+      </node>
+      <node id="Benedictines" label="Benedictines">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="146.6857" y="-435.72836"></viz:position>
+      </node>
+      <node id="Christian Right" label="Christian Right">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="656.0048" y="-164.93935"></viz:position>
+      </node>
+      <node id="Establishment Right" label="Establishment Right">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="311.7274" y="472.01242"></viz:position>
+      </node>
+      <node id="Tea Party" label="Tea Party">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="1036.7286" y="592.8043"></viz:position>
+      </node>
+      <node id="Trumpists" label="Trumpists">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-60.48824" y="340.49893"></viz:position>
+      </node>
+      <node id="InfoWarriors" label="InfoWarriors">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="579.4512" y="687.6571"></viz:position>
+      </node>
+      <node id="QAnoners" label="QAnoners">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="337.153" y="773.6868"></viz:position>
+      </node>
+      <node id="Alt-Lite" label="Alt-Lite">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-260.04694" y="67.61852"></viz:position>
+      </node>
+      <node id="Alt-Right" label="Alt-Right">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-164.00987" y="148.31921"></viz:position>
+      </node>
+      <node id="Modern Neo-Nazis" label="Modern Neo-Nazis">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="542.7634" y="181.86554"></viz:position>
+      </node>
+      <node id="Neoreactionaries" label="Neoreactionaries">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-204.94821" y="-430.1068"></viz:position>
+      </node>
+      <node id="MRA (Mens Right Advocates)" label="MRA (Mens Right Advocates)">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-1137.5461" y="31.258963"></viz:position>
+      </node>
+      <node id="Manosphere" label="Manosphere">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-407.11603" y="-233.93866"></viz:position>
+      </node>
+      <node id="MGTOW (Men Going Their Own Way)" label="MGTOW (Men Going Their Own Way)">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-1382.6461" y="-337.2159"></viz:position>
+      </node>
+      <node id="Incels" label="Incels">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-355.6619" y="-372.9583"></viz:position>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="SJAs (Social Justice Activists)" target="Alt-Lite"></edge>
+      <edge id="1" source="SJAs (Social Justice Activists)" target="Alt-Right"></edge>
+      <edge id="2" source="SJAs (Social Justice Activists)" target="Sorters"></edge>
+      <edge id="3" source="SJAs (Social Justice Activists)" target="Trumpists"></edge>
+      <edge id="4" source="Black Lives Matter" target="Alt-Lite"></edge>
+      <edge id="5" source="Black Lives Matter" target="Alt-Right"></edge>
+      <edge id="6" source="Black Lives Matter" target="Trumpists"></edge>
+      <edge id="7" source="Black Lives Matter" target="Establishment Right"></edge>
+      <edge id="8" source="#MeToo" target="Alt-Lite"></edge>
+      <edge id="9" source="#MeToo" target="MRA (Mens Right Advocates)"></edge>
+      <edge id="10" source="#MeToo" target="Manosphere"></edge>
+      <edge id="11" source="#MeToo" target="Incels"></edge>
+      <edge id="12" source="Gender-Critical Feminists" target="SJAs (Social Justice Activists)"></edge>
+      <edge id="13" source="Gender-Critical Feminists" target="MRA (Mens Right Advocates)"></edge>
+      <edge id="14" source="Modern Neo-Marxists" target="Establishment Left"></edge>
+      <edge id="15" source="Modern Neo-Marxists" target="Establishment Right"></edge>
+      <edge id="16" source="Antifa" target="Alt-Right"></edge>
+      <edge id="17" source="Antifa" target="Alt-Lite"></edge>
+      <edge id="18" source="Antifa" target="Modern Neo-Nazis"></edge>
+      <edge id="19" source="Antifa" target="Trumpists"></edge>
+      <edge id="20" source="Occupy" target="Establishment Left"></edge>
+      <edge id="21" source="Occupy" target="Establishment Right"></edge>
+      <edge id="22" source="Dirtbag Left" target="SJAs (Social Justice Activists)"></edge>
+      <edge id="23" source="Dirtbag Left" target="Alt-Right"></edge>
+      <edge id="24" source="Dirtbag Left" target="Establishment Left"></edge>
+      <edge id="25" source="DSA (Democratic Socialists of America)" target="Establishment Left"></edge>
+      <edge id="26" source="DSA (Democratic Socialists of America)" target="Establishment Right"></edge>
+      <edge id="27" source="DSA (Democratic Socialists of America)" target="Trumpists"></edge>
+      <edge id="28" source="DSA (Democratic Socialists of America)" target="Alt-Right"></edge>
+      <edge id="29" source="Establishment Left" target="Establishment Right"></edge>
+      <edge id="30" source="Establishment Left" target="DSA (Democratic Socialists of America)"></edge>
+      <edge id="31" source="Establishment Left" target="Dirtbag Left"></edge>
+      <edge id="32" source="Optimists" target="Trumpists"></edge>
+      <edge id="33" source="Optimists" target="Neoreactionaries"></edge>
+      <edge id="34" source="Optimists" target="Alt-Right"></edge>
+      <edge id="35" source="Optimists" target="SJAs (Social Justice Activists)"></edge>
+      <edge id="36" source="New Atheists" target="Christian Right"></edge>
+      <edge id="37" source="New Atheists" target="Sorters"></edge>
+      <edge id="38" source="Street Epistemologists" target="Christian Right"></edge>
+      <edge id="39" source="Street Epistemologists" target="Sorters"></edge>
+      <edge id="40" source="Rationalist Diaspora" target="SJAs (Social Justice Activists)"></edge>
+      <edge id="41" source="Rationalist Diaspora" target="Neoreactionaries"></edge>
+      <edge id="42" source="Sorters" target="SJAs (Social Justice Activists)"></edge>
+      <edge id="43" source="Sorters" target="#MeToo"></edge>
+      <edge id="44" source="Intellectual Dark Web" target="SJAs (Social Justice Activists)"></edge>
+      <edge id="45" source="Benedictines" target="SJAs (Social Justice Activists)"></edge>
+      <edge id="46" source="Benedictines" target="New Atheists"></edge>
+      <edge id="47" source="Christian Right" target="Establishment Left"></edge>
+      <edge id="48" source="Christian Right" target="New Atheists"></edge>
+      <edge id="49" source="Christian Right" target="Street Epistemologists"></edge>
+      <edge id="50" source="Establishment Right" target="Establishment Left"></edge>
+      <edge id="51" source="Establishment Right" target="Trumpists"></edge>
+      <edge id="52" source="Establishment Right" target="Alt-Right"></edge>
+      <edge id="53" source="Tea Party" target="Establishment Left"></edge>
+      <edge id="54" source="Tea Party" target="Establishment Right"></edge>
+      <edge id="55" source="Trumpists" target="Establishment Left"></edge>
+      <edge id="56" source="Trumpists" target="Establishment Right"></edge>
+      <edge id="57" source="Trumpists" target="SJAs (Social Justice Activists)"></edge>
+      <edge id="58" source="Trumpists" target="Antifa"></edge>
+      <edge id="59" source="InfoWarriors" target="Establishment Left"></edge>
+      <edge id="60" source="InfoWarriors" target="Establishment Right"></edge>
+      <edge id="61" source="QAnoners" target="Establishment Left"></edge>
+      <edge id="62" source="QAnoners" target="Establishment Right"></edge>
+      <edge id="63" source="Alt-Lite" target="SJAs (Social Justice Activists)"></edge>
+      <edge id="64" source="Alt-Lite" target="#MeToo"></edge>
+      <edge id="65" source="Alt-Lite" target="Black Lives Matter"></edge>
+      <edge id="66" source="Alt-Lite" target="Antifa"></edge>
+      <edge id="67" source="Alt-Right" target="Antifa"></edge>
+      <edge id="68" source="Alt-Right" target="SJAs (Social Justice Activists)"></edge>
+      <edge id="69" source="Alt-Right" target="Black Lives Matter"></edge>
+      <edge id="70" source="Alt-Right" target="Establishment Right"></edge>
+      <edge id="71" source="Alt-Right" target="Alt-Lite"></edge>
+      <edge id="72" source="Modern Neo-Nazis" target="Antifa"></edge>
+      <edge id="73" source="Modern Neo-Nazis" target="SJAs (Social Justice Activists)"></edge>
+      <edge id="74" source="Modern Neo-Nazis" target="Establishment Left"></edge>
+      <edge id="75" source="Modern Neo-Nazis" target="Establishment Right"></edge>
+      <edge id="76" source="Neoreactionaries" target="SJAs (Social Justice Activists)"></edge>
+      <edge id="77" source="Neoreactionaries" target="Rationalist Diaspora"></edge>
+      <edge id="78" source="MRA (Mens Right Advocates)" target="SJAs (Social Justice Activists)"></edge>
+      <edge id="79" source="MRA (Mens Right Advocates)" target="#MeToo"></edge>
+      <edge id="80" source="MRA (Mens Right Advocates)" target="Gender-Critical Feminists"></edge>
+      <edge id="81" source="Manosphere" target="SJAs (Social Justice Activists)"></edge>
+      <edge id="82" source="Manosphere" target="#MeToo"></edge>
+      <edge id="83" source="Manosphere" target="Gender-Critical Feminists"></edge>
+      <edge id="84" source="MGTOW (Men Going Their Own Way)" target="Manosphere"></edge>
+      <edge id="85" source="MGTOW (Men Going Their Own Way)" target="SJAs (Social Justice Activists)"></edge>
+      <edge id="86" source="MGTOW (Men Going Their Own Way)" target="Gender-Critical Feminists"></edge>
+      <edge id="87" source="Incels" target="SJAs (Social Justice Activists)"></edge>
+      <edge id="88" source="Incels" target="#MeToo"></edge>
+    </edges>
+  </graph>
+</gexf>
