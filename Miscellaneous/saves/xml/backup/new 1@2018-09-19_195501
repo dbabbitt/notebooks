@@ -1,1 +1,9 @@
-<a style="opacity: 0; filter: alpha(opacity = 0);" class="allOver"></a>
+"The Resurrection Story is a necessary, but not sufficient foundation of Western thought."
+
+https://i.imgur.com/weA0Ekt.png
+
+I Scraped the Memetic Tribes Google Spreadsheet for the Combatants Graph [OC]
+
+I used pandas.read_html (to read the Google Spreadsheet from its URL), matplotlib, Gephi, and networkx in a Jupyter notebook. I had to use Gimp to put a white background on the image I uploaded to imgur. The red edges are mutual combatants. The placement of the nodes was merely so that labels don't appear near other labels and nodes don't cover edges.
+
+If someone could give me vertical/horizontal political-compass-style coordinates for each memetic tribe, that would be a useful start. As an example, for #MeToo, I can neither find coordinates for the movement, not its chieftains (searching on Google Images for "metoo political compass", et al).

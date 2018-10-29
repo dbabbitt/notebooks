@@ -5,6 +5,7 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
+        <Find name="DOMWidget" />
         <Find name='&quot;text&quot; : &quot;' />
         <Find name="\]\]" />
         <Find name="\[\n\[" />
@@ -14,7 +15,6 @@
         <Find name="consumer_secret" />
         <Find name="twitter" />
         <Find name="^" />
-        <Find name="&apos;../saves/csv/" />
         <Replace name="[\n\t[" />
         <Replace name="\n[" />
         <Replace name="import " />
@@ -27,8 +27,6 @@
         <Replace name="\),\n\(" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\bible\py\get_isaiah_refs.py" />
-        <File filename="C:\Users\dev\.twarc" />
         <File filename="C:\Users\dev\Downloads\simplegexf-0.1.5.tar\dist\simplegexf-0.1.5\simplegexf.py" />
         <File filename="C:\Users\dev\Downloads\chrome extension tutorial\rapydjs based - serverless pure plugin (best)\src\compiledpythonextension\hello.js" />
         <File filename="C:\Users\dev\Downloads\chrome extension tutorial\rapydjs based - serverless pure plugin (best)\src\make.sh" />
@@ -36,6 +34,9 @@
         <File filename="C:\Users\dev\Anaconda3\node_modules\rapydscript\src\lib\math.pyj" />
         <File filename="C:\Users\dev\Google Drive\dbabbitt_tweets\data\js\tweets\2007_03.js" />
         <File filename="C:\Users\dev\Google Drive\dbabbitt_tweets\data\js\tweets\2018_07.js" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\saves\html\jbp_youtube_list.html" />
+        <File filename="C:\Users\dev\Documents\repositories\python-minecraft\build\lib\mcpiext\minecraftturtle.py" />
+        <File filename="C:\Users\dev\Documents\repositories\python-minecraft\mcpiext\minecraftturtle.py" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -44,7 +45,7 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="0" y="0" width="1787" height="1080" isMaximized="yes" />
+        <GUIConfig name="AppPosition" x="62" y="0" width="725" height="1080" isMaximized="yes" />
         <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20181022">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
