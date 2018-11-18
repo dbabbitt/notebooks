@@ -27,7 +27,6 @@
         <Replace name="\),\n\(" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Downloads\simplegexf-0.1.5.tar\dist\simplegexf-0.1.5\simplegexf.py" />
         <File filename="C:\Users\dev\Downloads\chrome extension tutorial\rapydjs based - serverless pure plugin (best)\src\compiledpythonextension\hello.js" />
         <File filename="C:\Users\dev\Downloads\chrome extension tutorial\rapydjs based - serverless pure plugin (best)\src\make.sh" />
         <File filename="C:\Users\dev\Anaconda3\node_modules\rapydscript\src\lib\operator.pyj" />
@@ -37,6 +36,7 @@
         <File filename="C:\Users\dev\Documents\repositories\notebooks\saves\html\jbp_youtube_list.html" />
         <File filename="C:\Users\dev\Documents\repositories\python-minecraft\build\lib\mcpiext\minecraftturtle.py" />
         <File filename="C:\Users\dev\Documents\repositories\python-minecraft\mcpiext\minecraftturtle.py" />
+        <File filename="C:\Program Files\Notepad++\change.log" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -45,8 +45,8 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="62" y="0" width="725" height="1080" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20181022">no</GUIConfig>
+        <GUIConfig name="AppPosition" x="124" y="0" width="725" height="1080" isMaximized="yes" />
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20181116">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
