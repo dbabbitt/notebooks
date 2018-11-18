@@ -1,0 +1,769 @@
+digraph {
+	pycrypto [label="pycrypto
+2.6.1"]
+	filelock [label="filelock
+3.0.10"]
+	pycosat [label="pycosat
+0.6.3"]
+	mistune [label="mistune
+0.8.4"]
+	"ruamel.yaml" [label="ruamel.yaml
+0.15.76"]
+	"ruamel.yaml" -> "ruamel.ordereddict" [label=any]
+	menuinst [label="menuinst
+1.4.14"]
+	ply [label="ply
+3.11"]
+	PyOpenGL [label="PyOpenGL
+3.1.0"]
+	nose [label="nose
+1.3.7"]
+	PyYAML [label="PyYAML
+3.13"]
+	mpmath [label="mpmath
+1.0.0"]
+	packaging [label="packaging
+18.0"]
+	packaging -> pyparsing [label=">=2.0.2"]
+	packaging -> six [label=any]
+	pipdeptree [label="pipdeptree
+0.13.1"]
+	pipdeptree -> pip [label=">=6.0.0"]
+	Pygments [label="Pygments
+2.2.0"]
+	patsy [label="patsy
+0.5.1"]
+	patsy -> six [label=any]
+	patsy -> numpy [label=">=1.4"]
+	pycodestyle [label="pycodestyle
+2.4.0"]
+	pycurl [label="pycurl
+7.43.0.2"]
+	"backports.functools-lru-cache" [label="backports.functools-lru-cache
+1.5"]
+	seaborn [label="seaborn
+0.9.0"]
+	seaborn -> pandas [label=">=0.15.2"]
+	seaborn -> scipy [label=">=0.14.0"]
+	seaborn -> numpy [label=">=1.9.3"]
+	seaborn -> matplotlib [label=">=1.4.3"]
+	Werkzeug [label="Werkzeug
+0.14.1"]
+	"more-itertools" [label="more-itertools
+4.3.0"]
+	"more-itertools" -> six [label=">=1.0.0,<2.0.0"]
+	gevent [label="gevent
+1.3.7"]
+	gevent -> cffi [label=">=1.11.5"]
+	gevent -> greenlet [label=">=0.4.14"]
+	pkginfo [label="pkginfo
+1.4.2"]
+	tornado [label="tornado
+5.1.1"]
+	tornado -> singledispatch [label=any]
+	tornado -> futures [label=any]
+	tornado -> "backports-abc" [label=">=0.4"]
+	requests [label="requests
+2.20.0"]
+	requests -> idna [label=">=2.5,<2.8"]
+	requests -> certifi [label=">=2017.4.17"]
+	requests -> urllib3 [label=">=1.21.1,<1.25"]
+	requests -> chardet [label=">=3.0.2,<3.1.0"]
+	spyder [label="spyder
+3.3.1"]
+	spyder -> sphinx [label=any]
+	spyder -> pickleshare [label=any]
+	spyder -> pyzmq [label=any]
+	spyder -> qtpy [label=">=1.2.0"]
+	spyder -> jedi [label=">=0.9.0"]
+	spyder -> nbconvert [label=any]
+	spyder -> pylint [label=any]
+	spyder -> psutil [label=any]
+	spyder -> qtconsole [label=">=4.2.0"]
+	spyder -> pycodestyle [label=any]
+	spyder -> keyring [label=any]
+	spyder -> numpydoc [label=any]
+	spyder -> pygments [label=">=2.0"]
+	spyder -> rope [label=">=0.10.5"]
+	spyder -> "spyder-kernels" [label="<1.0"]
+	spyder -> qtawesome [label=">=0.4.1"]
+	spyder -> pyflakes [label=any]
+	spyder -> cloudpickle [label=any]
+	spyder -> chardet [label=">=2.0.0"]
+	pyparsing [label="pyparsing
+2.3.0"]
+	ipykernel [label="ipykernel
+4.10.0"]
+	ipykernel -> traitlets [label=">=4.1.0"]
+	ipykernel -> ipython [label=">=4.0.0"]
+	ipykernel -> "jupyter-client" [label=any]
+	ipykernel -> tornado [label=">=4.0"]
+	pyzmq [label="pyzmq
+17.1.2"]
+	imagesize [label="imagesize
+1.1.0"]
+	pyOpenSSL [label="pyOpenSSL
+18.0.0"]
+	pyOpenSSL -> six [label=">=1.5.2"]
+	pyOpenSSL -> cryptography [label=">=2.2.1"]
+	fastcache [label="fastcache
+1.0.2"]
+	imageio [label="imageio
+2.4.1"]
+	imageio -> numpy [label=any]
+	imageio -> futures [label=any]
+	imageio -> enum34 [label=any]
+	imageio -> pillow [label=any]
+	PySocks [label="PySocks
+1.6.8"]
+	PySocks -> "win-inet-pton" [label=any]
+	pytest [label="pytest
+3.9.3"]
+	pytest -> six [label=">=1.10.0"]
+	pytest -> attrs [label=">=17.4.0"]
+	pytest -> setuptools [label=any]
+	pytest -> pathlib2 [label=">=2.2.0"]
+	pytest -> funcsigs [label=any]
+	pytest -> py [label=">=1.5.0"]
+	pytest -> "more-itertools" [label=">=4.0.0"]
+	pytest -> atomicwrites [label=">=1.0"]
+	pytest -> colorama [label=any]
+	pytest -> pluggy [label=">=0.7"]
+	widgetsnbextension [label="widgetsnbextension
+3.4.2"]
+	widgetsnbextension -> notebook [label=">=4.4.1"]
+	sympy [label="sympy
+1.3"]
+	sympy -> mpmath [label=">=0.19"]
+	notebook [label="notebook
+5.7.0"]
+	notebook -> nbconvert [label=any]
+	notebook -> "jupyter-client" [label=">=5.2.0"]
+	notebook -> Send2Trash [label=any]
+	notebook -> tornado [label=">=4"]
+	notebook -> pyzmq [label=">=17"]
+	notebook -> jinja2 [label=any]
+	notebook -> nbformat [label=any]
+	notebook -> ipaddress [label=any]
+	notebook -> terminado [label=">=0.8.1"]
+	notebook -> "ipython-genutils" [label=any]
+	notebook -> "jupyter-core" [label=">=4.4.0"]
+	notebook -> "prometheus-client" [label=any]
+	notebook -> ipykernel [label=any]
+	notebook -> traitlets [label=">=4.2.1"]
+	MarkupSafe [label="MarkupSafe
+1.0"]
+	subprocess32 [label="subprocess32
+3.5.3"]
+	tables [label="tables
+3.4.4"]
+	tables -> numpy [label=">=1.8.0"]
+	tables -> numexpr [label=">=2.5.2"]
+	tables -> six [label=">=1.9.0"]
+	tbb4py [label="tbb4py
+2019.0"]
+	tbb4py -> tbb [label="==2019.*"]
+	"pywin32-ctypes" [label="pywin32-ctypes
+0.2.0"]
+	pep8 [label="pep8
+1.7.1"]
+	QtPy [label="QtPy
+1.5.2"]
+	"msgpack-python" [label="msgpack-python
+0.5.6"]
+	singledispatch [label="singledispatch
+3.4.0.3"]
+	singledispatch -> six [label=any]
+	pyflakes [label="pyflakes
+2.0.0"]
+	jdcal [label="jdcal
+1.4"]
+	tbb [label="tbb
+2019.0"]
+	pylint [label="pylint
+1.9.3"]
+	pylint -> singledispatch [label=any]
+	pylint -> mccabe [label=any]
+	pylint -> "backports.functools-lru-cache" [label=any]
+	pylint -> astroid [label=">=1.6,<2.0"]
+	pylint -> colorama [label=any]
+	pylint -> six [label=any]
+	pylint -> isort [label=">=4.2.5"]
+	pylint -> configparser [label=any]
+	"scikit-image" [label="scikit-image
+0.14.1"]
+	"scikit-image" -> six [label=">=1.10.0"]
+	"scikit-image" -> dask [label=">=0.9.0"]
+	"scikit-image" -> PyWavelets [label=">=0.4.0"]
+	"scikit-image" -> cloudpickle [label=">=0.2.1"]
+	"scikit-image" -> networkx [label=">=1.8"]
+	"scikit-image" -> pillow [label=">=4.3.0"]
+	typing [label="typing
+3.6.6"]
+	nbformat [label="nbformat
+4.4.0"]
+	nbformat -> "ipython-genutils" [label=any]
+	nbformat -> traitlets [label=">=4.1"]
+	nbformat -> jsonschema [label=">=2.4,!=2.5.0"]
+	nbformat -> "jupyter-core" [label=any]
+	unicodecsv [label="unicodecsv
+0.14.1"]
+	pytz [label="pytz
+2018.7"]
+	statsmodels [label="statsmodels
+0.9.0"]
+	snowballstemmer [label="snowballstemmer
+1.2.1"]
+	idna [label="idna
+2.7"]
+	"python-dateutil" [label="python-dateutil
+2.7.5"]
+	"python-dateutil" -> six [label=">=1.5"]
+	llvmlite [label="llvmlite
+0.25.0"]
+	llvmlite -> enum34 [label=any]
+	urllib3 [label="urllib3
+1.24.1"]
+	wheel [label="wheel
+0.32.2"]
+	greenlet [label="greenlet
+0.4.15"]
+	pywin32 [label="pywin32
+224"]
+	msgpack [label="msgpack
+0.5.6"]
+	ipywidgets [label="ipywidgets
+7.4.2"]
+	ipywidgets -> ipython [label=">=4.0.0,<6.0.0"]
+	ipywidgets -> ipykernel [label=">=4.5.1"]
+	ipywidgets -> nbformat [label=">=4.2.0"]
+	ipywidgets -> traitlets [label=">=4.3.1"]
+	ipywidgets -> widgetsnbextension [label="~=3.4.0"]
+	setuptools [label="setuptools
+40.5.0"]
+	locket [label="locket
+0.2.0"]
+	mccabe [label="mccabe
+0.6.1"]
+	chardet [label="chardet
+3.0.4"]
+	pandocfilters [label="pandocfilters
+1.4.2"]
+	scipy [label="scipy
+1.1.0"]
+	"ruamel-yaml" [label="ruamel-yaml
+0.15.35"]
+	"sphinxcontrib-websupport" [label="sphinxcontrib-websupport
+1.1.0"]
+	pickleshare [label="pickleshare
+0.7.5"]
+	pickleshare -> pathlib2 [label=any]
+	pip [label="pip
+18.1"]
+	odo [label="odo
+0.5.1"]
+	odo -> datashape [label=">=0.5.0"]
+	odo -> numpy [label=">=1.7"]
+	odo -> pandas [label=">=0.15.0"]
+	odo -> toolz [label=">=0.7.3"]
+	odo -> multipledispatch [label=">=0.4.7"]
+	odo -> networkx [label=">=1.0"]
+	"win-unicode-console" [label="win-unicode-console
+0.5"]
+	"et-xmlfile" [label="et-xmlfile
+1.0.1"]
+	SQLAlchemy [label="SQLAlchemy
+1.2.13"]
+	simplegeneric [label="simplegeneric
+0.8.1"]
+	Babel [label="Babel
+2.6.0"]
+	Babel -> pytz [label=">=0a"]
+	"ruamel.ordereddict" [label="ruamel.ordereddict
+0.4.13"]
+	beautifulsoup4 [label="beautifulsoup4
+4.6.3"]
+	Sphinx [label="Sphinx
+1.8.1"]
+	Sphinx -> Jinja2 [label=">=2.3"]
+	Sphinx -> colorama [label=">=0.3.5"]
+	Sphinx -> babel [label=">=1.3,!=2.0"]
+	Sphinx -> typing [label=any]
+	Sphinx -> setuptools [label=any]
+	Sphinx -> requests [label=">=2.0.0"]
+	Sphinx -> docutils [label=">=0.11"]
+	Sphinx -> alabaster [label=">=0.7,<0.8"]
+	Sphinx -> snowballstemmer [label=">=1.1"]
+	Sphinx -> Pygments [label=">=2.0"]
+	Sphinx -> packaging [label=any]
+	Sphinx -> "sphinxcontrib-websupport" [label=any]
+	Sphinx -> six [label=">=1.5"]
+	Sphinx -> imagesize [label=any]
+	pathlib2 [label="pathlib2
+2.3.2"]
+	pathlib2 -> six [label=any]
+	pathlib2 -> scandir [label=any]
+	sortedcontainers [label="sortedcontainers
+2.0.5"]
+	sortedcollections [label="sortedcollections
+1.0.1"]
+	sortedcollections -> sortedcontainers [label=any]
+	nbconvert [label="nbconvert
+5.4.0"]
+	nbconvert -> entrypoints [label=">=0.2.2"]
+	nbconvert -> pandocfilters [label=">=1.4.1"]
+	nbconvert -> mistune [label=">=0.8.1"]
+	nbconvert -> testpath [label=any]
+	nbconvert -> bleach [label=any]
+	nbconvert -> "jupyter-core" [label=any]
+	nbconvert -> jinja2 [label=any]
+	nbconvert -> pygments [label=any]
+	nbconvert -> nbformat [label=">=4.4"]
+	nbconvert -> defusedxml [label=any]
+	nbconvert -> traitlets [label=">=4.2"]
+	configparser [label="configparser
+3.5.0"]
+	numpydoc [label="numpydoc
+0.8.0"]
+	numpydoc -> sphinx [label=">=1.2.3"]
+	numpydoc -> Jinja2 [label=">=2.3"]
+	"jupyter-core" [label="jupyter-core
+4.4.0"]
+	"jupyter-core" -> traitlets [label=any]
+	scandir [label="scandir
+1.9.0"]
+	Bottleneck [label="Bottleneck
+1.2.1"]
+	Bottleneck -> numpy [label=any]
+	lucid [label="lucid
+0.3.1"]
+	lucid -> pyopengl [label=any]
+	lucid -> future [label=any]
+	lucid -> decorator [label=any]
+	lucid -> pillow [label=any]
+	lucid -> numpy [label=any]
+	lucid -> scipy [label=any]
+	lucid -> "scikit-learn" [label=any]
+	lucid -> ipython [label=any]
+	"importlib-metadata" [label="importlib-metadata
+0.6"]
+	"importlib-metadata" -> contextlib2 [label=any]
+	"importlib-metadata" -> pathlib2 [label=any]
+	numba [label="numba
+0.40.1"]
+	numba -> numpy [label=any]
+	numba -> singledispatch [label=any]
+	numba -> enum34 [label=any]
+	numba -> funcsigs [label=any]
+	numba -> llvmlite [label=">=0.25.0dev0"]
+	asn1crypto [label="asn1crypto
+0.24.0"]
+	"intel-openmp" [label="intel-openmp
+2019.0"]
+	XlsxWriter [label="XlsxWriter
+1.1.2"]
+	"jupyter-client" [label="jupyter-client
+5.2.3"]
+	"jupyter-client" -> traitlets [label=any]
+	"jupyter-client" -> "jupyter-core" [label=any]
+	"jupyter-client" -> pyzmq [label=">=13"]
+	"jupyter-client" -> "python-dateutil" [label=">=2.1"]
+	"jupyter-client" -> tornado [label=">=4.1"]
+	"scikit-learn" [label="scikit-learn
+0.20.0"]
+	"scikit-learn" -> numpy [label=">=1.8.2"]
+	"scikit-learn" -> scipy [label=">=0.13.3"]
+	jsonschema [label="jsonschema
+2.6.0"]
+	jsonschema -> functools32 [label=any]
+	heapdict [label="heapdict
+1.0.0"]
+	Jinja2 [label="Jinja2
+2.10"]
+	Jinja2 -> MarkupSafe [label=">=0.23"]
+	graphviz [label="graphviz
+0.10.1"]
+	"intel-numpy" [label="intel-numpy
+1.15.1"]
+	"intel-numpy" -> "mkl-fft" [label=any]
+	"intel-numpy" -> mkl [label=any]
+	"intel-numpy" -> "mkl-random" [label=any]
+	"intel-numpy" -> "icc-rt" [label=any]
+	"intel-numpy" -> tbb4py [label=any]
+	isort [label="isort
+4.3.4"]
+	isort -> futures [label=any]
+	isort -> futures [label=any]
+	"ipython-genutils" [label="ipython-genutils
+0.2.0"]
+	"jupyterlab-launcher" [label="jupyterlab-launcher
+0.12.1"]
+	"jupyterlab-launcher" -> jsonschema [label=">=2.6.0"]
+	"jupyterlab-launcher" -> notebook [label=">=4.2.0"]
+	html5lib [label="html5lib
+1.0.1"]
+	html5lib -> six [label=">=1.9"]
+	html5lib -> webencodings [label=any]
+	jupyter [label="jupyter
+1.0.0"]
+	jupyter -> notebook [label=any]
+	jupyter -> qtconsole [label=any]
+	jupyter -> "jupyter-console" [label=any]
+	jupyter -> nbconvert [label=any]
+	jupyter -> ipykernel [label=any]
+	jupyter -> ipywidgets [label=any]
+	jupyterlab [label="jupyterlab
+0.33.12"]
+	jupyterlab -> futures [label=any]
+	jupyterlab -> subprocess32 [label=">=3.5"]
+	jupyterlab -> "ipython-genutils" [label=any]
+	jupyterlab -> notebook [label=">=4.3.1"]
+	jupyterlab -> "jupyterlab-launcher" [label=">=0.11.2,<0.12.0"]
+	"Flask-Cors" [label="Flask-Cors
+3.0.6"]
+	"Flask-Cors" -> Flask [label=">=0.9"]
+	"Flask-Cors" -> Six [label=any]
+	"spyder-kernels" [label="spyder-kernels
+0.2.6"]
+	"spyder-kernels" -> "jupyter-client" [label=">=5.2.3"]
+	"spyder-kernels" -> pyzmq [label=">=17"]
+	"spyder-kernels" -> cloudpickle [label=any]
+	"spyder-kernels" -> ipykernel [label=">=4.8.2"]
+	grin [label="grin
+1.2.1"]
+	grin -> argparse [label=">=1.1"]
+	enum34 [label="enum34
+1.1.6"]
+	glob2 [label="glob2
+0.6"]
+	jedi [label="jedi
+0.13.1"]
+	jedi -> parso [label=">=0.3.0"]
+	itsdangerous [label="itsdangerous
+1.1.0"]
+	lxml [label="lxml
+4.2.5"]
+	"mkl-random" [label="mkl-random
+1.0.1.1"]
+	"mkl-random" -> "intel-numpy" [label=any]
+	funcsigs [label="funcsigs
+1.0.2"]
+	webencodings [label="webencodings
+0.5.1"]
+	Flask [label="Flask
+1.0.2"]
+	Flask -> click [label=">=5.1"]
+	Flask -> Werkzeug [label=">=0.14"]
+	Flask -> Jinja2 [label=">=2.10"]
+	Flask -> itsdangerous [label=">=0.24"]
+	numpy [label="numpy
+1.15.3"]
+	mkl [label="mkl
+2019.0"]
+	mkl -> "intel-openmp" [label=any]
+	multipledispatch [label="multipledispatch
+0.6.0"]
+	multipledispatch -> six [label=any]
+	astroid [label="astroid
+1.6.5"]
+	astroid -> enum34 [label=">=1.1.3"]
+	astroid -> singledispatch [label=any]
+	astroid -> "backports.functools-lru-cache" [label=any]
+	astroid -> "lazy-object-proxy" [label=any]
+	astroid -> six [label=any]
+	astroid -> wrapt [label=any]
+	"mkl-fft" [label="mkl-fft
+1.0.6"]
+	"mkl-fft" -> "intel-numpy" [label=any]
+	nltk [label="nltk
+3.3"]
+	nltk -> six [label=any]
+	entrypoints [label="entrypoints
+0.2.3"]
+	"prompt-toolkit" [label="prompt-toolkit
+2.0.7"]
+	"prompt-toolkit" -> six [label=">=1.9.0"]
+	"prompt-toolkit" -> wcwidth [label=any]
+	networkx [label="networkx
+2.2"]
+	networkx -> decorator [label=">=4.3.0"]
+	numexpr [label="numexpr
+2.6.8"]
+	numexpr -> numpy [label=">=1.7"]
+	functools32 [label="functools32
+3.2.3.post2"]
+	decorator [label="decorator
+4.3.0"]
+	zict [label="zict
+0.1.3"]
+	zict -> heapdict [label=any]
+	datashape [label="datashape
+0.5.4"]
+	datashape -> numpy [label=">=1.7"]
+	datashape -> multipledispatch [label=">=0.4.7"]
+	datashape -> "python-dateutil" [label=any]
+	cytoolz [label="cytoolz
+0.9.0.1"]
+	cytoolz -> toolz [label=">=0.8.0"]
+	psutil [label="psutil
+5.4.8"]
+	"backports.shutil-which" [label="backports.shutil-which
+3.5.1"]
+	cycler [label="cycler
+0.10.0"]
+	cycler -> six [label=any]
+	contextlib2 [label="contextlib2
+0.5.5"]
+	pycparser [label="pycparser
+2.19"]
+	kiwisolver [label="kiwisolver
+1.0.1"]
+	kiwisolver -> setuptools [label=any]
+	tblib [label="tblib
+1.3.2"]
+	comtypes [label="comtypes
+1.1.7"]
+	"jupyter-console" [label="jupyter-console
+5.2.0"]
+	"jupyter-console" -> "jupyter-client" [label=any]
+	"jupyter-console" -> ipython [label=any]
+	"jupyter-console" -> ipykernel [label=any]
+	"jupyter-console" -> "prompt-toolkit" [label=">=1.0.0,<2.0.0"]
+	"jupyter-console" -> pygments [label=any]
+	ipaddress [label="ipaddress
+1.0.22"]
+	openpyxl [label="openpyxl
+2.5.9"]
+	openpyxl -> jdcal [label=any]
+	openpyxl -> "et-xmlfile" [label=any]
+	olefile [label="olefile
+0.46"]
+	cffi [label="cffi
+1.11.5"]
+	cffi -> pycparser [label=any]
+	toolz [label="toolz
+0.9.0"]
+	cdecimal [label="cdecimal
+2.3"]
+	"prometheus-client" [label="prometheus-client
+0.4.2"]
+	keyring [label="keyring
+16.0.0"]
+	keyring -> entrypoints [label=any]
+	keyring -> "pywin32-ctypes" [label="!=0.1.1,!=0.1.0"]
+	bleach [label="bleach
+3.0.2"]
+	bleach -> six [label=any]
+	bleach -> webencodings [label=any]
+	future [label="future
+0.17.1"]
+	futures [label="futures
+3.2.0"]
+	blaze [label="blaze
+0.11.3"]
+	blaze -> flask [label=">=0.10.1"]
+	blaze -> "flask-cors" [label=any]
+	blaze -> odo [label=">=0.5.0"]
+	blaze -> psutil [label=any]
+	blaze -> sqlalchemy [label=">=0.8.0"]
+	blaze -> toolz [label=any]
+	blaze -> dask [label=any]
+	blaze -> contextlib2 [label=any]
+	bkcharts [label="bkcharts
+0.2"]
+	bkcharts -> six [label=">=1.5.2"]
+	bkcharts -> numpy [label=">=1.7.1"]
+	wcwidth [label="wcwidth
+0.1.7"]
+	"backports.ssl-match-hostname" [label="backports.ssl-match-hostname
+3.5.0.1"]
+	pywinpty [label="pywinpty
+0.5.4"]
+	pywinpty -> "backports.shutil-which" [label=any]
+	wrapt [label="wrapt
+1.10.11"]
+	six [label="six
+1.11.0"]
+	"backports.shutil-get-terminal-size" [label="backports.shutil-get-terminal-size
+1.0.0"]
+	matplotlib [label="matplotlib
+2.2.3"]
+	matplotlib -> "python-dateutil" [label=">=2.1"]
+	matplotlib -> pyparsing [label=">=2.0.1,!=2.1.6,!=2.1.2,!=2.0.4"]
+	matplotlib -> numpy [label=">=1.7.1"]
+	matplotlib -> pytz [label=any]
+	matplotlib -> "backports.functools-lru-cache" [label=any]
+	matplotlib -> six [label=">=1.10"]
+	matplotlib -> cycler [label=">=0.10"]
+	matplotlib -> kiwisolver [label=">=1.0.1"]
+	h5py [label="h5py
+2.8.0"]
+	h5py -> numpy [label=">=1.7"]
+	h5py -> six [label=any]
+	PyWavelets [label="PyWavelets
+1.0.1"]
+	PyWavelets -> numpy [label=">=1.9.1"]
+	xlwings [label="xlwings
+0.13.0"]
+	xlwings -> comtypes [label=any]
+	xlwings -> pywin32 [label=any]
+	"backports-abc" [label="backports-abc
+0.5"]
+	cloudpickle [label="cloudpickle
+0.6.1"]
+	dask [label="dask
+0.20.0"]
+	"lazy-object-proxy" [label="lazy-object-proxy
+1.3.1"]
+	pluggy [label="pluggy
+0.8.0"]
+	astropy [label="astropy
+2.0.9"]
+	astropy -> pytest [label=">=2.8"]
+	astropy -> numpy [label=">=1.9.0"]
+	"anaconda-project" [label="anaconda-project
+0.8.2"]
+	"anaconda-project" -> "anaconda-client" [label=any]
+	"anaconda-project" -> requests [label=any]
+	"anaconda-project" -> "ruamel-yaml" [label=any]
+	"anaconda-project" -> tornado [label=">=4.2"]
+	distributed [label="distributed
+1.24.0"]
+	distributed -> msgpack [label=any]
+	distributed -> pyyaml [label=any]
+	distributed -> zict [label=">=0.1.3"]
+	distributed -> singledispatch [label=any]
+	distributed -> dask [label=">=0.18.0"]
+	distributed -> futures [label=any]
+	distributed -> psutil [label=any]
+	distributed -> sortedcontainers [label="!=2.0.1,!=2.0.0"]
+	distributed -> cloudpickle [label=">=0.2.2"]
+	distributed -> toolz [label=">=0.7.4"]
+	distributed -> click [label=">=6.6"]
+	distributed -> six [label=any]
+	distributed -> tornado [label=">=4.5.1"]
+	distributed -> tblib [label=any]
+	Cython [label="Cython
+0.29"]
+	xlrd [label="xlrd
+1.1.0"]
+	bitarray [label="bitarray
+0.8.3"]
+	Click [label="Click
+7.0"]
+	xlwt [label="xlwt
+1.3.0"]
+	parso [label="parso
+0.3.1"]
+	bokeh [label="bokeh
+1.0.1"]
+	bokeh -> packaging [label=">=16.8"]
+	bokeh -> "python-dateutil" [label=">=2.1"]
+	bokeh -> tornado [label=">=4.3"]
+	bokeh -> six [label=">=1.5.2"]
+	bokeh -> numpy [label=">=1.7.1"]
+	bokeh -> PyYAML [label=">=3.10"]
+	bokeh -> Jinja2 [label=">=2.7"]
+	bokeh -> futures [label=">=3.0.3"]
+	bokeh -> pillow [label=">=4.0"]
+	clyent [label="clyent
+1.2.2"]
+	boto [label="boto
+2.49.0"]
+	cryptography [label="cryptography
+2.3.1"]
+	cryptography -> asn1crypto [label=">=0.21.0"]
+	cryptography -> idna [label=">=2.1"]
+	cryptography -> enum34 [label=any]
+	cryptography -> cffi [label=">=1.7,!=1.11.3"]
+	cryptography -> ipaddress [label=any]
+	cryptography -> six [label=">=1.4.1"]
+	certifi [label="certifi
+2018.10.15"]
+	partd [label="partd
+0.3.9"]
+	partd -> locket [label=any]
+	partd -> toolz [label=any]
+	atomicwrites [label="atomicwrites
+1.2.1"]
+	rope [label="rope
+0.11.0"]
+	"path.py" [label="path.py
+11.5.0"]
+	"path.py" -> "importlib-metadata" [label=">=0.5"]
+	colorama [label="colorama
+0.4.0"]
+	QtAwesome [label="QtAwesome
+0.5.2"]
+	QtAwesome -> six [label=any]
+	QtAwesome -> qtpy [label=any]
+	alabaster [label="alabaster
+0.7.12"]
+	Pillow [label="Pillow
+5.3.0"]
+	attrs [label="attrs
+18.2.0"]
+	ipython [label="ipython
+5.8.0"]
+	ipython -> "prompt-toolkit" [label=">=1.0.4,<2.0.0"]
+	ipython -> decorator [label=any]
+	ipython -> setuptools [label=">=18.5"]
+	ipython -> pickleshare [label=any]
+	ipython -> "win-unicode-console" [label=">=0.5"]
+	ipython -> pygments [label=any]
+	ipython -> pathlib2 [label=any]
+	ipython -> "backports.shutil-get-terminal-size" [label=any]
+	ipython -> colorama [label=any]
+	ipython -> simplegeneric [label=">0.8"]
+	ipython -> traitlets [label=">=4.2"]
+	testpath [label="testpath
+0.4.2"]
+	"anaconda-client" [label="anaconda-client
+1.6.14"]
+	"anaconda-client" -> setuptools [label=any]
+	"anaconda-client" -> pytz [label=any]
+	"anaconda-client" -> six [label=any]
+	"anaconda-client" -> nbformat [label=">=4.4.0"]
+	"anaconda-client" -> clyent [label=">=1.2.0"]
+	"anaconda-client" -> requests [label=">=2.9.1"]
+	"anaconda-client" -> PyYAML [label=">=3.12"]
+	"anaconda-client" -> "python-dateutil" [label=">=2.6.1"]
+	traitlets [label="traitlets
+4.3.2"]
+	traitlets -> "ipython-genutils" [label=any]
+	traitlets -> six [label=any]
+	traitlets -> decorator [label=any]
+	traitlets -> enum34 [label=any]
+	py [label="py
+1.7.0"]
+	docutils [label="docutils
+0.14"]
+	qtconsole [label="qtconsole
+4.4.2"]
+	qtconsole -> traitlets [label=any]
+	qtconsole -> "jupyter-client" [label=">=4.1"]
+	qtconsole -> ipykernel [label=">=4.1"]
+	qtconsole -> "jupyter-core" [label=any]
+	qtconsole -> pygments [label=any]
+	qtconsole -> "ipython-genutils" [label=any]
+	"win-inet-pton" [label="win-inet-pton
+1.0.1"]
+	"icc-rt" [label="icc-rt
+2019.0"]
+	"icc-rt" -> "intel-openmp" [label=any]
+	pyodbc [label="pyodbc
+4.0.24"]
+	Send2Trash [label="Send2Trash
+1.5.0"]
+	pandas [label="pandas
+0.23.4"]
+	pandas -> pytz [label=">=2011k"]
+	pandas -> "python-dateutil" [label=">=2.5.0"]
+	pandas -> numpy [label=">=1.9.0"]
+	wincertstore [label="wincertstore
+0.2"]
+	terminado [label="terminado
+0.8.1"]
+	defusedxml [label="defusedxml
+0.5.0"]
+}
