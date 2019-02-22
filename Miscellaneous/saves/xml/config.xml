@@ -5,17 +5,17 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
+        <Find name="&amp;amp;" />
+        <Find name="Citi" />
+        <Find name="Credit Card Payments" />
+        <Find name="Credit C" />
+        <Find name="e\*" />
+        <Find name="\*e" />
         <Find name="^#[^\r\n]+" />
         <Find name="^\d+[^\r\n]+" />
         <Find name="^\d+[\r\n]+" />
         <Find name="race" />
-        <Find name="DOMWidget" />
-        <Find name='&quot;text&quot; : &quot;' />
-        <Find name="\]\]" />
-        <Find name="\[\n\[" />
-        <Find name="\[" />
-        <Find name="self.profile" />
-        <Replace name="" />
+        <Replace name="&amp;" />
         <Replace name="[\n\t[" />
         <Replace name="\n[" />
         <Replace name="import " />
@@ -25,19 +25,18 @@
         <Replace name=", " />
         <Replace name=",\n" />
         <Replace name="," />
-        <Replace name="\),\n\(" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Anaconda3\node_modules\rapydscript\src\lib\operator.pyj" />
-        <File filename="C:\Users\dev\Anaconda3\node_modules\rapydscript\src\lib\math.pyj" />
-        <File filename="C:\Users\dev\Google Drive\dbabbitt_tweets\data\js\tweets\2007_03.js" />
-        <File filename="C:\Users\dev\Google Drive\dbabbitt_tweets\data\js\tweets\2018_07.js" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\saves\html\jbp_youtube_list.html" />
-        <File filename="C:\Users\dev\Documents\repositories\python-minecraft\build\lib\mcpiext\minecraftturtle.py" />
-        <File filename="C:\Users\dev\Documents\repositories\python-minecraft\mcpiext\minecraftturtle.py" />
-        <File filename="C:\Program Files\Notepad++\change.log" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\csv\htus8008\readme_draft.txt" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\csv\hus11\readme.txt" />
+        <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\logs\test.log" />
+        <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\cron.vbs" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\csv\gggi_stem.csv" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\saves\html\links.html" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\dataframes.py" />
+        <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\speedtest-cli.1" />
+        <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\test.log" />
+        <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\speedlog.bat" />
+        <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\speedtest.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\csv\speedtest_log.csv" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -46,8 +45,8 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="186" y="0" width="725" height="1080" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20181203">no</GUIConfig>
+        <GUIConfig name="AppPosition" x="248" y="0" width="725" height="1080" isMaximized="yes" />
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20190224">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
