@@ -15,7 +15,7 @@ def get_column_descriptions(df, column_list=None):
                 # Get input row in dictionary format; key = col_name
                 row_dict = {}
                 row_dict['column_name'] = column_name
-                row_dict['dtype'] = dtype
+                row_dict['dtype'] = str(dtype)
                 row_dict['count_blanks'] = df[column_name].isnull().sum()
                 
                 # Count how many unique numbers there are
@@ -35,6 +35,18 @@ def get_column_descriptions(df, column_list=None):
                 null_series = date_series[~date_series.notnull()]
                 row_dict['has_dates'] = (null_series.shape[0] < date_series.shape[0])
                 
+                # Show the minimum value in the column
+                try:
+                    row_dict['min_value'] = df[column_name].min()
+                except Exception:
+                    row_dict['min_value'] = math.nan
+                
+                # Show the maximum value in the column
+                try:
+                    row_dict['max_value'] = df[column_name].max()
+                except Exception:
+                    row_dict['max_value'] = math.nan
+                
                 # Show whether the column contains only integers
                 try:
                     row_dict['only_integers'] = (df[column_name].apply(lambda x: float(x).is_integer())).all()
@@ -43,8 +55,9 @@ def get_column_descriptions(df, column_list=None):
 
                 rows_list.append(row_dict)
 
-    ranking_columns = ['column_name', 'dtype', 'count_blanks', 'count_uniques', 'count_zeroes', 'has_dates', 'only_integers']
-    blank_ranking_df = pd.DataFrame(rows_list, columns=ranking_columns)
+    columns_list = ['column_name', 'dtype', 'count_blanks', 'count_uniques', 'count_zeroes', 'has_dates',
+                    'min_value', 'max_value', 'only_integers']
+    blank_ranking_df = pd.DataFrame(rows_list, columns=columns_list)
     
     return(blank_ranking_df)
 
