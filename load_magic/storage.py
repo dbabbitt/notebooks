@@ -15,9 +15,18 @@ DATA_CSV_FOLDER = os.path.join(DATA_FOLDER, 'csv')
 SAVES_PICKLE_FOLDER = os.path.join(SAVES_FOLDER, 'pickle')
 SAVES_CSV_FOLDER = os.path.join(SAVES_FOLDER, 'csv')
 if sys.version_info.major == 2:
-    os.makedirs(name=DATA_CSV_FOLDER)
-    os.makedirs(name=SAVES_PICKLE_FOLDER)
-    os.makedirs(name=SAVES_CSV_FOLDER)
+    try:
+        os.makedirs(name=DATA_CSV_FOLDER)
+    except:
+        pass
+    try:
+        os.makedirs(name=SAVES_PICKLE_FOLDER)
+    except:
+        pass
+    try:
+        os.makedirs(name=SAVES_CSV_FOLDER)
+    except:
+        pass
 elif sys.version_info.major == 3:
     os.makedirs(name=DATA_CSV_FOLDER, exist_ok=True)
     os.makedirs(name=SAVES_PICKLE_FOLDER, exist_ok=True)
@@ -44,15 +53,16 @@ def load_dataframes(**kwargs):
     frame_dict = {}
     for frame_name in kwargs:
         pickle_path = os.path.join(SAVES_PICKLE_FOLDER, '{}.pickle'.format(frame_name))
+        print('Attempting to load {}.'.format(os.path.abspath(pickle_path)))
         if not os.path.isfile(pickle_path):
-            print('No pickle exists at {} - attempting to load a saves folder csv.'.format(os.path.abspath(pickle_path)))
             csv_name = '{}.csv'.format(frame_name)
             csv_path = os.path.join(SAVES_CSV_FOLDER, csv_name)
+            print('No pickle exists - attempting to load {}.'.format(os.path.abspath(csv_path)))
             if not os.path.isfile(csv_path):
-                print('No csv exists at {} - trying the data folder.'.format(os.path.abspath(csv_path)))
                 csv_path = os.path.join(DATA_CSV_FOLDER, csv_name)
+                print('No csv exists - trying {}.'.format(os.path.abspath(csv_path)))
                 if not os.path.isfile(csv_path):
-                    print('No csv exists at {} - just forget it.'.format(os.path.abspath(csv_path)))
+                    print('No csv exists - just forget it.')
                     frame_dict[frame_name] = None
                 else:
                     frame_dict[frame_name] = load_csv(csv_name=frame_name)
