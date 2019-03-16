@@ -5,29 +5,28 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
-        <Find name="&amp;amp;" />
-        <Find name="Citi" />
-        <Find name="Credit Card Payments" />
-        <Find name="Credit C" />
-        <Find name="e\*" />
-        <Find name="\*e" />
-        <Find name="^#[^\r\n]+" />
-        <Find name="^\d+[^\r\n]+" />
-        <Find name="^\d+[\r\n]+" />
-        <Find name="race" />
+        <Find name="\bdoth\b" />
+        <Find name="\bmaketh\b" />
+        <Find name="\boft\b" />
+        <Find name="\bcometh\b" />
+        <Find name="\bhath\b" />
+        <Find name="\bunto\b" />
+        <Find name="\bye\b" />
+        <Find name="\bthy\b" />
+        <Find name="Would&apos;st" />
+        <Find name="\bthou\b" />
+        <Replace name="does" />
+        <Replace name="makes" />
+        <Replace name="often" />
+        <Replace name="comes" />
+        <Replace name="has" />
+        <Replace name="to" />
+        <Replace name="you" />
+        <Replace name="your" />
+        <Replace name="Would" />
         <Replace name="&amp;" />
-        <Replace name="[\n\t[" />
-        <Replace name="\n[" />
-        <Replace name="import " />
-        <Replace name="DATA_FOLDER + &apos;" />
-        <Replace name="AND" />
-        <Replace name="AS" />
-        <Replace name=", " />
-        <Replace name=",\n" />
-        <Replace name="," />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\logs\test.log" />
         <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\cron.vbs" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\csv\gggi_stem.csv" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\saves\html\links.html" />
@@ -37,6 +36,7 @@
         <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\speedlog.bat" />
         <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\speedtest.py" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\csv\speedtest_log.csv" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\saves\html\sankey_diagram.html" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
