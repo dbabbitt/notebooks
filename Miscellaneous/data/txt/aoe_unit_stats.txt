@@ -1,0 +1,1311 @@
+                                    ___   ___
+                              /\   /   ` |
+                             /__\  |   _ |---
+                            /    \ \___| |___
+
+                                     of
+            _____          __  ___  __   ___  __     ___ _____
+             |   ` |\  /| |  \  |  |  \ |    (  `     |    |
+             |____ | \/ | |--'  |  |--' |---  `.      |    |
+             |     |    | |    _|_ |  \ |___ .__)    _|_   |
+            _|___.                                       __|__
+              .---. ________________The________________ .--.
+             /      __        __        __  _   __   _ (
+             |     /  \ |\ | /  \ |  | |__ |_) /  \ |_) `--.
+             \     \__/ | \| \__/ \__/ |__ | \ \__/ | \     )
+              `---'            `'-.-                    `--'
+
+                         =======================
+                          Units FAQ Version 6.0
+                                May 2013
+                         =======================
+
+
+                     An In-Depth Guide to Units from
+              Age of Empires II: The Conquerors Version 1.0c and
+--------------------------------------------------------------------------
+		      Age of Empires II: HD Edition
+--------------------------------------------------------------------------
+
+                                    by:
+
+            |-|-|-|    = = = = = = = = = = =_= = = =    |-|-|-|
+            |_|_|_|       _  _  _  _  _  _ |_`  .       |_|_|_|
+         ._____|_____.   (_|(_||_)(_|| `| `|_)/_|_   ._____|_____.
+          \ooooooooo/    ._|  `|    `           |     \ooooooooo/
+           `-------'   = = = = = = = = = = = = = = =   `-------'
+
+
+--------------------------------------------------------------------------
+/////////////////////////////////////|\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+--------------------------------------------------------------------------
+
+
+                             =================
+                             Table of Contents
+                             =================
+
+
+
+---------
+Section 1 - Unit Statistics
+---------
+
+---------
+Section 2 - Unit Creation Times
+---------
+
+---------
+Section 3 - Pierce or Melee Damage
+---------
+
+---------
+Section 4 - Relative Unit Speeds
+---------
+
+---------
+Section 5 - Units and Counter-Units
+---------
+
+---------
+Section 6 - Attack Bonuses
+---------
+
+---------
+Section 7 - Version History
+---------
+
+
+
+--------------------------------------------------------------------------
+/////////////////////////////////////|\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+--------------------------------------------------------------------------
+
+                                 Section 1
+                              ===============
+                              Unit Statistics
+                              ===============
+
+Numbers are base values and do not reflect civilzation bonuses.
+
+Where there are forward slashes (/) the first number refers to standard
+units while the second number refers to elite units. For example, Eagle
+Warrior attack 7/9 means that the Eagle Warrior has 7 attack and the
+Elite Eagle Warrior has 9 attack.
+
+There are two types of armour, melee and pierce. The first one listed is
+melee armour and stops melee attacks. The second listed armour is pierce
+armour and stops piercing attacks. For example, an Eagle Warrior has 0/2
+armour. That means 0 melee armour and 2 pierce armour. See Section 3 for
+a list of the kind of damage (melee or pierce) that each unit inflicts
+and more information on how armour actually works.
+
+When armour is listed for a unit and an elite unit side by side (like
+this: 0/1 / 0/2), the first two numbers are the value of the standard
+unit's melee armour and pierce armour respectively. The last 2
+numbers are the melee and pierce armour of the elite unit respectively.
+
+
+
+B   - Buildings             HP  - Hit Points         S - Slow
+UU  - Unique Units          ATT - Attack             M - Medium
+Cav - Cavalry               RNG - Range              F - Fast
+Arc - Archers               SPD - Speed
+Inf - Infantry
+Spr - Spearmen
+
+
+--------
+Infantry
+--------
+
+/------------------------------------------------------------------------\
+|INFANTRY       |  COST   |  HP   | ATT  | ARMOUR    |RNG|SPD| ATT BONUS |
+|===============|=========|=======|======|===========|===|===|===========|
+|Militia        | 60F,20G |  40   |  4   | 0/1       | 0 |S-M|     B     |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Man@Arms       | 60F,20G |  45   |  6   | 0/1       | 0 |S-M| B,Eagle W.|
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Long Swordsman | 60F,20G |  55   |  9   | 0/1       | 0 |S-M| B,Eagle W.|
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|2H Swordsman   | 60F,20G |  60   |  11  | 0/1       | 0 |S-M| B,Eagle W.|
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Champion       | 60F,20G |  70   |  13  | 1/1       | 0 |S-M| B,Eagle W.|
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Spearman       | 35F,25W |  45   |  3   | 0/0       | 0 | M |    Cav    |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Pikeman        | 35F,25W |  55   |  4   | 0/0       | 0 | M |    Cav    |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Halberdier     | 35F,25W |  60   |  6   | 0/0       | 0 | M |    Cav    |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Eagle Warrior  | 20F,50G | 50/60 | 7/9  | 0/2 / 0/4 | 0 | F |Monks,Siege|
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Berserk*       | 65F,25G | 48/60 | 9/14 | 0/1 / 2/1 | 0 | M |     B     |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Huskarl        | 80F,40G | 60/70 | 10/12| 0/6 / 0/8 | 0 | M |  B, Ar    |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Jaguar Warrior | 60F,30G | 50/75 | 10/12| 1/0 / 2/0 | 0 | M |  B, Inf   |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Samurai        | 60F,30G | 60/80 | 8/12 | 1/1 / 1/1 | 0 | M |  B, UU    |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Teutonic Knight| 85F,40G | 70/100| 12/17| 5/2 / 10/2| 0 | S |     B     |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Throwing Axeman| 55F,25G | 50/60 | 7/8  | 0/0 / 1/0 |3/4| S |     B     |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Woad Raider    | 65F,25G | 65/80 | 8/13 | 0/1 / 0/1 | 0 | F |     B     |
+\------------------------------------------------------------------------/
+*  Berserks regenerate their hit points.
+
+
+-------
+Archers
+-------
+
+/------------------------------------------------------------------------\
+|ARCHERS        |  COST   |  HP   | ATT  | ARMOUR    |RNG|SPD| ATT BONUS |
+|===============|=========|=======|======|===========|===|===|===========|
+|Archer         | 25W,45G |  30   |  4   | 0/0       | 4 | S |    Spr    |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Crossbowman    | 25W,45G |  35   |  5   | 0/0       | 5 | S |    Spr    |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Arbalest       | 25W,45G |  40   |  6   | 0/0       | 5 | S |    Spr    |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Skirmisher     | 25F,35W | 30/35 | 2/3  | 0/2 / 0/4 |4/5| S |  Spr,Arc  |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Cavalry Archer | 40W,70G | 50/60 | 6/7  | 0/0 / 1/0 |4/4| F |    Spr    |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Hand Cannoneer*| 45F,50G |  35   |  17  | 1/0       | 7 | S |    Inf    |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Chu Ko Nu**    | 40W,35G | 45/50 | 8/8  | 0/0 / 0/0 |4/4| S |           |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Janissary      | 60F,55G | 35/40 | 17/22| 1/0 / 2/0 |8/8| S |           |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Longbowman     | 35W,40G | 35/40 | 6/7  | 0/0 / 0/1 |5/6| S |           |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Mangudai       | 55W,65G | 60/60 | 6/8  | 0/0 / 1/0 |4/4| F | Siege,Spr |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Plumed Archer  | 46W,46G | 50/65 | 5/5  | 0/1 / 0/2 |5/5|M-F|           |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|War Wagon      |120W,60G |150/200| 9/9  | 0/3 / 0/4 |4/5| F |           |
+\------------------------------------------------------------------------/
+** Chu Ko Nus fire 3 addtional arrows between reloads, Elite Chu Ko Nus
+   fire 5 additional arrows between reloads. The extra arrows cause
+   less damage than the first arrow and are less accurate.
+*  Hand Cannoneers require Chemistry to be trained.
+
+
+-------
+Cavalry
+-------
+
+/------------------------------------------------------------------------\
+|CAVALRY        |  COST   |  HP   | ATT  | ARMOUR    |RNG|SPD| ATT BONUS |
+|===============|=========|=======|======|===========|===|===|===========|
+|Scout Cavalry  |   80F   |  45   |  4   | 0/2       | 0 | F |   Monks   |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Light Cavalry  |   80F   |  60   |  7   | 0/2       | 0 | F |   Monks   |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Hussar         |   80F   |  75   |  7   | 0/2       | 0 | F |   Monks   |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Knight         | 60F,75G |  100  |  10  | 2/2       | 0 | F |           |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Cavalier       | 60F,75G |  120  |  12  | 2/2       | 0 | F |           |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Paladin        | 60F,75G |  160  |  14  | 2/3       | 0 | F |           |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Camel          | 55F,60G |100/120| 5/7  | 0/0 / 0/0 | 0 | F |    Cav    |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Cataphract     | 70F,75G |110/150| 9/12 | 2/1 / 2/1 | 0 | F |    Inf    |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Conquistador   | 60F,70G | 55/70 |16/18 | 2/2 / 2/2 | 0 | F |           |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Mameluke       | 55F,85G | 65/80 | 7/10 | 0/0 / 1/0 |3/3| F |    Cav    |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Tarkan         | 60F,60G |90/150 | 7/11 | 1/2 / 1/3 | 0 | F |     B     |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|War Elephant   |200F,75G |450/600|15/20 | 1/2 / 1/3 | 0 | S |     B     |
+\------------------------------------------------------------------------/
+
+
+-------------
+Siege Weapons
+-------------
+
+/------------------------------------------------------------------------\
+|SIEGE          |  COST   |  HP   | ATT  | ARMOUR    |RNG|SPD| ATT BONUS |
+|===============|=========|=======|======|===========|===|===|===========|
+|Scorpion**     | 75W,75G | 40/50 |12/16 | 0/2       |7/7| S |           |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Bombard Cannon*|225W,225G|  80   |  40  | 0/2       | 12| S | B, Siege, |
+|               |         |       |      |           |   |   |   Ships   |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Battering Ram  |160W,75G |  175  |  2   | 0/2       | 0 | S |Buildings, |
+|---------------|---------|-------|------|-----------|---|---|Scorpions, |
+|Capped Ram     |160W,75G |  200  |  3   | 2/2       | 0 | S |Trebuchets,|
+|---------------|---------|-------|------|-----------|---|---|Mangonels  |
+|Siege Ram      |160W,75G |  270  |  4   | 2/2       | 0 | S |           |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Mangonel*      |160W,135G|  50   |  40  | 2/3       | 7 | S |           |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Onager*        |160W,135G|  60   |  50  | 0/0 / 0/0 | 8 | S |           |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Siege Onager*  |160W,135G|  70   |  75  | 2/1 / 2/1 | 8 | S |           |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Trebuchet      |200W,200G|  150  | 200  | 2/2 / 2/2 | 16| S |  B, Ships |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Trebuchet(pakd)|200W,200G|  150  |  0   | 0/0 / 1/0 | 0 | S |           |
+|---------------|---------|-------|------|-----------|---|---|-----------|
+|Petard         | 80F,20G |  50   |  25  | 1/2 / 1/3 | 0 | S |     B     |
+\------------------------------------------------------------------------/
+** Scorpions cause pass-through damage, the bolt &quot;passes through&quot; the
+   target (damaging it), and damages any units behind the target.
+*  These units have an area of effect damage, this is also knows as
+   splash damage.
+
+
+-----
+Ships
+-----
+
+/------------------------------------------------------------------------\
+|SHIPS          |  COST   |  HP   |  ATT  | ARMOUR   |RNG|SPD| ATT BONUS |
+|===============|=========|=======|=======|==========|===|===|===========|
+|Fishing Ship   |  75W    |  60   |   0   | 0/4      | 0 | M |           |
+|---------------|---------|-------|-------|----------|---|---|-----------|
+|Trade Cog      |100W,50G |  80   |   0   | 0/6      | 0 | M |           |
+|---------------|---------|-------|-------|----------|---|---|-----------|
+|Transport Ship |  125W   |  100  |   0   | 4/8      | 0 | M |           |
+|---------------|---------|-------|-------|----------|---|---|-----------|
+|Galley         | 90W,30G |  120  |   6   | 0/6      | 5 | M |           |
+|---------------|---------|-------|-------|----------|---|---|-----------|
+|War Galley     | 90W,30G |  135  |   7   | 0/6      | 6 | M |           |
+|---------------|---------|-------|-------|----------|---|---|-----------|
+|Galleon        | 90W,30G |  165  |   8   | 0/8      | 7 | M |           |
+|---------------|---------|-------|-------|----------|---|---|-----------|
+|Fire Ship      | 75W,45G |100/120|  2/3  | 0/6 / 0/8|2\2| M |           |
+|---------------|---------|-------|-------|----------|---|---|-----------|
+|Demolition Ship| 70W,50G | 50/60 |110/140| 0/3 / 0/5| 0 | M |     B     |
+|---------------|---------|-------|-------|----------|---|---|-----------|
+|Cannon Galleon |200W,150G|120/150| 35/45 | 0/6 / 0/8| 13| S |     B     |
+|               |         |       |       |          |/15|   |           |
+|---------------|---------|-------|-------|----------|---|---|-----------|
+|Longboat*      |100W,50G |130/160|  7/8  | 0/6 / 0/8| 0 | F |           |
+|---------------|---------|-------|-------|----------|---|---|-----------|
+|Turtle Ship    |200W,200G|200/300| 50/50 | 6/5 / 8/6| 0 | S |           |
+\------------------------------------------------------------------------/
+*  Longboats fire multiple arrows.
+
+
+-----------
+Other Units
+-----------
+
+/------------------------------------------------------------------------\
+|OTHER UNITS    |  COST   |  HP   |  ATT  | ARMOUR   |RNG|SPD| ATT BONUS |
+|===============|=========|=======|=======|==========|===|===|===========|
+|Villager       |   50F   |  25   |   3   | 0/0      | 0 | M |Trees,Sheep|
+|---------------|---------|-------|-------|----------|---|---|-----------|
+|Trade Cart     |100W,50G |  70   |   0   | 0/0      | 0 | F |           |
+|---------------|---------|-------|-------|----------|---|---|-----------|
+|Monk           |  100G   |  30   |   0   | 0/0      | 9 | S |           |
+|---------------|---------|-------|-------|----------|---|---|-----------|
+|Missionary     |  100G   |  30   |   0   | 0/0      | 7 | M |           |
+\------------------------------------------------------------------------/
+
+
+--------------------------------------------------------------------------
+/////////////////////////////////////|\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+--------------------------------------------------------------------------
+
+                                 Section 2
+                            ===================
+                            Unit Creation Times
+                            ===================
+
+The following unit creation times are in Age of Empires II game time (not
+actual time). All times are in seconds. All times are accurate within 1
+second and are rounded down to the nearest whole number. (PI) means
+Post-Imperial and the times marked as (PI) are with conscription, unique
+technologies, and Imperial Age upgrades (such as Champion or Paladin). No
+(PI) means conscription was not researched and the unit was was fully
+upgraded except for Imperial Age upgrades. Except for Cavalry Archers,
+Eagle Warriors, and Chu Ko Nus, all units and thier upgrades (such as
+Militia and Champions) have the same creation time.
+
+--------------
+Standard Units
+--------------
+
+Archer - 27
+Archer (PI) - 20
+Battering Ram - 36
+Bombard Cannon - 57
+Camel - 22
+Camel (PI) - 16
+Cannon Galleon - 46
+Cavalry Archer - 34
+Cavalry Archer (PI) - 20
+Demolition Ship - 30
+Eagle Warrior - 35
+Eagle Warrior (PI) - 15
+Fire Ship - 36
+Fishing Ship - 40
+Galley - 60
+Galleon (PI) - 23
+Hand Cannoneer - 34
+Hand Cannoneer (PI) - 25
+Knight - 30
+Knight (PI) - 22
+Scout Cavalry - 30
+Scout Cavalry (PI) - 22
+Mangonel - 46
+Monk - 51
+Petard - 25
+Petard (PI) - 19
+Scorpion - 30
+Skirmisher - 22
+Skirmisher (PI) - 16
+Spearman - 22
+Spearman (PI) - 16
+Swordsman - 22
+Swordsman (PI) - 16
+Trade Cart - 50
+Trade Cog - 36
+Transport Ship - 46
+Trebuchet - 50
+Trebuchet (PI) - 37
+Villager - 25
+War Galley - 45
+
+----------------------
+Creation Speed Bonuses
+----------------------
+
+These times are with civilization bonuses such as the Britons' faster
+archery ranges.
+
+Aztecs - Military Units Created 15% Faster
+
+Aztec Archer - 23
+Aztec Archer (PI) - 17
+Aztec Battering Ram - 31
+Aztec Eagle Warrior - 30
+Aztec Eagle Warrior (PI) - 12
+Aztec Fire Ship - 31
+Aztec Galley - 31
+Aztec Mangonel - 39
+Aztec Monk - 43
+Aztec Petard - 21
+Aztec Petard (PI) - 16
+Aztec Scorpion - 26
+Aztec Skirmisher - 19
+Aztec Skirmisher (PI) - 14
+Aztec Spearman - 19
+Aztec Spearman (PI) - 14
+Aztec Swordsman - 18
+Aztec Swordsman (PI) - 13
+Aztec Trebuchet - 50
+Aztec Trebuchet (PI) - 37
+
+Britons - Archery Ranges Work 20% Faster
+
+British Archer - 22
+British Archer (PI) - 17
+British Cavalry Archer - 28
+British Cavalry Archer (PI) - 17
+British Skirmisher - 19
+British Skirmisher (PI) - 14
+
+Celts - Siege Workshops Work 20% Faster
+
+Celtic Battering Ram - 30
+Celtic Mangonel - 38
+Celtic Scorpion - 25
+
+Goths - Barracks Work 20% Faster
+      - Unique Technology: Barracks Units Created 50% Faster
+
+Gothic Spearman - 18
+Gothic Spearman (PI) - 6
+Gothic Swordsman - 17
+Gothic Swordsman (PI) - 6
+
+Huns - Stables Work 20% Faster
+
+Hunnic Knight - 25
+Hunnic Knigth (PI) - 19
+Hunnic Scout Cavalry - 25
+Hunnic Scout Cavalry (PI) - 19
+
+Persians - Town Centers and Docks Work 10% Faster Feudal, 15% Castle,
+           20% Imperial
+
+Persian Cannon Galleon (Imperial Age) - 38
+Persian Demolition Ship (Castle Age) - 27
+Persian Demolition Ship (Imperial Age) - 26
+Persian Fire Ship (Castle Age) - 31
+Persian Fire Ship (Imperial Age) - 30
+Persian Fishing Ship (Feudal Age) - 36
+Persian Fishing Ship (Castle Age) - 35
+Persian Fishing Ship (Imperial Age) - 33
+Persian Galleon (Imperial Age) - 30
+Persian Galley (Feudal Age) - 54
+Persian Galley (Castle Age) - 52
+Persian Trade Cog (Fuedal Age) - 34
+Persian Trade Cog (Castle Age) - 31
+Persian Trade Cog (Imperial Age) - 30
+Persian Transport Ship (Feudal Age) - 43
+Persian Transport Ship (Castle Age) - 40
+Persian Transport Ship (Imperial Age) - 38
+Persian Villager (Feudal Age) - 23
+Persian Villager (Castle Age) - 22
+Persian Villager (Imperial Age) - 21
+Persian War Galley (Castle Age) - 31
+Persian War Galley (Imperial Age) - 30
+
+Turks - Gunpowder Units Created 20% Faster
+
+Turkish Bombard Cannon - 45
+Turkish Cannon Galleon - 37
+Turkish Hand Cannoneer - 27
+Turkish Hand Cannoneer (PI) - 20
+
+------------
+Unique Units
+------------
+
+Berserk - 16
+Berserk (PI) - 12
+Cataphract - 20
+Cataphract (PI) - 15
+Chu Ko Nu - 19
+Chu Ko Nu (PI) - 10
+Conquistador - 24
+Conquistador (PI) - 18
+Huskarl (@ Castle) - 16
+Huskarl (@ Barracks) - 13
+Huskarl (PI @ Barracks) - 5
+Jaguar Warrior - 17
+Jaguar Warrior (PI) - 13
+Janissary - 17
+Janissary (PI) - 13
+Longboat - 25
+Longbowman - 19
+Longbowman (PI) - 14
+Mameluke - 23
+Mameluke (PI) - 17
+Mangudai - 26
+Mangudai (PI) - 19
+Missionary - 51
+Plumed Archer - 16
+Plumed Archer (PI) - 12
+Samurai - 9
+Samurai (PI) - 7
+Tarkan - 14
+Tarkan (PI) - 10
+Throwing Axeman - 17
+Throwing Axeman (PI) - 13
+Teutonic Knight - 12
+Teutonic Knight (PI) - 9
+Turtle Ship - 50
+War Elephant - 31
+War Elephant (PI) - 23
+War Wagon - 25
+War Wagon (PI) - 19
+Woad Raider - 10
+Woad Raider (PI) - 7
+
+
+--------------------------------------------------------------------------
+/////////////////////////////////////|\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+--------------------------------------------------------------------------
+
+                                 Section 3
+                           ======================
+                           Pierce or Melee Damage
+                           ======================
+
+Melee damage is blocked by melee armour (represented by the first number
+of a unit's armour). Pierce damage is blocked by pierce armour
+(represented by the second number in a unit's armour). For example, a
+unit with 2/3 armour will block 2 melee damage or 3 pierce damage,
+depending on the type of damage that is dealt. To determine the damage
+dealt when the unit being hit has armour, take the attackers attack
+(including added attack by blacksmith upgrades) and subtract from it the
+defending unit's armour. This will be the damage dealth by the attacker.
+Every attack does a minimum of 1 damage.
+
+For example:
+
+An arbalest has 6 + 4 attack and does pierce damage. A champion has
+1 + 4 pierce armour. The damage done by the arbalest to the champion
+will be:
+
+attack  -  armour  =  damage
+(6 + 4) - (1 + 4)  =  5 damage
+
+
+
+--------
+Infantry
+--------
+
+MELEE: Swordsmen                 PIERCE: [none]
+       Spearmen
+       Eagle Warriors
+       Berserks
+       Huskarls
+       Jaguar Warriors
+       Samurai
+       Teutonic Knights
+       Throwing Axemen
+       Woad Raider
+
+
+-------
+Archers
+-------
+
+MELEE: [none]                    PIERCE: Archers
+                                         Skirmishers
+                                         Cavalry Archers
+                                         Hand Cannoneers
+                                         Chu Ko Nus
+                                         Janissaries
+                                         Longbowmen
+                                         Mangudai
+                                         Plumed Archers
+                                         War Wagons
+
+
+-------
+Cavalry
+-------
+
+MELEE: Light Cavalry             Pierce: Conquistadors
+       Knights
+       Camels
+       Cataphracts
+       Mamelukes
+       Tarkans
+       War Elephants
+
+
+-------------
+Siege Weapons
+-------------
+
+MELEE: Bombard Cannons           PIERCE: Scorpions
+       Rams                              Trebuchets
+       Mangonels
+       Petards
+
+
+-----
+Ships
+-----
+
+MELEE: Fire Ships                PIERCE: Galleys
+       Demolition Ships                  Longboats
+       Cannon Galleons
+       Turtle Ships
+
+
+---------
+Buildings
+---------
+
+MELEE: [none]                    PIERCE: Towers
+                                         Castles
+                                         Town Centers
+                                         Bombard Towers
+
+
+--------------------------------------------------------------------------
+/////////////////////////////////////|\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+--------------------------------------------------------------------------
+
+                                 Section 4
+                            ====================
+                            Relative Unit Speeds
+                            ====================
+
+The following list has land units organized from fastest to slowest. All
+units are fully upgraded in the Post-Imperial Age and have Husbandry,
+Squires and/or Fervor. Any units with a &quot;-&quot; beside them travel at the same
+speed as the next unit above them. Special tests were done for Throwing
+Axemen, Woad Raiders, and War Elephants due to their civilization's
+technology trees and special bonuses.
+
+1.  Hussar/Light Cavalry
+2.  Camel
+-   Mangudia
+4.  Cavalry Archer
+-   Mameluke
+6.  Trade Cart (with Caravan)
+7.  Cataphract
+-   Paladin
+-   Tarkan
+10. Conquistador
+-   Eagle Warrior
+12. Woad Raider
+13. War Wagon
+-   King
+15. Garrisoned Mongolian Siege Ram
+-   Plumed Archer
+17. Huskarl
+18. Halberdier/Pikeman
+-   Jaguar Warrior
+-   Samurai
+-   Berserk
+22. Missionary
+23. Champion
+24. Mongolian Scorpion
+25. Villager
+26. Arbalests
+-   Chu Ko Nu
+-   Hand Cannoneer
+-   Janissary
+-   Longbowman
+-   Skirmisher
+32. Mongolian Siege Ram
+-   Mongolian Siege Onager
+34. Throwing Axeman
+35. War Elephant
+36. Petard
+-   Trebuchet
+38. Bombard Cannon
+-   Sheep/Turkey
+-   Teutonic Knight
+41. Monk
+42. Scorpion
+43. Siege Ram
+-   Onager
+
+
+--------------------------------------------------------------------------
+/////////////////////////////////////|\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+--------------------------------------------------------------------------
+
+                                 Section 5
+                          =======================
+                          Units and Counter-Units
+                          =======================
+
+The list below each heading contains the counter-units for the unit
+mentioned in the heading. For the LISTS, all unique unit archers and
+standard archers are listed as ARCHERS. For the HEADINGS, each archer is
+called by its proper name. The same thing applies to infantry and cavalry
+archers.
+
+--------------------------------------------------------------------------
+
+======================
+Infantry Counter-Units
+======================
+
+---------
+Swordsmen
+---------
+Massed Archers, Berserks, Teutonic Knights, Jaguar Warriors, Cavalry
+Archers, Hand Cannoneers, Janissaries, Cataphracts, Mamelukes,
+Conquistadors, Scorpions, War Elephants
+
+
+--------
+Spearmen
+--------
+Archers, Infantry, Janissaries, Cavalry Archers, Scorpions,
+Hand Cannoneers
+
+
+--------------
+Eagle Warriors
+--------------
+Infantry, Knights, Cataphracts, War Elephants, Mamelukes
+
+
+--------
+Berserks
+--------
+Massed Archers, Teutonic Knights, Samurai, Jaguar Warriors, Cavalry
+Archers, Hand Cannoneers, Janissaries, Cataphracts, War Elephants,
+Conquistadors, Scorpions
+
+
+--------
+Huskarls
+--------
+Swordsmen, Unique Unit Infantry, Light Cavalry, Knights, Catphracts,
+War Elephants, Mamelukes, Tarkans
+
+
+---------------
+Jaguar Warriors
+---------------
+Massed Archers, Cavalry Archers, Hand Cannoneers, Janissaries,
+Conquistadors, Cataphracts, War Elephants
+
+
+-------
+Samurai
+-------
+Massed Archers, Cavalry Archers, Hand Cannoneers, Janissaries, Scorpions,
+War Elephants
+
+
+----------------
+Teutonic Knights
+----------------
+Anything that has a ranged attack except Throwing Axemen and Mamelukes
+(archers with low attack should be massed), Cataphracts, War Elephants
+
+
+---------------
+Throwing Axemen
+---------------
+Samurai, Jaguar Warriors, Teutonic Knights, Archers, Cavalry Archers, Hand
+Cannoneers, Janissaries, Cataphracts, Conquistadors, Scorpions, Mangonels
+
+
+------------
+Woad Raiders
+------------
+Samurai, Teutonic Knights, Jaguar Warriors, Hand Cannoneers, Janissaries,
+Cataphracts, War Elephants
+
+--------------------------------------------------------------------------
+
+====================
+Archer Counter-Units
+====================
+
+-----------------------------
+Arbalests/Crossbowman/Archers
+-----------------------------
+Eagle Warriors, Huskarls, Woad Raiders, Skirmishers, Plumed Archers,
+War Wagons, Longbowmen, Light Cavalry, Knights, Tarkans, Cataphracts,
+Mangonels, Scorpions
+
+
+-----------
+Skirmishers
+-----------
+Infantry, Light Cavalry, Knights, Tarkans, War Elephants,
+Camels, Cataphracts, Mangonels, Scorpions
+
+
+---------------
+Cavalry Archers
+---------------
+Huskarls, Skrimishers, Massed Archers, Mangudai, War Wagons, Light
+Cavalry, Knights, Camels, Mamelukes, Tarkans, Mangonels, Scorpions
+
+
+---------------
+Hand Cannoneers
+---------------
+Huskarls, Eagle Warriors, Archers, Skirmishers, Cavalry Archers, Light
+Cavalry, Knights, Tarkans, Cataphracts, Mangonels, Scorpions
+
+
+----------
+Chu Ko Nus
+----------
+Huskarls, Eagle Warriors, Woad Raiders, Skirmishers, Plumed Archers,
+Longbowmen, Light Cavalry, Knights, Mangonels
+
+
+-----------
+Janissaries
+-----------
+Huskarls, Eagle Warriors, Archers, Skirmishers, Cavalry Archers, Light
+Cavalry, Knights, Mangonels
+
+
+----------
+Longbowmen
+----------
+Huskarls, Eagle Warriors, Skirmishers, Plumed Archers, Light Cavalry,
+Knights, War Wagons, Mangonels
+
+
+--------
+Mangudai
+--------
+Huskarls, Eagle Warriors, Plumed Archers, War Wagons, Skirmishers,
+Light Cavalry, Knights, Camels, Tarkans, Cataphracts, Mamelukes
+
+
+--------------
+Plumed Archers
+--------------
+Huskarls, Eagle Warriors, Woad Raiders, War Wagons, Light Cavalry,
+Knights, Cataphracts, Tarkans, Mangonels, Scorpions
+
+
+----------
+War Wagons
+----------
+Huskarls, Eagle Warriors, Woad Raiders, Massed Spearmen, Massed
+Skirmishers, Light Cavalry, Knights, Mamelukes, Camels, Tarkans, Mangonels
+
+--------------------------------------------------------------------------
+
+=====================
+Cavalry Counter-Units
+=====================
+
+-------------
+Light Cavalry
+-------------
+Infantry except Huskarls, Knights, Camels, Mamelukes, War Elephants
+
+
+-------
+Knights
+-------
+Spearmen, Camels, Mamelukes, Monks, War Elephants
+
+
+------
+Camels
+------
+Infantry, Massed Archers
+
+
+----------
+Cataphract
+----------
+Massed Spearmen, Knights, War Elephants, War Wagons
+
+
+-------------
+Conquistadors
+-------------
+Huskarls, Eagel Warriors, Massed Skirmishers, Light Cavalry, Knights,
+Camels, Mamelukes, Mangonels, War Wagons
+
+
+---------
+Mamelukes
+---------
+Massed Spearmen, Massed Skirmishers, Massed Archers, Cataphracts
+
+
+-------
+Tarkans
+-------
+Spearmen, Camels, Mamelukes, Knights, War Elephants
+
+
+-------------
+War Elephants
+-------------
+Monks, Missionaries, Spearmen
+
+--------------------------------------------------------------------------
+
+==================
+Ship Counter-Units
+==================
+
+-------
+Galleys
+-------
+Fire Ships, Turtle Ships
+
+
+----------
+Fire Ships
+----------
+Demolition Ships, Turtle Ships
+
+
+----------------
+Demolition Ships
+----------------
+Galleys, Longboats, Turtle Ships
+
+
+---------------
+Cannon Galleons
+---------------
+Galleys, Fire Ships, Demolition Ships, Turtle Ships, Longboats
+
+
+---------
+Longboats
+---------
+Fire Ships
+
+
+------------
+Turtle Ships
+------------
+Massed Galleys, Massed Fire Ships
+
+--------------------------------------------------------------------------
+
+========================
+Other Counter-Units
+========================
+
+-----
+Monks
+-----
+Light Cavalry, Eage Warriors, Woad Raiders, Cavalry Archers, Archers,
+Mangonels, Scorpions
+
+
+------------
+Missionaries
+------------
+Spearmen, Light Cavalry, Eage Warriors, Woad Raiders, Cavalry Archers,
+Archers, Mangonels, Scorpions
+
+
+---------
+Scorpions
+---------
+Light Cavalry, Knights, Tarkans, Cataphracts, Mamelukes, Camels, Mangudai,
+Woad Raiders, Eagle Warriors, Bombard Cannons, Trebuchets, Rams
+
+
+---------
+Mangonels
+---------
+Light Cavalry, Knights, Tarkans, Cataphracts, Mamelukes, Camels, Mangudai,
+Woad Raiders, Eagle Warriors, Bombard Cannons
+
+
+----
+Rams
+----
+Non-ranged Units, Mangonels, Bombard Cannons, Mangudai, Mamelukes,
+Throwing Axemen
+
+
+----------
+Trebuchets
+----------
+Non-ranged Units, Mangonels, Bombard Cannons, Rams, Mangudai, Mamelukes,
+Throwing Axemen
+
+
+---------------
+Bombard Cannons
+---------------
+Light Cavalry, Knights, Tarkans, Cataphracts, Mamelukes, Camels, Mangudai,
+Woad Raiders, Eagle Warriors, Huskarls, Archers
+
+
+-------
+Petards
+-------
+Anything (Especially Ranged Units)
+
+
+--------------------------------------------------------------------------
+/////////////////////////////////////|\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+--------------------------------------------------------------------------
+
+                                 Section 6
+                            ====================
+                               Attack Bonuses
+                            ====================
+
+The source of the following information is:
+http://aok.heavengames.com/cgi-bin/aokcgi/display.cgi?action=ct&amp;f=3,30576,,all
+All credit goes to the original author, zyxomma100
+--------------------------------------------------------------------------
+
+
+========================
+Attack Bonus vs. Cavalry
+========================
+--------------------------------------
+Knights, Missionaries, Cavalry Archers
+--------------------------------------
+Spearman         15
+Pikeman          22
+Halberdier       32
+Camel            10
+Heavy Camel      18
+Mameluke          9
+E. Mameluke      12
+E. Eagle Warrior  4
+
+-----------
+Cataphracts
+-----------
+Pikemen          10
+Halberdier       20
+Heavy Camel       6
+
+-----------------
+Elite Cataphracts
+-----------------
+Pikemen          10
+Halberdier       20
+Heavy Camel       2
+
+------
+Camels
+------
+Spearmen          7
+Pikemen          11
+Halberdier       16
+Camel             5
+Heavy Camel       9
+
+---------
+Mamelukes
+---------
+Spearmen          7
+Pikemen          11
+Halberdier       16
+Camel            10
+Heavy Camel      16
+Huskarl           6
+E. Huskarl       10
+Skirmisher        3
+E. Skirmisher     4
+E. Eagle Warrior  2
+
+-------------
+War Elephants
+-------------
+Spearmen          30
+Pikemen           47
+Halberdier        60
+Mameluke           9
+E. Mameluke       12
+Camel             10
+Heavy Camel       18
+E. Eagle Warrior   4
+
+
+=========================
+Attack Bonus vs. Infantry
+=========================
+------------
+All Infantry
+------------
+Hand Cannoneer     8
+Jaguar Warrior    10
+E. Jaguar Warrior 10
+Cataphract         9
+E. Cataphract     12
+
+
+========================
+Attack Bonus vs. Archers
+========================
+-----------
+All Archers
+-----------
+Skirmisher         3
+E. Skirmisher      4
+Huskarl            6
+E. Huskarl        10
+
+
+==============================
+Attack Bonus vs. Siege Weapons
+==============================
+---------
+All Siege 
+---------
+Battering Ram     43
+Capped Ram        54
+Siege Ram         68
+Bombard Cannon    28
+Eagle Warrior      6
+E. Eagle Warrior   8
+Mangudai           3
+E. Mangudai        5
+
+
+==========================
+Attack Bonus vs. Buildings
+==========================
+Numbers vary due to building armor
+-------------
+All Buildings
+-------------
+Man-at-Arms        1
+Long Swordsman     2
+2-Handed Swordsman 3
+Champion           3
+Berserk            2
+E. Berserk         3
+Throwing Axeman    1
+E. Throwing Axeman 2
+Samurai            2
+E. Samurai         3
+Teutonic Knight    4
+E. Teutonic Knight 4
+Jaguar Warrior     2
+E. Jaguar Warrior  2
+Huskarl            2
+E. Huskarl         3
+Woad Raider        2
+E. Woad Raider     3
+Spearman           1
+Pikeman            1
+Halberdier         1
+Tarkan             8
+E. Tarkan         10
+War Elephant       7
+E. War Elephant   10
+Battering Ram    125
+Capped Ram       150
+Siege Ram        200
+Petard           500
+Trebuchet        243
+Bombard Cannon   200
+Demo. Ship       164
+H. Demo. Ship    220
+Can. Galleon     200
+E. Can. Galleon  275
+
+
+======================
+Attack Bonus vs. Monks
+======================
+----------------------------------
+All Monks (including Missionaries)
+----------------------------------
+Eagle Warrior      8
+E. Eagle Warrior  10
+Scout Cavalry      6
+Light Cavalry     10
+Hussar            12
+
+
+=============================
+Attack Bonus vs. Unique Units
+=============================
+----------------
+All Unique Units
+----------------
+Samurai           10
+E. Samurai        12
+
+
+======================
+Attack Bonus vs. Ships
+======================
+---------
+All Ships
+---------
+Bombard Cannon    41
+Spearman           2
+Pikeman            6
+Halberdier        11
+
+
+--------------------------------------------------------------------------
+/////////////////////////////////////|\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+--------------------------------------------------------------------------
+
+                                 Section 7
+                              ===============
+                              Version History
+                              ===============
+
+-----------
+Version 1.0
+-----------
+
+This is the first of version of my FAQ, it includes such information as
+relative unit speeds and unit creation times. For links to my work with
+COST EFFECTIVE UNIT TESTS, please visit the Strategy Forum at
+aok.heavengames.com, search for &quot;gaparr64&quot; at the bottom of the topics
+page.
+
+This FAQ was created on June 5, 2001.
+
+-----------
+Version 2.0
+-----------
+
+Version 2.0 includes a list of units and their best counter-units. The
+title has now been changed to &quot;Unit Study&quot; instead of &quot;Unit Creation
+Times/Relative Unit Speeds.&quot;
+
+-----------
+Version 3.0
+-----------
+
+Version 3.0 includes a revision of the Units and Counter-Units section
+(thanks to the forumers at the Age of Kings Heaven Strategy Forum). Also
+included is a list of the type of damage that each unit does.
+
+-----------
+Version 4.0
+-----------
+
+Now in the proper GameFAQs format of 78 characters per line or less. Unit
+Statistics tables added to this version.
+
+-----------
+Version 4.1
+-----------
+
+New textart and the date of the latest version now displayed at top of
+the document. I also rearranged the sections.
+
+-----------
+Version 4.2
+-----------
+
+Improved textart and updates to the Units and Counter-Units section.
+
+-----------
+Version 4.3
+-----------
+
+Corrections to several spelling errors have been made. The title has been
+changed to Units FAQ instead of Unit Study. The copyright notice at the
+end of this document has been updated.
+
+-----------
+Version 5.0
+-----------
+
+This FAQ is now includes the changes made by the patch released by 
+Ensemble Studios. You can download the patch at www.ensemblestudios.com.
+
+-----------
+Version 6.0
+-----------
+
+Now Age of Empires II: HD Edition and The Conquerors version 1.0c 
+compatable. Added attack bonus table. 
+
+
+--------------------------------------------------------------------------
+/////////////////////////////////////|\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+--------------------------------------------------------------------------
+
+            |-|-|-|    = = = = = = = = = = =_= = = =    |-|-|-|
+            |_|_|_|       _  _  _  _  _  _ |_`  .       |_|_|_|
+         ._____|_____.   (_|(_||_)(_|| `| `|_)/_|_   ._____|_____.
+          \ooooooooo/    ._|  `|    `           |     \ooooooooo/
+           `-------'   = = = = = = = = = = = = = = =   `-------'
+
+
+
+This document was made for personal use only.  No part of this document
+may be copied or used in any form without permission from the author. You
+may not post this guide on your website or anywhere else without the
+expressed written permission of gamefaqs user gaparr64. This document is 
+Copyright 2013 gaparr64. 
+
+To contact the author please use gamefaqs.com messaging. 
+
+--------------------------------------------------------------------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|////////////////////////////////////
+--------------------------------------------------------------------------
