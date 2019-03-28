@@ -8,135 +8,135 @@
     <nodes>
       <node id="SJAs (Social Justice Activists)" label="SJAs (Social Justice Activists)">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-67.84254" y="171.5406"></viz:position>
+        <viz:position x="107.55308" y="109.20303"></viz:position>
       </node>
       <node id="Black Lives Matter" label="Black Lives Matter">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="632.8367" y="79.528946"></viz:position>
+        <viz:position x="-47.030514" y="-423.47067"></viz:position>
       </node>
       <node id="#MeToo" label="#MeToo">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-239.68309" y="376.3549"></viz:position>
+        <viz:position x="162.78369" y="-352.62427"></viz:position>
       </node>
       <node id="Gender-Critical Feminists" label="Gender-Critical Feminists">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-50.88109" y="645.3332"></viz:position>
+        <viz:position x="-283.41876" y="321.5447"></viz:position>
       </node>
       <node id="Modern Neo-Marxists" label="Modern Neo-Marxists">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-346.42056" y="-543.1497"></viz:position>
+        <viz:position x="-13.450492" y="-652.0483"></viz:position>
       </node>
       <node id="Antifa" label="Antifa">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-158.93779" y="-26.76976"></viz:position>
+        <viz:position x="162.25407" y="351.66333"></viz:position>
       </node>
       <node id="Occupy" label="Occupy">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-82.774895" y="-633.283"></viz:position>
+        <viz:position x="414.27792" y="-484.7223"></viz:position>
       </node>
       <node id="Dirtbag Left" label="Dirtbag Left">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-351.85037" y="-280.45673"></viz:position>
+        <viz:position x="-267.78577" y="-322.29425"></viz:position>
       </node>
       <node id="DSA (Democratic Socialists of America)" label="DSA (Democratic Socialists of America)">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="508.2599" y="-240.98688"></viz:position>
+        <viz:position x="-470.67197" y="-454.77426"></viz:position>
       </node>
       <node id="Establishment Left" label="Establishment Left">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-7.9533052" y="-151.33444"></viz:position>
+        <viz:position x="-161.91428" y="-23.465929"></viz:position>
       </node>
       <node id="Optimists" label="Optimists">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="367.66553" y="227.31758"></viz:position>
+        <viz:position x="-311.73718" y="556.9482"></viz:position>
       </node>
       <node id="New Atheists" label="New Atheists">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-417.9304" y="-15.973655"></viz:position>
+        <viz:position x="-582.43274" y="-248.54996"></viz:position>
       </node>
       <node id="Street Epistemologists" label="Street Epistemologists">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-647.3535" y="24.465902"></viz:position>
+        <viz:position x="-612.4713" y="196.42412"></viz:position>
       </node>
       <node id="Rationalist Diaspora" label="Rationalist Diaspora">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="560.0308" y="309.44348"></viz:position>
+        <viz:position x="519.4346" y="376.60315"></viz:position>
       </node>
       <node id="Post-Rationalists" label="Post-Rationalists">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-490.3116" y="-405.5729"></viz:position>
+        <viz:position x="369.98157" y="-237.01747"></viz:position>
       </node>
       <node id="Integral Theorists" label="Integral Theorists">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="158.77017" y="-629.61444"></viz:position>
+        <viz:position x="638.4534" y="-63.432724"></viz:position>
       </node>
       <node id="Sorters" label="Sorters">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-350.21506" y="267.13593"></viz:position>
+        <viz:position x="336.7215" y="209.83554"></viz:position>
       </node>
       <node id="Intellectual Dark Web" label="Intellectual Dark Web">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="415.32837" y="504.8587"></viz:position>
+        <viz:position x="581.97327" y="-296.23767"></viz:position>
       </node>
       <node id="Benedictines" label="Benedictines">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-583.93756" y="246.364"></viz:position>
+        <viz:position x="-97.54619" y="648.8108"></viz:position>
       </node>
       <node id="Christian Right" label="Christian Right">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-598.5165" y="-206.83736"></viz:position>
+        <viz:position x="-393.49814" y="111.45729"></viz:position>
       </node>
       <node id="Establishment Right" label="Establishment Right">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="273.28516" y="-298.16818"></viz:position>
+        <viz:position x="167.19942" y="-99.27154"></viz:position>
       </node>
       <node id="Tea Party" label="Tea Party">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-171.814" y="-393.2196"></viz:position>
+        <viz:position x="609.6286" y="166.42644"></viz:position>
       </node>
       <node id="Trumpists" label="Trumpists">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="143.08481" y="-37.818535"></viz:position>
+        <viz:position x="-100.39407" y="187.51897"></viz:position>
       </node>
       <node id="InfoWarriors" label="InfoWarriors">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="368.0161" y="-522.09534"></viz:position>
+        <viz:position x="-262.31985" y="-587.99994"></viz:position>
       </node>
       <node id="QAnoners" label="QAnoners">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="526.56415" y="-354.43936"></viz:position>
+        <viz:position x="-502.4602" y="401.56378"></viz:position>
       </node>
       <node id="Alt-Lite" label="Alt-Lite">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="156.82141" y="121.16123"></viz:position>
+        <viz:position x="-372.9902" y="-122.35881"></viz:position>
       </node>
       <node id="Alt-Right" label="Alt-Right">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="353.4484" y="-102.083725"></viz:position>
+        <viz:position x="-41.319195" y="-195.4736"></viz:position>
       </node>
       <node id="Modern Neo-Nazis" label="Modern Neo-Nazis">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="76.39015" y="-416.10596"></viz:position>
+        <viz:position x="404.4828" y="-1.1281973"></viz:position>
       </node>
       <node id="Neoreactionaries" label="Neoreactionaries">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="267.57986" y="344.1371"></viz:position>
+        <viz:position x="-47.504597" y="425.44525"></viz:position>
       </node>
       <node id="MRA (Mens Right Advocates)" label="MRA (Mens Right Advocates)">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-246.07156" y="563.12195"></viz:position>
+        <viz:position x="-624.25574" y="-31.729906"></viz:position>
       </node>
       <node id="Manosphere" label="Manosphere">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="36.78674" y="409.00055"></viz:position>
+        <viz:position x="349.39047" y="515.8349"></viz:position>
       </node>
       <node id="MGTOW (Men Going Their Own Way)" label="MGTOW (Men Going Their Own Way)">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="239.64635" y="598.3672"></viz:position>
+        <viz:position x="154.99127" y="616.9143"></viz:position>
       </node>
       <node id="Incels" label="Incels">
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-460.79382" y="436.8215"></viz:position>
+        <viz:position x="215.137" y="-594.81085"></viz:position>
       </node>
     </nodes>
     <edges>
