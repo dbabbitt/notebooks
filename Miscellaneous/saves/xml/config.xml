@@ -5,38 +5,38 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
-        <Find name="\bdoth\b" />
-        <Find name="\bmaketh\b" />
-        <Find name="\boft\b" />
-        <Find name="\bcometh\b" />
-        <Find name="\bhath\b" />
-        <Find name="\bunto\b" />
-        <Find name="\bye\b" />
-        <Find name="\bthy\b" />
-        <Find name="Would&apos;st" />
-        <Find name="\bthou\b" />
+        <Find name="Pierce armor of the Barracks units" />
+        <Find name="HP of Buildings ([^\r\n]+)" />
+        <Find name="Cost of ([^\r\n]+)" />
+        <Find name="[ \t]+&lt;" />
+        <Find name="\s*\.\s*" />
+        <Find name="&lt;span&gt;Edit&lt;/span&gt;" />
+        <Find name="&gt;[ \t]+" />
+        <Find name="&amp;nbsp;" />
+        <Find name="&lt;wbr&gt;" />
+        <Find name="\t+&lt;" />
+        <Replace name="Barracks units pierce armor" />
+        <Replace name="Buildings HP \1" />
+        <Replace name="\1 cost" />
+        <Replace name="&lt;" />
+        <Replace name=". " />
+        <Replace name="&gt;" />
+        <Replace name=" " />
+        <Replace name="&lt;/" />
         <Replace name="does" />
         <Replace name="makes" />
-        <Replace name="often" />
-        <Replace name="comes" />
-        <Replace name="has" />
-        <Replace name="to" />
-        <Replace name="you" />
-        <Replace name="your" />
-        <Replace name="Would" />
-        <Replace name="&amp;" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\cron.vbs" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\csv\gggi_stem.csv" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\saves\html\links.html" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\dataframes.py" />
         <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\speedtest-cli.1" />
         <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\test.log" />
         <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\speedlog.bat" />
         <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\speedtest.py" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\csv\speedtest_log.csv" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\saves\html\sankey_diagram.html" />
+        <File filename="C:\Users\dev\Downloads\fallen_angels.html" />
+        <File filename="C:\Users\dev\Downloads\Age of Empires II_ The Conquerors Expansion Units FAQ for PC by gaparr64 - GameFAQs.html" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\storage.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\dataframes.py" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -46,7 +46,7 @@
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
         <GUIConfig name="AppPosition" x="248" y="0" width="725" height="1080" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20190224">no</GUIConfig>
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20190405">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>

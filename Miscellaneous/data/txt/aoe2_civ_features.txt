@@ -1,0 +1,177 @@
+Age advancement cost
+Age advancement cost in the Imperial Age
+Age advancement reward in food
+Age advancement reward in wood
+Age advancement speed
+Archers firing rate
+Archery Range units HP rating
+Barracks units pierce armor rating in the Castle Age
+Barracks units pierce armor rating in the Feudal Age
+Barracks units pierce armor rating in the Imperial Age
+Battle Elephants cost
+Battle Elephants move rate
+Blacksmith upgrades cost in gold
+Blast Furnace cost
+Bombard Cannons fire rate
+Builders work rate
+Buildings (except Farms) cost in wood
+Buildings HP rating in the Castle Age
+Buildings HP rating in the Dark Age
+Buildings HP rating in the Feudal Age
+Buildings HP rating in the Imperial Age
+Buildings cost in stone
+Camels cost
+Camels pierce armor rating
+Cannon Galleons accuracy
+Cannon Galleons cannonballs speed
+Castles cost
+Cavalry Archers attack rating against standard buildings
+Cavalry Archers cost in the Castle Age
+Cavalry Archers cost in the Imperial Age
+Cavalry HP rating
+Cavalry archers firing rate
+Chemistry cost
+Commodity trading fee rate
+Conscription cost
+Demolition Ships HP rating
+Dock technologies cost
+Docks HP rating in the Castle Age
+Docks HP rating in the Feudal Age
+Docks HP rating in the Imperial Age
+Docks work rate in the Castle Age
+Docks work rate in the Feudal Age
+Docks work rate in the Imperial Age
+Eagle Scout at start of game
+Enemy herdables convertibility near enemy units
+Enemy positions concealment at game start
+Farm upgrades cost
+Farmers work rate
+Farms cost
+Feitoria building availability in the Imperial Age
+Fire Ships attack rate
+Fish Traps cost
+Fish Traps food limitation
+Fishermen food carrying capacity
+Fishermen work rate
+Fishing Ships HP rating in the Castle Age
+Fishing Ships HP rating in the Dark Age
+Fishing Ships HP rating in the Feudal Age
+Fishing Ships HP rating in the Imperial Age
+Fishing Ships cost
+Fishing Ships pierce armor rating in the Castle Age
+Fishing Ships pierce armor rating in the Dark Age
+Fishing Ships pierce armor rating in the Feudal Age
+Fishing Ships pierce armor rating in the Imperial Age
+Fishing Ships work rate in the Castle Age
+Fishing Ships work rate in the Dark Age
+Fishing Ships work rate in the Feudal Age
+Fishing Ships work rate in the Imperial Age
+Food at start of game
+Foot archers (except Skirmishers) firing range in the Castle Age
+Foot archers (except Skirmishers) firing range in the Imperial Age
+Foot archers cost in the Castle Age
+Foot archers cost in the Feudal Age
+Foot archers cost in the Imperial Age
+Foragers work rate
+Forging cost
+Fortifications building rate
+Galleys attack rate
+Gold Miners work rate
+Gold Mining cost
+Gold at start of game
+Gunpowder technologies cost
+Gunpowder units HP rating
+Gunpowder units cost
+Hand Cannoneers fire rate
+Hand Cart cost
+Houses population support
+Hunters work rate
+Hussar upgrades cost
+Hussars HP rating
+Infantry HP rating in the Castle Age
+Infantry HP rating in the Feudal Age
+Infantry HP rating in the Imperial Age
+Infantry attack against standard buildings
+Infantry attack in the Castle Age
+Infantry attack in the Feudal Age
+Infantry attack in the Imperial Age
+Infantry attack speed in the Castle Age
+Infantry attack speed in the Feudal Age
+Infantry attack speed in the Imperial Age
+Infantry costs in the Castle Age
+Infantry costs in the Feudal Age
+Infantry costs in the Imperial Age
+Infantry units move rate
+Iron Casting cost
+Light Cavalry HP rating
+Light Cavalry upgrades cost
+Llama at start of game
+Lumber Camp technologies cost
+Lumber Camps cost
+Lumberjacks work rate
+Markets cost in wood
+Military units creation speed
+Mills cost
+Mining Camps cost
+Monastery technologies cost
+Monks HP rating gain for every researched Monastery technology
+Monks healing range
+Murder Holes cost
+Pikeman upgrade cost
+Population cap at start of game
+Population cap in the Imperial Age
+Prior buildings requirements for advancement
+Prior buildings requirements for construction
+Resources consumption rate
+Scout Cavalry line cost
+Shepherds work rate
+Ships HP rating
+Ships move speed
+Siege Workshop units cost
+Siege weapons fire rate
+Skirmishers cost
+Spearman lines cost
+Stable units cost in the Castle Age
+Stable units cost in the Imperial Age
+Stone Miners work rate
+Technologies cost in the Castle Age
+Technologies cost in the Feudal Age
+Technologies cost in the Imperial Age
+Tower upgrade costs
+Towers (except Bombard Towers) firing range in the Castle Age
+Towers (except Bombard Towers) firing range in the Imperial Age
+Towers garrison units count
+Town Centers HP rating in the Castle Age
+Town Centers HP rating in the Feudal Age
+Town Centers HP rating in the Imperial Age
+Town Centers garrison units count
+Town Centers population support
+Town Centers wood cost in the Castle Age
+Town Centers wood cost in the Imperial Age
+Town Centers work rate in the Castle Age
+Town Centers work rate in the Feudal Age
+Town Centers work rate in the Imperial Age
+Town Watch cost
+Tracking cost
+Transport Ships HP rating
+Transport Ships carry capacity
+Trebuchets accuracy against units
+Units gold cost
+Villagers Houses garrison ability
+Villagers Line of Sight
+Villagers at start of game
+Villagers attack against Wild Boars
+Villagers benefit from Blacksmith infantry upgrades
+Villagers cost in the Castle Age
+Villagers cost in the Dark Age
+Villagers cost in the Feudal Age
+Villagers cost in the Imperial Age
+Villagers food carrying capacity from hunting
+Villagers move speed
+Villagers resources carrying capacity
+Villagers wild animals killing ability
+Warships cost in the Castle Age
+Warships cost in the Feudal Age
+Warships cost in the Imperial Age
+Wheelbarrow cost
+Wood at start of game
