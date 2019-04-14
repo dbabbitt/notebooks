@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rxb:regexbuddy xmlns:rxb="http://www.regexbuddy.com/regexbuddy48.xsd" version="4.8">
+<rxb:regexbuddy xmlns:rxb="http://www.regexbuddy.com/regexbuddy49.xsd" version="4.9">
 	<libraryfile>
 		<action id="LinesAppendcarriagereturntononblanklines" purpose="replace" multiline="1" namedduplicate="1">
 			<flavor>
@@ -110,12 +110,12 @@
 			<replace>print(${1})</replace>
 			<description>Python: Update print to 3.6</description>
 		</action>
-		<action id="RegexEscapemetacharacters" purpose="replace" multiline="1" namedduplicate="1">
+		<action id="RegexEscapemetacharacters" purpose="replace" multiline="1">
 			<flavor>
-				<builtin>perl526</builtin>
+				<builtin>python37</builtin>
 			</flavor>
-			<regex>^([^ ()\r\n]+)[ (]+([^ ()\r\n]+)[ (]*(([^ ()\r\n]+))?\)?</regex>
-			<replace>&#13;&#10;\L${1}\E_\L${2}\E_\L${4}\E_df = dataframe_dict['$&amp;'].dropna(axis=1, how='all')&#13;&#10;&#13;&#10;duplicate_list = [column_name for column_name in \L${1}\E_\L${2}\E_\L${4}\E_df.columns if column_name.endswith('.1')]&#13;&#10;if len(duplicate_list) > 0:&#13;&#10;    print('In the $&amp; sheet, there are ' + str(len(duplicate_list)) +&#13;&#10;          ' repeated column names (which pandas added a ".1" to in order to distinguish them):')&#13;&#10;    for duplicate in duplicate_list:&#13;&#10;        print(duplicate)&#13;&#10;&#13;&#10;unnamed_list = [column_name for column_name in \L${1}\E_\L${2}\E_\L${4}\E_df.columns if column_name.startswith('Unnamed')]&#13;&#10;if len(unnamed_list) > 0:&#13;&#10;    print('In the $&amp; sheet, there are ' + str(len(unnamed_list)) +&#13;&#10;          ' columns with blank header rows with stuff in them.')&#13;&#10;&#13;&#10;\L${1}\E_\L${2}\E_\L${4}\E_df.sample(5).T&#13;&#10;</replace>
+			<regex>([]\[{}()*+?.\\^$|])</regex>
+			<replace>\\\g&lt;1></replace>
 			<description>Regex: Escape metacharacters</description>
 		</action>
 		<action id="URLDifferentURLpartsnamedcapture" caseless="1" namedduplicate="1">

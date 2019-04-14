@@ -5,38 +5,38 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
-        <Find name="Pierce armor of the Barracks units" />
-        <Find name="HP of Buildings ([^\r\n]+)" />
-        <Find name="Cost of ([^\r\n]+)" />
-        <Find name="[ \t]+&lt;" />
-        <Find name="\s*\.\s*" />
-        <Find name="&lt;span&gt;Edit&lt;/span&gt;" />
-        <Find name="&gt;[ \t]+" />
-        <Find name="&amp;nbsp;" />
-        <Find name="&lt;wbr&gt;" />
-        <Find name="\t+&lt;" />
-        <Replace name="Barracks units pierce armor" />
-        <Replace name="Buildings HP \1" />
-        <Replace name="\1 cost" />
-        <Replace name="&lt;" />
-        <Replace name=". " />
-        <Replace name="&gt;" />
-        <Replace name=" " />
-        <Replace name="&lt;/" />
-        <Replace name="does" />
-        <Replace name="makes" />
+        <Find name="unit" />
+        <Find name="super_availability_df" />
+        <Find name='\s*&lt;span style=&quot;white-space: nowrap&quot;&gt;&lt;/span&gt;' />
+        <Find name="_df" />
+        <Find name="availability" />
+        <Find name="&lt;/ul&gt;" />
+        <Find name="&lt;/li&gt;" />
+        <Find name="&lt;li&gt;" />
+        <Find name="&lt;ul&gt;" />
+        <Find name="&lt;/h3&gt;" />
+        <Replace name="technology" />
+        <Replace name="unit_availability_df" />
+        <Replace name="super_availability_df" />
+        <Replace name="&lt;/td&gt;&lt;/tr&gt;" />
+        <Replace name="&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;" />
+        <Replace name="&lt;/tr&gt;" />
+        <Replace name="&lt;/td&gt;" />
+        <Replace name="&lt;td&gt;&lt;/td&gt;&lt;td&gt;" />
+        <Replace name="&lt;tr&gt;" />
+        <Replace name="&lt;tr&gt;&lt;td&gt;" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\speedtest-cli.1" />
-        <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\test.log" />
-        <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\speedlog.bat" />
-        <File filename="C:\Users\dev\Documents\repositories\speedtest-cli\speedtest.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\csv\speedtest_log.csv" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\saves\html\sankey_diagram.html" />
-        <File filename="C:\Users\dev\Downloads\fallen_angels.html" />
-        <File filename="C:\Users\dev\Downloads\Age of Empires II_ The Conquerors Expansion Units FAQ for PC by gaparr64 - GameFAQs.html" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\storage.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\dataframes.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\txt\aoe_unit_stats.txt" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\html\military_unit_links.html" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\txt\aoe2_civ_features.txt" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\html\aoe2_civ_bonuses.html" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\age-of-empires-ii\ipynb\Create Age of Empire II Technology Dataset.ipynb" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\age-of-empires-ii\data\html\blacksmith.html" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\age-of-empires-ii\ipynb\Clean Up AoE2 Civilization Bonuses Dataset.ipynb" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\age-of-empires-ii\ipynb\Clean Up AoE2 Technology Availability Dataset.ipynb" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\age-of-empires-ii\ipynb\Clean Up AoE2 Building Availability Dataset.ipynb" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\age-of-empires-ii\ipynb\Clean Up AoE2 Unit Availability Dataset.ipynb" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -45,8 +45,8 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="248" y="0" width="725" height="1080" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20190405">no</GUIConfig>
+        <GUIConfig name="AppPosition" x="310" y="0" width="725" height="1080" isMaximized="yes" />
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20190424">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
