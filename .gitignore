@@ -2,6 +2,7 @@
 # C:\Users\Dave\Documents\My Repositories\notebooks\.gitignore
 # exclude everything except personal directories
 /*
+!/age-of-empires-ii
 !/Miscellaneous
 !/Simulations
 !/TensorFlow

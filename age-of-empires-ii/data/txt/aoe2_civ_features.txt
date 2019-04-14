@@ -1,0 +1,115 @@
+
+Town Centers cost -50% wood starting in the Castle Age.
+Foot archers (except Skirmishers) have +1/+2 range in the Castle/Imperial Age.
+Shepherds work 25% faster.
+Buildings have +10%/+20%/+30%/+40% HP in the Dark/Feudal/Castle/Imperial Age.
+Camels, Skirmishers, and the Spearman lines are 25% cheaper.
+Fire Ships attack 20% faster.
+Advancing to the Imperial Age is 33% cheaper.
+Town Watch is free.
+Infantry units move 15% faster.
+Lumberjacks work 15% faster.
+Siege weapons fire +20% faster.
+Enemy herdables can be converted regardless of enemy units next to them.
+Start game with three extra Villagers, but with -200 food and -50 wood.
+Town Center supports ten population (instead of five).
+Technologies are 10%/15%/20% cheaper in the Feudal/Castle/Imperial Age.
+Demolition Ships have +50% HP.
+Farm upgrades are free.
+Castles are 25% cheaper.
+Cavalry have +20% HP.
+Foragers work 25% faster.
+Infantry are 35% cheaper starting in the Feudal Age.
+Infantry have +1 attack bonus against standard buildings.
+Villagers have +5 attack against Wild Boars and carry +15 food from hunting.
++10 population cap in the Imperial Age.
+Fishing Ships have double HP, +2 pierce armor, and work 5%/10%/15%/20% faster in the Dark/Feudal/Castle/Imperial Age.
+Mills, Lumber Camps and Mining Camps are 50% cheaper.
+Infantry attack 33% faster starting in the Feudal Age.
+Cavalry archers fire 25% faster.
+Light Cavalry and Hussars have +30% HP.
+Hunters work +50% faster.
+Start the game with +50 food and +50 wood.
+Town Centers and Docks have double HP and work 10%/15%/20% faster in the Feudal/Castle/Imperial Age.
+The commodity trading fee is 5%.
+Markets cost -75 wood.
+Transport Ships have double HP and +5 carry capacity.
+Galleys attack 20% faster.
+Cavalry Archers have +4 attack against standard buildings.
+Monks have double healing range.
+Towers garrison twice as many units.
+Murder Holes are free.
+Farms are 33% cheaper.
+Town Centers can garrison +10 units.
+Gunpowder units have +25% HP.
+Gunpowder technologies are 50% cheaper.
+Chemistry is free.
+Gold Miners work 20% faster.
+Light Cavalry and Hussar upgrades are free.
+Warships are 15%/15%/20% cheaper in the Feudal/Castle/Imperial Age.
+Infantry have +10%/+15%/+20% HP in the Feudal/Castle/Imperial Age.
+Wheelbarrow and Hand Cart are free.
+Start the game with an Eagle Scout.
+Villagers carry +5 extra resources.
+All military units are created 15% faster.
+Monks gain 5 HP for every researched Monastery technology.
+Start with +50 gold.
+Start the game with -100 wood, but with the population cap at the maximum.
+Cavalry Archers are 10%/20% cheaper in the Castle/Imperial Age.
+Trebuchets have +30% accuracy against units.
+Villagers have +3 Line of Sight.
+Stone Miners work 20% faster.
+Tower upgrades are free (Bombard Tower requires Chemistry).
+Towers (except Bombard Towers) have +1/+2 range in the Castle/Imperial Age.
+Fortifications are built 33% faster.
+Start the game with an Eagle Scout.
+Start the game with +1 Villager, but with -50 food.
+Resources last 15% longer.
+Foot archers are 10%/20%/30% cheaper in the Feudal/Castle/Imperial Age.
+Builders work 30% faster.
+Blacksmith upgrades cost no gold.
+Cannon Galleons have better accuracy and faster cannonballs.
+Hand Cannoneers and Bombard Cannons fire 15% faster.
+Start the game with an Eagle Scout.
+Start with a free Llama.
+Villagers benefit from Blacksmith infantry upgrades.
+Houses support 10 population.
+Buildings cost -15% stone.
+Fishermen work 15% faster and carry +15 food.
+Villagers are 10%/15%/20%/25% cheaper in the Dark/Feudal/Castle/Imperial Age.
+Camels have +1 pierce armor.
+Dock technologies are 50% cheaper.
+Fishing Ships are 15% cheaper.
+Gunpowder units are 20% cheaper.
+Advancing to the next Age is 15% cheaper.
+Forging, Iron Casting, and Blast Furnace are free.
+Scout Cavalry line is 15% cheaper.
+Villagers kill wild animals in one strike.
+Farmers work 15% faster.
+Tracking is free.
+Siege Workshop units are 15% cheaper.
+Villagers move +10% faster.
+Stable units are 15%/20% cheaper in the Castle/Imperial Age.
+Ships move +10% faster.
+Archers fire +15% faster.
+Receive +100 food and +100 gold whenever a new Age is reached.
+The Pikeman upgrade is free.
+Buildings cost -15% wood (except Farms).
+Barracks units have +1/+2/+3 pierce armor in the Feudal/Castle/Imperial Age.
+Gold Mining is free.
+All units cost -15% gold.
+All ships have +10% HP.
+The Feitoria becomes available for building in the Imperial Age.
+Lumber Camp technologies are free.
+Infantry has +1/+2/+3 attack in the Feudal/Castle/Imperial Age.
+Monastery technologies are 50% cheaper.
+No buildings are required to construct certain buildings or advance in Age.
+Battle Elephants move +15% faster.
+Villagers can garrison in Houses.
+Advancing in Age is +80% faster.
+Fish Traps are 33% cheaper.
+Fish Traps provide unlimited food.
+Battle Elephants are 30% cheaper.
+Reveal enemy positions at game start.
+Archery Range units have +20% HP.
+Conscription is free.
