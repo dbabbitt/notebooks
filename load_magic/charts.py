@@ -1,4 +1,6 @@
 
+import matplotlib.pyplot as plt
+import seaborn as sns
 import random
 
 colormaps_list = ['Accent', 'Accent_r', 'Blues', 'Blues_r', 'BrBG', 'BrBG_r', 'BuGn', 'BuGn_r', 'BuPu', 'BuPu_r',
@@ -25,3 +27,45 @@ colormaps_list = ['Accent', 'Accent_r', 'Blues', 'Blues_r', 'BrBG', 'BrBG_r', 'B
 def r(string_list=colormaps_list):
 
     return random.choice(string_list)
+
+def first_order_linear_scatterplot(df, xname, yname,
+                                   xlabel_str='Overall Capitalism (explanatory variable)',
+                                   ylabel_str='World Bank Gini % (response variable)',
+                                   x_adj='capitalist', y_adj='unequal',
+                                   title='"Wealth inequality is huge in the capitalist societies"'):
+    '''
+    Create a first order (linear) scatter plot assuming the data frame
+    has a column called Country
+    '''
+    fig1_fig = plt.figure(figsize=(12,8))
+    merge_axes_subplot = sns.regplot(x=xname, y=yname, scatter=True, data=df)
+    if not xlabel_str.endswith(' (explanatory variable)'):
+        xlabel_str = '{} (explanatory variable)'.format(xlabel_str)
+    xlabel_text = plt.xlabel(xlabel_str)
+    if not ylabel_str.endswith(' (response variable)'):
+        ylabel_str = '{} (response variable)'.format(ylabel_str)
+    ylabel_text = plt.ylabel(ylabel_str)
+    kwargs = dict(textcoords='offset points', ha='left', va='bottom',
+                  bbox=dict(boxstyle='round,pad=0.5', fc='yellow', alpha=0.5),
+                  arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0'))
+    least_x = xdata.min()
+    most_x = xdata.max()
+    most_y = ydata.max()
+    least_unequal = ydata.min()
+    for label, x, y in zip(df['Country'], xdata, ydata):
+        if (x == least_x):
+            annotation = plt.annotate('{} (least {})'.format(label, x_adj),
+                                      xy=(x, y), xytext=(40, 10), **kwargs)
+        elif (x == most_x):
+            annotation = plt.annotate('{} (most {})'.format(label, x_adj),
+                                      xy=(x, y), xytext=(-120, 220), **kwargs)
+        elif (y == most_y):
+            annotation = plt.annotate('{} (most {})'.format(label, y_adj),
+                                      xy=(x, y), xytext=(45, 0), **kwargs)
+        elif (y == least_unequal):
+            annotation = plt.annotate('{} (least {})'.format(label, y_adj),
+                                      xy=(x, y), xytext=(-200, 0), **kwargs)
+        elif (label == 'United States'):
+            annotation = plt.annotate('{} (most evil)'.format(label),
+                                      xy=(x, y), xytext=(-75, 25), **kwargs)
+    title_obj = fig1_fig.suptitle(title, fontsize=24)
