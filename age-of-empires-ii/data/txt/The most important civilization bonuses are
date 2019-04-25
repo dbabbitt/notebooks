@@ -1,0 +1,25 @@
+The top 6 most important civilization bonuses are...
+
+The most important civilization bonuses are:
+
+1. Castle cost in stone,
+
+2. Crop Rotation cost in Food,
+
+3. Crop Rotation cost in Wood,
+
+4. Heavy Plow cost in Food in the Castle Age,
+
+5. Heavy Plow cost in Wood in the Castle Age, and
+
+6. Heavy Plow cost in Wood in the Imperial Age
+
+**Methodology**
+
+I trained a Logistic Regression predictive model on the win rates for each civilization recorded at [aoestats - Age of Empires 2 Civilization Statistics](https://aoestats.io/). For that I needed to convert each civilization bonus into rows of numbers - one column for each civilization. For example, I needed a row that expresses that Koreans have their fortifications built 33% faster. Different buildings have different construction times, so I added one row each for only the buildings that Koreans have that are considered fortifications.
+
+I also performed feature selection to whittle the rows down to the top 6 most important using Recursive Feature Elimination. Recursive Feature Elimination (RFE) works by recursively removing attributes and building a predictive model on those attributes that remain.
+
+It uses the model accuracy provided by Logistic Regression to identify which attributes (and combination of attributes) contribute the most to predicting the target attribute (in this case, the highest win rate). So, number one is obvious: "Be the Franks; Do not be not the Franks". The rest seem kind of arbitrary.
+
+(I do not expect this will make your play more enjoyable. This probably just points out where the game is most imbalanced. The reason I spent so much of my free time doing what I do as a Data Scientist on this is because my son plays this game and this was a way for us to have something in common.)
