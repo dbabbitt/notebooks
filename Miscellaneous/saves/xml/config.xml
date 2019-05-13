@@ -27,16 +27,14 @@
         <Replace name="&lt;/td&gt;&lt;/tr&gt;" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Downloads\Note-20190411-0722-otter.ai.txt" />
-        <File filename="C:\Users\dev\Downloads\Note-20190411-0711-otter.ai.txt" />
-        <File filename="C:\Users\dev\Downloads\Note-20190411-0709-otter.ai.txt" />
-        <File filename="C:\Users\dev\Downloads\Note-20190410-1633-otter.ai.txt" />
-        <File filename="C:\Users\dev\Documents\gitignore.txt" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\.gitignore" />
         <File filename="C:\Users\dev\.jupyter\jupyter_notebook_config.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\charts.py" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\age-of-empires-ii\ipynb\Clean Up AoE2 Unit Availability Dataset.ipynb" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\age-of-empires-ii\data\html\aoestats.io_stats.html" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\nbviewer.py" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\youtube_dl\extractor\youtube.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\paths.py" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\selenium\webdriver\firefox\firefox_profile.py" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -46,7 +44,7 @@
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
         <GUIConfig name="AppPosition" x="553" y="8" width="725" height="1080" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20190424">no</GUIConfig>
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20190528">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
