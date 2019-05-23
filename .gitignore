@@ -1,7 +1,8 @@
 
-# C:\Users\Dave\Documents\My Repositories\notebooks\.gitignore
+# C:\Users\dev\Documents\repositories\notebooks\.gitignore
 # exclude everything except personal directories
 /*
+!/CompTIA Security+ Certification
 !/age-of-empires-ii
 !/Miscellaneous
 !/Simulations
