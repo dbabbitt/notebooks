@@ -1,5 +1,17 @@
 
 # C:\Users\dev\Documents\repositories\notebooks\.gitignore
+
+# Ignore big files
+Miscellaneous/saves/gif/Q2tbQEo.gif
+Word2Vec/data/GoogleNews-vectors-negative300.bin.gz
+Word2Vec/data/text8
+Word2Vec/data/text8-phrases
+Word2Vec/data/glove.6B/glove.6B.100d.txt
+Word2Vec/data/glove.6B/glove.6B.200d.txt
+Word2Vec/data/glove.6B/glove.6B.300d.txt
+Word2Vec/data/glove.6B/glove.6B.50d.txt
+Word2Vec/data/glove.840B.300d/glove.840B.300d.txt
+
 # exclude everything except personal directories
 /*
 !/CompTIA Security+ Certification

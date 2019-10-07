@@ -3,6 +3,7 @@ import pickle
 import pandas as pd
 import os
 import sys
+import csv
 
 # Change this to your data and saves folders
 DATA_FOLDER = r'../data/'
@@ -46,7 +47,7 @@ def load_csv(csv_name=None, folder_path=None):
     else:
         csv_path = os.path.join(csv_folder, '{}.csv'.format(csv_name))
     data_frame = pd.read_csv(csv_path, encoding=ENCODING_TYPE)
-    
+
     return(data_frame)
 
 def load_dataframes(**kwargs):
@@ -70,7 +71,7 @@ def load_dataframes(**kwargs):
                 frame_dict[frame_name] = load_csv(csv_name=frame_name, folder_path=SAVES_FOLDER)
         else:
             frame_dict[frame_name] = load_object(frame_name)
-    
+
     return frame_dict
 
 def load_object(obj_name, download_url=None):
@@ -89,7 +90,7 @@ def load_object(obj_name, download_url=None):
             attempt_to_pickle(object, pickle_path, raise_exception=False)
         else:
             with open(pickle_path, 'wb') as handle:
-                
+
                 # Protocal 4 is not handled in python 2
                 if sys.version_info.major == 2:
                     pickle.dump(object, handle, 2)
@@ -101,7 +102,7 @@ def load_object(obj_name, download_url=None):
         except:
             with open(pickle_path, 'rb') as handle:
                 object = pickle.load(handle)
-    
+
     return(object)
 
 def save_dataframes(include_index=False, **kwargs):
@@ -110,7 +111,7 @@ def save_dataframes(include_index=False, **kwargs):
             csv_path = os.path.join(SAVES_CSV_FOLDER, '{}.csv'.format(frame_name))
             print('Saving to {}'.format(os.path.abspath(csv_path)))
             kwargs[frame_name].to_csv(csv_path, sep=',', encoding=ENCODING_TYPE,
-                                      index=include_index)
+                                      index=include_index, quoting=csv.QUOTE_ALL)
 
 # Classes, functions, and methods cannot be pickled
 def store_objects(**kwargs):
@@ -123,7 +124,7 @@ def store_objects(**kwargs):
         else:
             print('Pickling to {}'.format(os.path.abspath(pickle_path)))
             with open(pickle_path, 'wb') as handle:
-                
+
                 # Protocal 4 is not handled in python 2
                 if sys.version_info.major == 2:
                     pickle.dump(kwargs[obj_name], handle, 2)
@@ -133,13 +134,13 @@ def store_objects(**kwargs):
 def attempt_to_pickle(df, pickle_path, raise_exception=False):
     try:
         print('Pickling to {}'.format(os.path.abspath(pickle_path)))
-        
+
         # Protocal 4 is not handled in python 2
         if sys.version_info.major == 2:
             df.to_pickle(pickle_path, protocol=2)
         elif sys.version_info.major == 3:
             df.to_pickle(pickle_path, protocol=pickle.HIGHEST_PROTOCOL)
-        
+
     except Exception as e:
         os.remove(pickle_path)
         print(e, ": Couldn't save {:,} cells as a pickle.".format(df.shape[0]*df.shape[1]))

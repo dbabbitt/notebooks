@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rxb:regexbuddy xmlns:rxb="http://www.regexbuddy.com/regexbuddy48.xsd" version="4.8">
+<rxb:regexbuddy xmlns:rxb="http://www.regexbuddy.com/regexbuddy47.xsd" version="4.7">
 	<libraryfile>
 		<action id="AddressZIPcodeUS">
 			<flavor>
@@ -98,7 +98,7 @@ Random
 123456789012345
 ]]></teststring>
 		</action>
-		<action id="CreditcardAllmajorcreditcardsbarenamed" freespacing="charclass" testscope="line">
+		<action id="CreditcardAllmajorcreditcardsbarenamed" freespacing="1" testscope="line">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
@@ -1791,7 +1791,7 @@ one,two,three,four
 			<description>Delimiters: Replace commas with tabs&#13;&#10;Replaces commas with tabs, except for commas inside double-quoted strings</description>
 			<teststring><![CDATA[one,two,"not,here",four]]></teststring>
 		</action>
-		<action id="Domainname" caseless="1" freespacing="charclass" testscope="line">
+		<action id="Domainname" caseless="1" freespacing="1" testscope="line">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
@@ -1800,7 +1800,7 @@ one,two,three,four
 			<teststring><![CDATA[www.regexbuddy.com
 www.regular-expressions.info]]></teststring>
 		</action>
-		<action id="Domainnameanchored" caseless="1" freespacing="charclass" testscope="line">
+		<action id="Domainnameanchored" caseless="1" freespacing="1" testscope="line">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
@@ -1809,7 +1809,7 @@ www.regular-expressions.info]]></teststring>
 			<teststring><![CDATA[www.regexbuddy.com
 www.regular-expressions.info]]></teststring>
 		</action>
-		<action id="Domainnameinternationalized" caseless="1" freespacing="charclass" testscope="line">
+		<action id="Domainnameinternationalized" caseless="1" freespacing="1" testscope="line">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
@@ -1818,14 +1818,14 @@ www.regular-expressions.info]]></teststring>
 			<teststring><![CDATA[www.regexbuddy.com
 www.regular-expressions.info]]></teststring>
 		</action>
-		<action id="Domainnameinternationalizedstrict" caseless="1" freespacing="charclass">
+		<action id="Domainnameinternationalizedstrict" caseless="1" freespacing="1">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
 			<regex>\b((?=[a-z0-9-]{1,63}\.)(xn--)?[a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,63}\b</regex>
 			<description>Domain name (internationalized, strict)&#13;&#10;Allow internationalized domains using punycode notation, as well as regular domain names&#13;&#10;Use lookahead to check that each part of the domain name is 63 characters or less</description>
 		</action>
-		<action id="Domainnamestrict" caseless="1" freespacing="charclass">
+		<action id="Domainnamestrict" caseless="1" freespacing="1">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
@@ -2528,7 +2528,7 @@ Invalid IP addresses
 999.999.999.999 (use a complex regex to skip these if needed)
 299.299.299.299]]></teststring>
 		</action>
-		<action id="IPv6addresscompressedandcompressedmixed" caseless="1" freespacing="charclass" testscope="line">
+		<action id="IPv6addresscompressedandcompressedmixed" caseless="1" freespacing="1" testscope="line">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
@@ -2561,7 +2561,7 @@ FFFF::127.32.67.15
 1234:1234:1234:1234::1234:1234:1234:1234:1234:1234:1234
 1234:1234:1234:1234::1234:1234:1234:1234:1234::1234:1234]]></teststring>
 		</action>
-		<action id="IPv6addresscompressedandcompressedmixedanchored" caseless="1" freespacing="charclass" testscope="line">
+		<action id="IPv6addresscompressedandcompressedmixedanchored" caseless="1" freespacing="1" testscope="line">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
@@ -2594,7 +2594,7 @@ FFFF::127.32.67.15
 1234:1234:1234:1234::1234:1234:1234:1234:1234:1234:1234
 1234:1234:1234:1234::1234:1234:1234:1234:1234::1234:1234]]></teststring>
 		</action>
-		<action id="IPv6addresscompressedandcompressedmixednolookaround" caseless="1" freespacing="charclass" testscope="line">
+		<action id="IPv6addresscompressedandcompressedmixednolookaround" caseless="1" freespacing="1" testscope="line">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
@@ -2627,7 +2627,7 @@ FFFF::127.32.67.15
 1234:1234:1234:1234::1234:1234:1234:1234:1234:1234:1234
 1234:1234:1234:1234::1234:1234:1234:1234:1234::1234:1234]]></teststring>
 		</action>
-		<action id="IPv6addresscompressedmixed" caseless="1" freespacing="charclass" testscope="line">
+		<action id="IPv6addresscompressedmixed" caseless="1" freespacing="1" testscope="line">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
@@ -2660,7 +2660,7 @@ FFFF::127.32.67.15
 1234:1234:1234:1234::1234:1234:1234:1234:1234:1234:1234
 1234:1234:1234:1234::1234:1234:1234:1234:1234::1234:1234]]></teststring>
 		</action>
-		<action id="IPv6addresscompressedmixedanchored" caseless="1" freespacing="charclass" testscope="line">
+		<action id="IPv6addresscompressedmixedanchored" caseless="1" freespacing="1" testscope="line">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
@@ -2693,7 +2693,7 @@ FFFF::127.32.67.15
 1234:1234:1234:1234::1234:1234:1234:1234:1234:1234:1234
 1234:1234:1234:1234::1234:1234:1234:1234:1234::1234:1234]]></teststring>
 		</action>
-		<action id="IPv6addresscompressedmixednolookaround" caseless="1" freespacing="charclass" testscope="line">
+		<action id="IPv6addresscompressedmixednolookaround" caseless="1" freespacing="1" testscope="line">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
@@ -2726,7 +2726,7 @@ FFFF::127.32.67.15
 1234:1234:1234:1234::1234:1234:1234:1234:1234:1234:1234
 1234:1234:1234:1234::1234:1234:1234:1234:1234::1234:1234]]></teststring>
 		</action>
-		<action id="IPv6addresscompressed" caseless="1" freespacing="charclass" testscope="line">
+		<action id="IPv6addresscompressed" caseless="1" freespacing="1" testscope="line">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
@@ -2759,7 +2759,7 @@ FFFF::127.32.67.15
 1234:1234:1234:1234::1234:1234:1234:1234:1234:1234:1234
 1234:1234:1234:1234::1234:1234:1234:1234:1234::1234:1234]]></teststring>
 		</action>
-		<action id="IPv6addresscompressedanchored" caseless="1" freespacing="charclass" testscope="line">
+		<action id="IPv6addresscompressedanchored" caseless="1" freespacing="1" testscope="line">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
@@ -2792,7 +2792,7 @@ FFFF::127.32.67.15
 1234:1234:1234:1234::1234:1234:1234:1234:1234:1234:1234
 1234:1234:1234:1234::1234:1234:1234:1234:1234::1234:1234]]></teststring>
 		</action>
-		<action id="IPv6addresscompressednolookaround" caseless="1" freespacing="charclass" testscope="line">
+		<action id="IPv6addresscompressednolookaround" caseless="1" freespacing="1" testscope="line">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
@@ -2891,7 +2891,7 @@ FFFF::127.32.67.15
 1234:1234:1234:1234::1234:1234:1234:1234:1234:1234:1234
 1234:1234:1234:1234::1234:1234:1234:1234:1234::1234:1234]]></teststring>
 		</action>
-		<action id="IPv6addressstandardandmixed" caseless="1" freespacing="charclass" testscope="line">
+		<action id="IPv6addressstandardandmixed" caseless="1" freespacing="1" testscope="line">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
@@ -2924,7 +2924,7 @@ FFFF::127.32.67.15
 1234:1234:1234:1234::1234:1234:1234:1234:1234:1234:1234
 1234:1234:1234:1234::1234:1234:1234:1234:1234::1234:1234]]></teststring>
 		</action>
-		<action id="IPv6addressstandardandmixedanchored" caseless="1" freespacing="charclass" testscope="line">
+		<action id="IPv6addressstandardandmixedanchored" caseless="1" freespacing="1" testscope="line">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
@@ -3033,7 +3033,7 @@ FFFF::127.32.67.15
 
 line
 line with
-    
+
 four spaces]]></teststring>
 		</action>
 		<action id="LinesAppendsomethingtoeachline" purpose="replace" multiline="1">
@@ -3047,7 +3047,7 @@ four spaces]]></teststring>
 
 line
 line with
-    
+
 four spaces]]></teststring>
 		</action>
 		<action id="LinesBlankmaycontainwhitespace" purpose="replace" multiline="1">
@@ -3060,7 +3060,7 @@ four spaces]]></teststring>
 
 line
 line with
-    
+
 four spaces]]></teststring>
 		</action>
 		<action id="LinesCompletelinematchedbyseveralunrelatedregularexpressionsany" multiline="1">
@@ -3114,7 +3114,7 @@ four spaces]]></teststring>
 
 line
 line with
-    
+
 four spaces]]></teststring>
 		</action>
 		<action id="LinesDeleteadjacentduplicatelines" purpose="replace" multiline="1">
@@ -3142,7 +3142,7 @@ four]]></teststring>
 
 line
 line with
-    
+
 four spaces]]></teststring>
 		</action>
 		<action id="LinesDeleteduplicatelinesanywhere" purpose="replace" multiline="1">
@@ -3187,17 +3187,8 @@ four]]></teststring>
 
 line
 line with
-    
+
 four spaces]]></teststring>
-		</action>
-		<action id="LinesTruncatealineafteraregexmatch" purpose="replace" multiline="1">
-			<flavor>
-				<builtin>java8</builtin>
-			</flavor>
-			<regex>(%REGEX%).*$</regex>
-			<replace>$1</replace>
-			<description>Lines: Truncate a line after a regex match.&#13;&#10;If the regex matches more than once on the same line, everything after the first match is deleted.</description>
-			<parameter description="The regular expression that should partially match the line" defaultvalue="%REGEX%">%REGEX%</parameter>
 		</action>
 		<action id="LinesTruncatealineafteraregexmatch" purpose="replace" multiline="1">
 			<flavor>
@@ -3208,13 +3199,13 @@ four spaces]]></teststring>
 			<description>Lines: Truncate a line after a regex match.&#13;&#10;The regex you specify is guaranteed to match only once on each line.  If the original regex you specified should match more than once, the line will be truncated after the last match.&#13;&#10;&#13;&#10;Explanation: This works because the first dot-star is greedy.  It will match the complete line, and then backtrack until %REGEX% can be matched.</description>
 			<parameter description="The regular expression that should partially match the line" defaultvalue="%REGEX%">%REGEX%</parameter>
 		</action>
-		<action id="LinesTruncatealinebeforearegexmatch" purpose="replace" multiline="1">
+		<action id="LinesTruncatealineafteraregexmatch" purpose="replace" multiline="1">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
-			<regex>^.*(%REGEX%)</regex>
+			<regex>(%REGEX%).*$</regex>
 			<replace>$1</replace>
-			<description>Lines: Truncate a line before a regex match.&#13;&#10;If the regex matches more than once on the same line, everything before the last match is deleted.</description>
+			<description>Lines: Truncate a line after a regex match.&#13;&#10;If the regex matches more than once on the same line, everything after the first match is deleted.</description>
 			<parameter description="The regular expression that should partially match the line" defaultvalue="%REGEX%">%REGEX%</parameter>
 		</action>
 		<action id="LinesTruncatealinebeforearegexmatch" purpose="replace" multiline="1">
@@ -3224,6 +3215,15 @@ four spaces]]></teststring>
 			<regex>^.*(%REGEX%)(.*)$</regex>
 			<replace>$1$2</replace>
 			<description>Lines: Truncate a line before a regex match.&#13;&#10;The regex you specify is guaranteed to match only once on each line.  If the original regex you specified should match more than once, the line will be truncated before the first match.</description>
+			<parameter description="The regular expression that should partially match the line" defaultvalue="%REGEX%">%REGEX%</parameter>
+		</action>
+		<action id="LinesTruncatealinebeforearegexmatch" purpose="replace" multiline="1">
+			<flavor>
+				<builtin>java8</builtin>
+			</flavor>
+			<regex>^.*(%REGEX%)</regex>
+			<replace>$1</replace>
+			<description>Lines: Truncate a line before a regex match.&#13;&#10;If the regex matches more than once on the same line, everything before the last match is deleted.</description>
 			<parameter description="The regular expression that should partially match the line" defaultvalue="%REGEX%">%REGEX%</parameter>
 		</action>
 		<action id="LinesTruncatealinebeforeandafteraregexmatch" purpose="replace" multiline="1">
@@ -3812,8 +3812,8 @@ The number 12345678901234567890 is quite long
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
-			<regex>[-+]?\b[0-9]*\.?[0-9]+\b</regex>
-			<description>Number: floating point&#13;&#10;Matches an integer or a floating point number with optional integer part.  The sign is optional.</description>
+			<regex>[-+]?\b[0-9]+(\.[0-9]+)?\b</regex>
+			<description>Number: floating point&#13;&#10;Matches an integer or a floating point number with mandatory integer part.  The sign is optional.</description>
 			<teststring><![CDATA[12.34
 12.
 .34
@@ -3833,29 +3833,8 @@ The number 12345678901234567890 is quite long
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
-			<regex>[-+]?\b[0-9]+(\.[0-9]+)?\b</regex>
-			<description>Number: floating point&#13;&#10;Matches an integer or a floating point number with mandatory integer part.  The sign is optional.</description>
-			<teststring><![CDATA[12.34
-12.
-.34
-12.345
-1,234.45
-1234.45
-1234567890
-+12.34
--12.34
-+1234
--1234
-Attention: 1 2 3 test
-The number 12345678901234567890 is quite long
-1+1=2]]></teststring>
-		</action>
-		<action id="Numberfloatingpointanchored" testscope="line">
-			<flavor>
-				<builtin>java8</builtin>
-			</flavor>
-			<regex>^[-+]?[0-9]*\.?[0-9]+\b$</regex>
-			<description>Number: floating point (anchored)&#13;&#10;Matches an integer or a floating point number with optional integer part.  The sign is optional.</description>
+			<regex>[-+]?\b[0-9]*\.?[0-9]+\b</regex>
+			<description>Number: floating point&#13;&#10;Matches an integer or a floating point number with optional integer part.  The sign is optional.</description>
 			<teststring><![CDATA[12.34
 12.
 .34
@@ -3877,6 +3856,27 @@ The number 12345678901234567890 is quite long
 			</flavor>
 			<regex>^[-+]?[0-9]+(\.[0-9]+)?$</regex>
 			<description>Number: floating point (anchored)&#13;&#10;Matches an integer or a floating point number with mandatory integer part.  The sign is optional.</description>
+			<teststring><![CDATA[12.34
+12.
+.34
+12.345
+1,234.45
+1234.45
+1234567890
++12.34
+-12.34
++1234
+-1234
+Attention: 1 2 3 test
+The number 12345678901234567890 is quite long
+1+1=2]]></teststring>
+		</action>
+		<action id="Numberfloatingpointanchored" testscope="line">
+			<flavor>
+				<builtin>java8</builtin>
+			</flavor>
+			<regex>^[-+]?[0-9]*\.?[0-9]+\b$</regex>
+			<description>Number: floating point (anchored)&#13;&#10;Matches an integer or a floating point number with optional integer part.  The sign is optional.</description>
 			<teststring><![CDATA[12.34
 12.
 .34
@@ -3933,8 +3933,8 @@ The number 12345678901234567890 is quite long
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
-			<regex>(?&lt;!\S)\d++(?!\S)</regex>
-			<description>Number: integer&#13;&#10;Does not match numbers like 123.456</description>
+			<regex>\b\d+\b</regex>
+			<description>Number: integer&#13;&#10;Will match 123 and 456 as separate integer numbers in 123.456</description>
 			<teststring><![CDATA[12.34
 12.
 .34
@@ -3954,8 +3954,8 @@ The number 12345678901234567890 is quite long
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
-			<regex>\b\d+\b</regex>
-			<description>Number: integer&#13;&#10;Will match 123 and 456 as separate integer numbers in 123.456</description>
+			<regex>(?&lt;!\S)\d++(?!\S)</regex>
+			<description>Number: integer&#13;&#10;Does not match numbers like 123.456</description>
 			<teststring><![CDATA[12.34
 12.
 .34
@@ -4038,8 +4038,8 @@ The number 12345678901234567890 is quite long
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
-			<regex>[-+]?\b[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?\b</regex>
-			<description>Number: scientific floating point&#13;&#10;Matches an integer or a floating point number with optional integer part.&#13;&#10;Both the sign and exponent are optional.&#13;&#10;</description>
+			<regex>[-+]?(?:\b[0-9]+(?:\.[0-9]*)?|\.[0-9]+\b)(?:[eE][-+]?[0-9]+\b)?</regex>
+			<description>Number: scientific floating point&#13;&#10;Matches an integer or a floating point number.&#13;&#10;Integer and fractional parts are both optional.&#13;&#10;Both the sign and exponent are optional.</description>
 			<teststring><![CDATA[12.34
 12.
 .34
@@ -4061,31 +4061,8 @@ The number 12345678901234567890 is quite long
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
-			<regex>[-+]?(?:\b[0-9]+(?:\.[0-9]*)?|\.[0-9]+\b)(?:[eE][-+]?[0-9]+\b)?</regex>
-			<description>Number: scientific floating point&#13;&#10;Matches an integer or a floating point number.&#13;&#10;Integer and fractional parts are both optional.&#13;&#10;Both the sign and exponent are optional.</description>
-			<teststring><![CDATA[12.34
-12.
-.34
-12.345
-1,234.45
-1234.45
-1234567890
-+12.34
--12.34
-+1234
--1234
-+1234.567e-89
--1234.567e89
-Attention: 1 2 3 test
-The number 12345678901234567890 is quite long
-1+1=2]]></teststring>
-		</action>
-		<action id="Numberscientificfloatingpointanchored" testscope="line">
-			<flavor>
-				<builtin>java8</builtin>
-			</flavor>
-			<regex>^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?$</regex>
-			<description>Number: scientific floating point (anchored)&#13;&#10;Matches an integer or a floating point number with optional integer part.&#13;&#10;Both the sign and exponent are optional.&#13;&#10;</description>
+			<regex>[-+]?\b[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?\b</regex>
+			<description>Number: scientific floating point&#13;&#10;Matches an integer or a floating point number with optional integer part.&#13;&#10;Both the sign and exponent are optional.&#13;&#10;</description>
 			<teststring><![CDATA[12.34
 12.
 .34
@@ -4109,6 +4086,29 @@ The number 12345678901234567890 is quite long
 			</flavor>
 			<regex>^[-+]?(?:[0-9]+(?:\.[0-9]*)?|\.[0-9]+)(?:[eE][-+]?[0-9]+)?$</regex>
 			<description>Number: scientific floating point (anchored)&#13;&#10;Matches an integer or a floating point number.&#13;&#10;Integer and fractional parts are both optional.&#13;&#10;Both the sign and exponent are optional.</description>
+			<teststring><![CDATA[12.34
+12.
+.34
+12.345
+1,234.45
+1234.45
+1234567890
++12.34
+-12.34
++1234
+-1234
++1234.567e-89
+-1234.567e89
+Attention: 1 2 3 test
+The number 12345678901234567890 is quite long
+1+1=2]]></teststring>
+		</action>
+		<action id="Numberscientificfloatingpointanchored" testscope="line">
+			<flavor>
+				<builtin>java8</builtin>
+			</flavor>
+			<regex>^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?$</regex>
+			<description>Number: scientific floating point (anchored)&#13;&#10;Matches an integer or a floating point number with optional integer part.&#13;&#10;Both the sign and exponent are optional.&#13;&#10;</description>
 			<teststring><![CDATA[12.34
 12.
 .34
@@ -5927,8 +5927,6 @@ no comment
 			<description>Programming: // comment&#13;&#10;&#13;&#10;Single-line comment started by // anywhere on the line</description>
 			<teststring><![CDATA[// comment
 another // comment
-// comment using a \
-for continuation on the next line
 no comment]]></teststring>
 		</action>
 		<action id="Programmingcomment" multiline="1">
@@ -5939,6 +5937,8 @@ no comment]]></teststring>
 			<description>Programming: // comment&#13;&#10;&#13;&#10;Single-line comment started by // anywhere on the line</description>
 			<teststring><![CDATA[// comment
 another // comment
+// comment using a \
+for continuation on the next line
 no comment]]></teststring>
 		</action>
 		<action id="Programmingcommentwithcontinuation" multiline="1">
@@ -6110,16 +6110,6 @@ X2345678-90AB-CDEF-1234-567890ABCDEX
 		</action>
 		<action id="QuotesReplacesmartdoublequoteswithstraightdoublequotes" purpose="replace">
 			<flavor>
-				<builtin>java8</builtin>
-			</flavor>
-			<regex>[\u201C\u201D\u201E\u201F\u2033\u2036]</regex>
-			<replace>"</replace>
-			<description>Quotes: Replace smart double quotes with straight double quotes.&#13;&#10;Unicode version for use with Unicode regex engines.</description>
-			<teststring><![CDATA["straight"
-“smart”]]></teststring>
-		</action>
-		<action id="QuotesReplacesmartdoublequoteswithstraightdoublequotes" purpose="replace">
-			<flavor>
 				<builtin>phppreg5609</builtin>
 			</flavor>
 			<regex>[\x84\x93\x94]</regex>
@@ -6127,14 +6117,15 @@ X2345678-90AB-CDEF-1234-567890ABCDEX
 			<description>Quotes: Replace smart double quotes with straight double quotes.&#13;&#10;ANSI version for use with 8-bit regex engines and the Windows code page 1252.</description>
 			<testdata format="win1252">InN0cmFpZ2h0IgqTc21hcnSU</testdata>
 		</action>
-		<action id="QuotesReplacesmartsinglequotesandapostropheswithstraightsingleq" purpose="replace">
+		<action id="QuotesReplacesmartdoublequoteswithstraightdoublequotes" purpose="replace">
 			<flavor>
-				<builtin>phppreg5609</builtin>
+				<builtin>java8</builtin>
 			</flavor>
-			<regex>[\x82\x91\x92]</regex>
-			<replace>'</replace>
-			<description>Quotes: Replace smart single quotes and apostrophes with straight single quotes.&#13;&#10;ANSI version for use with 8-bit regex engines and the Windows code page 1252.</description>
-			<testdata format="win1252">U3RyYWlnaHQncwpTbWFydJJzCidzdHJhaWdodCcKkXNtYXJ0kg==</testdata>
+			<regex>[\u201C\u201D\u201E\u201F\u2033\u2036]</regex>
+			<replace>"</replace>
+			<description>Quotes: Replace smart double quotes with straight double quotes.&#13;&#10;Unicode version for use with Unicode regex engines.</description>
+			<teststring><![CDATA["straight"
+“smart”]]></teststring>
 		</action>
 		<action id="QuotesReplacesmartsinglequotesandapostropheswithstraightsingleq" purpose="replace">
 			<flavor>
@@ -6147,6 +6138,15 @@ X2345678-90AB-CDEF-1234-567890ABCDEX
 Smart’s
 'straight'
 ‘smart’]]></teststring>
+		</action>
+		<action id="QuotesReplacesmartsinglequotesandapostropheswithstraightsingleq" purpose="replace">
+			<flavor>
+				<builtin>phppreg5609</builtin>
+			</flavor>
+			<regex>[\x82\x91\x92]</regex>
+			<replace>'</replace>
+			<description>Quotes: Replace smart single quotes and apostrophes with straight single quotes.&#13;&#10;ANSI version for use with 8-bit regex engines and the Windows code page 1252.</description>
+			<testdata format="win1252">U3RyYWlnaHQncwpTbWFydJJzCidzdHJhaWdodCcKkXNtYXJ0kg==</testdata>
 		</action>
 		<action id="QuotesReplacestraightapostropheswithsmartapostrophes" purpose="replace">
 			<flavor>
@@ -6162,16 +6162,6 @@ Smart’s
 		</action>
 		<action id="QuotesReplacestraightdoublequoteswithsmartdoublequotes" purpose="replace">
 			<flavor>
-				<builtin>java8</builtin>
-			</flavor>
-			<regex>\B"\b([^"\u201C\u201D\u201E\u201F\u2033\u2036\r\n]+)\b"\B</regex>
-			<replace>“$1”</replace>
-			<description>Quotes: Replace straight double quotes with smart double quotes.&#13;&#10;Unicode version for use with Unicode regex engines.</description>
-			<teststring><![CDATA["straight"
-“smart”]]></teststring>
-		</action>
-		<action id="QuotesReplacestraightdoublequoteswithsmartdoublequotes" purpose="replace">
-			<flavor>
 				<builtin>phppreg5609</builtin>
 			</flavor>
 			<regex>\B"\b([^"\x84\x93\x94\r\n]+)\b"\B</regex>
@@ -6179,14 +6169,15 @@ Smart’s
 			<description>Quotes: Replace straight double quotes with smart double quotes.&#13;&#10;ANSI version for use with 8-bit regex engines and the Windows code page 1252.</description>
 			<testdata format="win1252">InN0cmFpZ2h0IgqTc21hcnSU</testdata>
 		</action>
-		<action id="QuotesReplacestraightsinglequoteswithsmartsinglequotes" purpose="replace">
+		<action id="QuotesReplacestraightdoublequoteswithsmartdoublequotes" purpose="replace">
 			<flavor>
-				<builtin>phppreg5609</builtin>
+				<builtin>java8</builtin>
 			</flavor>
-			<regex>\B'\b([^'\x82\x91\x92\r\n]+)\b'\B</regex>
-			<replace>‘$1’</replace>
-			<description>Quotes: Replace straight single quotes with smart single quotes.&#13;&#10;ANSI version for use with 8-bit regex engines and the Windows code page 1252.</description>
-			<testdata format="win1252">U3RyYWlnaHQncwpTbWFydJJzCidzdHJhaWdodCcKkXNtYXJ0kg==</testdata>
+			<regex>\B"\b([^"\u201C\u201D\u201E\u201F\u2033\u2036\r\n]+)\b"\B</regex>
+			<replace>“$1”</replace>
+			<description>Quotes: Replace straight double quotes with smart double quotes.&#13;&#10;Unicode version for use with Unicode regex engines.</description>
+			<teststring><![CDATA["straight"
+“smart”]]></teststring>
 		</action>
 		<action id="QuotesReplacestraightsinglequoteswithsmartsinglequotes" purpose="replace">
 			<flavor>
@@ -6199,6 +6190,15 @@ Smart’s
 Smart’s
 'straight'
 ‘smart’]]></teststring>
+		</action>
+		<action id="QuotesReplacestraightsinglequoteswithsmartsinglequotes" purpose="replace">
+			<flavor>
+				<builtin>phppreg5609</builtin>
+			</flavor>
+			<regex>\B'\b([^'\x82\x91\x92\r\n]+)\b'\B</regex>
+			<replace>‘$1’</replace>
+			<description>Quotes: Replace straight single quotes with smart single quotes.&#13;&#10;ANSI version for use with 8-bit regex engines and the Windows code page 1252.</description>
+			<testdata format="win1252">U3RyYWlnaHQncwpTbWFydJJzCidzdHJhaWdodCcKkXNtYXJ0kg==</testdata>
 		</action>
 		<action id="RegexEscapemetacharacters" purpose="replace" multiline="1" namedduplicate="1">
 			<flavor>
@@ -6266,8 +6266,8 @@ Smart’s
 			</flavor>
 			<regex>\s+\z</regex>
 			<description>Trim whitespace (including line breaks) at the end of the string</description>
-			<teststring><![CDATA[ 1 space 
-  2 spaces  
+			<teststring><![CDATA[ 1 space
+  2 spaces
    3 spaces   ]]></teststring>
 		</action>
 		<action id="Trimwhitespaceincludinglinebreaksatthestartandtheendofthestring" purpose="replace">
@@ -6276,8 +6276,8 @@ Smart’s
 			</flavor>
 			<regex>\A\s+|\s+\z</regex>
 			<description>Trim whitespace (including line breaks) at the start and the end of the string</description>
-			<teststring><![CDATA[ 1 space 
-  2 spaces  
+			<teststring><![CDATA[ 1 space
+  2 spaces
    3 spaces   ]]></teststring>
 		</action>
 		<action id="Trimwhitespaceincludinglinebreaksatthestartofthestring" purpose="replace">
@@ -6286,8 +6286,8 @@ Smart’s
 			</flavor>
 			<regex>\A\s+</regex>
 			<description>Trim whitespace (including line breaks) at the start of the string</description>
-			<teststring><![CDATA[ 1 space 
-  2 spaces  
+			<teststring><![CDATA[ 1 space
+  2 spaces
    3 spaces   ]]></teststring>
 		</action>
 		<action id="Trimwhitespaceattheendofeachline" purpose="replace" multiline="1">
@@ -6296,8 +6296,8 @@ Smart’s
 			</flavor>
 			<regex>[ \t]+$</regex>
 			<description>Trim whitespace at the end of each line</description>
-			<teststring><![CDATA[ 1 space 
-  2 spaces  
+			<teststring><![CDATA[ 1 space
+  2 spaces
    3 spaces   ]]></teststring>
 		</action>
 		<action id="Trimwhitespaceatthestartandtheendofeachline" purpose="replace" multiline="1">
@@ -6306,8 +6306,8 @@ Smart’s
 			</flavor>
 			<regex>^[ \t]+|[ \t]+$</regex>
 			<description>Trim whitespace at the start and the end of each line</description>
-			<teststring><![CDATA[ 1 space 
-  2 spaces  
+			<teststring><![CDATA[ 1 space
+  2 spaces
    3 spaces   ]]></teststring>
 		</action>
 		<action id="Trimwhitespaceatthestartofeachline" purpose="replace" multiline="1">
@@ -6316,8 +6316,8 @@ Smart’s
 			</flavor>
 			<regex>^[ \t]+</regex>
 			<description>Trim whitespace at the start of each line</description>
-			<teststring><![CDATA[ 1 space 
-  2 spaces  
+			<teststring><![CDATA[ 1 space
+  2 spaces
    3 spaces   ]]></teststring>
 		</action>
 		<action id="URLDifferentURLparts" caseless="1" namedduplicate="1">
@@ -9378,16 +9378,16 @@ word1 far far far far far word2]]></teststring>
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
-			<regex>\b(?:word1|word2|word3)\b</regex>
-			<description>Words: Whole word&#13;&#10;Match one of the words from the list</description>
+			<regex>\b%WORD%\b</regex>
+			<description>Words: Whole word</description>
+			<parameter description="The word you are looking for" defaultvalue="word">%WORD%</parameter>
 		</action>
 		<action id="WordsWholeword">
 			<flavor>
 				<builtin>java8</builtin>
 			</flavor>
-			<regex>\b%WORD%\b</regex>
-			<description>Words: Whole word</description>
-			<parameter description="The word you are looking for" defaultvalue="word">%WORD%</parameter>
+			<regex>\b(?:word1|word2|word3)\b</regex>
+			<description>Words: Whole word&#13;&#10;Match one of the words from the list</description>
 		</action>
 		<action id="WordsWholewordattheendofaline" multiline="1">
 			<flavor>
