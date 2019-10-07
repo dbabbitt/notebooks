@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="yes" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
         <Path name="C:\users\dev\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
-        <Find name="balosnee" />
-        <Find name="dir_list" />
-        <Find name="file_list" />
-        <Find name="polar" />
-        <Find name="redLineBluePoly" />
-        <Find name="Relative" />
-        <Find name="heading" />
-        <Find name="research" />
-        <Find name="upgrade" />
-        <Find name="foot" />
-        <Replace name="dirs_list" />
-        <Replace name="files_list" />
-        <Replace name="Research" />
-        <Replace name="Upgrade" />
-        <Replace name="food" />
-        <Replace name="\nUpgrade" />
-        <Replace name="\n&#x000A;Research" />
-        <Replace name="wood" />
-        <Replace name="technology" />
-        <Replace name="unit_availability_df" />
+        <Find name="," />
+        <Find name="communities" />
+        <Find name="citizen" />
+        <Find name="\s*&#x00E2;&#x20AC;\s*" />
+        <Find name="\s*&#x00E2;&#x20AC;&#x201C;\s*" />
+        <Find name="Community" />
+        <Find name="&#x00E2;&#x20AC;&#x2122;" />
+        <Find name="Public\b" />
+        <Find name="Public" />
+        <Find name="^Chapter \d+\." />
+        <Replace name="clans" />
+        <Replace name="family member" />
+        <Replace name=" " />
+        <Replace name="Clan" />
+        <Replace name="Babbitt Family" />
+        <Replace name=": " />
+        <Replace name=",\n    " />
+        <Replace name="\n" />
+        <Replace name="butler" />
+        <Replace name=".\n" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Documents\repositories\SpaceTrader-Windows\Enums.cs" />
-        <File filename="C:\Users\dev\Documents\repositories\space-trader-galaxy\character.py" />
-        <File filename="C:\Users\dev\Documents\repositories\space-trader-galaxy\good.py" />
-        <File filename="C:\Users\dev\Documents\repositories\space-trader-galaxy\main.py" />
-        <File filename="C:\Users\dev\Documents\repositories\space-trader-galaxy\location.py" />
-        <File filename="C:\Users\dev\Documents\repositories\space-trader-galaxy\diagrams\trade.xml" />
-        <File filename="C:\Users\dev\Documents\repositories\SpaceTrader-Windows\.gitignore" />
-        <File filename="C:\Users\dev\Downloads\SpaceTrader201\save\SpaceTrader_normal_10_08_01_01.sav" />
-        <File filename="C:\Users\dev\Documents\repositories\SpaceTrader-Windows\STConvert\Form_STConvert.cs" />
-        <File filename="C:\Users\dev\Documents\repositories\SpaceTrader-Windows\Form_SpaceTrader.cs" />
+        <File filename="C:\Users\dev\Downloads\20190819T071509-SuperHabit.superhabit" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\I&#x2019;d like to do an extension of the tribes graph, but following the forefathers back to their (mostly) Christian origins.ipynb" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\youtube_dl\extractor\youtube.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\html\output.html" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\html\intentional_homicide_victims_per_100K_inhabitants.html" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\pydrive\files.py" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\pydrive\drive.py" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\youtube_dl\YoutubeDL.py" />
+        <File filename="C:\Users\dev\Downloads\client_secret_493273913470-37renji2vm668dqbm141l7u5rphmi4ie.apps.googleusercontent.com (1).json" />
+        <File filename="C:\Users\dev\Downloads\client_secret_493273913470-37renji2vm668dqbm141l7u5rphmi4ie.apps.googleusercontent.com.json" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -45,8 +45,8 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="615" y="8" width="725" height="1080" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20190528">no</GUIConfig>
+        <GUIConfig name="AppPosition" x="830" y="13" width="725" height="738" isMaximized="yes" />
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20191001">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>

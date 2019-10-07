@@ -24,6 +24,9 @@
 !/web-scrapers
 !/word-cloud
 
+# Exclude executables
+*.exe
+
 # Exclude Mac, Jupyter, R, and Octave admin files
 **/octave-workspace
 **/.ipynb_checkpoints/
@@ -178,4 +181,129 @@ data-science-5k/ipynb/applied-social-network-analysis/Assignment+2.ipynb
 data-science-5k/ipynb/applied-social-network-analysis/Assignment+3.ipynb
 data-science-5k/ipynb/applied-social-network-analysis/Assignment+4.ipynb
 data-science-5k/ipynb/applied-social-network-analysis/Module 4 Quiz.ipynb
-*.exe
+
+# Ignore big files
+AndrewTextClassification/data/csv/ACLED.csv
+AndrewTextClassification/data/csv/acled_df.csv
+AndrewTextClassification/data/csv/GTDB.csv
+AndrewTextClassification/data/csv/gtdb_df.csv
+AndrewTextClassification/data/csv/UCDP.csv
+AndrewTextClassification/data/csv/ucdp_df.csv
+AndrewTextClassification/data/xlsx/all_source.xlsx
+AndrewTextClassification/data/xlsx/GTDB.xlsx
+AndrewTextClassification/data/xlsx/gtdb_df.xlsx
+CMS_DRGs/data/shapefiles/cb_2016_us_zcta510_500k.zip
+CMS_DRGs/data/shapefiles/tl_2015_us_zcta510.zip
+CMS_DRGs/data/shapefiles/tl_2016_us_county.zip
+CMS_DRGs/data/shapefiles/USA_Counties.lpk
+CMS_DRGs/data/shapefiles/cb_2016_us_zcta510_500k/cb_2016_us_zcta510_500k.shp
+CMS_DRGs/data/shapefiles/tl_2015_us_zcta510/tl_2015_us_zcta510.shp
+CMS_DRGs/data/shapefiles/tl_2016_us_county/tl_2016_us_county.shp
+coin-analytics/data/csv/coinbaseUSD.csv
+coin-analytics/saves/pickle/coinbaseUSD_df.pickle
+courses-master/algorithms/nifty-onegram/all_words.tsv
+courses-master/platforms/bokeh/baby_names/yob.pickle
+data/natural-earth-vector-master/10m_cultural/ne_10m_roads_north_america.shp
+data/natural-earth-vector-master/updates/version_1d2/10m_cultural/10m_roads_north_america.shp
+data/natural-earth-vector-master/updates/version_1d3/10m_cultural/10m_roads_north_america.shp
+data/pickle/model-013.pickle
+data/pickle/X-011.pickle
+data-science-5k/data/csv/nesarc_pds.csv
+Favicons/data/full-0.z
+Favicons/data/full-0.z.zip
+Favicons/data/full-1.z
+Favicons/data/full-1.z.zip
+Favicons/data/full-2.z
+Favicons/data/full-2.z.zip
+Favicons/data/full-3.z
+Favicons/data/full-3.z.zip
+Favicons/data/full-4.z
+Favicons/data/full-4.z.zip
+Favicons/data/full-5.z
+Favicons/data/full-5.z.zip
+handson-ml-master/my_mnist.data
+LearnDataScience-master/datasets/ucihar/train/X_train.txt
+Miscellaneous/data/csv/U.S._Homicide_Reports,_1980-2014_Homicides_between_1980_and_2014.csv
+Miscellaneous/data/gz/coinbaseUSD.csv.gz
+Miscellaneous/saves/gif/Q2tbQEo.gif
+mobile-phone-activity/data/csv/mi-to-provinces-2013-11-01.csv
+mobile-phone-activity/data/csv/mi-to-provinces-2013-11-02.csv
+mobile-phone-activity/data/csv/mi-to-provinces-2013-11-03.csv
+mobile-phone-activity/data/csv/mi-to-provinces-2013-11-04.csv
+mobile-phone-activity/data/csv/mi-to-provinces-2013-11-05.csv
+mobile-phone-activity/data/csv/mi-to-provinces-2013-11-06.csv
+mobile-phone-activity/data/csv/mi-to-provinces-2013-11-07.csv
+mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-01.csv
+mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-02.csv
+mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-03.csv
+mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-04.csv
+mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-05.csv
+mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-06.csv
+mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-07.csv
+mobile-phone-activity/data/zip/mobile-phone-activity.zip
+mobile-phone-activity/saves/csv/correlation_df.csv
+mobile-phone-activity/saves/csv/internet_df.csv
+mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_01_df.csv
+mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_02_df.csv
+mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_03_df.csv
+mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_04_df.csv
+mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_05_df.csv
+mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_06_df.csv
+mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_07_df.csv
+mobile-phone-activity/saves/csv/provinces_df.csv
+mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_01_df.csv
+mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_02_df.csv
+mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_03_df.csv
+mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_04_df.csv
+mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_05_df.csv
+mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_06_df.csv
+mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_07_df.csv
+mobile-phone-activity/saves/pickle/correlation_df.pickle
+mobile-phone-activity/saves/pickle/internet_df.pickle
+mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_01_df.pickle
+mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_02_df.pickle
+mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_03_df.pickle
+mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_04_df.pickle
+mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_05_df.pickle
+mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_06_df.pickle
+mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_07_df.pickle
+mobile-phone-activity/saves/pickle/provinces_cellId_sequence.pickle
+mobile-phone-activity/saves/pickle/provinces_df.pickle
+mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_01_df.pickle
+mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_02_df.pickle
+mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_03_df.pickle
+mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_04_df.pickle
+mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_05_df.pickle
+mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_06_df.pickle
+mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_07_df.pickle
+Offutt-AFB-Data-Science/data/csv/events/CO_TransformedData - 20170223 1418_TTLs.csv
+Offutt-AFB-Data-Science/saves/ACLA/aclas_df (Clean up student rank).csv
+Offutt-AFB-Data-Science/saves/ACLA/aclas_df (Clean up student rank).pickle
+Offutt-AFB-Data-Science/saves/ACLA/aclas_df (Concatonate Datasets).csv
+Offutt-AFB-Data-Science/saves/ACLA/aclas_df (Concatonate Datasets).pickle
+Offutt-AFB-Data-Science/saves/ACLA/acla_events_df (Clean up student rank).csv
+Offutt-AFB-Data-Science/saves/ACLA/acla_events_df (Clean up student rank).pickle
+Offutt-AFB-Data-Science/saves/ACLA/acla_events_df (Fix ClassPulled).csv
+Offutt-AFB-Data-Science/saves/ACLA/acla_events_df (Fix ClassPulled).pickle
+Offutt-AFB-Data-Science/saves/csv/everybody_df (Clean up student names).csv
+Offutt-AFB-Data-Science/saves/csv/everybody_df (Clean up student rank).csv
+Offutt-AFB-Data-Science/saves/csv/everybody_df (Concatonate Datasets).csv
+Offutt-AFB-Data-Science/saves/csv/everybody_df (Finish cleaning up student names).csv
+Offutt-AFB-Data-Science/saves/csv/everybody_df (Fix blank first names).csv
+Offutt-AFB-Data-Science/saves/csv/everybody_df (Fix blank last names).csv
+Offutt-AFB-Data-Science/saves/csv/everybody_df (Redo student names).csv
+Offutt-AFB-Data-Science/saves/txt/random_pool_list.txt
+Offutt-AFB-Data-Science/saves/xlsx/everybody_df.xlsx
+Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/.git/objects/pack/pack-199ce58360653f5ff55df22a1e283e3b90a8bd95.pack
+scikit_learn_data/mldata/mnist-original.mat
+Strauss–Howe/ipynb/Make a Stopped Babbitt Spiral.ipynb
+Strauss–Howe/ipynb/.ipynb_checkpoints/Make a Stopped Babbitt Spiral-checkpoint.ipynb
+Web Scrapers/log/geckodriver.log
+Word2Vec/data/glove.840B.300d-014.txt
+Word2Vec/data/GoogleNews-vectors-negative300.bin.gz
+Word2Vec/data/text8
+Word2Vec/data/text8-phrases
+Word2Vec/data/glove.6B/glove.6B.100d.txt
+Word2Vec/data/glove.6B/glove.6B.200d.txt
+Word2Vec/data/glove.6B/glove.6B.300d.txt
+Word2Vec/data/glove.6B/glove.6B.50d.txt
