@@ -1,7 +1,9 @@
 
 # C:\Users\dev\Documents\repositories\notebooks\.gitignore
 
-# Ignore big files
+# Ignore big files (GitHub will warn you when pushing files larger than 50 MB. You will not be allowed to
+# push files larger than 100 MB.) Tip: If you regularly push large files to GitHub, consider introducing
+# Git Large File Storage (Git LFS) as part of your workflow.
 Miscellaneous/saves/gif/Q2tbQEo.gif
 Word2Vec/data/GoogleNews-vectors-negative300.bin.gz
 Word2Vec/data/text8
