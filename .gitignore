@@ -1,33 +1,25 @@
 
 # C:\Users\dev\Documents\repositories\notebooks\.gitignore
 
-# Ignore big files
+# Ignore big files (GitHub will warn you when pushing files larger than 50 MB. You will not be allowed to
+# push files larger than 100 MB.) Tip: If you regularly push large files to GitHub, consider introducing
+# Git Large File Storage (Git LFS) as part of your workflow.
 AndrewTextClassification/data/csv/ACLED.csv
-AndrewTextClassification/data/csv/acled_df.csv
 AndrewTextClassification/data/csv/GTDB.csv
-AndrewTextClassification/data/csv/gtdb_df.csv
 AndrewTextClassification/data/csv/UCDP.csv
+AndrewTextClassification/data/csv/acled_df.csv
+AndrewTextClassification/data/csv/gtdb_df.csv
 AndrewTextClassification/data/csv/ucdp_df.csv
-AndrewTextClassification/data/xlsx/all_source.xlsx
 AndrewTextClassification/data/xlsx/GTDB.xlsx
+AndrewTextClassification/data/xlsx/all_source.xlsx
 AndrewTextClassification/data/xlsx/gtdb_df.xlsx
-CMS_DRGs/data/shapefiles/cb_2016_us_zcta510_500k.zip
-CMS_DRGs/data/shapefiles/tl_2015_us_zcta510.zip
-CMS_DRGs/data/shapefiles/tl_2016_us_county.zip
 CMS_DRGs/data/shapefiles/USA_Counties.lpk
+CMS_DRGs/data/shapefiles/cb_2016_us_zcta510_500k.zip
 CMS_DRGs/data/shapefiles/cb_2016_us_zcta510_500k/cb_2016_us_zcta510_500k.shp
+CMS_DRGs/data/shapefiles/tl_2015_us_zcta510.zip
 CMS_DRGs/data/shapefiles/tl_2015_us_zcta510/tl_2015_us_zcta510.shp
+CMS_DRGs/data/shapefiles/tl_2016_us_county.zip
 CMS_DRGs/data/shapefiles/tl_2016_us_county/tl_2016_us_county.shp
-coin-analytics/data/csv/coinbaseUSD.csv
-coin-analytics/saves/pickle/coinbaseUSD_df.pickle
-courses-master/algorithms/nifty-onegram/all_words.tsv
-courses-master/platforms/bokeh/baby_names/yob.pickle
-data/natural-earth-vector-master/10m_cultural/ne_10m_roads_north_america.shp
-data/natural-earth-vector-master/updates/version_1d2/10m_cultural/10m_roads_north_america.shp
-data/natural-earth-vector-master/updates/version_1d3/10m_cultural/10m_roads_north_america.shp
-data/pickle/model-013.pickle
-data/pickle/X-011.pickle
-data-science-5k/data/csv/nesarc_pds.csv
 Favicons/data/full-0.z
 Favicons/data/full-0.z.zip
 Favicons/data/full-1.z
@@ -40,71 +32,20 @@ Favicons/data/full-4.z
 Favicons/data/full-4.z.zip
 Favicons/data/full-5.z
 Favicons/data/full-5.z.zip
-handson-ml-master/my_mnist.data
 LearnDataScience-master/datasets/ucihar/train/X_train.txt
 Miscellaneous/data/csv/Offender_Race_data.csv
 Miscellaneous/data/csv/U.S._Homicide_Reports,_1980-2014_Homicides_between_1980_and_2014.csv
 Miscellaneous/data/gz/coinbaseUSD.csv.gz
 Miscellaneous/saves/gif/Q2tbQEo.gif
-mobile-phone-activity/data/csv/mi-to-provinces-2013-11-01.csv
-mobile-phone-activity/data/csv/mi-to-provinces-2013-11-02.csv
-mobile-phone-activity/data/csv/mi-to-provinces-2013-11-03.csv
-mobile-phone-activity/data/csv/mi-to-provinces-2013-11-04.csv
-mobile-phone-activity/data/csv/mi-to-provinces-2013-11-05.csv
-mobile-phone-activity/data/csv/mi-to-provinces-2013-11-06.csv
-mobile-phone-activity/data/csv/mi-to-provinces-2013-11-07.csv
-mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-01.csv
-mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-02.csv
-mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-03.csv
-mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-04.csv
-mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-05.csv
-mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-06.csv
-mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-07.csv
-mobile-phone-activity/data/zip/mobile-phone-activity.zip
-mobile-phone-activity/saves/csv/correlation_df.csv
-mobile-phone-activity/saves/csv/internet_df.csv
-mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_01_df.csv
-mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_02_df.csv
-mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_03_df.csv
-mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_04_df.csv
-mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_05_df.csv
-mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_06_df.csv
-mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_07_df.csv
-mobile-phone-activity/saves/csv/provinces_df.csv
-mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_01_df.csv
-mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_02_df.csv
-mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_03_df.csv
-mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_04_df.csv
-mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_05_df.csv
-mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_06_df.csv
-mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_07_df.csv
-mobile-phone-activity/saves/pickle/correlation_df.pickle
-mobile-phone-activity/saves/pickle/internet_df.pickle
-mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_01_df.pickle
-mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_02_df.pickle
-mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_03_df.pickle
-mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_04_df.pickle
-mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_05_df.pickle
-mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_06_df.pickle
-mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_07_df.pickle
-mobile-phone-activity/saves/pickle/provinces_cellId_sequence.pickle
-mobile-phone-activity/saves/pickle/provinces_df.pickle
-mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_01_df.pickle
-mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_02_df.pickle
-mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_03_df.pickle
-mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_04_df.pickle
-mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_05_df.pickle
-mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_06_df.pickle
-mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_07_df.pickle
 Offutt-AFB-Data-Science/data/csv/events/CO_TransformedData - 20170223 1418_TTLs.csv
-Offutt-AFB-Data-Science/saves/ACLA/aclas_df (Clean up student rank).csv
-Offutt-AFB-Data-Science/saves/ACLA/aclas_df (Clean up student rank).pickle
-Offutt-AFB-Data-Science/saves/ACLA/aclas_df (Concatonate Datasets).csv
-Offutt-AFB-Data-Science/saves/ACLA/aclas_df (Concatonate Datasets).pickle
 Offutt-AFB-Data-Science/saves/ACLA/acla_events_df (Clean up student rank).csv
 Offutt-AFB-Data-Science/saves/ACLA/acla_events_df (Clean up student rank).pickle
 Offutt-AFB-Data-Science/saves/ACLA/acla_events_df (Fix ClassPulled).csv
 Offutt-AFB-Data-Science/saves/ACLA/acla_events_df (Fix ClassPulled).pickle
+Offutt-AFB-Data-Science/saves/ACLA/aclas_df (Clean up student rank).csv
+Offutt-AFB-Data-Science/saves/ACLA/aclas_df (Clean up student rank).pickle
+Offutt-AFB-Data-Science/saves/ACLA/aclas_df (Concatonate Datasets).csv
+Offutt-AFB-Data-Science/saves/ACLA/aclas_df (Concatonate Datasets).pickle
 Offutt-AFB-Data-Science/saves/csv/everybody_df (Clean up student names).csv
 Offutt-AFB-Data-Science/saves/csv/everybody_df (Clean up student rank).csv
 Offutt-AFB-Data-Science/saves/csv/everybody_df (Concatonate Datasets).csv
@@ -120,12 +61,12 @@ RPC/data/compressed/2018_01_21_Redeemer_Sermon_Kerr.mp3
 RPC/data/compressed/2018_02_11_Redeemer_Sermon_Kerr.mp3
 RPC/data/compressed/2018_02_18_Redeemer_Sermon_Kerr.mp3
 RPC/data/compressed/2018_02_25_Redeemer_SS_Kerr.mp3
-RPC/data/compressed/2018_03_04_Redeemer_Sermon_Kerr.mp3
 RPC/data/compressed/2018_03_04_Redeemer_SS_Kerr.mp3
-RPC/data/compressed/2018_03_11_Redeemer_Sermon_Kerr.mp3
+RPC/data/compressed/2018_03_04_Redeemer_Sermon_Kerr.mp3
 RPC/data/compressed/2018_03_11_Redeemer_SS_Kerr.mp3
-RPC/data/compressed/2018_03_18_Redeemer_Sermon_Kerr.mp3
+RPC/data/compressed/2018_03_11_Redeemer_Sermon_Kerr.mp3
 RPC/data/compressed/2018_03_18_Redeemer_SS_Kerr.mp3
+RPC/data/compressed/2018_03_18_Redeemer_Sermon_Kerr.mp3
 RPC/data/compressed/2018_03_25_Redeemer_Sermon_Atkinson.mp3
 RPC/data/compressed/2018_04_01_Redeemer_Sermon_Kerr.mp3
 RPC/data/compressed/2018_04_15_Redeemer_Sermon_Kerr.mp3
@@ -315,35 +256,96 @@ RPC/data/mp3/2019_07_28_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2019_08_04_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2019_09_08_redeemer_sermon_kerr.mp3
 RPC/data/mp3/2019_09_29_Redeemer_Sermon_Kerr.mp3
-scikit_learn_data/mldata/mnist-original.mat
-Strauss–Howe/saves/movies/movie.gif
-Strauss–Howe/saves/movies/saeculum_movie.gif
 Strauss–Howe/saves/movies/bare/_movie.gif
+Strauss–Howe/saves/movies/movie.gif
 Strauss–Howe/saves/movies/saeculum/saeculum_movie.gif
 Strauss–Howe/saves/movies/saeculum_fashionable/movie_to_2020.gif
 Strauss–Howe/saves/movies/saeculum_fashionable/saeculum_fashionable_movie.gif
 Strauss–Howe/saves/movies/saeculum_fashionable/stephen_movie.gif
+Strauss–Howe/saves/movies/saeculum_movie.gif
 Web Scrapers/log/geckodriver.log
-Word2Vec/data/glove.840B.300d-014.txt
 Word2Vec/data/GoogleNews-vectors-negative300.bin.gz
 Word2Vec/data/GoogleNews-vectors-negative300.saved_gensim_model
 Word2Vec/data/GoogleNews-vectors-negative300.saved_gensim_model.vectors.npy
-Word2Vec/data/text8
-Word2Vec/data/text8-phrases
 Word2Vec/data/glove.6B/glove.6B.100d.txt
 Word2Vec/data/glove.6B/glove.6B.200d.txt
 Word2Vec/data/glove.6B/glove.6B.300d.txt
 Word2Vec/data/glove.6B/glove.6B.50d.txt
+Word2Vec/data/glove.840B.300d-014.txt
+Word2Vec/data/text8
+Word2Vec/data/text8-phrases
+coin-analytics/data/csv/coinbaseUSD.csv
+coin-analytics/saves/pickle/coinbaseUSD_df.pickle
+courses-master/algorithms/nifty-onegram/all_words.tsv
+courses-master/platforms/bokeh/baby_names/yob.pickle
+data-science-5k/data/csv/nesarc_pds.csv
+data/natural-earth-vector-master/10m_cultural/ne_10m_roads_north_america.shp
+data/natural-earth-vector-master/updates/version_1d2/10m_cultural/10m_roads_north_america.shp
+data/natural-earth-vector-master/updates/version_1d3/10m_cultural/10m_roads_north_america.shp
+data/pickle/X-011.pickle
+data/pickle/model-013.pickle
+handson-ml-master/my_mnist.data
+mobile-phone-activity/data/csv/mi-to-provinces-2013-11-01.csv
+mobile-phone-activity/data/csv/mi-to-provinces-2013-11-02.csv
+mobile-phone-activity/data/csv/mi-to-provinces-2013-11-03.csv
+mobile-phone-activity/data/csv/mi-to-provinces-2013-11-04.csv
+mobile-phone-activity/data/csv/mi-to-provinces-2013-11-05.csv
+mobile-phone-activity/data/csv/mi-to-provinces-2013-11-06.csv
+mobile-phone-activity/data/csv/mi-to-provinces-2013-11-07.csv
+mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-01.csv
+mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-02.csv
+mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-03.csv
+mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-04.csv
+mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-05.csv
+mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-06.csv
+mobile-phone-activity/data/csv/sms-call-internet-mi-2013-11-07.csv
+mobile-phone-activity/data/zip/mobile-phone-activity.zip
+mobile-phone-activity/saves/csv/correlation_df.csv
+mobile-phone-activity/saves/csv/internet_df.csv
+mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_01_df.csv
+mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_02_df.csv
+mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_03_df.csv
+mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_04_df.csv
+mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_05_df.csv
+mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_06_df.csv
+mobile-phone-activity/saves/csv/mi_to_provinces_2013_11_07_df.csv
+mobile-phone-activity/saves/csv/provinces_df.csv
+mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_01_df.csv
+mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_02_df.csv
+mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_03_df.csv
+mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_04_df.csv
+mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_05_df.csv
+mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_06_df.csv
+mobile-phone-activity/saves/csv/sms_call_internet_mi_2013_11_07_df.csv
+mobile-phone-activity/saves/pickle/correlation_df.pickle
+mobile-phone-activity/saves/pickle/internet_df.pickle
+mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_01_df.pickle
+mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_02_df.pickle
+mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_03_df.pickle
+mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_04_df.pickle
+mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_05_df.pickle
+mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_06_df.pickle
+mobile-phone-activity/saves/pickle/mi_to_provinces_2013_11_07_df.pickle
+mobile-phone-activity/saves/pickle/provinces_cellId_sequence.pickle
+mobile-phone-activity/saves/pickle/provinces_df.pickle
+mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_01_df.pickle
+mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_02_df.pickle
+mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_03_df.pickle
+mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_04_df.pickle
+mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_05_df.pickle
+mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_06_df.pickle
+mobile-phone-activity/saves/pickle/sms_call_internet_mi_2013_11_07_df.pickle
+scikit_learn_data/mldata/mnist-original.mat
 
 # exclude everything except personal directories
 /*
 !/CompTIA Security+ Certification
-!/Strauss–Howe
-!/age-of-empires-ii
 !/Miscellaneous
 !/Simulations
+!/Strauss–Howe
 !/TensorFlow
 !/Word2Vec
+!/age-of-empires-ii
 !/airline-sentiment
 !/data-science-5k
 !/job-hunting
@@ -371,6 +373,8 @@ Word2Vec/data/glove.6B/glove.6B.50d.txt
 
 # Exclude secrets
 **/json/*_secrets.json
+
+# Exclude Strauss–Howe notebooks that I didn't make
 
 # Exclude Miscellaneous notebooks that I didn't make
 Miscellaneous/ipynb/HW2.ipynb
