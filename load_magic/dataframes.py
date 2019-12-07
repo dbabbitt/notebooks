@@ -64,6 +64,9 @@ def get_column_descriptions(df, column_list=None):
 def example_iterrows():
     '''
     rows_list = []
+    columns_list = ['distance_from_white', 'distance_from_black', 'distance_from_red', 'distance_from_green', 'distance_from_blue',
+                    'distance_from_magenta', 'distance_from_yellow', 'distance_from_cyan']
+    index_list = []
     for row_index, row_series in student_df.iterrows():
         #print(row_index)
         
@@ -74,9 +77,9 @@ def example_iterrows():
             #print(column_index, value)
             row_dict[column_index] = column_value
     
-    rows_list.append(row_dict)
+        rows_list.append(row_dict)
 
-    event_grouping_df = pd.DataFrame(rows_list, columns=total_column_list)
+    event_grouping_df = pd.DataFrame(rows_list, columns=columns_list, index=index_list)
     event_grouping_df.sample(n=15).T.sample(n=5).T
     '''
 
