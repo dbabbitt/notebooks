@@ -72,6 +72,7 @@ def example_iterrows():
         
         # Get input row in dictionary format; key = col_name
         row_dict = {}
+        index_list.append(row_index)
         
         for column_index, column_value in row_series.iteritems():
             #print(column_index, value)
