@@ -1,0 +1,153 @@
+{
+  "features" : [ {
+    "geometry" : {
+      "coordinates" : [ 42.3155734, -71.62990479999999 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "address" : "107 Brigham St, Northborough, MA 01532, USA",
+      "name" : "Home"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 42.4668438, -71.2637558 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "address" : "91 Hartwell Ave #203, Lexington, MA 02421, USA",
+      "name" : "Work"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 42.389143, -71.565429 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "address" : "26 Houghton Ct, Hudson, MA 01749, USA",
+      "name" : "Jay’s Legal Weed"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 38.862138, -76.7903417 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "address" : "2012 Hancock Dr, Upper Marlboro, MD 20774, USA",
+      "name" : "Epps House"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 42.5449252, -71.6522773 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "address" : "8 Ayer Rd, Shirley, MA 01464, USA",
+      "name" : "Apartment House"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 37.0773375, -76.3630329 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "address" : "50 W Flight Line Rd, Hampton, VA 23665, USA",
+      "name" : "DGS-X"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 42.1310881, -72.5719397 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "address" : "59 Upland St, Springfield, MA 01104, USA",
+      "name" : "Dave Ehle’s House"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 42.5863704, -71.45818229999999 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "address" : "89 Cold Spring Rd, Westford, MA 01886, USA",
+      "name" : "Jay’s House"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 32.6425982, -83.5855176 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "name" : "Bldg 2071 Parking Lot"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 42.3233549, -71.348804 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "address" : "367 Commonwealth Rd, Wayland, MA 01778, USA",
+      "name" : "Mimi’s Workplace"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 37.0862804, -76.4729242 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "address" : "11815 Fountain Way, Newport News, VA 23606, USA",
+      "name" : "BAH Oyster Point Office"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 37.4429963, -77.0423239 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "address" : "9030 Pocahontas Trail, Providence Forge, VA 23140, USA",
+      "name" : "Meet Gianna"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 42.4492702, -71.42446919999999 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "address" : "54 Knox Trail, Acton, MA 01720, USA",
+      "name" : "Jay’s Workplace"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 43.0337238, -71.0542936 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "address" : "116 Exeter Rd, Epping, NH 03042, USA",
+      "name" : "Steve’s House"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 42.4557218, -71.393988 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "address" : "1276 Main St, Concord, MA 01742, USA",
+      "name" : "Church"
+    },
+    "type" : "Feature"
+  } ],
+  "type" : "FeatureCollection"
+}

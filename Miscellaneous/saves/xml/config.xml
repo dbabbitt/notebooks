@@ -1,42 +1,43 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="yes" wrap="yes" directionDown="yes" fifRecuisive="no" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="yes" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
+        <Path name="C:\Users\dev\Documents\repositories\notebooks\RPC\py" />
         <Path name="C:\users\dev\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
-        <Find name="squarespace_url" />
-        <Find name="fix_the_published_date" />
-        <Find name="has_a_good_date" />
-        <Find name="must increase" />
-        <Find name="unobscure_element" />
-        <Find name="search_the_sermon_archive" />
-        <Find name="key_in_search" />
-        <Find name="move_to_title" />
-        <Find name="click_the_save_button" />
-        <Find name="click_the_edit_button" />
-        <Replace name="loc" />
-        <Replace name="fix_the_published_date" />
-        <Replace name="process_sermon_info" />
-        <Replace name="div." />
-        <Replace name=" &gt; " />
-        <Replace name='div class=&quot;\1.' />
-        <Replace name="category" />
-        <Replace name="&apos;, &apos;" />
-        <Replace name="categories" />
-        <Replace name='&quot;\1.' />
+        <Find name="\\\\" />
+        <Find name="le preview to be prese" />
+        <Find name="561" />
+        <Find name="ting for the file preview to b" />
+        <Find name="get_the_file_preview" />
+        <Find name="\bu\." />
+        <Find name="get_embed_uploaded_results" />
+        <Find name="Upload File" />
+        <Find name="click_external_file_subtab" />
+        <Find name="_subtab" />
+        <Replace name="\\" />
+        <Replace name="u.get_the_file_preview" />
+        <Replace name="self." />
+        <Replace name="u.click_external_file_subtab" />
+        <Replace name="u.click_the_upload_file_subtab" />
+        <Replace name="u.click_the_save_post_button" />
+        <Replace name="u.click_the_podcasting_tab" />
+        <Replace name="u.click_the_edit_overlay" />
+        <Replace name="u.add_an_episode_note" />
+        <Replace name="u.click_the_audio_apply_button" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\log\scrape2.log" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\py\Publish_Drafts_with_Correct_Dates.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\log\scrape.log" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\py\Build_sermon_Dataset.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\py\Detect_Uploads.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\py\Mark_Drafts.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\py\Publish_Drafts.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\py\Detect_Dates.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\py\Move_Sermons_to_New_Site.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\py\Sermon_Audio.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\Sermon_Audio.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\Move_Sermons_to_New_Site.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\Add_Sermons_as_External_Files.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\Detect_Embed_Uploaded.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\Fix_Bad_Notes.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\Convert_External_Files_to_Uploads.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\saves\html\test.html" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\sermon_utils.py" />
+        <File filename="C:\Users\dev\Downloads\Takeout\Location History\Location History.json" />
+        <File filename="C:\Users\dev\Downloads\1784-1866.png" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -45,8 +46,8 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="830" y="13" width="725" height="738" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20191128">no</GUIConfig>
+        <GUIConfig name="AppPosition" x="831" y="0" width="725" height="738" isMaximized="yes" />
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20191218">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -75,11 +76,12 @@
         <GUIConfig name="wordCharList" useDefault="yes" charsAdded="" />
         <GUIConfig name="delimiterSelection" leftmostDelimiter="40" rightmostDelimiter="41" delimiterSelectionOnEntireDocument="no" />
         <GUIConfig name="multiInst" setting="0" />
-        <GUIConfig name="MISC" fileSwitcherWithoutExtColumn="no" backSlashIsEscapeCharacterForSql="yes" newStyleSaveDlg="no" isFolderDroppedOpenFiles="no" docPeekOnTab="no" docPeekOnMap="no" />
+        <GUIConfig name="MISC" fileSwitcherWithoutExtColumn="no" backSlashIsEscapeCharacterForSql="yes" monospacedFontFindDlg="no" newStyleSaveDlg="no" isFolderDroppedOpenFiles="no" docPeekOnTab="no" docPeekOnMap="no" />
         <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
-        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="-1" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
-        <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="204">
+        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="4" zoom2="0" whiteSpaceShow="show" eolShow="hide" borderWidth="2" smoothFont="no" />
+        <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="250">
+            <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="3" prev="-1" isVisible="yes" />
             <PluginDlg pluginName="MarkdownViewer++" id="0" curr="1" prev="-1" isVisible="no" />
             <PluginDlg pluginName="dummy" id="0" curr="3" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Snippets" id="-1" curr="1" prev="-1" isVisible="no" />
