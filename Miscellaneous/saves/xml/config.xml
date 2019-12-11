@@ -6,6 +6,8 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
+        <Find name="(&lt;&lt;&lt;&lt;&lt;&lt;&lt;|&gt;&gt;&gt;&gt;&gt;&gt;&gt;)" />
+        <Find name="&lt;&lt;&lt;&lt;&lt;&lt;&lt;" />
         <Find name="\\\\" />
         <Find name="le preview to be prese" />
         <Find name="561" />
@@ -14,8 +16,6 @@
         <Find name="\bu\." />
         <Find name="get_embed_uploaded_results" />
         <Find name="Upload File" />
-        <Find name="click_external_file_subtab" />
-        <Find name="_subtab" />
         <Replace name="\\" />
         <Replace name="u.get_the_file_preview" />
         <Replace name="self." />
@@ -28,7 +28,6 @@
         <Replace name="u.click_the_audio_apply_button" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\Sermon_Audio.py" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\Move_Sermons_to_New_Site.py" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\Add_Sermons_as_External_Files.py" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\Detect_Embed_Uploaded.py" />
