@@ -22,7 +22,7 @@ def get_notebook_path():
             for sess in sessions:
                 if sess['kernel']['id'] == kernel_id:
                     
-                    return os.path.abspath(os.path.join(srv['notebook_dir'], sess['notebook']['path']))
+                    return os.path.abspath(os.path.join(r'D:\Documents\Repositories', sess['notebook']['path']))
         except:
             pass  # There may be stale entries in the runtime directory 
     
