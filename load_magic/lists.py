@@ -6,8 +6,9 @@ import pandas as pd
 # Handy list of the different types of encodings
 encoding = ['latin1', 'iso8859-1', 'utf-8'][2]
 
-def check_4_doubles(item_list):
-    t0 = time.time()
+def check_4_doubles(item_list, verbose=False):
+    if verbose:
+        t0 = time.time()
     rows_list = []
     n = len(item_list)
     for i in range(n-1):
@@ -38,8 +39,9 @@ def check_4_doubles(item_list):
 
     column_list = ['first_item', 'second_item', 'first_bytes', 'second_bytes', 'max_similarity']
     item_similarities_df = pd.DataFrame(rows_list, columns=column_list)
-    t1 = time.time()
-    print(t1-t0, time.ctime(t1))
+    if verbose:
+        t1 = time.time()
+        print(t1-t0, time.ctime(t1))
 
     return item_similarities_df
 
@@ -47,8 +49,9 @@ def similar(a, b):
     return SequenceMatcher(None, str(a), str(b)).ratio()
 
 #Check the closest names for typos
-def check_for_typos(left_list, right_list):
-    t0 = time.time()
+def check_for_typos(left_list, right_list, verbose=False):
+    if verbose:
+        t0 = time.time()
     rows_list = []
     for left_item in left_list:
         max_similarity = 0.0
@@ -69,7 +72,20 @@ def check_for_typos(left_list, right_list):
 
     column_list = ['left_item', 'right_item', 'max_similarity']
     name_similarities_df = pd.DataFrame(rows_list, columns=column_list)
-    t1 = time.time()
-    print(t1-t0, time.ctime(t1))
+    if verbose:
+        t1 = time.time()
+        print(t1-t0, time.ctime(t1))
     
     return name_similarities_df
+
+def conjunctify_list(noun_list):
+    if len(noun_list) > 2:
+        list_str = ', and '.join([', '.join(noun_list[:-1])] + [noun_list[-1]])
+    elif len(noun_list) == 2:
+        list_str = ' and '.join(noun_list)
+    elif len(noun_list) == 1:
+        list_str = noun_list[0]
+    else:
+        list_str = ''
+    
+    return list_str

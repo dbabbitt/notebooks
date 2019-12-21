@@ -6,6 +6,7 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;" />
+        <Find name=".psv" />
         <Find name="(&lt;&lt;&lt;&lt;&lt;&lt;&lt;|&gt;&gt;&gt;&gt;&gt;&gt;&gt;)" />
         <Find name="&lt;&lt;&lt;&lt;&lt;&lt;&lt;" />
         <Find name="\\\\" />
@@ -15,7 +16,6 @@
         <Find name="get_the_file_preview" />
         <Find name="\bu\." />
         <Find name="get_embed_uploaded_results" />
-        <Find name="Upload File" />
         <Replace name="\\" />
         <Replace name="u.get_the_file_preview" />
         <Replace name="self." />
@@ -28,8 +28,6 @@
         <Replace name="u.click_the_audio_apply_button" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\Move_Sermons_to_New_Site.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\Add_Sermons_as_External_Files.py" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\Detect_Embed_Uploaded.py" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\Fix_Bad_Notes.py" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\Convert_External_Files_to_Uploads.py" />
@@ -37,6 +35,9 @@
         <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\sermon_utils.py" />
         <File filename="C:\Users\dev\Downloads\Takeout\Location History\Location History.json" />
         <File filename="C:\Users\dev\Downloads\1784-1866.png" />
+        <File filename="C:\Program Files\Notepad++\change.log" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\youtube_dl\YoutubeDL.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Strauss&#x2013;Howe\ipynb\Colors Exploration.ipynb" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -80,6 +81,7 @@
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
         <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="4" zoom2="0" whiteSpaceShow="show" eolShow="hide" borderWidth="2" smoothFont="no" />
         <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="250">
+            <PluginDlg pluginName="Notepad++::InternalFunction" id="42051" curr="1" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="3" prev="-1" isVisible="yes" />
             <PluginDlg pluginName="MarkdownViewer++" id="0" curr="1" prev="-1" isVisible="no" />
             <PluginDlg pluginName="dummy" id="0" curr="3" prev="-1" isVisible="no" />
