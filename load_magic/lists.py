@@ -3,6 +3,21 @@ from difflib import SequenceMatcher
 import time
 import pandas as pd
 
+
+def conjunctify_list(noun_list):
+    if len(noun_list) > 2:
+        last_noun_str = noun_list[-1]
+        but_last_nouns_str = ', '.join(noun_list[:-1])
+        list_str = ', and '.join([but_last_nouns_str, last_noun_str])
+    elif len(noun_list) == 2:
+        list_str = ' and '.join(noun_list)
+    elif len(noun_list) == 1:
+        list_str = noun_list[0]
+    else:
+        list_str = ''
+    
+    return list_str
+
 # Handy list of the different types of encodings
 encoding = ['latin1', 'iso8859-1', 'utf-8'][2]
 
