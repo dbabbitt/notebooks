@@ -4,6 +4,8 @@ import urllib
 from notebook import notebookapp
 import json
 import os
+from jupyter_core.paths import jupyter_config_dir
+from traitlets.config import Config
 
 def get_notebook_path():
     """Returns the absolute path of the Notebook or None if it cannot be determined
@@ -11,6 +13,14 @@ def get_notebook_path():
     """
     connection_file = os.path.basename(ipykernel.get_connection_file())
     kernel_id = connection_file.split('-', 1)[1].split('.')[0]
+
+    # Assumes you've already run `jupyter notebook --generate-config` to generate
+    # `jupyter_notebook_config.py` and have edited and uncommented the line
+    # containing `c.FileContentsManager.root_dir =`:
+    c = Config()
+    file_path = os.path.join(jupyter_config_dir(), 'jupyter_notebook_config.py')
+    exec(open(file_path).read())
+    root_dir = c['FileContentsManager']['root_dir']
 
     for srv in notebookapp.list_running_servers():
         try:
@@ -22,7 +32,7 @@ def get_notebook_path():
             for sess in sessions:
                 if sess['kernel']['id'] == kernel_id:
                     
-                    return os.path.abspath(os.path.join(r'D:\Documents\Repositories', sess['notebook']['path']))
+                    return os.path.abspath(os.path.join(root_dir, sess['notebook']['path']))
         except:
             pass  # There may be stale entries in the runtime directory 
     
