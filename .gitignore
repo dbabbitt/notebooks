@@ -5,6 +5,7 @@
 AndrewTextClassification/data
 CMS_DRGs/data/shapefiles
 Favicons/data
+RPC/data
 
 # Ignore big files (GitHub will warn you when pushing files larger than 50 MB. You will not be allowed to
 # push files larger than 100 MB.) Tip: If you regularly push large files to GitHub, consider introducing
@@ -52,6 +53,7 @@ LearnDataScience-master/datasets/ucihar/train/X_train.txt
 Miscellaneous/data/csv/Offender_Race_data.csv
 Miscellaneous/data/csv/U.S._Homicide_Reports,_1980-2014_Homicides_between_1980_and_2014.csv
 Miscellaneous/data/gz/coinbaseUSD.csv.gz
+Miscellaneous/saves/gif/butter.gif
 Miscellaneous/saves/gif/Q2tbQEo.gif
 mobile-phone-activity/data/csv/mi-to-provinces-2013-11-01.csv
 mobile-phone-activity/data/csv/mi-to-provinces-2013-11-02.csv
@@ -257,10 +259,15 @@ RPC/data/mp3/2018_01_21_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2018_02_11_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2018_02_18_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2018_03_04_Redeemer_Sermon_Kerr.mp3
+RPC/data/mp3/2018_03_04_Redeemer_SS_Kerr.mp3
+RPC/data/mp3/2018_03_11_Redeemer_SS_Kerr.mp3
 RPC/data/mp3/2018_03_11_Reedemer_Sermon_Kerr.mp3
 RPC/data/mp3/2018_03_18_Redeemer_Sermon_Kerr.mp3
+RPC/data/mp3/2018_03_18_Redeemer_SS_Kerr.mp3
 RPC/data/mp3/2018_03_25_Redeemer_Sermon_Atkinson.mp3
 RPC/data/mp3/2018_04_01_Redeemer_Sermon_Kerr%20%281%29.mp3
+RPC/data/mp3/2018_04_01_Redeemer_Sermon_Kerr.mp3
+RPC/data/mp3/2018_04_15_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2018_04_22_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2018_04_29_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2018_05_06_Redeemer_Sermon_Kerr.mp3
@@ -282,10 +289,9 @@ RPC/data/mp3/2018_08_26_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2018_09_02_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2018_09_09_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2018_09_16_Redeemer_Sermon_Kerr.mp3
+RPC/data/mp3/2018_09_23_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2018_09_30_Redeemer_Sermon_Owens.mp3
 RPC/data/mp3/2018_10_07_Redeemer_Sermon_Kerr.mp3
-RPC/data/mp3/2018_10_21_Redeemer_Sermon_Kerr.mp3
-RPC/data/mp3/2018_10_28_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2018_11_04_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2018_11_11_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2018_11_18_Redeemer_Sermon_Kerr.mp3
@@ -310,7 +316,9 @@ RPC/data/mp3/2019_04_14_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2019_04_21_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2019_04_28_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2019_05_05_Redeemer_Sermon_Kerr.mp3
+RPC/data/mp3/2019_05_12_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2019_05_19_Redeemer_Sermon_Anderson.mp3
+RPC/data/mp3/2019_05_26_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2019_06_02_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2019_06_09_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2019_06_16_Redeemer_Sermon_Kerr.mp3
@@ -321,7 +329,16 @@ RPC/data/mp3/2019_07_21_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2019_07_28_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2019_08_04_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2019_09_08_redeemer_sermon_kerr.mp3
+RPC/data/mp3/2019_09_22_Redeemer_Sermon_Kerr.mp3
 RPC/data/mp3/2019_09_29_Redeemer_Sermon_Kerr.mp3
+RPC/data/mp3/2019_10_06_Redeemer_Sermon_Kerr.mp3
+RPC/data/mp3/2019_10_13_Redeemer_Sermon_Kerr.mp3
+RPC/data/mp3/2019_10_20_Redeemer_Sermon_Atkinson.mp3
+RPC/data/mp3/2019_11_10_Redeemer_Sermon_Kerr.mp3
+RPC/data/mp3/2019_11_24_Redeemer_Sermon_Kerr.mp3
+RPC/data/mp3/2019_12_01_Sermon_Kerr.mp3
+RPC/data/mp3/2019_12_22_Redeemer_Sermon_Kerr.mp3
+RPC/data/mp3/2019_12_29_Redeemer_Sermon_Owens.mp3
 scikit_learn_data/mldata/mnist-original.mat
 Strauss–Howe/saves/movies/movie.gif
 Strauss–Howe/saves/movies/saeculum_movie.gif
