@@ -480,13 +480,18 @@ class StraussHoweUtilities(object):
     def display_test_colors(self, test_list, saeculum_title, face_title, nearness_str='far from',
                             color_dict=mcolors.XKCD_COLORS, color_title='XKCD', face_point='Face'):
         print(test_list)
-        self.plot_colortable(colors_dict={name: color for name,
-                                     color in color_dict.items() if name in [name for distance,
-                                                                             name in test_list]},
-                        title='{} {} Colors, {} the {} {}'.format(color_title, saeculum_title,
-                                                                  nearness_str, face_title,
-                                                                  face_point),
-                        sort_colors=True, emptycols=0)
+        name_list = [name for distance, name in test_list]
+        colors_dict = {name: color for name, color in color_dict.items() if name in name_list}
+        title_str = '{} {} Colors, {} the {} {}'.format(color_title, saeculum_title, nearness_str,
+                                                        face_title, face_point)
+        self.plot_colortable(colors_dict=colors_dict, title=title_str, sort_colors=True, emptycols=0)
+    
+    def distance_between(self, new_tuple, old_tuple):
+        green_diff = new_tuple[0] - old_tuple[0]
+        blue_diff = new_tuple[1] - old_tuple[1]
+        red_diff = new_tuple[2] - old_tuple[2]
+        
+        return sqrt(green_diff**2 + blue_diff**2 + red_diff**2)
     
     def distance_from_black(self, old_tuple):
         

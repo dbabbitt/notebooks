@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="yes" wrap="yes" directionDown="yes" fifRecuisive="no" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="yes" wrap="yes" directionDown="yes" fifRecuisive="no" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="0" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
         <Path name="C:\Users\dev\Documents\repositories\notebooks\RPC" />
         <Path name="C:\Users\dev\Documents\repositories\notebooks\RPC\py" />
         <Path name="C:\users\dev\Anaconda3\Lib\site-packages\networkx" />
@@ -8,48 +8,41 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;*.ipynb;" />
         <Filter name="*.py;" />
-        <Find name="signin_url" />
-        <Find name="click_the_signin_button" />
-        <Find name="\bu\." />
-        <Find name="speaker_str" />
-        <Find name="recent_sermons_df" />
-        <Find name="NOW_STAMP" />
-        <Find name="login_css" />
-        <Find name="login_xpath" />
-        <Find name="click_the_login_button" />
-        <Find name="login" />
-        <Replace name="self." />
-        <Replace name="speaker_name" />
-        <Replace name="recent_sermons_df" />
-        <Replace name="tables" />
-        <Replace name="tables_url" />
-        <Replace name="        -" />
+        <Find name="row_dict[&apos;layout_x&apos;] = " />
+        <Find name="row_dict[&apos;layout_y&apos;] = " />
+        <Find name="Incels" />
+        <Find name="MGTOW (Men Going Their Own Way)" />
+        <Find name="Manosphere" />
+        <Find name="MRA (Mens Right Advocates)" />
+        <Find name="Neoreactionaries" />
+        <Find name="Modern Neo-Nazis" />
+        <Find name="Alt-Right" />
+        <Find name="Alt-Lite" />
+        <Replace name="row_dict[&apos;layout_x&apos;] = -canvas_width/2 + " />
+        <Replace name="row_dict[&apos;layout_y&apos;] = -" />
+        <Replace name="layout_y" />
+        <Replace name="that\\&apos;s" />
+        <Replace name="L\\&apos;Oreal" />
+        <Replace name="Johnson\\&apos;s" />
         <Replace name=" " />
-        <Replace name="    -" />
-        <Replace name="  " />
-        <Replace name="u.on_sermonaudio" />
+        <Replace name="&apos;High&apos;" />
+        <Replace name="\n" />
+        <Replace name="self." />
     </FindHistory>
+    <FileBrowser latestSelectedItem="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg">
+        <root foldername="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg" />
+    </FileBrowser>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Downloads\pySVG\conf\apigen.py" />
-        <File filename="C:\Users\dev\Downloads\pySVG\setup.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\get_recent_sermons.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\upload_sermons_to_sermon_audio.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\sermon_utils.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\txt\Past_Week_Reviews.txt" />
-        <File filename="C:\Users\dev\Downloads\pySVG\src\pysvg\shape.py" />
-        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\python_utils\__about__.py" />
-        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\python_utils\__init__.py" />
-        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\pandas\__init__.py" />
-        <File filename="C:\Users\dev\Downloads\pySVG\conf\apigen.py" />
-        <File filename="C:\Users\dev\Downloads\pySVG\setup.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\get_recent_sermons.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\upload_sermons_to_sermon_audio.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\sermon_utils.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\txt\Past_Week_Reviews.txt" />
-        <File filename="C:\Users\dev\Downloads\pySVG\src\pysvg\shape.py" />
-        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\python_utils\__about__.py" />
-        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\python_utils\__init__.py" />
-        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\pandas\__init__.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\diet\saves\txt\salicylate_free_diet_food_guide.txt" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\networkx\drawing\nx_pylab.py" />
+        <File filename="C:\Users\dev\Documents\repositories\pywikibot\generate_user_files.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\diet\saves\html\diet_foods_dataset.html" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\py\tribes_layout.py" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\robloxapi\client.py" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\robloxapi\utils\request.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\diet\py\HistamineHandout.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\diet\py\low-oxalate-diet.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\diet\py\salicylate_free_diet_food_guide.py" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -59,7 +52,7 @@
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
         <GUIConfig name="AppPosition" x="-891" y="-120" width="725" height="738" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200107">no</GUIConfig>
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200125">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -93,14 +86,14 @@
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
         <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="4" zoom2="0" whiteSpaceShow="show" eolShow="hide" borderWidth="2" smoothFont="no" />
         <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="250">
-            <PluginDlg pluginName="Notepad++::InternalFunction" id="44085" curr="0" prev="-1" isVisible="yes" />
+            <PluginDlg pluginName="Notepad++::InternalFunction" id="44085" curr="0" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="3" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="42051" curr="1" prev="-1" isVisible="no" />
             <PluginDlg pluginName="MarkdownViewer++" id="0" curr="1" prev="-1" isVisible="no" />
             <PluginDlg pluginName="dummy" id="0" curr="3" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Snippets" id="-1" curr="1" prev="-1" isVisible="no" />
             <PluginDlg pluginName="ComparePlugin.dll" id="11" curr="1" prev="-1" isVisible="no" />
-            <ActiveTabs cont="0" activeTab="0" />
+            <ActiveTabs cont="0" activeTab="-1" />
             <ActiveTabs cont="1" activeTab="-1" />
             <ActiveTabs cont="2" activeTab="-1" />
             <ActiveTabs cont="3" activeTab="-1" />
@@ -111,7 +104,4 @@
         <ProjectPanel id="1" workSpaceFile="" />
         <ProjectPanel id="2" workSpaceFile="" />
     </ProjectPanels>
-    <FileBrowser latestSelectedItem="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg">
-        <root foldername="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg" />
-    </FileBrowser>
 </NotepadPlus>
