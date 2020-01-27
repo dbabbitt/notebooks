@@ -1,6 +1,14 @@
 
 import pandas as pd
 import math
+import statsmodels.api as sm
+
+def get_page_tables(tables_url):
+    tables_df_list = pd.read_html(tables_url)
+    print(sorted([(i, df.shape) for (i, df) in enumerate(tables_df_list)], key=lambda x: x[1][0], reverse=True))
+    
+    return tables_df_list
+
 
 def get_column_descriptions(df, column_list=None):
     
@@ -86,3 +94,45 @@ def example_iterrows():
 
     return "Don't run this, just look at the code using example_iterrows?"
 
+def get_max_rsquared_adj(df, columns_list, verbose=False):
+    if verbose:
+        t0 = time.time()
+    rows_list = []
+    n = len(columns_list)
+    for i in range(n-1):
+        first_column = columns_list[i]
+        first_series = df[first_column]
+        max_similarity = 0.0
+        max_column = first_column
+        for j in range(i+1, n):
+            second_column = columns_list[j]
+            second_series = df[second_column]
+            
+            # Assume the first column is never identical to the second column
+            X, y = first_series.values.reshape(-1, 1), second_series.values.reshape(-1, 1)
+            #this_similarity = abs(first_series.cov(second_series))
+            
+            # Compute with statsmodels, by adding intercept manually
+            X1 = sm.add_constant(X)
+            result = sm.OLS(y, X1).fit()
+            this_similarity = abs(result.rsquared_adj)
+            
+            if this_similarity > max_similarity:
+                max_similarity = this_similarity
+                max_column = second_column
+
+        # Get input row in dictionary format; key = col_name
+        row_dict = {}
+        row_dict['first_column'] = first_column
+        row_dict['second_column'] = max_column
+        row_dict['max_similarity'] = max_similarity
+
+        rows_list.append(row_dict)
+
+    column_list = ['first_column', 'second_column', 'max_similarity']
+    column_similarities_df = pd.DataFrame(rows_list, columns=column_list)
+    if verbose:
+        t1 = time.time()
+        print(t1-t0, time.ctime(t1))
+
+    return column_similarities_df

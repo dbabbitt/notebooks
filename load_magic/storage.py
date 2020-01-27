@@ -151,24 +151,3 @@ class Storage(object):
             print(e, ": Couldn't save {:,} cells as a pickle.".format(df.shape[0]*df.shape[1]))
             if raise_exception:
                 raise
-
-
-s = Storage()
-
-# Change this to your data and saves folders
-DATA_FOLDER = s.data_folder
-SAVES_FOLDER = s.saves_folder
-
-# Create the assumed directories
-DATA_CSV_FOLDER = s.data_csv_folder
-SAVES_PICKLE_FOLDER = s.saves_pickle_folder
-SAVES_CSV_FOLDER = s.saves_csv_folder
-
-# Handy list of the different types of encodings
-ENCODING_TYPE = s.encoding_typeload_csv = s.load_csv
-
-load_dataframes = s.load_dataframes
-load_object = s.load_object
-save_dataframes = s.save_dataframes
-store_objects = s.store_objects
-attempt_to_pickle = s.attempt_to_pickle

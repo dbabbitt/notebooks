@@ -182,33 +182,3 @@ def remove_empty_folders(folder_path, remove_root=True):
     if len(files) == 0 and remove_root:
         print('Removing empty folder: {}'.format(folder_path))
         os.rmdir(folder_path)
-
-def copy_all_notebooks_from_the_repositories(root_dir=r'C:\Users\577342\Documents\Repositories\hanscom-afb-data-science', 
-                                             black_list=['.ipynb_checkpoints']):
-    print(os.getcwd())
-
-    for sub_directory, directories_list, files_list in os.walk(root_dir):
-        if all(map(lambda x: x not in sub_directory, black_list)):
-            for file_name in files_list:
-                if file_name.endswith('.ipynb'):
-                    src_path = os.path.join(sub_directory, file_name)
-                    dst_dir = os.path.normpath(os.path.join(os.getcwd(), *sub_directory.rsplit(root_dir)))
-                    if not os.path.isdir(dst_dir):
-                        os.makedirs(dst_dir)
-                    dst_path = os.path.join(dst_dir, file_name)
-                    if not os.path.isfile(dst_path):
-                        copyfile(src_path, dst_path)
-                        print(dst_path)
-
-def where_are_any_wav_files(root_dir='/', black_list=['.Trash']):
-    for sub_directory, directories_list, files_list in os.walk(root_dir):
-        if all(map(lambda x: x not in sub_directory, black_list)):
-            for file_name in files_list:
-                if file_name.endswith('.wav'):
-                    src_path = os.path.join(sub_directory, file_name)
-                    dst_dir = os.path.normpath(os.path.join(os.getcwd(), '../data/wav', *sub_directory.rsplit(root_dir)))
-                    if not os.path.isdir(dst_dir):
-                        os.makedirs(dst_dir)
-                    dst_path = os.path.join(dst_dir, file_name)
-                    if not os.path.isfile(dst_path):
-                        print(dst_path)
