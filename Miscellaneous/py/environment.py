@@ -8,6 +8,7 @@ from jupyter_core.paths import jupyter_config_dir
 from traitlets.config import Config
 from sklearn.ensemble import RandomForestClassifier
 import pandas as pd
+import re
 
 def get_notebook_path():
     """Returns the absolute path of the Notebook or None if it cannot be determined
@@ -17,7 +18,7 @@ def get_notebook_path():
     kernel_id = connection_file.split('-', 1)[1].split('.')[0]
 
     # Assumes you've already run `jupyter notebook --generate-config` to generate
-    # `jupyter_notebook_config.py` and have edited and uncommented the line
+    # `jupyter_notebook_config.py` and have edited and/or uncommented the line
     # containing `c.FileContentsManager.root_dir =`:
     c = Config()
     file_path = os.path.join(jupyter_config_dir(), 'jupyter_notebook_config.py')
@@ -153,18 +154,55 @@ def get_datastructure_prediction(df, clf, func):
     return idx[codes_list.index(prediction[0])]
 
 
-
+# <class '__main__.ObjectClass'> is a type of <class 'type'>
 def get_struct_name(data_struct):
-    struct_name = str(type(data_struct)).split("'")[1]
-    if struct_name == 'type':
-        try:
-            struct_name = data_struct.__name__
-        except:
-            struct_name = str(data_struct)
-            struct_name_list = struct_name.split("'")
-            if len(struct_name_list) > 2:
-                struct_name = struct_name_list[1]
-            else:
-                print(struct_name)
+    if isinstance(data_struct, bool):
+        struct_name = 'boolean'
+    elif isinstance(data_struct, str):
+        struct_name = 'string'
+    elif isinstance(data_struct, dict):
+        struct_name = 'dictionary'
+    elif isinstance(data_struct, list):
+        struct_name = 'list'
+    elif isinstance(data_struct, tuple):
+        struct_name = 'tuple'
+    elif isinstance(data_struct, set):
+        struct_name = 'set'
+    elif isinstance(data_struct, pd.DataFrame):
+        struct_name = 'DataFrame'
+    elif isinstance(data_struct, pd.np.ndarray):
+        struct_name = 'ndarray'
+    elif isinstance(data_struct, bytearray):
+        struct_name = 'bytearray'
+    elif isinstance(data_struct, range):
+        struct_name = 'range'
+    else:
+        struct_name = str(type(data_struct)).split("'")[1]
+        obj_classification = str(data_struct)
+        display_regex = re.compile(r'^<(class|module|function|__main__\.\w+ object|bound method)')
+        match_obj = display_regex.search(obj_classification)
+        if match_obj:
+            obj_classification = match_obj.group(1).split(' ')[-1]
+        if obj_classification == 'object':
+            struct_name = 'instantiation'
+        elif obj_classification == 'class':
+            print(struct_name)
+            if struct_name == 'type':
+                struct_name = str(data_struct)
+                if '__main__.' in struct_name:
+                    struct_name = obj_classification
+                elif '.' in struct_name:
+                    struct_name = 'import'
+                else:
+                    try:
+                        struct_name = data_struct.__name__
+                    except:
+                        struct_name_list = struct_name.split("'")
+                        if len(struct_name_list) > 2:
+                            struct_name = struct_name_list[1]
+                        else:
+                            print(struct_name)
+            elif callable(data_struct):
+                struct_name = 'function'
     
     return struct_name
