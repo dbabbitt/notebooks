@@ -8,6 +8,7 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;*.ipynb;" />
         <Filter name="*.py;" />
+        <Find name="&apos;%" />
         <Find name="[\r\n]+" />
         <Find name="\s+" />
         <Find name="Oecolampadius" />
@@ -17,7 +18,6 @@
         <Find name="Awakenings" />
         <Find name="Rectangles" />
         <Find name="Rectangles Text" />
-        <Find name="Time-axis" />
         <Replace name="\n" />
         <Replace name=" " />
         <Replace name='inkscape:label=&quot;\1 Text&quot;' />

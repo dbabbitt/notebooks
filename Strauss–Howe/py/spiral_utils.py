@@ -438,7 +438,7 @@ class StraussHoweUtilities(object):
         
         return (x, y)
     
-    def colors_dict_to_df(self, colors_dict):
+    def colors_dict_to_dataframe(self, colors_dict):
         columns_list = ['Red', 'Green', 'Blue']
         rows_list = []
         index_list = []
@@ -635,7 +635,7 @@ class StraussHoweUtilities(object):
         
         return (x, y)
     
-    def get_distance_df(self, colors_df, color_title='XKCD'):
+    def get_distance_dataframe(self, colors_df, color_title='XKCD'):
         rows_list = []
         columns_list = ['color_title', 'distance_from_white', 'distance_from_black',
                         'distance_from_red', 'distance_from_green', 'distance_from_blue',
