@@ -24,7 +24,7 @@ def get_page_soup(page_url_or_filepath):
         with urllib.request.urlopen(page_url_or_filepath) as response:
             page_html = response.read()
     else:
-        with open(page_url_or_filepath, 'r') as f:
+        with open(page_url_or_filepath, 'r', encoding='utf-8') as f:
             page_html = f.read()
     page_soup = bs(page_html, 'html.parser')
     
