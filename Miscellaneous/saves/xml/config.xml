@@ -8,6 +8,7 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;*.ipynb;" />
         <Filter name="*.py;" />
+        <Find name="maximize" />
         <Find name="&apos;%" />
         <Find name="[\r\n]+" />
         <Find name="\s+" />
@@ -17,7 +18,6 @@
         <Find name="Reformation" />
         <Find name="Awakenings" />
         <Find name="Rectangles" />
-        <Find name="Rectangles Text" />
         <Replace name="\n" />
         <Replace name=" " />
         <Replace name='inkscape:label=&quot;\1 Text&quot;' />
@@ -33,16 +33,16 @@
         <root foldername="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg" />
     </FileBrowser>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Home Inspectors Consumer Fact Sheet.txt" />
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Home Inspector Informational Brochure Acknowledgment - 8_07.txt" />
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Financial Privacy Consent Form - 8_07.txt" />
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Exclusive Right to Represent Buyer Agreement - 1_11.txt" />
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Disclaimer Regarding Third-Party Resources - 4_12.txt" />
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Designated Agency Notification - 2_17.txt" />
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Designated Agency Consent - 8_16.txt" />
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Confidentiality Advisory - 2_17.txt" />
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Affiliated Business Arrangement Disclosure Statement - 2_19.txt" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\pdfs.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Strauss&#x2013;Howe\saves\xml\Calvinist Paths.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\rick\etrade_python_client\python_client.log" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\rick\etrade_python_client\accounts\accounts.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\rick\py\populate_dfs.py" />
+        <File filename="C:\Users\dev\Documents\repositories\etradePythonAPI\etradepy.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\rick\etrade_python_client\config.ini" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\py\user-config.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\get_recent_sermons.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Strauss&#x2013;Howe\py\spiral_utils.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -51,8 +51,8 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="594" y="0" width="725" height="738" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200212">no</GUIConfig>
+        <GUIConfig name="AppPosition" x="-1026" y="-120" width="725" height="738" isMaximized="yes" />
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200303">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
