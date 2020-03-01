@@ -92,15 +92,3 @@ def check_for_typos(left_list, right_list, verbose=False):
         print(t1-t0, time.ctime(t1))
     
     return name_similarities_df
-
-def conjunctify_list(noun_list):
-    if len(noun_list) > 2:
-        list_str = ', and '.join([', '.join(noun_list[:-1])] + [noun_list[-1]])
-    elif len(noun_list) == 2:
-        list_str = ' and '.join(noun_list)
-    elif len(noun_list) == 1:
-        list_str = noun_list[0]
-    else:
-        list_str = ''
-    
-    return list_str
