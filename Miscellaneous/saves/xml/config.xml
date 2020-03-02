@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="no" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="yes" wrap="yes" directionDown="yes" fifRecuisive="no" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
         <Path name="C:\Users\dev\Documents\repositories\notebooks\RPC" />
         <Path name="C:\Users\dev\Documents\repositories\notebooks\RPC\py" />
         <Path name="C:\users\dev\Anaconda3\Lib\site-packages\networkx" />
@@ -8,41 +8,41 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;*.ipynb;" />
         <Filter name="*.py;" />
-        <Find name="&apos;%" />
-        <Find name="[\r\n]+" />
-        <Find name="\s+" />
-        <Find name="Oecolampadius" />
-        <Find name='height=&quot;' />
-        <Find name="Great" />
-        <Find name="Reformation" />
-        <Find name="Awakenings" />
-        <Find name="Rectangles" />
-        <Find name="Rectangles Text" />
-        <Replace name="\n" />
-        <Replace name=" " />
-        <Replace name='inkscape:label=&quot;\1 Text&quot;' />
-        <Replace name='inkscape:label=&quot;\1 Timeline&quot;' />
-        <Replace name=".copy\(\)]" />
-        <Replace name="row_dict.copy()]" />
-        <Replace name="row_dict[&apos;layout_x&apos;] = -canvas_width/2 + " />
-        <Replace name="row_dict[&apos;layout_y&apos;] = -" />
-        <Replace name="layout_y" />
-        <Replace name="that\\&apos;s" />
+        <Find name="driver" />
+        <Find name="reverse_sorted_d" />
+        <Find name="create_us_svg" />
+        <Find name="label_line_file_path" />
+        <Find name="he whole li" />
+        <Find name="save_colored_map" />
+        <Find name="get_column_description" />
+        <Find name="column_description_dict" />
+        <Find name="ListedColormap_obj" />
+        <Find name="label_line_style_list" />
+        <Replace name="self.get_column_description" />
+        <Replace name="self.column_description_dict" />
+        <Replace name="self.label_line_style_list" />
+        <Replace name="self.text_style_list" />
+        <Replace name="self.get_colorbar_xml" />
+        <Replace name="self.split_suggestion" />
+        <Replace name="self.get_style_list" />
+        <Replace name="self.state_merge_df" />
+        <Replace name="self.label_tspan_style_list" />
+        <Replace name="self.label_text_style_list" />
     </FindHistory>
     <FileBrowser latestSelectedItem="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg">
         <root foldername="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg" />
     </FileBrowser>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Home Inspectors Consumer Fact Sheet.txt" />
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Home Inspector Informational Brochure Acknowledgment - 8_07.txt" />
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Financial Privacy Consent Form - 8_07.txt" />
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Exclusive Right to Represent Buyer Agreement - 1_11.txt" />
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Disclaimer Regarding Third-Party Resources - 4_12.txt" />
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Designated Agency Notification - 2_17.txt" />
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Designated Agency Consent - 8_16.txt" />
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Confidentiality Advisory - 2_17.txt" />
-        <File filename="C:\Users\dev\Downloads\Packet_7-PDFDocuments\Affiliated Business Arrangement Disclosure Statement - 2_19.txt" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\load_magic\pdfs.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\StatsByCountry\data\svg\Canada_location_map.svg" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\StatsByCountry\data\svg\Canada_blank_map.svg" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\xml\etree\ElementTree.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\StatsByCountry\py\storage.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\StatsByCountry\py\sermon_utils.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\StatsByCountry\saves\svg\Total_Gun_Murder_Deaths_2010.svg" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\StatsByCountry\data\svg\first_us.svg" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\StatsByCountry\data\svg\common_us.svg" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\StatsByCountry\data\svg\unique_us.svg" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\StatsByCountry\saves\xml\states_label_line.xml" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -51,8 +51,8 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="594" y="0" width="725" height="738" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200212">no</GUIConfig>
+        <GUIConfig name="AppPosition" x="404" y="0" width="725" height="738" isMaximized="yes" />
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200303">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -84,7 +84,7 @@
         <GUIConfig name="MISC" fileSwitcherWithoutExtColumn="no" backSlashIsEscapeCharacterForSql="yes" monospacedFontFindDlg="no" newStyleSaveDlg="no" isFolderDroppedOpenFiles="no" docPeekOnTab="no" docPeekOnMap="no" />
         <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
-        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="4" zoom2="0" whiteSpaceShow="show" eolShow="hide" borderWidth="2" smoothFont="no" />
+        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="no" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="4" zoom2="0" whiteSpaceShow="show" eolShow="hide" borderWidth="2" smoothFont="no" />
         <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="250">
             <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="3" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44085" curr="0" prev="-1" isVisible="no" />
