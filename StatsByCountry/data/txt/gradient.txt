@@ -1,0 +1,22 @@
+
+      <g
+         id="patch-gradient"
+         style="stroke-linecap:butt;stroke-linejoin:round"
+         inkscape:label="Gradient">
+        <path
+           d="M 36,378 V 376.72594 53.114062 51.84 H 64.8 V 53.114062 376.72594 378 Z"
+           style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:miter"
+           id="path-gradient"
+           inkscape:connector-curvature="0"
+           inkscape:label="Gradient Image Outline" />
+        <image
+           height="326"
+           id="image-gradient"
+           transform="matrix(1,0,0,-1,0,326)"
+           width="29"
+           x="36"
+           xlink:href="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAB0AAAFGCAYAAACWrZSPAAAABHNCSVQICAgIfAhkiAAAAgZJREFUeJztnYFtxDAMA+3Yo3WE7j/Kp0uUOuCPWuAgk6Hk4NPun/37ruG6az/TzHX3s+ehRKfzxGU63ruYTuehlJEITYHjvQvolNEUOl4Aui2JZDKSJRxEU8ZkpGoahUoCv+HwjdAaKVj3ZTQdZ5o09YSDxr01UhZaIyXLpOk8U6WpZXO4b42UhY4zO2Wy5Qn8hkMWShwvYyTPq1ePplCnNVIQqjFSp0wWyhhJs4JqntMGfhZqMtI8tEbKQjWd9kVHFmpaQS3QhkOyPMfr6VSUSNU0WXf8S7rV0RauhkMWqnFv15Xvg1bTLFTTaadMFqrRtIn0fdBqmoVqOqWmzPy12KOpyEjVNFkNh2h5NnxVOADu9Wiqyd4aKVoNhywU+L2MaV3RxCCk6bJoui3uhf5wpeV4kcBHsldkJERTolPRXYYx0jhSZSRPODxMpzVSFDrOZIwk0vQhLlA1UrIgI1kCX2QkKByqaa6Y51QEBR6ZGqnQfynRlIE0/YxDTeFQIwWLMdIRGWleU9GUOdU0WKpwkGh6D9CpaF05SDho7qfM8RJQzWjr5pCFEoFvWleI4+2USRZ1vIiRuoLmShT4mlubKJGYzaFTJgpF9l7LjqS6y0g2B+R4TW/MCPeaNAWg0JSZr3s0H9Md4IMZSlOkU8v/l4GMBEAJI1E/95rnUpoinc5DESP9AReOjY5wk3dZAAAAAElFTkSuQmCC"
+           y="-52"
+           style="stroke-linecap:butt;stroke-linejoin:round"
+           inkscape:label="Gradient Image" />
+      </g>
