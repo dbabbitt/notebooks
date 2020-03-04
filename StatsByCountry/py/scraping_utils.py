@@ -58,92 +58,11 @@ class ScrapingUtilities(object):
         # Obscuration error pattern
         self.obscure_regex = re.compile('<([^ ]+)[^>]*class="([^"]+)"[^>]*>')
         
-        # Full xpath for the edit button
-        div_class_list = 'sqs-damask'.split(' ')
-        contains_list = ["contains(@class, '{}')".format(c) for c in div_class_list]
-        xpath_list = ["html", "body", "div[{}]".format(' and '.join(contains_list)),
-                      "div", "div[1]", "div", "div", "div", "div", "div[2]", "div[1]",
-                      "div[3]", "div", "div", "div", "div", "div[3]", "div[1]"]
-        self.button_xpath = "/{}".format('/'.join(xpath_list))
-        
-        # Full xpath for the search record
-        span_class_list = ['title']
-        span_contains_list = ["contains(@class, '{}')".format(c) for c in span_class_list]
-        xpath_list = ["span[{}]".format(' and '.join(span_contains_list))]
-        self.title_xpath = "//{}".format('/'.join(xpath_list))
-        
-        # Full xpath for the search field
-        div_class_list = ['search-filter-input']
-        div_contains_list = ["contains(@class, '{}')".format(c) for c in div_class_list]
-        input_class_list = ['search-filter']
-        input_contains_list = ["contains(@class, '{}')".format(c) for c in input_class_list]
-        xpath_list = ["div[{}]".format(' and '.join(div_contains_list)),
-                      "input[{}]".format(' and '.join(input_contains_list))]
-        self.input_xpath = "//{}".format('/'.join(xpath_list))
-        
-        # CSS selector for the login button
-        #self.login_css = 'button [data-test="login-button"]'
-        self.login_css = '#renderTarget > div > div:nth-child(2) > div > div:nth-child(1) > div > div:nth-child(2) > div:nth-child(1) > div > button'
-        self.login_xpath = '/html/body/div[1]/div/div[2]/div/div[1]/div/div[1]/div[1]/div/button'
-        
-        # Xpath list for audio processing div
-        div_class_str = 'flyout dialog-editor-block-audio yui3-dd-draggable visible'
-        self.audio_xpath_list = ['html', 'body',
-                                 self.get_div(div_class_str),
-                                 self.get_div('main-container'),
-                                 self.get_div('body-block scrollable'),
-                                 self.get_div('dialog-tab-item'),
-                                 self.get_div('sqs-multi-frame data-state-loaded name-file-location-frame variable-height'),
-                                 self.get_div('sqs-multi-frame-content yui3-widget-content-expanded'),
-                                 self.get_div('multi-frame-wrapper animate-switch'),
-                                 self.get_div('frame'),
-                                 self.get_div('yui3-widget sqs-widget sqs-data-widget sqs-dialog-field sqs-file yui3-filerequiresprocessing sqs-file-audio-processing data-state-loaded name-audioAsset'),
-                                 self.get_div('sqs-file-audio-processing-content yui3-widget-content-expanded')]
-        
-        # Full xpath for the progress bar
-        bar_xpath = '/html/body/div/div[1]/div/div[1]/div'
-        xpath_list = self.audio_xpath_list + [
-                                              self.get_div('progress-container'),
-                                              self.get_div('progress'),
-                                              self.get_div('bar'),
-                                              self.get_div('bar-inner')
-                                              ]
-        self.bar_xpath = "/{}".format('/'.join(xpath_list))
-        
-        # Full xpath for the spinner
-        spinner_xpath = '/html/body/div/div[2]/div/div[1]/div/div'
-        xpath_list = self.audio_xpath_list + [
-                                              self.get_div('progress-container'),
-                                              self.get_div('progress'),
-                                              self.get_div('spinner'),
-                                              self.get_div('yui3-widget sqs-spin dark'),
-                                              self.get_div('sqs-spin-content yui3-widget-content-expanded')
-                                              ]
-        self.spinner_xpath = "/{}".format('/'.join(xpath_list))
-        
-        # Full xpath for the file preview div
-        preview_css = 'span.file-meta.file-meta-name'
-        preview_xpath = '/html/body/div[27]/div/div[2]/div[1]/div[3]/div/div/div[1]/div/div/div[4]/span[class="file-meta file-meta-name"]'
-        div_class_str = 'standard-dialog-wrapper squarespace-managed-ui flyout light buttons-right dialog-editor-block-audio yui3-dd-draggable visible'
-        xpath_list = ['html', 'body', self.get_div(div_class_str), 'div', self.get_div('body-block scrollable'), self.get_div('tab-wrapper dialog-tab-item'),
-                      self.get_div('yui3-widget sqs-widget sqs-data-widget sqs-dialog-field sqs-multi-frame data-state-loaded name-file-location-frame variable-height'),
-                      'div', 'div', 'div[data-name="embedded"]', 'div',
-                      'div', 'div[class="sqs-file-preview"]', 'span[class="file-meta file-meta-name"]']
-        self.preview_xpath = "/{}".format('/'.join(xpath_list[:-5]))
-        
-        # Full xpath for the "Add an audio track" input
-        upload_css = 'input[type=file]'
-        upload_xpath = '/html/body/div[28]/div/div[2]/div[1]/div[3]/div/div/div[1]/div/div/div[3]/div/input'
-        div_class_str = 'flyout dialog-editor-block-audio yui3-dd-draggable visible'
-        xpath_list = self.audio_xpath_list + [
-                                              self.get_div('yui3-widget yui3-uploader sqs-uploader'),
-                                              self.get_div('sqs-uploader-content'),
-                                              'input'
-                                              ]
-        self.upload_xpath = "//{}".format('/'.join(xpath_list[10:]))
         self.url_regex = re.compile(r'\b(https?|file)://[-A-Z0-9+&@#/%?=~_|$!:,.;]*[A-Z0-9+&@#/%=~_|$]', re.IGNORECASE)
         self.filepath_regex = re.compile(r'\b[c-d]:\\(?:[^\\/:*?"<>|\x00-\x1F]{0,254}[^.\\/:*?"<>|\x00-\x1F]\\)*(?:[^\\/:*?"<>|\x00-\x1F]{0,254}[^.\\/:*?"<>|\x00-\x1F])', re.IGNORECASE)
-
+    
+    
+    
     def get_page_tables(self, url_or_filepath_or_html, verbose=True):
         if url_regex.fullmatch(url_or_filepath_or_html) or filepath_regex.fullmatch(url_or_filepath_or_html):
             tables_df_list = pd.read_html(url_or_filepath_or_html)
@@ -169,56 +88,6 @@ class ScrapingUtilities(object):
         page_soup = bs(page_html, 'html.parser')
         
         return page_soup
-    
-    
-    
-    def click_the_edit_button(self, driver):
-        self.move_to_title(driver)
-        print('Clicking the edit button')
-        try:
-            
-            # Wait for button to show up
-            button_tag = WebDriverWait(driver, 20).until(
-                EC.element_to_be_clickable((By.XPATH, self.button_xpath))
-                )
-            button_tag.click()
-        
-        except Exception as e:
-            message = str(e).strip()
-            print('Waiting for the edit button to be clickable: {}'.format(message))
-            while self.obscure_regex.search(message):
-                match_obj = self.obscure_regex.search(message)
-                if match_obj:
-                    self.unobscure_element(driver, match_obj)
-                    self.move_to_title(driver)
-                    try:
-                        
-                        # Wait for button to show up
-                        button_tag = WebDriverWait(driver, 20).until(
-                            EC.element_to_be_clickable((By.XPATH, self.button_xpath))
-                            )
-                        button_tag.click()
-                        message = ""
-                        
-                    except Exception as e:
-                        message = str(e).strip()
-                        print('Waiting for the edit button to be clickable (unobscured): {}'.format(message))
-    
-    
-    
-    def click_the_login_button(self, driver):
-        print('Clicking the login button')
-        try:
-            
-            # Wait for button to show up
-            login_tag = WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, self.login_css))
-                )
-            login_tag.click()
-            
-        except Exception as e:
-            message = str(e).strip()
-            raise Exception('Waiting for the login button to show up: {}'.format(message))
     
     
     
@@ -449,22 +318,6 @@ class ScrapingUtilities(object):
     
     
     
-    def log_into_squarespace(self, driver, verbose=True):
-        self.driver_get_url(driver, self.squarespace_url, verbose=verbose)
-        self.fill_in_field(driver, field_name='email',
-                           field_value='dave.babbitt@gmail.com',
-                           verbose=verbose)
-        self.fill_in_field(driver, field_name='password',
-                           field_value='202001squarespace@WSXcde3$RFVbgt5',
-                           verbose=verbose)
-        button_xpath = '/html/body/div[1]/div/div[2]/div/div[1]/div/div[1]/div[1]/div/button'
-        self.click_web_element(driver, xpath=button_xpath, verbose=verbose)
-        
-        # Wait for 10 seconds
-        self.wait_for(10, verbose=verbose)
-    
-    
-    
     def move_to(self, driver, xpath, verbose=True):
         if verbose:
             print('Moving to {}'.format(xpath))
@@ -492,13 +345,6 @@ class ScrapingUtilities(object):
                         if verbose:
                             print('Waiting for the web element to be visible (unobscured): {}'.format(message))
                     match_obj = obscure_regex.search(message)
-    
-    
-    
-    def move_to_title(self, driver):
-        print('Moving to the title')
-        status_tag = self.get_web_element(driver, self.title_xpath)
-        ActionChains(driver).move_to_element(status_tag).click().perform()
     
     
     
@@ -716,15 +562,6 @@ class ScrapingUtilities(object):
             raise Exception('Waiting for signin link to show up: {}'.format(message))
         
         return main_window_handle
-    
-    
-    
-    def get_the_file_preview(self, driver):
-        print('Getting the file preview')
-        preview_tag = self.get_web_element(driver, self.preview_xpath)
-        preview_str = preview_tag.text.strip().split('\n')[0]
-        
-        return preview_str
 
 
 
