@@ -264,6 +264,7 @@ class ChoroplethUtilities(object):
             </g>
           </g>{}
         </g>'''
+        self.hyphen_dict = pyphen.Pyphen(lang='en_US')
     
     
     ###########################
@@ -303,7 +304,7 @@ class ChoroplethUtilities(object):
         for word in suggestion.split(' '):
             width = len(word)
             if width > 12:
-                hyphen_tuple = hyphen_dict.wrap(word, int(width/2))
+                hyphen_tuple = self.hyphen_dict.wrap(word, int(width/2))
                 if hyphen_tuple is None:
                     hyphenated_list.append(word)
                 else:
