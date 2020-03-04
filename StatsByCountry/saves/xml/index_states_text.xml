@@ -229,7 +229,11 @@
        sodipodi:role="line"
        id="tspan-massachusetts0"
        x="937.329833984375"
-       y="140.91110229492188">Massachusetts</tspan></text>
+       y="140.91110229492188">Massa-</tspan><tspan
+       sodipodi:role="line"
+       id="tspan-massachusetts1"
+       x="937.329833984375"
+       y="155.91110229492188">chusetts</tspan></text>
   <text
      x="745.2725830078125"
      y="174.73953247070312"

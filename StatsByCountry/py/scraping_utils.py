@@ -5,9 +5,8 @@
 # Author: Dave Babbitt, Data Scientist
 # coding: utf-8
 """
-SermonScrapingUtilities: A set of utility functions common to sermon audio web scraping
+ScrapingUtilities: A set of utility functions common to web scraping
 """
-from bs4 import BeautifulSoup as bs
 from datetime import datetime
 from datetime import timedelta
 from dateutil import relativedelta
@@ -26,6 +25,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from shutil import copyfile
 from urllib.request import urlretrieve
+import io
 import math
 import numpy as np
 import os
@@ -35,18 +35,21 @@ import re
 import storage as s
 import time
 import urllib
+import wikipedia
 import warnings
 warnings.filterwarnings("ignore")
 
-class SermonScrapingUtilities(object):
+bs = wikipedia.BeautifulSoup
+
+class ScrapingUtilities(object):
     """This class implements the core of the utility functions
-    needed to scrape the sermon mp3s.
+    needed to scrape web content.
     
     Examples
     --------
     
-    >>> import sermon_utils
-    >>> u = sermon_utils.SermonScrapingUtilities()
+    >>> import scraping_utils
+    >>> u = scraping_utils.ScrapingUtilities()
     """
     
     def __init__(self):
@@ -54,21 +57,6 @@ class SermonScrapingUtilities(object):
         
         # Obscuration error pattern
         self.obscure_regex = re.compile('<([^ ]+)[^>]*class="([^"]+)"[^>]*>')
-        
-        # Sermon Archive URL
-        self.squarespace_url = 'https://sphere-green-kslg.squarespace.com/config/pages/5ca546e7419202e545ca8977'
-        
-        # Sermonaudio.com Submit URL
-        self.submitsermon_url = 'https://www.sermonaudio.com/submitsermon.asp'
-        
-        # Sermonaudio.com signin URL
-        self.signin_url = 'https://www.sermonaudio.com/signin.asp'
-        
-        # Sermonaudio.com search formatted string
-        self.search_formatted_str = 'https://www.sermonaudio.com/search.asp?keyword={}&SpeakerOnly=true&keywordwithin={}'
-        
-        # Sermonaudio.com general formatted string
-        self.formatted_str = 'https://www.sermonaudio.com/{}'
         
         # Full xpath for the edit button
         div_class_list = 'sqs-damask'.split(' ')
@@ -153,20 +141,34 @@ class SermonScrapingUtilities(object):
                                               'input'
                                               ]
         self.upload_xpath = "//{}".format('/'.join(xpath_list[10:]))
-    
-    
-    
-    def browse_to_sermon_archive(self, driver):
+        self.url_regex = re.compile(r'\b(https?|file)://[-A-Z0-9+&@#/%?=~_|$!:,.;]*[A-Z0-9+&@#/%=~_|$]', re.IGNORECASE)
+        self.filepath_regex = re.compile(r'\b[c-d]:\\(?:[^\\/:*?"<>|\x00-\x1F]{0,254}[^.\\/:*?"<>|\x00-\x1F]\\)*(?:[^\\/:*?"<>|\x00-\x1F]{0,254}[^.\\/:*?"<>|\x00-\x1F])', re.IGNORECASE)
+
+    def get_page_tables(self, url_or_filepath_or_html, verbose=True):
+        if url_regex.fullmatch(url_or_filepath_or_html) or filepath_regex.fullmatch(url_or_filepath_or_html):
+            tables_df_list = pd.read_html(url_or_filepath_or_html)
+        else:
+            f = io.StringIO(url_or_filepath_or_html)
+            tables_df_list = pd.read_html(f)
+        if verbose:
+            print(sorted([(i, df.shape) for (i, df) in enumerate(tables_df_list)],
+                         key=lambda x: x[1][0], reverse=True))
         
-        # Bring up the browser to the login page
-        self.driver_get_url(driver, url_str=self.squarespace_url)
+        return tables_df_list
+
+
+    def get_page_soup(self, url_or_filepath_or_html):
+        if url_regex.fullmatch(url_or_filepath_or_html):
+            with urllib.request.urlopen(url_or_filepath_or_html) as response:
+                page_html = response.read()
+        elif filepath_regex.fullmatch(url_or_filepath_or_html):
+            with open(url_or_filepath_or_html, 'r', encoding='utf-8') as f:
+                page_html = f.read()
+        else:
+            page_html = url_or_filepath_or_html
+        page_soup = bs(page_html, 'html.parser')
         
-        # Fill in the name and password
-        self.fill_in_field(driver, field_name='email', field_value='dave.babbitt@gmail.com')
-        self.fill_in_field(driver, field_name='password', field_value='Genesis11')
-        
-        # Click the login button
-        self.click_the_login_button(driver)
+        return page_soup
     
     
     
@@ -422,148 +424,6 @@ class SermonScrapingUtilities(object):
     
     
     
-    def get_recent_sermons_dataframe(self, driver, verbose=True):
-        NOW_STAMP = datetime.now()
-        div_xpath = '/html/body/div[1]/div/div[1]/div/div/div/div/div[2]/div[1]'
-        div_tag = self.get_web_element(driver, div_xpath)
-        rows_list = []
-        columns_list = ['sermon_reference', 'sermon_title', 'publish_date',
-                        'speaker_name', 'on_sermonaudio', 'mp3_url', 'mp3_path']
-        driver.maximize_window()
-        for h2_tag in div_tag.find_elements_by_tag_name('h2'):
-            
-            # Get the grandparent of the h2 tag
-            parent_tag = h2_tag.find_element_by_xpath('..')
-            grandparent_tag = parent_tag.find_element_by_xpath('..')
-            info_list = grandparent_tag.text.strip().split('\n')
-            
-            # Get the sermon title
-            reference_title_list = info_list[0].split(': ')
-            if len(reference_title_list) > 1:
-                sermon_reference = reference_title_list[0]
-                sermon_title = reference_title_list[1]
-            else:
-                sermon_reference = np.nan
-                sermon_title = reference_title_list[0]
-            match_series = (self.recent_sermons_df.sermon_reference == sermon_reference)
-            match_series = match_series & (self.recent_sermons_df.sermon_title == sermon_title)
-            if self.recent_sermons_df[match_series].shape[0] == 0:
-                row_dict = {}
-                row_dict['sermon_reference'] = sermon_reference
-                row_dict['sermon_title'] = sermon_title
-                
-                # Get the published date
-                publisher_list = info_list[1].split('·')
-                date_str = publisher_list[0].strip()
-                if len(date_str.split(',')) == 1:
-                    
-                    # Yesterday 12:00pm
-                    if ('Yesterday' in date_str):
-                        date_format = 'Yesterday %I:%M%p'
-                        publish_date = datetime.strptime(date_str, date_format)
-                        last_sunday = self.get_last_sunday(NOW_STAMP)
-                        publish_date = publish_date.replace(year=last_sunday.year,
-                                                            month=last_sunday.month,
-                                                            day=last_sunday.day)
-                    
-                    # Last Sunday 12:00pm
-                    elif ('Last' in date_str):
-                        date_format = 'Last %A %I:%M%p'
-                        publish_date = datetime.strptime(date_str, date_format)
-                        last_sunday = self.get_last_sunday(NOW_STAMP)
-                        publish_date = publish_date.replace(year=last_sunday.year,
-                                                            month=last_sunday.month,
-                                                            day=last_sunday.day)
-                    
-                    # Dec 22
-                    else:
-                        date_format = '%b %d'
-                        publish_date = datetime.strptime(date_str, date_format)
-                        publish_date = publish_date.replace(year=NOW_STAMP.year,
-                                                            month=publish_date.month,
-                                                            day=publish_date.day)
-                        if publish_date > NOW_STAMP:
-                            publish_date = publish_date.replace(year=publish_date.year-1)
-                            
-                row_dict['publish_date'] = publish_date
-                
-                rows_list.append(row_dict)
-            
-        self.recent_sermons_df = self.recent_sermons_df.append(pd.DataFrame(rows_list,
-                                                                            columns=columns_list),
-                                                               ignore_index=True)
-        
-        # Get the speaker and mp3_url
-        div_xpath = '/html/body/div[1]/div/div[1]/div/div/div/div/div[2]/div[1]/div[3]/div/div[1]'
-        iframe_xpath = '/html/body/div[1]/div/div[3]/div/div/div[2]/div/div/iframe'
-        speaker_xpath = '/html/body/div[4]/main/div/div/article/footer/p/a'
-        mp3_xpath = '/html/body/div[4]/main/div/div/article/div/div/div/div/div/div/div/div/div/div/div[3]/div[2]/a'
-        match_series = self.recent_sermons_df.speaker_name.isnull()
-        match_series = match_series | self.recent_sermons_df.mp3_url.isnull()
-        for row_index, row_series in self.recent_sermons_df[match_series].iterrows():
-            sermon_reference = row_series['sermon_reference']
-            sermon_title = row_series['sermon_title']
-            field_value = '{}: {}'.format(sermon_reference, sermon_title)
-            driver.switch_to.parent_frame()
-            self.search_the_sermon_archive(driver, field_value, verbose=verbose)
-            self.wait_for(7, verbose=verbose)
-            div_tag = self.get_web_element(driver, div_xpath)
-            if div_tag is not None:
-                div_tag.click()
-                
-                # An expectation for checking whether the given frame is available to
-                # switch to. If the frame is available it switches the given driver to the
-                # specified frame.
-                ec_tuple = (By.XPATH, iframe_xpath)
-                ec_type = EC.frame_to_be_available_and_switch_to_it(ec_tuple)
-                WebDriverWait(driver, 10).until(ec_type)
-                
-                speaker_tag = self.get_web_element(driver, speaker_xpath)
-                if speaker_tag is not None:
-                    self.recent_sermons_df.loc[row_index, 'speaker_name'] = speaker_tag.text.strip()
-                
-                mp3_tag = self.get_web_element(driver, mp3_xpath)
-                if mp3_tag is not None:
-                    self.recent_sermons_df.loc[row_index, 'mp3_url'] = mp3_tag.get_attribute('href').strip()
-        
-        # Fix Andrew's name
-        speaker_name = 'Andrew Davis'
-        full_name = 'Andrew Franklin Davis'
-        match_series = (self.recent_sermons_df.speaker_name == speaker_name)
-        self.recent_sermons_df.loc[match_series, 'speaker_name'] = full_name
-        
-        # Get whether it's already on sermonaudio.com
-        match_series = ~self.recent_sermons_df['speaker_name'].isnull()
-        match_series = match_series & self.recent_sermons_df['on_sermonaudio'].isnull()
-        for row_index, row_series in self.recent_sermons_df[match_series].iterrows():
-            speaker_name = row_series['speaker_name']
-            sermon_title = row_series['sermon_title']
-            title_str = '{}'.format(sermon_title)
-            on_sermonaudio = self.on_sermonaudio(driver, speaker_name, title_str, verbose=verbose)
-            self.recent_sermons_df.loc[row_index, 'on_sermonaudio'] = on_sermonaudio
-        
-        # Download the mp3
-        mp3_dir = os.path.join(self.s.data_folder, 'mp3')
-        match_series = ~self.recent_sermons_df['mp3_url'].isnull()
-        match_series = match_series & self.recent_sermons_df['mp3_path'].isnull()
-        for row_index, row_series in self.recent_sermons_df[match_series].iterrows():
-            mp3_url = row_series['mp3_url']
-            file_name = mp3_url.split('?')[0].split('/')[-1]
-            file_path = os.path.join(mp3_dir, file_name)
-            if Path(file_path).is_file():
-                self.recent_sermons_df.loc[row_index, 'mp3_path'] = Path(file_path).absolute().resolve()
-            else:
-                try:
-                    message_tuple = urlretrieve(url=mp3_url, filename=file_path)
-                    self.recent_sermons_df.loc[row_index, 'mp3_path'] = Path(message_tuple[0]).absolute().resolve()
-                except Exception as e:
-                    if verbose:
-                        print('Error on {} ({}): {}'.format(mp3_url, file_path, e))
-        
-        return self.recent_sermons_df
-    
-    
-    
     def get_web_element(self, driver, xpath):
         try:
             web_element = WebDriverWait(driver, 5).until(
@@ -639,51 +499,6 @@ class SermonScrapingUtilities(object):
         print('Moving to the title')
         status_tag = self.get_web_element(driver, self.title_xpath)
         ActionChains(driver).move_to_element(status_tag).click().perform()
-    
-    
-    
-    def search_the_sermon_archive(self, driver, field_value, verbose=True):
-        if verbose:
-            print('Filling in the search field with "{}"'.format(field_value))
-        try:
-            
-            # Wait for input field to show up
-            self.key_in_search(driver, self.input_xpath, field_value, verbose=verbose)
-            
-        except Exception as e:
-            message = str(e).strip()
-            if verbose:
-                print('Waiting for search field to show up (first attempt): {}'.format(message))
-            if 'scrolled' in message:
-                driver.refresh()
-                
-                # Wait for 10 seconds
-                self.wait_for(10, verbose=verbose)
-                
-                try:
-                    
-                    # Wait for input field to show up
-                    self.key_in_search(driver, self.input_xpath, field_value, verbose=verbose)
-                    
-                except Exception as e:
-                    message = str(e).strip()
-                    if verbose:
-                        print('self.key_in_search (second attempt): {}'.format(message))
-            else:
-                while self.obscure_regex.search(message):
-                    match_obj = self.obscure_regex.search(message)
-                    if match_obj:
-                        self.unobscure_element(driver, match_obj)
-                        try:
-                            
-                            # Wait for input field to show up
-                            self.key_in_search(driver, self.input_xpath, field_value, verbose=verbose)
-                            message = ''
-                            
-                        except Exception as e:
-                            message = str(e).strip()
-                            if verbose:
-                                print('Waiting for search field to show up (unobscured): {}'.format(message))
     
     
     
@@ -910,53 +725,6 @@ class SermonScrapingUtilities(object):
         preview_str = preview_tag.text.strip().split('\n')[0]
         
         return preview_str
-    
-    
-    
-    def on_sermonaudio(self, driver, speaker_str, title_str, verbose=True):
-        if verbose:
-            print('Checking if this sermon is already uploaded to sermonaudio.com')
-        keyword = '_'.join(speaker_str.split(' '))
-        keyword_within = '+'.join(title_str.split(' '))
-        search_url = self.search_formatted_str.format(keyword, keyword_within)
-        self.driver_get_url(driver, search_url, verbose=verbose)
-        search_css = 'font.ar2 > font.ve2'
-        try:
-            
-            # Wait for count to show up
-            font_tag = WebDriverWait(driver, 5).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, search_css))
-                )
-            sermon_count = int(font_tag.find_elements_by_tag_name('b')[0].text)
-            
-        except Exception as e:
-            message = str(e).strip()
-            if verbose:
-                print('Waiting for the count to show up: {}'.format(message))
-            sermon_count = 0
-        
-        return sermon_count > 0
-
-
-
-    def click_the_submit_button(self, driver, verbose=True):
-        if verbose:
-            print('Clicking the submit sermon button')
-        button_css = 'input[name="submitsermon"]'
-        button_css = '#topbarBackgroundImage > table > tbody > tr > td > form > table:nth-child(3) > tbody > tr:nth-child(13) > td:nth-child(2) > p > input[type=SUBMIT]:nth-child(3)'
-        button_xpath = '/html/body/table[2]/tbody/tr/td/table/tbody/tr[3]/td[2]/div/div/div/div/table/tbody/tr/td/table/tbody/tr/td/form/table[2]/tbody/tr[13]/td[2]/p/input[2]'
-        try:
-            
-            # Wait for button to show up
-            self.move_to(driver, button_xpath, verbose=verbose)
-            button_tag = WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, button_css))
-                )
-            button_tag.click()
-            
-        except Exception as e:
-            message = str(e).strip()
-            raise Exception('Waiting for the button to show up: {}'.format(message))
 
 
 
@@ -997,50 +765,6 @@ class SermonScrapingUtilities(object):
         except Exception as e:
             message = str(e).strip()
             raise Exception('Waiting for textarea field to show up: {}'.format(message))
-
-
-
-    def fill_in_sermon_info(self, driver, description_str, title_str, speaker_str, reference_str, datetime_obj):
-        print('Filling in the sermon info')
-        self.driver_get_url(driver, self.submitsermon_url)
-        self.fill_in_field(driver, 'SourceID', 'redeemer-ma-pca')
-        self.fill_in_field(driver, 'SourcePassword', 'Genesis11')
-        main_window_handle = self.click_the_speaker_selector_button(driver)
-        self.fill_in_field(driver, 'keyword', speaker_str)
-        self.click_the_search_button(driver)
-        self.click_the_first_link(driver, speaker_str)
-        
-        driver.switch_to.window(main_window_handle)
-        self.fill_in_field(driver, 'Title', title_str)
-        self.fill_in_field(driver, 'Date', datetime_obj.strftime('%m/%d/%Y'))
-        self.fill_in_field(driver, 'BibleText', reference_str)
-        if description_str != '':
-            self.fill_in_textarea(driver, 'moreinfotext', description_str)
-        driver.switch_to.window(main_window_handle)
-        self.click_the_copyright_checkbox(driver)
-        self.click_the_submit_button(driver)
-        
-        return main_window_handle
-
-
-
-    def get_the_sermon_id(self, driver, main_window_handle):
-        print('Getting the sermon ID')
-        id_css = 'td:nth-child(2) > font[class="ve5b"]'
-        try:
-            driver.switch_to.window(main_window_handle)
-            
-            # Wait for ID to show up
-            font_tag = WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, id_css))
-                )
-            sermon_id = font_tag.find_elements_by_tag_name('b')[0].text
-            
-        except Exception as e:
-            message = str(e).strip()
-            raise Exception('Waiting for the ID to show up: {}'.format(message))
-        
-        return sermon_id
 
 
 
@@ -1196,28 +920,6 @@ class SermonScrapingUtilities(object):
 
 
 
-    def check_for_audio(self, driver, row_index, main_window_handle):
-        print('Checking for the audio')
-        audio_css = 'font.ve2 > div > a > b'
-        try:
-            
-            # Wait for the audio link to show up
-            driver.switch_to.window(main_window_handle)
-            audio_tag = WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, audio_css))
-                )
-            if 'Audio' in audio_tag.text:
-                self.recent_sermons_df.loc[row_index, 'on_sermonaudio'] = True
-            else:
-                self.recent_sermons_df.loc[row_index, 'on_sermonaudio'] = False
-            self.s.store_objects(recent_sermons_df=self.recent_sermons_df)
-            
-        except Exception as e:
-            message = str(e).strip()
-            raise Exception('Waiting for the audio link to show up: {}'.format(message))
-
-
-
     def cancel_upload_window(self, driver, upload_window_handle, upload_url):
         print('Clicking the cancel upload button')
         cancel_css = 'input[name="action_cancel"]'
@@ -1261,61 +963,6 @@ class SermonScrapingUtilities(object):
             raise Exception('Waiting for the ID to show up: {}'.format(message))
         
         return edit_window_handle
-
-
-
-    def click_the_delete_entry_button(self, driver, edit_url, edit_window_handle, main_window_handle):
-        print('Clicking the delete media button')
-        edit_url = self.formatted_str.format(edit_url)
-        delete_css = 'input[name="deletebutton"]'
-        try:
-            
-            # Wait for button to show up
-            delete_tag = WebDriverWait(driver, 100).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, delete_css))
-            )
-            delete_tag.click()
-            alert = driver.switch_to.alert
-            alert.accept()
-            driver.switch_to.window(edit_window_handle)
-            if driver.current_url == 'https://www.sermonaudio.com/winedit_sermon.asp':
-                driver.close()
-                driver.switch_to.window(main_window_handle)
-            
-        except Exception as e:
-            message = str(e).strip()
-            raise Exception('Waiting for the ID to show up: {}'.format(message))
-        
-        return main_window_handle
-
-
-
-    def upload_the_mp3(self, driver, main_window_handle, sermon_id, file_path, row_index):
-        print('Uploading the MP3')
-        sermon_url = 'http://www.sermonaudio.com/sermoninfo.asp?SID={}'.format(sermon_id)
-        self.driver_get_url(driver, sermon_url)
-        upload_window_handle = self.click_the_upload_media_button(driver, main_window_handle)
-        self.fill_in_the_password_field(driver, upload_window_handle)
-        try:
-            self.click_the_browse_button(driver, file_path)
-            self.click_another_upload_media_button(driver)
-            self.click_the_close_upload_window_link(driver, main_window_handle)
-            time.sleep(6*60)
-            driver.refresh()
-            self.check_for_audio(driver, row_index, main_window_handle)
-            #os.remove(file_path)
-        except Exception as e:
-            message = str(e).strip()
-            print('Attempting to upload the MP3: {}'.format(message))
-            upload_url = 'https://web4.sermonaudio.com/winedit_audioadd-aspupload.asp?sermonID={}'.format(sermon_id)
-            self.cancel_upload_window(driver, upload_window_handle, upload_url)
-            driver.switch_to.window(main_window_handle)
-            edit_url = 'winedit_sermon.asp?SermonID={}'.format(sermon_id)
-            edit_window_handle = self.click_the_edit_media_button(driver, edit_url, main_window_handle)
-            driver.switch_to.window(edit_window_handle)
-            self.fill_in_field(driver, 'password', 'Genesis11')
-            self.click_the_delete_entry_button(driver, edit_url, edit_window_handle, main_window_handle)
-            driver.switch_to.window(main_window_handle)
 
 
 

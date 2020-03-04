@@ -7,29 +7,18 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from xml.etree.ElementTree import Element
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+import os
 import pylab
 import pyphen
+import re
 import textwrap
 import xml
 import xml.etree.ElementTree as et
 import warnings
 warnings.filterwarnings("ignore")
 
-import sermon_utils
-ActionChains = sermon_utils.ActionChains
-By = sermon_utils.By
-EC = sermon_utils.EC
-Keys = sermon_utils.Keys
-WebDriverWait = sermon_utils.WebDriverWait
-math = sermon_utils.math
-np = sermon_utils.np
-os = sermon_utils.os
-pd = sermon_utils.pd
-re = sermon_utils.re
-time = sermon_utils.time
-
-u = sermon_utils.SermonScrapingUtilities()
-s = u.s
+import storage
+s = storage.Storage()
 
 class ChoroplethUtilities(object):
     """This class implements the core of the utility functions
@@ -264,6 +253,8 @@ class ChoroplethUtilities(object):
             </g>
           </g>{}
         </g>'''
+        self.hyphen_dict = pyphen.Pyphen(lang='en_US')
+        self.line_height = 15
     
     
     ###########################
@@ -303,7 +294,7 @@ class ChoroplethUtilities(object):
         for word in suggestion.split(' '):
             width = len(word)
             if width > 12:
-                hyphen_tuple = hyphen_dict.wrap(word, int(width/2))
+                hyphen_tuple = self.hyphen_dict.wrap(word, int(width/2))
                 if hyphen_tuple is None:
                     hyphenated_list.append(word)
                 else:
@@ -316,12 +307,19 @@ class ChoroplethUtilities(object):
     
     
     def get_tspan_list(self, suggestion):
+        suggestion = self.hyphenate_words(suggestion)
         tspan_list = [suggestion]
+        #if (' ' in suggestion) or ('-' in suggestion):
         if ' ' in suggestion:
             split_point = math.ceil(len(suggestion)/2)
             if ' ' in suggestion[split_point:]:
                 split_point += suggestion[split_point:].index(' ')
-            tspan_list = textwrap.wrap(suggestion, split_point, break_long_words=False)
+            tspan_list = textwrap.wrap(suggestion, split_point,
+                                       break_long_words=False, break_on_hyphens=True)
+        elif '-' in suggestion:
+            split_point = max(len(x) for x in suggestion.split('-'))
+            tspan_list = textwrap.wrap(suggestion, split_point,
+                                       break_long_words=True, break_on_hyphens=True)
         
         return tspan_list
     
@@ -574,7 +572,7 @@ class ChoroplethUtilities(object):
             tspan_list = self.get_tspan_list(column_value)
             tspan_str = ''
             for i, column_value_str in enumerate(tspan_list):
-                tspan_str += self.ts_str.format(id+str(i), x, y+15*i, column_value_str)
+                tspan_str += self.ts_str.format(id+str(i), x, y+self.line_height*i, column_value_str)
             text_str = self.t_str.format(x, y, id, label, tspan_str)
             with open(text_file_path, 'a') as f:
                 print(text_str.encode(s.encoding_type, errors='replace').decode(), file=f)
@@ -728,7 +726,7 @@ class ChoroplethUtilities(object):
             tspan_list = self.get_tspan_list(column_value)
             tspan_str = ''
             for i, column_value_str in enumerate(tspan_list):
-                tspan_str += self.ts_str.format(id+str(i), x, y+15*i, column_value_str)
+                tspan_str += self.ts_str.format(id+str(i), x, y+self.line_height*i, column_value_str)
             text_str = self.t_str.format(x, y, id, label, tspan_str)
             with open(text_file_path, 'a') as f:
                 print(text_str.encode(s.encoding_type, errors='replace').decode(), file=f)
@@ -819,7 +817,7 @@ class ChoroplethUtilities(object):
                     tspan_list = self.get_tspan_list(suggestion)
                     tspan_str = ''
                     for i, suggestion_str in enumerate(tspan_list):
-                        tspan_str += self.ts_str.format(id+str(i), x, y+15*i, suggestion_str)
+                        tspan_str += self.ts_str.format(id+str(i), x, y+self.line_height*i, suggestion_str)
                     text_str = self.t_str.format(x, y, id, label, tspan_str)
                     with open(text_file_path, 'a') as f:
                         print(text_str.encode(s.encoding_type, errors='replace').decode(), file=f)

@@ -1,13 +1,21 @@
 
-import pandas as pd
-import math
-import statsmodels.api as sm
-import matplotlib.pyplot as plt
-import seaborn as sns
 from scipy import stats
+import io
+import math
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+import statsmodels.api as sm
+
+url_regex = re.compile(r'\b(https?|file)://[-A-Z0-9+&@#/%?=~_|$!:,.;]*[A-Z0-9+&@#/%=~_|$]', re.IGNORECASE)
+filepath_regex = re.compile(r'\b[c-d]:\\(?:[^\\/:*?"<>|\x00-\x1F]{0,254}[^.\\/:*?"<>|\x00-\x1F]\\)*(?:[^\\/:*?"<>|\x00-\x1F]{0,254}[^.\\/:*?"<>|\x00-\x1F])', re.IGNORECASE)
 
 def get_page_tables(tables_url_or_filepath, verbose=True):
-    tables_df_list = pd.read_html(tables_url_or_filepath)
+    if url_regex.fullmatch(tables_url_or_filepath) or filepath_regex.fullmatch(tables_url_or_filepath):
+        tables_df_list = pd.read_html(tables_url_or_filepath)
+    else:
+        f = io.StringIO(tables_url_or_filepath)
+        tables_df_list = pd.read_html(f)
     if verbose:
         print(sorted([(i, df.shape) for (i, df) in enumerate(tables_df_list)],
                      key=lambda x: x[1][0], reverse=True))
