@@ -4,6 +4,7 @@ import io
 import math
 import matplotlib.pyplot as plt
 import pandas as pd
+import re
 import seaborn as sns
 import statsmodels.api as sm
 
