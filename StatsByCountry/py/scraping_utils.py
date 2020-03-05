@@ -64,7 +64,7 @@ class ScrapingUtilities(object):
     
     
     def get_page_tables(self, url_or_filepath_or_html, verbose=True):
-        if url_regex.fullmatch(url_or_filepath_or_html) or filepath_regex.fullmatch(url_or_filepath_or_html):
+        if self.url_regex.fullmatch(url_or_filepath_or_html) or self.filepath_regex.fullmatch(url_or_filepath_or_html):
             tables_df_list = pd.read_html(url_or_filepath_or_html)
         else:
             f = io.StringIO(url_or_filepath_or_html)
@@ -77,10 +77,10 @@ class ScrapingUtilities(object):
 
 
     def get_page_soup(self, url_or_filepath_or_html):
-        if url_regex.fullmatch(url_or_filepath_or_html):
+        if self.url_regex.fullmatch(url_or_filepath_or_html):
             with urllib.request.urlopen(url_or_filepath_or_html) as response:
                 page_html = response.read()
-        elif filepath_regex.fullmatch(url_or_filepath_or_html):
+        elif self.filepath_regex.fullmatch(url_or_filepath_or_html):
             with open(url_or_filepath_or_html, 'r', encoding='utf-8') as f:
                 page_html = f.read()
         else:
