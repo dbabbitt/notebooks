@@ -263,6 +263,19 @@ class ChoroplethUtilities(object):
     
     
     
+    def trim_d_path(self, file_path):
+        with open(file_path, 'r') as f:
+            xml_str = f.read()
+            d_regex = re.compile('d="([^"\r\n]+)[\r\n]+')
+            while d_regex.search(xml_str):
+                xml_str = d_regex.sub(r'd="\g<1>', xml_str)
+            with open(file_path, 'w') as f:
+                print(xml_str.strip(), file=f)
+        
+        return xml_str.strip()
+    
+    
+    
     def conjunctify_list(self, noun_list):
         if len(noun_list) > 2:
             list_str = ', and '.join([', '.join(noun_list[:-1])] + [noun_list[-1]])
@@ -369,13 +382,7 @@ class ChoroplethUtilities(object):
         plt.close(fig)
 
         # Trim the legend xml
-        with open(file_path, 'r') as f:
-            xml_str = f.read()
-            d_regex = re.compile('d="([^"\r\n]+)[\r\n]+')
-            while d_regex.search(xml_str):
-                xml_str = d_regex.sub(r'd="\g<1>', xml_str)
-            with open(file_path, 'w') as f:
-                print(xml_str.strip(), file=f)
+        xml_str = self.trim_d_path(file_path)
         root = et.parse(file_path).getroot()
         for figure_1_xml in root.getchildren():
             if (figure_1_xml.tag.split('}')[-1] == 'g'):
@@ -449,13 +456,7 @@ class ChoroplethUtilities(object):
         file_path = os.path.join(self.svg_dir, 'colorbar.svg')
         plt.savefig(file_path)
         plt.close(fig)
-        with open(file_path, 'r') as f:
-            xml_str = f.read()
-            d_regex = re.compile('d="([^"\r\n]+)[\r\n]+')
-            while d_regex.search(xml_str):
-                xml_str = d_regex.sub(r'd="\g<1>', xml_str)
-            with open(file_path, 'w') as f:
-                print(xml_str.strip(), file=f)
+        xml_str = self.trim_d_path(file_path)
         root = et.parse(file_path).getroot()
         for colorbar_xml in root:
             if (colorbar_xml.tag.split('}')[-1] == 'g'):
@@ -997,13 +998,7 @@ class ChoroplethUtilities(object):
         cb1.set_label(self.get_column_description(column_name))
         file_path = os.path.join(self.svg_dir, 'colorbar.svg')
         plt.savefig(file_path)
-        with open(file_path, 'r') as f:
-            xml_str = f.read()
-            d_regex = re.compile('d="([^"\r\n]+)[\r\n]+')
-            while d_regex.search(xml_str):
-                xml_str = d_regex.sub(r'd="\g<1>', xml_str)
-            with open(file_path, 'w') as f:
-                print(xml_str.strip(), file=f)
+        xml_str = self.trim_d_path(file_path)
         
         return cb1
     
