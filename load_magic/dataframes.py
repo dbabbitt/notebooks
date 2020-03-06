@@ -19,7 +19,7 @@ def get_page_tables(tables_url_or_filepath, verbose=True):
         tables_df_list = pd.read_html(f)
     if verbose:
         print(sorted([(i, df.shape) for (i, df) in enumerate(tables_df_list)],
-                     key=lambda x: x[1][0], reverse=True))
+                     key=lambda x: x[1][0]*x[1][1], reverse=True))
     
     return tables_df_list
 

@@ -39,8 +39,15 @@ class ChoroplethUtilities(object):
     >>> c = choropleth_utils.ChoroplethUtilities()
     """
     
-    def __init__(self):
-        self.state_merge_df = s.load_object('state_merge_df')
+    def __init__(self, iso_3166_code=None, df=None):
+        if iso_3166_code is None:
+            self.iso_3166_code = 'us'
+        else:
+            self.iso_3166_code = iso_3166_code
+        if df is None:
+            self.country_stats_df = s.load_object('state_merge_df')
+        else:
+            self.country_stats_df = df
         
         # Define the dictionaries
         self.column_description_dict = s.load_object('column_description_dict')
@@ -88,7 +95,10 @@ class ChoroplethUtilities(object):
 </svg>'''
         self.regex_sub_str = self.svg_suffix.strip()
         self.svg_regex = re.compile(self.regex_sub_str)
-        self.copy_file_path = os.path.join(s.data_folder, 'svg', 'us - Copy.svg')
+        if self.iso_3166_code == 'us':
+            self.copy_file_path = os.path.join(s.data_folder, 'svg', 'us - Copy.svg')
+        elif self.iso_3166_code == 'af':
+            self.copy_file_path = os.path.join(s.data_folder, 'svg', 'Afghanistan - Copy.svg')
         self.svg_attributes_list = ['xmlns:dc="http://purl.org/dc/elements/1.1/"',
                                     'xmlns:cc="http://creativecommons.org/ns#"',
                                     'xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"',
@@ -169,7 +179,7 @@ class ChoroplethUtilities(object):
                                        'font-variant-numeric:normal', 'font-feature-settings:normal',
                                        'text-align:center', 'writing-mode:lr-tb', 'text-anchor:middle',
                                        'stroke-width:0.75', 'stroke-linecap:butt', 'stroke-linejoin:round']
-        self.label_str = '''
+        self.legend_label_str = '''
     <text
        xml:space="preserve"
        style="{}"
@@ -443,8 +453,8 @@ class ChoroplethUtilities(object):
         fig, ax = plt.subplots(figsize=(1, 6))
         fig.subplots_adjust(left=0.5)
         
-        min = self.state_merge_df[column_name].min()
-        max = self.state_merge_df[column_name].max()
+        min = self.country_stats_df[column_name].min()
+        max = self.country_stats_df[column_name].max()
         cmap = mpl.cm.viridis
         norm = mpl.colors.Normalize(vmin=min, vmax=max)
         
@@ -516,23 +526,23 @@ class ChoroplethUtilities(object):
         string_column_name = 'Google_Suggest_Unique'
         svg_file_path = c.create_us_colored_labeled_map(numeric_column_name=numeric_column_name,
                                                         string_column_name=string_column_name,
-                                                        df=c.state_merge_df)
+                                                        df=c.country_stats_df)
         
         numeric_column_name = 'Asian_Percent'
         string_column_name = 'Google_Suggest_Common'
         svg_file_path = c.create_us_colored_labeled_map(numeric_column_name=numeric_column_name,
                                                         string_column_name=string_column_name,
-                                                        df=c.state_merge_df)
+                                                        df=c.country_stats_df)
         
         string_column_name = None
-        for numeric_column_name in c.state_merge_df.columns:
+        for numeric_column_name in c.country_stats_df.columns:
             svg_file_path = c.create_us_colored_labeled_map(numeric_column_name=numeric_column_name,
                                                             string_column_name=string_column_name,
-                                                            df=c.state_merge_df)
+                                                            df=c.country_stats_df)
         """
         
         if df is None:
-            df = self.state_merge_df.copy()
+            df = self.country_stats_df.copy()
         if not np.issubdtype(df[numeric_column_name].dtype, np.number):
             raise Exception('{} is not numeric'.format(numeric_column_name))
         if not os.path.exists(self.copy_file_path):
@@ -642,11 +652,11 @@ class ChoroplethUtilities(object):
         column_name = 'Asian_Percent'
         svg_file_path = c.create_us_colored_map(column_name)
         
-        for column_name in c.state_merge_df.columns:
+        for column_name in c.country_stats_df.columns:
             svg_file_path = c.create_us_colored_map(column_name=column_name)
         '''
         if df is None:
-            df = self.state_merge_df.copy()
+            df = self.country_stats_df.copy()
         if np.issubdtype(df[column_name].dtype, np.number):
             ListedColormap_obj = cm.get_cmap('viridis', len(df[column_name].unique()))
             min = df[column_name].min()
@@ -688,19 +698,19 @@ class ChoroplethUtilities(object):
         
         string_column_name = 'Google_Suggest_Unique'
         svg_file_path = c.create_us_labeled_map(string_column_name=string_column_name,
-                                                df=c.state_merge_df)
+                                                df=c.country_stats_df)
         
         string_column_name = 'Google_Suggest_Common'
         svg_file_path = c.create_us_labeled_map(string_column_name=string_column_name,
-                                                df=c.state_merge_df)
+                                                df=c.country_stats_df)
         
         string_column_name = 'Google_Suggest_First'
         svg_file_path = c.create_us_labeled_map(string_column_name=string_column_name,
-                                                df=c.state_merge_df)
+                                                df=c.country_stats_df)
         """
         
         if df is None:
-            df = self.state_merge_df.copy()
+            df = self.country_stats_df.copy()
         if not os.path.exists(self.copy_file_path):
             raise Exception('{} does not exist'.format(self.copy_file_path))
         if not os.path.exists(self.label_line_file_path):
@@ -744,7 +754,7 @@ class ChoroplethUtilities(object):
         
         # Create the outline paths
         match_series = df[string_column_name].isnull()
-        labels_list = self.state_merge_df[~match_series][string_column_name].unique().tolist()
+        labels_list = self.country_stats_df[~match_series][string_column_name].unique().tolist()
         legend_xml, colors_dict = self.get_legend_xml(labels_list)
         for state_name, row_series in df.iterrows():
             column_value = str(row_series[string_column_name]).strip()
@@ -802,8 +812,8 @@ class ChoroplethUtilities(object):
                     print('', file=f)
                 cap_str = cu_str[:1].upper()+cu_str[1:]
                 column_name = 'Google_Suggest_{}'.format(cap_str)
-                match_series = self.state_merge_df[column_name].isnull()
-                for state_name, row_series in self.state_merge_df[~match_series].iterrows():
+                match_series = self.country_stats_df[column_name].isnull()
+                for state_name, row_series in self.country_stats_df[~match_series].iterrows():
                     id = '{}'.format('-'.join(state_name.lower().split(' ')))
                     label = '{} Google {} Suggestion'.format(state_name, cap_str)
                     suggestion = row_series[column_name]
@@ -849,7 +859,7 @@ class ChoroplethUtilities(object):
     def create_label_line_file(self):
         with open(self.label_line_file_path, 'w') as f:
             print('', file=f)
-        for state_name, row_series in self.state_merge_df.iterrows():
+        for state_name, row_series in self.country_stats_df.iterrows():
             id = '{}'.format('-'.join(state_name.lower().split(' ')))
             label = '{} Label Line'.format(state_name)
             d = row_series['label_line_d']
@@ -874,7 +884,7 @@ class ChoroplethUtilities(object):
             suggestion_list_dict = {}
         else:
             suggestion_list_dict = self.suggestion_list_dict.copy()
-        for state in self.state_merge_df.index.tolist():
+        for state in self.country_stats_df.index.tolist():
             if state not in suggestion_list_dict:
                 try:
 
@@ -968,7 +978,7 @@ class ChoroplethUtilities(object):
             if dropdown_list[0][:value_length] == field_value:
                 dropdown_list = [st[value_length:] for st in dropdown_list]
                 self.suggestion_list_dict[state] = dropdown_list
-        if(set(self.state_merge_df.index.tolist()) - set(self.suggestion_list_dict) == set()):
+        if(set(self.country_stats_df.index.tolist()) - set(self.suggestion_list_dict) == set()):
             s.store_objects(suggestion_list_dict=self.suggestion_list_dict)
         for old_key in self.suggestion_list_dict.keys():
             new_key = re.sub(r'\xa0', r'', old_key)
@@ -985,8 +995,8 @@ class ChoroplethUtilities(object):
         fig, ax = plt.subplots(figsize=(1, 6))
         fig.subplots_adjust(left=0.5)
         
-        min = self.state_merge_df[column_name].min()
-        max = self.state_merge_df[column_name].max()
+        min = self.country_stats_df[column_name].min()
+        max = self.country_stats_df[column_name].max()
         cmap = mpl.cm.viridis
         norm = mpl.colors.Normalize(vmin=min, vmax=max)
         
@@ -1003,9 +1013,9 @@ class ChoroplethUtilities(object):
     
     
     def clean_up_state_merge_dataframe(self):
-        for column_name in self.state_merge_df.columns:
+        for column_name in self.country_stats_df.columns:
             try:
-                self.state_merge_df[column_name] = pd.to_numeric(self.state_merge_df[column_name], errors='raise', downcast='float')
+                self.country_stats_df[column_name] = pd.to_numeric(self.country_stats_df[column_name], errors='raise', downcast='float')
             except Exception as e:
                 print('The {} column get this error: {}'.format(column_name, str(e).strip()))
-        s.store_objects(state_merge_df=self.state_merge_df)
+        s.store_objects(country_stats_df=self.country_stats_df)
