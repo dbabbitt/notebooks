@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--
-************* Copyright (c) 2017 Pareto Softare, LLC DBA Simplemaps.com *******************
-************* Free for Commercial Use, full terms at  http://simplemaps.com/resources/svg-license ************
-************* Attribution is appreciated! http://simplemaps.com ***************************
--->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -15,14 +9,13 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    enable_background="new 0 0 1000 589"
    height="589px"
-   pretty_print="False"
-   style="stroke-linejoin: round; stroke:#000; fill: none;"
-   version="1.1"
-   viewBox="0 0 1000 589"
-   width="1000px"
    id="svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="us - Copy.svg">
+   sodipodi:docname="us - Copy.svg"
+   style="fill:none;stroke:#000000;stroke-linejoin:round"
+   version="1.0"
+   viewBox="0 0 1000 589"
+   width="1000px">
   <sodipodi:namedview
      bordercolor="#666666"
      borderopacity="1"
@@ -50,25 +43,6 @@
        id="style6">path { fill-rule: evenodd; }</style>
   </defs>
   <metadata id="metadata-main">
-    <views
-       id="views10">
-      <view
-         h="589.235294118"
-         padding="0"
-         w="1000"
-         id="view12">
-        <proj
-           id="laea-usa"
-           lat0="45"
-           lon0="-100" />
-        <bbox
-           h="321.97"
-           w="589.33"
-           x="690.09"
-           y="918.69"
-           id="bbox15" />
-      </view>
-    </views>
     <rdf:RDF>
       <cc:Work
          rdf:about="">
