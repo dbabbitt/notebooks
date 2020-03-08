@@ -39,15 +39,19 @@ class ChoroplethUtilities(object):
     >>> c = choropleth_utils.ChoroplethUtilities()
     """
     
-    def __init__(self, iso_3166_2_code=None, df=None):
+    def __init__(self, iso_3166_2_code=None, one_country_df=None, all_countries_df=None):
         if iso_3166_2_code is None:
             self.iso_3166_2_code = 'us'
         else:
             self.iso_3166_2_code = iso_3166_2_code
-        if df is None:
-            self.country_stats_df = s.load_object('state_merge_df')
+        if one_country_df is None:
+            self.one_country_df = s.load_object('us_stats_df')
         else:
-            self.country_stats_df = df
+            self.one_country_df = one_country_df
+        if all_countries_df is None:
+            self.all_countries_df = s.load_object('all_countries_df')
+        else:
+            self.all_countries_df = all_countries_df
         
         # Define the dictionaries
         self.column_description_dict = s.load_object('column_description_dict')
@@ -96,20 +100,25 @@ class ChoroplethUtilities(object):
         self.regex_sub_str = self.svg_suffix.strip()
         self.svg_regex = re.compile(self.regex_sub_str)
         if self.iso_3166_2_code == 'us':
-            self.copy_file_path = os.path.join(s.data_folder, 'svg', 'us - Copy.svg')
+            self.copy_file_name = 'us - Copy.svg'
         elif self.iso_3166_2_code == 'af':
-            self.copy_file_path = os.path.join(s.data_folder, 'svg', 'Afghanistan - Copy.svg')
+            self.copy_file_name = 'Afghanistan - Copy.svg'
+        self.copy_file_path = os.path.join(s.data_folder, 'svg', self.copy_file_name)
         self.svg_attributes_list = ['xmlns:dc="http://purl.org/dc/elements/1.1/"',
                                     'xmlns:cc="http://creativecommons.org/ns#"',
                                     'xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"',
                                     'xmlns:svg="http://www.w3.org/2000/svg"', 'xmlns="http://www.w3.org/2000/svg"',
                                     'xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"',
                                     'xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"',
-                                    'enable_background="new 0 0 1000 589"', 'height="589px"',
-                                    'pretty_print="False"',
-                                    'style="stroke-linejoin: round; stroke:#000; fill: none;"', 'version="1.1"',
-                                    'viewBox="0 0 1000 589"', 'width="1000px"', 'id="svg"',
-                                    'inkscape:version="0.92.4 (5da689c313, 2019-01-14)"']
+                                    'enable_background="new 0 0 {} {}"'.format(self.svg_width, self.svg_height),
+                                    'height="{}px"'.format(self.svg_height),
+                                    'id="svg"',
+                                    'inkscape:version="0.92.4 (5da689c313, 2019-01-14)"',
+                                    'sodipodi:docname="{}"'.format(self.copy_file_name),
+                                    'style="fill:none;stroke:#000000;stroke-linejoin:round"',
+                                    'version="1.0"',
+                                    'viewBox="0 0 {} {}"'.format(self.svg_width, self.svg_height),
+                                    'width="{}px"'.format(self.svg_width)]
         self.namedview_attributes_list = ['pagecolor="#ffffff"', 'bordercolor="#666666"', 'borderopacity="1"',
                                           'objecttolerance="10"', 'gridtolerance="10"', 'guidetolerance="10"',
                                           'inkscape:pageopacity="0"', 'inkscape:pageshadow="2"',
@@ -118,16 +127,10 @@ class ChoroplethUtilities(object):
                                           'inkscape:cx="496.42668"', 'inkscape:cy="302.09908"',
                                           'inkscape:window-x="1432"', 'inkscape:window-y="112"',
                                           'inkscape:window-maximized="1"', 'inkscape:current-layer="svg"']
-        if self.iso_3166_2_code == 'us':
-            self.svg_prefix_str = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--
-************* Copyright (c) 2017 Pareto Softare, LLC DBA Simplemaps.com *******************
-************* Free for Commercial Use, full terms at  http://simplemaps.com/resources/svg-license ************
-************* Attribution is appreciated! http://simplemaps.com ***************************
--->
+        self.svg_prefix_str = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg {}>
-    <sodipodi:namedview {} />
-    <defs id="defs-main">
+  <sodipodi:namedview {} />
+  <defs id="defs-main">
         <style type="text/css" id="style-main">
             path {{fill-rule: evenodd;}};
             *{{stroke-linecap:butt;stroke-linejoin:round;}}
@@ -137,50 +140,24 @@ class ChoroplethUtilities(object):
             id="m-ticks"
             style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
             inkscape:connector-curvature="0" />
-    </defs>
-    <metadata id="metadata-main">
-        <views id="views-main"><view h="589.235294118" padding="0" w="1000" id="view-main">
-            <proj id="laea-usa" lat0="45" lon0="-100" />
-            <bbox h="321.97" w="589.33" x="690.09" y="918.69" id="bbox01" />
-        </view></views>
+  </defs>
+  <metadata id="metadata-main">
         <rdf:RDF><cc:Work rdf:about="">
             <dc:format>image/svg+xml</dc:format>
             <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-            <dc:title />
+            <dc:title>{}</dc:title>
         </cc:Work></rdf:RDF>
-    </metadata>'''
-        elif self.iso_3166_2_code == 'af':
-            self.svg_prefix_str = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg {}>
-    <sodipodi:namedview {} />
-    <defs id="defs-main">
-        <style type="text/css" id="style-main">
-            path {{fill-rule: evenodd;}};
-            *{{stroke-linecap:butt;stroke-linejoin:round;}}
-        </style>
-        <path
-            d="M 0,0 H 3.5"
-            id="m-ticks"
-            style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
-            inkscape:connector-curvature="0" />
-    </defs>
-    <metadata id="metadata-main">
-        <rdf:RDF><cc:Work rdf:about="">
-            <dc:format>image/svg+xml</dc:format>
-            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-            <dc:title />
-        </cc:Work></rdf:RDF>
-    </metadata>
-		<rect
-   height="1331.075"
-   id="adjacent-country-backgrounds"
-   style="display:inline;fill:#e0e0e0"
-   width="1807.087"
-   x="0"
-   y="0.066"
-   inkscape:label="Adjacent Country Backgrounds" />'''
+  </metadata>
+  <rect
+     height="{}"
+     id="adjacent-country-backgrounds"
+     style="display:inline;fill:#e0e0e0"
+     width="{}"
+     x="0"
+     y="0"
+     inkscape:label="Adjacent Country Backgrounds" />'''
         self.html_style_str = '#{:02x}{:02x}{:02x}'
-        self.fill_style_prefix = 'stroke-width:0.97063118000000004;fill:{}'
+        self.fill_style_prefix = 'stroke-width:1.0;fill:{}'
         self.fill_style_str = self.fill_style_prefix.format(self.html_style_str)
         self.state_path_str = '<path inkscape:connector-curvature="0" id="{}" data-name="{}" data-id="{}" d="{}" style="{}" />'
         self.svg_dir = os.path.abspath(os.path.join(s.saves_folder, 'svg'))
@@ -491,8 +468,8 @@ class ChoroplethUtilities(object):
         fig, ax = plt.subplots(figsize=(1, 6))
         fig.subplots_adjust(left=0.5)
         
-        min = self.country_stats_df[column_name].min()
-        max = self.country_stats_df[column_name].max()
+        min = self.one_country_df[column_name].min()
+        max = self.one_country_df[column_name].max()
         cmap = mpl.cm.viridis
         norm = mpl.colors.Normalize(vmin=min, vmax=max)
         
@@ -554,9 +531,9 @@ class ChoroplethUtilities(object):
     
     
     
-    def create_us_colored_labeled_map(self, numeric_column_name, string_column_name=None, df=None):
+    def create_us_colored_labeled_map(self, numeric_column_name, string_column_name=None, one_country_df=None):
         """
-        df must have state names as an index, the State_Abbreviation, outline_d, text_x and
+        one_country_df must have state names as an index, the State_Abbreviation, outline_d, text_x and
         text_y columns, one (hopefully) numeric column labeled numeric_column_name, and one
         (not neccesarily) string column labeled string_column_name
         
@@ -564,24 +541,24 @@ class ChoroplethUtilities(object):
         string_column_name = 'Google_Suggest_Unique'
         svg_file_path = c.create_us_colored_labeled_map(numeric_column_name=numeric_column_name,
                                                         string_column_name=string_column_name,
-                                                        df=c.country_stats_df)
+                                                        one_country_df=c.one_country_df)
         
         numeric_column_name = 'Asian_Percent'
         string_column_name = 'Google_Suggest_Common'
         svg_file_path = c.create_us_colored_labeled_map(numeric_column_name=numeric_column_name,
                                                         string_column_name=string_column_name,
-                                                        df=c.country_stats_df)
+                                                        one_country_df=c.one_country_df)
         
         string_column_name = None
-        for numeric_column_name in c.country_stats_df.columns:
+        for numeric_column_name in c.one_country_df.columns:
             svg_file_path = c.create_us_colored_labeled_map(numeric_column_name=numeric_column_name,
                                                             string_column_name=string_column_name,
-                                                            df=c.country_stats_df)
+                                                            one_country_df=c.one_country_df)
         """
         
-        if df is None:
-            df = self.country_stats_df.copy()
-        if not np.issubdtype(df[numeric_column_name].dtype, np.number):
+        if one_country_df is None:
+            one_country_df = self.one_country_df.copy()
+        if not np.issubdtype(one_country_df[numeric_column_name].dtype, np.number):
             raise Exception('{} is not numeric'.format(numeric_column_name))
         if not os.path.exists(self.copy_file_path):
             raise Exception('{} does not exist'.format(self.copy_file_path))
@@ -597,10 +574,10 @@ class ChoroplethUtilities(object):
         with open(text_file_path, 'w') as f:
             print('', file=f)
         if string_column_name is None:
-            match_series = df['text_x'].isnull() | df['text_y'].isnull()
+            match_series = one_country_df['text_x'].isnull() | one_country_df['text_y'].isnull()
         else:
-            match_series = df[string_column_name].isnull()
-        for state_name, row_series in df[~match_series].iterrows():
+            match_series = one_country_df[string_column_name].isnull()
+        for state_name, row_series in one_country_df[~match_series].iterrows():
             id = '{}'.format('-'.join(state_name.lower().split(' ')))
             if string_column_name is None:
                 label = '{} Index'.format(state_name)
@@ -640,11 +617,11 @@ class ChoroplethUtilities(object):
             print(svg_prefix, file=f)
         
         # Create the outline paths
-        ListedColormap_obj = cm.get_cmap('viridis', len(df[numeric_column_name].unique()))
-        min = df[numeric_column_name].min()
-        max = df[numeric_column_name].max()
-        match_series = df[numeric_column_name].isnull()
-        for state_name, row_series in df[~match_series].iterrows():
+        ListedColormap_obj = cm.get_cmap('viridis', len(one_country_df[numeric_column_name].unique()))
+        min = one_country_df[numeric_column_name].min()
+        max = one_country_df[numeric_column_name].max()
+        match_series = one_country_df[numeric_column_name].isnull()
+        for state_name, row_series in one_country_df[~match_series].iterrows():
             column_value = row_series[numeric_column_name]
             state_abbreviation = row_series.State_Abbreviation
             outline_d = row_series.outline_d
@@ -679,9 +656,9 @@ class ChoroplethUtilities(object):
     
     
     
-    def create_us_colored_map(self, column_name, df=None):
+    def create_us_colored_map(self, column_name, one_country_df=None):
         '''
-        df must have state names as an index, the State_Abbreviation and outline_d columns,
+        one_country_df must have state names as an index, the State_Abbreviation and outline_d columns,
         and one (hopefully) numeric column labeled column_name
         
         column_name = 'Total_Gun_Murder_Deaths_2010'
@@ -690,15 +667,15 @@ class ChoroplethUtilities(object):
         column_name = 'Asian_Percent'
         svg_file_path = c.create_us_colored_map(column_name)
         
-        for column_name in c.country_stats_df.columns:
+        for column_name in c.one_country_df.columns:
             svg_file_path = c.create_us_colored_map(column_name=column_name)
         '''
-        if df is None:
-            df = self.country_stats_df.copy()
-        if np.issubdtype(df[column_name].dtype, np.number):
-            ListedColormap_obj = cm.get_cmap('viridis', len(df[column_name].unique()))
-            min = df[column_name].min()
-            max = df[column_name].max()
+        if one_country_df is None:
+            one_country_df = self.one_country_df.copy()
+        if np.issubdtype(one_country_df[column_name].dtype, np.number):
+            ListedColormap_obj = cm.get_cmap('viridis', len(one_country_df[column_name].unique()))
+            min = one_country_df[column_name].min()
+            max = one_country_df[column_name].max()
             svg_file_path = os.path.join(s.saves_folder, 'svg', '{}.svg'.format(column_name))
             with open(svg_file_path, 'w') as f:
                 attributes_list = self.svg_attributes_list.copy()
@@ -706,7 +683,7 @@ class ChoroplethUtilities(object):
                 svg_prefix = self.svg_prefix_str.format(' '.join(attributes_list),
                                                         ' '.join(self.namedview_attributes_list))
                 print(svg_prefix, file=f)
-            for state_name, row_series in df.iterrows():
+            for state_name, row_series in one_country_df.iterrows():
                 column_value = row_series[column_name]
                 if str(column_value) != 'nan':
                     state_abbreviation = row_series.State_Abbreviation
@@ -729,26 +706,26 @@ class ChoroplethUtilities(object):
     
     
     
-    def create_us_labeled_map(self, string_column_name, df=None):
+    def create_us_labeled_map(self, string_column_name, one_country_df=None):
         """
-        df must have state names as an index, the State_Abbreviation, outline_d, text_x and
+        one_country_df must have state names as an index, the State_Abbreviation, outline_d, text_x and
         text_y columns, and one (not neccesarily) string column labeled string_column_name
         
         string_column_name = 'Google_Suggest_Unique'
         svg_file_path = c.create_us_labeled_map(string_column_name=string_column_name,
-                                                df=c.country_stats_df)
+                                                one_country_df=c.one_country_df)
         
         string_column_name = 'Google_Suggest_Common'
         svg_file_path = c.create_us_labeled_map(string_column_name=string_column_name,
-                                                df=c.country_stats_df)
+                                                one_country_df=c.one_country_df)
         
         string_column_name = 'Google_Suggest_First'
         svg_file_path = c.create_us_labeled_map(string_column_name=string_column_name,
-                                                df=c.country_stats_df)
+                                                one_country_df=c.one_country_df)
         """
         
-        if df is None:
-            df = self.country_stats_df.copy()
+        if one_country_df is None:
+            one_country_df = self.one_country_df.copy()
         if not os.path.exists(self.copy_file_path):
             raise Exception('{} does not exist'.format(self.copy_file_path))
         if not os.path.exists(self.label_line_file_path):
@@ -759,8 +736,8 @@ class ChoroplethUtilities(object):
         text_file_path = os.path.join(s.saves_folder, 'xml', file_name)
         with open(text_file_path, 'w') as f:
             print('', file=f)
-        match_series = df[string_column_name].isnull()
-        for state_name, row_series in df[~match_series].iterrows():
+        match_series = one_country_df[string_column_name].isnull()
+        for state_name, row_series in one_country_df[~match_series].iterrows():
             id = '{}'.format('-'.join(state_name.lower().split(' ')))
             label = '{} {}'.format(state_name, ' '.join(string_column_name.split('_')))
             x = row_series['text_x']
@@ -791,10 +768,10 @@ class ChoroplethUtilities(object):
             print(svg_prefix, file=f)
         
         # Create the outline paths
-        match_series = df[string_column_name].isnull()
-        labels_list = self.country_stats_df[~match_series][string_column_name].unique().tolist()
+        match_series = one_country_df[string_column_name].isnull()
+        labels_list = self.one_country_df[~match_series][string_column_name].unique().tolist()
         legend_xml, colors_dict = self.get_legend_xml(labels_list)
-        for state_name, row_series in df.iterrows():
+        for state_name, row_series in one_country_df.iterrows():
             column_value = str(row_series[string_column_name]).strip()
             if column_value in colors_dict:
                 color = colors_dict[column_value]
@@ -850,8 +827,8 @@ class ChoroplethUtilities(object):
                     print('', file=f)
                 cap_str = cu_str[:1].upper()+cu_str[1:]
                 column_name = 'Google_Suggest_{}'.format(cap_str)
-                match_series = self.country_stats_df[column_name].isnull()
-                for state_name, row_series in self.country_stats_df[~match_series].iterrows():
+                match_series = self.one_country_df[column_name].isnull()
+                for state_name, row_series in self.one_country_df[~match_series].iterrows():
                     id = '{}'.format('-'.join(state_name.lower().split(' ')))
                     label = '{} Google {} Suggestion'.format(state_name, cap_str)
                     suggestion = row_series[column_name]
@@ -897,7 +874,7 @@ class ChoroplethUtilities(object):
     def create_label_line_file(self):
         with open(self.label_line_file_path, 'w') as f:
             print('', file=f)
-        for state_name, row_series in self.country_stats_df.iterrows():
+        for state_name, row_series in self.one_country_df.iterrows():
             id = '{}'.format('-'.join(state_name.lower().split(' ')))
             label = '{} Label Line'.format(state_name)
             d = row_series['label_line_d']
@@ -922,7 +899,7 @@ class ChoroplethUtilities(object):
             suggestion_list_dict = {}
         else:
             suggestion_list_dict = self.suggestion_list_dict.copy()
-        for state in self.country_stats_df.index.tolist():
+        for state in self.one_country_df.index.tolist():
             if state not in suggestion_list_dict:
                 try:
 
@@ -1016,7 +993,7 @@ class ChoroplethUtilities(object):
             if dropdown_list[0][:value_length] == field_value:
                 dropdown_list = [st[value_length:] for st in dropdown_list]
                 self.suggestion_list_dict[state] = dropdown_list
-        if(set(self.country_stats_df.index.tolist()) - set(self.suggestion_list_dict) == set()):
+        if(set(self.one_country_df.index.tolist()) - set(self.suggestion_list_dict) == set()):
             s.store_objects(suggestion_list_dict=self.suggestion_list_dict)
         for old_key in self.suggestion_list_dict.keys():
             new_key = re.sub(r'\xa0', r'', old_key)
@@ -1033,8 +1010,8 @@ class ChoroplethUtilities(object):
         fig, ax = plt.subplots(figsize=(1, 6))
         fig.subplots_adjust(left=0.5)
         
-        min = self.country_stats_df[column_name].min()
-        max = self.country_stats_df[column_name].max()
+        min = self.one_country_df[column_name].min()
+        max = self.one_country_df[column_name].max()
         cmap = mpl.cm.viridis
         norm = mpl.colors.Normalize(vmin=min, vmax=max)
         
@@ -1051,9 +1028,9 @@ class ChoroplethUtilities(object):
     
     
     def clean_up_state_merge_dataframe(self):
-        for column_name in self.country_stats_df.columns:
+        for column_name in self.one_country_df.columns:
             try:
-                self.country_stats_df[column_name] = pd.to_numeric(self.country_stats_df[column_name], errors='raise', downcast='float')
+                self.one_country_df[column_name] = pd.to_numeric(self.one_country_df[column_name], errors='raise', downcast='float')
             except Exception as e:
                 print('The {} column get this error: {}'.format(column_name, str(e).strip()))
-        s.store_objects(country_stats_df=self.country_stats_df)
+        s.store_objects(one_country_df=self.one_country_df)
