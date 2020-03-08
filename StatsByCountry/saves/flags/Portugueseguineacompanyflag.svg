@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="1578" height="1052" viewBox="-417 0 1578 1052">
+  <metadata>
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <rect x="-417" width="1578" height="1052" style="fill:#ffffff;fill-opacity:1"/>
+  <path transform="translate(0,-5.47125)" style="fill:#1f723b;fill-opacity:1"
+     d="M 137.85 1020.935 L 222.06 968.746 L 301.44 921.763 L 301.44 680.043 L
+301.44 438.323 L 224.396 438.323 L 147.352 438.323 L 97.1362 522.743 L 46.92
+607.163 L 45.5696 486.203 L 45.5696 245.101 L 46.92 124.96 L 97.3157 211.039 L
+147.711 297.118 L 224.576 297.16 L 301.44 297.203 L 301.44 220.255 L 301.44
+143.308 L 216.385 92.9953 L 131.33 42.0075 L 612.67 42.0075 L 527.615 92.9953
+L 442.56 143.308 L 442.56 220.255 L 442.56 297.203 L 519.424 297.16 L 596.289
+297.118 L 646.684 211.039 L 697.08 124.96 L 698.431 245.101 L 698.431 486.203
+L 697.08 607.163 L 646.864 522.743 L 596.647 438.323 L 519.604 438.323 L
+442.56 438.323 L 442.56 680.043 L 442.56 921.763 L 521.94 968.746 L 606.15
+1020.935 L 137.85 1020.935 z"/></svg>

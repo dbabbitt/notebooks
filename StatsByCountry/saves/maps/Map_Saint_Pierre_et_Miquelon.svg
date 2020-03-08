@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="591.18231"
+   height="368.12735"
+   id="svg2"
+   sodipodi:docname="Map_Saint_Pierre_et_Miquelon.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata63">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     id="namedview61"
+     showgrid="false"
+     inkscape:zoom="1.1840679"
+     inkscape:cx="191.76193"
+     inkscape:cy="197.91404"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <pattern
+       y="0"
+       x="0"
+       height="6"
+       width="6"
+       patternUnits="userSpaceOnUse"
+       id="EMFhbasepattern" />
+  </defs>
+  <g
+     transform="translate(-26.711266,-46.970728)"
+     id="layer1">
+    <g
+       transform="matrix(0.125,0,0,-0.125,79.807053,586.84084)"
+       id="g2414">
+      <path
+         d="M -409.22861,1378.7368 H 4309.2694 V 4310.23 H -409.22861 Z"
+         id="path2416"
+         style="fill:#c8eafb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.00161481"
+         inkscape:connector-curvature="0" />
+      <path
+         d="M -409.57575,1374.8641 H 4310.5771 v 2935.713 H -409.57575 Z"
+         id="path2418"
+         style="fill:none;stroke:#000000;stroke-width:9.30571842;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         d="M 310,4310 H 4310 310 4310 V 2470 h -90 l -30,20 -110,40 -70,30 h -20 l -70,-30 -10,20 30,20 -20,20 -70,20 -20,-10 20,-20 -20,-10 -60,20 -20,30 -30,10 h -10 l -50,30 -80,10 -60,50 30,40 -40,90 -30,90 h -30 l -20,10 v 30 l 60,110 50,20 v 20 l -30,30 -10,30 20,30 160,110 100,40 100,70 100,90 170,150 60,40 100,30 v 560 H 310"
+         id="path2424"
+         style="fill:#f4e2ba;fill-opacity:1;fill-rule:nonzero;stroke:#27aaea;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 1270,2800 v 30 l -20,110 -80,200 -80,120 -40,40 -40,10 -40,20 -30,30 -20,130 -20,20 10,80 20,50 -10,80 -30,150 -50,50 -10,30 80,110 20,20 h 60 l 80,20 80,50 h 40 l 10,-60 -30,-10 -70,-30 -30,-30 -90,-40 -20,-30 30,-70 60,-20 -20,-20 h -80 l -10,-20 30,-140 10,20 70,120 50,40 90,10 90,-30 60,-60 80,-40 130,-50 140,-20 50,-40 10,-90 30,-30 -10,-40 -80,-140 -90,-140 -70,-10 -60,-40 -40,-10 -10,10 60,40 20,30 -30,60 h -40 l -70,-30 -30,-10 -130,40 -50,10 -10,-20 40,-70 60,-90 50,-10 80,40 50,-30 -70,-130 -30,-180 -10,-40 20,-80 20,-30 100,-20 100,-60 50,30 h 60 l 60,-50 30,-10 40,10 10,-60 50,-70 v -70 l -20,-50 -60,-50 -170,-100 -30,-10 -50,-20 -160,-90 -60,-70 -20,-10 h -40 l -60,-50 -30,-10 -10,70 -40,10 -40,30 -60,-40 -30,10 10,30 -20,20 30,40 -10,90 -20,20 H 860 l -30,-30 h -20 l -20,90 90,80 80,60 100,30 h 40 l 50,30 40,50 20,40 v 60 l 50,40 10,30 v 160"
+         id="path2426"
+         style="fill:#fcf5e3;fill-opacity:1;fill-rule:nonzero;stroke:#27aaea;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 2380,1870 -20,10 10,10 50,40 h 30 v -10 l -30,-50 h -40"
+         id="path2430"
+         style="fill:#fcf5e3;fill-opacity:1;fill-rule:nonzero;stroke:#27aaea;stroke-width:10;stroke-miterlimit:7;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 1470,3680 -150,40 -60,-20 -20,50 20,50 20,10 30,-50 170,-60 -10,-20"
+         id="path2432"
+         style="fill:#c8eafb;fill-opacity:1;fill-rule:nonzero;stroke:#27aaea;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 1270,2800 v 30 l -20,110 -80,200 -80,120 -40,40 -40,10 -40,20 -30,30 -20,130 -20,20 10,80 20,50 -10,80 -30,150 -50,50 -10,30 80,110 20,20 h 60 l 80,20 80,50 h 40 l 10,-60 -30,-10 -70,-30 -30,-30 -90,-40 -20,-30 30,-70 60,-20 -20,-20 h -80 l -10,-20 30,-140 10,20 70,120 50,40 90,10 90,-30 60,-60 80,-40 130,-50 140,-20 50,-40 10,-90 30,-30 -10,-40 -80,-140 -90,-140 -70,-10 -60,-40 -40,-10 -10,10 60,40 20,30 -30,60 h -40 l -70,-30 -30,-10 -130,40 -50,10 -10,-20 40,-70 60,-90 50,-10 80,40 50,-30 -70,-130 -30,-170 -10,-50 20,-80 20,-30 100,-20 100,-60 50,30 h 60 l 60,-50 30,-10 40,10 10,-60 50,-70 v -70 l -20,-50 -60,-50 -170,-100 -30,-10 -50,-20 -160,-90 -60,-70 -20,-10 h -40 l -60,-50 -30,-10 -10,70 -40,10 -40,30 -60,-40 -30,10 10,30 -20,20 30,40 -10,90 -20,20 H 860 l -30,-30 h -20 l -20,90 90,80 80,60 100,30 h 40 l 50,30 40,50 20,40 v 60 l 50,40 10,30 v 160"
+         id="path2436"
+         style="fill:none;stroke:#27aaea;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 1960,1680 -20,10 -20,10 v 30 l 60,30 v 20 h -20 l -40,-20 h -80 v 20 l 50,20 160,200 80,50 50,30 90,10 60,-10 20,-10 20,-40 -20,-50 -60,-60 -40,-80 10,-10 40,30 40,-20 10,-30 40,-10 10,-10 -10,-30 -60,-10 -80,10 -60,-30 h -50 l -10,50 -80,-30 -50,-10 -40,-60"
+         id="path2440"
+         style="fill:#fcf5e3;fill-opacity:1;stroke:#27aaea;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:7;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <g
+         transform="scale(10)"
+         id="g2462" />
+      <g
+         transform="scale(10)"
+         id="g2474" />
+      <g
+         transform="matrix(10,0,0,10,-342.85714,-34.285714)"
+         id="g2482" />
+      <g
+         transform="matrix(10,0,0,10,-1090.9647,484.87322)"
+         id="g2490" />
+      <text
+         x="2083.4167"
+         y="-2152.7307"
+         transform="scale(1,-1)"
+         id="text3396"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:100%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><tspan
+           x="2083.4167"
+           y="-2152.7307"
+           id="tspan3398"
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:144px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#787878;fill-opacity:1">Île Saint-Pierre</tspan></text>
+      <text
+         x="1757.3624"
+         y="-3299.5986"
+         transform="scale(1,-1)"
+         id="text3412"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:100%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><tspan
+           x="1757.3624"
+           y="-3299.5986"
+           id="tspan3414"
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:144px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#787878;fill-opacity:1">Miquelon</tspan></text>
+      <text
+         x="1680.3373"
+         y="-3152.7405"
+         transform="scale(1,-1)"
+         id="text3418"
+         xml:space="preserve"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><tspan
+           x="1680.3373"
+           y="-3152.7405"
+           id="tspan3420"
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:144px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#787878;fill-opacity:1">(Grande Miquelon)</tspan></text>
+    </g>
+  </g>
+  <text
+     x="17.522924"
+     y="158.74995"
+     id="text2433"
+     xml:space="preserve"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><tspan
+       x="17.522924"
+       y="158.74995"
+       id="tspan2435"
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18px;line-height:125%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Bold Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#27aaea;fill-opacity:1">Gulf of St. Lawrence</tspan></text>
+  <text
+     x="112.29673"
+     y="350.09546"
+     id="text2437"
+     xml:space="preserve"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:125%;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><tspan
+       x="112.29673"
+       y="350.09546"
+       id="tspan2439"
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18px;line-height:125%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Bold Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#27aaea;fill-opacity:1">North Atlantic Ocean</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="327.26874"
+     y="62.788525"
+     id="text4550"><tspan
+       sodipodi:role="line"
+       x="327.26874"
+       y="62.788525"
+       id="tspan4552"
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold Italic';fill:#787878;fill-opacity:1">Saint Pierre et Miquelon</tspan></text>
+  <path
+     id="path4557"
+     d="m 327.02863,307.40375 5.99995,1.99999 1.99999,5.99995 1.99998,-5.99995 5.99996,-1.99999 -5.99996,-1.99998 -1.99998,-5.99996 -1.99999,5.99996 z"
+     style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.51998878px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     inkscape:connector-curvature="0" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="328.38757"
+     y="339.48737"
+     id="text4569"><tspan
+       sodipodi:role="line"
+       id="tspan4567"
+       x="328.38757"
+       y="339.48737"
+       style="font-size:20px">Saint-Pierre</tspan></text>
+  <circle
+     r="4.5"
+     cy="57.910259"
+     cx="167.73439"
+     style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path2490"
+     inkscape:transform-center-x="-57.926879"
+     inkscape:transform-center-y="7.1662118" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="93.450935"
+     y="64.069954"
+     id="text4579"><tspan
+       sodipodi:role="line"
+       id="tspan4577"
+       x="93.450935"
+       y="64.069954">Miquelon</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="146.15118"
+     y="256.45386"
+     id="text4583"><tspan
+       sodipodi:role="line"
+       id="tspan4581"
+       x="146.15118"
+       y="256.45386"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:end;text-anchor:end;fill:#787878;fill-opacity:1">Langlade</tspan><tspan
+       sodipodi:role="line"
+       x="146.15118"
+       y="278.99759"
+       id="tspan4585"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:end;text-anchor:end;fill:#787878;fill-opacity:1">(Petite Miquelon)</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="327.4292"
+     y="34.236801"
+     id="text4550-0"><tspan
+       sodipodi:role="line"
+       x="327.4292"
+       y="34.236801"
+       id="tspan4552-4"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#787878;fill-opacity:1">FRANCE</tspan></text>
+  <g
+     id="g4653"
+     transform="translate(-10.9791,49.828223)">
+    <text
+       id="text4589"
+       y="144.27754"
+       x="451.85629"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold Italic';fill:#787878;fill-opacity:1"
+         id="tspan4591"
+         y="144.27754"
+         x="451.85629"
+         sodipodi:role="line">Newfoundland</tspan></text>
+    <text
+       inkscape:transform-center-y="11.823646"
+       inkscape:transform-center-x="-1.6890923"
+       id="text4550-0-9"
+       y="119.49942"
+       x="514.39783"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#787878;fill-opacity:1"
+         id="tspan4552-4-2"
+         y="119.49942"
+         x="514.39783"
+         sodipodi:role="line">CANADA</tspan></text>
+  </g>
+</svg>

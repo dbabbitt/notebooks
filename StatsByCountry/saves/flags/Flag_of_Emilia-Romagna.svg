@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="750" height="500" viewBox="0 0 750 500">
+<title>
+ Flago de Emilio-Romanjo
+</title>
+<rect width="750" height="500" x="0" y="0" stroke-width="1px" stroke="#999999"
+      fill="#ffffff" />
+<g stroke="none" stroke-width="0" 
+   stroke-linecap="butt" stroke-linejoin="miter"
+   fill="none" fill-rule="evenodd">
+<rect width="233" height="226" x="255" y="87" stroke-width="4" stroke="#008000"
+      fill="#ffffff" />
+<path d="M 255,198 L 488,312 L 488,144 C 475,150 450,156 433,156 C 403,156 343,133 313,133 C 293,133 270,135 255,146 z"
+      fill="#008000" stroke="none" />
+<rect width="233" height="22" x="255" y="339" stroke-width="4" stroke="#ff4444"
+      fill="#ff4444" />
+<text fill="#007000" stroke="#007000" font-style="normal" font-family="Times New Roman"
+      font-size="23" stroke-width="0.6"
+      transform="matrix(1,0,0,1.2,0,0)"
+      y="338"
+      x="255">
+    <tspan x="251">Regione Emilia-Romagna</tspan>
+  </text>
+</g>
+</svg>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="300">
+<path d="M2,2 V175 a123 123 0 0 0 246 0 V2 H2" fill="#d40000"/>
+<path d="M90,60 H160 L 145,120 L 205,105 V175 L145,160 L 160,220 H90 L 105,160 L45,175 V105 L105,120 Z" fill="#fff" stroke="#000" stroke-width="2"/>
+<path d="M0,0 V230 V175 a125 125 0 0 0 250 0 V0 Z M245,5 V175 a120 120 0 0 1 -240 0 V5 Z" fill-rule="nonzero"/>
+</svg>

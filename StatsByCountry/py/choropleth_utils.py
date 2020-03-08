@@ -39,11 +39,11 @@ class ChoroplethUtilities(object):
     >>> c = choropleth_utils.ChoroplethUtilities()
     """
     
-    def __init__(self, iso_3166_code=None, df=None):
-        if iso_3166_code is None:
-            self.iso_3166_code = 'us'
+    def __init__(self, iso_3166_2_code=None, df=None):
+        if iso_3166_2_code is None:
+            self.iso_3166_2_code = 'us'
         else:
-            self.iso_3166_code = iso_3166_code
+            self.iso_3166_2_code = iso_3166_2_code
         if df is None:
             self.country_stats_df = s.load_object('state_merge_df')
         else:
@@ -95,9 +95,9 @@ class ChoroplethUtilities(object):
 </svg>'''
         self.regex_sub_str = self.svg_suffix.strip()
         self.svg_regex = re.compile(self.regex_sub_str)
-        if self.iso_3166_code == 'us':
+        if self.iso_3166_2_code == 'us':
             self.copy_file_path = os.path.join(s.data_folder, 'svg', 'us - Copy.svg')
-        elif self.iso_3166_code == 'af':
+        elif self.iso_3166_2_code == 'af':
             self.copy_file_path = os.path.join(s.data_folder, 'svg', 'Afghanistan - Copy.svg')
         self.svg_attributes_list = ['xmlns:dc="http://purl.org/dc/elements/1.1/"',
                                     'xmlns:cc="http://creativecommons.org/ns#"',
@@ -118,7 +118,8 @@ class ChoroplethUtilities(object):
                                           'inkscape:cx="496.42668"', 'inkscape:cy="302.09908"',
                                           'inkscape:window-x="1432"', 'inkscape:window-y="112"',
                                           'inkscape:window-maximized="1"', 'inkscape:current-layer="svg"']
-        self.svg_prefix_str = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        if self.iso_3166_2_code == 'us':
+            self.svg_prefix_str = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--
 ************* Copyright (c) 2017 Pareto Softare, LLC DBA Simplemaps.com *******************
 ************* Free for Commercial Use, full terms at  http://simplemaps.com/resources/svg-license ************
@@ -148,6 +149,36 @@ class ChoroplethUtilities(object):
             <dc:title />
         </cc:Work></rdf:RDF>
     </metadata>'''
+        elif self.iso_3166_2_code == 'af':
+            self.svg_prefix_str = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg {}>
+    <sodipodi:namedview {} />
+    <defs id="defs-main">
+        <style type="text/css" id="style-main">
+            path {{fill-rule: evenodd;}};
+            *{{stroke-linecap:butt;stroke-linejoin:round;}}
+        </style>
+        <path
+            d="M 0,0 H 3.5"
+            id="m-ticks"
+            style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+            inkscape:connector-curvature="0" />
+    </defs>
+    <metadata id="metadata-main">
+        <rdf:RDF><cc:Work rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title />
+        </cc:Work></rdf:RDF>
+    </metadata>
+		<rect
+   height="1331.075"
+   id="adjacent-country-backgrounds"
+   style="display:inline;fill:#e0e0e0"
+   width="1807.087"
+   x="0"
+   y="0.066"
+   inkscape:label="Adjacent Country Backgrounds" />'''
         self.html_style_str = '#{:02x}{:02x}{:02x}'
         self.fill_style_prefix = 'stroke-width:0.97063118000000004;fill:{}'
         self.fill_style_str = self.fill_style_prefix.format(self.html_style_str)
@@ -265,6 +296,13 @@ class ChoroplethUtilities(object):
         </g>'''
         self.hyphen_dict = pyphen.Pyphen(lang='en_US')
         self.line_height = 15
+        self.intra_country_borders_str = '''
+		<path
+   id="intra-country-borders"
+   d="{}"
+   style="display:inline;fill:#fefee9"
+   inkscape:connector-curvature="0"
+   inkscape:label="{} Background" />'''
     
     
     ###########################

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="300">
+<pattern id="p" patternUnits="userSpaceOnUse" width="260" height="300">
+<path fill="#FFF" d="m5,5h250v290H5"/>
+<path stroke="#F90038" stroke-width="36"
+d="m5,60h250m0,72H5m0,72h250m0,72H5"/></pattern>
+<path fill="url(#p)" stroke="#000" stroke-width="3"
+d="m6,6V170a124,124 0 0,0 248,0V6z"/>
+</svg>

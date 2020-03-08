@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200px" height="720px" viewBox="0 0 1200 720" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect fill="#0cf" width="1200" height="720"/>
+<rect fill="#fff" width="1200" height="540"/>
+ <g id="1">
+ <path fill="#f90" d="M607 205c10,24 42,50 51,63 -11,13 -14,11 -12,35 20,-21 20,-23 33,-20 28,28 5,87 -18,100 -23,14 -19,0 -53,17 16,13 34,-2 49,2 8,10 -4,27 2,44 13,-1 12,-28 15,-38 10,-35 68,-60 71,-92 12,-6 24,-2 39,7 -7,-30 -32,-30 -38,-40 -16,-24 -29,-51 -63,-58 -25,-5 -23,2 -40,-9 -10,-8 -41,-23 -36,-11l0 0z"/>
+ <circle fill="#fff" cx="674" cy="232" r="5"/>
+ </g>
+<use xlink:href="#1" transform="rotate(-120, 594, 280)"/>
+<use xlink:href="#1" transform="rotate(120, 594, 280)"/>
+</svg>

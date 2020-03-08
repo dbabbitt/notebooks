@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="600"
+   height="300"
+   id="svg2"
+   inkscape:label="Pozadí"
+   sodipodi:version="0.32"
+   inkscape:version="0.44"
+   version="1.0"
+   sodipodi:docbase="/home/pavel/ostatni/wiki"
+   sodipodi:docname="1868_Lares_Revolutionay_Flag.svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.9061287"
+     inkscape:cx="330.86172"
+     inkscape:cy="274.07929"
+     inkscape:document-units="px"
+     inkscape:current-layer="svg2"
+     inkscape:window-width="869"
+     inkscape:window-height="579"
+     inkscape:window-x="116"
+     inkscape:window-y="120" />
+  <metadata
+     id="metadata6">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Vrstva 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:white;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1936"
+       width="600"
+       height="300"
+       x="0"
+       y="0" />
+    <rect
+       style="opacity:1;fill:blue;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1932"
+       width="270"
+       height="120"
+       x="0"
+       y="0" />
+    <rect
+       style="opacity:1;fill:blue;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1934"
+       width="270"
+       height="120"
+       x="330"
+       y="0" />
+    <rect
+       style="opacity:1;fill:red;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2825"
+       width="270"
+       height="120"
+       x="0"
+       y="180" />
+    <rect
+       style="opacity:1;fill:red;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2827"
+       width="270"
+       height="120"
+       x="330"
+       y="180" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:white;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path2835"
+       sodipodi:sides="5"
+       sodipodi:cx="121.18804"
+       sodipodi:cy="59.197792"
+       sodipodi:r1="38.655182"
+       sodipodi:r2="13.658672"
+       sodipodi:arg1="-2.8241339"
+       sodipodi:arg2="-2.1958154"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 84.464392,47.131449 L 113.19618,48.121265 L 121.31558,20.542821 L 129.25282,48.174243 L 157.99052,47.374049 L 134.16421,63.461391 L 143.80568,90.545288 L 121.14298,72.85639 L 98.364036,90.395354 L 108.18402,63.375671 L 84.464392,47.131449 z "
+       transform="matrix(0.957188,0,0,1,4.140645,-0.524624)" />
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg>
+<svg width="500" height="600" viewBox="-5 -5 500 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <defs>
+    <path id="Grund" d="M 0,0 v 345 a 245 245 0 1 0 490,0 V 0 Z"/>
+    <clipPath id="Maske">
+      <use xlink:href="#Grund"/>
+    </clipPath>
+   </defs>
+
+   <use xlink:href="#Grund" fill="#fd0"/>
+   <line x1="0" y1="0" x2="500" y2="500" stroke="black" stroke-width="134" clip-path="url(#Maske)"/> 
+   <line x1="0" y1="0" x2="500" y2="500" stroke="red" stroke-width="126" clip-path="url(#Maske)"/>
+   <use xlink:href="#Grund" fill="none" stroke-width="4" stroke="black"/>
+</svg>

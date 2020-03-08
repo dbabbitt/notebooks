@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg3038"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   width="950"
+   height="590"
+   sodipodi:docname="Flag_of_Ngaraard_State.png">
+  <metadata
+     id="metadata3044">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3042" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="947"
+     id="namedview3040"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="0.89152542"
+     inkscape:cx="444.03076"
+     inkscape:cy="258.48382"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3038" />
+  <rect
+     style="fill:#003893;fill-opacity:1;stroke:none"
+     id="rect3048"
+     width="944.88165"
+     height="589.30493"
+     x="3.9485691"
+     y="1.0916284" />
+  <path
+     style="fill:#d81e05;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+     d="m 948.99511,1.0916276 -148.71424,0 L 4.0660646,590.42063 l 150.9351254,0 z"
+     id="path3820"
+     inkscape:connector-curvature="0" />
+  <polygon
+     style="fill:#f9dd16;fill-opacity:1"
+     transform="matrix(0.16208944,0,0,0.16208944,-250.75809,-170.85535)"
+     points="4500,3477 3766,4010 4046,3147 3312,2614 4220,2614 4500,1751 4780,2614 5688,2614 4954,3147 5234,4010 "
+     id="polygon3912" />
+</svg>
