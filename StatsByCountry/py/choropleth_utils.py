@@ -5,8 +5,10 @@ from matplotlib import cm
 from shutil import copyfile
 from sklearn.feature_extraction.text import TfidfVectorizer
 from xml.etree.ElementTree import Element
+import math
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+import numpy as np
 import os
 import pylab
 import pyphen
@@ -36,7 +38,9 @@ class ChoroplethUtilities(object):
     --------
     
     >>> import choropleth_utils
-    >>> c = choropleth_utils.ChoroplethUtilities()
+    >>> 
+    >>> afghanistan_provinces_df = s.load_object('afghanistan_provinces_df')
+    >>> c = choropleth_utils.ChoroplethUtilities(iso_3166_2_code='af', one_country_df=afghanistan_provinces_df)
     """
     
     def __init__(self, iso_3166_2_code=None, one_country_df=None, all_countries_df=None):
@@ -52,17 +56,15 @@ class ChoroplethUtilities(object):
             self.all_countries_df = s.load_object('all_countries_df')
         else:
             self.all_countries_df = all_countries_df
-        
-        # Define the dictionaries
-        self.column_description_dict = s.load_object('column_description_dict')
-        self.state_common_dict = s.load_object('state_common_dict')
-        self.state_first_dict = s.load_object('state_first_dict')
-        self.state_unique_dict = s.load_object('state_unique_dict')
-        self.suggestion_list_dict = s.load_object('suggestion_list_dict')
+        match_series = (self.all_countries_df.index == self.iso_3166_2_code.upper())
+        self.settings_dict = self.all_countries_df[match_series].to_dict(orient='records')[0]
         
         # Define the SVG parts
+        font_size = self.settings_dict.get('font_size', 12)
+        if str(font_size) == 'nan':
+            font_size = 12
         self.text_style_dict = {'font-style': 'normal', 'font-variant': 'normal', 'font-weight': 'normal',
-                                'font-stretch': 'normal', 'font-size': '12px', 'line-height': '1.25',
+                                'font-stretch': 'normal', 'font-size': '{}px'.format(font_size), 'line-height': '1.25',
                                 'font-family': 'sans-serif', '-inkscape-font-specification': 'sans-serif, Normal',
                                 'font-variant-ligatures': 'normal', 'font-variant-caps': 'normal',
                                 'font-variant-numeric': 'normal', 'font-feature-settings': 'normal',
@@ -104,6 +106,19 @@ class ChoroplethUtilities(object):
         elif self.iso_3166_2_code == 'af':
             self.copy_file_name = 'Afghanistan - Copy.svg'
         self.copy_file_path = os.path.join(s.data_folder, 'svg', self.copy_file_name)
+        if ('svg_width' not in self.all_countries_df.columns) or ('svg_height' not in self.all_countries_df.columns):
+            raise Exception('svg_width and svg_height must be in your all_countries_df')
+        self.svg_width = self.settings_dict['svg_width']
+        self.svg_height = self.settings_dict['svg_height']
+        inkscape_cx = self.settings_dict.get('inkscape_cx', 519.35606)
+        if str(inkscape_cx) == 'nan':
+            inkscape_cx = 519.35606
+        inkscape_cy = self.settings_dict.get('inkscape_cy', 287.55662)
+        if str(inkscape_cy) == 'nan':
+            inkscape_cy = 287.55662
+        inkscape_zoom = self.settings_dict.get('inkscape_zoom', 1.2776908)
+        if str(inkscape_zoom) == 'nan':
+            inkscape_zoom = 1.2776908
         self.svg_attributes_list = ['xmlns:dc="http://purl.org/dc/elements/1.1/"',
                                     'xmlns:cc="http://creativecommons.org/ns#"',
                                     'xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"',
@@ -123,8 +138,8 @@ class ChoroplethUtilities(object):
                                           'objecttolerance="10"', 'gridtolerance="10"', 'guidetolerance="10"',
                                           'inkscape:pageopacity="0"', 'inkscape:pageshadow="2"',
                                           'inkscape:window-width="1846"', 'inkscape:window-height="1057"',
-                                          'id="namedview69"', 'showgrid="false"', 'inkscape:zoom="0.90366236"',
-                                          'inkscape:cx="496.42668"', 'inkscape:cy="302.09908"',
+                                          'id="named-view"', 'showgrid="false"', 'inkscape:zoom="{}"'.format(inkscape_zoom),
+                                          'inkscape:cx="{}"'.format(inkscape_cx), 'inkscape:cy="{}"'.format(inkscape_cy),
                                           'inkscape:window-x="1432"', 'inkscape:window-y="112"',
                                           'inkscape:window-maximized="1"', 'inkscape:current-layer="svg"']
         self.svg_prefix_str = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -145,7 +160,7 @@ class ChoroplethUtilities(object):
         <rdf:RDF><cc:Work rdf:about="">
             <dc:format>image/svg+xml</dc:format>
             <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-            <dc:title>{}</dc:title>
+            <dc:title>File: {}</dc:title>
         </cc:Work></rdf:RDF>
   </metadata>
   <rect
@@ -159,7 +174,7 @@ class ChoroplethUtilities(object):
         self.html_style_str = '#{:02x}{:02x}{:02x}'
         self.fill_style_prefix = 'stroke-width:1.0;fill:{}'
         self.fill_style_str = self.fill_style_prefix.format(self.html_style_str)
-        self.state_path_str = '<path inkscape:connector-curvature="0" id="{}" data-name="{}" data-id="{}" d="{}" style="{}" />'
+        self.state_path_str = '<path id="{}" d="{}" data-id="{}" data-name="{}" style="{}" inkscape:connector-curvature="0" />'
         self.svg_dir = os.path.abspath(os.path.join(s.saves_folder, 'svg'))
         os.makedirs(name=self.svg_dir, exist_ok=True)
         
@@ -362,6 +377,7 @@ class ChoroplethUtilities(object):
     
     
     def get_tfidf_lists(self):
+        self.suggestion_list_dict = s.load_object('suggestion_list_dict')
         
         # Get your list of lists of strings
         corpus = list(self.suggestion_list_dict.values())
@@ -508,6 +524,7 @@ class ChoroplethUtilities(object):
     
     
     def get_column_description(self, column_name):
+        self.column_description_dict = s.load_object('column_description_dict')
         if column_name in self.column_description_dict:
             column_description = self.column_description_dict[column_name]
         else:
@@ -564,6 +581,14 @@ class ChoroplethUtilities(object):
             raise Exception('{} does not exist'.format(self.copy_file_path))
         if not os.path.exists(self.label_line_file_path):
             raise Exception('{} does not exist'.format(self.label_line_file_path))
+        if 'State_Abbreviation' not in one_country_df.columns:
+            raise Exception('one_country_df needs to have the State_Abbreviation column')
+        if 'outline_d' not in one_country_df.columns:
+            raise Exception('one_country_df needs to have the outline_d column')
+        if 'text_x' not in one_country_df.columns:
+            raise Exception('one_country_df needs to have the text_x column')
+        if 'text_y' not in one_country_df.columns:
+            raise Exception('one_country_df needs to have the text_y column')
         
         # Create the text tag xml
         if string_column_name is None:
@@ -577,7 +602,7 @@ class ChoroplethUtilities(object):
             match_series = one_country_df['text_x'].isnull() | one_country_df['text_y'].isnull()
         else:
             match_series = one_country_df[string_column_name].isnull()
-        for state_name, row_series in one_country_df[~match_series].iterrows():
+        for state_name, row_series in one_country_df[~match_series].sort_index(axis='index', ascending=False).iterrows():
             id = '{}'.format('-'.join(state_name.lower().split(' ')))
             if string_column_name is None:
                 label = '{} Index'.format(state_name)
@@ -613,7 +638,9 @@ class ChoroplethUtilities(object):
             attributes_list = self.svg_attributes_list.copy()
             attributes_list.append('sodipodi:docname="{}"'.format(svg_file_name))
             svg_prefix = self.svg_prefix_str.format(' '.join(attributes_list),
-                                                    ' '.join(self.namedview_attributes_list))
+                                                    ' '.join(self.namedview_attributes_list),
+                                                    self.copy_file_name, self.svg_height,
+                                                    self.svg_width)
             print(svg_prefix, file=f)
         
         # Create the outline paths
@@ -621,15 +648,16 @@ class ChoroplethUtilities(object):
         min = one_country_df[numeric_column_name].min()
         max = one_country_df[numeric_column_name].max()
         match_series = one_country_df[numeric_column_name].isnull()
-        for state_name, row_series in one_country_df[~match_series].iterrows():
+        for state_name, row_series in one_country_df[~match_series].sort_index(axis='index', ascending=False).iterrows():
             column_value = row_series[numeric_column_name]
             state_abbreviation = row_series.State_Abbreviation
             outline_d = row_series.outline_d
             normed_value = (column_value - min) / (max - min)
             style_tuple = tuple(int(x*255) for x in ListedColormap_obj(normed_value)[:-1])
             style_value = self.fill_style_str.format(*style_tuple)
-            path_tag = self.state_path_str.format(state_abbreviation, state_name, state_abbreviation,
-                                                  outline_d, style_value)
+            id_value = 'state-{}'.format('-'.join(state_name.lower().split(' ')))
+            path_tag = self.state_path_str.format(id_value, outline_d, state_abbreviation,
+                                                  state_name, style_value)
             with open(svg_file_path, 'a') as f:
                 print(path_tag, file=f)
         
@@ -681,9 +709,11 @@ class ChoroplethUtilities(object):
                 attributes_list = self.svg_attributes_list.copy()
                 attributes_list.append('sodipodi:docname="{}.svg"'.format(column_name))
                 svg_prefix = self.svg_prefix_str.format(' '.join(attributes_list),
-                                                        ' '.join(self.namedview_attributes_list))
+                                                        ' '.join(self.namedview_attributes_list),
+                                                        self.copy_file_name, self.svg_height,
+                                                        self.svg_width)
                 print(svg_prefix, file=f)
-            for state_name, row_series in one_country_df.iterrows():
+            for state_name, row_series in one_country_df.sort_index(axis='index', ascending=False).iterrows():
                 column_value = row_series[column_name]
                 if str(column_value) != 'nan':
                     state_abbreviation = row_series.State_Abbreviation
@@ -691,8 +721,9 @@ class ChoroplethUtilities(object):
                     normed_value = (column_value - min) / (max - min)
                     style_tuple = tuple(int(x*255) for x in ListedColormap_obj(normed_value)[:-1])
                     style_value = self.fill_style_str.format(*style_tuple)
-                    path_tag = self.state_path_str.format(state_abbreviation, state_name, state_abbreviation,
-                                                          outline_d, style_value)
+                    id_value = 'state-{}'.format('-'.join(state_name.lower().split(' ')))
+                    path_tag = self.state_path_str.format(id_value, outline_d, state_abbreviation,
+                                                          state_name, style_value)
                     with open(svg_file_path, 'a') as f:
                         print(path_tag, file=f)
             
@@ -737,7 +768,7 @@ class ChoroplethUtilities(object):
         with open(text_file_path, 'w') as f:
             print('', file=f)
         match_series = one_country_df[string_column_name].isnull()
-        for state_name, row_series in one_country_df[~match_series].iterrows():
+        for state_name, row_series in one_country_df[~match_series].sort_index(axis='index', ascending=False).iterrows():
             id = '{}'.format('-'.join(state_name.lower().split(' ')))
             label = '{} {}'.format(state_name, ' '.join(string_column_name.split('_')))
             x = row_series['text_x']
@@ -764,14 +795,16 @@ class ChoroplethUtilities(object):
             attributes_list = self.svg_attributes_list.copy()
             attributes_list.append('sodipodi:docname="{}"'.format(svg_file_name))
             svg_prefix = self.svg_prefix_str.format(' '.join(attributes_list),
-                                                    ' '.join(self.namedview_attributes_list))
+                                                    ' '.join(self.namedview_attributes_list),
+                                                    self.copy_file_name, self.svg_height,
+                                                    self.svg_width)
             print(svg_prefix, file=f)
         
         # Create the outline paths
         match_series = one_country_df[string_column_name].isnull()
         labels_list = self.one_country_df[~match_series][string_column_name].unique().tolist()
         legend_xml, colors_dict = self.get_legend_xml(labels_list)
-        for state_name, row_series in one_country_df.iterrows():
+        for state_name, row_series in one_country_df.sort_index(axis='index', ascending=False).iterrows():
             column_value = str(row_series[string_column_name]).strip()
             if column_value in colors_dict:
                 color = colors_dict[column_value]
@@ -780,8 +813,9 @@ class ChoroplethUtilities(object):
             state_abbreviation = row_series.State_Abbreviation
             outline_d = row_series.outline_d
             style_value = self.fill_style_prefix.format(color)
-            path_tag = self.state_path_str.format(state_abbreviation, state_name, state_abbreviation,
-                                                  outline_d, style_value)
+            id_value = 'state-{}'.format('-'.join(state_name.lower().split(' ')))
+            path_tag = self.state_path_str.format(id_value, outline_d, state_abbreviation,
+                                                  state_name, style_value)
             with open(svg_file_path, 'a') as f:
                 print(path_tag, file=f)
         
@@ -828,7 +862,7 @@ class ChoroplethUtilities(object):
                 cap_str = cu_str[:1].upper()+cu_str[1:]
                 column_name = 'Google_Suggest_{}'.format(cap_str)
                 match_series = self.one_country_df[column_name].isnull()
-                for state_name, row_series in self.one_country_df[~match_series].iterrows():
+                for state_name, row_series in self.one_country_df[~match_series].sort_index(axis='index', ascending=False).iterrows():
                     id = '{}'.format('-'.join(state_name.lower().split(' ')))
                     label = '{} Google {} Suggestion'.format(state_name, cap_str)
                     suggestion = row_series[column_name]
@@ -874,7 +908,7 @@ class ChoroplethUtilities(object):
     def create_label_line_file(self):
         with open(self.label_line_file_path, 'w') as f:
             print('', file=f)
-        for state_name, row_series in self.one_country_df.iterrows():
+        for state_name, row_series in self.one_country_df.sort_index(axis='index', ascending=False).iterrows():
             id = '{}'.format('-'.join(state_name.lower().split(' ')))
             label = '{} Label Line'.format(state_name)
             d = row_series['label_line_d']
@@ -941,6 +975,7 @@ class ChoroplethUtilities(object):
     
     def clean_up_state_unique_dict(self):
         sorted_d, reverse_sorted_d = self.get_tfidf_lists()
+        self.state_unique_dict = s.load_object('state_unique_dict')
         while len(self.state_unique_dict.keys()) < len(self.suggestion_list_dict):
             for (key_word, idf) in reverse_sorted_d:
                 if len(self.state_unique_dict.keys()) == len(self.suggestion_list_dict):
@@ -959,6 +994,7 @@ class ChoroplethUtilities(object):
     
     def clean_up_state_common_dict(self):
         sorted_d, reverse_sorted_d = self.get_tfidf_lists()
+        self.state_common_dict = s.load_object('state_common_dict')
         while len(self.state_common_dict.keys()) < len(self.suggestion_list_dict):
             for (key_word, idf) in sorted_d:
                 if len(self.state_common_dict.keys()) == len(self.suggestion_list_dict):
