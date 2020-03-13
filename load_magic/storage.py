@@ -51,7 +51,7 @@ class Storage(object):
                            key=os.path.getmtime)
         else:
             csv_path = os.path.join(csv_folder, '{}.csv'.format(csv_name))
-        data_frame = pd.read_csv(csv_path, encoding=self.encoding_type)
+        data_frame = pd.read_csv(os.path.abspath(csv_path), encoding=self.encoding_type)
         
         return(data_frame)
 
