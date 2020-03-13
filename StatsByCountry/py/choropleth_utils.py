@@ -23,7 +23,15 @@ import storage
 s = storage.Storage()
 
 # Handy list of the different types of encodings
-s.encoding_type = ['ascii', 'cp037', 'cp437', 'cp863', 'utf_32', 'utf_32_be', 'utf_32_le', 'utf_16', 'utf_16_be', 'utf_16_le', 'utf_7', 'utf_8', 'utf_8_sig', 'latin1', 'iso8859-1'][0]
+encoding_types_list = ['ascii', 'cp037', 'cp437', 'cp863', 'utf_32', 'utf_32_be', 'utf_32_le', 'utf_16', 'utf_16_be', 'utf_16_le', 'utf_7',
+                       'utf_8', 'utf_8_sig', 'latin1', 'iso8859-1']
+encoding_errors_list = ['ignore', 'replace', 'xmlcharrefreplace']
+decoding_types_list = encoding_types_list.copy()
+decoding_errors_list = encoding_errors_list.copy()
+s.encoding_type = encoding_types_list[0]
+s.encoding_error = encoding_errors_list[2]
+s.decoding_type = decoding_types_list[11]
+s.decoding_error = decoding_errors_list[0]
 
 class ChoroplethUtilities(object):
     """This class implements the core of the utility functions
@@ -298,7 +306,8 @@ class ChoroplethUtilities(object):
    style="display:inline;fill:#fefee9"
    inkscape:connector-curvature="0"
    inkscape:label="{} Background" />'''
-        #print(s.encoding_type)
+        self.width_ratio = -0.027663496798780152
+        self.height_ratio = -0.0676069034160266
     
     
     ###########################
@@ -314,7 +323,8 @@ class ChoroplethUtilities(object):
             while d_regex.search(xml_str):
                 xml_str = d_regex.sub(r'd="\g<1>', xml_str)
             with open(file_path, 'w') as f:
-                print(xml_str.strip(), file=f)
+                print(xml_str.strip().encode(s.encoding_type, errors=s.encoding_error).decode(encoding=s.decoding_type,
+                                                                                              errors=s.decoding_error), file=f)
     
     
     
@@ -431,6 +441,11 @@ class ChoroplethUtilities(object):
             if (figure_1_xml.tag.split('}')[-1] == 'g'):
                 id = figure_1_xml.attrib['id']
                 if id == 'figure_1':
+                    key = 'transform'
+                    value = '{}'.format(self.settings_dict.get('legend_transform', 'matrix(1,0,0,1,-35,-50)'))
+                    if value == 'nan':
+                        value = 'matrix(1,0,0,1,-35,-50)'
+                    figure_1_xml.attrib[key] = value
                     break
         for axes_1_xml in figure_1_xml.getchildren():
             if (axes_1_xml.tag.split('}')[-1] == 'g'):
@@ -501,7 +516,7 @@ class ChoroplethUtilities(object):
         plt.close(fig)
         self.trim_d_path(file_path)
         root = et.parse(file_path).getroot()
-        for colorbar_xml in root:
+        for colorbar_xml in root.getchildren():
             if (colorbar_xml.tag.split('}')[-1] == 'g'):
                 id = colorbar_xml.attrib['id']
                 if id == 'figure_1':
@@ -628,13 +643,14 @@ class ChoroplethUtilities(object):
                 tspan_str += self.ts_str.format(id+str(i), x, y+self.line_height*i, column_value_str)
             text_str = self.t_str.format(x, y, id, label, tspan_str)
             with open(text_file_path, 'a') as f:
-                print(text_str.encode(s.encoding_type, errors='replace').decode(), file=f)
+                print(text_str.encode(s.encoding_type, errors=s.encoding_error).decode(encoding=s.decoding_type,
+                                                                                       errors=s.decoding_error), file=f)
         
         # Build the SVG file from scratch
         if string_column_name is None:
-            svg_file_name = '{}_Index_{}.svg'.format(numeric_column_name, self.iso_3166_2_code.upper())
+            svg_file_name = '{}_Index_{}.svg'.format(self.iso_3166_2_code.upper(), numeric_column_name)
         else:
-            svg_file_name = '{}_{}_{}.svg'.format(numeric_column_name, string_column_name, self.iso_3166_2_code.upper())
+            svg_file_name = '{}_{}_{}.svg'.format(self.iso_3166_2_code.upper(), numeric_column_name, string_column_name)
         svg_file_path = os.path.join(s.saves_folder, 'svg', svg_file_name)
         if not os.path.exists(svg_file_path):
             copyfile(self.copy_file_path, svg_file_path)
@@ -789,10 +805,9 @@ class ChoroplethUtilities(object):
                 tspan_str += self.ts_str.format(id+str(i), x, y+self.line_height*i, column_value_str)
             text_str = self.t_str.format(x, y, id, label, tspan_str)
             with open(text_file_path, 'a') as f:
-                try:
-                    print(text_str.encode(s.encoding_type, errors='replace').decode(), file=f)
-                except:
-                    print(text_str)
+                #print(text_str.encode(s.encoding_type, errors=s.encoding_error).decode(), file=f)
+                print(text_str.encode(s.encoding_type, errors=s.encoding_error).decode(encoding=s.decoding_type,
+                                                                                       errors=s.decoding_error), file=f)
         
         # Build the SVG file from scratch
         svg_file_name = '{}_{}.svg'.format(self.iso_3166_2_code.upper(), re.sub(r'[:]+', '_', string_column_name))
@@ -857,7 +872,7 @@ class ChoroplethUtilities(object):
         districts_file_path = c.create_us_google_suggest_labeled_map(cu_str='first')
         """
         if os.path.exists(self.copy_file_path) and os.path.exists(self.label_line_file_path):
-            districts_file_path = os.path.join(s.saves_folder, 'svg', '{}_{}.svg'.format(cu_str, self.iso_3166_2_code))
+            districts_file_path = os.path.join(s.saves_folder, 'svg', '{}_{}.svg'.format(self.iso_3166_2_code.upper(), cu_str.upper()))
             if os.path.exists(districts_file_path):
                 os.remove(districts_file_path)
             copyfile(self.copy_file_path, districts_file_path)
@@ -886,7 +901,8 @@ class ChoroplethUtilities(object):
                         tspan_str += self.ts_str.format(id+str(i), x, y+self.line_height*i, suggestion_str)
                     text_str = self.t_str.format(x, y, id, label, tspan_str)
                     with open(text_file_path, 'a') as f:
-                        print(text_str.encode(s.encoding_type, errors='replace').decode(), file=f)
+                        print(text_str.encode(s.encoding_type, errors=s.encoding_error).decode(encoding=s.decoding_type,
+                                                                                               errors=s.decoding_error), file=f)
                 with open(text_file_path, 'r') as f:
                     text_str = f.read()
                     with open(self.label_line_file_path, 'r') as f:
@@ -923,7 +939,8 @@ class ChoroplethUtilities(object):
             if str(d) != 'nan':
                 label_line_str = self.l_str.format(d, id, label)
                 with open(self.label_line_file_path, 'a') as f:
-                    print(label_line_str.encode(s.encoding_type, errors='replace').decode(), file=f)
+                    print(label_line_str.encode(s.encoding_type, errors=s.encoding_error).decode(encoding=s.decoding_type,
+                                                                                                 errors=s.decoding_error), file=f)
     
     
     
