@@ -1,0 +1,374 @@
+Tuning Logit hyper-parameters
+
+Tuning hyper-parameters for precision
+
+Best parameters set found on development set:
+
+{'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+
+Grid scores on development set:
+
+0.778 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.779 (+/-0.055) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.777 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.776 (+/-0.036) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.768 (+/-0.058) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.779 (+/-0.050) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.780 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.779 (+/-0.055) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.777 (+/-0.052) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.742 (+/-0.030) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.751 (+/-0.119) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.758 (+/-0.030) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.765 (+/-0.037) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.761 (+/-0.034) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.772 (+/-0.030) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.761 (+/-0.039) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.767 (+/-0.030) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.781 (+/-0.030) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.780 (+/-0.060) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.781 (+/-0.060) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.780 (+/-0.058) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.781 (+/-0.055) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.780 (+/-0.055) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.781 (+/-0.055) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.780 (+/-0.057) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.780 (+/-0.057) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.780 (+/-0.057) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.776 (+/-0.055) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.776 (+/-0.049) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.776 (+/-0.046) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.783 (+/-0.059) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.779 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.784 (+/-0.054) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.055) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.057) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.780 (+/-0.055) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.749 (+/-0.034) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.748 (+/-0.042) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.738 (+/-0.035) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.777 (+/-0.033) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.754 (+/-0.018) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.758 (+/-0.015) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.762 (+/-0.021) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.767 (+/-0.047) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.767 (+/-0.051) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.775 (+/-0.059) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.777 (+/-0.059) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.777 (+/-0.060) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.776 (+/-0.058) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.775 (+/-0.057) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.776 (+/-0.053) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.777 (+/-0.050) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.777 (+/-0.050) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.780 (+/-0.049) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.781 (+/-0.047) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.048) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.765 (+/-0.037) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.059) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.782 (+/-0.061) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.780 (+/-0.060) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.058) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.772 (+/-0.052) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.776 (+/-0.052) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.754 (+/-0.022) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.759 (+/-0.034) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.618 (+/-0.355) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.766 (+/-0.026) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.749 (+/-0.040) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.776 (+/-0.037) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.777 (+/-0.010) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.766 (+/-0.041) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.775 (+/-0.039) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.777 (+/-0.051) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.777 (+/-0.056) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.777 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.777 (+/-0.052) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.777 (+/-0.052) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.772 (+/-0.031) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.759 (+/-0.033) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.767 (+/-0.037) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.761 (+/-0.045) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.772 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.772 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.768 (+/-0.058) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.771 (+/-0.057) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.779 (+/-0.055) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.780 (+/-0.057) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.780 (+/-0.057) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.780 (+/-0.057) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.780 (+/-0.057) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.780 (+/-0.057) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.780 (+/-0.057) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.780 (+/-0.057) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.780 (+/-0.057) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.780 (+/-0.057) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.783 (+/-0.057) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.781 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.777 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.781 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.781 (+/-0.058) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.780 (+/-0.053) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.781 (+/-0.055) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.781 (+/-0.058) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.780 (+/-0.057) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.765 (+/-0.040) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.773 (+/-0.059) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.757 (+/-0.032) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.775 (+/-0.049) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.773 (+/-0.049) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.771 (+/-0.061) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.776 (+/-0.026) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.789 (+/-0.024) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.776 (+/-0.051) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.777 (+/-0.051) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.052) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.777 (+/-0.051) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.777 (+/-0.051) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.049) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.050) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.778 (+/-0.050) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.050) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.050) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.778 (+/-0.051) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.779 (+/-0.061) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.775 (+/-0.050) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.776 (+/-0.056) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.777 (+/-0.059) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.777 (+/-0.052) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.779 (+/-0.052) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.776 (+/-0.060) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.775 (+/-0.058) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.769 (+/-0.058) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.775 (+/-0.021) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.772 (+/-0.020) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.770 (+/-0.051) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.760 (+/-0.053) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.772 (+/-0.046) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.784 (+/-0.059) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.781 (+/-0.059) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.774 (+/-0.048) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+
+Detailed classification report:
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+              precision    recall  f1-score   support
+
+           0       0.70      0.83      0.76       709
+           1       0.85      0.73      0.79       930
+
+    accuracy                           0.77      1639
+   macro avg       0.78      0.78      0.77      1639
+weighted avg       0.79      0.77      0.78      1639
+
+
+Tuning hyper-parameters for recall
+
+Best parameters set found on development set:
+
+{'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+
+Grid scores on development set:
+
+0.780 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.779 (+/-0.052) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.779 (+/-0.052) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.774 (+/-0.056) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.777 (+/-0.055) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.773 (+/-0.043) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.780 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.775 (+/-0.049) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.780 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.777 (+/-0.051) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.779 (+/-0.052) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.778 (+/-0.051) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.664 (+/-0.056) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.683 (+/-0.115) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.657 (+/-0.083) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.711 (+/-0.107) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.747 (+/-0.044) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.684 (+/-0.181) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.729 (+/-0.051) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.691 (+/-0.086) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.765 (+/-0.057) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.781 (+/-0.054) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.782 (+/-0.059) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.780 (+/-0.055) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.781 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.781 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.781 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.782 (+/-0.053) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.781 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.781 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.774 (+/-0.050) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.049) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.771 (+/-0.066) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.779 (+/-0.055) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.776 (+/-0.054) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.781 (+/-0.059) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.781 (+/-0.054) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.782 (+/-0.054) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.782 (+/-0.053) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.673 (+/-0.149) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.662 (+/-0.220) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.634 (+/-0.135) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.697 (+/-0.073) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.733 (+/-0.112) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.705 (+/-0.162) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.746 (+/-0.075) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.757 (+/-0.110) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.760 (+/-0.051) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.777 (+/-0.056) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.777 (+/-0.057) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.776 (+/-0.056) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.777 (+/-0.051) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.051) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.775 (+/-0.054) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.777 (+/-0.051) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.777 (+/-0.051) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.778 (+/-0.050) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.777 (+/-0.061) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.785 (+/-0.051) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.761 (+/-0.076) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.782 (+/-0.050) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.770 (+/-0.050) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.777 (+/-0.059) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.054) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.776 (+/-0.053) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.778 (+/-0.059) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.575 (+/-0.092) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.657 (+/-0.135) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.653 (+/-0.248) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 150, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.673 (+/-0.135) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.703 (+/-0.101) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.742 (+/-0.075) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 250, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.748 (+/-0.070) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.731 (+/-0.122) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 1e-05}
+0.748 (+/-0.026) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 350, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.778 (+/-0.051) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.052) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.778 (+/-0.051) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.780 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.779 (+/-0.053) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.052) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.052) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.759 (+/-0.032) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.766 (+/-0.056) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.769 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.768 (+/-0.049) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.771 (+/-0.041) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.765 (+/-0.055) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.782 (+/-0.056) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.769 (+/-0.044) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.779 (+/-0.054) for {'C': 5.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.781 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.781 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.781 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.781 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.781 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.781 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.781 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.781 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.781 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.778 (+/-0.055) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.781 (+/-0.054) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.781 (+/-0.053) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.779 (+/-0.055) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.780 (+/-0.053) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.779 (+/-0.056) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.781 (+/-0.053) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.781 (+/-0.055) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.779 (+/-0.055) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.746 (+/-0.092) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.747 (+/-0.058) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.765 (+/-0.055) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.736 (+/-0.080) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.757 (+/-0.033) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.774 (+/-0.059) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.774 (+/-0.049) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.766 (+/-0.053) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.775 (+/-0.053) for {'C': 10.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.778 (+/-0.048) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.049) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.048) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.778 (+/-0.047) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.049) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.049) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.778 (+/-0.052) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.049) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.778 (+/-0.047) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 5, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.781 (+/-0.050) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.777 (+/-0.054) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.777 (+/-0.055) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.779 (+/-0.058) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.778 (+/-0.052) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.776 (+/-0.057) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.777 (+/-0.059) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.776 (+/-0.058) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.773 (+/-0.053) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 10, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.719 (+/-0.080) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.729 (+/-0.145) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.727 (+/-0.102) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 400, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.747 (+/-0.031) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.751 (+/-0.090) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.784 (+/-0.054) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 500, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+0.770 (+/-0.052) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 5e-05}
+0.754 (+/-0.062) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0001}
+0.783 (+/-0.059) for {'C': 50.0, 'class_weight': 'balanced', 'dual': True, 'fit_intercept': True, 'intercept_scaling': 20, 'max_iter': 600, 'penalty': 'l2', 'solver': 'liblinear', 'tol': 0.0005}
+
+Detailed classification report:
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+              precision    recall  f1-score   support
+
+           0       0.73      0.78      0.75       709
+           1       0.82      0.78      0.80       930
+
+    accuracy                           0.78      1639
+   macro avg       0.77      0.78      0.78      1639
+weighted avg       0.78      0.78      0.78      1639
+
+
