@@ -59,7 +59,7 @@ def get_dir_tree(module_name, max_levels=2):
 
 
 
-def get_data_structs_df(data_struct_list):
+def get_data_structs_dataframe(data_struct_list):
     """
     # Create a comprehensive dataset to train on
 
@@ -75,7 +75,7 @@ def get_data_structs_df(data_struct_list):
 
     c = C()
     data_struct_list = [list, tuple, set, dict, str, pd.DataFrame, pd.np.ndarray, bytearray, range, os, pd, f, c.im_a_method]
-    data_structs_df = get_data_structs_df(data_struct_list=data_struct_list)
+    data_structs_df = get_data_structs_dataframe(data_struct_list=data_struct_list)
     X, y = preprocess_data(data_structs_df)
     print('The shape of X is:', X.shape)
     print('The shape of y is:', y.shape)

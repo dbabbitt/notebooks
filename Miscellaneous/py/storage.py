@@ -12,9 +12,9 @@ class Storage(object):
         
         # Change this to your data and saves folders
         self.data_folder = r'../data/'
-        print('data_folder: {}'.format(self.data_folder))
+        #print('data_folder: {}'.format(self.data_folder))
         self.saves_folder = r'../saves/'
-        print('saves_folder: {}'.format(self.saves_folder))
+        #print('saves_folder: {}'.format(self.saves_folder))
 
         # Create the assumed directories
         self.data_csv_folder = os.path.join(self.data_folder, 'csv')

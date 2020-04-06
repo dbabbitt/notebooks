@@ -1,0 +1,244 @@
+Tuning Logit hyper-parameters
+
+Tuning hyper-parameters for precision
+
+Best parameters set found on development set:
+
+{'C': 10.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+
+Grid scores on development set:
+
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.646 (+/-0.143) for {'C': 0.1, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.606 (+/-0.184) for {'C': 0.1, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.622 (+/-0.164) for {'C': 0.1, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.738 (+/-0.055) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.733 (+/-0.053) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.738 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.738 (+/-0.053) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.735 (+/-0.062) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.737 (+/-0.054) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.740 (+/-0.055) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.735 (+/-0.059) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.739 (+/-0.056) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.739 (+/-0.055) for {'C': 0.1, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.737 (+/-0.062) for {'C': 1.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.738 (+/-0.062) for {'C': 1.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.738 (+/-0.062) for {'C': 1.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.740 (+/-0.062) for {'C': 1.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.737 (+/-0.063) for {'C': 1.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.742 (+/-0.064) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.743 (+/-0.060) for {'C': 1.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.755 (+/-0.045) for {'C': 10.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.755 (+/-0.042) for {'C': 10.0, 'class_weight': None, 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.755 (+/-0.044) for {'C': 10.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.755 (+/-0.041) for {'C': 10.0, 'class_weight': None, 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.756 (+/-0.041) for {'C': 10.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.755 (+/-0.043) for {'C': 10.0, 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.753 (+/-0.051) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 250, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.751 (+/-0.051) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 500, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 1e-05, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.0001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'newton-cg', 'tol': 0.001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 1e-05, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.0001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs', 'tol': 0.001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 1e-05, 'warm_start': True}
+0.751 (+/-0.051) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.0001, 'warm_start': True}
+0.750 (+/-0.050) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'sag', 'tol': 0.001, 'warm_start': True}
+0.752 (+/-0.052) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 1e-05, 'warm_start': True}
+0.751 (+/-0.051) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.0001, 'warm_start': True}
+0.751 (+/-0.051) for {'C': 10.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'saga', 'tol': 0.001, 'warm_start': True}
+
+Detailed classification report:
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+              precision    recall  f1-score   support
+
+           0       0.72      0.77      0.75       707
+           1       0.82      0.78      0.80       932
+
+    accuracy                           0.77      1639
+   macro avg       0.77      0.77      0.77      1639
+weighted avg       0.78      0.77      0.77      1639
+
+
+Tuning hyper-parameters for recall
+
