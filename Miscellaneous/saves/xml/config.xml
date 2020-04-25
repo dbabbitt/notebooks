@@ -8,16 +8,16 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;*.ipynb;" />
         <Filter name="*.py;" />
+        <Find name="fill_in_scripture_reference" />
+        <Find name="get_mp3_filepath" />
+        <Find name="mp3_url" />
+        <Find name="Path" />
+        <Find name="mp3_path" />
         <Find name="&apos;sermon_id&apos;" />
         <Find name="driver.switch" />
         <Find name="get_recent_sermons_dataframe" />
         <Find name="log_into_the_sermons_dashboard" />
         <Find name="click_the_dashboard_signin_button" />
-        <Find name="move_to_element" />
-        <Find name="move" />
-        <Find name="check_for_audio" />
-        <Find name="wait" />
-        <Find name=";" />
         <Replace name="log_into_the_sermons_dashboard" />
         <Replace name="\\g&lt;1&gt;" />
         <Replace name="\g&lt;1&gt;" />
@@ -40,9 +40,135 @@
         <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\get_recent_sermons.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\upload_sermons_to_sermon_audio.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\sermon_utils.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
+        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
+        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
+        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
+        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
+        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
+        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
+        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
+        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
+        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
+        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
+        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
+        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
+        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
+        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
+        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
+        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
+        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
+        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
+        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
+        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
+        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
+        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
+        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
+        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
+        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
+        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
+        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
+        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
+        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
+        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
+        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
+        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
+        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
+        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
+        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
+        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
+        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
+        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
+        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
+        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
+        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
+        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
+        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
+        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
+        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
+        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
+        <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
+        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
+        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -51,9 +177,9 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="2036" y="-142" width="725" height="738" isMaximized="yes" />
+        <GUIConfig name="AppPosition" x="1121" y="0" width="725" height="738" isMaximized="yes" />
         <GUIConfig name="FindWindowPosition" left="703" top="379" right="1292" bottom="743" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200412">no</GUIConfig>
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200428">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -87,7 +213,7 @@
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
         <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="4" zoom2="0" whiteSpaceShow="show" eolShow="hide" borderWidth="2" smoothFont="no" />
         <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="250">
-            <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="3" prev="-1" isVisible="no" />
+            <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="3" prev="-1" isVisible="yes" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44085" curr="0" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="42051" curr="1" prev="-1" isVisible="no" />
             <PluginDlg pluginName="MarkdownViewer++" id="0" curr="1" prev="-1" isVisible="no" />
@@ -97,7 +223,7 @@
             <ActiveTabs cont="0" activeTab="-1" />
             <ActiveTabs cont="1" activeTab="-1" />
             <ActiveTabs cont="2" activeTab="-1" />
-            <ActiveTabs cont="3" activeTab="-1" />
+            <ActiveTabs cont="3" activeTab="0" />
         </GUIConfig>
     </GUIConfigs>
     <ProjectPanels>
