@@ -92,7 +92,7 @@ class Storage(object):
                 object = pd.read_csv(csv_path, low_memory=False,
                                      encoding=self.encoding_type)
             if isinstance(object, pd.DataFrame):
-                attempt_to_pickle(object, pickle_path, raise_exception=False)
+                self.attempt_to_pickle(object, pickle_path, raise_exception=False)
             else:
                 with open(pickle_path, 'wb') as handle:
                 

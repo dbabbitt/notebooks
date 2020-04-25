@@ -96,15 +96,15 @@ class StraussHoweUtilities(object):
     def show_generation_blurb(self, generation_name):
         if str(generation_name) != 'nan':
             print('{}'.format(generation_name))
-            match_series = (self.generations_df.index == generation_name[:-1])
-            turnings_archetype_list = self.generations_df[match_series]['turnings_archetype'].tolist()
+            mask_series = (self.generations_df.index == generation_name[:-1])
+            turnings_archetype_list = self.generations_df[mask_series]['turnings_archetype'].tolist()
             if not len(turnings_archetype_list):
-                match_series = (self.generations_df.index == generation_name)
-                turnings_archetype_list = self.generations_df[match_series]['turnings_archetype'].tolist()
+                mask_series = (self.generations_df.index == generation_name)
+                turnings_archetype_list = self.generations_df[mask_series]['turnings_archetype'].tolist()
             if len(turnings_archetype_list):
                 turnings_archetype = turnings_archetype_list[0].lower()
                 print('({})'.format(turnings_archetype))
-            generations_archetype_list = self.generations_df[match_series]['generations_archetype'].tolist()
+            generations_archetype_list = self.generations_df[mask_series]['generations_archetype'].tolist()
             if len(generations_archetype_list):
                 generations_archetype = generations_archetype_list[0].lower()
                 print('{}'.format(generations_archetype))
@@ -240,8 +240,8 @@ class StraussHoweUtilities(object):
         
         birth_match_series = (self.patriline_df.year_of_birth >= left_year) & (self.patriline_df.year_of_birth <= center_year)
         death_match_series = (self.patriline_df.year_of_death >= left_year) & (self.patriline_df.year_of_death <= right_year)
-        match_series = birth_match_series | death_match_series
-        for patriarch_name, row_series in self.patriline_df[match_series].iterrows():
+        mask_series = birth_match_series | death_match_series
+        for patriarch_name, row_series in self.patriline_df[mask_series].iterrows():
             year_of_birth = row_series.year_of_birth
             year_of_death = row_series.year_of_death
             if (str(year_of_death) == 'nan') or (year_of_death > center_year):
@@ -334,8 +334,8 @@ class StraussHoweUtilities(object):
             dresses_img.paste(foreground, (0, 0), foreground)
         
         # Get saeculum image
-        match_series = (self.turnings_df['turning_begin_year'] <= year) & (self.turnings_df['turning_end_year'] >= year)
-        saeculum_list = self.turnings_df[match_series].index.tolist()
+        mask_series = (self.turnings_df['turning_begin_year'] <= year) & (self.turnings_df['turning_end_year'] >= year)
+        saeculum_list = self.turnings_df[mask_series].index.tolist()
         if len(saeculum_list):
             saeculum_name = saeculum_list[0]
             saeculum_file = '{}.png'.format(saeculum_name)
@@ -369,8 +369,8 @@ class StraussHoweUtilities(object):
         foreground.putdata(new_data_list)
         
         # Get saeculum image
-        match_series = (self.turnings_df['turning_begin_year'] <= year) & (self.turnings_df['turning_end_year'] >= year)
-        saeculum_list = self.turnings_df[match_series].index.tolist()
+        mask_series = (self.turnings_df['turning_begin_year'] <= year) & (self.turnings_df['turning_end_year'] >= year)
+        saeculum_list = self.turnings_df[mask_series].index.tolist()
         if len(saeculum_list):
             saeculum_name = saeculum_list[0]
             saeculum_file = '{}.png'.format(saeculum_name)
@@ -934,9 +934,9 @@ class StraussHoweUtilities(object):
                           color=colors_dict[name], linewidth=18)
     
     def plot_patriarch(self, patriarch_name, history_year_dict):
-        match_series = (self.patriline_df.index == patriarch_name)
-        start_year = int(self.patriline_df[match_series]['Year of Birth'].tolist()[0])
-        stop_year = self.patriline_df[match_series]['Year of Death'].tolist()[0]
+        mask_series = (self.patriline_df.index == patriarch_name)
+        start_year = int(self.patriline_df[mask_series]['Year of Birth'].tolist()[0])
+        stop_year = self.patriline_df[mask_series]['Year of Death'].tolist()[0]
         try:
             stop_year = int(stop_year)
         except:
@@ -948,11 +948,11 @@ class StraussHoweUtilities(object):
     
     def save_stopped_babbitt_plot(self, stopped_year, out_file_path, footer_str,
                                   history_year_dict):
-        match_series = (self.patriline_df['Year of Birth'] <= stopped_year)
-        i = self.patriline_df[match_series].shape[0]-1
+        mask_series = (self.patriline_df['Year of Birth'] <= stopped_year)
+        i = self.patriline_df[mask_series].shape[0]-1
         with open(out_file_path, 'w') as output:
             size = output.write(py_file_header_str)
-            for patriarch_name, row_series in self.patriline_df[match_series].iterrows():
+            for patriarch_name, row_series in self.patriline_df[mask_series].iterrows():
                 start_year = int(row_series['Year of Birth'])
                 stop_year = row_series['Year of Death']
                 try:
@@ -1013,8 +1013,8 @@ class StraussHoweUtilities(object):
                              nearness_str='close to'):
         distance_dict = {}
         for name, color in color_dict.items():
-            match_series = (distance_df.index == name)
-            distance_list = distance_df[match_series]['distance_from_{}'.format(color_str.lower())].tolist()
+            mask_series = (distance_df.index == name)
+            distance_list = distance_df[mask_series]['distance_from_{}'.format(color_str.lower())].tolist()
             if len(distance_list) == 1:
                 distance_dict[name] = distance_list[0]
         color_tuple_list = sorted((distance, name) for name, distance in distance_dict.items())
@@ -1074,8 +1074,8 @@ class StraussHoweUtilities(object):
         return jpg_image
     
     def show_turning_image(self, year):
-        match_series = (self.turnings_df['turning_begin_year'] <= year) & (self.turnings_df['turning_end_year'] >= year)
-        turning_name_list = self.turnings_df[match_series].index.tolist()
+        mask_series = (self.turnings_df['turning_begin_year'] <= year) & (self.turnings_df['turning_end_year'] >= year)
+        turning_name_list = self.turnings_df[mask_series].index.tolist()
         if len(turning_name_list):
             turning_name = turning_name_list[0]
             file_name = '{}.jpg'.format(turning_name)
@@ -1112,11 +1112,11 @@ class StraussHoweUtilities(object):
         ax = fig.add_subplot(111, autoscale_on=False)
         ax.set_xlim(-1000, 1000)
         ax.set_ylim(-1000, 1000)
-        match_series = (self.patriline_df['year_of_birth'] <= stopped_year)
-        i = self.patriline_df[match_series].shape[0]-1
+        mask_series = (self.patriline_df['year_of_birth'] <= stopped_year)
+        i = self.patriline_df[mask_series].shape[0]-1
         d = 5
-        previous_saeculum = self.patriline_df[match_series].head(1)['saeculum_name'].tolist()[0]
-        for patriarch_name, row_series in self.patriline_df[match_series].iterrows():
+        previous_saeculum = self.patriline_df[mask_series].head(1)['saeculum_name'].tolist()[0]
+        for patriarch_name, row_series in self.patriline_df[mask_series].iterrows():
             start_year = int(row_series['year_of_birth'])
             stop_year = row_series['year_of_death']
             try:

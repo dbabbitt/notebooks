@@ -67,8 +67,8 @@ class ChoroplethUtilities(object):
             self.all_countries_df = s.load_object('all_countries_df')
         else:
             self.all_countries_df = all_countries_df
-        match_series = (self.all_countries_df.index == self.iso_3166_2_code.upper())
-        self.settings_dict = self.all_countries_df[match_series].to_dict(orient='records')[0]
+        mask_series = (self.all_countries_df.index == self.iso_3166_2_code.upper())
+        self.settings_dict = self.all_countries_df[mask_series].to_dict(orient='records')[0]
         
         # Define the SVG parts
         font_size = self.settings_dict.get('font_size', 12)
@@ -618,10 +618,10 @@ class ChoroplethUtilities(object):
         with open(text_file_path, 'w') as f:
             print('', file=f)
         if string_column_name is None:
-            match_series = one_country_df['text_x'].isnull() | one_country_df['text_y'].isnull()
+            mask_series = one_country_df['text_x'].isnull() | one_country_df['text_y'].isnull()
         else:
-            match_series = one_country_df[string_column_name].isnull()
-        for district_name, row_series in one_country_df[~match_series].sort_index(axis='index', ascending=False).iterrows():
+            mask_series = one_country_df[string_column_name].isnull()
+        for district_name, row_series in one_country_df[~mask_series].sort_index(axis='index', ascending=False).iterrows():
             id = '{}'.format('-'.join(district_name.lower().split(' ')))
             if string_column_name is None:
                 label = '{} Index'.format(district_name)
@@ -667,8 +667,8 @@ class ChoroplethUtilities(object):
         ListedColormap_obj = cm.get_cmap('viridis', len(one_country_df[numeric_column_name].unique()))
         min = one_country_df[numeric_column_name].min()
         max = one_country_df[numeric_column_name].max()
-        match_series = one_country_df[numeric_column_name].isnull()
-        for district_name, row_series in one_country_df[~match_series].sort_index(axis='index', ascending=False).iterrows():
+        mask_series = one_country_df[numeric_column_name].isnull()
+        for district_name, row_series in one_country_df[~mask_series].sort_index(axis='index', ascending=False).iterrows():
             column_value = row_series[numeric_column_name]
             district_abbreviation = row_series.district_abbreviation
             outline_d = row_series.outline_d
@@ -788,8 +788,8 @@ class ChoroplethUtilities(object):
         text_file_path = os.path.join(s.saves_folder, 'xml', file_name)
         with open(text_file_path, 'w') as f:
             print('', file=f)
-        match_series = one_country_df[string_column_name].isnull()
-        for district_name, row_series in one_country_df[~match_series].sort_index(axis='index', ascending=False).iterrows():
+        mask_series = one_country_df[string_column_name].isnull()
+        for district_name, row_series in one_country_df[~mask_series].sort_index(axis='index', ascending=False).iterrows():
             id = '{}'.format('-'.join(district_name.lower().split(' ')))
             label = '{} {}'.format(district_name, ' '.join(string_column_name.split('_')))
             x = row_series['text_x']
@@ -824,8 +824,8 @@ class ChoroplethUtilities(object):
             print(svg_prefix, file=f)
         
         # Create the outline paths
-        match_series = one_country_df[string_column_name].isnull()
-        labels_list = self.one_country_df[~match_series][string_column_name].unique().tolist()
+        mask_series = one_country_df[string_column_name].isnull()
+        labels_list = self.one_country_df[~mask_series][string_column_name].unique().tolist()
         legend_xml, colors_dict = self.get_legend_xml(labels_list)
         for district_name, row_series in one_country_df.sort_index(axis='index', ascending=False).iterrows():
             column_value = str(row_series[string_column_name]).strip()
@@ -884,8 +884,8 @@ class ChoroplethUtilities(object):
                     print('', file=f)
                 cap_str = cu_str[:1].upper()+cu_str[1:]
                 column_name = 'Google_Suggest_{}'.format(cap_str)
-                match_series = self.one_country_df[column_name].isnull()
-                for district_name, row_series in self.one_country_df[~match_series].sort_index(axis='index', ascending=False).iterrows():
+                mask_series = self.one_country_df[column_name].isnull()
+                for district_name, row_series in self.one_country_df[~mask_series].sort_index(axis='index', ascending=False).iterrows():
                     id = '{}'.format('-'.join(district_name.lower().split(' ')))
                     label = '{} Google {} Suggestion'.format(district_name, cap_str)
                     suggestion = row_series[column_name]
