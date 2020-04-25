@@ -1,0 +1,57 @@
+state_name,abbreviation,color
+Alabama,AL,#8c564b
+Alaska,AK,#1f77b4
+Arizona,AZ,#1f77b4
+Arkansas,AR,#17becf
+California,CA,#e377c2
+Colorado,CO,#9467bd
+Connecticut,CT,#bcbd22
+Delaware,DE,#e377c2
+Florida,FL,#17becf
+Georgia,GA,#ff7f0e
+Hawaii,HI,#e377c2
+Idaho,ID,#7f7f7f
+Illinois,IL,#8c564b
+Indiana,IN,#2ca02c
+Iowa,IA,#8c564b
+Kansas,KS,#ff7f0e
+Kentucky,KY,#9467bd
+Louisiana,LA,#d62728
+Maine,ME,#d62728
+Maryland,MD,#e377c2
+Massachusetts,MA,#9467bd
+Michigan,MI,#2ca02c
+Minnesota,MN,#1f77b4
+Mississippi,MS,#e377c2
+Missouri,MO,#17becf
+Montana,MT,#17becf
+Nebraska,NE,#2ca02c
+Nevada,NV,#ff7f0e
+New Hampshire,NH,#ff7f0e
+New Jersey,NJ,#ff7f0e
+New Mexico,NM,#bcbd22
+New York,NY,#1f77b4
+North Carolina,NC,#d62728
+North Dakota,ND,#7f7f7f
+Ohio,OH,#8c564b
+Oklahoma,OK,#7f7f7f
+Oregon,OR,#d62728
+Pennsylvania,PA,#7f7f7f
+Rhode Island,RI,#17becf
+South Carolina,SC,#bcbd22
+South Dakota,SD,#bcbd22
+Tennessee,TN,#2ca02c
+Texas,TX,#d62728
+Utah,UT,#9467bd
+Vermont,VT,#1f77b4
+Virginia,VA,#bcbd22
+Washington,WA,#1f77b4
+West Virginia,WV,#8c564b
+Wisconsin,WI,#7f7f7f
+Wyoming,WY,#9467bd
+American Samoa,AS,#8c564b
+District of Columbia,DC,#2ca02c
+Guam,GU,#ff7f0e
+Northern Mariana Islands,MP,#2ca02c
+Puerto Rico,PR,#9467bd
+Virgin Islands,VI,#d62728
