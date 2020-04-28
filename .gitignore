@@ -263,3 +263,6 @@ data-science-5k/ipynb/applied-social-network-analysis/Assignment+4.ipynb
 data-science-5k/ipynb/applied-social-network-analysis/Module 4 Quiz.ipynb
 *.pickle
 Miscellaneous/ps1/autocrlf.ps1
+covid19/ipynb/0704 - Creating a Dot Density Map.ipynb
+covid19/saves/pgf/example_2_1_3d_bar_chart.pgf
+covid19/saves/pgf/example_2_1_heat_map.pgf
