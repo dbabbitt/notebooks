@@ -84,6 +84,9 @@ Word2Vec/data/glove.840B.300d/glove.840B.300d.txt
 # Exclude secrets
 **/json/*_secrets.json
 
+# Exclude pickles
+*.pickle
+
 # Exclude COVID-19 code that I didn't write (or too messy)
 covid19/data/csv/20200326-sitrep-66-covid-19.csv
 covid19/data/csv/NCHSData13.csv
@@ -100,6 +103,7 @@ covid19/data/xlsx/annual-average-humidity-by-state.xlsx
 covid19/data/xlsx/co-est2019-annres.xlsx
 covid19/data/xlsx/humidity-city-march.xlsx
 covid19/data/zip/
+covid19/ipynb/0704 - Creating a Dot Density Map.ipynb
 covid19/ipynb/Realtime R0 among the US States.ipynb
 covid19/ipynb/Realtime Rt mcmc.ipynb
 covid19/ipynb/US County Population Density-Copy1.ipynb
@@ -109,6 +113,8 @@ covid19/py/images/Illustration-2.png
 covid19/py/images/Models.png
 covid19/py/spread.py
 covid19/saves/csv/rt_old.csv
+covid19/saves/pgf/example_2_1_3d_bar_chart.pgf
+covid19/saves/pgf/example_2_1_heat_map.pgf
 covid19/saves/png/
 covid19/saves/svg/Worldmap_northern.svg
 
@@ -117,17 +123,18 @@ Strauss–Howe/data/mov/2020-01-09_14-46-28.mov
 Strauss–Howe/data/mp4/2020-01-09_14-49-27.mp4
 
 # Exclude Miscellaneous notebooks that I didn't make
+Miscellaneous/ipynb/Channel_Attribution_Building_Blocks_of_Interpretability.ipynb
+Miscellaneous/ipynb/Google Drive.ipynb
 Miscellaneous/ipynb/HW2.ipynb
 Miscellaneous/ipynb/Linear Regression with Gradient Descent.ipynb
+Miscellaneous/ipynb/mandelbrot_numbapro.ipynb
 Miscellaneous/ipynb/mandelbrot_numbapro.ipynb
 Miscellaneous/ipynb/not_so_obvious_python_stuff.ipynb
 Miscellaneous/ipynb/spotify_one_dimensional_analysis.ipynb
 Miscellaneous/ipynb/spotify_one_dimensional_blog_post.ipynb
-Miscellaneous/ipynb/mandelbrot_numbapro.ipynb
-Miscellaneous/ipynb/Google Drive.ipynb
 Miscellaneous/json/htm-anomaly-detection-851805202b9b.json
 Miscellaneous/json/quickstart.py
-Miscellaneous/ipynb/Channel_Attribution_Building_Blocks_of_Interpretability.ipynb
+Miscellaneous/ps1/autocrlf.ps1
 Miscellaneous/spotify_one_dimensional_blog_post.ipynb
 
 # Exclude Simulations notebooks that I didn't make
@@ -261,8 +268,5 @@ data-science-5k/ipynb/applied-social-network-analysis/Assignment+2.ipynb
 data-science-5k/ipynb/applied-social-network-analysis/Assignment+3.ipynb
 data-science-5k/ipynb/applied-social-network-analysis/Assignment+4.ipynb
 data-science-5k/ipynb/applied-social-network-analysis/Module 4 Quiz.ipynb
-*.pickle
-Miscellaneous/ps1/autocrlf.ps1
-covid19/ipynb/0704 - Creating a Dot Density Map.ipynb
-covid19/saves/pgf/example_2_1_3d_bar_chart.pgf
-covid19/saves/pgf/example_2_1_heat_map.pgf
+data-science-5k/ipynb/applied-social-network-analysis/assignment3_student_solution.ipynb
+data-science-5k/ipynb/applied-social-network-analysis/assignment3_student_solution.ipynb
