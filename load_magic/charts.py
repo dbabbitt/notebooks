@@ -3,13 +3,14 @@
 # %run ../../load_magic/charts.py
 #
 
-import matplotlib.pyplot as plt
-import seaborn as sns
-import random
 from cycler import cycler
+from scipy.stats import pearsonr
+import matplotlib.pyplot as plt
 import numpy as np
 import os
-from scipy.stats import pearsonr
+import pandas as pd
+import random
+import seaborn as sns
 
 # Use the following only if you are on a high definition device
 from IPython.display import set_matplotlib_formats
@@ -46,7 +47,10 @@ def first_order_linear_scatterplot(df, xname, yname,
                                    x_adj='capitalist', y_adj='unequal',
                                    title='"Wealth inequality is huge in the capitalist societies"',
                                    idx_reference='United States', annot_reference='most evil',
-                                   aspect_ratio=FACEBOOK_ASPECT_RATIO):
+                                   aspect_ratio=FACEBOOK_ASPECT_RATIO,
+                                   least_x_xytext=(40, -10), most_x_xytext=(-150, 55),
+                                   least_y_xytext=(-200, -10), most_y_xytext=(45, 0),
+                                   reference_xytext=(-75, 25), color_list=None):
     '''
     Create a first order (linear) scatter plot assuming the data frame
     has a index called Country or something
@@ -56,7 +60,10 @@ def first_order_linear_scatterplot(df, xname, yname,
     fig = plt.figure(figsize=(fig_width, fig_height))
     ax = fig.add_subplot(111, autoscale_on=True)
     line_kws = dict(c='k', zorder=1, alpha=.25)
-    scatter_kws = dict(s=30, lw=.5, edgecolors='k', zorder=2)
+    if color_list is None:
+        scatter_kws = dict(s=30, lw=.5, edgecolors='k', zorder=2)
+    else:
+        scatter_kws = dict(s=30, lw=.5, edgecolors='k', zorder=2, color=color_list)
     merge_axes_subplot = sns.regplot(x=xname, y=yname, scatter=True, data=df, ax=ax,
                                      scatter_kws=scatter_kws, line_kws=line_kws)
     if not xlabel_str.endswith(' (explanatory variable)'):
@@ -78,22 +85,27 @@ def first_order_linear_scatterplot(df, xname, yname,
     most_y = ydata.max()
     least_y = ydata.min()
     
+    least_x_tried = most_x_tried = least_y_tried = most_y_tried = False
     for label, x, y in zip(df.index, xdata, ydata):
-        if (x == least_x):
+        if (x == least_x) and not least_x_tried:
             annotation = plt.annotate('{} (least {})'.format(label, x_adj),
-                                      xy=(x, y), xytext=(40, -10), **kwargs)
-        elif (x == most_x):
+                                      xy=(x, y), xytext=least_x_xytext, **kwargs)
+            least_x_tried = True
+        elif (x == most_x) and not most_x_tried:
             annotation = plt.annotate('{} (most {})'.format(label, x_adj),
-                                      xy=(x, y), xytext=(-150, 55), **kwargs)
-        elif (y == most_y):
-            annotation = plt.annotate('{} (most {})'.format(label, y_adj),
-                                      xy=(x, y), xytext=(45, 0), **kwargs)
-        elif (y == least_y):
+                                      xy=(x, y), xytext=most_x_xytext, **kwargs)
+            most_x_tried = True
+        elif (y == least_y) and not least_y_tried:
             annotation = plt.annotate('{} (least {})'.format(label, y_adj),
-                                      xy=(x, y), xytext=(-200, -10), **kwargs)
+                                      xy=(x, y), xytext=least_y_xytext, **kwargs)
+            least_y_tried = True
+        elif (y == most_y) and not most_y_tried:
+            annotation = plt.annotate('{} (most {})'.format(label, y_adj),
+                                      xy=(x, y), xytext=most_y_xytext, **kwargs)
+            most_y_tried = True
         elif (label == idx_reference):
             annotation = plt.annotate('{} ({})'.format(label, annot_reference),
-                                      xy=(x, y), xytext=(-75, 25), **kwargs)
+                                      xy=(x, y), xytext=reference_xytext, **kwargs)
     title_obj = fig.suptitle(t=title, x=0.5, y=0.91)
     
     # Get r squared value

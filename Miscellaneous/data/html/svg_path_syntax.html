@@ -1,0 +1,84 @@
+<html>
+    <body>
+        <table class="svg-command-table">
+            <tbody>
+                <tr>
+                    <td>M</td>
+                    <td>Move to the absolute coordinates x,y</td>
+                </tr>
+                <tr>
+                    <td>m</td>
+                    <td>Move to the right x and down y (or left and up if negative values)</td>
+                </tr>
+                <tr>
+                    <td>L</td>
+                    <td>Draw a straight line to the absolute coordinates x,y</td>
+                </tr>
+                <tr>
+                    <td>l</td>
+                    <td>Draw a straight line to a point that is relatively right x and down y (or left and up if negative values)</td>
+                </tr>
+                <tr>
+                    <td>H</td>
+                    <td>Draw a line horizontally to the exact coordinate x</td>
+                </tr>
+                <tr>
+                    <td>h</td>
+                    <td>Draw a line horizontally relatively to the right x (or to the left if a negative value)</td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>Draw a line vertically to the exact coordinate y</td>
+                </tr>
+                <tr>
+                    <td>v</td>
+                    <td>Draw a line vertically relatively down y (or up if a negative value)</td>
+                </tr>
+                <tr>
+                    <td>Z</td>
+                    <td>Draw a straight line back to the start of the path</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>Draw a bezier curve based on two bezier control points and end at specified coordinates</td>
+                </tr>
+                <tr>
+                    <td>c</td>
+                    <td>Draw a bezier curve based on two bezier control points and end at specified coordinates using all relative values</td>
+                </tr>
+                <tr>
+                    <td>S</td>
+                    <td>Basically a C command that assumes the first bezier control point is a reflection of the last bezier point used in the previous S or C command</td>
+                </tr>
+                <tr>
+                    <td>s</td>
+                    <td>S command with all relative values</td>
+                </tr>
+                <tr>
+                    <td>Q</td>
+                    <td>Draw a bezier curve based on a single bezier control point and end at specified coordinates</td>
+                </tr>
+                <tr>
+                    <td>q</td>
+                    <td>Q command with all relative values</td>
+                </tr>
+                <tr>
+                    <td>T</td>
+                    <td>Basically a Q command that assumes the first bezier control point is a reflection of the last bezier point used in the previous Q or T command</td>
+                </tr>
+                <tr>
+                    <td>t</td>
+                    <td>T command with all relative values</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>Draw an arc that is based on the curve an oval makes. First define the width and height of the oval. Then the rotation of the oval. Along with the end point, this makes two possible ovals. So the arc and sweep are either 0 or 1 and determine which oval and which path it will take.</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>Draw an arc with relative values for eX,eY</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
