@@ -1,0 +1,242 @@
+﻿<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="600px" width="800px" version="1.1" preserveAspectRatio="none" viewBox="0 0 800 600">
+<title>United States AIDS Statistics</title>
+<desc>Translations are included for Arabic, Bulgarian, Chinese, English, French, German, Hindi, Italian, Japanese, Portuguese, Russian, Spanish, Turkish, and Urdu. Other languages can easily be added.</desc>
+<!-- background -->
+<rect width="100%" fill="#fff" height="100%"/>
+<!--
+	ORDER OF TRANSFORMATIONS:
+	(1)	Shift origin from (x, y) to (0, 0) (e.g., from [2004, 0] to [0, 0])
+	(2)	Scale as appropriate
+	(3)	Shift back to viewport's origin
+	(4)	Shift away from edge as desired
+	In working out your calculations, opt for a number that divides nicely into 100s (e.g., 1, 2, 2.5, 5, 10, 20, 25, etc.)
+	CALCULATIONS:
+	Horizontal	=	Width/Range
+				=	800/ 2013-1996
+				~	 39
+	Vertical	=	[-1 * Height]/Range
+				=	-600 / (350 - 0)
+				~	-1.4
+-->
+<g font-family="Verdana, Tahoma, sans-serif" transform="translate(40 -45)" text-anchor="end">
+<!-- The lines in the graph are scaled significantly. Make sure the stroke width is set appropriately. -->
+	<g stroke="#333" transform="translate(0 550) scale(21 -4) translate(-1980)">
+<!-- Horizontal gridlines -->
+		<g stroke-width="0.3">
+		<path d="m1980 10h36"/>
+		<path d="m1980 20h36"/>
+		<path d="m1980 30h36"/>
+		<path d="m1980 40h36"/>
+		<path d="m1980 50h36"/>
+		<path d="m1980 60h36"/>
+		<path d="m1980 70h36"/>
+		<path d="m1980 80h36"/>
+		<path d="m1980 90h36"/>
+		<path d="m1980 100h36"/>
+		<path d="m1980 110h36"/>
+		<path d="m1980 120h36"/>
+
+<!-- Living with HIV -->
+     <path transform="translate(0.125)" fill="#004586" stroke="#102010" stroke-width="0.04" d="
+      M 1981 0 v 3.0000 h 0.375 v -3.0000 h -0.375
+      L 1982 0 v 10.0000 h 0.375 v -10.0000 h -0.375
+      L 1983 0 v 16.0000 h 0.375 v -16.0000 h -0.375
+      L 1984 0 v 30.0000 h 0.375 v -30.0000 h -0.375
+      L 1985 0 v 41.0000 h 0.375 v -41.0000 h -0.375
+      L 1986 0 v 49.0000 h 0.375 v -49.0000 h -0.375
+      L 1987 0 v 56.0000 h 0.375 v -56.0000 h -0.375
+      L 1988 0 v 62.0000 h 0.375 v -62.0000 h -0.375
+      L 1989 0 v 68.0000 h 0.375 v -68.0000 h -0.375
+      L 1990 0 v 73.0000 h 0.375 v -73.0000 h -0.375
+      L 1991 0 v 75.0000 h 0.375 v -75.0000 h -0.375
+      L 1992 0 v 75.0000 h 0.375 v -75.0000 h -0.375
+      L 1993 0 v 75.0000 h 0.375 v -75.0000 h -0.375
+      L 1994 0 v 75.0000 h 0.375 v -75.0000 h -0.375
+      L 1995 0 v 75.0000 h 0.375 v -75.0000 h -0.375
+      L 1996 0 v 76.0000 h 0.375 v -76.0000 h -0.375
+      L 1997 0 v 79.0000 h 0.375 v -79.0000 h -0.375
+      L 1998 0 v 83.0000 h 0.375 v -83.0000 h -0.375
+      L 1999 0 v 87.0000 h 0.375 v -87.0000 h -0.375
+      L 2000 0 v 90.0000 h 0.375 v -90.0000 h -0.375
+      L 2001 0 v 92.0000 h 0.375 v -92.0000 h -0.375
+      L 2002 0 v 96.0000 h 0.375 v -96.0000 h -0.375
+      L 2003 0 v 100.0000 h 0.375 v -100.0000 h -0.375
+      L 2004 0 v 103.0000 h 0.375 v -103.0000 h -0.375
+      L 2005 0 v 107.0000 h 0.375 v -107.0000 h -0.375
+      L 2006 0 v 106.1100 h 0.375 v -106.1100 h -0.375
+      L 2007 0 v 109.0800 h 0.375 v -109.0800 h -0.375
+      L 2008 0 v 112.0200 h 0.375 v -112.0200 h -0.375
+      L 2009 0 v 114.8200 h 0.375 v -114.8200 h -0.375
+      L 2010 0 v 114.4500 h 0.375 v -114.4500 h -0.375
+      L 2011 0 v 120.1100 h 0.375 v -120.1100 h -0.375
+      L 2012 0 v 120.0000 h 0.375 v -120.0000 h -0.375
+      L 2013 0 v 119.4039 h 0.375 v -119.4039 h -0.375
+      L 2014 0 v 121.0835 h 0.375 v -121.0835 h -0.375
+
+     "/>
+
+<!-- AIDS Deaths -->
+     <path transform="translate(0.5)" fill="#ff420e" stroke="#102010" stroke-width="0.04" d="
+      M 1980 0 v 0.0030 h 0.375 v -0.0030 h -0.375
+      L 1981 0 v 0.0160 h 0.375 v -0.0160 h -0.375
+      L 1982 0 v 0.0626 h 0.375 v -0.0626 h -0.375
+      L 1983 0 v 0.2137 h 0.375 v -0.2137 h -0.375
+      L 1984 0 v 0.5663 h 0.375 v -0.5663 h -0.375
+      L 1985 0 v 1.2659 h 0.375 v -1.2659 h -0.375
+      L 1986 0 v 2.4842 h 0.375 v -2.4842 h -0.375
+      L 1987 0 v 4.1330 h 0.375 v -4.1330 h -0.375
+      L 1988 0 v 6.2574 h 0.375 v -6.2574 h -0.375
+      L 1989 0 v 9.0628 h 0.375 v -9.0628 h -0.375
+      L 1990 0 v 12.2464 h 0.375 v -12.2464 h -0.375
+      L 1991 0 v 15.9570 h 0.375 v -15.9570 h -0.375
+      L 1992 0 v 20.1419 h 0.375 v -20.1419 h -0.375
+      L 1993 0 v 24.7152 h 0.375 v -24.7152 h -0.375
+      L 1994 0 v 29.7809 h 0.375 v -29.7809 h -0.375
+      L 1995 0 v 34.9223 h 0.375 v -34.9223 h -0.375
+      L 1996 0 v 38.7297 h 0.375 v -38.7297 h -0.375
+      L 1997 0 v 40.9143 h 0.375 v -40.9143 h -0.375
+      L 1998 0 v 42.7291 h 0.375 v -42.7291 h -0.375
+      L 1999 0 v 44.4053 h 0.375 v -44.4053 h -0.375
+      L 2000 0 v 45.8552 h 0.375 v -45.8552 h -0.375
+      L 2001 0 v 46.7910 h 0.375 v -46.7910 h -0.375
+      L 2002 0 v 48.3615 h 0.375 v -48.3615 h -0.375
+      L 2003 0 v 50.4685 h 0.375 v -50.4685 h -0.375
+      L 2004 0 v 50.9899 h 0.375 v -50.9899 h -0.375
+      L 2005 0 v 53.0756 h 0.375 v -53.0756 h -0.375
+      L 2006 0 v 56.2793 h 0.375 v -56.2793 h -0.375
+      L 2007 0 v 57.6384 h 0.375 v -57.6384 h -0.375
+      L 2008 0 v 59.4496 h 0.375 v -59.4496 h -0.375
+      L 2009 0 v 61.9380 h 0.375 v -61.9380 h -0.375
+      L 2010 0 v 63.6048 h 0.375 v -63.6048 h -0.375
+      L 2011 0 v 64.8459 h 0.375 v -64.8459 h -0.375
+      L 2012 0 v 65.8507 h 0.375 v -65.8507 h -0.375
+      L 2013 0 v 67.3538 h 0.375 v -67.3538 h -0.375
+
+     "/>
+
+<!-- X axis -->
+		<path d="m1980 0h36"/>
+
+		</g>
+<!-- Vertical ticks -->
+		<g stroke-width="0.08">
+		<path d="m1980 0v-2"/>
+		<path d="m1981 0v-2"/>
+		<path d="m1982 0v-2"/>
+		<path d="m1983 0v-2"/>
+		<path d="m1984 0v-2"/>
+		<path d="m1985 0v-2"/>
+		<path d="m1986 0v-2"/>
+		<path d="m1987 0v-2"/>
+		<path d="m1988 0v-2"/>
+		<path d="m1989 0v-2"/>
+		<path d="m1990 0v-2"/>
+		<path d="m1991 0v-2"/>
+		<path d="m1992 0v-2"/>
+		<path d="m1993 0v-2"/>
+		<path d="m1994 0v-2"/>
+		<path d="m1995 0v-2"/>
+		<path d="m1996 0v-2"/>
+		<path d="m1997 0v-2"/>
+		<path d="m1998 0v-2"/>
+		<path d="m1999 0v-2"/>
+		<path d="m2000 0v-2"/>
+		<path d="m2001 0v-2"/>
+		<path d="m2002 0v-2"/>
+		<path d="m2003 0v-2"/>
+		<path d="m2004 0v-2"/>
+		<path d="m2005 0v-2"/>
+		<path d="m2006 0v-2"/>
+		<path d="m2007 0v-2"/>
+		<path d="m2008 0v-2"/>
+		<path d="m2009 0v-2"/>
+		<path d="m2010 0v-2"/>
+		<path d="m2011 0v-2"/>
+		<path d="m2012 0v-2"/>
+		<path d="m2013 0v-2"/>
+		<path d="m2014 0v-2"/>
+		<path d="m2015 0v-2"/>
+		<path d="m2016 0v-2"/>
+		</g>
+	</g>
+<!-- Text can't be scaled or it goes strange. Its location must be calculated directly. -->
+<!-- Y-axis -->
+	<g id="y_axis_text" font-size="24" text-anchor="middle" transform="translate(-10 300) rotate(270)">
+          <switch>
+               <text systemLanguage="ar">&#8206;(مجموع (بالآلاف</text>
+               <text systemLanguage="bg">Общо (в хиляди)</text>
+               <text systemLanguage="de">Insgesamt (in Tausend)</text>
+               <text systemLanguage="es">Total (en miles)</text>
+               <text systemLanguage="fr">Total (en milliers)</text>
+               <text systemLanguage="hi">कुल (हजारों में)</text>
+               <text systemLanguage="it">Totale (in migliaia)</text>
+               <text systemLanguage="pt">Total (em milhares)</text>
+               <text systemLanguage="ja">合計（千）</text>
+               <text systemLanguage="ru">Всего (в тысячах)</text>
+               <text systemLanguage="tr">Toplam (Bin)</text>
+               <text systemLanguage="ur">&#8206;(کل (ہزاروں میں</text>
+               <text systemLanguage="zh">合計（千）</text>
+               <text>Total (in thousands)</text> 
+          </switch>
+	</g>
+
+	<g id="numbers" font-size="24px" text-anchor="end" transform="translate(53 28)">
+               <text y="66">1200</text>
+               <text y="146">1000</text>
+               <text y="226">800</text>
+               <text y="306">600</text>
+               <text y="386">400</text>
+               <text y="466">200</text>
+	</g>
+<!-- X-axis -->
+	<g id="x_axis_numbers" font-size="24" transform="translate(0 570) rotate(270)">
+		<text y="19">1980</text>
+		<text y="124">1985</text>
+		<text y="229">1990</text>
+		<text y="334">1995</text>
+		<text y="439">2000</text>
+		<text y="544">2005</text>
+		<text y="649">2010</text>
+		<text y="754">2015</text>
+	</g>
+<!-- Legend -->
+     <g transform="translate(130 80)" text-anchor="start" font-size="24">
+          <rect x="0" y="5" fill="#004586" stroke="black" width="15" height="15"/>
+          <switch>
+               <text x="25" y="21" systemLanguage="ar">فيروس نقص المناعة البشرية</text>
+               <text x="25" y="21" systemLanguage="bg">Да живееш с HIV</text>
+               <text x="25" y="21" systemLanguage="de">Leben mit HIV</text>
+               <text x="25" y="21" systemLanguage="es">Viviendo con VIH</text>
+               <text x="25" y="21" systemLanguage="fr">Vivre avec le VIH</text>
+               <text x="25" y="21" systemLanguage="hi">एचआईवी के साथ जी</text>
+               <text x="25" y="21" systemLanguage="it">Vivere con l'HIV</text>
+               <text x="25" y="21" systemLanguage="pt">Viver com HIV</text>
+               <text x="25" y="21" systemLanguage="ja">HIVとともに生きる</text>
+               <text x="25" y="21" systemLanguage="ru">Жизнь с ВИЧ</text>
+               <text x="25" y="21" systemLanguage="tr">HIV ile yaşayan</text>
+               <text x="25" y="21" systemLanguage="ur">ایچ آئی وی</text>
+               <text x="25" y="21" systemLanguage="zh">艾滋病毒感染者</text>
+               <text x="25" y="21">Living with HIV</text> 
+          </switch>
+          <rect x="0" y="40" fill="#ff420e" stroke="black" width="15" height="15"/>
+          <switch>
+               <text x="25" y="46" systemLanguage="ar">وفيات</text>
+               <text x="25" y="46" systemLanguage="bg">Смъртни случаи</text>
+               <text x="25" y="46" systemLanguage="de">Todesfälle</text>
+               <text x="25" y="46" systemLanguage="es">Muertos</text>
+               <text x="25" y="46" systemLanguage="fr">Décès</text>
+               <text x="25" y="46" systemLanguage="hi">एड्स मृत्यु</text>
+               <text x="25" y="46" systemLanguage="it">Morti</text>
+               <text x="25" y="46" systemLanguage="pt">Mortes</text>
+               <text x="25" y="46" systemLanguage="ja">死亡</text>
+               <text x="25" y="46" systemLanguage="ru">Смертей</text>
+               <text x="25" y="46" systemLanguage="tr">Ölümler AIDS</text>
+               <text x="25" y="46" systemLanguage="ur">موت</text>
+               <text x="25" y="46" systemLanguage="zh">死亡</text>
+               <text x="25" y="56">AIDS Deaths</text>
+          </switch>
+     </g>
+
+</g>
+</svg>
