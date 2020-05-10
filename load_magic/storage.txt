@@ -1,0 +1,4 @@
+
+%run ../../notebooks/load_magic/storage.py
+s = Storage()
+print(['s.{}'.format(fn) for fn in dir(s) if not fn.startswith('_')])

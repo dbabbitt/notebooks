@@ -1,0 +1,2 @@
+
+print(['s.{}'.format(fn) for fn in dir(s) if not fn.startswith('_')])
