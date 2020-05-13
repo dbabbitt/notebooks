@@ -1,0 +1,26 @@
+name: data_foundations_project
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python>3.7.0
+  - ipython
+  - jupyter
+  - pandas>1.0.0
+  - matplotlib
+  - pip
+  - pymc3
+  - pyqtgraph
+  - seaborn
+  - selenium
+  - statsmodels
+  - svgutils
+  - tqdm
+  - wikipedia
+  - xlrd
+  - pip:
+      - countryinfo
+      - qwikidata
+      - svgpathtools
+      - wikidata
+      - wptools
