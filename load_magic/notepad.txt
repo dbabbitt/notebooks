@@ -1,0 +1,3 @@
+
+text_editor_path = r'C:\Program Files\Notepad++\notepad++.exe'
+!"{text_editor_path}" "{os.path.abspath(svg_file_path)}"

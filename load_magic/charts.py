@@ -121,6 +121,8 @@ def first_order_linear_scatterplot(df, xname, yname,
         pvalue_statement = '=' + str('%.4f' % p_value)
     s_str = r'$r^2=' + coefficient_of_determination_statement + ',\ p' + pvalue_statement + '$'
     text_tuple = ax.text(0.75, 0.9, s_str, alpha=0.5, transform=ax.transAxes, fontsize='x-large')
+    
+    return fig
 
 def save_fig_as_various(fig, chart_name, verbose=False):
     """
@@ -132,7 +134,7 @@ def save_fig_as_various(fig, chart_name, verbose=False):
         file_path = os.path.join(dir_path, '{}.{}'.format(chart_name, dir_name))
         if verbose:
             print('Saving plot to {}'.format(os.path.abspath(file_path)))
-        fig.savefig(file_path)
+        fig.savefig(file_path, bbox_inches='tight')
 
 def get_color_cycler(n):
     """

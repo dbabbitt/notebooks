@@ -1,16 +1,17 @@
-name: data_foundations_project
+name: covid19
 channels:
   - defaults
   - conda-forge
 dependencies:
-  - python>3.7.0
+  - html5lib
   - ipython
   - jupyter
-  - pandas>1.0.0
   - matplotlib
+  - pandas>1.0.0
   - pip
   - pymc3
   - pyqtgraph
+  - python>3.7.0
   - seaborn
   - selenium
   - statsmodels
