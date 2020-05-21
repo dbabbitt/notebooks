@@ -1,17 +1,26 @@
 name: covid19
 channels:
   - defaults
-  - conda-forge
 dependencies:
+  - python>3.7.0
+  - pip
+  - numpy
+  - pandas>1.0.0
+  - shapely
+  - gdal
+  - fiona
+  - pyproj
+  - six
+  - rtree
+  - geopandas
+  - rasterio
   - html5lib
   - ipython
+  - ipykernel
   - jupyter
   - matplotlib
-  - pandas>1.0.0
-  - pip
   - pymc3
   - pyqtgraph
-  - python>3.7.0
   - seaborn
   - selenium
   - statsmodels
@@ -20,6 +29,7 @@ dependencies:
   - wikipedia
   - xlrd
   - pip:
+      - pipwin
       - countryinfo
       - qwikidata
       - svgpathtools
