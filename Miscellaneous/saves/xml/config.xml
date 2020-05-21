@@ -33,15 +33,15 @@
         <root foldername="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg" />
     </FileBrowser>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\PythonFilesSession.xml" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\ipynb\Upload YouTube Videos to the Reading Material Folder Manually.ipynb" />
-        <File filename="C:\Users\dev\Downloads\test_signinagain.py" />
-        <File filename="C:\Users\dev\Downloads\test_fillinsermon.py" />
         <File filename="C:\Users\dev\Downloads\test_fillinScriptureRefeernce.py" />
         <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
         <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\Sermon Audio Files" />
         <File filename="C:\Program Files\Notepad++\change.log" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\countryinfo\data\afghanistan.json" />
+        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\countryinfo\__init__.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\html\myreps.datamade.html" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\html\state_legislators.html" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -50,7 +50,7 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="2561" y="-270" width="725" height="738" isMaximized="yes" />
+        <GUIConfig name="AppPosition" x="901" y="0" width="725" height="738" isMaximized="yes" />
         <GUIConfig name="FindWindowPosition" left="703" top="379" right="1292" bottom="743" />
         <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200524">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
