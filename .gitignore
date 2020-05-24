@@ -43,6 +43,10 @@ RPC/data
 Strauss–Howe/saves/movies
 Word2Vec/data
 Miscellaneous/saves/emails
+covid19/data/csv
+covid19/data/gpw-v4-population-count-rev11_2020_30_sec_asc
+covid19/data/tif
+covid19/whl
 
 # Ignore big files (GitHub will warn you when pushing files larger than 50 MB. You will not be allowed to
 # push files larger than 100 MB.) Tip: If you regularly push large files to GitHub, consider introducing
