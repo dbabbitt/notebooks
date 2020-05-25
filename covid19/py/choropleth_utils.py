@@ -736,17 +736,19 @@ class ChoroplethUtilities(object):
                 print(svg_prefix, file=f)
             for district_name, row_series in one_country_df.sort_index(axis='index', ascending=False).iterrows():
                 column_value = row_series[numeric_column_name]
+                district_abbreviation = row_series.district_abbreviation
+                outline_d = row_series.outline_d
                 if str(column_value) != 'nan':
-                    district_abbreviation = row_series.district_abbreviation
-                    outline_d = row_series.outline_d
                     normed_value = (column_value - min) / (max - min)
                     style_tuple = tuple(int(x*255) for x in ListedColormap_obj(normed_value)[:-1])
-                    style_value = self.fill_style_str.format(*style_tuple)
-                    id_value = 'district-{}'.format('-'.join(district_name.lower().split(' ')))
-                    path_tag = self.district_path_str.format(id_value, outline_d, district_abbreviation,
-                                                          district_name, style_value)
-                    with open(svg_file_path, 'a') as f:
-                        print(path_tag, file=f)
+                else:
+                    style_tuple = (128, 128, 128)
+                style_value = self.fill_style_str.format(*style_tuple)
+                id_value = 'district-{}'.format('-'.join(district_name.lower().split(' ')))
+                path_tag = self.district_path_str.format(id_value, outline_d, district_abbreviation,
+                                                      district_name, style_value)
+                with open(svg_file_path, 'a') as f:
+                    print(path_tag, file=f)
             
             # Create the colorbar
             colorbar_xml = self.get_colorbar_xml(numeric_column_name)
