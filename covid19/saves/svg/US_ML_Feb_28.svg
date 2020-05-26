@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" enable_background="new 0 0 1000.0 589.0" height="589.0px" id="svg" inkscape:version="0.92.4 (5da689c313, 2019-01-14)" style="fill:none;stroke:#000000;stroke-linejoin:round" version="1.0" viewBox="0 0 1000.0 589.0" width="1000.0px" sodipodi:docname="ML_Feb_28.svg">
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1846" inkscape:window-height="1057" id="named-view" showgrid="false" inkscape:zoom="1.2776908" inkscape:cx="519.35606" inkscape:cy="287.55662" inkscape:window-x="1432" inkscape:window-y="112" inkscape:window-maximized="1" inkscape:current-layer="svg" />
+  <defs id="defs-main">
+        <style type="text/css" id="style-main">
+            path {fill-rule: evenodd;};
+            *{stroke-linecap:butt;stroke-linejoin:round;}
+        </style>
+        <path
+            d="M 0,0 H 3.5"
+            id="m-ticks"
+            style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+            inkscape:connector-curvature="0" />
+  </defs>
+  <metadata id="metadata-main">
+        <rdf:RDF><cc:Work rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title>File: us - Copy.svg</dc:title>
+        </cc:Work></rdf:RDF>
+  </metadata>
+  <rect
+     height="589.0"
+     id="adjacent-country-backgrounds"
+     style="display:inline;fill:#e0e0e0"
+     width="1000.0"
+     x="0"
+     y="0"
+     inkscape:label="Adjacent Country Backgrounds" />
+<path id="district-wyoming" d="m 461.38694,192.16729 0.7765,-15.14184 0.97063,-20.38326 0.0971,-2.52364 -1.26182,-0.0971 -24.94522,-1.45595 -13.97709,-1.16476 -26.49823,-2.52364 -33.19559,-4.07665 -1.35888,9.51219 -0.0971,0.58237 -0.38825,3.20309 -1.74714,12.52114 -3.30015,25.23641 -0.87357,6.3091 -0.38825,3.20309 -0.19412,1.26182 -2.42658,18.92731 3.78546,0.48531 24.7511,3.00896 1.94126,0.19412 2.32951,0.29119 23.97459,2.32952 19.2185,1.55301 28.82775,1.8442 1.94126,0.0971 0.0971,-2.52364 0.48532,-10.19163 0.87357,-17.76255 0.38825,-7.57092 0.0971,-2.52364 0.0971,-2.62071 z" data-id="WY" data-name="Wyoming" style="stroke-width:1.0;fill:#808080" inkscape:connector-curvature="0" />
+<path id="district-wisconsin" d="m 705.79187,134.80299 -2.42658,3.00896 -1.45594,4.36784 0.67944,2.42657 3.20308,-9.80337 z m -55.71423,-22.80983 1.45595,-2.03833 -1.0677,0.97063 -0.38825,1.0677 z m 2.23245,-3.20309 -0.48531,-0.58238 -1.0677,0.67945 1.55301,-0.0971 z m -21.15976,5.43554 -2.23245,2.52364 1.0677,11.64757 -6.21204,5.62966 -1.16476,5.43554 3.39721,3.10602 -0.97063,13.39471 3.59133,2.71777 2.32952,0.19412 7.37679,4.46491 4.65903,4.85315 5.92085,3.00896 1.35889,7.47386 0,0.48531 0,0 2.81483,3.39721 -0.77651,2.62071 0.97063,5.72672 2.9119,3.97959 5.33847,2.81483 -0.0971,0.48532 0,0 21.15976,-2.42658 7.86211,-0.97063 13.10352,-1.8442 -0.38825,-1.45595 0,-4.56197 -2.62071,-4.85315 -0.67944,-6.11498 1.26182,-6.79442 -0.67944,-5.24141 2.32952,-6.50322 -0.87357,-1.0677 0.19412,-6.01791 1.26182,-4.56197 -1.45594,-1.55301 -2.81483,0.97063 -1.55301,4.07665 -3.6884,2.13539 1.16476,-5.14434 3.30014,-4.36784 0.19413,-1.94127 0.0971,-0.0971 -4.65903,-4.65903 0,-6.60029 -5.24141,-4.27078 -7.18267,-0.48531 -7.3768,-1.94127 -15.91835,-4.85315 -3.10602,-1.74714 -0.29119,0.29119 -4.95022,-0.67944 -1.65007,0.97063 0.67944,-7.08561 -7.95917,4.07665 -9.70631,1.55301 -0.0971,-0.19412 z m 19.02437,-5.14435 -0.19412,-0.67944 -0.67944,0.29119 0.87356,0.38825 z m -3.49427,-0.67944 0.29119,-0.58238 -0.19413,-0.19413 -0.0971,0.77651 z m 7.08561,-1.65007 -0.29119,-1.35889 -0.29119,1.65008 0.58238,-0.29119 z" data-id="WI" data-name="Wisconsin" style="stroke-width:1.0;fill:#808080" inkscape:connector-curvature="0" />
+<path id="district-west-virginia" d="m 836.73002,223.71281 -13.78296,3.39721 -4.27078,-18.442 0,0 -0.19413,0.0971 -0.48531,21.25682 -3.10602,4.65903 -3.59134,2.71777 -0.67944,-0.77651 -3.97959,5.43554 0.29119,4.27077 -2.42658,0.38826 -3.30014,5.04728 1.16476,3.30014 -1.45595,3.20309 -4.17371,2.03832 0,0 0,0.19413 1.94126,6.79442 5.5326,6.69735 3.10602,1.74714 2.42657,0 0.29119,0.0971 0.19413,0.0971 1.06769,3.00896 6.11498,2.23245 2.42658,-2.13539 2.52364,-0.38825 5.33847,-4.17371 6.50323,-1.94126 1.74714,-2.81483 0.38825,-5.82379 2.32951,-4.46491 2.9119,-13.20058 5.92085,2.03833 1.94126,-5.72673 3.00896,-3.30014 4.95022,-9.41513 -0.19413,-5.62966 9.02687,3.88253 0.58238,-4.07665 0,-0.0971 0,0 -2.81483,-4.85315 -5.82379,-0.67945 -3.39721,2.62071 0,1.94126 -2.91189,0.67944 -4.27078,3.00896 -2.23245,0.48532 -4.46491,6.3091 -2.23245,-10.19163 -1.94126,0.48532 z" data-id="WV" data-name="West Virginia" style="stroke-width:1.0;fill:#808080" inkscape:connector-curvature="0" />
