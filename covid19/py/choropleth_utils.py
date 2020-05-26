@@ -498,12 +498,14 @@ class ChoroplethUtilities(object):
     
     
     
-    def get_colorbar_xml(self, column_name, cmap='viridis'):
+    def get_colorbar_xml(self, column_name, cmap='viridis', min=None, max=None):
         fig, ax = plt.subplots(figsize=(1, 6))
         fig.subplots_adjust(left=0.5)
         
-        min = self.one_country_df[column_name].min()
-        max = self.one_country_df[column_name].max()
+        if min is None:
+            min = self.one_country_df[column_name].min()
+        if max is None:
+            max = self.one_country_df[column_name].max()
         cmap = mpl.cm.get_cmap(cmap)
         norm = mpl.colors.Normalize(vmin=min, vmax=max)
         
@@ -703,10 +705,10 @@ class ChoroplethUtilities(object):
     
     
     
-    def create_country_colored_map(self, numeric_column_name, one_country_df=None, cmap='viridis'):
+    def create_country_colored_map(self, numeric_column_name, one_country_df=None, cmap='viridis', min=None, max=None):
         '''
         one_country_df must have district names as an index, the district_abbreviation and outline_d columns,
-        and one (hopefully) numeric column labeled numeric_column_name
+        and one (hopefully) numeric column labeled whatever you're putting in numeric_column_name
         
         numeric_column_name = 'Total_Gun_Murder_Deaths_2010'
         svg_file_path = c.create_country_colored_map(numeric_column_name, one_country_df=c.one_country_df)
@@ -722,8 +724,10 @@ class ChoroplethUtilities(object):
             one_country_df = self.one_country_df.copy()
         if np.issubdtype(one_country_df[numeric_column_name].dtype, np.number):
             ListedColormap_obj = cm.get_cmap(cmap, len(one_country_df[numeric_column_name].unique()))
-            min = one_country_df[numeric_column_name].min()
-            max = one_country_df[numeric_column_name].max()
+            if min is None:
+                min = one_country_df[numeric_column_name].min()
+            if max is None:
+                max = one_country_df[numeric_column_name].max()
             svg_file_path = os.path.join(s.saves_folder, 'svg', '{}_{}.svg'.format(self.iso_3166_2_code.upper(), numeric_column_name))
             with open(svg_file_path, 'w') as f:
                 attributes_list = self.svg_attributes_list.copy()
@@ -745,12 +749,12 @@ class ChoroplethUtilities(object):
                 style_value = self.fill_style_str.format(*style_tuple)
                 id_value = 'district-{}'.format('-'.join(district_name.lower().split(' ')))
                 path_tag = self.district_path_str.format(id_value, outline_d, district_abbreviation,
-                                                      district_name, style_value)
+                                                         district_name, style_value)
                 with open(svg_file_path, 'a') as f:
                     print(path_tag, file=f)
             
             # Create the colorbar
-            colorbar_xml = self.get_colorbar_xml(numeric_column_name, cmap=cmap)
+            colorbar_xml = self.get_colorbar_xml(numeric_column_name, cmap=cmap, min=min, max=max)
             with open(svg_file_path, 'a') as f:
                 print(colorbar_xml, file=f)
                 print(self.svg_suffix, file=f)
