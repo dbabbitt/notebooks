@@ -1,0 +1,2483 @@
+UnsatisfiableError: The following specifications were found to be incompatible with each other:
+
+Output in format: Requested package -> Available versions
+
+Package six conflicts for:
+pytest-openfiles -> pytest[version='>=3.1'] -> six[version='>=1.10.0']
+pytest-mpi -> pytest -> six[version='>=1.10.0']
+pytest-benchmark -> pytest[version='>=2.6'] -> six[version='>=1.10.0']
+pytest-xdist -> pytest[version='>=4.4.0'] -> six[version='>=1.10.0']
+pytest-json-report -> pytest[version='>=4.2.0'] -> six[version='>=1.10.0']
+pytest-describe -> pytest[version='>=4.0.0'] -> six[version='>=1.10.0']
+pytest-base-url -> pytest[version='>=2.7.3'] -> six[version='>=1.10.0']
+pytest-freezegun -> freezegun[version='>0.3'] -> six[version='>=1.10.0']
+pytest-subtests -> pytest[version='>=4.4.0'] -> six[version='>=1.10.0']
+pytest-pep8 -> pytest[version='>=2.4.2'] -> six[version='>=1.10.0']
+pytest-cache -> pytest[version='>=2.2'] -> six[version='>=1.10.0']
+pytest-session2file -> pytest -> six[version='>=1.10.0']
+pytest-regtest -> pytest[version='>=4.1.0'] -> six[version='>=1.10.0']
+pytest-notification -> pytest[version='>=4'] -> six[version='>=1.10.0']
+pytest-doctestplus -> six
+pytest-shutil -> six
+pytest-icdiff -> pytest -> six[version='>=1.10.0']
+pytest-localstack -> six
+pytest-doctestplus -> pytest[version='>=3.0'] -> six[version='>=1.10.0']
+pytest-profiling -> six
+pytest-bdd -> parse_type -> six[version='>=1.10.0']
+pytest-astropy -> pytest[version='>=3.1'] -> six[version='>=1.10.0']
+pytest-rerunfailures -> pytest[version='>=4.4'] -> six[version='>=1.10.0']
+pytest-azurepipelines -> pytest -> six[version='>=1.10.0']
+pytest-timeout -> pytest[version='>=3.6.0'] -> six[version='>=1.10.0']
+pytest-check-links -> html5lib -> six[version='>=1.10.0|>=1.9']
+pytest-flake8 -> pytest[version='>=3.5'] -> six[version='>=1.10.0']
+pytest-pylint -> six
+pytest-workflow -> jsonschema -> six[version='>=1.10.0|>=1.11.0']
+pytest-regressions -> pytest[version='>=3.5.0'] -> six[version='>=1.10.0']
+pytest-instafail -> pytest[version='>=2.9'] -> six[version='>=1.10.0']
+pytest-cookies -> cookiecutter[version='>=1.4.0,<1.8.0'] -> six[version='>=1.10|>=1.10.0']
+pytest-tldr -> pytest[version='>=3.5.0'] -> six[version='>=1.10.0']
+pytest-monitor -> pytest -> six[version='>=1.10.0']
+pytest-csv -> six[version='>=1.0.0']
+pytest-profiling -> pytest -> six[version='>=1.10.0']
+pytest-mypy -> pytest[version='>=2.8'] -> six[version='>=1.10.0']
+pytest-regressions -> six
+pytest-console-scripts -> mock[version='>=2.0.0'] -> six[version='>=1.10.0']
+pytest-black -> pytest[version='>=3.5.0'] -> six[version='>=1.10.0']
+pytest-smartcov -> pytest -> six[version='>=1.10.0']
+pytest-raises -> pytest[version='>=3.2.2'] -> six[version='>=1.10.0']
+pytest-repeat -> pytest[version='>=3.6'] -> six[version='>=1.10.0']
+pytest-picked -> pytest[version='>=3.5.0'] -> six[version='>=1.10.0']
+pytest-cram -> pytest[version='>=2.8'] -> six[version='>=1.10.0']
+pytest-env -> pytest[version='>=2.6.0'] -> six[version='>=1.10.0']
+pytest-bandit -> bandit[version='>=1.4.0'] -> six[version='>=1.10.0']
+pytest-replay -> pytest[version='>=3.0.0'] -> six[version='>=1.10.0']
+pytest-clarity -> pytest[version='>=3.5.0'] -> six[version='>=1.10.0']
+pytest-cov -> pytest[version='>=3.6'] -> six[version='>=1.10.0']
+pytest-django-haystack -> pytest -> six[version='>=1.10.0']
+pytest-bdd -> six[version='>=1.9.0']
+pytest-xdist -> six
+pytest-asyncio -> pytest[version='>=3.0.6'] -> six[version='>=1.10.0']
+pytest-html -> pytest[version='>=3.0'] -> six[version='>=1.10.0']
+pytest-mock -> pytest -> six[version='>=1.10.0']
+pytest-csv -> pytest[version='>=4.4'] -> six[version='>=1.10.0']
+pytest-chalice -> pytest -> six[version='>=1.10.0']
+pytest-aiohttp -> pytest -> six[version='>=1.10.0']
+pytest-spec -> mock[version='>=1.0.1'] -> six[version='>=1.10.0']
+pytest-fixture-config -> pytest -> six[version='>=1.10.0']
+pytest-ignore-flaky -> pytest[version='>=2.7'] -> six[version='>=1.10.0']
+pytest-runner -> pytest -> six[version='>=1.10.0']
+pytest-executable -> jsonschema[version='>=2,<4'] -> six[version='>=1.10.0|>=1.11.0']
+pytest-faulthandler -> pytest -> six[version='>=1.10.0']
+pytest-localstack -> docker-py -> six[version='>=1.10.0|>=1.4.0']
+pytest-codestyle -> pytest -> six[version='>=1.10.0']
+pytest-shutil -> pytest -> six[version='>=1.10.0']
+pytest-json -> pytest[version='>=2.3'] -> six[version='>=1.10.0']
+pytest-astropy-header -> pytest[version='>=3.0'] -> six[version='>=1.10.0']
+pytest-notebook -> jsonschema -> six[version='>=1.10.0|>=1.11.0']
+pytest-forked -> pytest[version='>=2.6.0'] -> six[version='>=1.10.0']
+pytest-ordering -> pytest -> six[version='>=1.10.0']
+pytest-selenium -> pytest[version='>=3.0'] -> six[version='>=1.10.0']
+pytest-tornado -> pytest -> six[version='>=1.10.0']
+pytest-tornasync -> pytest[version='>=3.0'] -> six[version='>=1.10.0']
+pytest-custom-exit-code -> pytest[version='>=4.0.2'] -> six[version='>=1.10.0']
+pytest-pylint -> pytest[version='>=2.7'] -> six[version='>=1.10.0']
+ipytest -> packaging -> six[version='>=1.10.0']
+pytest-virtualenv -> pytest -> six[version='>=1.10.0']
+pytest-socket -> pytest[version='>=3.6.3'] -> six[version='>=1.10.0']
+
+Package werkzeug conflicts for:
+pytest-httpserver -> werkzeug
+pytest-flask -> werkzeug[version='>=0.7']
+pytest-flask -> flask -> werkzeug[version='>=0.14|>=0.15']
+
+Package setuptools conflicts for:
+pytest-flake8 -> flake8[version='>=3.5'] -> setuptools[version='>=30.0.0|>=40.0']
+pytest-fixture-config -> pytest -> setuptools[version='>=40.0']
+pytest-spec -> pytest -> setuptools[version='>=40.0']
+pytest-notebook -> jsonschema -> setuptools[version='>=40.0']
+pytest-ordering -> pytest -> setuptools[version='>=40.0']
+pytest-openfiles -> pytest[version='>=3.1'] -> setuptools[version='>=40.0']
+pytest-clarity -> pytest[version='>=3.5.0'] -> setuptools[version='>=40.0']
+pytest-socket -> pytest[version='>=3.6.3'] -> setuptools[version='>=40.0']
+pytest-regtest -> pytest[version='>=4.1.0'] -> setuptools[version='>=40.0']
+pytest-instafail -> pytest[version='>=2.9'] -> setuptools[version='>=40.0']
+pytest-replay -> pytest[version='>=3.0.0'] -> setuptools[version='>=40.0']
+pytest-cookies -> pytest[version='>=3.3.0,<6.0.0'] -> setuptools[version='>=40.0']
+pytest-cov -> pytest[version='>=3.6'] -> setuptools[version='>=40.0']
+pytest-azurepipelines -> pytest -> setuptools[version='>=40.0']
+pytest-django-haystack -> pytest -> setuptools[version='>=40.0']
+pytest-tornasync -> pytest[version='>=3.0'] -> setuptools[version='>=40.0']
+pytest-spec -> setuptools
+pytest-pep8 -> pytest[version='>=2.4.2'] -> setuptools[version='>=40.0']
+pytest-cram -> pytest[version='>=2.8'] -> setuptools[version='>=40.0']
+pytest-json -> pytest[version='>=2.3'] -> setuptools[version='>=40.0']
+pytest-doctestplus -> pytest[version='>=3.0'] -> setuptools[version='>=40.0']
+pytest-mypy -> pytest[version='>=2.8'] -> setuptools[version='>=40.0']
+pytest-cache -> pytest[version='>=2.2'] -> setuptools[version='>=40.0']
+pytest-timeout -> pytest[version='>=3.6.0'] -> setuptools[version='>=40.0']
+pytest-aiohttp -> pytest -> setuptools[version='>=40.0']
+pytest-html -> pytest[version='>=5.0'] -> setuptools[version='>=40.0']
+pytest-asyncio -> pytest[version='>=3.0.6'] -> setuptools[version='>=40.0']
+pytest-regressions -> pytest[version='>=3.5.0'] -> setuptools[version='>=40.0']
+pytest-tornado -> pytest -> setuptools[version='>=40.0']
+pytest-console-scripts -> pytest[version='>=3.0.0'] -> setuptools[version='>=40.0']
+pytest-runner -> pytest -> setuptools[version='>=40.0']
+pytest-rerunfailures -> pytest[version='>=4.4'] -> setuptools[version='>=40.0']
+pytest-session2file -> pytest -> setuptools[version='>=40.0']
+python[version='>3.7.0'] -> pip -> setuptools
+pytest-bandit -> bandit[version='>=1.4.0'] -> setuptools[version='>=40.0']
+pytest-xdist -> pytest[version='>=4.4.0'] -> setuptools[version='>=40.0']
+pytest-icdiff -> pytest -> setuptools[version='>=40.0']
+pytest-pylint -> pytest[version='>=5.4'] -> setuptools[version='>=40.0']
+pytest-clarity -> setuptools
+pytest-selenium -> pytest[version='>=3.0'] -> setuptools[version='>=40.0']
+pytest-virtualenv -> pytest -> setuptools[version='>=40.0']
+pytest-monitor -> pytest -> setuptools[version='>=40.0']
+pytest-shutil -> pytest -> setuptools[version='>=40.0']
+pytest-env -> pytest[version='>=2.6.0'] -> setuptools[version='>=40.0']
+pytest-black -> pytest[version='>=3.5.0'] -> setuptools[version='>=40.0']
+pytest-base-url -> setuptools
+pytest-env -> setuptools
+pytest-profiling -> setuptools
+pytest-subtests -> pytest[version='>=4.4.0'] -> setuptools[version='>=40.0']
+pytest-runner -> setuptools
+ipytest -> ipython -> setuptools[version='>=18.5|>=40.0']
+pytest-profiling -> pytest -> setuptools[version='>=40.0']
+pytest-mock -> pytest -> setuptools[version='>=40.0']
+pytest-csv -> pytest[version='>=4.4'] -> setuptools[version='>=40.0']
+pytest-flake8 -> setuptools
+pytest-executable -> jinja2[version='>=2.7,<3'] -> setuptools[version='>=40.0']
+pytest-faulthandler -> pytest[version='>=5.0'] -> setuptools[version='>=40.0']
+pytest-freezegun -> pytest[version='>=3.0.0'] -> setuptools[version='>=40.0']
+pytest-xdist -> setuptools
+pytest-bdd -> pip -> setuptools[version='>=40.0']
+pytest-cov -> setuptools
+pytest-forked -> pytest[version='>=2.6.0'] -> setuptools[version='>=40.0']
+pytest-base-url -> pytest[version='>=2.7.3'] -> setuptools[version='>=40.0']
+pytest-socket -> setuptools
+pytest-custom-exit-code -> pytest[version='>=4.0.2'] -> setuptools[version='>=40.0']
+pytest-check-links -> pytest[version='>=2.8'] -> setuptools[version='>=40.0']
+pytest-json-report -> pytest[version='>=4.2.0'] -> setuptools[version='>=40.0']
+pytest-picked -> pytest[version='>=3.5.0'] -> setuptools[version='>=40.0']
+pytest-astropy -> pytest[version='>=3.1'] -> setuptools[version='>=40.0']
+pytest-smartcov -> pytest -> setuptools[version='>=40.0']
+pytest-workflow -> jsonschema -> setuptools[version='>=40.0']
+pytest-benchmark -> pytest[version='>=2.6'] -> setuptools[version='>=40.0']
+pytest-codestyle -> pycodestyle -> setuptools[version='>=40.0']
+pytest-httpserver -> setuptools
+pytest-benchmark -> setuptools
+pytest-chalice -> pytest -> setuptools[version='>=40.0']
+pytest-localstack -> pytest[version='>=3.3.0'] -> setuptools[version='>=40.0']
+pytest-raises -> pytest[version='>=3.2.2'] -> setuptools[version='>=40.0']
+pytest-tldr -> pytest[version='>=3.5.0'] -> setuptools[version='>=40.0']
+pytest-repeat -> pytest[version='>=3.6'] -> setuptools[version='>=40.0']
+pytest-describe -> pytest[version='>=4.0.0'] -> setuptools[version='>=40.0']
+pytest-astropy-header -> pytest[version='>=3.0'] -> setuptools[version='>=40.0']
+pygments_pytest -> pygments -> setuptools
+pytest-notification -> pytest[version='>=4'] -> setuptools[version='>=40.0']
+pytest-mpi -> pytest -> setuptools[version='>=40.0']
+pytest-ignore-flaky -> pytest[version='>=2.7'] -> setuptools[version='>=40.0']
+
+Package mock conflicts for:
+pytest-console-scripts -> mock[version='>=2.0.0']
+pytest-localstack -> mock
+pytest-mock -> mock
+pytest-spec -> mock[version='>=1.0.1']
+pytest-virtualenv -> pytest-shutil -> mock
+pytest-shutil -> mock
+
+Package vc conflicts for:
+pytest-cookies -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-cache -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-env -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-astropy -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-doctestplus -> numpy[version='>=1.10'] -> vc[version='10.*|14.*|9.*|>=14,<15.0a0|>=14.1,<15.0a0|>=9,<10.0a0']
+pytest-picked -> python[version='>=3.5'] -> vc[version='14.*|>=14.1,<15.0a0|>=14,<15.0a0']
+pytest-flask -> python[version='>=3.5'] -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-pep8 -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-openfiles -> psutil -> vc[version='10.*|14.*|9.*|>=14,<15.0a0|>=14.1,<15.0a0|>=9,<10.0a0']
+pytest-session2file -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-describe -> python[version='>=3.6'] -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-flask-sqlalchemy -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-smartcov -> coverage[version='>=3.6'] -> vc[version='10.*|14.*|9.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0']
+pytest-notification -> python[version='>=3.5'] -> vc[version='14.*|>=14.1,<15.0a0|>=14,<15.0a0']
+pytest-httpserver -> python[version='>=3.5'] -> vc[version='14.*|>=14.1,<15.0a0|>=14,<15.0a0']
+pytest-tornasync -> python[version='>=3.5'] -> vc[version='14.*|>=14.1,<15.0a0|>=14,<15.0a0|9.*']
+pytest-mypy -> python[version='>=3.4'] -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0']
+pygments_pytest -> python[version='>=3.6'] -> vc[version='14.*|>=14.1,<15.0a0|>=14,<15.0a0']
+pytest-bandit -> python[version='>3'] -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0']
+pytest-icdiff -> python[version='>=3.6'] -> vc[version='14.*|>=14.1,<15.0a0|>=14,<15.0a0']
+pytest-workflow -> python[version='>=3.6'] -> vc[version='14.*|>=14.1,<15.0a0|>=14,<15.0a0|9.*']
+ipytest -> python[version='>=3.0'] -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0']
+pytest-black -> python[version='>=3.6'] -> vc[version='14.*|>=14.1,<15.0a0|>=14,<15.0a0']
+pytest-regressions -> python[version='>=3.6'] -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|9.*|>=9,<10.0a0']
+pytest-tornado -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-rerunfailures -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-csv -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+python[version='>3.7.0'] -> sqlite[version='>=3.30.1,<4.0a0'] -> vc=9
+pytest-chalice -> python[version='>=3.5'] -> vc[version='14.*|>=14.1,<15.0a0|>=14,<15.0a0']
+pytest-regtest -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-ignore-flaky -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-forked -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-cram -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-repeat -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-monitor -> psutil -> vc[version='14.*|9.*|>=14,<15.0a0|>=14.1,<15.0a0']
+pytest-instafail -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-asyncio -> python[version='>=3.7,<3.8.0a0'] -> vc[version='14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-xdist -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-fixture-config -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-flake8 -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-codestyle -> python[version='>3'] -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0']
+pytest-profiling -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-replay -> python[version='>=3.6'] -> vc[version='14.*|>=14.1,<15.0a0|>=14,<15.0a0']
+python[version='>3.7.0'] -> vc[version='14.*|>=14.1,<15.0a0|>=14,<15.0a0']
+pytest-astropy-header -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-freezegun -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-localstack -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-selenium -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-azurepipelines -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-runner -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-socket -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-html -> python[version='>=3.6'] -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-spec -> python[version='>=3.7,<3.8.0a0'] -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-faulthandler -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-console-scripts -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-pylint -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-virtualenv -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-aiohttp -> aiohttp[version='>=2.3.5'] -> vc[version='10.*|14.*|>=14,<15.0a0|>=14.1,<15.0a0']
+pytest-check-links -> python[version='>=3.5'] -> vc[version='14.*|>=14.1,<15.0a0|>=14,<15.0a0']
+pytest-notebook -> python[version='>=3.5'] -> vc[version='14.*|>=14.1,<15.0a0|>=14,<15.0a0']
+pytest-clarity -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-bdd -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-timeout -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-json -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-benchmark -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-shutil -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-subtests -> python[version='>=3.5'] -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0']
+pytest-cov -> coverage[version='>=4.4'] -> vc[version='10.*|14.*|9.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0']
+pytest-custom-exit-code -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-tldr -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-json-report -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-base-url -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-ordering -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-executable -> python[version='>=3.6'] -> vc[version='14.*|>=14.1,<15.0a0|>=14,<15.0a0|9.*']
+pytest-raises -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-django-haystack -> python -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+pytest-mock -> python[version='>=3.5'] -> vc[version='10.*|14.*|>=14.1,<15.0a0|>=14,<15.0a0|>=9,<10.0a0|9.*']
+
+Package futures conflicts for:
+pytest-tornasync -> tornado[version='>=5.0'] -> futures
+pytest-tornado -> tornado -> futures
+
+Package ca-certificates conflicts for:
+pytest-repeat -> python -> ca-certificates
+pytest-timeout -> python -> ca-certificates
+pytest-csv -> python -> ca-certificates
+pytest-tldr -> python -> ca-certificates
+pytest-astropy -> python -> ca-certificates
+pytest-ordering -> python -> ca-certificates
+pytest-cov -> python -> ca-certificates
+pytest-ignore-flaky -> python -> ca-certificates
+pytest-freezegun -> python -> ca-certificates
+pytest-localstack -> python -> ca-certificates
+pytest-shutil -> python -> ca-certificates
+pytest-spec -> python[version='>=2.7,<2.8.0a0'] -> ca-certificates
+pytest-openfiles -> python -> ca-certificates
+pytest-pylint -> python -> ca-certificates
+pytest-cookies -> python -> ca-certificates
+pytest-raises -> python -> ca-certificates
+pytest-doctestplus -> python -> ca-certificates
+pytest-cache -> python -> ca-certificates
+pytest-rerunfailures -> python -> ca-certificates
+pytest-mock -> python[version='>=2.7,<2.8.0a0'] -> ca-certificates
+pytest-custom-exit-code -> python -> ca-certificates
+pytest-regtest -> python -> ca-certificates
+pytest-forked -> python -> ca-certificates
+pytest-asyncio -> python=2.7 -> ca-certificates
+pytest-benchmark -> python -> ca-certificates
+pytest-session2file -> python -> ca-certificates
+pytest-clarity -> python -> ca-certificates
+pytest-fixture-config -> python -> ca-certificates
+pytest-flake8 -> python -> ca-certificates
+pytest-flask-sqlalchemy -> python -> ca-certificates
+pytest-bdd -> python -> ca-certificates
+pytest-flask -> python -> ca-certificates
+pytest-profiling -> python -> ca-certificates
+pytest-env -> python -> ca-certificates
+pytest-xdist -> python -> ca-certificates
+pytest-console-scripts -> python -> ca-certificates
+pytest-astropy-header -> python -> ca-certificates
+pytest-runner -> python -> ca-certificates
+pytest-faulthandler -> python -> ca-certificates
+pytest-virtualenv -> python -> ca-certificates
+pytest-tornado -> python -> ca-certificates
+pytest-django-haystack -> python -> ca-certificates
+pytest-html -> python -> ca-certificates
+pytest-pep8 -> python -> ca-certificates
+pytest-smartcov -> python -> ca-certificates
+pytest-json -> python -> ca-certificates
+python[version='>3.7.0'] -> openssl[version='>=1.1.1g,<1.1.2a'] -> ca-certificates
+pytest-regressions -> python[version='>=2.7,<2.8.0a0'] -> ca-certificates
+pytest-socket -> python -> ca-certificates
+pytest-instafail -> python -> ca-certificates
+pytest-azurepipelines -> python -> ca-certificates
+pytest-base-url -> python -> ca-certificates
+pytest-cram -> python -> ca-certificates
+pytest-json-report -> python -> ca-certificates
+pytest-selenium -> python -> ca-certificates
+pytest-describe -> python -> ca-certificates
+
+Package python_abi conflicts for:
+pytest-repeat -> pytest[version='>=3.6'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-profiling -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-html -> pytest[version='>=5.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-xdist -> pytest[version='>=4.4.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-bandit -> pytest[version='>=3.5.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-cov -> coverage[version='>=4.4'] -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp27m|*_cp38|*_cp37m|*_cp36m']
+pytest-tornado -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-executable -> jsonschema[version='>=2,<4'] -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp37m|*_cp27m|*_cp36m|*_cp38']
+pytest-notification -> pytest[version='>=4'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-astropy-header -> pytest[version='>=3.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-picked -> pytest[version='>=3.5.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-monitor -> psutil -> python_abi[version='2.7.*|3.8.*|3.6.*|3.7.*',build='*_cp37m|*_cp38|*_cp27m|*_cp36m']
+pytest-session2file -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-flake8 -> python_abi[version='2.7.*|3.8.*|3.7.*|3.6.*',build='*_cp36m|*_cp37m|*_cp38|*_cp27m']
+pytest-httpserver -> setuptools -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-benchmark -> python_abi[version='2.7.*|3.7.*|3.8.*|3.6.*',build='*_cp37m|*_cp27m|*_cp38|*_cp36m']
+pytest-django-haystack -> django -> python_abi[version='3.6.*|3.7.*|3.8.*',build='*_cp37m|*_cp38|*_cp36m']
+pytest-bdd -> parse_type -> python_abi[version='2.7.*|3.7.*|3.8.*|3.6.*',build='*_cp36m|*_cp37m|*_cp38|*_cp27m']
+pytest-localstack -> docker-py -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp27m|*_cp38|*_cp37m|*_cp36m']
+pytest-describe -> pytest[version='>=4.0.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-chalice -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-tldr -> pytest[version='>=3.5.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-csv -> pytest[version='>=4.4'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-astropy -> pytest[version='>=3.1'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-openfiles -> psutil -> python_abi[version='2.7.*|3.8.*|3.6.*|3.7.*',build='*_cp37m|*_cp38|*_cp27m|*_cp36m']
+pytest-tornasync -> pytest[version='>=3.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-subtests -> pytest[version='>=4.4.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-cookies -> pytest[version='>=3.3.0,<6.0.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-check-links -> docutils -> python_abi[version='2.7.*|3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp38|*_cp36m|*_cp27m']
+pytest-rerunfailures -> pytest[version='>=4.4'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-json -> pytest[version='>=2.3'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-pep8 -> pytest[version='>=2.4.2'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-timeout -> pytest[version='>=3.6.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-env -> pytest[version='>=2.6.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-codestyle -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-selenium -> pytest[version='>=3.0'] -> python_abi[version='2.7.*|3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m|*_cp27m']
+pytest-faulthandler -> pytest[version='>=5.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-socket -> pytest[version='>=3.6.3'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-shutil -> mock -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp27m|*_cp38|*_cp37m|*_cp36m']
+pytest-virtualenv -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-raises -> pytest[version='>=3.2.2'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-console-scripts -> mock[version='>=2.0.0'] -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp27m|*_cp38|*_cp37m|*_cp36m']
+pytest-instafail -> pytest[version='>=2.9'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-black -> pytest[version='>=3.5.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-regtest -> pytest[version='>=4.1.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-mypy -> pytest[version='>=2.8'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-ignore-flaky -> pytest[version='>=2.7'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-pylint -> pylint[version='>=2.3.0'] -> python_abi[version='3.6.*|3.7.*|3.8.*',build='*_cp37m|*_cp38|*_cp36m']
+pytest-azurepipelines -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-icdiff -> pprintpp -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp27m|*_cp37m|*_cp38|*_cp36m']
+pytest-custom-exit-code -> pytest[version='>=4.0.2'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-mock -> python_abi[version='2.7.*|3.7.*|3.8.*|3.6.*',build='*_cp37m|*_cp27m|*_cp38|*_cp36m']
+pytest-freezegun -> pytest[version='>=3.0.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-regressions -> pytest[version='>=3.5.0'] -> python_abi[version='2.7.*|3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m|*_cp27m']
+pytest-ordering -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-aiohttp -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-base-url -> pytest[version='>=2.7.3'] -> python_abi[version='2.7.*|3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m|*_cp27m']
+pytest-cache -> pytest[version='>=2.2'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-runner -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-json-report -> pytest[version='>=4.2.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-mpi -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-spec -> mock[version='>=1.0.1'] -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp27m|*_cp38|*_cp37m|*_cp36m']
+pytest-cram -> pytest[version='>=2.8'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-replay -> pytest[version='>=3.0.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-asyncio -> python_abi[version='3.6.*|3.7.*|3.8.*',build='*_cp37m|*_cp38|*_cp36m']
+pytest-doctestplus -> numpy[version='>=1.10'] -> python_abi[version='3.6.*|3.7.*|3.8.*',build='*_cp38|*_cp37m|*_cp36m']
+pytest-notebook -> importlib_resources -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp27m|*_cp37m|*_cp38|*_cp36m']
+pytest-clarity -> pytest[version='>=3.5.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+pytest-smartcov -> coverage[version='>=3.6'] -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp27m|*_cp38|*_cp37m|*_cp36m']
+pytest-forked -> pytest[version='>=2.6.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+ipytest -> ipython -> python_abi[version='3.6.*|3.7.*|3.8.*',build='*_cp37m|*_cp38|*_cp36m']
+pytest-workflow -> jsonschema -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp37m|*_cp27m|*_cp36m|*_cp38']
+pytest-fixture-config -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp38|*_cp36m|*_cp37m']
+
+Package apipkg conflicts for:
+pytest-xdist -> execnet[version='>=1.1'] -> apipkg[version='>=1.4']
+pytest-shutil -> execnet -> apipkg[version='>=1.4']
+pytest-cache -> execnet[version='>=1.1.dev1'] -> apipkg[version='>=1.4']
+
+Package vs2010_runtime conflicts for:
+pytest-bdd -> python -> vs2010_runtime
+pytest-shutil -> python -> vs2010_runtime
+pytest-bandit -> python[version='>3'] -> vs2010_runtime
+pytest-astropy-header -> python -> vs2010_runtime
+pytest-base-url -> python -> vs2010_runtime
+pytest-cram -> python -> vs2010_runtime
+pytest-doctestplus -> python -> vs2010_runtime
+pytest-regressions -> python -> vs2010_runtime
+pytest-flask -> python -> vs2010_runtime
+pytest-json-report -> python -> vs2010_runtime
+pytest-repeat -> python -> vs2010_runtime
+pytest-rerunfailures -> python -> vs2010_runtime
+pytest-cov -> python -> vs2010_runtime
+pytest-fixture-config -> python -> vs2010_runtime
+pytest-regtest -> python -> vs2010_runtime
+pytest-forked -> python -> vs2010_runtime
+pytest-smartcov -> python -> vs2010_runtime
+pytest-benchmark -> python -> vs2010_runtime
+pytest-mypy -> python[version='>=3.4'] -> vs2010_runtime
+pytest-socket -> python -> vs2010_runtime
+ipytest -> python[version='>=3.0'] -> vs2010_runtime
+pytest-aiohttp -> python[version='>=3.4'] -> vs2010_runtime
+pytest-ordering -> python -> vs2010_runtime
+pytest-html -> python -> vs2010_runtime
+pytest-freezegun -> python -> vs2010_runtime
+pytest-localstack -> python -> vs2010_runtime
+pytest-subtests -> python[version='>=3.4'] -> vs2010_runtime
+pytest-cookies -> python -> vs2010_runtime
+pytest-console-scripts -> python -> vs2010_runtime
+pytest-pylint -> python -> vs2010_runtime
+pytest-tornado -> python -> vs2010_runtime
+pytest-spec -> python=3.4 -> vs2010_runtime
+pytest-profiling -> python -> vs2010_runtime
+pytest-openfiles -> python -> vs2010_runtime
+pytest-session2file -> python -> vs2010_runtime
+pytest-xdist -> python -> vs2010_runtime
+pytest-env -> python -> vs2010_runtime
+pytest-flake8 -> python -> vs2010_runtime
+pytest-describe -> python -> vs2010_runtime
+pytest-raises -> python -> vs2010_runtime
+pytest-ignore-flaky -> python -> vs2010_runtime
+pytest-csv -> python -> vs2010_runtime
+pytest-flask-sqlalchemy -> python -> vs2010_runtime
+pytest-cache -> python -> vs2010_runtime
+pytest-custom-exit-code -> python -> vs2010_runtime
+pytest-pep8 -> python -> vs2010_runtime
+pytest-selenium -> python -> vs2010_runtime
+pytest-mock -> python -> vs2010_runtime
+pytest-instafail -> python -> vs2010_runtime
+pytest-runner -> python -> vs2010_runtime
+pytest-virtualenv -> python -> vs2010_runtime
+pytest-django-haystack -> python -> vs2010_runtime
+pytest-clarity -> python -> vs2010_runtime
+pytest-codestyle -> python[version='>3'] -> vs2010_runtime
+pytest-faulthandler -> python -> vs2010_runtime
+pytest-tldr -> python -> vs2010_runtime
+pytest-timeout -> python -> vs2010_runtime
+pytest-azurepipelines -> python -> vs2010_runtime
+pytest-astropy -> python -> vs2010_runtime
+pytest-json -> python -> vs2010_runtime
+
+Package html5lib conflicts for:
+pytest-check-links -> html5lib
+python[version='>3.7.0'] -> pip -> html5lib
+pytest-bdd -> pip -> html5lib
+
+Package vs2008_runtime conflicts for:
+pytest-django-haystack -> python -> vs2008_runtime
+pytest-pep8 -> python -> vs2008_runtime
+pytest-forked -> python -> vs2008_runtime
+pytest-xdist -> python -> vs2008_runtime
+pytest-virtualenv -> python -> vs2008_runtime
+pytest-base-url -> python -> vs2008_runtime
+pytest-astropy -> python -> vs2008_runtime
+pytest-rerunfailures -> python -> vs2008_runtime
+pytest-pylint -> python -> vs2008_runtime
+pytest-bdd -> python -> vs2008_runtime
+pytest-flask -> python -> vs2008_runtime
+pytest-json-report -> python -> vs2008_runtime
+pytest-ignore-flaky -> python -> vs2008_runtime
+pytest-describe -> python -> vs2008_runtime
+pytest-regtest -> python -> vs2008_runtime
+pytest-session2file -> python -> vs2008_runtime
+pytest-html -> python -> vs2008_runtime
+pytest-asyncio -> python=2.7 -> vs2008_runtime
+pytest-doctestplus -> python -> vs2008_runtime
+pytest-mock -> python[version='>=2.7,<2.8.0a0'] -> vs2008_runtime
+pytest-azurepipelines -> python -> vs2008_runtime
+pytest-console-scripts -> python -> vs2008_runtime
+pytest-timeout -> python -> vs2008_runtime
+pytest-runner -> python -> vs2008_runtime
+pytest-tornado -> python -> vs2008_runtime
+pytest-cache -> python -> vs2008_runtime
+pytest-custom-exit-code -> python -> vs2008_runtime
+pytest-json -> python -> vs2008_runtime
+pytest-env -> python -> vs2008_runtime
+pytest-ordering -> python -> vs2008_runtime
+pytest-profiling -> python -> vs2008_runtime
+pytest-flask-sqlalchemy -> python -> vs2008_runtime
+pytest-csv -> python -> vs2008_runtime
+pytest-freezegun -> python -> vs2008_runtime
+pytest-localstack -> python -> vs2008_runtime
+pytest-instafail -> python -> vs2008_runtime
+pytest-spec -> python[version='>=2.7,<2.8.0a0'] -> vs2008_runtime
+pytest-cookies -> python -> vs2008_runtime
+pytest-regressions -> python[version='>=2.7,<2.8.0a0'] -> vs2008_runtime
+pytest-openfiles -> python -> vs2008_runtime
+pytest-cram -> python -> vs2008_runtime
+pytest-faulthandler -> python -> vs2008_runtime
+pytest-smartcov -> python -> vs2008_runtime
+pytest-tldr -> python -> vs2008_runtime
+pytest-clarity -> python -> vs2008_runtime
+pytest-selenium -> python -> vs2008_runtime
+pytest-flake8 -> python -> vs2008_runtime
+pytest-astropy-header -> python -> vs2008_runtime
+pytest-raises -> python -> vs2008_runtime
+pytest-socket -> python -> vs2008_runtime
+pytest-fixture-config -> python -> vs2008_runtime
+pytest-repeat -> python -> vs2008_runtime
+pytest-cov -> python -> vs2008_runtime
+pytest-benchmark -> python -> vs2008_runtime
+pytest-shutil -> python -> vs2008_runtime
+
+Package colorama conflicts for:
+pytest-azurepipelines -> pytest -> colorama
+pytest-virtualenv -> pytest -> colorama
+pytest-spec -> pytest -> colorama
+ipytest -> ipython -> colorama
+pytest-bandit -> bandit[version='>=1.4.0'] -> colorama[version='>=0.3.9']
+pytest-icdiff -> pytest -> colorama
+pytest-shutil -> pytest -> colorama
+pytest-workflow -> pytest[version='>=5.4.0'] -> colorama
+pytest-django-haystack -> pytest -> colorama
+pytest-json-report -> pytest[version='>=4.2.0'] -> colorama
+pytest-custom-exit-code -> pytest[version='>=4.0.2'] -> colorama
+pytest-pylint -> pylint[version='>=2.3.0'] -> colorama
+pytest-codestyle -> pytest -> colorama
+pytest-subtests -> pytest[version='>=4.4.0'] -> colorama
+pytest-cram -> pytest[version='>=2.8'] -> colorama
+pytest-tornado -> pytest -> colorama
+python[version='>3.7.0'] -> pip -> colorama
+pytest-raises -> pytest[version='>=3.2.2'] -> colorama
+pytest-localstack -> pytest[version='>=3.3.0'] -> colorama
+pytest-session2file -> pytest -> colorama
+pytest-tldr -> pytest[version='>=3.5.0'] -> colorama
+pytest-env -> pytest[version='>=2.6.0'] -> colorama
+pytest-mock -> pytest -> colorama
+pytest-profiling -> pytest -> colorama
+pytest-cookies -> pytest[version='>=3.3.0,<6.0.0'] -> colorama
+pytest-selenium -> pytest[version='>=3.0'] -> colorama
+pytest-asyncio -> pytest[version='>=3.0.6'] -> colorama
+pytest-benchmark -> pytest[version='>=2.6'] -> colorama
+pytest-freezegun -> pytest[version='>=3.0.0'] -> colorama
+pytest-fixture-config -> pytest -> colorama
+pytest-notification -> pytest[version='>=4'] -> colorama
+pytest-mypy -> pytest[version='>=2.8'] -> colorama
+pytest-executable -> pytest[version='>=4.3,<6'] -> colorama
+pytest-faulthandler -> pytest[version='>=5.0'] -> colorama
+pytest-astropy -> pytest[version='>=3.1'] -> colorama
+pytest-flake8 -> pytest[version='>=3.5'] -> colorama
+pytest-openfiles -> pytest[version='>=3.1'] -> colorama
+pytest-pep8 -> pytest[version='>=2.4.2'] -> colorama
+pytest-check-links -> pytest[version='>=2.8'] -> colorama
+pytest-rerunfailures -> pytest[version='>=4.4'] -> colorama
+pytest-tornasync -> pytest[version='>=3.0'] -> colorama
+pytest-describe -> pytest[version='>=4.0.0'] -> colorama
+pytest-mpi -> pytest -> colorama
+pytest-runner -> pytest -> colorama
+pytest-ordering -> pytest -> colorama
+pytest-repeat -> pytest[version='>=3.6'] -> colorama
+pytest-ignore-flaky -> pytest[version='>=2.7'] -> colorama
+pytest-notebook -> nbdime -> colorama
+pytest-cache -> pytest[version='>=2.2'] -> colorama
+pytest-black -> pytest[version='>=3.5.0'] -> colorama
+pytest-socket -> pytest[version='>=3.6.3'] -> colorama
+pytest-doctestplus -> pytest[version='>=3.0'] -> colorama
+pytest-html -> pytest[version='>=5.0'] -> colorama
+pytest-regressions -> pytest[version='>=3.5.0'] -> colorama
+pytest-smartcov -> pytest -> colorama
+pytest-instafail -> pytest[version='>=2.9'] -> colorama
+pytest-bdd -> pip -> colorama
+pytest-base-url -> pytest[version='>=2.7.3'] -> colorama
+pytest-console-scripts -> pytest[version='>=3.0.0'] -> colorama
+pytest-replay -> pytest[version='>=3.0.0'] -> colorama
+pytest-aiohttp -> pytest -> colorama
+pytest-csv -> pytest[version='>=4.4'] -> colorama
+pytest-clarity -> pytest[version='>=3.5.0'] -> colorama
+pytest-monitor -> pytest -> colorama
+pytest-chalice -> pytest -> colorama
+pytest-timeout -> pytest[version='>=3.6.0'] -> colorama
+pytest-forked -> pytest[version='>=2.6.0'] -> colorama
+pytest-xdist -> pytest[version='>=4.4.0'] -> colorama
+pytest-json -> pytest[version='>=2.3'] -> colorama
+pytest-cov -> pytest[version='>=3.6'] -> colorama
+pytest-picked -> pytest[version='>=3.5.0'] -> colorama
+pytest-regtest -> pytest[version='>=4.1.0'] -> colorama
+pytest-astropy-header -> pytest[version='>=3.0'] -> colorama
+
+Package pytest-fixture-config conflicts for:
+pytest-fixture-config
+pytest-virtualenv -> pytest-fixture-config
+
+Package contextlib2 conflicts for:
+pytest-localstack -> contextlib2
+pytest-shutil -> contextlib2
+pytest-virtualenv -> pytest-shutil -> contextlib2
+
+Package certifi conflicts for:
+pytest-xdist -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-monitor -> requests -> certifi[version='>=2017.4.17']
+pytest-httpserver -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-profiling -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-tornado -> tornado -> certifi
+pytest-clarity -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-runner -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-base-url -> requests[version='>=2.9'] -> certifi[version='>=2016.09|>=2016.9.26|>=2017.4.17']
+pytest-selenium -> requests -> certifi[version='>=2017.4.17']
+pytest-spec -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-cov -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-check-links -> requests -> certifi[version='>=2017.4.17']
+pytest-env -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-benchmark -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-flake8 -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-socket -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+
+Package python-dateutil conflicts for:
+pytest-freezegun -> freezegun[version='>0.3'] -> python-dateutil[version='>2.0|>=2.0|>=1.0,!=2.0']
+pytest-cookies -> arrow[version='<0.14.0'] -> python-dateutil
+pytest-localstack -> botocore[version='>=1.4.31,!=1.4.45'] -> python-dateutil[version='>=2.1,<2.7.0|>=2.1,<2.8.1|>=2.1,<3.0.0']
+pytest-notebook -> jupyter_client -> python-dateutil[version='>=2.1']
+
+Package pycodestyle conflicts for:
+pytest-flake8 -> flake8[version='>=3.5'] -> pycodestyle[version='>=2.0,<2.1|>=2.0,<2.3|>=2.0.0,<2.4.0|>=2.0.0,<2.5.0|>=2.4.0,<2.5.0|>=2.5.0,<2.6.0|>=2.6.0,<2.7.0']
+pytest-codestyle -> pycodestyle
+
+Package traitlets conflicts for:
+ipytest -> ipython -> traitlets[version='>=4.2']
+pytest-notebook -> jupyter_client -> traitlets[version='>=4.1|>=4.2']
+pytest-check-links -> nbconvert -> traitlets[version='>=4.1|>=4.2']
+
+Package pytest-base-url conflicts for:
+pytest-base-url
+pytest-selenium -> pytest-base-url
+
+Package backports.functools_lru_cache conflicts for:
+pytest-pylint -> pylint[version='>=1.4.5'] -> backports.functools_lru_cache
+pytest-notebook -> nbdime -> backports.functools_lru_cache
+pytest-cookies -> arrow[version='<0.14.0'] -> backports.functools_lru_cache
+
+Package jinja2 conflicts for:
+pytest-flask -> flask -> jinja2[version='>=2.10|>=2.10.1|>=2.4']
+pytest-notebook -> nbconvert -> jinja2[version='>=2.9']
+pytest-executable -> jinja2[version='>=2.7,<3']
+pytest-check-links -> nbconvert -> jinja2
+pytest-cookies -> cookiecutter[version='>=1.4.0,<1.8.0'] -> jinja2[version='<3.0.0a0|>=2.7']
+
+Package execnet conflicts for:
+pytest-virtualenv -> pytest-shutil -> execnet
+pytest-cache -> execnet[version='>=1.1.dev1']
+pytest-pep8 -> pytest-cache -> execnet[version='>=1.1.dev1']
+pytest-shutil -> execnet
+pytest-xdist -> execnet[version='>=1.1']
+
+Package pbr conflicts for:
+pytest-console-scripts -> mock[version='>=2.0.0'] -> pbr[version='>=1.3']
+pytest-localstack -> mock -> pbr[version='>=1.3']
+pytest-shutil -> mock -> pbr[version='>=1.3']
+pytest-spec -> mock[version='>=1.0.1'] -> pbr[version='>=1.3']
+pytest-bandit -> bandit[version='>=1.4.0'] -> pbr[version='>=2.0.0']
+pytest-mock -> mock -> pbr[version='>=1.3']
+
+Package requests conflicts for:
+pytest-monitor -> requests
+pytest-bdd -> pip -> requests
+pytest-localstack -> docker-py -> requests[version='>=2.11.1|>=2.14.2|>=2.5.2']
+pytest-selenium -> requests
+pytest-base-url -> requests[version='>=2.9']
+pytest-cookies -> cookiecutter[version='>=1.4.0,<1.8.0'] -> requests[version='>=2.18.0|>=2.23.0']
+python[version='>3.7.0'] -> pip -> requests
+pytest-selenium -> pytest-base-url -> requests[version='>=2.9']
+pytest-check-links -> requests
+pytest-notebook -> nbdime -> requests
+
+Package functools32 conflicts for:
+pytest-notebook -> jsonschema -> functools32
+pytest-executable -> jsonschema[version='>=2,<4'] -> functools32
+pytest-flake8 -> flake8[version='>=3.5'] -> functools32
+pytest-workflow -> jsonschema -> functools32
+
+Package enum34 conflicts for:
+pytest-localstack -> docker-py -> enum34[version='>=1.1.6']
+pytest-bdd -> parse_type -> enum34
+pytest-astropy -> hypothesis -> enum34
+pytest-flake8 -> enum34
+
+Package tornado conflicts for:
+pytest-tornado -> tornado[version='>=4']
+pytest-tornasync -> tornado[version='>=5.0']
+pytest-notebook -> jupyter_client -> tornado[version='>=4.1|>=4.1,<6']
+
+Package hypothesis conflicts for:
+pytest-notebook -> attrs -> hypothesis
+pytest-astropy -> hypothesis
+
+Package pytest-openfiles conflicts for:
+pytest-openfiles
+pytest-astropy -> pytest-openfiles[version='>=0.2|>=0.3|>=0.3.1|>=0.3.0']
+
+Package jsonschema conflicts for:
+pytest-workflow -> jsonschema
+pytest-notebook -> jsonschema
+pytest-notebook -> nbformat -> jsonschema[version='>=2.0,!=2.5.0|>=2.4,!=2.5.0']
+pytest-check-links -> nbformat -> jsonschema[version='>=2.0,!=2.5.0|>=2.4,!=2.5.0']
+pytest-executable -> jsonschema[version='>=2,<4']
+
+Package typing_extensions conflicts for:
+pytest-aiohttp -> aiohttp[version='>=2.3.5'] -> typing_extensions[version='>=3.6.5']
+pytest-black -> black[version='>=19.3b0'] -> typing_extensions[version='>=3.7.4']
+pytest-mypy -> mypy[version='>=0.500'] -> typing_extensions[version='>=3.7.4']
+pytest-notebook -> black -> typing_extensions[version='>=3.7.4']
+
+Package chardet conflicts for:
+pytest-check-links -> requests -> chardet[version='>=3.0.2,<3.1.0|>=3.0.2,<4']
+pytest-monitor -> requests -> chardet[version='>=3.0.2,<3.1.0|>=3.0.2,<4']
+pytest-selenium -> requests -> chardet[version='>=3.0.2,<3.1.0|>=3.0.2,<4']
+pytest-aiohttp -> aiohttp[version='>=2.3.5'] -> chardet[version='>=2.0,<4.0']
+pytest-base-url -> requests[version='>=2.9'] -> chardet[version='>=3.0.2,<3.1.0|>=3.0.2,<4']
+
+Package typing conflicts for:
+pytest-flake8 -> flake8[version='>=3.5'] -> typing
+pytest-notebook -> importlib_resources -> typing
+pytest-mypy -> mypy[version='>=0.500'] -> typing[version='>=3.5.3']
+
+Package yaml conflicts for:
+pytest-executable -> pyyaml[version='>=3,<6'] -> yaml[version='>=0.1.7,<0.2.0a0|>=0.2.2,<0.3.0a0']
+pytest-regressions -> pyyaml -> yaml[version='>=0.1.7,<0.2.0a0|>=0.2.2,<0.3.0a0']
+pytest-workflow -> pyyaml -> yaml[version='>=0.1.7,<0.2.0a0|>=0.2.2,<0.3.0a0']
+
+Package mypy_extensions conflicts for:
+pytest-mypy -> mypy[version='>=0.500'] -> mypy_extensions[version='>=0.4.0,<0.5.0|>=0.4.3,<0.5.0']
+pytest-notebook -> black -> mypy_extensions[version='>=0.4.3']
+pytest-black -> black[version='>=19.3b0'] -> mypy_extensions[version='>=0.4.3']
+
+Package pytest-shutil conflicts for:
+pytest-shutil
+pytest-virtualenv -> pytest-shutil
+
+Package wincertstore conflicts for:
+pytest-benchmark -> setuptools -> wincertstore[version='>=0.2']
+pytest-env -> setuptools -> wincertstore[version='>=0.2']
+pytest-socket -> setuptools -> wincertstore[version='>=0.2']
+pytest-clarity -> setuptools -> wincertstore[version='>=0.2']
+pytest-profiling -> setuptools -> wincertstore[version='>=0.2']
+pytest-runner -> setuptools -> wincertstore[version='>=0.2']
+pytest-cov -> setuptools -> wincertstore[version='>=0.2']
+pytest-flake8 -> setuptools -> wincertstore[version='>=0.2']
+pytest-spec -> setuptools -> wincertstore[version='>=0.2']
+pytest-base-url -> setuptools -> wincertstore[version='>=0.2']
+pytest-httpserver -> setuptools -> wincertstore[version='>=0.2']
+pytest-xdist -> setuptools -> wincertstore[version='>=0.2']
+
+Package dataclasses conflicts for:
+pytest-notebook -> black -> dataclasses[version='>=0.6']
+pytest-executable -> dataclasses
+pytest-black -> black[version='>=19.3b0'] -> dataclasses[version='>=0.6']
+
+Package black conflicts for:
+pytest-black -> black[version='>=19.3b0']
+pytest-notebook -> black
+
+Package appdirs conflicts for:
+pytest-notebook -> black -> appdirs
+pytest-black -> black[version='>=19.3b0'] -> appdirs
+pytest-localstack -> docker-py -> appdirs[version='>=1.4.3']
+
+Package pywin32 conflicts for:
+pytest-localstack -> docker-py -> pywin32=223
+pytest-notebook -> jupyter_client -> pywin32[version='>=1.0']
+
+Package singledispatch conflicts for:
+pytest-tornado -> tornado -> singledispatch
+pytest-tornasync -> tornado[version='>=5.0'] -> singledispatch
+pytest-pylint -> pylint[version='>=1.4.5'] -> singledispatch
+pytest-notebook -> importlib_resources -> singledispatch
+
+Package coverage conflicts for:
+pytest-cov -> coverage[version='>=4.4']
+pytest-smartcov -> coverage[version='>=3.6']
+pytest-astropy -> hypothesis -> coverage
+
+Package pytest-cache conflicts for:
+pytest-cache
+pytest-pep8 -> pytest-cache
+
+Package pytest-forked conflicts for:
+pytest-xdist -> pytest-forked
+pytest-forked
+
+Package pygments conflicts for:
+ipytest -> ipython -> pygments
+pytest-notebook -> nbconvert -> pygments
+pygments_pytest -> pygments
+pytest-check-links -> nbconvert -> pygments
+
+Package markupsafe conflicts for:
+pytest-executable -> jinja2[version='>=2.7,<3'] -> markupsafe[version='>=0.23']
+pytest-bdd -> mako -> markupsafe[version='>=0.9.2']
+pytest-cookies -> cookiecutter[version='>=1.4.0,<1.8.0'] -> markupsafe[version='<2.0.0']
+
+Package toml conflicts for:
+pytest-black -> toml
+pytest-notebook -> black -> toml[version='>=0.9.4']
+pytest-black -> black[version='>=19.3b0'] -> toml[version='>=0.9.4']
+pytest-pylint -> toml[version='>=0.7.1']
+
+Package scandir conflicts for:
+pytest-regressions -> pathlib2 -> scandir
+pytest-benchmark -> pathlib2 -> scandir
+
+Package pyyaml conflicts for:
+pytest-bandit -> bandit[version='>=1.4.0'] -> pyyaml[version='>=3.12|>=3.13']
+pytest-workflow -> pyyaml
+pytest-executable -> pyyaml[version='>=3,<6']
+pytest-regressions -> pyyaml
+
+Package pytest-metadata conflicts for:
+pytest-html -> pytest-metadata
+pytest-json-report -> pytest-metadata
+pytest-selenium -> pytest-html[version='>=1.14.0'] -> pytest-metadata
+
+Package configparser conflicts for:
+pytest-flake8 -> configparser
+pytest-pylint -> pylint[version='>=1.4.5'] -> configparser
+
+Package click conflicts for:
+pytest-black -> black[version='>=19.3b0'] -> click[version='>=6.5']
+pytest-flask -> flask -> click[version='>=2.0|>=5.1']
+pytest-cookies -> cookiecutter[version='>=1.4.0,<1.8.0'] -> click[version='>=5.0|>=7.0']
+pytest-notebook -> black -> click[version='>=6.5']
+
+Package urllib3 conflicts for:
+pytest-localstack -> botocore[version='>=1.4.31,!=1.4.45'] -> urllib3[version='>=1.20,<1.24|>=1.20,<1.25|>=1.20,<1.26']
+pytest-base-url -> requests[version='>=2.9'] -> urllib3[version='>=1.21.1,<1.22|>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1']
+pytest-monitor -> requests -> urllib3[version='>=1.21.1,<1.22|>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1']
+pytest-check-links -> requests -> urllib3[version='>=1.21.1,<1.22|>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1']
+pytest-selenium -> requests -> urllib3[version='>=1.21.1,<1.22|>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1']
+
+Package termcolor conflicts for:
+pytest-shutil -> termcolor
+pytest-virtualenv -> pytest-shutil -> termcolor
+pytest-clarity -> termcolor==1.1.0
+
+Package psutil conflicts for:
+pytest-astropy -> pytest-openfiles[version='>=0.3.1'] -> psutil
+pytest-openfiles -> psutil
+pytest-monitor -> psutil
+pytest-mypy -> mypy[version='>=0.500'] -> psutil[version='>=4.0|>=5.4.0,<5.5.0']
+
+Package ssl_match_hostname conflicts for:
+pytest-tornado -> tornado -> ssl_match_hostname
+pytest-localstack -> docker-py -> ssl_match_hostname[version='>=3.5']
+
+Package cachecontrol conflicts for:
+pytest-bdd -> pip -> cachecontrol
+python[version='>3.7.0'] -> pip -> cachecontrol
+
+Package pytest-html conflicts for:
+pytest-html
+pytest-selenium -> pytest-html[version='>=1.14.0']
+
+Package jupyter_client conflicts for:
+pytest-notebook -> jupyter_client
+pytest-notebook -> nbconvert -> jupyter_client[version='>=4.2']
+
+Package nbformat conflicts for:
+pytest-notebook -> nbconvert -> nbformat[version='>=4.4']
+pytest-notebook -> nbformat
+
+Package docutils conflicts for:
+pytest-check-links -> docutils
+pytest-benchmark -> statistics -> docutils[version='>=0.3']
+pytest-localstack -> botocore[version='>=1.4.31,!=1.4.45'] -> docutils[version='>=0.10|>=0.10,<0.15|>=0.10,<0.16']
+
+Package pyrsistent conflicts for:
+pytest-workflow -> jsonschema -> pyrsistent[version='>=0.14.0']
+pytest-notebook -> jsonschema -> pyrsistent[version='>=0.14.0']
+pytest-executable -> jsonschema[version='>=2,<4'] -> pyrsistent[version='>=0.14.0']
+
+Package pytest-doctestplus conflicts for:
+pytest-astropy -> pytest-doctestplus[version='>=0.1.2|>=0.1.3|>=0.2.0']
+pytest-doctestplus
+
+Package pyparsing conflicts for:
+ipytest -> packaging -> pyparsing[version='>=2.0.2']
+pytest-localstack -> docker-py -> pyparsing[version='>=2.2.0']
+
+Package mistune conflicts for:
+pytest-notebook -> nbconvert -> mistune[version='>0.6|>=0.7.4|>=0.8.1']
+pytest-check-links -> nbconvert -> mistune[version='>0.6|>=0.7.4|>=0.8.1']
+
+Package entrypoints conflicts for:
+pytest-flake8 -> flake8[version='>=3.5'] -> entrypoints[version='>=0.3.0,<0.4.0']
+pytest-notebook -> jupyter_client -> entrypoints[version='>=0.2.2']
+pytest-check-links -> nbconvert -> entrypoints[version='>=0.2.2']
+
+Package pytest-runner conflicts for:
+pytest-pylint -> pytest-runner
+pytest-runner
+
+Package gitpython conflicts for:
+pytest-notebook -> nbdime -> gitpython[version='!=2.1.4,!=2.1.5,!=2.1.6']
+pytest-bandit -> bandit[version='>=1.4.0'] -> gitpython[version='>=1.0.1']
+
+Package pytest-astropy-header conflicts for:
+pytest-astropy-header
+pytest-astropy -> pytest-astropy-header[version='>=0.1']The following specifications were found to be incompatible with your CUDA driver:
+
+  - feature:/win-64::__cuda==9.1=0
+  - feature:|@/win-64::__cuda==9.1=0
+
+Your installed CUDA driver is: 9.1
+
+
+UnsatisfiableError: The following specifications were found
+to be incompatible with the existing python installation in your environment:
+
+Specifications:
+
+  - pytest-arraydiff -> python[version='2.7.*|3.5.*|3.6.*|3.4.*']
+  - pytest-ast-back-to-python -> python[version='2.7.*|3.5.*|3.6.*']
+  - pytest-catchlog -> python[version='2.7.*|3.4.*|3.5.*|3.6.*']
+  - pytest-cpp -> python[version='2.7.*|3.5.*|3.6.*|3.4.*']
+  - pytest-datadir -> python[version='2.7.*|3.4.*|3.5.*|3.6.*']
+  - pytest-django -> python[version='2.7.*|3.4.*|3.5.*']
+  - pytest-flakes -> python[version='2.7.*|3.5.*|3.6.*|3.4.*']
+  - pytest-lazy-fixture -> python[version='2.7.*|3.5.*|3.6.*']
+  - pytest-localserver -> python[version='2.7.*|3.5.*|3.6.*|3.4.*']
+  - pytest-mccabe -> python[version='2.7.*|3.5.*|3.6.*']
+  - pytest-metadata -> python=3.4
+  - pytest-mpl -> python[version='2.7.*|3.4.*|3.5.*|3.6.*']
+  - pytest-qt -> python[version='2.7.*|3.5.*|3.6.*|3.4.*']
+  - pytest-remotedata -> python[version='2.7.*|3.5.*|3.6.*|3.4.*']
+  - pytest-services -> python[version='2.7.*|3.5.*|3.6.*|>=3.5,<3.6.0a0|3.4.*']
+  - pytest-sftpserver -> python[version='2.7.*|3.5.*|3.6.*|3.4.*']
+  - pytest-sugar -> python[version='2.7.*|3.5.*|3.6.*']
+  - pytest-testmon -> python[version='2.7.*|3.5.*|3.6.*']
+  - pytest-tornado5 -> python=2.7
+  - pytest-variables -> python=3.4
+  - pytest-watch -> python[version='3.4.*|>=3.5,<3.6.0a0']
+  - unittest2pytest -> python[version='2.7.*|3.4.*|3.5.*']
+
+Your python: python[version='>3.7.0']
+
+If python is on the left-most side of the chain, that's the version you've asked for.
+When python appears to the right, that indicates that the thing on the left is somehow
+not available for the python version you are constrained to. Note that conda will not
+change your python version to a different minor version unless you explicitly specify
+that.
+
+The following specifications were found to be incompatible with each other:
+
+Output in format: Requested package -> Available versions
+
+Package colorama conflicts for:
+pytest-benchmark -> pytest[version='>=2.6'] -> colorama
+pytest-cpp -> pytest -> colorama
+pytest-virtualenv -> pytest -> colorama
+pytest-console-scripts -> pytest[version='>=3.0.0'] -> colorama
+pytest-session2file -> pytest -> colorama
+pytest-json-report -> pytest[version='>=4.2.0'] -> colorama
+pytest-flake8 -> pytest[version='>=3.5'] -> colorama
+pytest-ordering -> pytest -> colorama
+pytest-mccabe -> pytest[version='>=2.3.dev14'] -> colorama
+pytest-regtest -> pytest[version='>=4.1.0'] -> colorama
+pytest-icdiff -> pytest -> colorama
+pytest-watch -> pytest[version='>=2.6.4'] -> colorama
+pytest-watch -> colorama[version='>=0.3.3']
+pytest-freezegun -> pytest[version='>=3.0.0'] -> colorama
+pytest-tldr -> pytest[version='>=3.5.0'] -> colorama
+ipytest -> ipython -> colorama
+pytest-forked -> pytest[version='>=2.6.0'] -> colorama
+pytest-shutil -> pytest -> colorama
+pytest-ignore-flaky -> pytest[version='>=2.7'] -> colorama
+pytest-testmon -> pytest[version='>=2.8.0,<4'] -> colorama
+pytest-astropy-header -> pytest[version='>=3.0'] -> colorama
+pytest-notebook -> nbdime -> colorama
+pytest-chalice -> pytest -> colorama
+pytest-black -> pytest[version='>=3.5.0'] -> colorama
+pytest-tornado5 -> pytest -> colorama
+pytest-tornado -> pytest -> colorama
+pytest-mpi -> pytest -> colorama
+pytest-json -> pytest[version='>=2.3'] -> colorama
+pytest-subtests -> pytest[version='>=4.4.0'] -> colorama
+pytest-django -> pytest[version='>=3.6'] -> colorama
+pytest-base-url -> pytest[version='>=2.7.3'] -> colorama
+pytest-fixture-config -> pytest -> colorama
+pytest-profiling -> pytest -> colorama
+pytest-check-links -> pytest[version='>=2.8'] -> colorama
+pytest-faulthandler -> pytest[version='>=5.0'] -> colorama
+pytest-cov -> pytest[version='>=3.6'] -> colorama
+pytest-raises -> pytest[version='>=3.2.2'] -> colorama
+pytest-instafail -> pytest[version='>=2.9'] -> colorama
+pytest-asyncio -> pytest[version='>=3.0.6'] -> colorama
+pytest-regressions -> pytest[version='>=3.5.0'] -> colorama
+pytest-metadata -> pytest[version='>=2.9.0'] -> colorama
+pytest-sugar -> pytest[version='>=2.9'] -> colorama
+pytest-bdd -> pip -> colorama
+python[version='>3.7.0'] -> pip -> colorama
+pytest-socket -> pytest[version='>=3.6.3'] -> colorama
+pytest-variables -> pytest[version='>=2.4.2'] -> colorama
+pytest-workflow -> pytest[version='>=5.4.0'] -> colorama
+pytest-repeat -> pytest[version='>=3.6'] -> colorama
+pytest-datadir -> pytest -> colorama
+pytest-env -> pytest[version='>=2.6.0'] -> colorama
+pytest-replay -> pytest[version='>=3.0.0'] -> colorama
+pytest-tornasync -> pytest[version='>=3.0'] -> colorama
+pytest-mock -> pytest -> colorama
+pytest-describe -> pytest[version='>=4.0.0'] -> colorama
+pytest-arraydiff -> pytest -> colorama
+pytest-services -> pytest -> colorama
+pytest-localstack -> pytest[version='>=3.3.0'] -> colorama
+pytest-django-haystack -> pytest -> colorama
+pytest-cram -> pytest[version='>=2.8'] -> colorama
+pytest-qt -> pytest -> colorama
+pytest-cache -> pytest[version='>=2.2'] -> colorama
+pytest-custom-exit-code -> pytest[version='>=4.0.2'] -> colorama
+pytest-flakes -> pytest[version='>=2.4.0'] -> colorama
+pytest-timeout -> pytest[version='>=3.6.0'] -> colorama
+pytest-mypy -> pytest[version='>=2.8'] -> colorama
+pytest-pylint -> pylint[version='>=2.3.0'] -> colorama
+pytest-bandit -> bandit[version='>=1.4.0'] -> colorama[version='>=0.3.9']
+pytest-ast-back-to-python -> pytest[version='>=3.0.0'] -> colorama
+pytest-picked -> pytest[version='>=3.5.0'] -> colorama
+pytest-rerunfailures -> pytest[version='>=4.4'] -> colorama
+pytest-remotedata -> pytest[version='>=3.1'] -> colorama
+pytest-mpl -> pytest -> colorama
+pytest-spec -> pytest -> colorama
+pytest-pep8 -> pytest[version='>=2.4.2'] -> colorama
+pytest-catchlog -> pytest -> colorama
+pytest-notification -> pytest[version='>=4'] -> colorama
+pytest-localserver -> pytest -> colorama
+pytest-astropy -> pytest[version='>=3.1'] -> colorama
+pytest-clarity -> pytest[version='>=3.5.0'] -> colorama
+pytest-smartcov -> pytest -> colorama
+pytest-selenium -> pytest[version='>=3.0'] -> colorama
+pytest-html -> pytest[version='>=5.0'] -> colorama
+pytest-cookies -> pytest[version='>=3.3.0,<6.0.0'] -> colorama
+pytest-runner -> pytest -> colorama
+pytest-azurepipelines -> pytest -> colorama
+pytest-openfiles -> pytest[version='>=3.1'] -> colorama
+pytest-csv -> pytest[version='>=4.4'] -> colorama
+pytest-lazy-fixture -> pytest[version='>=3.2.5'] -> colorama
+pytest-executable -> pytest[version='>=4.3,<6'] -> colorama
+pytest-codestyle -> pytest -> colorama
+pytest-doctestplus -> pytest[version='>=3.0'] -> colorama
+pytest-monitor -> pytest -> colorama
+pytest-xdist -> pytest[version='>=4.4.0'] -> colorama
+pytest-aiohttp -> pytest -> colorama
+
+Package setuptools conflicts for:
+pytest-forked -> pytest[version='>=2.6.0'] -> setuptools[version='>=40.0']
+pytest-flakes -> pyflakes -> setuptools[version='>=40.0']
+pytest-aiohttp -> pytest -> setuptools[version='>=40.0']
+pytest-virtualenv -> pytest -> setuptools[version='>=40.0']
+pytest-tornado5 -> pytest -> setuptools[version='>=40.0']
+pytest-tornasync -> pytest[version='>=3.0'] -> setuptools[version='>=40.0']
+pytest-ast-back-to-python -> pytest[version='>=3.0.0'] -> setuptools[version='>=40.0']
+pytest-notebook -> jsonschema -> setuptools[version='>=40.0']
+pytest-console-scripts -> pytest[version='>=3.0.0'] -> setuptools[version='>=40.0']
+pygments_pytest -> pygments -> setuptools
+pytest-tornado -> pytest -> setuptools[version='>=40.0']
+pytest-mpl -> setuptools
+pytest-runner -> setuptools
+pytest-services -> setuptools
+pytest-tldr -> pytest[version='>=3.5.0'] -> setuptools[version='>=40.0']
+pytest-monitor -> pytest -> setuptools[version='>=40.0']
+pytest-rerunfailures -> pytest[version='>=4.4'] -> setuptools[version='>=40.0']
+pytest-cookies -> pytest[version='>=3.3.0,<6.0.0'] -> setuptools[version='>=40.0']
+pytest-xdist -> pytest[version='>=4.4.0'] -> setuptools[version='>=40.0']
+pytest-localstack -> pytest[version='>=3.3.0'] -> setuptools[version='>=40.0']
+pytest-env -> pytest[version='>=2.6.0'] -> setuptools[version='>=40.0']
+pytest-codestyle -> pycodestyle -> setuptools[version='>=40.0']
+pytest-black -> pytest[version='>=3.5.0'] -> setuptools[version='>=40.0']
+pytest-bdd -> pip -> setuptools[version='>=40.0']
+pytest-ordering -> pytest -> setuptools[version='>=40.0']
+pytest-regtest -> pytest[version='>=4.1.0'] -> setuptools[version='>=40.0']
+pytest-clarity -> setuptools
+pytest-subtests -> pytest[version='>=4.4.0'] -> setuptools[version='>=40.0']
+pytest-mpl -> pytest -> setuptools[version='>=40.0']
+pytest-django -> pytest[version='>=3.6'] -> setuptools[version='>=40.0']
+pytest-executable -> jinja2[version='>=2.7,<3'] -> setuptools[version='>=40.0']
+pytest-sugar -> pytest[version='>=2.9'] -> setuptools[version='>=40.0']
+pytest-freezegun -> pytest[version='>=3.0.0'] -> setuptools[version='>=40.0']
+pytest-raises -> pytest[version='>=3.2.2'] -> setuptools[version='>=40.0']
+pytest-datadir -> pytest -> setuptools[version='>=40.0']
+pytest-arraydiff -> pytest -> setuptools[version='>=40.0']
+pytest-benchmark -> pytest[version='>=2.6'] -> setuptools[version='>=40.0']
+pytest-watch -> pytest[version='>=2.6.4'] -> setuptools[version='>=40.0']
+pytest-socket -> pytest[version='>=3.6.3'] -> setuptools[version='>=40.0']
+pytest-socket -> setuptools
+pytest-picked -> pytest[version='>=3.5.0'] -> setuptools[version='>=40.0']
+pytest-variables -> pytest[version='>=2.4.2'] -> setuptools[version='>=40.0']
+pytest-catchlog -> pytest -> setuptools[version='>=40.0']
+pytest-openfiles -> pytest[version='>=3.1'] -> setuptools[version='>=40.0']
+pytest-bandit -> bandit[version='>=1.4.0'] -> setuptools[version='>=40.0']
+pytest-fixture-config -> pytest -> setuptools[version='>=40.0']
+pytest-repeat -> pytest[version='>=3.6'] -> setuptools[version='>=40.0']
+pytest-notification -> pytest[version='>=4'] -> setuptools[version='>=40.0']
+pytest-cov -> setuptools
+pytest-describe -> pytest[version='>=4.0.0'] -> setuptools[version='>=40.0']
+pytest-clarity -> pytest[version='>=3.5.0'] -> setuptools[version='>=40.0']
+pytest-doctestplus -> pytest[version='>=3.0'] -> setuptools[version='>=40.0']
+pytest-cram -> pytest[version='>=2.8'] -> setuptools[version='>=40.0']
+pytest-faulthandler -> pytest[version='>=5.0'] -> setuptools[version='>=40.0']
+python[version='>3.7.0'] -> pip -> setuptools
+pytest-mypy -> pytest[version='>=2.8'] -> setuptools[version='>=40.0']
+pytest-base-url -> setuptools
+pytest-metadata -> pytest[version='>=2.9.0'] -> setuptools[version='>=40.0']
+pytest-localserver -> pytest -> setuptools[version='>=40.0']
+pytest-testmon -> pytest[version='>=2.8.0,<4'] -> setuptools[version='>=40.0']
+pytest-mpi -> pytest -> setuptools[version='>=40.0']
+pytest-replay -> pytest[version='>=3.0.0'] -> setuptools[version='>=40.0']
+pytest-qt -> pytest -> setuptools[version='>=40.0']
+pytest-runner -> pytest -> setuptools[version='>=40.0']
+pytest-astropy -> pytest[version='>=3.1'] -> setuptools[version='>=40.0']
+pytest-astropy-header -> pytest[version='>=3.0'] -> setuptools[version='>=40.0']
+pytest-cpp -> pytest -> setuptools[version='>=40.0']
+pytest-services -> pytest -> setuptools[version='>=40.0']
+pytest-mock -> pytest -> setuptools[version='>=40.0']
+pytest-icdiff -> pytest -> setuptools[version='>=40.0']
+pytest-timeout -> pytest[version='>=3.6.0'] -> setuptools[version='>=40.0']
+pytest-azurepipelines -> pytest -> setuptools[version='>=40.0']
+pytest-spec -> setuptools
+pytest-variables -> setuptools
+pytest-shutil -> pytest -> setuptools[version='>=40.0']
+pytest-base-url -> pytest[version='>=2.7.3'] -> setuptools[version='>=40.0']
+pytest-ignore-flaky -> pytest[version='>=2.7'] -> setuptools[version='>=40.0']
+pytest-json-report -> pytest[version='>=4.2.0'] -> setuptools[version='>=40.0']
+pytest-django-haystack -> pytest -> setuptools[version='>=40.0']
+pytest-env -> setuptools
+pytest-remotedata -> pytest[version='>=3.1'] -> setuptools[version='>=40.0']
+pytest-session2file -> pytest -> setuptools[version='>=40.0']
+pytest-html -> pytest[version='>=5.0'] -> setuptools[version='>=40.0']
+pytest-asyncio -> pytest[version='>=3.0.6'] -> setuptools[version='>=40.0']
+pytest-spec -> pytest -> setuptools[version='>=40.0']
+pytest-metadata -> setuptools
+pytest-profiling -> setuptools
+pytest-profiling -> pytest -> setuptools[version='>=40.0']
+pytest-json -> pytest[version='>=2.3'] -> setuptools[version='>=40.0']
+pytest-cov -> pytest[version='>=3.6'] -> setuptools[version='>=40.0']
+ipytest -> ipython -> setuptools[version='>=18.5|>=40.0']
+pytest-instafail -> pytest[version='>=2.9'] -> setuptools[version='>=40.0']
+pytest-mccabe -> setuptools
+pytest-cache -> pytest[version='>=2.2'] -> setuptools[version='>=40.0']
+pytest-selenium -> pytest[version='>=3.0'] -> setuptools[version='>=40.0']
+pytest-lazy-fixture -> pytest[version='>=3.2.5'] -> setuptools[version='>=40.0']
+pytest-flake8 -> setuptools
+pytest-flake8 -> flake8[version='>=3.5'] -> setuptools[version='>=30.0.0|>=40.0']
+pytest-smartcov -> pytest -> setuptools[version='>=40.0']
+pytest-csv -> pytest[version='>=4.4'] -> setuptools[version='>=40.0']
+pytest-chalice -> pytest -> setuptools[version='>=40.0']
+pytest-check-links -> pytest[version='>=2.8'] -> setuptools[version='>=40.0']
+pytest-regressions -> pytest[version='>=3.5.0'] -> setuptools[version='>=40.0']
+pytest-httpserver -> setuptools
+pytest-benchmark -> setuptools
+pytest-custom-exit-code -> pytest[version='>=4.0.2'] -> setuptools[version='>=40.0']
+pytest-pylint -> pytest[version='>=5.4'] -> setuptools[version='>=40.0']
+pytest-pep8 -> pytest[version='>=2.4.2'] -> setuptools[version='>=40.0']
+pytest-xdist -> setuptools
+pytest-workflow -> jsonschema -> setuptools[version='>=40.0']
+pytest-mccabe -> pytest[version='>=2.3.dev14'] -> setuptools[version='>=40.0']
+
+Package vs2015_runtime conflicts for:
+pytest-azurepipelines -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-notebook -> python[version='>=3.5'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-bandit -> python[version='>3'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-faulthandler -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+unittest2pytest -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-flakes -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-base-url -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-workflow -> python[version='>=3.6'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-localstack -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-ast-back-to-python -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-regressions -> python[version='>=3.6'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-remotedata -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+python[version='>3.7.0'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-sugar -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pygments_pytest -> python[version='>=3.6'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+python[version='>3.7.0'] -> vc[version='>=14.1,<15.0a0'] -> vs2015_runtime[version='>=14.0.25123,<15.0a0|>=14.0.25420|>=14.15.26706']
+pytest-repeat -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-html -> python[version='>=3.6'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-env -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-fixture-config -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-subtests -> python[version='>=3.5'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-virtualenv -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-codestyle -> python[version='>3'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-flask-sqlalchemy -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-qt -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-openfiles -> psutil -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-pylint -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-session2file -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-tldr -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-django -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-mock -> python[version='>=3.5'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-mpl -> matplotlib-base -> vs2015_runtime[version='14.00.23026.0|>=14.16.27012|>=14.16.27012,<15.0a0',build=0]
+pytest-xdist -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-flake8 -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-socket -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-console-scripts -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-replay -> python[version='>=3.6'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-csv -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-instafail -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-runner -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-forked -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-arraydiff -> numpy -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-cpp -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-raises -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-doctestplus -> numpy[version='>=1.10'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-tornado5 -> tornado -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-ignore-flaky -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-executable -> python[version='>=3.6'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-cache -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-shutil -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-datadir -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-variables -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-clarity -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-pep8 -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-timeout -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-monitor -> psutil -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-aiohttp -> aiohttp[version='>=2.3.5'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-mypy -> python[version='>=3.4'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-cookies -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-httpserver -> python[version='>=3.5'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-tornasync -> python[version='>=3.5'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-black -> python[version='>=3.6'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-ordering -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-astropy -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-smartcov -> coverage[version='>=3.6'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-cov -> coverage[version='>=4.4'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-mccabe -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-lazy-fixture -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-selenium -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-catchlog -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-freezegun -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-picked -> python[version='>=3.5'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-custom-exit-code -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-notification -> python[version='>=3.5'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-bdd -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-flask -> python[version='>=3.5'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-astropy-header -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-json -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-profiling -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-localserver -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+ipytest -> python[version='>=3.0'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-cram -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-tornado -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-rerunfailures -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-benchmark -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-asyncio -> python[version='>=3.7,<3.8.0a0'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-spec -> python[version='>=3.7,<3.8.0a0'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-icdiff -> python[version='>=3.6'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-django-haystack -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-sftpserver -> python=3.6 -> vs2015_runtime[version='>=14.16.27012,<15.0a0']
+pytest-regtest -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-chalice -> python[version='>=3.5'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-metadata -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-describe -> python[version='>=3.6'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-json-report -> python -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-check-links -> python[version='>=3.5'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-watch -> python[version='>=3.8,<3.9.0a0'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-testmon -> coverage[version='>=4'] -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+pytest-services -> psutil -> vs2015_runtime[version='>=14.16.27012|>=14.16.27012,<15.0a0']
+
+Package chardet conflicts for:
+pytest-base-url -> requests[version='>=2.9'] -> chardet[version='>=3.0.2,<3.1.0|>=3.0.2,<4']
+pytest-check-links -> requests -> chardet[version='>=3.0.2,<3.1.0|>=3.0.2,<4']
+pytest-services -> requests -> chardet[version='>=3.0.2,<3.1.0|>=3.0.2,<4']
+pytest-monitor -> requests -> chardet[version='>=3.0.2,<3.1.0|>=3.0.2,<4']
+pytest-selenium -> requests -> chardet[version='>=3.0.2,<3.1.0|>=3.0.2,<4']
+pytest-aiohttp -> aiohttp[version='>=2.3.5'] -> chardet[version='>=2.0,<4.0']
+
+Package openssl conflicts for:
+pytest-tldr -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-shutil -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-mock -> python[version='>=3.5'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-mypy -> python[version='>=3.4'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-openfiles -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-localstack -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-mpl -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-timeout -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-regressions -> python[version='>=3.6'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+unittest2pytest -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-metadata -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-subtests -> python[version='>=3.5'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-picked -> python[version='>=3.5'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-httpserver -> python[version='>=3.5'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-cov -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-freezegun -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-describe -> python[version='>=3.6'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-cache -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-ordering -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pygments_pytest -> python[version='>=3.6'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-cram -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-variables -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-django -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-catchlog -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-flake8 -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-flask -> python[version='>=3.5'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-regtest -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-cpp -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-html -> python[version='>=3.6'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-localserver -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-watch -> python[version='>=3.8,<3.9.0a0'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+python[version='>3.7.0'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-sugar -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-check-links -> python[version='>=3.5'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-chalice -> python[version='>=3.5'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-arraydiff -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-repeat -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-lazy-fixture -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-bandit -> python[version='>3'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-tornado -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-flask-sqlalchemy -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-qt -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-notebook -> python[version='>=3.5'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-selenium -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-astropy-header -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-rerunfailures -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-django-haystack -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-icdiff -> python[version='>=3.6'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-base-url -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-services -> python[version='>=3.8,<3.9.0a0'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-workflow -> python[version='>=3.6'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-mccabe -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-black -> python[version='>=3.6'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-cookies -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-executable -> python[version='>=3.6'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-datadir -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-notification -> python[version='>=3.5'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-monitor -> python[version='>=3.6'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-json -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-ignore-flaky -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-spec -> python[version='>=3.7,<3.8.0a0'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-console-scripts -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-flakes -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-aiohttp -> python[version='>=3.4'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-testmon -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-replay -> python[version='>=3.6'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-smartcov -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-astropy -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-fixture-config -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-virtualenv -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-pylint -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-faulthandler -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-instafail -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-codestyle -> python[version='>3'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-clarity -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-profiling -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-remotedata -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-bdd -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-env -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-raises -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-runner -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-xdist -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-custom-exit-code -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-session2file -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-azurepipelines -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-asyncio -> python[version='>=3.7,<3.8.0a0'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+ipytest -> python[version='>=3.0'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-tornasync -> python[version='>=3.5'] -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-benchmark -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-socket -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-csv -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-pep8 -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-ast-back-to-python -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-json-report -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-forked -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytest-doctestplus -> python -> openssl[version='>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+
+Package vs2008_runtime conflicts for:
+pytest-cookies -> python -> vs2008_runtime
+pytest-mpl -> python -> vs2008_runtime
+pytest-django -> python -> vs2008_runtime
+pytest-pylint -> python -> vs2008_runtime
+pytest-html -> python -> vs2008_runtime
+pytest-regtest -> python -> vs2008_runtime
+pytest-timeout -> python -> vs2008_runtime
+pytest-ignore-flaky -> python -> vs2008_runtime
+pytest-localserver -> python -> vs2008_runtime
+pytest-csv -> python -> vs2008_runtime
+pytest-base-url -> python -> vs2008_runtime
+pytest-flakes -> python -> vs2008_runtime
+pytest-asyncio -> python=2.7 -> vs2008_runtime
+pytest-sugar -> python -> vs2008_runtime
+pytest-json-report -> python -> vs2008_runtime
+pytest-ordering -> python -> vs2008_runtime
+pytest-cov -> python -> vs2008_runtime
+pytest-flask -> python -> vs2008_runtime
+pytest-faulthandler -> python -> vs2008_runtime
+pytest-variables -> python -> vs2008_runtime
+pytest-astropy-header -> python -> vs2008_runtime
+pytest-ast-back-to-python -> python -> vs2008_runtime
+pytest-metadata -> python -> vs2008_runtime
+pytest-repeat -> python -> vs2008_runtime
+pytest-localstack -> python -> vs2008_runtime
+pytest-flake8 -> python -> vs2008_runtime
+pytest-astropy -> python -> vs2008_runtime
+pytest-testmon -> python -> vs2008_runtime
+pytest-xdist -> python -> vs2008_runtime
+pytest-azurepipelines -> python -> vs2008_runtime
+pytest-freezegun -> python -> vs2008_runtime
+pytest-regressions -> python[version='>=2.7,<2.8.0a0'] -> vs2008_runtime
+pytest-cram -> python -> vs2008_runtime
+pytest-services -> python[version='>=2.7,<2.8.0a0'] -> vs2008_runtime
+pytest-rerunfailures -> python -> vs2008_runtime
+pytest-lazy-fixture -> python -> vs2008_runtime
+pytest-tldr -> python -> vs2008_runtime
+pytest-flask-sqlalchemy -> python -> vs2008_runtime
+pytest-raises -> python -> vs2008_runtime
+pytest-pep8 -> python -> vs2008_runtime
+pytest-instafail -> python -> vs2008_runtime
+pytest-shutil -> python -> vs2008_runtime
+pytest-remotedata -> python -> vs2008_runtime
+pytest-mock -> python[version='>=2.7,<2.8.0a0'] -> vs2008_runtime
+pytest-mccabe -> python -> vs2008_runtime
+pytest-tornado5 -> python=2.7 -> vs2008_runtime
+pytest-custom-exit-code -> python -> vs2008_runtime
+pytest-fixture-config -> python -> vs2008_runtime
+pytest-forked -> python -> vs2008_runtime
+pytest-describe -> python -> vs2008_runtime
+pytest-selenium -> python -> vs2008_runtime
+pytest-smartcov -> python -> vs2008_runtime
+unittest2pytest -> python -> vs2008_runtime
+pytest-doctestplus -> python -> vs2008_runtime
+pytest-spec -> python[version='>=2.7,<2.8.0a0'] -> vs2008_runtime
+pytest-benchmark -> python -> vs2008_runtime
+pytest-openfiles -> python -> vs2008_runtime
+pytest-console-scripts -> python -> vs2008_runtime
+pytest-runner -> python -> vs2008_runtime
+pytest-cache -> python -> vs2008_runtime
+pytest-datadir -> python -> vs2008_runtime
+pytest-bdd -> python -> vs2008_runtime
+pytest-watch -> python[version='>=2.7,<2.8.0a0'] -> vs2008_runtime
+pytest-sftpserver -> python=2.7 -> vs2008_runtime
+pytest-cpp -> python -> vs2008_runtime
+pytest-catchlog -> python -> vs2008_runtime
+pytest-virtualenv -> python -> vs2008_runtime
+pytest-profiling -> python -> vs2008_runtime
+pytest-session2file -> python -> vs2008_runtime
+pytest-env -> python -> vs2008_runtime
+pytest-qt -> python -> vs2008_runtime
+pytest-clarity -> python -> vs2008_runtime
+pytest-arraydiff -> python -> vs2008_runtime
+pytest-socket -> python -> vs2008_runtime
+pytest-tornado -> python -> vs2008_runtime
+pytest-json -> python -> vs2008_runtime
+pytest-django-haystack -> python -> vs2008_runtime
+
+Package python_abi conflicts for:
+pytest-cookies -> pytest[version='>=3.3.0,<6.0.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-clarity -> pytest[version='>=3.5.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-subtests -> pytest[version='>=4.4.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-mccabe -> pytest[version='>=2.3.dev14'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-sugar -> pytest[version='>=2.9'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-lazy-fixture -> pytest[version='>=3.2.5'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-xdist -> pytest[version='>=4.4.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-cpp -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+ipytest -> ipython -> python_abi[version='3.6.*|3.7.*|3.8.*',build='*_cp36m|*_cp37m|*_cp38']
+pytest-black -> pytest[version='>=3.5.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-flakes -> pytest[version='>=2.4.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-csv -> pytest[version='>=4.4'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-runner -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-picked -> pytest[version='>=3.5.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-base-url -> pytest[version='>=2.7.3'] -> python_abi[version='2.7.*|3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38|*_cp27m']
+pytest-shutil -> mock -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp37m|*_cp36m|*_cp38|*_cp27m']
+pytest-session2file -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-icdiff -> pprintpp -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp27m|*_cp36m|*_cp37m|*_cp38']
+pytest-freezegun -> pytest[version='>=3.0.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-variables -> pytest[version='>=2.4.2'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-monitor -> psutil -> python_abi[version='2.7.*|3.8.*|3.6.*|3.7.*',build='*_cp37m|*_cp36m|*_cp27m|*_cp38']
+pytest-check-links -> docutils -> python_abi[version='2.7.*|3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp27m|*_cp36m|*_cp38']
+pytest-json-report -> pytest[version='>=4.2.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-timeout -> pytest[version='>=3.6.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-describe -> pytest[version='>=4.0.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-notebook -> importlib_resources -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp27m|*_cp36m|*_cp37m|*_cp38']
+pytest-azurepipelines -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-rerunfailures -> pytest[version='>=4.4'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-tornado -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-watch -> pytest[version='>=2.6.4'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-aiohttp -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-flake8 -> python_abi[version='2.7.*|3.8.*|3.7.*|3.6.*',build='*_cp36m|*_cp37m|*_cp27m|*_cp38']
+pytest-smartcov -> coverage[version='>=3.6'] -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp37m|*_cp36m|*_cp38|*_cp27m']
+pytest-mock -> python_abi[version='2.7.*|3.7.*|3.8.*|3.6.*',build='*_cp36m|*_cp37m|*_cp27m|*_cp38']
+pytest-regtest -> pytest[version='>=4.1.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-mypy -> pytest[version='>=2.8'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-localserver -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-virtualenv -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-arraydiff -> numpy -> python_abi[version='3.6.*|3.7.*|3.8.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-bandit -> pytest[version='>=3.5.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-django -> pytest[version='>=3.6'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-executable -> jsonschema[version='>=2,<4'] -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp36m|*_cp27m|*_cp37m|*_cp38']
+pytest-cache -> pytest[version='>=2.2'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-console-scripts -> mock[version='>=2.0.0'] -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp37m|*_cp36m|*_cp38|*_cp27m']
+pytest-tornasync -> pytest[version='>=3.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-datadir -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-html -> pytest[version='>=5.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-services -> psutil -> python_abi[version='2.7.*|3.8.*|3.6.*|3.7.*',build='*_cp37m|*_cp36m|*_cp27m|*_cp38']
+pytest-regressions -> pytest[version='>=3.5.0'] -> python_abi[version='2.7.*|3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38|*_cp27m']
+pytest-doctestplus -> numpy[version='>=1.10'] -> python_abi[version='3.6.*|3.7.*|3.8.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-json -> pytest[version='>=2.3'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-custom-exit-code -> pytest[version='>=4.0.2'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-chalice -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-catchlog -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-workflow -> jsonschema -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp36m|*_cp27m|*_cp37m|*_cp38']
+pytest-env -> pytest[version='>=2.6.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-selenium -> pytest[version='>=3.0'] -> python_abi[version='2.7.*|3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38|*_cp27m']
+pytest-django-haystack -> django -> python_abi[version='3.6.*|3.7.*|3.8.*',build='*_cp36m|*_cp37m|*_cp38']
+pytest-notification -> pytest[version='>=4'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-replay -> pytest[version='>=3.0.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-repeat -> pytest[version='>=3.6'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-astropy -> pytest[version='>=3.1'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-mpi -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-qt -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-raises -> pytest[version='>=3.2.2'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-codestyle -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-localstack -> docker-py -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp37m|*_cp36m|*_cp38|*_cp27m']
+pytest-instafail -> pytest[version='>=2.9'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-mpl -> matplotlib-base -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp37m|*_cp36m|*_cp38|*_cp27m']
+pytest-faulthandler -> pytest[version='>=5.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-profiling -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-bdd -> parse_type -> python_abi[version='2.7.*|3.7.*|3.8.*|3.6.*',build='*_cp36m|*_cp37m|*_cp38|*_cp27m']
+pytest-pep8 -> pytest[version='>=2.4.2'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-socket -> pytest[version='>=3.6.3'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-cov -> coverage[version='>=4.4'] -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp37m|*_cp36m|*_cp38|*_cp27m']
+pytest-tldr -> pytest[version='>=3.5.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-ast-back-to-python -> pytest[version='>=3.0.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-remotedata -> pytest[version='>=3.1'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-fixture-config -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-metadata -> pytest[version='>=2.9.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-astropy-header -> pytest[version='>=3.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-openfiles -> psutil -> python_abi[version='2.7.*|3.8.*|3.6.*|3.7.*',build='*_cp37m|*_cp36m|*_cp27m|*_cp38']
+pytest-cram -> pytest[version='>=2.8'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-tornado5 -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-pylint -> pylint[version='>=2.3.0'] -> python_abi[version='3.6.*|3.7.*|3.8.*',build='*_cp36m|*_cp37m|*_cp38']
+pytest-ordering -> pytest -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-ignore-flaky -> pytest[version='>=2.7'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-asyncio -> python_abi[version='3.6.*|3.7.*|3.8.*',build='*_cp36m|*_cp37m|*_cp38']
+pytest-testmon -> coverage[version='>=4'] -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp37m|*_cp36m|*_cp38|*_cp27m']
+pytest-httpserver -> setuptools -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+pytest-spec -> mock[version='>=1.0.1'] -> python_abi[version='2.7.*|3.6.*|3.7.*|3.8.*',build='*_cp37m|*_cp36m|*_cp38|*_cp27m']
+pytest-benchmark -> python_abi[version='2.7.*|3.7.*|3.8.*|3.6.*',build='*_cp36m|*_cp37m|*_cp27m|*_cp38']
+pytest-forked -> pytest[version='>=2.6.0'] -> python_abi[version='3.6.*|3.8.*|3.7.*',build='*_cp37m|*_cp36m|*_cp38']
+
+Package attrs conflicts for:
+pytest-cram -> pytest[version='>=2.8'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-raises -> pytest[version='>=3.2.2'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-arraydiff -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-base-url -> pytest[version='>=2.7.3'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-virtualenv -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-regtest -> pytest[version='>=4.1.0'] -> attrs[version='>=17.4.0']
+pytest-cov -> pytest[version='>=3.6'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-icdiff -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-flakes -> pytest[version='>=2.4.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-fixture-config -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-tldr -> pytest[version='>=3.5.0'] -> attrs[version='>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-subtests -> pytest[version='>=4.4.0'] -> attrs[version='>=17.4.0']
+pytest-doctestplus -> pytest[version='>=3.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-ast-back-to-python -> pytest[version='>=3.0.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-csv -> pytest[version='>=4.4'] -> attrs[version='>=17.4.0']
+pytest-clarity -> pytest[version='>=3.5.0'] -> attrs[version='>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-aiohttp -> aiohttp[version='>=2.3.5'] -> attrs[version='>=17.2.0|>=17.3.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-json-report -> pytest[version='>=4.2.0'] -> attrs[version='>=17.4.0']
+pytest-astropy -> hypothesis -> attrs[version='>=16.0.0|>=19.2.0|>=17.4.0|>=17.4.0,<=19.1.0|>=17.2.0']
+pytest-tornado5 -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-profiling -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-workflow -> jsonschema -> attrs[version='>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-notebook -> black -> attrs[version='>=17.4.0,<=19.1.0|>=17.4.0|>=18.1.0']
+pytest-flake8 -> pytest[version='>=3.5'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-variables -> pytest[version='>=2.4.2'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-sugar -> pytest[version='>=2.9'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-asyncio -> pytest[version='>=3.0.6'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-json -> pytest[version='>=2.3'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-selenium -> pytest[version='>=3.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-cookies -> pytest[version='>=3.3.0,<6.0.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-tornasync -> pytest[version='>=3.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-socket -> pytest[version='>=3.6.3'] -> attrs[version='>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-session2file -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-azurepipelines -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-openfiles -> pytest[version='>=3.1'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-mccabe -> pytest[version='>=2.3.dev14'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-repeat -> pytest[version='>=3.6'] -> attrs[version='>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-benchmark -> pytest[version='>=2.6'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-bdd -> pytest[version='>=3.0.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-services -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-testmon -> pytest[version='>=2.8.0,<4'] -> attrs[version='>=17.2.0|>=17.4.0']
+pytest-notification -> pytest[version='>=4'] -> attrs[version='>=17.4.0|>=17.4.0,<=19.1.0']
+ipytest -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-xdist -> pytest[version='>=4.4.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-picked -> pytest[version='>=3.5.0'] -> attrs[version='>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-notebook -> attrs
+pytest-mpi -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-cache -> pytest[version='>=2.2'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-tornado -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-localstack -> pytest[version='>=3.3.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-qt -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-regressions -> pytest[version='>=3.5.0'] -> attrs[version='>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-bandit -> pytest[version='>=3.5.0'] -> attrs[version='>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-mpl -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-freezegun -> pytest[version='>=3.0.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-chalice -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-ordering -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-pylint -> pytest[version='>=5.4'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-rerunfailures -> pytest[version='>=4.4'] -> attrs[version='>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-remotedata -> pytest[version='>=3.1'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-monitor -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-timeout -> pytest[version='>=3.6.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-check-links -> pytest[version='>=2.8'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-mypy -> pytest[version='>=2.8'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-console-scripts -> pytest[version='>=3.0.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-metadata -> pytest[version='>=2.9.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-django-haystack -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-forked -> pytest[version='>=2.6.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-shutil -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-describe -> pytest[version='>=4.0.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-pep8 -> pytest[version='>=2.4.2'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-django -> pytest[version='>=3.6'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-datadir -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-mock -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-ignore-flaky -> pytest[version='>=2.7'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-faulthandler -> pytest[version='>=5.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-catchlog -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-replay -> pytest[version='>=3.0.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-cpp -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-localserver -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-runner -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-lazy-fixture -> pytest[version='>=3.2.5'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-custom-exit-code -> pytest[version='>=4.0.2'] -> attrs[version='>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-black -> black[version='>=19.3b0'] -> attrs[version='>=17.4.0,<=19.1.0|>=17.4.0|>=18.1.0']
+pytest-codestyle -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-smartcov -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-env -> pytest[version='>=2.6.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-spec -> pytest -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-html -> pytest[version='>=5.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-astropy-header -> pytest[version='>=3.0'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-executable -> jsonschema[version='>=2,<4'] -> attrs[version='>=17.4.0']
+pytest-watch -> pytest[version='>=2.6.4'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+pytest-instafail -> pytest[version='>=2.9'] -> attrs[version='>=17.2.0|>=17.4.0|>=17.4.0,<=19.1.0']
+
+Package ca-certificates conflicts for:
+pytest-benchmark -> python -> ca-certificates
+pytest-tornado5 -> python=2.7 -> ca-certificates
+pytest-custom-exit-code -> python -> ca-certificates
+pytest-metadata -> python -> ca-certificates
+pytest-virtualenv -> python -> ca-certificates
+pytest-django-haystack -> python -> ca-certificates
+python[version='>3.7.0'] -> openssl[version='>=1.1.1g,<1.1.2a'] -> ca-certificates
+pytest-flakes -> python -> ca-certificates
+pytest-azurepipelines -> python -> ca-certificates
+pytest-xdist -> python -> ca-certificates
+pytest-catchlog -> python -> ca-certificates
+pytest-json -> python -> ca-certificates
+pytest-ignore-flaky -> python -> ca-certificates
+pytest-watch -> python[version='>=2.7,<2.8.0a0'] -> ca-certificates
+pytest-mock -> python[version='>=2.7,<2.8.0a0'] -> ca-certificates
+pytest-cram -> python -> ca-certificates
+pytest-regtest -> python -> ca-certificates
+pytest-bdd -> python -> ca-certificates
+pytest-doctestplus -> python -> ca-certificates
+pytest-raises -> python -> ca-certificates
+pytest-flask -> python -> ca-certificates
+pytest-localserver -> python -> ca-certificates
+pytest-env -> python -> ca-certificates
+pytest-mpl -> python -> ca-certificates
+pytest-repeat -> python -> ca-certificates
+pytest-csv -> python -> ca-certificates
+pytest-describe -> python -> ca-certificates
+pytest-arraydiff -> python -> ca-certificates
+pytest-regressions -> python[version='>=2.7,<2.8.0a0'] -> ca-certificates
+pytest-remotedata -> python -> ca-certificates
+pytest-base-url -> python -> ca-certificates
+pytest-spec -> python[version='>=2.7,<2.8.0a0'] -> ca-certificates
+pytest-testmon -> python -> ca-certificates
+pytest-django -> python -> ca-certificates
+pytest-openfiles -> python -> ca-certificates
+pytest-selenium -> python -> ca-certificates
+pytest-variables -> python -> ca-certificates
+pytest-instafail -> python -> ca-certificates
+pytest-clarity -> python -> ca-certificates
+unittest2pytest -> python -> ca-certificates
+pytest-astropy-header -> python -> ca-certificates
+pytest-tldr -> python -> ca-certificates
+pytest-tornado -> python -> ca-certificates
+pytest-shutil -> python -> ca-certificates
+pytest-qt -> python -> ca-certificates
+pytest-mccabe -> python -> ca-certificates
+pytest-sugar -> python -> ca-certificates
+pytest-session2file -> python -> ca-certificates
+pytest-rerunfailures -> python -> ca-certificates
+pytest-profiling -> python -> ca-certificates
+pytest-forked -> python -> ca-certificates
+pytest-html -> python -> ca-certificates
+pytest-smartcov -> python -> ca-certificates
+pytest-cookies -> python -> ca-certificates
+pytest-pep8 -> python -> ca-certificates
+pytest-astropy -> python -> ca-certificates
+pytest-timeout -> python -> ca-certificates
+pytest-lazy-fixture -> python -> ca-certificates
+pytest-fixture-config -> python -> ca-certificates
+pytest-flake8 -> python -> ca-certificates
+pytest-json-report -> python -> ca-certificates
+pytest-freezegun -> python -> ca-certificates
+pytest-socket -> python -> ca-certificates
+pytest-flask-sqlalchemy -> python -> ca-certificates
+pytest-asyncio -> python=2.7 -> ca-certificates
+pytest-cache -> python -> ca-certificates
+pytest-cpp -> python -> ca-certificates
+pytest-pylint -> python -> ca-certificates
+pytest-ast-back-to-python -> python -> ca-certificates
+pytest-console-scripts -> python -> ca-certificates
+pytest-localstack -> python -> ca-certificates
+pytest-datadir -> python -> ca-certificates
+pytest-cov -> python -> ca-certificates
+pytest-sftpserver -> python=2.7 -> ca-certificates
+pytest-faulthandler -> python -> ca-certificates
+pytest-services -> python[version='>=2.7,<2.8.0a0'] -> ca-certificates
+pytest-runner -> python -> ca-certificates
+pytest-ordering -> python -> ca-certificates
+
+Package packaging conflicts for:
+pytest-env -> pytest[version='>=2.6.0'] -> packaging
+pytest-tornasync -> pytest[version='>=3.0'] -> packaging
+pytest-codestyle -> pytest -> packaging
+pytest-remotedata -> pytest[version='>=3.1'] -> packaging
+pytest-black -> pytest[version='>=3.5.0'] -> packaging
+pytest-virtualenv -> pytest -> packaging
+pytest-mccabe -> pytest[version='>=2.3.dev14'] -> packaging
+pytest-check-links -> pytest[version='>=2.8'] -> packaging
+pytest-lazy-fixture -> pytest[version='>=3.2.5'] -> packaging
+pytest-mpi -> pytest -> packaging
+pytest-raises -> pytest[version='>=3.2.2'] -> packaging
+pytest-workflow -> pytest[version='>=5.4.0'] -> packaging
+pytest-aiohttp -> pytest -> packaging
+pytest-datadir -> pytest -> packaging
+pytest-cookies -> pytest[version='>=3.3.0,<6.0.0'] -> packaging
+pytest-tornado5 -> pytest -> packaging
+pytest-tornado -> pytest -> packaging
+pytest-base-url -> pytest[version='>=2.7.3'] -> packaging
+pytest-picked -> pytest[version='>=3.5.0'] -> packaging
+pytest-rerunfailures -> pytest[version='>=4.4'] -> packaging
+pytest-sugar -> pytest[version='>=2.9'] -> packaging
+pytest-ast-back-to-python -> pytest[version='>=3.0.0'] -> packaging
+pytest-icdiff -> pytest -> packaging
+pytest-runner -> pytest -> packaging
+pytest-replay -> pytest[version='>=3.0.0'] -> packaging
+pytest-localstack -> docker-py -> packaging[version='>=16.8']
+pytest-custom-exit-code -> pytest[version='>=4.0.2'] -> packaging
+pytest-selenium -> pytest[version='>=3.0'] -> packaging
+pytest-executable -> pytest[version='>=4.3,<6'] -> packaging
+pytest-cache -> pytest[version='>=2.2'] -> packaging
+pytest-services -> pytest -> packaging
+pytest-clarity -> pytest[version='>=3.5.0'] -> packaging
+pytest-console-scripts -> pytest[version='>=3.0.0'] -> packaging
+pytest-openfiles -> pytest[version='>=3.1'] -> packaging
+pytest-cov -> pytest[version='>=3.6'] -> packaging
+pytest-sugar -> packaging[version='>=14.1']
+pytest-html -> pytest[version='>=5.0'] -> packaging
+pytest-watch -> pytest[version='>=2.6.4'] -> packaging
+pytest-django -> pytest[version='>=3.6'] -> packaging
+pytest-mypy -> pytest[version='>=2.8'] -> packaging
+pytest-azurepipelines -> pytest -> packaging
+pytest-json-report -> pytest[version='>=4.2.0'] -> packaging
+pytest-subtests -> pytest[version='>=4.4.0'] -> packaging
+pytest-shutil -> pytest -> packaging
+pytest-metadata -> pytest[version='>=2.9.0'] -> packaging
+pytest-monitor -> pytest -> packaging
+pytest-catchlog -> pytest -> packaging
+pytest-session2file -> pytest -> packaging
+pytest-astropy-header -> pytest[version='>=3.0'] -> packaging
+pytest-repeat -> pytest[version='>=3.6'] -> packaging
+pytest-django-haystack -> pytest -> packaging
+pytest-bandit -> pytest[version='>=3.5.0'] -> packaging
+pytest-flakes -> pytest[version='>=2.4.0'] -> packaging
+pytest-json -> pytest[version='>=2.3'] -> packaging
+pytest-regressions -> pytest[version='>=3.5.0'] -> packaging
+pytest-notebook -> pytest[version='>=3.5.0'] -> packaging
+pytest-doctestplus -> pytest[version='>=3.0'] -> packaging
+pytest-timeout -> pytest[version='>=3.6.0'] -> packaging
+pytest-flake8 -> pytest[version='>=3.5'] -> packaging
+pytest-profiling -> pytest -> packaging
+pytest-cpp -> pytest -> packaging
+pytest-variables -> pytest[version='>=2.4.2'] -> packaging
+pytest-spec -> pytest -> packaging
+pytest-socket -> pytest[version='>=3.6.3'] -> packaging
+pytest-localserver -> pytest -> packaging
+pytest-csv -> pytest[version='>=4.4'] -> packaging
+pytest-bdd -> pip -> packaging
+pytest-ordering -> pytest -> packaging
+pytest-mock -> pytest -> packaging
+pytest-astropy -> pytest[version='>=3.1'] -> packaging
+pytest-pylint -> pytest[version='>=5.4'] -> packaging
+pytest-cram -> pytest[version='>=2.8'] -> packaging
+pytest-arraydiff -> pytest -> packaging
+python[version='>3.7.0'] -> pip -> packaging
+pytest-mpl -> pytest -> packaging
+pytest-xdist -> pytest[version='>=4.4.0'] -> packaging
+pytest-freezegun -> pytest[version='>=3.0.0'] -> packaging
+pytest-pep8 -> pytest[version='>=2.4.2'] -> packaging
+pytest-regtest -> pytest[version='>=4.1.0'] -> packaging
+pytest-tldr -> pytest[version='>=3.5.0'] -> packaging
+pytest-faulthandler -> pytest[version='>=5.0'] -> packaging
+pytest-asyncio -> pytest[version='>=3.0.6'] -> packaging
+pytest-qt -> pytest -> packaging
+ipytest -> packaging
+pytest-notification -> pytest[version='>=4'] -> packaging
+pytest-forked -> pytest[version='>=2.6.0'] -> packaging
+pytest-smartcov -> pytest -> packaging
+pytest-ignore-flaky -> pytest[version='>=2.7'] -> packaging
+pytest-fixture-config -> pytest -> packaging
+pytest-benchmark -> pytest[version='>=2.6'] -> packaging
+pytest-describe -> pytest[version='>=4.0.0'] -> packaging
+pytest-chalice -> pytest -> packaging
+pytest-instafail -> pytest[version='>=2.9'] -> packaging
+
+Package wincertstore conflicts for:
+pytest-runner -> setuptools -> wincertstore[version='>=0.2']
+pytest-variables -> setuptools -> wincertstore[version='>=0.2']
+pytest-base-url -> setuptools -> wincertstore[version='>=0.2']
+pytest-profiling -> setuptools -> wincertstore[version='>=0.2']
+pytest-mpl -> setuptools -> wincertstore[version='>=0.2']
+pytest-spec -> setuptools -> wincertstore[version='>=0.2']
+pytest-httpserver -> setuptools -> wincertstore[version='>=0.2']
+pytest-mccabe -> setuptools -> wincertstore[version='>=0.2']
+pytest-xdist -> setuptools -> wincertstore[version='>=0.2']
+pytest-env -> setuptools -> wincertstore[version='>=0.2']
+pytest-metadata -> setuptools -> wincertstore[version='>=0.2']
+pytest-benchmark -> setuptools -> wincertstore[version='>=0.2']
+pytest-socket -> setuptools -> wincertstore[version='>=0.2']
+pytest-services -> setuptools -> wincertstore[version='>=0.2']
+pytest-flake8 -> setuptools -> wincertstore[version='>=0.2']
+pytest-clarity -> setuptools -> wincertstore[version='>=0.2']
+pytest-cov -> setuptools -> wincertstore[version='>=0.2']
+
+Package functools32 conflicts for:
+pytest-notebook -> jsonschema -> functools32
+pytest-flake8 -> flake8[version='>=3.5'] -> functools32
+pytest-executable -> jsonschema[version='>=2,<4'] -> functools32
+pytest-workflow -> jsonschema -> functools32
+pytest-mpl -> matplotlib-base -> functools32
+
+Package traitlets conflicts for:
+pytest-check-links -> nbconvert -> traitlets[version='>=4.1|>=4.2']
+pytest-notebook -> jupyter_client -> traitlets[version='>=4.1|>=4.2']
+ipytest -> ipython -> traitlets[version='>=4.2']
+
+Package certifi conflicts for:
+pytest-benchmark -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-xdist -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-mpl -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-runner -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-profiling -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-socket -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-env -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-tornado -> tornado -> certifi
+pytest-check-links -> requests -> certifi[version='>=2017.4.17']
+pytest-spec -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-cov -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-monitor -> requests -> certifi[version='>=2017.4.17']
+pytest-services -> requests -> certifi[version='>=2016.09|>=2016.9.26|>=2017.4.17']
+pytest-mccabe -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-metadata -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-clarity -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-selenium -> requests -> certifi[version='>=2017.4.17']
+pytest-httpserver -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-flake8 -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-base-url -> requests[version='>=2.9'] -> certifi[version='>=2016.09|>=2016.9.26|>=2017.4.17']
+pytest-variables -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']
+pytest-tornado5 -> tornado -> certifi
+
+Package six conflicts for:
+pytest-metadata -> pytest[version='>=2.9.0'] -> six[version='>=1.10.0']
+pytest-regressions -> six
+pytest-faulthandler -> pytest -> six[version='>=1.10.0']
+pytest-shutil -> six
+pytest-localserver -> pytest -> six[version='>=1.10.0']
+pytest-shutil -> pytest -> six[version='>=1.10.0']
+pytest-bdd -> six[version='>=1.9.0']
+pytest-cookies -> cookiecutter[version='>=1.4.0,<1.8.0'] -> six[version='>=1.10|>=1.10.0']
+pytest-custom-exit-code -> pytest[version='>=4.0.2'] -> six[version='>=1.10.0']
+pytest-testmon -> pytest[version='>=2.8.0,<4'] -> six[version='>=1.10.0']
+pytest-spec -> mock[version='>=1.0.1'] -> six[version='>=1.10.0']
+pytest-pylint -> pytest[version='>=2.7'] -> six[version='>=1.10.0']
+pytest-timeout -> pytest[version='>=3.6.0'] -> six[version='>=1.10.0']
+pytest-ordering -> pytest -> six[version='>=1.10.0']
+pytest-forked -> pytest[version='>=2.6.0'] -> six[version='>=1.10.0']
+pytest-profiling -> pytest -> six[version='>=1.10.0']
+pytest-mypy -> pytest[version='>=2.8'] -> six[version='>=1.10.0']
+pytest-bdd -> parse_type -> six[version='>=1.10.0']
+pytest-socket -> pytest[version='>=3.6.3'] -> six[version='>=1.10.0']
+pytest-clarity -> pytest[version='>=3.5.0'] -> six[version='>=1.10.0']
+pytest-asyncio -> pytest[version='>=3.0.6'] -> six[version='>=1.10.0']
+pytest-openfiles -> pytest[version='>=3.1'] -> six[version='>=1.10.0']
+pytest-astropy -> pytest[version='>=3.1'] -> six[version='>=1.10.0']
+pytest-profiling -> six
+pytest-json -> pytest[version='>=2.3'] -> six[version='>=1.10.0']
+pytest-lazy-fixture -> pytest[version='>=3.2.5'] -> six[version='>=1.10.0']
+pytest-rerunfailures -> pytest[version='>=4.4'] -> six[version='>=1.10.0']
+pytest-smartcov -> pytest -> six[version='>=1.10.0']
+pytest-notebook -> jsonschema -> six[version='>=1.10.0|>=1.11.0']
+pytest-env -> pytest[version='>=2.6.0'] -> six[version='>=1.10.0']
+pytest-flake8 -> pytest[version='>=3.5'] -> six[version='>=1.10.0']
+pytest-sugar -> packaging[version='>=14.1'] -> six[version='>=1.10.0']
+ipytest -> packaging -> six[version='>=1.10.0']
+pytest-picked -> pytest[version='>=3.5.0'] -> six[version='>=1.10.0']
+pytest-mpl -> pytest -> six[version='>=1.10.0']
+pytest-django -> pytest[version='>=3.6'] -> six[version='>=1.10.0']
+pytest-freezegun -> freezegun[version='>0.3'] -> six[version='>=1.10.0']
+pytest-fixture-config -> pytest -> six[version='>=1.10.0']
+pytest-instafail -> pytest[version='>=2.9'] -> six[version='>=1.10.0']
+pytest-session2file -> pytest -> six[version='>=1.10.0']
+pytest-csv -> pytest[version='>=4.4'] -> six[version='>=1.10.0']
+pytest-tornasync -> pytest[version='>=3.0'] -> six[version='>=1.10.0']
+pytest-mpi -> pytest -> six[version='>=1.10.0']
+pytest-aiohttp -> pytest -> six[version='>=1.10.0']
+pytest-mock -> pytest -> six[version='>=1.10.0']
+pytest-xdist -> six
+pytest-black -> pytest[version='>=3.5.0'] -> six[version='>=1.10.0']
+pytest-doctestplus -> six
+pytest-regressions -> pytest[version='>=3.5.0'] -> six[version='>=1.10.0']
+pytest-raises -> pytest[version='>=3.2.2'] -> six[version='>=1.10.0']
+pytest-watch -> pytest[version='>=2.6.4'] -> six[version='>=1.10.0']
+pytest-replay -> pytest[version='>=3.0.0'] -> six[version='>=1.10.0']
+pytest-cpp -> pytest -> six[version='>=1.10.0']
+pytest-services -> pytest -> six[version='>=1.10.0']
+pytest-tornado5 -> pytest -> six[version='>=1.10.0']
+pytest-tornado -> pytest -> six[version='>=1.10.0']
+pytest-chalice -> pytest -> six[version='>=1.10.0']
+pytest-icdiff -> pytest -> six[version='>=1.10.0']
+pytest-flakes -> pytest[version='>=2.4.0'] -> six[version='>=1.10.0']
+pytest-check-links -> html5lib -> six[version='>=1.10.0|>=1.9']
+pytest-regtest -> pytest[version='>=4.1.0'] -> six[version='>=1.10.0']
+pytest-variables -> pytest[version='>=2.4.2'] -> six[version='>=1.10.0']
+pytest-executable -> jsonschema[version='>=2,<4'] -> six[version='>=1.10.0|>=1.11.0']
+pytest-pep8 -> pytest[version='>=2.4.2'] -> six[version='>=1.10.0']
+pytest-base-url -> pytest[version='>=2.7.3'] -> six[version='>=1.10.0']
+pytest-bandit -> bandit[version='>=1.4.0'] -> six[version='>=1.10.0']
+pytest-workflow -> jsonschema -> six[version='>=1.10.0|>=1.11.0']
+pytest-tldr -> pytest[version='>=3.5.0'] -> six[version='>=1.10.0']
+pytest-localstack -> docker-py -> six[version='>=1.10.0|>=1.4.0']
+pytest-html -> pytest[version='>=3.0'] -> six[version='>=1.10.0']
+pytest-json-report -> pytest[version='>=4.2.0'] -> six[version='>=1.10.0']
+pytest-catchlog -> pytest -> six[version='>=1.10.0']
+pytest-qt -> pytest -> six[version='>=1.10.0']
+pytest-xdist -> pytest[version='>=4.4.0'] -> six[version='>=1.10.0']
+pytest-cache -> pytest[version='>=2.2'] -> six[version='>=1.10.0']
+pytest-benchmark -> pytest[version='>=2.6'] -> six[version='>=1.10.0']
+pytest-ast-back-to-python -> pytest[version='>=3.0.0'] -> six[version='>=1.10.0']
+pytest-pylint -> six
+pytest-console-scripts -> mock[version='>=2.0.0'] -> six[version='>=1.10.0']
+pytest-remotedata -> six
+pytest-runner -> pytest -> six[version='>=1.10.0']
+pytest-remotedata -> pytest[version='>=3.1'] -> six[version='>=1.10.0']
+pytest-localstack -> six
+pytest-sftpserver -> six
+pytest-repeat -> pytest[version='>=3.6'] -> six[version='>=1.10.0']
+pytest-codestyle -> pytest -> six[version='>=1.10.0']
+pytest-django-haystack -> pytest -> six[version='>=1.10.0']
+pytest-mccabe -> pytest[version='>=2.3.dev14'] -> six[version='>=1.10.0']
+pytest-describe -> pytest[version='>=4.0.0'] -> six[version='>=1.10.0']
+pytest-subtests -> pytest[version='>=4.4.0'] -> six[version='>=1.10.0']
+pytest-virtualenv -> pytest -> six[version='>=1.10.0']
+pytest-selenium -> pytest[version='>=3.0'] -> six[version='>=1.10.0']
+pytest-arraydiff -> pytest -> six[version='>=1.10.0']
+pytest-cram -> pytest[version='>=2.8'] -> six[version='>=1.10.0']
+pytest-ignore-flaky -> pytest[version='>=2.7'] -> six[version='>=1.10.0']
+pytest-csv -> six[version='>=1.0.0']
+pytest-monitor -> pytest -> six[version='>=1.10.0']
+pytest-notification -> pytest[version='>=4'] -> six[version='>=1.10.0']
+pytest-astropy-header -> pytest[version='>=3.0'] -> six[version='>=1.10.0']
+pytest-azurepipelines -> pytest -> six[version='>=1.10.0']
+pytest-cov -> pytest[version='>=3.6'] -> six[version='>=1.10.0']
+pytest-datadir -> pytest -> six[version='>=1.10.0']
+pytest-arraydiff -> six
+pytest-doctestplus -> pytest[version='>=3.0'] -> six[version='>=1.10.0']
+
+Package vs2010_runtime conflicts for:
+pytest-base-url -> python -> vs2010_runtime
+pytest-flake8 -> python -> vs2010_runtime
+pytest-xdist -> python -> vs2010_runtime
+pytest-mpl -> python -> vs2010_runtime
+pytest-mypy -> python[version='>=3.4'] -> vs2010_runtime
+pytest-ast-back-to-python -> python -> vs2010_runtime
+pytest-repeat -> python -> vs2010_runtime
+pytest-profiling -> python -> vs2010_runtime
+pytest-ignore-flaky -> python -> vs2010_runtime
+pytest-custom-exit-code -> python -> vs2010_runtime
+pytest-session2file -> python -> vs2010_runtime
+pytest-openfiles -> python -> vs2010_runtime
+pytest-clarity -> python -> vs2010_runtime
+pytest-timeout -> python -> vs2010_runtime
+pytest-flask -> python -> vs2010_runtime
+pytest-socket -> python -> vs2010_runtime
+pytest-pylint -> python -> vs2010_runtime
+pytest-freezegun -> python -> vs2010_runtime
+pytest-runner -> python -> vs2010_runtime
+pytest-json-report -> python -> vs2010_runtime
+pytest-rerunfailures -> python -> vs2010_runtime
+pytest-virtualenv -> python -> vs2010_runtime
+pytest-shutil -> python -> vs2010_runtime
+pytest-cov -> python -> vs2010_runtime
+pytest-regressions -> python -> vs2010_runtime
+pytest-lazy-fixture -> python -> vs2010_runtime
+pytest-cram -> python -> vs2010_runtime
+pytest-describe -> python -> vs2010_runtime
+pytest-json -> python -> vs2010_runtime
+pytest-catchlog -> python -> vs2010_runtime
+pytest-sugar -> python -> vs2010_runtime
+pytest-variables -> python -> vs2010_runtime
+pytest-doctestplus -> python -> vs2010_runtime
+pytest-localstack -> python -> vs2010_runtime
+pytest-csv -> python -> vs2010_runtime
+pytest-env -> python -> vs2010_runtime
+ipytest -> python[version='>=3.0'] -> vs2010_runtime
+pytest-django -> python -> vs2010_runtime
+pytest-html -> python -> vs2010_runtime
+pytest-pep8 -> python -> vs2010_runtime
+pytest-metadata -> python -> vs2010_runtime
+pytest-astropy-header -> python -> vs2010_runtime
+pytest-aiohttp -> python[version='>=3.4'] -> vs2010_runtime
+pytest-azurepipelines -> python -> vs2010_runtime
+pytest-django-haystack -> python -> vs2010_runtime
+pytest-localserver -> python -> vs2010_runtime
+pytest-remotedata -> python -> vs2010_runtime
+pytest-fixture-config -> python -> vs2010_runtime
+pytest-spec -> python=3.4 -> vs2010_runtime
+pytest-tornado -> python -> vs2010_runtime
+pytest-astropy -> python -> vs2010_runtime
+pytest-mccabe -> python -> vs2010_runtime
+pytest-cookies -> python -> vs2010_runtime
+pytest-selenium -> python -> vs2010_runtime
+pytest-qt -> python -> vs2010_runtime
+pytest-testmon -> python -> vs2010_runtime
+pytest-bdd -> python -> vs2010_runtime
+pytest-smartcov -> python -> vs2010_runtime
+unittest2pytest -> python -> vs2010_runtime
+pytest-tldr -> python -> vs2010_runtime
+pytest-forked -> python -> vs2010_runtime
+pytest-benchmark -> python -> vs2010_runtime
+pytest-faulthandler -> python -> vs2010_runtime
+pytest-instafail -> python -> vs2010_runtime
+pytest-regtest -> python -> vs2010_runtime
+pytest-cache -> python -> vs2010_runtime
+pytest-bandit -> python[version='>3'] -> vs2010_runtime
+pytest-raises -> python -> vs2010_runtime
+pytest-arraydiff -> python -> vs2010_runtime
+pytest-subtests -> python[version='>=3.4'] -> vs2010_runtime
+pytest-cpp -> python -> vs2010_runtime
+pytest-console-scripts -> python -> vs2010_runtime
+pytest-ordering -> python -> vs2010_runtime
+pytest-mock -> python -> vs2010_runtime
+pytest-flakes -> python -> vs2010_runtime
+pytest-flask-sqlalchemy -> python -> vs2010_runtime
+pytest-datadir -> python -> vs2010_runtime
+pytest-codestyle -> python[version='>3'] -> vs2010_runtime
+pytest-sftpserver -> python=3.4 -> vs2010_runtime
+
+Package mock conflicts for:
+pytest-console-scripts -> mock[version='>=2.0.0']
+pytest-shutil -> mock
+pytest-mock -> mock
+pytest-virtualenv -> pytest-shutil -> mock
+pytest-spec -> mock[version='>=1.0.1']
+pytest-localstack -> mock
+
+Package scandir conflicts for:
+pytest-regressions -> pathlib2 -> scandir
+pytest-benchmark -> pathlib2 -> scandir
+
+Package ssl_match_hostname conflicts for:
+pytest-localstack -> docker-py -> ssl_match_hostname[version='>=3.5']
+pytest-tornado -> tornado -> ssl_match_hostname
+pytest-tornado5 -> tornado -> ssl_match_hostname
+
+Package importlib_metadata conflicts for:
+pytest-astropy-header -> pytest[version='>=3.0'] -> importlib_metadata[version='>=0.12']
+pytest-json-report -> pytest[version='>=4.2.0'] -> importlib_metadata[version='>=0.12']
+pytest-ignore-flaky -> pytest[version='>=2.7'] -> importlib_metadata[version='>=0.12']
+pytest-cov -> pytest[version='>=3.6'] -> importlib_metadata[version='>=0.12']
+pytest-django -> pytest[version='>=3.6'] -> importlib_metadata[version='>=0.12']
+pytest-arraydiff -> pytest -> importlib_metadata[version='>=0.12']
+pytest-selenium -> pytest[version='>=3.0'] -> importlib_metadata[version='>=0.12']
+pytest-virtualenv -> pytest -> importlib_metadata[version='>=0.12']
+pytest-mpl -> pytest -> importlib_metadata[version='>=0.12']
+pytest-notification -> pytest[version='>=4'] -> importlib_metadata[version='>=0.12']
+pytest-watch -> pytest[version='>=2.6.4'] -> importlib_metadata[version='>=0.12']
+pytest-benchmark -> pytest[version='>=2.6'] -> importlib_metadata[version='>=0.12']
+pytest-mccabe -> pytest[version='>=2.3.dev14'] -> importlib_metadata[version='>=0.12']
+pytest-tornado5 -> pytest -> importlib_metadata[version='>=0.12']
+pytest-xdist -> pytest[version='>=4.4.0'] -> importlib_metadata[version='>=0.12']
+ipytest -> pytest -> importlib_metadata[version='>=0.12']
+pytest-black -> pytest[version='>=3.5.0'] -> importlib_metadata[version='>=0.12']
+pytest-mypy -> pytest[version='>=2.8'] -> importlib_metadata[version='>=0.12']
+pytest-smartcov -> pytest -> importlib_metadata[version='>=0.12']
+pytest-regtest -> pytest[version='>=4.1.0'] -> importlib_metadata[version='>=0.12']
+pytest-replay -> pytest[version='>=3.0.0'] -> importlib_metadata[version='>=0.12']
+pytest-flake8 -> pytest[version='>=3.5'] -> importlib_metadata[version='>=0.12']
+pytest-env -> pytest[version='>=2.6.0'] -> importlib_metadata[version='>=0.12']
+pytest-repeat -> pytest[version='>=3.6'] -> importlib_metadata[version='>=0.12']
+pytest-ast-back-to-python -> pytest[version='>=3.0.0'] -> importlib_metadata[version='>=0.12']
+pytest-executable -> jsonschema[version='>=2,<4'] -> importlib_metadata[version='>=0.12']
+pytest-cookies -> pytest[version='>=3.3.0,<6.0.0'] -> importlib_metadata[version='>=0.12']
+pytest-localserver -> pytest -> importlib_metadata[version='>=0.12']
+pytest-csv -> pytest[version='>=4.4'] -> importlib_metadata[version='>=0.12']
+pytest-aiohttp -> pytest -> importlib_metadata[version='>=0.12']
+pytest-pylint -> pytest[version='>=5.4'] -> importlib_metadata[version='>=0.12']
+pytest-tldr -> pytest[version='>=3.5.0'] -> importlib_metadata[version='>=0.12']
+pytest-ordering -> pytest -> importlib_metadata[version='>=0.12']
+pytest-notebook -> importlib_resources -> importlib_metadata[version='>=0.12']
+pytest-icdiff -> pytest -> importlib_metadata[version='>=0.12']
+pytest-instafail -> pytest[version='>=2.9'] -> importlib_metadata[version='>=0.12']
+pytest-metadata -> pytest[version='>=2.9.0'] -> importlib_metadata[version='>=0.12']
+pytest-timeout -> pytest[version='>=3.6.0'] -> importlib_metadata[version='>=0.12']
+pytest-datadir -> pytest -> importlib_metadata[version='>=0.12']
+pytest-pep8 -> pytest[version='>=2.4.2'] -> importlib_metadata[version='>=0.12']
+pytest-subtests -> pytest[version='>=4.4.0'] -> importlib_metadata[version='>=0.12']
+pytest-django-haystack -> pytest -> importlib_metadata[version='>=0.12']
+pytest-qt -> pytest -> importlib_metadata[version='>=0.12']
+pytest-runner -> pytest -> importlib_metadata[version='>=0.12']
+pytest-catchlog -> pytest -> importlib_metadata[version='>=0.12']
+pytest-lazy-fixture -> pytest[version='>=3.2.5'] -> importlib_metadata[version='>=0.12']
+pytest-bdd -> pytest[version='>=3.0.0'] -> importlib_metadata[version='>=0.12']
+pytest-chalice -> pytest -> importlib_metadata[version='>=0.12']
+pytest-freezegun -> pytest[version='>=3.0.0'] -> importlib_metadata[version='>=0.12']
+pytest-raises -> pytest[version='>=3.2.2'] -> importlib_metadata[version='>=0.12']
+pytest-tornado -> pytest -> importlib_metadata[version='>=0.12']
+pytest-clarity -> pytest[version='>=3.5.0'] -> importlib_metadata[version='>=0.12']
+pytest-asyncio -> pytest[version='>=3.0.6'] -> importlib_metadata[version='>=0.12']
+pytest-cpp -> pytest -> importlib_metadata[version='>=0.12']
+pytest-openfiles -> pytest[version='>=3.1'] -> importlib_metadata[version='>=0.12']
+pytest-describe -> pytest[version='>=4.0.0'] -> importlib_metadata[version='>=0.12']
+pytest-doctestplus -> pytest[version='>=3.0'] -> importlib_metadata[version='>=0.12']
+pytest-socket -> pytest[version='>=3.6.3'] -> importlib_metadata[version='>=0.12']
+pytest-fixture-config -> pytest -> importlib_metadata[version='>=0.12']
+pytest-faulthandler -> pytest[version='>=5.0'] -> importlib_metadata[version='>=0.12']
+pytest-astropy -> pytest[version='>=3.1'] -> importlib_metadata[version='>=0.12']
+pytest-shutil -> path.py -> importlib_metadata[version='>=0.12|>=0.5']
+pytest-check-links -> pytest[version='>=2.8'] -> importlib_metadata[version='>=0.12']
+pytest-flakes -> pytest[version='>=2.4.0'] -> importlib_metadata[version='>=0.12']
+pytest-cram -> pytest[version='>=2.8'] -> importlib_metadata[version='>=0.12']
+pytest-json -> pytest[version='>=2.3'] -> importlib_metadata[version='>=0.12']
+pytest-mpi -> pytest -> importlib_metadata[version='>=0.12']
+pytest-localstack -> pluggy[version='>=0.6.0'] -> importlib_metadata[version='>=0.12|>=0.9']
+pytest-custom-exit-code -> pytest[version='>=4.0.2'] -> importlib_metadata[version='>=0.12']
+pytest-forked -> pytest[version='>=2.6.0'] -> importlib_metadata[version='>=0.12']
+pytest-picked -> pytest[version='>=3.5.0'] -> importlib_metadata[version='>=0.12']
+pytest-bandit -> pytest[version='>=3.5.0'] -> importlib_metadata[version='>=0.12']
+pytest-monitor -> pytest -> importlib_metadata[version='>=0.12']
+pytest-rerunfailures -> pytest[version='>=4.4'] -> importlib_metadata[version='>=0.12']
+pytest-sugar -> pytest[version='>=2.9'] -> importlib_metadata[version='>=0.12']
+pytest-workflow -> jsonschema -> importlib_metadata[version='>=0.12']
+pytest-session2file -> pytest -> importlib_metadata[version='>=0.12']
+pytest-azurepipelines -> pytest -> importlib_metadata[version='>=0.12']
+pytest-cache -> pytest[version='>=2.2'] -> importlib_metadata[version='>=0.12']
+pytest-console-scripts -> pytest[version='>=3.0.0'] -> importlib_metadata[version='>=0.12']
+pytest-regressions -> pytest[version='>=3.5.0'] -> importlib_metadata[version='>=0.12']
+pytest-spec -> pytest -> importlib_metadata[version='>=0.12']
+pytest-mock -> pytest -> importlib_metadata[version='>=0.12']
+pytest-profiling -> pytest -> importlib_metadata[version='>=0.12']
+pytest-tornasync -> pytest[version='>=3.0'] -> importlib_metadata[version='>=0.12']
+pytest-remotedata -> pytest[version='>=3.1'] -> importlib_metadata[version='>=0.12']
+pytest-services -> pytest -> importlib_metadata[version='>=0.12']
+pytest-codestyle -> pytest -> importlib_metadata[version='>=0.12']
+pytest-html -> pytest[version='>=5.0'] -> importlib_metadata[version='>=0.12']
+pytest-base-url -> pytest[version='>=2.7.3'] -> importlib_metadata[version='>=0.12']
+pytest-variables -> pytest[version='>=2.4.2'] -> importlib_metadata[version='>=0.12']
+
+Package backports.functools_lru_cache conflicts for:
+pytest-mpl -> matplotlib-base -> backports.functools_lru_cache
+pytest-pylint -> pylint[version='>=1.4.5'] -> backports.functools_lru_cache
+pytest-notebook -> nbdime -> backports.functools_lru_cache
+pytest-cookies -> arrow[version='<0.14.0'] -> backports.functools_lru_cache
+
+Package jinja2 conflicts for:
+pytest-cookies -> cookiecutter[version='>=1.4.0,<1.8.0'] -> jinja2[version='<3.0.0a0|>=2.7']
+pytest-notebook -> nbconvert -> jinja2[version='>=2.9']
+pytest-executable -> jinja2[version='>=2.7,<3']
+pytest-check-links -> nbconvert -> jinja2
+pytest-flask -> flask -> jinja2[version='>=2.10|>=2.10.1|>=2.4']
+
+Package requests conflicts for:
+pytest-notebook -> nbdime -> requests
+pytest-selenium -> requests
+pytest-selenium -> pytest-base-url -> requests[version='>=2.9']
+pytest-check-links -> requests
+python[version='>3.7.0'] -> pip -> requests
+pytest-monitor -> requests
+pytest-bdd -> pip -> requests
+pytest-services -> requests
+pytest-base-url -> requests[version='>=2.9']
+pytest-cookies -> cookiecutter[version='>=1.4.0,<1.8.0'] -> requests[version='>=2.18.0|>=2.23.0']
+pytest-localstack -> docker-py -> requests[version='>=2.11.1|>=2.14.2|>=2.5.2']
+
+Package werkzeug conflicts for:
+pytest-httpserver -> werkzeug
+pytest-flask -> werkzeug[version='>=0.7']
+pytest-localserver -> werkzeug[version='>=0.10']
+pytest-flask -> flask -> werkzeug[version='>=0.14|>=0.15']
+
+Package dataclasses conflicts for:
+pytest-executable -> dataclasses
+pytest-black -> black[version='>=19.3b0'] -> dataclasses[version='>=0.6']
+pytest-notebook -> black -> dataclasses[version='>=0.6']
+
+Package urllib3 conflicts for:
+pytest-services -> requests -> urllib3[version='>=1.21.1,<1.22|>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1']
+pytest-localstack -> botocore[version='>=1.4.31,!=1.4.45'] -> urllib3[version='>=1.20,<1.24|>=1.20,<1.25|>=1.20,<1.26']
+pytest-monitor -> requests -> urllib3[version='>=1.21.1,<1.22|>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1']
+pytest-selenium -> requests -> urllib3[version='>=1.21.1,<1.22|>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1']
+pytest-base-url -> requests[version='>=2.9'] -> urllib3[version='>=1.21.1,<1.22|>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1']
+pytest-check-links -> requests -> urllib3[version='>=1.21.1,<1.22|>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1']
+
+Package pyrsistent conflicts for:
+pytest-notebook -> jsonschema -> pyrsistent[version='>=0.14.0']
+pytest-workflow -> jsonschema -> pyrsistent[version='>=0.14.0']
+pytest-executable -> jsonschema[version='>=2,<4'] -> pyrsistent[version='>=0.14.0']
+
+Package hypothesis conflicts for:
+pytest-notebook -> attrs -> hypothesis
+pytest-astropy -> hypothesis
+
+Package cryptography conflicts for:
+pytest-sftpserver -> paramiko -> cryptography[version='>=1.1|>=1.5|>=2.5']
+pytest-localstack -> docker-py -> cryptography[version='>=1.9']
+
+Package termcolor conflicts for:
+pytest-clarity -> termcolor==1.1.0
+pytest-shutil -> termcolor
+pytest-sugar -> termcolor[version='>=1.1.0']
+pytest-virtualenv -> pytest-shutil -> termcolor
+
+Package psutil conflicts for:
+pytest-monitor -> psutil
+pytest-openfiles -> psutil
+pytest-astropy -> pytest-openfiles[version='>=0.3.1'] -> psutil
+pytest-mypy -> mypy[version='>=0.500'] -> psutil[version='>=4.0|>=5.4.0,<5.5.0']
+pytest-services -> psutil
+
+Package pycodestyle conflicts for:
+pytest-flake8 -> flake8[version='>=3.5'] -> pycodestyle[version='>=2.0,<2.1|>=2.0,<2.3|>=2.0.0,<2.4.0|>=2.0.0,<2.5.0|>=2.4.0,<2.5.0|>=2.5.0,<2.6.0|>=2.6.0,<2.7.0']
+pytest-codestyle -> pycodestyle
+
+Package mistune conflicts for:
+pytest-notebook -> nbconvert -> mistune[version='>0.6|>=0.7.4|>=0.8.1']
+pytest-check-links -> nbconvert -> mistune[version='>0.6|>=0.7.4|>=0.8.1']
+
+Package coverage conflicts for:
+pytest-cov -> coverage[version='>=4.4']
+pytest-astropy -> hypothesis -> coverage
+pytest-testmon -> coverage[version='>=4']
+pytest-smartcov -> coverage[version='>=3.6']
+
+Package typing conflicts for:
+pytest-notebook -> importlib_resources -> typing
+pytest-flake8 -> flake8[version='>=3.5'] -> typing
+pytest-mypy -> mypy[version='>=0.500'] -> typing[version='>=3.5.3']
+
+Package execnet conflicts for:
+pytest-mccabe -> pytest-cache -> execnet[version='>=1.1.dev1']
+pytest-flakes -> pytest-cache -> execnet[version='>=1.1.dev1']
+pytest-shutil -> execnet
+pytest-xdist -> execnet[version='>=1.1']
+pytest-cache -> execnet[version='>=1.1.dev1']
+pytest-pep8 -> pytest-cache -> execnet[version='>=1.1.dev1']
+pytest-virtualenv -> pytest-shutil -> execnet
+
+Package pbr conflicts for:
+pytest-spec -> mock[version='>=1.0.1'] -> pbr[version='>=1.3']
+pytest-mock -> mock -> pbr[version='>=1.3']
+pytest-shutil -> mock -> pbr[version='>=1.3']
+pytest-console-scripts -> mock[version='>=2.0.0'] -> pbr[version='>=1.3']
+pytest-localstack -> mock -> pbr[version='>=1.3']
+pytest-bandit -> bandit[version='>=1.4.0'] -> pbr[version='>=2.0.0']
+
+Package enum34 conflicts for:
+pytest-flake8 -> enum34
+pytest-localstack -> docker-py -> enum34[version='>=1.1.6']
+pytest-astropy -> hypothesis -> enum34
+pytest-bdd -> parse_type -> enum34
+
+Package distlib conflicts for:
+pytest-bdd -> pip -> distlib
+python[version='>3.7.0'] -> pip -> distlib
+
+Package pytest-cache conflicts for:
+pytest-flakes -> pytest-cache
+pytest-pep8 -> pytest-cache
+pytest-mccabe -> pytest-cache
+
+Package zlib conflicts for:
+pytest-mpl -> matplotlib-base -> zlib[version='1.2.*|1.2.11|1.2.11.*|>=1.2.11,<1.3.0a0|1.2.8']
+python[version='>3.7.0'] -> sqlite[version='>=3.30.1,<4.0a0'] -> zlib[version='>=1.2.11,<1.3.0a0']
+
+Package docutils conflicts for:
+pytest-benchmark -> statistics -> docutils[version='>=0.3']
+pytest-localstack -> botocore[version='>=1.4.31,!=1.4.45'] -> docutils[version='>=0.10|>=0.10,<0.15|>=0.10,<0.16']
+pytest-check-links -> docutils
+
+Package pytz conflicts for:
+pytest-django-haystack -> django -> pytz
+pytest-sugar -> django[version='>=1.8'] -> pytz
+pytest-mpl -> matplotlib-base -> pytz
+
+Package entrypoints conflicts for:
+pytest-flake8 -> flake8[version='>=3.5'] -> entrypoints[version='>=0.3.0,<0.4.0']
+pytest-notebook -> jupyter_client -> entrypoints[version='>=0.2.2']
+pytest-check-links -> nbconvert -> entrypoints[version='>=0.2.2']
+
+Package configparser conflicts for:
+pytest-pylint -> pylint[version='>=1.4.5'] -> configparser
+pytest-flake8 -> configparser
+
+Package numpy conflicts for:
+pytest-astropy -> pytest-arraydiff[version='>=0.1'] -> numpy[version='>=1.10']
+pytest-mpl -> matplotlib-base -> numpy[version='1.10.*|1.11.*|>=1.11.3,<2.0a0|>=1.14.6,<2.0a0']
+pytest-arraydiff -> numpy
+pytest-doctestplus -> numpy[version='>=1.10']
+
+Package pyparsing conflicts for:
+ipytest -> packaging -> pyparsing[version='>=2.0.2']
+pytest-sugar -> packaging[version='>=14.1'] -> pyparsing[version='>=2.0.2']
+pytest-mpl -> matplotlib-base -> pyparsing
+pytest-localstack -> docker-py -> pyparsing[version='>=2.2.0']
+
+Package gdal conflicts for:
+pytest-django-haystack -> django -> gdal[version='1.11.*|2.1.*|>=1.11.2,<2.0']
+pytest-sugar -> django[version='>=1.8'] -> gdal[version='1.11.*|2.1.*|>=1.11.2,<2.0']
+
+Package contextlib2 conflicts for:
+pytest-virtualenv -> pytest-shutil -> contextlib2
+pytest-localstack -> contextlib2
+pytest-shutil -> contextlib2
+
+Package singledispatch conflicts for:
+pytest-tornado -> tornado -> singledispatch
+pytest-pylint -> pylint[version='>=1.4.5'] -> singledispatch
+pytest-tornado5 -> tornado -> singledispatch
+pytest-notebook -> importlib_resources -> singledispatch
+pytest-tornasync -> tornado[version='>=5.0'] -> singledispatch
+
+Package gitpython conflicts for:
+pytest-notebook -> nbdime -> gitpython[version='!=2.1.4,!=2.1.5,!=2.1.6']
+pytest-bandit -> bandit[version='>=1.4.0'] -> gitpython[version='>=1.0.1']
+
+Package backports_abc conflicts for:
+pytest-tornasync -> tornado[version='>=5.0'] -> backports_abc[version='>=0.4']
+pytest-tornado -> tornado -> backports_abc[version='>=0.4']
+pytest-tornado5 -> tornado -> backports_abc[version='>=0.4']
+
+Package click conflicts for:
+pytest-notebook -> black -> click[version='>=6.5']
+pytest-black -> black[version='>=19.3b0'] -> click[version='>=6.5']
+pytest-cookies -> cookiecutter[version='>=1.4.0,<1.8.0'] -> click[version='>=5.0|>=7.0']
+pytest-flask -> flask -> click[version='>=2.0|>=5.1']
+
+Package pygments conflicts for:
+pygments_pytest -> pygments
+pytest-notebook -> nbconvert -> pygments
+pytest-check-links -> nbconvert -> pygments
+ipytest -> ipython -> pygments
+
+Package markupsafe conflicts for:
+pytest-executable -> jinja2[version='>=2.7,<3'] -> markupsafe[version='>=0.23']
+pytest-bdd -> mako -> markupsafe[version='>=0.9.2']
+pytest-cookies -> cookiecutter[version='>=1.4.0,<1.8.0'] -> markupsafe[version='<2.0.0']
+
+Package python-dateutil conflicts for:
+pytest-notebook -> jupyter_client -> python-dateutil[version='>=2.1']
+pytest-localstack -> botocore[version='>=1.4.31,!=1.4.45'] -> python-dateutil[version='>=2.1,<2.7.0|>=2.1,<2.8.1|>=2.1,<3.0.0']
+pytest-cookies -> arrow[version='<0.14.0'] -> python-dateutil
+pytest-freezegun -> freezegun[version='>0.3'] -> python-dateutil[version='>2.0|>=2.0|>=1.0,!=2.0']
+pytest-mpl -> matplotlib-base -> python-dateutil
+
+Package pyflakes conflicts for:
+pytest-flake8 -> flake8[version='>=3.5'] -> pyflakes[version='>=1.2.3,<1.3|>=1.2.3,<1.4|>=1.5.0,<1.6.0|>=1.5.0,<1.7.0|>=2.0.0,<2.1.0|>=2.1.0,<2.2.0|>=2.2.0,<2.3.0']
+pytest-flakes -> pyflakes
+
+Package tornado conflicts for:
+pytest-mpl -> matplotlib-base -> tornado
+pytest-tornasync -> tornado[version='>=5.0']
+pytest-tornado -> tornado[version='>=4']
+pytest-notebook -> jupyter_client -> tornado[version='>=4.1|>=4.1,<6']
+pytest-tornado5 -> tornado
+
+Package nbformat conflicts for:
+pytest-check-links -> nbconvert -> nbformat[version='>=4.4']
+pytest-check-links -> nbformat
+
+Package mccabe conflicts for:
+pytest-flake8 -> flake8[version='>=3.5'] -> mccabe[version='>=0.5,<0.6|>=0.6.0,<0.7.0']
+pytest-mccabe -> mccabe
+pytest-pylint -> pylint[version='>=2.3.0'] -> mccabe[version='>=0.6,<0.7']
+
+Package yaml conflicts for:
+pytest-regressions -> pyyaml -> yaml[version='>=0.1.7,<0.2.0a0|>=0.2.2,<0.3.0a0']
+pytest-workflow -> pyyaml -> yaml[version='>=0.1.7,<0.2.0a0|>=0.2.2,<0.3.0a0']
+pytest-executable -> pyyaml[version='>=3,<6'] -> yaml[version='>=0.1.7,<0.2.0a0|>=0.2.2,<0.3.0a0']
+
+Package typed-ast conflicts for:
+pytest-black -> black[version='>=19.3b0'] -> typed-ast[version='>=1.4.0']
+pytest-notebook -> black -> typed-ast[version='>=1.4.0']
+pytest-mypy -> mypy[version='>=0.500'] -> typed-ast[version='>=1.1.0,<1.2.0|>=1.2.0,<1.3.0|>=1.3.1,<1.4.0|>=1.4.0,<1.5.0']
+
+Package html5lib conflicts for:
+pytest-check-links -> html5lib
+python[version='>3.7.0'] -> pip -> html5lib
+pytest-bdd -> pip -> html5lib
+
+Package apipkg conflicts for:
+pytest-cache -> execnet[version='>=1.1.dev1'] -> apipkg[version='>=1.4']
+pytest-xdist -> execnet[version='>=1.1'] -> apipkg[version='>=1.4']
+pytest-shutil -> execnet -> apipkg[version='>=1.4']
+
+Package pywin32 conflicts for:
+pytest-localstack -> docker-py -> pywin32=223
+pytest-notebook -> jupyter_client -> pywin32[version='>=1.0']
+
+Package regex conflicts for:
+pytest-black -> black[version='>=19.3b0'] -> regex
+pytest-notebook -> black -> regex
+
+Package typing_extensions conflicts for:
+pytest-notebook -> black -> typing_extensions[version='>=3.7.4']
+pytest-black -> black[version='>=19.3b0'] -> typing_extensions[version='>=3.7.4']
+pytest-aiohttp -> aiohttp[version='>=2.3.5'] -> typing_extensions[version='>=3.6.5']
+pytest-mypy -> mypy[version='>=0.500'] -> typing_extensions[version='>=3.7.4']
+
+Package numpy-base conflicts for:
+pytest-arraydiff -> numpy -> numpy-base[version='1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.14.3|1.14.3|1.14.3|1.14.4|1.14.4|1.14.4|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.15.0|1.15.0|1.15.0|1.15.0|1.15.1|1.15.1|1.15.1|1.15.1|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.3|1.15.3|1.15.3|1.15.4|1.15.4|1.15.4|1.15.4|1.15.4|1.15.4|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.2|1.16.2|1.16.2|1.16.3|1.16.3|1.16.3|1.16.4|1.16.4|1.16.5|1.16.5|1.16.5|1.16.6|1.16.6|1.16.6|1.16.6|1.17.2.*|1.17.3.*|1.17.4.*|1.18.1.*|1.9.3|1.9.3|1.9.3|1.9.3|1.9.3|1.9.3|1.9.3|>=1.9.3,<2.0a0|1.17.0|1.17.0',build='py36hc3f5095_0|py37h5c71026_6|py36h5c71026_6|py27h0bb1d87_6|py36h5c71026_8|py27h0bb1d87_8|py35h4a99626_8|py35h4a99626_9|py36h4a99626_9|py27hfef472a_9|py36h8128ebf_9|py27h2753ae9_9|py36h8128ebf_10|py37h2a9b21d_11|py37hc3f5095_12|py35h555522e_1|py36h555522e_1|py27h917549b_1|py27h0bb1d87_0|py36h5c71026_0|py37h5c71026_0|py27h0bb1d87_1|py36h5c71026_1|py37h5c71026_1|py27h0bb1d87_2|py37h5c71026_3|py37h5c71026_4|py36h5c71026_4|py35h4a99626_4|py36h8128ebf_4|py37h8128ebf_4|py38hc3f5095_4|py37hc3f5095_5|py27hb1d0314_5|py35h4a99626_0|py36h4a99626_0|py27hfef472a_0|py37h4a99626_0|py36h8128ebf_0|py35h8128ebf_0|py27h2753ae9_1|py36h8128ebf_0|py36h8128ebf_0|py27hb1d0314_0|py27hb1d0314_0|py37hc3f5095_1|py36hc3f5095_1|py27hb1d0314_1|py27hb1d0314_0|py37hc3f5095_1|py27hb1d0314_0|py36hc3f5095_0|py37hc3f5095_0|py36hc3f5095_0|py27hb1d0314_0|py38hc3f5095_0|py27hb1d0314_0|py37hc3f5095_0|py36hc3f5095_0|py37hc3f5095_0|py27hb1d0314_0|py36hc3f5095_0|py37hc3f5095_0|py36hc3f5095_0|py37hc3f5095_0|py27hb1d0314_1|py36hc3f5095_1|py36hc3f5095_0|py37hc3f5095_0|py36hc3f5095_0|py37hc3f5095_0|py37hc3f5095_0|py36hc3f5095_0|py27h2753ae9_0|py37h8128ebf_0|py27h2753ae9_0|py37h8128ebf_0|py37h8128ebf_0|py36h8128ebf_0|py27h2753ae9_0|py27h2753ae9_0|py35h8128ebf_0|py37h8128ebf_0|py36hc3f5095_5|py35h8128ebf_4|py27h2753ae9_4|py27h0bb1d87_4|py36h5c71026_3|py27h0bb1d87_3|py37h5c71026_2|py36h5c71026_2|py35h5c71026_0|py27h0bb1d87_0|py36h5c71026_0|py35h5c71026_0|py38hc3f5095_12|py36hc3f5095_12|py27hb1d0314_12|py27hb1d0314_11|py36h2a9b21d_11|py37h8128ebf_11|py36h8128ebf_11|py27h2753ae9_10|py37h8128ebf_10|py35h8128ebf_10|py35h8128ebf_9|py37h8128ebf_9|py37h4a99626_9|py37h5c71026_8|py37h5c71026_7|py36h5c71026_7|py27h0bb1d87_7|py35h5c71026_7|py37h5c71026_7|py36h5c71026_7|py27h0bb1d87_7|py37hc3f5095_0']
+pytest-doctestplus -> numpy[version='>=1.10'] -> numpy-base[version='1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.14.3|1.14.3|1.14.3|1.14.4|1.14.4|1.14.4|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.15.0|1.15.0|1.15.0|1.15.0|1.15.1|1.15.1|1.15.1|1.15.1|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.3|1.15.3|1.15.3|1.15.4|1.15.4|1.15.4|1.15.4|1.15.4|1.15.4|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.2|1.16.2|1.16.2|1.16.3|1.16.3|1.16.3|1.16.4|1.16.4|1.16.5|1.16.5|1.16.5|1.16.6|1.16.6|1.16.6|1.16.6|1.17.2.*|1.17.3.*|1.17.4.*|1.18.1.*|1.17.0|1.17.0',build='py36h5c71026_8|py27h0bb1d87_8|py35h4a99626_8|py35h4a99626_9|py36h4a99626_9|py27hfef472a_9|py36h8128ebf_9|py27h2753ae9_9|py36h8128ebf_10|py37h2a9b21d_11|py37hc3f5095_12|py35h555522e_1|py36h555522e_1|py27h917549b_1|py27h0bb1d87_0|py36h5c71026_0|py37h5c71026_0|py27h0bb1d87_1|py36h5c71026_1|py37h5c71026_1|py27h0bb1d87_2|py37h5c71026_3|py37h5c71026_4|py36h5c71026_4|py35h4a99626_4|py36h8128ebf_4|py37h8128ebf_4|py38hc3f5095_4|py37hc3f5095_5|py27hb1d0314_5|py35h4a99626_0|py36h4a99626_0|py27hfef472a_0|py37h4a99626_0|py36h8128ebf_0|py35h8128ebf_0|py27h2753ae9_1|py36h8128ebf_0|py36h8128ebf_0|py27hb1d0314_0|py27hb1d0314_0|py37hc3f5095_1|py36hc3f5095_1|py27hb1d0314_1|py27hb1d0314_0|py37hc3f5095_1|py27hb1d0314_0|py36hc3f5095_0|py37hc3f5095_0|py36hc3f5095_0|py27hb1d0314_0|py38hc3f5095_0|py27hb1d0314_0|py37hc3f5095_0|py36hc3f5095_0|py37hc3f5095_0|py27hb1d0314_0|py36hc3f5095_0|py37hc3f5095_0|py36hc3f5095_0|py37hc3f5095_0|py27hb1d0314_1|py36hc3f5095_1|py36hc3f5095_0|py37hc3f5095_0|py36hc3f5095_0|py37hc3f5095_0|py37hc3f5095_0|py36hc3f5095_0|py27h2753ae9_0|py37h8128ebf_0|py27h2753ae9_0|py37h8128ebf_0|py37h8128ebf_0|py36h8128ebf_0|py27h2753ae9_0|py27h2753ae9_0|py35h8128ebf_0|py37h8128ebf_0|py36hc3f5095_5|py35h8128ebf_4|py27h2753ae9_4|py27h0bb1d87_4|py36h5c71026_3|py27h0bb1d87_3|py37h5c71026_2|py36h5c71026_2|py35h5c71026_0|py27h0bb1d87_0|py36h5c71026_0|py35h5c71026_0|py38hc3f5095_12|py36hc3f5095_12|py27hb1d0314_12|py27hb1d0314_11|py36h2a9b21d_11|py37h8128ebf_11|py36h8128ebf_11|py27h2753ae9_10|py37h8128ebf_10|py35h8128ebf_10|py35h8128ebf_9|py37h8128ebf_9|py37h4a99626_9|py37h5c71026_8|py37h5c71026_7|py36h5c71026_7|py27h0bb1d87_7|py36hc3f5095_0|py37hc3f5095_0']
+
+Package jsonschema conflicts for:
+pytest-notebook -> nbformat -> jsonschema[version='>=2.0,!=2.5.0|>=2.4,!=2.5.0']
+pytest-workflow -> jsonschema
+pytest-executable -> jsonschema[version='>=2,<4']
+pytest-check-links -> nbformat -> jsonschema[version='>=2.0,!=2.5.0|>=2.4,!=2.5.0']
+pytest-notebook -> jsonschema
+
+Package pyyaml conflicts for:
+pytest-workflow -> pyyaml
+pytest-bandit -> bandit[version='>=1.4.0'] -> pyyaml[version='>=3.12|>=3.13']
+pytest-regressions -> pyyaml
+pytest-watch -> watchdog[version='>=0.6.0'] -> pyyaml[version='>=3.10']
+pytest-executable -> pyyaml[version='>=3,<6']
+
+Package appdirs conflicts for:
+pytest-notebook -> black -> appdirs
+pytest-black -> black[version='>=19.3b0'] -> appdirs
+pytest-localstack -> docker-py -> appdirs[version='>=1.4.3']
+
+Package toml conflicts for:
+pytest-black -> black[version='>=19.3b0'] -> toml[version='>=0.9.4']
+pytest-black -> toml
+pytest-pylint -> toml[version='>=0.7.1']
+pytest-notebook -> black -> toml[version='>=0.9.4']
+
+Package pytest-metadata conflicts for:
+pytest-html -> pytest-metadata
+pytest-json-report -> pytest-metadata
+pytest-selenium -> pytest-html[version='>=1.14.0'] -> pytest-metadataThe following specifications were found to be incompatible with your CUDA driver:
+
+  - feature:/win-64::__cuda==9.1=0
+  - feature:|@/win-64::__cuda==9.1=0
+
+Your installed CUDA driver is: 9.1
