@@ -945,6 +945,25 @@ class ChoroplethUtilities(object):
     
     
     # Do some ft-idf calculations
+    def create_suggestion_list_dictionary(self, refresh=True, prompt='why is {} so '):
+        import suggests
+        import logging
+
+        logging.getLogger().setLevel(logging.CRITICAL)
+        if refresh:
+            suggestion_list_dict = {}
+        else:
+            suggestion_list_dict = self.suggestion_list_dict.copy()
+        for district in self.one_country_df.index.tolist():
+            if district not in suggestion_list_dict:
+                response_dict = suggests.get_suggests(prompt.format(district), source='google')
+                dropdown_list = [sg[0].split('>')[1].split('<')[0].strip() for sg in response_dict['data'][1]]
+                suggestion_list_dict[district] = dropdown_list
+        
+        return suggestion_list_dict
+    
+    
+    
     def scrape_suggestion_list_dictionary(self, refresh=True):
         
         # Retrieve the page with tag results and set it up to be scraped

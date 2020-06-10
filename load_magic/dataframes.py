@@ -12,6 +12,10 @@ url_regex = re.compile(r'\b(https?|file)://[-A-Z0-9+&@#/%?=~_|$!:,.;]*[A-Z0-9+&@
 filepath_regex = re.compile(r'\b[c-d]:\\(?:[^\\/:*?"<>|\x00-\x1F]{0,254}[^.\\/:*?"<>|\x00-\x1F]\\)*(?:[^\\/:*?"<>|\x00-\x1F]{0,254}[^.\\/:*?"<>|\x00-\x1F])', re.IGNORECASE)
 
 def get_page_tables(tables_url_or_filepath, verbose=True):
+    '''
+    tables_url = 'https://en.wikipedia.org/wiki/Provinces_of_Afghanistan'
+    page_tables_list = get_page_tables(tables_url)
+    '''
     if url_regex.fullmatch(tables_url_or_filepath) or filepath_regex.fullmatch(tables_url_or_filepath):
         tables_df_list = pd.read_html(tables_url_or_filepath)
     else:
