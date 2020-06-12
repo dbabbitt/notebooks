@@ -8,40 +8,41 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;*.ipynb;" />
         <Filter name="*.py;" />
-        <Find name="get_recent_sermons_dataframe" />
-        <Find name="redeemer-ma-pca" />
-        <Find name="By.CSS_SELECTOR" />
-        <Find name="sermonlink" />
-        <Find name="search_formatted_str" />
-        <Find name="def on_sermonaudio" />
-        <Find name="Harriette Chandler" />
-        <Find name="Senator" />
-        <Find name="Harriette L. Chandler" />
-        <Find name="fill_in_scripture_reference" />
-        <Replace name="smnaudio_search_fstr" />
-        <Replace name="Karyn Polito" />
-        <Replace name="Lieutenant Governor" />
-        <Replace name="log_into_the_sermons_dashboard" />
-        <Replace name="\\g&lt;1&gt;" />
-        <Replace name="\g&lt;1&gt;" />
-        <Replace name="Matthew Kerr" />
-        <Replace name="KerrMatthew" />
-        <Replace name="Keeping the Word" />
-        <Replace name="3152095590" />
+        <Find name="learn" />
+        <Find name="scikit" />
+        <Find name="Importing the workspace file" />
+        <Find name="covid19" />
+        <Find name="&#x0009;" />
+        <Find name="\t" />
+        <Find name="D:\Documents\Repositories\data-foundations\ps1" />
+        <Find name="/home/jovyan/.local/share/jupyter/kernels/" />
+        <Find name=" cat " />
+        <Find name="/bin/" />
+        <Replace name="RPC" />
+        <Replace name="    " />
+        <Replace name="C:\Users\dev\Documents\repositories\notebooks\covid19\ps1" />
+        <Replace name="C:\Users\dev\Anaconda3\share\jupyter\kernels\python3\" />
+        <Replace name=" Get-Content " />
+        <Replace name="\" />
+        <Replace name="C:\Users\dev\Anaconda3\envs\" />
+        <Replace name="C:\Users\dev\Documents\repositories" />
+        <Replace name="notebooks" />
+        <Replace name="C:\Users\dev\Anaconda3\envs" />
     </FindHistory>
     <FileBrowser latestSelectedItem="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg">
         <root foldername="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg" />
     </FileBrowser>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Downloads\test_checkcopyrightcheckbox.py" />
-        <File filename="C:\Users\dev\Downloads\test_pickadate.py" />
-        <File filename="C:\Program Files\Notepad++\change.log" />
-        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\countryinfo\data\afghanistan.json" />
-        <File filename="C:\Users\dev\Anaconda3\Lib\site-packages\countryinfo\__init__.py" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\html\myreps.datamade.html" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\html\state_legislators.html" />
-        <File filename="C:\Users\dev\Documents\repositories\caglorithm-notebooks-fork\_notebooks\2020-04-25-covid-herd-immunity.ipynb" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\covid19\data\mplstyles\dark.mplstyle" />
+        <File filename="C:\Users\dev\Documents\repositories\realpython-tdd-stack\ds\stack.py" />
+        <File filename="C:\Users\dev\Documents\repositories\realpython-tdd-stack\tests\test_stack.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\tests\test_rpc.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\upload_sermons_to_sermon_audio.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\get_recent_sermons.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\RPC\py\sermon_utils.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\covid19\ps1\add_jupyterlab_to_network.ps1" />
+        <File filename="C:\Users\dev\.jupyter\lab\workspaces\labworkspacesrpc-4363.jupyterlab-workspace" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\covid19\environment.yml" />
+        <File filename="C:\Users\dev\.jupyter\lab\workspaces\labworkspacesauto-f-055f.jupyterlab-workspace" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -52,7 +53,7 @@
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
         <GUIConfig name="AppPosition" x="650" y="0" width="725" height="738" isMaximized="yes" />
         <GUIConfig name="FindWindowPosition" left="510" top="242" right="1099" bottom="606" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200524">no</GUIConfig>
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20200625">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -61,7 +62,7 @@
         <GUIConfig name="RememberLastSession">yes</GUIConfig>
         <GUIConfig name="DetectEncoding">yes</GUIConfig>
         <GUIConfig name="NewDocDefaultSettings" format="0" encoding="4" lang="0" codepage="-1" openAnsiAsUTF8="yes" />
-        <GUIConfig name="langsExcluded" gr0="254" gr1="110" gr2="191" gr3="255" gr4="255" gr5="111" gr6="191" gr7="249" gr8="255" gr9="255" gr10="31" gr11="0" gr12="0" langMenuCompact="yes" />
+        <GUIConfig name="langsExcluded" gr0="254" gr1="110" gr2="191" gr3="255" gr4="255" gr5="111" gr6="159" gr7="249" gr8="255" gr9="255" gr10="31" gr11="0" gr12="0" langMenuCompact="no" />
         <GUIConfig name="Print" lineNumber="yes" printOption="3" headerLeft="" headerMiddle="" headerRight="" footerLeft="" footerMiddle="" footerRight="" headerFontName="" headerFontStyle="0" headerFontSize="0" footerFontName="" footerFontStyle="0" footerFontSize="0" margeLeft="0" margeRight="0" margeTop="0" margeBottom="0" />
         <GUIConfig name="Backup" action="0" useCustumDir="no" dir="" isSnapshotMode="yes" snapshotBackupTiming="7000" />
         <GUIConfig name="TaskList">yes</GUIConfig>
