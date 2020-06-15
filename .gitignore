@@ -282,3 +282,6 @@ Miscellaneous/data/xlsx/Copy of DI2E Framework Jira 2020-04-30T16_03_25-0400.xls
 covid19/data/xlsx/API_SH.MED.BEDS.ZS_DS2_en_excel_v2_988704.xlsx
 covid19/notepad_session.xml
 covid19/notepad_session.xml
+covid19/jupyter_notebook_config.py
+covid19/ps1/run_jupyter_lab.ps1
+covid19/environment.yml
