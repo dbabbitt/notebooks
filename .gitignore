@@ -290,3 +290,4 @@ covid19/ps1/run_jupyter_lab.ps1
 covid19/environment.yml
 covid19/jupyter_notebook_config.py
 covid19/ps1/run_jupyter_lab.ps1
+covid19/notepad_session.xml
