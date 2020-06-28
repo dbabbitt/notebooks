@@ -34,14 +34,12 @@
     </FileBrowser>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
         <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\saves\html\test.html" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\saves\txt\jonah2.txt" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\saves\txt\library_notes.txt" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\environment.yml" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\data\csv\bible_books.csv" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\.gitignore" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\covid19\ps1\run_jupyter_lab.ps1" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\covid19\environment.yml" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\saves\txt\Jonah.txt" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\ps1\create_conda_environment.ps1" />
     </History>
     <GUIConfigs>
