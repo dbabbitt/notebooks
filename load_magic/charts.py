@@ -129,14 +129,18 @@ def save_fig_as_various(fig, chart_name, verbose=False):
     save_fig_as_various(fig, 'relative_search_strength_of_unprecedented', verbose=True)
     """
     for dir_name in ['pgf', 'png', 'svg']:
-        dir_path = os.path.join('../saves', dir_name)
-        os.makedirs(name=dir_path, exist_ok=True)
-        file_path = os.path.join(dir_path, '{}.{}'.format(chart_name, dir_name))
-        if os.path.exists(file_path):
-            os.remove(file_path)
-        if verbose:
-            print('Saving plot to {}'.format(os.path.abspath(file_path)))
-        fig.savefig(file_path, bbox_inches='tight')
+        try:
+            dir_path = os.path.join('../saves', dir_name)
+            os.makedirs(name=dir_path, exist_ok=True)
+            file_path = os.path.join(dir_path, '{}.{}'.format(chart_name, dir_name))
+            if os.path.exists(file_path):
+                os.remove(file_path)
+            if verbose:
+                print('Saving plot to {}'.format(os.path.abspath(file_path)))
+            fig.savefig(file_path, bbox_inches='tight')
+        except Exception as e:
+            message = str(e).strip()
+            print(message)
 
 def get_color_cycler(n):
     """
