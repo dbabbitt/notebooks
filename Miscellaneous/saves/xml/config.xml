@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="yes" wrap="yes" directionDown="yes" fifRecuisive="no" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="yes" wrap="yes" directionDown="yes" fifRecuisive="no" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no" regexBackward4PowerUser="no">
         <Path name="C:\Users\dev\Documents\repositories\notebooks\RPC" />
         <Path name="C:\Users\dev\Documents\repositories\notebooks\RPC\py" />
         <Path name="C:\users\dev\Anaconda3\Lib\site-packages\networkx" />
@@ -8,6 +8,7 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;*.ipynb;" />
         <Filter name="*.py;" />
+        <Find name="\s+" />
         <Find name="&gt;&gt;&gt;&gt;" />
         <Find name="var" />
         <Find name=" +" />
@@ -17,9 +18,8 @@
         <Find name="Ecc" />
         <Find name="learn" />
         <Find name="scikit" />
-        <Find name="Importing the workspace file" />
-        <Replace name="let" />
         <Replace name=" " />
+        <Replace name="let" />
         <Replace name="\t" />
         <Replace name="RPC" />
         <Replace name="    " />
@@ -37,10 +37,11 @@
         <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\saves\txt\library_notes.txt" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\environment.yml" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\data\csv\bible_books.csv" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\.gitignore" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\covid19\ps1\run_jupyter_lab.ps1" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\covid19\environment.yml" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\ps1\create_conda_environment.ps1" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\covid19\ipynb\Compile Final Results.ipynb" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\covid19\ipynb\Plot Real-time Rt for One State.ipynb" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -83,7 +84,7 @@
         <GUIConfig name="MISC" fileSwitcherWithoutExtColumn="no" backSlashIsEscapeCharacterForSql="yes" monospacedFontFindDlg="no" stopFillingFindField="no" newStyleSaveDlg="no" isFolderDroppedOpenFiles="no" docPeekOnTab="no" docPeekOnMap="no" />
         <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
-        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="no" borderEdge="yes" isEdgeBgMode="no" edgeMultiColumnPos="" zoom="4" zoom2="0" whiteSpaceShow="show" eolShow="hide" borderWidth="2" smoothFont="no" />
+        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" isEdgeBgMode="no" edgeMultiColumnPos="" zoom="4" zoom2="0" whiteSpaceShow="show" eolShow="hide" borderWidth="2" smoothFont="no" />
         <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="250">
             <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="3" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44085" curr="0" prev="-1" isVisible="no" />
