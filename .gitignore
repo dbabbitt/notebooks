@@ -2,10 +2,16 @@
 # C:\Users\dev\Documents\repositories\notebooks\.gitignore
 
 # Ignore files that contain harddrive-specific information
-covid19/notepad_session.xml
-covid19/jupyter_notebook_config.py
-covid19/ps1/run_jupyter_lab.ps1
+Miscellaneous/data/xlsx/Copy of DI2E Framework Jira 2020-04-30T16_03_25-0400.xlsx
+covid19/data/xlsx/API_SH.MED.BEDS.ZS_DS2_en_excel_v2_988704.xlsx
 covid19/environment.yml
+covid19/ipynb/Realtime R0 among the Nations.ipynb
+covid19/ipynb/Realtime R0.ipynb
+covid19/ipynb/date.ipynb
+covid19/jupyter_notebook_config.py
+covid19/notepad_session.xml
+covid19/ps1/run_jupyter_lab.ps1
+covid19/saves/csv/states_df.csv
 
 # exclude everything except personal directories
 /*
@@ -36,23 +42,24 @@ covid19/environment.yml
 !/word-cloud
 
 # Ignore whole folders
+**/.git/
 AndrewTextClassification/data
 CMS_DRGs/data/shapefiles
 Favicons/data
+Miscellaneous/data/twitter
+Miscellaneous/saves/emails
 Miscellaneous/saves/gif
-mobile-phone-activity/data
-mobile-phone-activity/saves/csv
-mobile-phone-activity/saves/pickle
 Offutt-AFB-Data-Science/saves
-**/.git/
 RPC/data
 Strauss–Howe/saves/movies
 Word2Vec/data
-Miscellaneous/saves/emails
 covid19/data/csv
 covid19/data/gpw-v4-population-count-rev11_2020_30_sec_asc
 covid19/data/tif
 covid19/whl
+mobile-phone-activity/data
+mobile-phone-activity/saves/csv
+mobile-phone-activity/saves/pickle
 
 # Ignore big files (GitHub will warn you when pushing files larger than 50 MB. You will not be allowed to
 # push files larger than 100 MB.) Tip: If you regularly push large files to GitHub, consider introducing
@@ -280,14 +287,3 @@ data-science-5k/ipynb/applied-social-network-analysis/Assignment+4.ipynb
 data-science-5k/ipynb/applied-social-network-analysis/Module 4 Quiz.ipynb
 data-science-5k/ipynb/applied-social-network-analysis/assignment3_student_solution.ipynb
 data-science-5k/ipynb/applied-social-network-analysis/assignment3_student_solution.ipynb
-covid19/ipynb/date.ipynb
-covid19/ipynb/Realtime R0 among the Nations.ipynb
-covid19/ipynb/Realtime R0.ipynb
-covid19/saves/csv/states_df.csv
-Miscellaneous/data/xlsx/Copy of DI2E Framework Jira 2020-04-30T16_03_25-0400.xlsx
-covid19/data/xlsx/API_SH.MED.BEDS.ZS_DS2_en_excel_v2_988704.xlsx
-covid19/ps1/run_jupyter_lab.ps1
-covid19/environment.yml
-covid19/jupyter_notebook_config.py
-covid19/ps1/run_jupyter_lab.ps1
-covid19/notepad_session.xml
