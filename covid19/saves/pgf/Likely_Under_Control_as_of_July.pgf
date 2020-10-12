@@ -1183,7 +1183,7 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=3.518102in,y=4.666308in,,base]{\color{textcolor}\sffamily\fontsize{12.000000}{14.400000}\selectfont Likely Under Control}%
+\pgftext[x=3.518102in,y=4.666308in,,base]{\color{textcolor}\sffamily\fontsize{12.000000}{14.400000}\selectfont Likely Under Control as of July 20}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfsetbuttcap%
