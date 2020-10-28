@@ -8,16 +8,19 @@
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
         <Filter name="*.py;*.ipynb;" />
         <Filter name="*.py;" />
+        <Find name="\[ \] " />
+        <Find name="^-   Sunday, ([^\r\n]+)" />
+        <Find name="^-   ([\r\n]+)" />
+        <Find name="0% " />
+        <Find name="_text" />
+        <Find name="6" />
         <Find name="60" />
         <Find name="600" />
         <Find name="fill_in_scripture_reference" />
         <Find name="\s+- " />
-        <Find name="(\d{2})," />
-        <Find name="\s+-\$" />
-        <Find name="\s+" />
-        <Find name="&lt;[^&gt;]+&gt;" />
-        <Find name="pad" />
-        <Find name="touch" />
+        <Replace name="" />
+        <Replace name="-   [[$1]]" />
+        <Replace name="label" />
         <Replace name='\n&quot;' />
         <Replace name="\1" />
         <Replace name='&quot;,-' />
@@ -26,8 +29,6 @@
         <Replace name="let" />
         <Replace name="\t" />
         <Replace name="RPC" />
-        <Replace name="    " />
-        <Replace name="C:\Users\dev\Documents\repositories\notebooks\covid19\ps1" />
     </FindHistory>
     <FileBrowser latestSelectedItem="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg">
         <root foldername="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg" />
@@ -41,9 +42,14 @@
         <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\saves\txt\Jonah.txt" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\twitter\data\tweet.js" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\saves\svg\towers_of_redemption_optimized.svg" />
-        <File filename="C:\Program Files\Notepad++\change.log" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\saves\svg\towers_of_redemption.svg" />
+        <File filename="C:\Program Files\Notepad++\change.log" />
     </History>
+    <ProjectPanels>
+        <ProjectPanel id="0" workSpaceFile="" />
+        <ProjectPanel id="1" workSpaceFile="" />
+        <ProjectPanel id="2" workSpaceFile="" />
+    </ProjectPanels>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
         <GUIConfig name="StatusBar">show</GUIConfig>
@@ -53,7 +59,8 @@
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
         <GUIConfig name="AppPosition" x="0" y="0" width="594" height="616" isMaximized="yes" />
         <GUIConfig name="FindWindowPosition" left="1049" top="170" right="1638" bottom="534" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20201017">no</GUIConfig>
+        <GUIConfig name="FinderConfig" wrappedLines="no" />
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20201101">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -82,12 +89,13 @@
         <GUIConfig name="wordCharList" useDefault="yes" charsAdded="" />
         <GUIConfig name="delimiterSelection" leftmostDelimiter="40" rightmostDelimiter="41" delimiterSelectionOnEntireDocument="no" />
         <GUIConfig name="multiInst" setting="0" />
-        <GUIConfig name="MISC" fileSwitcherWithoutExtColumn="no" backSlashIsEscapeCharacterForSql="yes" monospacedFontFindDlg="no" writeTechnologyEngine="0" stopFillingFindField="no" newStyleSaveDlg="no" isFolderDroppedOpenFiles="no" docPeekOnTab="no" docPeekOnMap="no" />
+        <GUIConfig name="MISC" fileSwitcherWithoutExtColumn="no" backSlashIsEscapeCharacterForSql="yes" writeTechnologyEngine="0" newStyleSaveDlg="no" isFolderDroppedOpenFiles="no" docPeekOnTab="no" docPeekOnMap="no" />
+        <GUIConfig name="Searching" monospacedFontFindDlg="no" stopFillingFindField="no" findDlgAlwaysVisible="no" confirmReplaceInAllOpenDocs="yes" />
         <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
-        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" isEdgeBgMode="no" edgeMultiColumnPos="" zoom="4" zoom2="0" whiteSpaceShow="show" eolShow="hide" borderWidth="2" smoothFont="no" />
+        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" rightClickKeepsSelection="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" isEdgeBgMode="no" edgeMultiColumnPos="" zoom="4" zoom2="0" whiteSpaceShow="show" eolShow="hide" borderWidth="2" smoothFont="no" />
         <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="250">
-            <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="3" prev="-1" isVisible="yes" />
+            <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="3" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44080" curr="1" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44085" curr="0" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="42051" curr="1" prev="-1" isVisible="no" />
@@ -101,9 +109,4 @@
             <ActiveTabs cont="3" activeTab="-1" />
         </GUIConfig>
     </GUIConfigs>
-    <ProjectPanels>
-        <ProjectPanel id="0" workSpaceFile="" />
-        <ProjectPanel id="1" workSpaceFile="" />
-        <ProjectPanel id="2" workSpaceFile="" />
-    </ProjectPanels>
 </NotepadPlus>
