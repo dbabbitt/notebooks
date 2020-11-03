@@ -57,6 +57,7 @@ covid19/data/csv
 covid19/data/gpw-v4-population-count-rev11_2020_30_sec_asc
 covid19/data/tif
 covid19/whl
+job-hunting/saves/txt
 mobile-phone-activity/data
 mobile-phone-activity/saves/csv
 mobile-phone-activity/saves/pickle
@@ -285,5 +286,4 @@ data-science-5k/ipynb/applied-social-network-analysis/Assignment+2.ipynb
 data-science-5k/ipynb/applied-social-network-analysis/Assignment+3.ipynb
 data-science-5k/ipynb/applied-social-network-analysis/Assignment+4.ipynb
 data-science-5k/ipynb/applied-social-network-analysis/Module 4 Quiz.ipynb
-data-science-5k/ipynb/applied-social-network-analysis/assignment3_student_solution.ipynb
 data-science-5k/ipynb/applied-social-network-analysis/assignment3_student_solution.ipynb

@@ -34,7 +34,6 @@
         <root foldername="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg" />
     </FileBrowser>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\.gitignore" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\saves\html\FlipDown.html" />
         <File filename="C:\Users\dev\Downloads\david_w_babbitt_family_tree.txt" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\html\famous_ancestors.html" />
@@ -44,6 +43,7 @@
         <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\saves\svg\towers_of_redemption_optimized.svg" />
         <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\saves\svg\towers_of_redemption.svg" />
         <File filename="C:\Program Files\Notepad++\change.log" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\py\sermon_utils.py" />
     </History>
     <ProjectPanels>
         <ProjectPanel id="0" workSpaceFile="" />
@@ -57,7 +57,7 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="0" y="0" width="594" height="616" isMaximized="yes" />
+        <GUIConfig name="AppPosition" x="334" y="272" width="594" height="616" isMaximized="no" />
         <GUIConfig name="FindWindowPosition" left="1049" top="170" right="1638" bottom="534" />
         <GUIConfig name="FinderConfig" wrappedLines="no" />
         <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20201101">no</GUIConfig>
