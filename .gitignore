@@ -142,6 +142,7 @@ Strauss–Howe/data/mov/2020-01-09_14-46-28.mov
 Strauss–Howe/data/mp4/2020-01-09_14-49-27.mp4
 
 # Exclude Miscellaneous notebooks that I didn't make
+Miscellaneous/data/Takeout/Maps (your places)/Saved Places.json
 Miscellaneous/ipynb/Channel_Attribution_Building_Blocks_of_Interpretability.ipynb
 Miscellaneous/ipynb/Google Drive.ipynb
 Miscellaneous/ipynb/HW2.ipynb
@@ -154,7 +155,9 @@ Miscellaneous/ipynb/spotify_one_dimensional_blog_post.ipynb
 Miscellaneous/json/htm-anomaly-detection-851805202b9b.json
 Miscellaneous/json/quickstart.py
 Miscellaneous/ps1/autocrlf.ps1
+Miscellaneous/saves/csv/unresponses_df.csv
 Miscellaneous/spotify_one_dimensional_blog_post.ipynb
+saves/csv/Latest ORR.csv
 
 # Exclude Simulations notebooks that I didn't make
 Simulations/dsdemo1.ipynb

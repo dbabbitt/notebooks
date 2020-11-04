@@ -2,27 +2,6 @@
   "type" : "FeatureCollection",
   "features" : [ {
     "geometry" : {
-      "coordinates" : [ -83.6848302, 32.6102692 ],
-      "type" : "Point"
-    },
-    "properties" : {
-      "Google Maps URL" : "http://maps.google.com/?cid=6728097923516264554",
-      "Location" : {
-        "Address" : "118 Byrd Way, Warner Robins, GA 31088, United States",
-        "Business Name" : "Booz Allen Hamilton",
-        "Country Code" : "US",
-        "Geo Coordinates" : {
-          "Latitude" : "32.6102692",
-          "Longitude" : "-83.6848302"
-        }
-      },
-      "Published" : "2019-07-15T13:12:47Z",
-      "Title" : "Booz Allen Hamilton",
-      "Updated" : "2019-07-15T13:12:47Z"
-    },
-    "type" : "Feature"
-  }, {
-    "geometry" : {
       "coordinates" : [ -71.4231411, 42.5662756 ],
       "type" : "Point"
     },
@@ -93,27 +72,6 @@
       "Published" : "2019-04-06T19:05:55Z",
       "Title" : "62 Packard St, Hudson, MA 01749",
       "Updated" : "2019-04-06T19:05:55Z"
-    },
-    "type" : "Feature"
-  }, {
-    "geometry" : {
-      "coordinates" : [ -95.9327613, 41.2571378 ],
-      "type" : "Point"
-    },
-    "properties" : {
-      "Google Maps URL" : "http://maps.google.com/?cid=12702300780599126914",
-      "Location" : {
-        "Address" : "1299 Farnam Street # 1230, Omaha, NE 68102, United States",
-        "Business Name" : "Booz Allen Hamilton",
-        "Country Code" : "US",
-        "Geo Coordinates" : {
-          "Latitude" : "41.2571378",
-          "Longitude" : "-95.9327613"
-        }
-      },
-      "Published" : "2019-03-23T21:53:21Z",
-      "Title" : "Booz Allen Hamilton",
-      "Updated" : "2019-03-23T21:53:21Z"
     },
     "type" : "Feature"
   }, {
