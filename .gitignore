@@ -17,7 +17,6 @@ covid19/saves/csv/states_df.csv
 /*
 !/CompTIA Security+ Certification
 !/Miscellaneous
-!/Simulations
 !/StatsByCountry
 !/Strauss–Howe
 !/TensorFlow
@@ -26,7 +25,6 @@ covid19/saves/csv/states_df.csv
 !/job-hunting
 !/joy-plots
 !/load_magic
-!/mimetic_tribes
 !/mobile-phone-activity
 !/oscars
 !/ramadan-2015
@@ -140,12 +138,6 @@ Miscellaneous/ps1/autocrlf.ps1
 Miscellaneous/saves/csv/unresponses_df.csv
 Miscellaneous/spotify_one_dimensional_blog_post.ipynb
 saves/csv/Latest ORR.csv
-
-# Exclude Simulations notebooks that I didn't make
-Simulations/dsdemo1.ipynb
-Simulations/neural_cue_combination.ipynb
-Simulations/s7_streaming.ipynb
-Simulations/simulation frameworks.ipynb
 
 # Exclude TensorFlow notebooks that I didn't make
 TensorFlow/Basic Usage.ipynb
