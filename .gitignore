@@ -9,15 +9,8 @@ Miscellaneous/data/xlsx/Copy of DI2E Framework Jira 2020-04-30T16_03_25-0400.xls
 !/CompTIA Security+ Certification
 !/Miscellaneous
 !/StatsByCountry
-!/Strauss–Howe
-!/TensorFlow
-!/airline-sentiment
 !/job-hunting
-!/joy-plots
 !/load_magic
-!/mobile-phone-activity
-!/oscars
-!/ramadan-2015
 !/saves
 !/tale-of-2-cities
 
@@ -29,14 +22,9 @@ Favicons/data
 Miscellaneous/data/twitter
 Miscellaneous/saves/emails
 Miscellaneous/saves/gif
-Offutt-AFB-Data-Science/saves
 RPC/data
-Strauss–Howe/saves/movies
 job-hunting/saves/html
 job-hunting/saves/txt
-mobile-phone-activity/data
-mobile-phone-activity/saves/csv
-mobile-phone-activity/saves/pickle
 
 # Ignore big files (GitHub will warn you when pushing files larger than 50 MB. You will not be allowed to
 # push files larger than 100 MB.) Tip: If you regularly push large files to GitHub, consider introducing
@@ -48,7 +36,6 @@ Miscellaneous/saves/pickle/estimators_list.pickle
 Miscellaneous/saves/pickle/fit_estimators_dict.pickle
 Miscellaneous/saves/pickle/fit_estimators_list.pickle
 StatsByCountry/saves/maps/Spain_languages-en.svg
-Strauss–Howe/saves/gif/net_neutrality.gif
 
 # Exclude executables
 *.exe
@@ -64,10 +51,6 @@ Strauss–Howe/saves/gif/net_neutrality.gif
 
 # Exclude pickles
 *.pickle
-
-# Exclude Strauss–Howe notebooks that I didn't make
-Strauss–Howe/data/mov/2020-01-09_14-46-28.mov
-Strauss–Howe/data/mp4/2020-01-09_14-49-27.mp4
 
 # Exclude Miscellaneous notebooks that I didn't make
 Miscellaneous/data/Takeout/Maps (your places)/Saved Places.json
@@ -86,17 +69,3 @@ Miscellaneous/ps1/autocrlf.ps1
 Miscellaneous/saves/csv/unresponses_df.csv
 Miscellaneous/spotify_one_dimensional_blog_post.ipynb
 saves/csv/Latest ORR.csv
-
-# Exclude TensorFlow notebooks that I didn't make
-TensorFlow/Basic Usage.ipynb
-TensorFlow/Deep Convolutional Generative Adversarial Network (DCGAN) Tutorial.ipynb
-TensorFlow/gan-intro-master
-TensorFlow/Generative Adversarial Networks
-TensorFlow/handson-ml-master
-TensorFlow/kur-master
-TensorFlow/input_data.py
-TensorFlow/models
-TensorFlow/seq2seq docs
-TensorFlow/TensorFlow-Tutorials-master
-TensorFlow/figs/
-TensorFlow/MNIST_data/
