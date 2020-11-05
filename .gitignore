@@ -34,7 +34,6 @@ Miscellaneous/saves/gif/Q2tbQEo.gif
 Miscellaneous/saves/pickle/estimators_list.pickle
 Miscellaneous/saves/pickle/fit_estimators_dict.pickle
 Miscellaneous/saves/pickle/fit_estimators_list.pickle
-StatsByCountry/saves/maps/Spain_languages-en.svg
 
 # Exclude executables
 *.exe

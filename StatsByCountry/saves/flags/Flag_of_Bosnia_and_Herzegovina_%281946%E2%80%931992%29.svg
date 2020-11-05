@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="600">
-<rect width="1200" height="600" x="0" y="0" style="fill:#dd0000" />
-<rect width="300" height="100" x="0" y="0" style="fill:#003893" />
-<rect width="300" height="50" x="0" y="50" style="fill:#ffffff" />
-<rect width="296" height="146" x="2" y="2" style="fill:none;stroke:#f5bf22;stroke-width:4" />
-<path d="m 150,30 -10,32 -33,0 27,20 -10,32 27,-20 27,20 -10,-32 27,-20 -33,0 z" style="fill:#de0000;stroke:#f5bf22;stroke-width:3.5" />
-</svg>
