@@ -21,7 +21,6 @@ covid19/saves/csv/states_df.csv
 !/StatsByCountry
 !/Strauss–Howe
 !/TensorFlow
-!/Word2Vec
 !/airline-sentiment
 !/covid19
 !/job-hunting
@@ -45,7 +44,6 @@ Miscellaneous/saves/gif
 Offutt-AFB-Data-Science/saves
 RPC/data
 Strauss–Howe/saves/movies
-Word2Vec/data
 covid19/data/csv
 covid19/data/gpw-v4-population-count-rev11_2020_30_sec_asc
 covid19/data/tif
@@ -74,15 +72,6 @@ Miscellaneous/saves/pickle/fit_estimators_dict.pickle
 Miscellaneous/saves/pickle/fit_estimators_list.pickle
 StatsByCountry/saves/maps/Spain_languages-en.svg
 Strauss–Howe/saves/gif/net_neutrality.gif
-Word2Vec/data/GoogleNews-vectors-negative300.bin.gz
-Word2Vec/data/text8
-Word2Vec/data/text8-phrases
-Word2Vec/data/glove.6B/glove.6B.100d.txt
-Word2Vec/data/glove.6B/glove.6B.100d.txt.word2vec
-Word2Vec/data/glove.6B/glove.6B.200d.txt
-Word2Vec/data/glove.6B/glove.6B.300d.txt
-Word2Vec/data/glove.6B/glove.6B.50d.txt
-Word2Vec/data/glove.840B.300d/glove.840B.300d.txt
 
 # Exclude executables
 *.exe
@@ -171,15 +160,3 @@ TensorFlow/seq2seq docs
 TensorFlow/TensorFlow-Tutorials-master
 TensorFlow/figs/
 TensorFlow/MNIST_data/
-
-# Exclude Word2Vec notebooks that I didn't make
-Word2Vec/back_end
-Word2Vec/benchmarking.ipynb
-Word2Vec/cnn-text-classification-tf-master
-Word2Vec/data
-Word2Vec/DeepLearningMovies-master
-Word2Vec/doc2vec.ipynb
-Word2Vec/GoogleNews-vectors-negative300.ipynb
-Word2Vec/inspect_google_word2vec.py
-Word2Vec/word2vec.ipynb
-Word2Vec/Wordrank_comparisons.ipynb
