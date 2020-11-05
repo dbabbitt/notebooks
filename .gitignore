@@ -25,21 +25,15 @@ covid19/saves/csv/states_df.csv
 !/age-of-empires-ii
 !/airline-sentiment
 !/covid19
-!/data-science-5k
 !/job-hunting
 !/joy-plots
 !/load_magic
-!/march-madness
 !/mimetic_tribes
 !/mobile-phone-activity
 !/oscars
 !/ramadan-2015
 !/saves
 !/tale-of-2-cities
-!/texas-flooding
-!/text-classification
-!/web-scrapers
-!/word-cloud
 
 # Ignore whole folders
 **/.git/
@@ -190,104 +184,3 @@ Word2Vec/GoogleNews-vectors-negative300.ipynb
 Word2Vec/inspect_google_word2vec.py
 Word2Vec/word2vec.ipynb
 Word2Vec/Wordrank_comparisons.ipynb
-
-# Exclude text-classification notebooks that I didn't make
-text-classification/data
-text-classification/ipynb/exercise_01_language_train_model..ipynb
-text-classification/ipynb/exercise_02_sentiment.ipynb
-text-classification/skeletons/exercise_01_language_train_model.py
-text-classification/skeletons/exercise_02_sentiment.py
-text-classification/solutions/exercise_01_language_train_model.py
-text-classification/solutions/exercise_02_sentiment.py
-text-classification/solutions/generate_skeletons.py
-text-classification/working_with_text_data_fixture.py
-
-# Exclude web-scraper notebooks that I didn't make
-web-scrapers/ipnyb/how_to_build_facebook_scraper.ipynb
-
-# Exclude march-madness notebooks that I didn't make
-march-madness/Data.properties
-march-madness/Data/MMdocs.properties
-march-madness/Data/tweets.properties
-march-madness/Data/TwitterDATA.properties
-march-madness/Data/TwitterDATA/*.txt
-march-madness/dplyr-tutorial-master
-march-madness/March Madness.properties
-march-madness/Processes.properties
-march-madness/Processes/Text Mining.properties
-
-# Exclude TX Flooding code that I didn't write
-texas-flooding/myStream.php/myStream.php
-texas-flooding/myStream.php/TwitterAPIExchange.php
-texas-flooding/twitter_streaming.py
-
-# Exclude Word Cloud code that I didn't write
-word-cloud/appendix_c3_program.R
-word-cloud/rtutorial.txt
-word-cloud/rollapply.R
-
-# Exclude Data Science 5K code that I didn't write
-data-science-5k/assignments
-data-science-5k/m/ex1/computeCostMulti.m
-data-science-5k/m/ex1/ex1.m
-data-science-5k/m/ex1/ex1_multi.m
-data-science-5k/m/ex1/gradientDescentMulti.m
-data-science-5k/m/**/lib
-data-science-5k/m/ex1/normalEqn.m
-data-science-5k/m/**/submit.m
-data-science-5k/m/ex1/warmUpExercise.m
-data-science-5k/m/ex2/ex2.m
-data-science-5k/m/ex2/ex2_reg.m
-data-science-5k/m/ex2/mapFeature.m
-data-science-5k/m/ex2/plotDecisionBoundary.m
-data-science-5k/m/ex3/displayData.m
-data-science-5k/m/ex3/ex3.m
-data-science-5k/m/ex3/ex3_nn.m
-data-science-5k/m/**/fmincg.m
-data-science-5k/m/ex3/sigmoid.m
-data-science-5k/m/ex4/checkNNGradients.m
-data-science-5k/m/ex4/computeNumericalGradient.m
-data-science-5k/m/ex4/debugInitializeWeights.m
-data-science-5k/m/ex4/displayData.m
-data-science-5k/m/ex4/ex4.m
-data-science-5k/m/ex4/nnCostFunction.m
-data-science-5k/m/ex4/predict.m
-data-science-5k/m/ex4/sigmoid.m
-data-science-5k/m/ex5/ex5.m
-data-science-5k/m/ex5/featureNormalize.m
-data-science-5k/m/ex5/learningCurve.m
-data-science-5k/m/ex5/plotFit.m
-data-science-5k/m/ex5/trainLinearReg.m
-data-science-5k/m/ex6/ex6.m
-data-science-5k/m/ex6/ex6_spam.m
-data-science-5k/m/ex6/getVocabList.m
-data-science-5k/m/ex6/linearKernel.m
-data-science-5k/m/ex6/plotData.m
-data-science-5k/m/ex6/porterStemmer.m
-data-science-5k/m/ex6/readFile.m
-data-science-5k/m/ex6/svmPredict.m
-data-science-5k/m/ex6/svmTrain.m
-data-science-5k/m/ex6/visualizeBoundary.m
-data-science-5k/m/ex6/visualizeBoundaryLinear.m
-data-science-5k/m/ex7/displayData.m
-data-science-5k/m/ex7/drawLine.m
-data-science-5k/m/ex7/ex7.m
-data-science-5k/m/ex7/ex7_pca.m
-data-science-5k/m/ex7/featureNormalize.m
-data-science-5k/m/ex7/plotDataPoints.m
-data-science-5k/m/ex7/plotProgresskMeans.m
-data-science-5k/m/ex7/runkMeans.m
-data-science-5k/m/ex8/checkCostFunction.m
-data-science-5k/m/ex8/computeNumericalGradient.m
-data-science-5k/m/ex8/ex8.m
-data-science-5k/m/ex8/ex8_cofi.m
-data-science-5k/m/ex8/loadMovieList.m
-data-science-5k/m/ex8/multivariateGaussian.m
-data-science-5k/m/ex8/normalizeRatings.m
-data-science-5k/m/ex8/visualizeFit.m
-data-science-5k/m/squareAndCubeThisNumer.m
-data-science-5k/ipynb/applied-social-network-analysis/Assignment+2.ipynb
-data-science-5k/ipynb/applied-social-network-analysis/Assignment+3.ipynb
-data-science-5k/ipynb/applied-social-network-analysis/Assignment+4.ipynb
-data-science-5k/ipynb/applied-social-network-analysis/Module 4 Quiz.ipynb
-data-science-5k/ipynb/applied-social-network-analysis/assignment3_student_solution.ipynb
