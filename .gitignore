@@ -3,15 +3,6 @@
 
 # Ignore files that contain harddrive-specific information
 Miscellaneous/data/xlsx/Copy of DI2E Framework Jira 2020-04-30T16_03_25-0400.xlsx
-covid19/data/xlsx/API_SH.MED.BEDS.ZS_DS2_en_excel_v2_988704.xlsx
-covid19/environment.yml
-covid19/ipynb/Realtime R0 among the Nations.ipynb
-covid19/ipynb/Realtime R0.ipynb
-covid19/ipynb/date.ipynb
-covid19/jupyter_notebook_config.py
-covid19/notepad_session.xml
-covid19/ps1/run_jupyter_lab.ps1
-covid19/saves/csv/states_df.csv
 
 # exclude everything except personal directories
 /*
@@ -21,7 +12,6 @@ covid19/saves/csv/states_df.csv
 !/Strauss–Howe
 !/TensorFlow
 !/airline-sentiment
-!/covid19
 !/job-hunting
 !/joy-plots
 !/load_magic
@@ -42,10 +32,6 @@ Miscellaneous/saves/gif
 Offutt-AFB-Data-Science/saves
 RPC/data
 Strauss–Howe/saves/movies
-covid19/data/csv
-covid19/data/gpw-v4-population-count-rev11_2020_30_sec_asc
-covid19/data/tif
-covid19/whl
 job-hunting/saves/html
 job-hunting/saves/txt
 mobile-phone-activity/data
@@ -55,13 +41,6 @@ mobile-phone-activity/saves/pickle
 # Ignore big files (GitHub will warn you when pushing files larger than 50 MB. You will not be allowed to
 # push files larger than 100 MB.) Tip: If you regularly push large files to GitHub, consider introducing
 # Git Large File Storage (Git LFS) as part of your workflow.
-covid19/data/csv/linelist.csv
-covid19/data/usa_gpwv3_pdens_ascii_25/usads00ag.asc
-covid19/data/usa_gpwv3_pdens_ascii_25/usads00g.asc
-covid19/data/usa_gpwv3_pdens_ascii_25/usads90ag.asc
-covid19/data/usa_gpwv3_pdens_ascii_25/usads90g.asc
-covid19/data/usa_gpwv3_pdens_ascii_25/usads95ag.asc
-covid19/data/usa_gpwv3_pdens_ascii_25/usads95g.asc
 gpt2-excuse-generator/models/pytorch_model.bin
 Miscellaneous/saves/gif/Goodbye_Mr_Conway.gif
 Miscellaneous/saves/gif/Q2tbQEo.gif
@@ -85,37 +64,6 @@ Strauss–Howe/saves/gif/net_neutrality.gif
 
 # Exclude pickles
 *.pickle
-
-# Exclude COVID-19 code that I didn't write (or too messy)
-covid19/data/csv/20200326-sitrep-66-covid-19.csv
-covid19/data/csv/NCHSData13.csv
-covid19/data/csv/daily.csv
-covid19/data/csv/rt.csv
-covid19/data/html/annual-average-humidity-by-state.html
-covid19/data/html/humidity-city-march.html
-covid19/data/html/worldometers_coronavirus.html
-covid19/data/pdf/
-covid19/data/txt/
-covid19/data/usa_gpwv3_pdens_ascii_25/
-covid19/data/usa_gpwv3_pdens_wrk_25/
-covid19/data/xlsx/annual-average-humidity-by-state.xlsx
-covid19/data/xlsx/co-est2019-annres.xlsx
-covid19/data/xlsx/humidity-city-march.xlsx
-covid19/data/zip/
-covid19/ipynb/0704 - Creating a Dot Density Map.ipynb
-covid19/ipynb/Realtime R0 among the US States.ipynb
-covid19/ipynb/Realtime Rt mcmc.ipynb
-covid19/ipynb/US County Population Density-Copy1.ipynb
-covid19/py/DiseaseBoard.py
-covid19/py/images/Illustration-1.png
-covid19/py/images/Illustration-2.png
-covid19/py/images/Models.png
-covid19/py/spread.py
-covid19/saves/csv/rt_old.csv
-covid19/saves/pgf/example_2_1_3d_bar_chart.pgf
-covid19/saves/pgf/example_2_1_heat_map.pgf
-covid19/saves/png/
-covid19/saves/svg/Worldmap_northern.svg
 
 # Exclude Strauss–Howe notebooks that I didn't make
 Strauss–Howe/data/mov/2020-01-09_14-46-28.mov
