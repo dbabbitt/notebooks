@@ -11,6 +11,10 @@ Miscellaneous/data/xlsx/Copy of DI2E Framework Jira 2020-04-30T16_03_25-0400.xls
 !/load_magic
 !/saves
 !/ipynb
+!/py
+!/ps1
+!/sh
+!/tests
 
 # Ignore whole folders
 **/.git/
@@ -69,3 +73,4 @@ Miscellaneous/spotify_one_dimensional_blog_post.ipynb
 
 # Exclude job hunting notebooks that I didn't make
 job-hunting/ipynb/bert_language_model_with_sequence_classification.ipynb
+ps1/test.ps1
