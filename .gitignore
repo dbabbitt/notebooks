@@ -2,65 +2,70 @@
 # C:\Users\dev\Documents\repositories\notebooks\.gitignore
 
 # Ignore files that contain harddrive-specific information
-Miscellaneous/data/xlsx/Copy of DI2E Framework Jira 2020-04-30T16_03_25-0400.xlsx
+data/xlsx/Copy of DI2E Framework Jira 2020-04-30T16_03_25-0400.xlsx
 
 # exclude everything except personal directories
 /*
-!/Miscellaneous
-!/load_magic
-!/saves
 !/ipynb
-!/py
+!/load_magic
 !/ps1
+!/py
+!/saves
 !/sh
 !/tests
+!/json
 
 # Ignore whole folders
 **/.git/
 AndrewTextClassification/data
 CMS_DRGs/data/shapefiles
 Favicons/data
-Miscellaneous/data/twitter
-Miscellaneous/saves/emails
-Miscellaneous/saves/gif
 RPC/data
+data/twitter
+saves/emails
+saves/gif
+saves/mp4
 
 # Ignore big files (GitHub will warn you when pushing files larger than 50 MB. You will not be allowed to
 # push files larger than 100 MB.) Tip: If you regularly push large files to GitHub, consider introducing
 # Git Large File Storage (Git LFS) as part of your workflow.
 gpt2-excuse-generator/models/pytorch_model.bin
-Miscellaneous/saves/gif/Goodbye_Mr_Conway.gif
-Miscellaneous/saves/gif/Q2tbQEo.gif
-Miscellaneous/saves/pickle/estimators_list.pickle
-Miscellaneous/saves/pickle/fit_estimators_dict.pickle
-Miscellaneous/saves/pickle/fit_estimators_list.pickle
+saves/gif/Goodbye_Mr_Conway.gif
+saves/gif/Q2tbQEo.gif
+saves/pickle/estimators_list.pickle
+saves/pickle/fit_estimators_dict.pickle
+saves/pickle/fit_estimators_list.pickle
 saves/csv/Latest ORR.csv
 
 # Exclude executables
 *.exe
 
 # Exclude secrets
-**/json/*_secrets.json
+**/json/*_secret*.json
+**/json/*credential*.json
 
 # Exclude pickles
 *.pickle
 
 # Exclude Miscellaneous notebooks that I didn't make
-Miscellaneous/data/Takeout/Maps (your places)/Saved Places.json
-Miscellaneous/ipynb/Channel_Attribution_Building_Blocks_of_Interpretability.ipynb
-Miscellaneous/ipynb/Google Drive.ipynb
-Miscellaneous/ipynb/HW2.ipynb
-Miscellaneous/ipynb/Linear Regression with Gradient Descent.ipynb
-Miscellaneous/ipynb/mandelbrot_numbapro.ipynb
-Miscellaneous/ipynb/mandelbrot_numbapro.ipynb
-Miscellaneous/ipynb/not_so_obvious_python_stuff.ipynb
-Miscellaneous/ipynb/spotify_one_dimensional_analysis.ipynb
-Miscellaneous/ipynb/spotify_one_dimensional_blog_post.ipynb
-Miscellaneous/json/htm-anomaly-detection-851805202b9b.json
-Miscellaneous/json/quickstart.py
-Miscellaneous/ps1/autocrlf.ps1
-Miscellaneous/saves/csv/unresponses_df.csv
-Miscellaneous/spotify_one_dimensional_blog_post.ipynb
+data/Takeout/Maps (your places)/Saved Places.json
+ipynb/Channel_Attribution_Building_Blocks_of_Interpretability.ipynb
+ipynb/Google Drive.ipynb
+ipynb/HW2.ipynb
+ipynb/Linear Regression with Gradient Descent.ipynb
+ipynb/ipydagred3_example.ipynb
+ipynb/mandelbrot_numbapro.ipynb
+ipynb/mandelbrot_numbapro.ipynb
+ipynb/monopoly-board-frequencies-and-economics.ipynb
+ipynb/not_so_obvious_python_stuff.ipynb
+ipynb/spotify_one_dimensional_analysis.ipynb
+ipynb/spotify_one_dimensional_blog_post.ipynb
+ipynb/state_fiscal_test_score_correlation_example.ipynb
+json/htm-anomaly-detection-851805202b9b.json
+json/quickstart.py
+ps1/autocrlf.ps1
+saves/csv/unresponses_df.csv
+spotify_one_dimensional_blog_post.ipynb
 
 # Exclude Mac, Jupyter, R, and Octave admin files
 **/octave-workspace
@@ -197,3 +202,5 @@ dmypy.json
 
 # Exclude Pyre type checker
 .pyre/
+saves/txt/community_tool.txt
+saves/txt/Omega-Point-Multiverse.txt
