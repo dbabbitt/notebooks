@@ -1,10 +1,7 @@
 
 # C:\Users\dev\Documents\repositories\notebooks\.gitignore
 
-# Ignore files that contain harddrive-specific information
-data/xlsx/Copy of DI2E Framework Jira 2020-04-30T16_03_25-0400.xlsx
-
-# exclude everything except personal directories
+# exclude everything except text-based OC directories
 /*
 !/ipynb
 !/load_magic
@@ -17,11 +14,6 @@ data/xlsx/Copy of DI2E Framework Jira 2020-04-30T16_03_25-0400.xlsx
 
 # Ignore whole folders
 **/.git/
-AndrewTextClassification/data
-CMS_DRGs/data/shapefiles
-Favicons/data
-RPC/data
-data/twitter
 saves/emails
 saves/gif
 saves/mp4
@@ -29,7 +21,6 @@ saves/mp4
 # Ignore big files (GitHub will warn you when pushing files larger than 50 MB. You will not be allowed to
 # push files larger than 100 MB.) Tip: If you regularly push large files to GitHub, consider introducing
 # Git Large File Storage (Git LFS) as part of your workflow.
-gpt2-excuse-generator/models/pytorch_model.bin
 saves/gif/Goodbye_Mr_Conway.gif
 saves/gif/Q2tbQEo.gif
 saves/pickle/estimators_list.pickle
@@ -47,8 +38,7 @@ saves/csv/Latest ORR.csv
 # Exclude pickles
 *.pickle
 
-# Exclude Miscellaneous notebooks that I didn't make
-data/Takeout/Maps (your places)/Saved Places.json
+# Exclude notebooks that I didn't make
 ipynb/Channel_Attribution_Building_Blocks_of_Interpretability.ipynb
 ipynb/Google Drive.ipynb
 ipynb/HW2.ipynb
@@ -61,11 +51,18 @@ ipynb/not_so_obvious_python_stuff.ipynb
 ipynb/spotify_one_dimensional_analysis.ipynb
 ipynb/spotify_one_dimensional_blog_post.ipynb
 ipynb/state_fiscal_test_score_correlation_example.ipynb
+
+# Exclude JSON files that I didn't make
 json/htm-anomaly-detection-851805202b9b.json
 json/quickstart.py
+
+# Exclude PowerShell scripts that I didn't make
 ps1/autocrlf.ps1
+
+# Exclude other stuff I copied from someone else
 saves/csv/unresponses_df.csv
-spotify_one_dimensional_blog_post.ipynb
+saves/txt/Omega-Point-Multiverse.txt
+saves/txt/community_tool.txt
 
 # Exclude Mac, Jupyter, R, and Octave admin files
 **/octave-workspace
@@ -202,5 +199,3 @@ dmypy.json
 
 # Exclude Pyre type checker
 .pyre/
-saves/txt/community_tool.txt
-saves/txt/Omega-Point-Multiverse.txt
