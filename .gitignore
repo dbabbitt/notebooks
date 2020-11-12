@@ -6,12 +6,11 @@ Miscellaneous/data/xlsx/Copy of DI2E Framework Jira 2020-04-30T16_03_25-0400.xls
 
 # exclude everything except personal directories
 /*
-!/CompTIA Security+ Certification
 !/Miscellaneous
 !/job-hunting
 !/load_magic
 !/saves
-!/tale-of-2-cities
+!/ipynb
 
 # Ignore whole folders
 **/.git/
@@ -34,6 +33,7 @@ Miscellaneous/saves/gif/Q2tbQEo.gif
 Miscellaneous/saves/pickle/estimators_list.pickle
 Miscellaneous/saves/pickle/fit_estimators_dict.pickle
 Miscellaneous/saves/pickle/fit_estimators_list.pickle
+saves/csv/Latest ORR.csv
 
 # Exclude executables
 *.exe
@@ -66,4 +66,6 @@ Miscellaneous/json/quickstart.py
 Miscellaneous/ps1/autocrlf.ps1
 Miscellaneous/saves/csv/unresponses_df.csv
 Miscellaneous/spotify_one_dimensional_blog_post.ipynb
-saves/csv/Latest ORR.csv
+
+# Exclude job hunting notebooks that I didn't make
+job-hunting/ipynb/bert_language_model_with_sequence_classification.ipynb

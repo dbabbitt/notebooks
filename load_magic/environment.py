@@ -1,14 +1,19 @@
 
-import ipykernel
-import urllib
-from notebook import notebookapp
-import json
-import os
 from jupyter_core.paths import jupyter_config_dir
-from traitlets.config import Config
+from notebook import notebookapp
 from sklearn.ensemble import RandomForestClassifier
+from traitlets.config import Config
+import ipykernel
+import json
+import numpy as np
+import os
 import pandas as pd
 import re
+import subprocess
+import sys
+import urllib
+
+
 
 def get_notebook_path():
     """Returns the absolute path of the Notebook or None if it cannot be determined
@@ -41,11 +46,15 @@ def get_notebook_path():
     
     return None
 
+
+
 def get_module_version(python_module):
     for attr in dir(python_module):
         if '_version' in attr.lower():
             print('{}: {}'.format(attr, getattr(python_module, attr, '????')))
 
+            
+            
 def get_dir_tree(module_name, max_levels=2):
     if max_levels < 1:
         return None
@@ -129,7 +138,6 @@ def preprocess_data(df):
 
 
 
-
 def get_classifier(X, y):
     clf = RandomForestClassifier(n_estimators=13)
     clf.fit(X, y)
@@ -152,6 +160,7 @@ def get_datastructure_prediction(df, clf, func):
     prediction = clf.predict(get_input_sample(df, func))
     
     return idx[codes_list.index(prediction[0])]
+
 
 
 # <class '__main__.ObjectClass'> is a type of <class 'type'>
@@ -206,3 +215,35 @@ def get_struct_name(data_struct):
                 struct_name = 'function'
     
     return struct_name
+
+
+
+def get_modules_dataframe():
+    command_str = '{sys.executable} -m pip freeze'.format(sys=sys)
+    print(command_str)
+    proc = subprocess.Popen(command_str, stdout=subprocess.PIPE)
+    modules_list = proc.stdout.read().decode().split('\r\n')
+    modules_list = [module for module in modules_list if module != '']
+    
+    rows_list = []
+    for module_str in modules_list:
+        location_list = module_str.split(' @ ')
+        if len(location_list) == 2:
+            module_location = location_list[1]
+            module_str = location_list[0]
+        else:
+            module_location = np.nan
+        version_list = module_str.split('==')
+        if len(version_list) == 2:
+            module_version = version_list[1]
+            module_str = version_list[0]
+        else:
+            module_version = np.nan
+        row_dict = {}
+        row_dict['module_name'] = module_str
+        row_dict['module_version'] = module_version
+        row_dict['module_location'] = module_location
+        rows_list.append(row_dict.copy())
+    modules_df = pd.DataFrame(rows_list)
+    
+    return modules_df

@@ -1,49 +1,52 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="no" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no" regexBackward4PowerUser="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="no" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="yes" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no" regexBackward4PowerUser="no">
+        <Path name="C:\Users\dev\Documents\repositories\notebooks\job-hunting\saves\html" />
+        <Path name="C:\Users\dev\Documents\repositories\notebooks\job-hunting\saves\txt" />
         <Path name="C:\Users\dev\Documents\repositories\notebooks\RPC" />
         <Path name="C:\Users\dev\Documents\repositories\notebooks\RPC\py" />
         <Path name="C:\users\dev\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx" />
         <Path name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive" />
+        <Filter name="*.html;" />
+        <Filter name="*.txt;" />
         <Filter name="*.py;*.ipynb;" />
         <Filter name="*.py;" />
-        <Find name="\[ \] " />
-        <Find name="^-   Sunday, ([^\r\n]+)" />
-        <Find name="^-   ([\r\n]+)" />
-        <Find name="0% " />
-        <Find name="_text" />
-        <Find name="6" />
-        <Find name="60" />
-        <Find name="600" />
-        <Find name="fill_in_scripture_reference" />
-        <Find name="\s+- " />
-        <Replace name="" />
-        <Replace name="-   [[$1]]" />
-        <Replace name="label" />
-        <Replace name='\n&quot;' />
-        <Replace name="\1" />
-        <Replace name='&quot;,-' />
-        <Replace name=" " />
-        <Replace name='&quot;, &quot;' />
-        <Replace name="let" />
-        <Replace name="\t" />
-        <Replace name="RPC" />
+        <Find name="\.parse_tables" />
+        <Find name="_parse_tables" />
+        <Find name="_parse" />
+        <Find name="re[fl]" />
+        <Find name="wait" />
+        <Find name="post" />
+        <Find name="&apos;users.csv&apos;" />
+        <Find name="books" />
+        <Find name="books.db" />
+        <Find name="_options" />
+        <Replace name="delete" />
+        <Replace name="DATA_PATH" />
+        <Replace name="modules" />
+        <Replace name=" =" />
+        <Replace name="&apos;" />
+        <Replace name="  - " />
+        <Replace name="  -" />
+        <Replace name="    " />
+        <Replace name="/" />
+        <Replace name="flask" />
     </FindHistory>
     <FileBrowser latestSelectedItem="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg">
         <root foldername="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg" />
     </FileBrowser>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\saves\html\FlipDown.html" />
-        <File filename="C:\Users\dev\Downloads\david_w_babbitt_family_tree.txt" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\html\famous_ancestors.html" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\saves\txt\jonah2.txt" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\saves\txt\Jonah.txt" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\data\twitter\data\tweet.js" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\saves\svg\towers_of_redemption_optimized.svg" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\saves\svg\towers_of_redemption.svg" />
-        <File filename="C:\Program Files\Notepad++\change.log" />
-        <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\py\sermon_utils.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\flask\saves\html\report.html" />
+        <File filename="C:\Users\dev\AppData\Roaming\jupyter\kernels\flask\kernel.json" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\flask\tests\test_post_delete_headers_body_json.py" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\flask\data\csv\users.csv" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\flask\ps1\create_flask_conda_environment.ps1" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\flask\api\csv_api.py" />
+        <File filename="C:\Users\dev\AppData\Roaming\PostmanAgent\logs\main.log" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\flask\environment.yml" />
+        <File filename="C:\Users\dev\Documents\repositories\notebooks\rpc\PythonFilesSession.xml" />
+        <File filename="C:\Users\dev\anaconda3\Lib\site-packages\pandas\io\html.py" />
     </History>
     <ProjectPanels>
         <ProjectPanel id="0" workSpaceFile="" />
@@ -57,10 +60,10 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="334" y="272" width="594" height="616" isMaximized="no" />
+        <GUIConfig name="AppPosition" x="0" y="0" width="594" height="616" isMaximized="yes" />
         <GUIConfig name="FindWindowPosition" left="1049" top="170" right="1638" bottom="534" />
         <GUIConfig name="FinderConfig" wrappedLines="no" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20201101">no</GUIConfig>
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20201121">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -93,7 +96,7 @@
         <GUIConfig name="Searching" monospacedFontFindDlg="no" stopFillingFindField="no" findDlgAlwaysVisible="no" confirmReplaceInAllOpenDocs="yes" />
         <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
-        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" rightClickKeepsSelection="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" isEdgeBgMode="no" edgeMultiColumnPos="" zoom="4" zoom2="0" whiteSpaceShow="show" eolShow="hide" borderWidth="2" smoothFont="no" />
+        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" rightClickKeepsSelection="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" isEdgeBgMode="no" edgeMultiColumnPos="" zoom="3" zoom2="0" whiteSpaceShow="show" eolShow="hide" borderWidth="2" smoothFont="no" />
         <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="250">
             <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="3" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44080" curr="1" prev="-1" isVisible="no" />
