@@ -1,6 +1,7 @@
 
-# Create the conda environment
 $OldPath = Get-Location
+
+# Create the conda environment
 cd "C:\Users\dev\Documents\repositories\${RepositoryPath}"
 Write-Host ""
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
