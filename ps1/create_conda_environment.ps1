@@ -74,11 +74,13 @@ $OldPath = Get-Location
 # Update conda
 Write-Host ""
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
-Write-Host "                             Installing conda-build" -ForegroundColor Green
+Write-Host "                        Installing conda-build and compilers" -ForegroundColor Green
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
 conda config --set auto_update_conda true
 conda config --set report_errors false
 conda install conda-build --yes
+conda install m2w64-toolchain --yes
+conda install mkl-service --yes
 Write-Host ""
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
 Write-Host "                               Updating base conda" -ForegroundColor Green
