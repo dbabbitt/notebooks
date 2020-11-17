@@ -43,6 +43,7 @@ ipynb/Channel_Attribution_Building_Blocks_of_Interpretability.ipynb
 ipynb/Google Drive.ipynb
 ipynb/HW2.ipynb
 ipynb/Linear Regression with Gradient Descent.ipynb
+ipynb/Upload YouTube Videos to the Reading Material Folder.ipynb
 ipynb/ipydagred3_example.ipynb
 ipynb/mandelbrot_numbapro.ipynb
 ipynb/mandelbrot_numbapro.ipynb
@@ -199,4 +200,3 @@ dmypy.json
 
 # Exclude Pyre type checker
 .pyre/
-ipynb/Upload YouTube Videos to the Reading Material Folder.ipynb
