@@ -19,3 +19,9 @@ If (!(Test-Path $AnacondaFolder)) {
 	cd $DevFolder
 	robocopy $BackupName $AnacondaName /S
 }
+
+$CommandString = "jupyter notebook --version"
+Write-Host "CommandString = ${CommandString}" -ForegroundColor Red
+$VersionResults = cmd /c $CommandString '2>&1'
+$VersionResults = $VersionResults.Trim()
+Write-Host "VersionResults = ${VersionResults}" -ForegroundColor Red

@@ -72,14 +72,22 @@ function Format-Json {
 $OldPath = Get-Location
 
 # Update conda
-Write-Host ""
-Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
-Write-Host "                        Installing conda-build and compilers" -ForegroundColor Green
-Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
 conda config --set auto_update_conda true
 conda config --set report_errors false
+Write-Host ""
+Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
+Write-Host "                             Installing conda-build" -ForegroundColor Green
+Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
 conda install conda-build --yes
+Write-Host ""
+Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
+Write-Host "                            Installing m2w64-toolchain" -ForegroundColor Green
+Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
 conda install m2w64-toolchain --yes
+Write-Host ""
+Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
+Write-Host "                             Installing mkl-service" -ForegroundColor Green
+Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
 conda install mkl-service --yes
 Write-Host ""
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
