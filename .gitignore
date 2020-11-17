@@ -21,12 +21,22 @@ saves/mp4
 # Ignore big files (GitHub will warn you when pushing files larger than 50 MB. You will not be allowed to
 # push files larger than 100 MB.) Tip: If you regularly push large files to GitHub, consider introducing
 # Git Large File Storage (Git LFS) as part of your workflow.
-saves/gif/Goodbye_Mr_Conway.gif
-saves/gif/Q2tbQEo.gif
-saves/pickle/estimators_list.pickle
-saves/pickle/fit_estimators_dict.pickle
-saves/pickle/fit_estimators_list.pickle
-saves/csv/Latest ORR.csv
+CMS_DRGs/data/shapefiles/USA_Counties.lpk
+CMS_DRGs/data/shapefiles/cb_2016_us_zcta510_500k.zip
+CMS_DRGs/data/shapefiles/cb_2016_us_zcta510_500k/cb_2016_us_zcta510_500k.shp
+CMS_DRGs/data/shapefiles/tl_2015_us_zcta510.zip
+CMS_DRGs/data/shapefiles/tl_2015_us_zcta510/tl_2015_us_zcta510.shp
+CMS_DRGs/data/shapefiles/tl_2016_us_county.zip
+CMS_DRGs/data/shapefiles/tl_2016_us_county/tl_2016_us_county.shp
+Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/.git/objects/pack/pack-199ce58360653f5ff55df22a1e283e3b90a8bd95.pack
+coin-analytics/data/csv/coinbaseUSD.csv
+coin-analytics/saves/pickle/coinbaseUSD_df.pickle
+courses-master/algorithms/nifty-onegram/all_words.tsv
+courses-master/platforms/bokeh/baby_names/yob.pickle
+data/gz/coinbaseUSD.csv.gz
+rpc/data/mp3/2020_03_29_Redeemer_Sermon_Video_Kerr.mp4
+rpc/saves/mp4/Jonahsundayschoolzoomrecordingproject.mp4
+scikit_learn_data/mldata/mnist-original.mat
 
 # Exclude executables
 *.exe
