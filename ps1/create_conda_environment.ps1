@@ -76,22 +76,30 @@ conda config --set auto_update_conda true
 conda config --set report_errors false
 Write-Host ""
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
-Write-Host "                             Installing conda-build" -ForegroundColor Green
+Write-Host "                                 Updating conda" -ForegroundColor Green
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
-conda install conda-build --yes
+conda update conda --yes
 Write-Host ""
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
-Write-Host "                            Installing m2w64-toolchain" -ForegroundColor Green
+Write-Host "                              Updating conda-build" -ForegroundColor Green
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
-conda install m2w64-toolchain --yes
+#conda install conda-build --yes
+conda update conda-build --yes
 Write-Host ""
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
-Write-Host "                             Installing mkl-service" -ForegroundColor Green
+Write-Host "                             Updating m2w64-toolchain" -ForegroundColor Green
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
-conda install mkl-service --yes
+#conda install m2w64-toolchain --yes
+conda update m2w64-toolchain --yes
 Write-Host ""
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
-Write-Host "                               Updating base conda" -ForegroundColor Green
+Write-Host "                              Updating mkl-service" -ForegroundColor Green
+Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
+#conda install mkl-service --yes
+conda update mkl-service --yes
+Write-Host ""
+Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
+Write-Host "                               Updating Base" -ForegroundColor Green
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
 conda update --all --yes
 
