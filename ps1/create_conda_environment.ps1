@@ -74,7 +74,7 @@ $OldPath = Get-Location
 # Update conda
 conda config --set auto_update_conda true
 conda config --set report_errors false
-Write-Host ""
+<# Write-Host ""
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
 Write-Host "                                 Updating conda" -ForegroundColor Green
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
@@ -96,10 +96,10 @@ Write-Host "--------------------------------------------------------------------
 Write-Host "                              Updating mkl-service" -ForegroundColor Green
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
 #conda install mkl-service --yes
-conda update mkl-service --yes
+conda update mkl-service --yes #>
 Write-Host ""
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
-Write-Host "                               Updating Base" -ForegroundColor Green
+Write-Host "              Checking all base conda packages for potential updates" -ForegroundColor Green
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
 conda update --all --yes
 
@@ -109,12 +109,12 @@ Write-Host ""
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
 Write-Host "                  Creating the ${DisplayName} conda environment" -ForegroundColor Green
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
-conda env create
+conda env create --file environment.yml
 Write-Host ""
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
 Write-Host "              Updating the ${DisplayName} conda environment" -ForegroundColor Green
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
-conda env update --prune
+conda env update --file environment.yml --prune
 
 # Add the kernel to the Launcher
 Write-Host ""
@@ -142,7 +142,10 @@ if (($PythonVersion -Eq "") -Or ($PythonVersion -Match '\]$')) {
 $CommandString = -Join('python -m ipykernel install --user --name ', $EnvironmentName, ' --display-name "', $DisplayName, ' (', $PythonVersion, ')"')
 # Write-Host "CommandString = ${CommandString}" -ForegroundColor Red
 Invoke-Expression $CommandString
-(Get-Content "C:\Users\dev\AppData\Roaming\jupyter\kernels\${EnvironmentName}\kernel.json") | ConvertFrom-Json | ConvertTo-Json -depth 7 | Format-Json -Indentation 2
+$KernelPath = "C:\Users\dev\AppData\Roaming\jupyter\kernels\${EnvironmentName}\kernel.json"
+If ([System.IO.File]::Exists($KernelPath)) {
+	(Get-Content $KernelPath) | ConvertFrom-Json | ConvertTo-Json -depth 7 | Format-Json -Indentation 2
+}
 
 # Add a workspace file for bookmarking
 Write-Host ""
@@ -154,7 +157,9 @@ $WorkspacePath = $WorkspacePath.Trim()
 Write-Host "${WorkspacePath}"
 $WorkspacePath = $WorkspacePath -csplit ' '
 $WorkspacePath = $WorkspacePath[$WorkspacePath.Count - 1]
-(Get-Content $WorkspacePath) | ConvertFrom-Json | ConvertTo-Json -depth 7 | Format-Json -Indentation 2
+If ([System.IO.File]::Exists($WorkspacePath)) {
+	(Get-Content $WorkspacePath) | ConvertFrom-Json | ConvertTo-Json -depth 7 | Format-Json -Indentation 2
+}
 
 # Clean up the mess
 Write-Host ""
@@ -171,7 +176,10 @@ Write-Host ""
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
 Write-Host "                       Rebuilding the Jupyter Lab assets" -ForegroundColor Green
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
-Copy-Item "C:\Users\dev\Documents\repositories\${RepositoryPath}\jupyter_notebook_config.py" -Destination "C:\Users\dev\.jupyter"
+$ConfigPath = "C:\Users\dev\Documents\repositories\${RepositoryPath}\jupyter_notebook_config.py"
+If ([System.IO.File]::Exists($ConfigPath)) {
+	Copy-Item $ConfigPath -Destination "C:\Users\dev\.jupyter"
+}
 jupyter-lab build
 
 cd $OldPath

@@ -9,6 +9,7 @@ $AnacondaFolder = "${DevFolder}\${AnacondaName}"
 $BackupName = "${AnacondaName}_old"
 $BackupFolder = "${DevFolder}\${BackupFolder}"
 #Remove-Item -Recurse -Force $BackupFolder
+# THIS DELETED MY ENTIRE DEV FOLDER!!!
 #Get-Childitem -Path $BackupFolder -Recurse | Remove-Item -Recurse -Force
 If (!(Test-Path $BackupFolder)) {
 	Rename-Item $AnacondaFolder $BackupFolder
