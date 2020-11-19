@@ -110,6 +110,7 @@ Write-Host "--------------------------------------------------------------------
 Write-Host "                  Creating the ${DisplayName} conda environment" -ForegroundColor Green
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
 conda env create --file environment.yml
+conda info --envs
 Write-Host ""
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
 Write-Host "              Updating the ${DisplayName} conda environment" -ForegroundColor Green
