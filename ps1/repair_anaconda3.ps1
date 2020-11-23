@@ -1,23 +1,27 @@
 
-# cd C:\Users\dev\Documents\repositories\notebooks\ps1
+# cd $Env:UserProfile\Documents\repositories\notebooks\ps1
 # clear
 # .\repair_anaconda3.ps1
 
 $AnacondaName = "anaconda3"
-$DevFolder = "C:\Users\dev"
-$AnacondaFolder = "${DevFolder}\${AnacondaName}"
+$HomeDirectory = $Env:UserProfile
+$AnacondaFolder = "${HomeDirectory}\${AnacondaName}"
 $BackupName = "${AnacondaName}_old"
-$BackupFolder = "${DevFolder}\${BackupFolder}"
+$BackupFolder = "${HomeDirectory}\${BackupFolder}"
 #Remove-Item -Recurse -Force $BackupFolder
 # THIS DELETED MY ENTIRE DEV FOLDER!!!
 #Get-Childitem -Path $BackupFolder -Recurse | Remove-Item -Recurse -Force
-If (!(Test-Path $BackupFolder)) {
+If (Test-Path -Path $BackupFolder -PathType Container) {
+	Read-Host "Delete or rename the ${BackupName} folder manually, then press ENTER to continue..."
+}
+If (!(Test-Path -Path $BackupFolder -PathType Container)) {
 	Rename-Item $AnacondaFolder $BackupFolder
 }
-If (!(Test-Path $AnacondaFolder)) {
-	$PathVargs = {C:\Users\dev\Downloads\Anaconda3-2020.07-Windows-x86_64.exe}
-	Invoke-Command -ScriptBlock $PathVargs
-	cd $DevFolder
+If (!(Test-Path -Path $AnacondaFolder -PathType Container)) {
+	# $PathVargs = {C:\Users\dev\Downloads\Anaconda3-2020.07-Windows-x86_64.exe}
+	# Invoke-Command -ScriptBlock $PathVargs
+	Read-Host "Launch the Anaconda3 installer manually, then press ENTER to continue when it is complete..."
+	cd $HomeDirectory
 	robocopy $BackupName $AnacondaName /S
 }
 

@@ -3,7 +3,7 @@ $OldPath = Get-Location
 
 # Create the temporary conda environment.yml file
 conda config --set env_prompt '({name})'
-cd "C:\Users\dev\Documents\repositories\${RepositoryPath}"
+cd "${RepositoriesDirectory}\${RepositoryPath}"
 Write-Host ""
 Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Green
 Write-Host "               Temporarily activating the ${EnvironmentName} environment" -ForegroundColor Green
