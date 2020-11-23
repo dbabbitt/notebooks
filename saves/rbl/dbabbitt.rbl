@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rxb:regexbuddy xmlns:rxb="http://www.regexbuddy.com/regexbuddy49.xsd" version="4.9">
 	<libraryfile>
+		<action id="CharactersConvertCurlySngleQuotes" purpose="replace" multiline="1">
+			<flavor>
+				<builtin>python37</builtin>
+			</flavor>
+			<regex>[‘’]</regex>
+			<replace>'</replace>
+			<description>Characters: Convert Curly Sngle Quotes</description>
+		</action>
 		<action id="EnvironmentymlRemoveBuiltins" purpose="replace" multiline="1">
 			<flavor>
 				<builtin>python37</builtin>
 			</flavor>
 			<regex>[\r\n]+    - (__future__|__main__|_thread|abc|aifc|argparse|array|ast|asynchat|asyncio|asyncore|atexit|audioop|base64|bdb|binascii|binhex|bisect|builtins|bz2|calendar|cgi|cgitb|chunk|cmath|cmd|code|codecs|codeop|collections|colorsys|compileall|concurrent|configparser|contextlib|contextvars|copy|copyreg|cProfile|csv|ctypes|dataclasses|datetime|dbm|decimal|difflib|dis|distutils|doctest|email|encodings|ensurepip|enum|errno|faulthandler|filecmp|fileinput|fnmatch|formatter|fractions|ftplib|functools|gc|getopt|getpass|gettext|glob|graphlib|gzip|hashlib|heapq|hmac|html|http|imaplib|imghdr|imp|importlib|inspect|io|ipaddress|itertools|json|keyword|lib2to3|linecache|locale|logging|lzma|mailbox|mailcap|marshal|math|mimetypes|mmap|modulefinder|msilib|msvcrt|multiprocessing|netrc|nntplib|numbers|operator|optparse|os|parser|pathlib|pdb|pickle|pickletools|pkgutil|platform|plistlib|poplib|pprint|profile|pstats|py_compile|pyclbr|pydoc|queue|quopri|random|re|reprlib|rlcompleter|runpy|sched|secrets|select|selectors|shelve|shlex|shutil|signal|site|smtpd|smtplib|sndhdr|socket|socketserver|sqlite3|ssl|stat|statistics|string|stringprep|struct|subprocess|sunau|symbol|symtable|sys|sysconfig|tabnanny|tarfile|telnetlib|tempfile|test|textwrap|threading|time|timeit|tkinter|token|tokenize|trace|traceback|tracemalloc|turtle|turtledemo|types|typing|unicodedata|unittest|urllib|uu|uuid|venv|warnings|wave|weakref|webbrowser|winreg|winsound|wsgiref|xdrlib|xml|xmlrpc|zipapp|zipfile|zipimport|zlib|zoneinfo)$</regex>
 			<description>Environment.yml: Remove Builtins</description>
+		</action>
+		<action id="IPythonsurroundstore_objectsintrycatch" purpose="replace" multiline="1">
+			<flavor>
+				<builtin>python37</builtin>
+			</flavor>
+			<regex>"([^"]+)",\n    "s\.store_objects\(([^\(=]+)=\2\)</regex>
+			<replace>"try:\\n",\n    "    \2 = s.load_object('\2')\\n",\n    "except:\\n",\n    "    \1",\n    "    s.store_objects(\2=\2)</replace>
+			<description>IPython: surround store_objects in try/catch</description>
 		</action>
 		<action id="LinesAppendcarriagereturntononblanklines" purpose="replace" multiline="1" namedduplicate="1">
 			<flavor>
@@ -132,6 +148,24 @@
 			<regex>([]\[{}()*+?.\\^$|])</regex>
 			<replace>\\\g&lt;1></replace>
 			<description>Regex: Escape metacharacters</description>
+		</action>
+		<action id="SklearnConvertBestparameterssettoPipeline" purpose="replace" multiline="1">
+			<flavor>
+				<builtin>python37</builtin>
+			</flavor>
+			<regex>        (vect|tfidf|clf)__([^:]+): ([^\r\n]+)</regex>
+			<replace>    '\1__\2': (\3,),</replace>
+			<description>Sklearn: Convert Best parameters set to Pipeline</description>
+			<testdata format="win1252">CiAgICAgICAgY2xmX19DOiA4NS4wCiAgICAgICAgY2xmX19jbGFzc193ZWlnaHQ6ICdiYWxhbmNlZCcKICAgICAgICBjbGZfX2R1YWw6IEZhbHNlCiAgICAgICAgY2xmX19maXRfaW50ZXJjZXB0OiBUcnVlCiAgICAgICAgY2xmX19tYXhfaXRlcjogNgogICAgICAgIGNsZl9fcGVuYWx0eTogJ2wyJwogICAgICAgIGNsZl9fc29sdmVyOiAnc2FnJwogICAgICAgIGNsZl9fdG9sOiAxZS0wOAogICAgICAgIHRmaWRmX19ub3JtOiAnbDInCiAgICAgICAgdGZpZGZfX3Ntb290aF9pZGY6IFRydWUKICAgICAgICB0ZmlkZl9fc3VibGluZWFyX3RmOiBGYWxzZQogICAgICAgIHRmaWRmX191c2VfaWRmOiBUcnVlCiAgICAgICAgdmVjdF9fYW5hbHl6ZXI6ICdjaGFyX3diJwogICAgICAgIHZlY3RfX2JpbmFyeTogVHJ1ZQogICAgICAgIHZlY3RfX2RlY29kZV9lcnJvcjogJ3N0cmljdCcKICAgICAgICB2ZWN0X19sb3dlcmNhc2U6IEZhbHNlCiAgICAgICAgdmVjdF9fbWF4X2RmOiAwLjUKICAgICAgICB2ZWN0X19tYXhfZmVhdHVyZXM6IDEwMAogICAgICAgIHZlY3RfX21pbl9kZjogMC4wCiAgICAgICAgdmVjdF9fbmdyYW1fcmFuZ2U6ICgxLCAyKQogICAgICAgIHZlY3RfX3N0b3Bfd29yZHM6ICdlbmdsaXNoJwogICAgICAgIHZlY3RfX3N0cmlwX2FjY2VudHM6ICdhc2NpaSc=</testdata>
+		</action>
+		<action id="SklearnConvertUserGuideParameterstoDict" purpose="replace" multiline="1">
+			<flavor>
+				<builtin>python37</builtin>
+			</flavor>
+			<regex>        (vect|tfidf|clf)__([^:]+): ([^\r\n]+)[\r\n]*</regex>
+			<replace>'\2': \3, </replace>
+			<description>Sklearn: Convert User Guide Parameters to Dict</description>
+			<testdata format="win1252">CiAgICAgICAgY2xmX19DOiA4NS4wCiAgICAgICAgY2xmX19jbGFzc193ZWlnaHQ6ICdiYWxhbmNlZCcKICAgICAgICBjbGZfX2R1YWw6IEZhbHNlCiAgICAgICAgY2xmX19maXRfaW50ZXJjZXB0OiBUcnVlCiAgICAgICAgY2xmX19tYXhfaXRlcjogNgogICAgICAgIGNsZl9fcGVuYWx0eTogJ2wyJwogICAgICAgIGNsZl9fc29sdmVyOiAnc2FnJwogICAgICAgIGNsZl9fdG9sOiAxZS0wOAogICAgICAgIHRmaWRmX19ub3JtOiAnbDInCiAgICAgICAgdGZpZGZfX3Ntb290aF9pZGY6IFRydWUKICAgICAgICB0ZmlkZl9fc3VibGluZWFyX3RmOiBGYWxzZQogICAgICAgIHRmaWRmX191c2VfaWRmOiBUcnVlCiAgICAgICAgdmVjdF9fYW5hbHl6ZXI6ICdjaGFyX3diJwogICAgICAgIHZlY3RfX2JpbmFyeTogVHJ1ZQogICAgICAgIHZlY3RfX2RlY29kZV9lcnJvcjogJ3N0cmljdCcKICAgICAgICB2ZWN0X19sb3dlcmNhc2U6IEZhbHNlCiAgICAgICAgdmVjdF9fbWF4X2RmOiAwLjUKICAgICAgICB2ZWN0X19tYXhfZmVhdHVyZXM6IDEwMAogICAgICAgIHZlY3RfX21pbl9kZjogMC4wCiAgICAgICAgdmVjdF9fbmdyYW1fcmFuZ2U6ICgxLCAyKQogICAgICAgIHZlY3RfX3N0b3Bfd29yZHM6ICdlbmdsaXNoJwogICAgICAgIHZlY3RfX3N0cmlwX2FjY2VudHM6ICdhc2NpaSc=</testdata>
 		</action>
 		<action id="URLDifferentURLpartsnamedcapture" caseless="1" namedduplicate="1">
 			<flavor>
