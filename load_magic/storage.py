@@ -55,6 +55,11 @@ class Storage(object):
         
         return(data_frame)
 
+    def pickle_exists(self, pickle_name):
+        pickle_path = os.path.join(self.saves_pickle_folder, '{}.pickle'.format(pickle_name))
+        
+        return os.path.isfile(pickle_path)
+
     def load_dataframes(self, **kwargs):
         frame_dict = {}
         for frame_name in kwargs:
