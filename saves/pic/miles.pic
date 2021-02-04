@@ -1,0 +1,2013 @@
+.\"  Creator: graphviz version 2.46.0 (20210118.1747)
+.\"  Title: miles_dat
+.\"  save point size and font
+.nr .S \n(.s
+.nr DF \n(.f
+.PS 7.50000 7.81944
+.\"  to change drawing size, multiply the width and height on the .PS line above and the number on the two lines below (rounded to the nearest integer) by a scale factor
+.nr SF 7500
+scalethickness = 7500
+.\"  don't change anything below this line in this drawing
+.\"  non-fatal run-time pic version determination, version 2
+boxrad=2.0 .\"  will be reset to 0.0 by gpic only
+scale=1.0 .\"  required for comparisons
+.\"  boxrad is now 0.0 in gpic, else it remains 2.0
+.\"  dashwid is 0.1 in 10th Edition, 0.05 in DWB 2 and in gpic
+.\"  fillval is 0.3 in 10th Edition (fill 0 means black), 0.5 in gpic (fill 0 means white), undefined in DWB 2
+.\"  fill has no meaning in DWB 2, gpic can use fill or filled, 10th Edition uses fill only
+.\"  DWB 2 doesn't use fill and doesn't define fillval
+.\"  reset works in gpic and 10th edition, but isn't defined in DWB 2
+.\"  DWB 2 compatibility definitions
+if boxrad > 1.0 && dashwid < 0.075 then X
+	fillval = 1;
+	define fill Y Y;
+	define solid Y Y;
+	define reset Y scale=1.0 Y;
+X
+reset .\"  set to known state
+.\"  GNU pic vs. 10th Edition d\(e'tente
+if fillval > 0.4 then X
+	define setfillval Y fillval = 1 - Y;
+	define bold Y thickness 2 Y;
+	.\"  if you use gpic and it barfs on encountering "solid",
+	.\" 	install a more recent version of gpic or switch to DWB or 10th Edition pic;
+	.\" 	sorry, the groff folks changed gpic; send any complaint to them;
+X else Z
+	define setfillval Y fillval = Y;
+	define bold Y Y;
+	define filled Y fill Y;
+Z
+.\"  arrowhead has no meaning in DWB 2, arrowhead = 7 makes filled arrowheads in gpic and in 10th Edition
+.\"  arrowhead is undefined in DWB 2, initially 1 in gpic, 2 in 10th Edition
+arrowhead = 7 .\"  not used by graphviz
+.\"  GNU pic supports a boxrad variable to draw boxes with rounded corners; DWB and 10th Ed. do not
+boxrad = 0 .\"  no rounded corners in graphviz
+.\"  GNU pic supports a linethick variable to set line thickness; DWB and 10th Ed. do not
+linethick = 0; oldlinethick = linethick
+.\"  .PS w/o args causes GNU pic to scale drawing to fit 8.5x11 paper; DWB does not
+.\"  maxpsht and maxpswid have no meaning in DWB 2.0, set page boundaries in gpic and in 10th Edition
+.\"  maxpsht and maxpswid are predefined to 11.0 and 8.5 in gpic
+maxpsht = 7.819444
+maxpswid = 7.500000
+Dot: [
+define attrs0 % %; define unfilled % %; define rounded % %; define diagonals % %
+ 0 0 0 563 540 563 540 0 0 0
+.ft R 
+.ps 14*\n(SFu/7500u
+"miles_dat" at (243.22500,9.06481);
+.\"  Winchester, VA--Youngstown, OH
+  464 304 461 308 458 314 454 320 450 326 447 332 444 338
+ 0 1 1 1 1 1 1
+.\"  Winchester, VA--Winston-Salem, NC
+  464 300 462 293 459 284 456 273 452 262 449 251 446 243
+ 0 1 1 1 1 1 1
+.\"  Wilmington, NC--Winston-Salem, NC
+  464 203 462 207 459 212 456 217 453 222 450 227 448 231
+ 0 1 1 1 1 1 1
+.\"  Wilmington, DE--Worcester, MA
+  494 318 498 324 503 331 509 340 515 348 520 356 525 362
+ 0 1 1 1 1 1 1
+.\"  Wilmington, DE--Winchester, VA
+  486 312 483 310 480 309 476 307 473 306 470 304 468 303
+ 0 1 1 1 1 1 1
+.\"  Williamsport, PA--Youngstown, OH
+  473 346 469 345 465 345 460 345 455 344 450 344 446 343
+ 0 1 1 1 1 1 1
+.\"  Williamsport, PA--Winchester, VA
+  476 343 474 337 473 331 471 324 469 316 467 310 466 305
+ 0 1 1 1 1 1 1
+.\"  Williamsport, PA--Wilmington, DE
+  478 343 480 339 482 336 483 331 485 327 487 323 489 319
+ 0 1 1 1 1 1 1
+.\"  Williamson, WV--Winston-Salem, NC
+  425 269 427 266 429 261 432 257 435 251 438 246 441 242
+ 0 1 1 1 1 1 1
+.\"  Wheeling, WV--Youngstown, OH
+  440 325 440 327 440 329 440 331 440 333 440 335 440 337
+ 0 1 1 1 1 1 1
+.\"  Wheeling, WV--Winchester, VA
+  443 319 446 316 449 314 453 311 457 308 460 306 463 304
+ 0 1 1 1 1 1 1
+.\"  Wheeling, WV--Williamsport, PA
+  442 323 447 326 452 329 458 333 464 337 469 341 473 344
+ 0 1 1 1 1 1 1
+.\"  Wheeling, WV--Williamson, WV
+  438 317 436 311 434 302 431 293 428 284 426 277 424 272
+ 0 1 1 1 1 1 1
+.\"  Wenatchee, WA--Yakima, WA
+  43 475 43 473 43 472 43 470 42 468 42 466 42 464
+ 0 1 1 1 1 1 1
+.\"  Wausau, WI--Wisconsin Dells, WI
+  350 422 350 418 350 414 350 409 349 405 349 401 349 398
+ 0 1 1 1 1 1 1
+.\"  Waukegan, IL--Wisconsin Dells, WI
+  366 374 363 377 360 381 357 386 354 390 352 393 350 396
+ 0 1 1 1 1 1 1
+.\"  Waukegan, IL--Wausau, WI
+  367 374 365 381 362 389 359 399 356 408 353 416 351 422
+ 0 1 1 1 1 1 1
+.\"  Watertown, SD--Yankton, SD
+  275 421 275 416 275 409 274 402 274 394 273 388 273 383
+ 0 1 1 1 1 1 1
+.\"  Watertown, NY--Williamsport, PA
+  487 401 486 395 484 386 482 376 480 366 479 357 477 350
+ 0 1 1 1 1 1 1
+.\"  Waterloo, IA--Yankton, SD
+  318 374 312 375 304 376 295 377 287 379 280 380 275 380
+ 0 1 1 1 1 1 1
+.\"  Waterloo, IA--Wisconsin Dells, WI
+  327 376 331 380 335 383 339 387 343 391 346 394 348 396
+ 0 1 1 1 1 1 1
+.\"  Waterloo, IA--Waukegan, IL
+  328 372 334 372 340 372 346 371 353 371 359 370 364 370
+ 0 1 1 1 1 1 1
+.\"  Waterbury, CT--Worcester, MA
+  520 357 521 358 521 359 522 360 523 361 523 361 524 362
+ 0 1 1 1 1 1 1
+.\"  Waterbury, CT--Wilmington, DE
+  513 347 510 343 507 338 503 333 500 328 497 323 494 319
+ 0 1 1 1 1 1 1
+.\"  Waterbury, CT--Williamsport, PA
+  510 351 505 351 500 350 495 349 489 348 484 347 480 347
+ 0 1 1 1 1 1 1
+.\"  Waterbury, CT--Watertown, NY
+  513 358 510 365 505 372 500 381 496 389 492 396 489 402
+ 0 1 1 1 1 1 1
+.\"  Washington, DC--Winchester, VA
+  465 302 465 302 465 302 465 302 465 302 465 302 465 302
+ 0 1 1 1 1 1 1
+.\"  Washington, DC--Wilmington, DE
+  486 307 486 308 486 308 487 309 487 309 488 310 488 310
+ 0 1 1 1 1 1 1
+.\"  Washington, DC--Williamsport, PA
+  476 310 477 316 477 322 477 328 477 333 477 338 477 342
+ 0 1 1 1 1 1 1
+.\"  Washington, DC--Wheeling, WV
+  464 304 460 307 456 310 452 312 448 315 445 317 442 319
+ 0 1 1 1 1 1 1
+.\"  Warren, PA--Youngstown, OH
+  454 357 453 356 451 355 450 353 448 351 446 349 445 348
+ 0 1 1 1 1 1 1
+.\"  Warren, PA--Winchester, VA
+  456 356 457 350 458 341 460 331 462 320 464 311 465 305
+ 0 1 1 1 1 1 1
+.\"  Warren, PA--Williamsport, PA
+  457 358 459 356 462 355 465 353 468 351 471 349 474 348
+ 0 1 1 1 1 1 1
+.\"  Warren, PA--Wheeling, WV
+  454 357 453 353 451 347 448 341 445 335 443 329 441 324
+ 0 1 1 1 1 1 1
+.\"  Warren, PA--Watertown, NY
+  457 361 460 366 465 373 471 381 477 389 482 396 486 401
+ 0 1 1 1 1 1 1
+.\"  Walla Walla, WA--Yakima, WA
+  61 450 59 451 56 453 53 454 50 456 48 457 45 458
+ 0 1 1 1 1 1 1
+.\"  Walla Walla, WA--Wenatchee, WA
+  62 451 59 455 56 459 53 464 50 468 47 472 45 475
+ 0 1 1 1 1 1 1
+.\"  Waco, TX--Wichita Falls, TX
+  274 145 272 150 271 157 269 164 267 172 265 178 263 184
+ 0 1 1 1 1 1 1
+.\"  Vincennes, IN--Waukegan, IL
+  371 294 371 302 371 314 370 328 369 343 369 356 369 365
+ 0 1 1 1 1 1 1
+.\"  Victoria, TX--Waco, TX
+  277 85 276 92 276 100 276 109 276 118 276 127 275 134
+ 0 1 1 1 1 1 1
+.\"  Vancouver, BC--Yakima, WA
+  20 506 24 499 27 491 31 483 34 476 37 469 40 464
+ 0 1 1 1 1 1 1
+.\"  Vancouver, BC--Wenatchee, WA
+  22 507 26 502 30 497 33 492 37 487 40 483 42 480
+ 0 1 1 1 1 1 1
+.\"  Valley City, ND--Winnipeg, MB
+  267 468 267 473 268 480 270 489 271 498 272 508 273 517
+ 0 1 1 1 1 1 1
+.\"  Valley City, ND--Watertown, SD
+  267 465 268 460 269 454 271 446 273 439 274 432 275 426
+ 0 1 1 1 1 1 1
+.\"  Valdosta, GA--Waycross, GA
+  417 127 418 127 418 128 419 129 420 129 420 130 421 131
+ 0 1 1 1 1 1 1
+.\"  Utica, NY--Worcester, MA
+  499 383 502 382 506 380 510 377 514 375 519 373 522 371
+ 0 1 1 1 1 1 1
+.\"  Utica, NY--Wilmington, DE
+  494 381 494 372 493 362 493 350 492 338 492 327 491 319
+ 0 1 1 1 1 1 1
+.\"  Utica, NY--Williamsport, PA
+  492 381 490 376 488 371 485 365 482 359 480 354 478 350
+ 0 1 1 1 1 1 1
+.\"  Utica, NY--Watertown, NY
+  493 391 492 393 491 394 490 396 490 398 489 400 489 401
+ 0 1 1 1 1 1 1
+.\"  Utica, NY--Waterbury, CT
+  497 381 499 378 502 374 505 370 508 365 510 361 513 358
+ 0 1 1 1 1 1 1
+.\"  Utica, NY--Warren, PA
+  490 383 485 379 479 375 473 371 466 366 461 363 457 360
+ 0 1 1 1 1 1 1
+.\"  Uniontown, PA--Youngstown, OH
+  449 319 448 322 447 324 446 327 445 331 443 334 442 337
+ 0 1 1 1 1 1 1
+.\"  Uniontown, PA--Winchester, VA
+  451 316 452 314 455 312 457 310 459 308 461 306 463 304
+ 0 1 1 1 1 1 1
+.\"  Uniontown, PA--Wilmington, DE
+  452 317 456 317 461 316 468 316 474 315 481 315 486 315
+ 0 1 1 1 1 1 1
+.\"  Uniontown, PA--Williamsport, PA
+  451 319 454 322 458 326 462 331 467 335 471 340 474 343
+ 0 1 1 1 1 1 1
+.\"  Uniontown, PA--Williamson, WV
+  448 315 445 310 441 302 436 293 432 284 428 277 425 272
+ 0 1 1 1 1 1 1
+.\"  Uniontown, PA--Wheeling, WV
+  447 318 447 318 446 319 445 319 445 319 444 319 443 320
+ 0 1 1 1 1 1 1
+.\"  Uniontown, PA--Washington, DC
+  451 316 453 315 455 313 457 311 460 309 462 307 465 305
+ 0 1 1 1 1 1 1
+.\"  Uniontown, PA--Warren, PA
+  450 320 450 324 451 331 452 338 453 346 454 352 455 357
+ 0 1 1 1 1 1 1
+.\"  Tyler, TX--Wichita Falls, TX
+  290 160 287 164 282 168 278 173 274 177 269 182 266 185
+ 0 1 1 1 1 1 1
+.\"  Tyler, TX--Waco, TX
+  290 153 288 151 286 150 285 148 283 146 281 145 279 143
+ 0 1 1 1 1 1 1
+.\"  Tyler, TX--Vicksburg, MS
+  299 157 304 157 311 157 317 157 324 157 330 157 335 157
+ 0 1 1 1 1 1 1
+.\"  Tuscaloosa, AL--Vicksburg, MS
+  366 172 362 170 358 168 353 165 348 162 344 160 341 158
+ 0 1 1 1 1 1 1
+.\"  Tupelo, MS--Vicksburg, MS
+  358 195 356 190 352 184 349 177 345 170 342 164 339 159
+ 0 1 1 1 1 1 1
+.\"  Tupelo, MS--Tuscaloosa, AL
+  361 194 362 192 363 190 365 187 366 185 367 182 369 179
+ 0 1 1 1 1 1 1
+.\"  Tulsa, OK--Wichita Falls, TX
+  282 228 279 222 276 217 273 210 270 204 267 199 264 195
+ 0 1 1 1 1 1 1
+.\"  Tulsa, OK--Wichita, KS
+  283 248 282 250 281 252 280 255 279 257 278 259 277 261
+ 0 1 1 1 1 1 1
+.\"  Trenton, NJ--Worcester, MA
+  502 329 505 334 509 339 513 345 517 351 521 357 525 362
+ 0 1 1 1 1 1 1
+.\"  Trenton, NJ--Winchester, VA
+  494 321 490 319 485 315 480 312 475 309 471 306 467 304
+ 0 1 1 1 1 1 1
+.\"  Trenton, NJ--Wilmington, DE
+  495 320 495 319 495 319 495 319 495 319 494 318 494 318
+ 0 1 1 1 1 1 1
+.\"  Trenton, NJ--Williamsport, PA
+  495 329 492 331 490 334 487 336 484 339 481 341 479 344
+ 0 1 1 1 1 1 1
+.\"  Trenton, NJ--Waterbury, CT
+  502 329 504 332 506 335 507 338 509 341 511 345 513 347
+ 0 1 1 1 1 1 1
+.\"  Trenton, NJ--Washington, DC
+  495 320 494 318 492 316 491 314 489 312 487 310 485 307
+ 0 1 1 1 1 1 1
+.\"  Trenton, NJ--Utica, NY
+  499 330 498 337 497 346 497 356 496 365 495 374 495 381
+ 0 1 1 1 1 1 1
+.\"  Toronto, ON--Youngstown, OH
+  450 384 448 378 447 371 445 365 444 359 443 353 442 349
+ 0 1 1 1 1 1 1
+.\"  Toronto, ON--Watertown, NY
+  467 400 470 401 473 401 477 402 480 403 482 403 484 404
+ 0 1 1 1 1 1 1
+.\"  Toronto, ON--Warren, PA
+  454 383 454 379 454 375 455 371 455 367 455 364 455 361
+ 0 1 1 1 1 1 1
+.\"  Toronto, ON--Utica, NY
+  466 393 470 392 475 391 479 390 483 389 486 388 489 387
+ 0 1 1 1 1 1 1
+.\"  Topeka, KS--Wichita, KS
+  287 294 286 292 284 289 283 286 281 284 280 281 278 279
+ 0 1 1 1 1 1 1
+.\"  Topeka, KS--Tulsa, OK
+  290 293 290 287 289 280 289 272 289 264 288 256 288 249
+ 0 1 1 1 1 1 1
+.\"  Toledo, OH--Youngstown, OH
+  421 351 423 350 426 349 428 348 430 347 432 346 434 345
+ 0 1 1 1 1 1 1
+.\"  Toledo, OH--Wheeling, WV
+  418 346 421 343 425 338 428 334 432 330 435 327 437 324
+ 0 1 1 1 1 1 1
+.\"  Toledo, OH--Waukegan, IL
+  401 358 397 360 392 362 386 363 381 365 377 367 373 368
+ 0 1 1 1 1 1 1
+.\"  Toledo, OH--Warren, PA
+  422 356 427 356 433 357 439 357 445 358 449 358 453 359
+ 0 1 1 1 1 1 1
+.\"  Toledo, OH--Uniontown, PA
+  419 347 424 342 430 337 435 331 440 326 445 322 448 319
+ 0 1 1 1 1 1 1
+.\"  Toledo, OH--Traverse City, MI
+  408 365 405 374 402 384 399 395 396 405 393 413 391 419
+ 0 1 1 1 1 1 1
+.\"  Toledo, OH--Toronto, ON
+  419 362 423 366 427 370 431 375 435 379 439 383 443 387
+ 0 1 1 1 1 1 1
+.\"  Texarkana, TX--Wichita Falls, TX
+  303 180 298 181 293 183 286 184 279 186 273 187 267 188
+ 0 1 1 1 1 1 1
+.\"  Texarkana, TX--Waco, TX
+  304 177 301 173 297 167 292 161 287 155 283 149 279 144
+ 0 1 1 1 1 1 1
+.\"  Texarkana, TX--Vicksburg, MS
+  309 178 312 175 317 172 322 168 327 165 331 161 335 159
+ 0 1 1 1 1 1 1
+.\"  Texarkana, TX--Tyler, TX
+  305 177 303 174 302 172 301 169 299 166 297 163 296 161
+ 0 1 1 1 1 1 1
+.\"  Terre Haute, IN--Waukegan, IL
+  372 313 372 320 371 329 370 339 370 349 369 358 369 365
+ 0 1 1 1 1 1 1
+.\"  Terre Haute, IN--Vincennes, IN
+  372 304 372 302 372 300 372 299 372 297 372 295 372 294
+ 0 1 1 1 1 1 1
+.\"  Terre Haute, IN--Toledo, OH
+  376 312 379 316 384 322 389 328 395 335 400 341 405 347
+ 0 1 1 1 1 1 1
+.\"  Tampa, FL--West Palm Beach, FL
+  429 56 431 53 434 50 436 47 439 45 441 42 443 40
+ 0 1 1 1 1 1 1
+.\"  Tampa, FL--Waycross, GA
+  422 72 422 82 423 92 423 104 423 114 423 123 423 130
+ 0 1 1 1 1 1 1
+.\"  Tampa, FL--Valdosta, GA
+  421 72 420 80 419 89 417 98 416 107 415 115 414 121
+ 0 1 1 1 1 1 1
+.\"  Tallahassee, FL--Waycross, GA
+  408 120 410 121 413 123 415 125 417 127 419 129 421 131
+ 0 1 1 1 1 1 1
+.\"  Tallahassee, FL--Valdosta, GA
+  408 119 408 120 409 120 410 121 410 121 411 121 411 122
+ 0 1 1 1 1 1 1
+.\"  Tallahassee, FL--Tampa, FL
+  406 111 407 106 410 100 412 93 414 85 417 78 419 72
+ 0 1 1 1 1 1 1
+.\"  Tacoma, WA--Yakima, WA
+  28 469 30 468 32 467 33 466 35 465 37 464 38 463
+ 0 1 1 1 1 1 1
+.\"  Tacoma, WA--Wenatchee, WA
+  30 475 32 475 34 476 35 476 37 476 39 477 41 477
+ 0 1 1 1 1 1 1
+.\"  Tacoma, WA--Walla Walla, WA
+  28 470 34 467 39 463 46 460 52 456 57 453 61 450
+ 0 1 1 1 1 1 1
+.\"  Tacoma, WA--Vancouver, BC
+  21 481 21 484 20 488 19 493 19 497 18 501 17 506
+ 0 1 1 1 1 1 1
+.\"  Syracuse, NY--Worcester, MA
+  492 382 497 380 502 378 507 376 513 374 518 372 522 370
+ 0 1 1 1 1 1 1
+.\"  Syracuse, NY--Wilmington, DE
+  486 377 487 369 487 358 488 347 489 337 490 327 491 319
+ 0 1 1 1 1 1 1
+.\"  Syracuse, NY--Williamsport, PA
+  484 377 483 373 481 368 480 363 479 358 478 353 478 350
+ 0 1 1 1 1 1 1
+.\"  Syracuse, NY--Watertown, NY
+  486 392 486 394 486 395 487 397 487 398 487 400 487 401
+ 0 1 1 1 1 1 1
+.\"  Syracuse, NY--Waterbury, CT
+  491 379 494 376 497 372 501 368 505 364 509 360 512 357
+ 0 1 1 1 1 1 1
+.\"  Syracuse, NY--Warren, PA
+  479 380 476 376 471 373 467 369 463 366 460 363 457 360
+ 0 1 1 1 1 1 1
+.\"  Syracuse, NY--Utica, NY
+  493 386 493 386 493 386 494 386 494 386 494 386 494 386
+ 0 1 1 1 1 1 1
+.\"  Syracuse, NY--Trenton, NJ
+  487 377 488 370 490 362 492 353 494 344 496 336 498 330
+ 0 1 1 1 1 1 1
+.\"  Syracuse, NY--Toronto, ON
+  478 387 476 388 474 389 472 390 470 390 468 391 466 392
+ 0 1 1 1 1 1 1
+.\"  Swainsboro, GA--Waycross, GA
+  423 160 423 157 423 153 423 148 423 143 423 139 423 135
+ 0 1 1 1 1 1 1
+.\"  Swainsboro, GA--Valdosta, GA
+  423 160 422 156 421 151 419 145 417 138 416 133 415 128
+ 0 1 1 1 1 1 1
+.\"  Swainsboro, GA--Tallahassee, FL
+  423 160 421 156 418 150 415 142 412 134 409 127 406 121
+ 0 1 1 1 1 1 1
+.\"  Sumter, SC--Winston-Salem, NC
+  443 193 443 198 443 204 444 210 444 217 444 224 444 230
+ 0 1 1 1 1 1 1
+.\"  Sumter, SC--Wilmington, NC
+  446 191 448 191 451 192 453 193 456 193 458 194 461 195
+ 0 1 1 1 1 1 1
+.\"  Sumter, SC--Waycross, GA
+  442 187 440 180 437 171 433 161 429 150 426 141 424 135
+ 0 1 1 1 1 1 1
+.\"  Sumter, SC--Swainsboro, GA
+  441 187 439 184 436 179 432 175 429 170 426 166 424 163
+ 0 1 1 1 1 1 1
+.\"  Stroudsburg, PA--Worcester, MA
+  496 342 499 344 503 348 508 351 514 356 519 360 523 363
+ 0 1 1 1 1 1 1
+.\"  Stroudsburg, PA--Winchester, VA
+  494 339 491 335 486 329 481 322 475 315 470 309 467 304
+ 0 1 1 1 1 1 1
+.\"  Stroudsburg, PA--Wilmington, DE
+  495 339 494 336 494 333 493 330 493 326 492 323 492 320
+ 0 1 1 1 1 1 1
+.\"  Stroudsburg, PA--Williamsport, PA
+  493 341 491 342 489 342 487 343 485 344 482 344 480 345
+ 0 1 1 1 1 1 1
+.\"  Stroudsburg, PA--Watertown, NY
+  495 342 494 349 493 359 491 370 490 383 489 393 488 401
+ 0 1 1 1 1 1 1
+.\"  Stroudsburg, PA--Waterbury, CT
+  496 341 498 342 500 344 503 345 505 347 508 348 511 349
+ 0 1 1 1 1 1 1
+.\"  Stroudsburg, PA--Washington, DC
+  494 339 493 336 491 332 489 327 487 321 484 315 482 310
+ 0 1 1 1 1 1 1
+.\"  Stroudsburg, PA--Warren, PA
+  493 341 489 343 483 346 475 350 468 353 462 356 457 358
+ 0 1 1 1 1 1 1
+.\"  Stroudsburg, PA--Utica, NY
+  495 342 495 346 495 352 495 360 495 367 494 375 494 381
+ 0 1 1 1 1 1 1
+.\"  Stroudsburg, PA--Trenton, NJ
+  495 339 495 338 496 337 496 335 497 333 497 332 498 330
+ 0 1 1 1 1 1 1
+.\"  Stroudsburg, PA--Syracuse, NY
+  494 342 494 346 492 352 491 358 489 365 488 371 487 377
+ 0 1 1 1 1 1 1
+.\"  Stockton, CA--Weed, CA
+  33 283 31 293 29 306 27 319 25 332 24 342 23 349
+ 0 1 1 1 1 1 1
+.\"  Stevens Point, WI--Wisconsin Dells, WI
+  351 413 350 411 350 408 350 405 350 402 349 400 349 398
+ 0 1 1 1 1 1 1
+.\"  Stevens Point, WI--Wausau, WI
+  351 418 351 419 351 420 351 420 351 421 351 421 351 422
+ 0 1 1 1 1 1 1
+.\"  Stevens Point, WI--Waukegan, IL
+  352 413 354 408 356 402 359 394 362 387 365 380 367 374
+ 0 1 1 1 1 1 1
+.\"  Stevens Point, WI--Waterloo, IA
+  350 413 347 409 343 403 338 396 334 389 329 382 326 377
+ 0 1 1 1 1 1 1
+.\"  Steubenville, OH--Youngstown, OH
+  440 330 440 331 440 332 440 333 440 334 440 336 440 337
+ 0 1 1 1 1 1 1
+.\"  Steubenville, OH--Winchester, VA
+  443 325 446 322 449 318 453 314 457 310 461 307 463 304
+ 0 1 1 1 1 1 1
+.\"  Steubenville, OH--Williamsport, PA
+  443 329 447 331 453 333 458 336 464 340 469 342 474 344
+ 0 1 1 1 1 1 1
+.\"  Steubenville, OH--Williamson, WV
+  440 324 438 317 435 308 432 297 429 287 426 278 424 272
+ 0 1 1 1 1 1 1
+.\"  Steubenville, OH--Wheeling, WV
+  440 324 440 324 440 324 440 324 440 324 440 324 440 324
+ 0 1 1 1 1 1 1
+.\"  Steubenville, OH--Washington, DC
+  443 325 446 323 449 320 453 316 457 313 461 309 465 305
+ 0 1 1 1 1 1 1
+.\"  Steubenville, OH--Warren, PA
+  442 330 444 334 446 339 448 344 451 349 453 353 454 357
+ 0 1 1 1 1 1 1
+.\"  Steubenville, OH--Uniontown, PA
+  443 325 443 324 444 323 445 322 446 321 447 320 448 319
+ 0 1 1 1 1 1 1
+.\"  Steubenville, OH--Toledo, OH
+  438 329 436 332 433 334 429 338 426 341 422 344 419 347
+ 0 1 1 1 1 1 1
+.\"  Sterling, CO--Trinidad, CO
+  214 331 213 322 211 310 208 296 206 281 203 269 202 261
+ 0 1 1 1 1 1 1
+.\"  Staunton, VA--Winston-Salem, NC
+  455 277 454 273 453 268 451 261 449 255 447 248 446 243
+ 0 1 1 1 1 1 1
+.\"  Staunton, VA--Winchester, VA
+  457 282 458 285 459 288 460 291 462 294 463 297 464 300
+ 0 1 1 1 1 1 1
+.\"  Staunton, VA--Wilmington, DE
+  458 282 462 285 466 290 472 296 478 301 483 306 487 311
+ 0 1 1 1 1 1 1
+.\"  Staunton, VA--Williamsport, PA
+  457 283 459 290 462 300 466 312 470 324 473 335 476 343
+ 0 1 1 1 1 1 1
+.\"  Staunton, VA--Williamson, WV
+  453 279 450 278 444 276 439 275 433 273 429 272 425 271
+ 0 1 1 1 1 1 1
+.\"  Staunton, VA--Wheeling, WV
+  455 283 453 287 451 293 448 300 445 306 443 312 441 317
+ 0 1 1 1 1 1 1
+.\"  Staunton, VA--Washington, DC
+  458 282 459 282 460 283 461 284 462 285 463 286 465 287
+ 0 1 1 1 1 1 1
+.\"  Staunton, VA--Uniontown, PA
+  455 283 455 287 454 293 453 300 451 306 450 311 450 315
+ 0 1 1 1 1 1 1
+.\"  Staunton, VA--Steubenville, OH
+  455 283 453 288 451 295 448 303 446 311 443 318 442 324
+ 0 1 1 1 1 1 1
+.\"  Springfield, OH--Youngstown, OH
+  413 321 416 324 420 327 424 330 428 333 432 336 435 339
+ 0 1 1 1 1 1 1
+.\"  Springfield, OH--Williamson, WV
+  410 313 412 306 415 299 417 291 420 283 422 276 423 272
+ 0 1 1 1 1 1 1
+.\"  Springfield, OH--Wheeling, WV
+  414 318 417 319 421 319 425 319 429 320 433 320 436 321
+ 0 1 1 1 1 1 1
+.\"  Springfield, OH--Vincennes, IN
+  404 315 400 311 394 308 388 303 382 299 377 296 374 293
+ 0 1 1 1 1 1 1
+.\"  Springfield, OH--Uniontown, PA
+  414 318 419 318 425 318 432 318 438 317 443 317 447 317
+ 0 1 1 1 1 1 1
+.\"  Springfield, OH--Toledo, OH
+  409 323 409 326 409 329 410 333 410 337 410 340 411 344
+ 0 1 1 1 1 1 1
+.\"  Springfield, OH--Terre Haute, IN
+  404 316 400 315 395 314 390 313 386 312 381 310 377 309
+ 0 1 1 1 1 1 1
+.\"  Springfield, OH--Steubenville, OH
+  414 319 417 320 422 322 426 323 430 324 434 325 438 326
+ 0 1 1 1 1 1 1
+.\"  Springfield, MO--Wichita, KS
+  307 262 304 263 300 264 295 265 291 266 287 267 283 268
+ 0 1 1 1 1 1 1
+.\"  Springfield, MO--Tulsa, OK
+  309 256 307 254 305 253 303 251 300 249 298 247 296 245
+ 0 1 1 1 1 1 1
+.\"  Springfield, MO--Topeka, KS
+  310 266 308 270 305 275 302 280 299 285 296 290 293 294
+ 0 1 1 1 1 1 1
+.\"  Springfield, MA--Worcester, MA
+  527 367 527 367 528 367 528 367 528 367 528 368 528 368
+ 0 1 1 1 1 1 1
+.\"  Springfield, MA--Wilmington, DE
+  517 358 514 352 510 345 505 338 501 331 497 324 494 319
+ 0 1 1 1 1 1 1
+.\"  Springfield, MA--Watertown, NY
+  516 370 512 375 507 381 502 387 497 392 493 398 490 402
+ 0 1 1 1 1 1 1
+.\"  Springfield, MA--Waterbury, CT
+  518 358 518 357 518 357 518 357 518 357 518 357 518 357
+ 0 1 1 1 1 1 1
+.\"  Springfield, MA--Utica, NY
+  515 369 512 371 510 373 507 376 504 378 501 381 498 383
+ 0 1 1 1 1 1 1
+.\"  Springfield, MA--Trenton, NJ
+  517 358 515 354 512 349 509 343 507 338 504 334 502 329
+ 0 1 1 1 1 1 1
+.\"  Springfield, MA--Syracuse, NY
+  515 368 511 370 507 372 503 374 499 376 495 379 492 381
+ 0 1 1 1 1 1 1
+.\"  Springfield, MA--Stroudsburg, PA
+  516 359 512 356 509 353 505 350 501 346 498 344 496 342
+ 0 1 1 1 1 1 1
+.\"  Springfield, IL--Waukegan, IL
+  352 321 354 327 357 335 360 343 362 352 365 359 367 365
+ 0 1 1 1 1 1 1
+.\"  Springfield, IL--Vincennes, IN
+  354 311 356 308 359 305 362 302 365 299 367 296 370 293
+ 0 1 1 1 1 1 1
+.\"  Springfield, IL--Terre Haute, IN
+  356 313 358 313 360 312 362 311 364 311 366 310 368 310
+ 0 1 1 1 1 1 1
+.\"  Spokane, WA--Yakima, WA
+  66 478 63 476 59 473 55 470 52 467 48 465 45 463
+ 0 1 1 1 1 1 1
+.\"  Spokane, WA--Wenatchee, WA
+  65 481 62 481 58 480 55 480 52 479 49 478 46 478
+ 0 1 1 1 1 1 1
+.\"  Spokane, WA--Walla Walla, WA
+  71 475 69 471 68 467 67 463 66 459 65 455 64 452
+ 0 1 1 1 1 1 1
+.\"  South Bend, IN--Wisconsin Dells, WI
+  380 360 375 366 370 372 364 380 358 386 353 392 350 396
+ 0 1 1 1 1 1 1
+.\"  South Bend, IN--Waukegan, IL
+  380 360 378 361 377 362 376 363 374 364 373 366 372 367
+ 0 1 1 1 1 1 1
+.\"  South Bend, IN--Vincennes, IN
+  383 349 381 341 379 331 377 320 375 309 373 300 372 294
+ 0 1 1 1 1 1 1
+.\"  South Bend, IN--Traverse City, MI
+  385 361 386 370 387 380 388 392 389 403 390 412 390 419
+ 0 1 1 1 1 1 1
+.\"  South Bend, IN--Toledo, OH
+  390 355 392 355 393 355 395 355 397 355 399 355 400 355
+ 0 1 1 1 1 1 1
+.\"  South Bend, IN--Terre Haute, IN
+  383 349 381 344 380 337 378 331 376 324 375 318 374 313
+ 0 1 1 1 1 1 1
+.\"  South Bend, IN--Springfield, OH
+  388 350 390 346 393 341 397 336 400 331 403 326 406 322
+ 0 1 1 1 1 1 1
+.\"  South Bend, IN--Springfield, IL
+  380 351 376 346 372 341 367 335 362 329 358 324 354 320
+ 0 1 1 1 1 1 1
+.\"  Sioux Falls, SD--Yankton, SD
+  277 390 277 389 276 387 275 386 275 385 274 384 274 383
+ 0 1 1 1 1 1 1
+.\"  Sioux Falls, SD--Watertown, SD
+  279 400 278 403 278 407 277 411 277 415 276 418 276 421
+ 0 1 1 1 1 1 1
+.\"  Sioux Falls, SD--Waterloo, IA
+  284 393 289 390 295 387 301 384 308 380 314 377 319 375
+ 0 1 1 1 1 1 1
+.\"  Sioux City, IA--Yankton, SD
+  279 376 278 376 277 377 277 378 276 378 275 379 275 379
+ 0 1 1 1 1 1 1
+.\"  Sioux City, IA--Watertown, SD
+  282 378 281 384 280 392 279 400 278 409 277 416 276 421
+ 0 1 1 1 1 1 1
+.\"  Sioux City, IA--Waterloo, IA
+  288 373 292 373 298 373 303 373 309 373 314 373 318 373
+ 0 1 1 1 1 1 1
+.\"  Sioux City, IA--Topeka, KS
+  283 367 284 359 285 348 286 337 288 325 289 314 289 305
+ 0 1 1 1 1 1 1
+.\"  Sioux City, IA--Sioux Falls, SD
+  282 378 282 380 281 382 281 384 281 386 280 388 280 390
+ 0 1 1 1 1 1 1
+.\"  Shreveport, LA--Waco, TX
+  302 156 299 154 295 151 291 149 287 147 284 144 280 143
+ 0 1 1 1 1 1 1
+.\"  Shreveport, LA--Vicksburg, MS
+  317 159 320 159 324 158 327 158 330 157 333 157 335 157
+ 0 1 1 1 1 1 1
+.\"  Shreveport, LA--Tyler, TX
+  301 158 301 158 300 158 300 158 299 158 299 158 299 158
+ 0 1 1 1 1 1 1
+.\"  Shreveport, LA--Texarkana, TX
+  308 168 308 169 308 171 307 173 307 174 307 175 307 177
+ 0 1 1 1 1 1 1
+.\"  Sherman, TX--Wichita Falls, TX
+  278 185 276 185 274 186 273 186 271 187 269 187 267 188
+ 0 1 1 1 1 1 1
+.\"  Sherman, TX--Waco, TX
+  280 181 280 176 279 170 278 164 277 157 277 150 276 145
+ 0 1 1 1 1 1 1
+.\"  Sherman, TX--Tyler, TX
+  282 181 283 178 285 175 287 171 288 168 290 164 291 161
+ 0 1 1 1 1 1 1
+.\"  Sherman, TX--Tulsa, OK
+  281 187 282 192 282 198 283 205 284 213 285 220 286 227
+ 0 1 1 1 1 1 1
+.\"  Sherman, TX--Texarkana, TX
+  284 183 287 183 290 182 293 182 297 181 300 181 303 180
+ 0 1 1 1 1 1 1
+.\"  Sherman, TX--Shreveport, LA
+  283 182 286 180 289 177 292 174 296 171 300 168 303 165
+ 0 1 1 1 1 1 1
+.\"  Seminole, OK--Wichita Falls, TX
+  279 216 277 214 275 210 273 206 270 202 267 198 265 195
+ 0 1 1 1 1 1 1
+.\"  Seminole, OK--Wichita, KS
+  280 220 279 224 278 230 277 238 276 246 275 254 274 261
+ 0 1 1 1 1 1 1
+.\"  Seminole, OK--Waco, TX
+  280 216 279 209 279 197 278 183 277 169 276 155 276 145
+ 0 1 1 1 1 1 1
+.\"  Seminole, OK--Tyler, TX
+  280 216 282 211 284 202 286 191 288 180 291 170 293 162
+ 0 1 1 1 1 1 1
+.\"  Seminole, OK--Tulsa, OK
+  281 219 281 220 281 222 282 223 282 224 283 226 284 227
+ 0 1 1 1 1 1 1
+.\"  Seminole, OK--Texarkana, TX
+  281 217 283 213 287 207 292 200 297 193 301 187 304 182
+ 0 1 1 1 1 1 1
+.\"  Seminole, OK--Springfield, MO
+  281 219 284 223 289 229 294 235 300 243 305 249 310 255
+ 0 1 1 1 1 1 1
+.\"  Seminole, OK--Sherman, TX
+  280 216 280 212 280 208 280 202 280 196 280 191 281 187
+ 0 1 1 1 1 1 1
+.\"  Selma, AL--Vicksburg, MS
+  373 158 369 158 364 158 357 157 351 157 346 157 341 157
+ 0 1 1 1 1 1 1
+.\"  Selma, AL--Tuscaloosa, AL
+  376 161 375 162 375 164 374 165 374 167 373 168 373 170
+ 0 1 1 1 1 1 1
+.\"  Selma, AL--Tupelo, MS
+  375 161 373 165 371 171 368 177 365 184 363 190 361 194
+ 0 1 1 1 1 1 1
+.\"  Selma, AL--Tallahassee, FL
+  378 155 381 151 385 145 389 138 394 132 398 125 401 120
+ 0 1 1 1 1 1 1
+.\"  Sedalia, MO--Wichita, KS
+  312 291 308 289 303 286 298 283 293 280 287 278 282 275
+ 0 1 1 1 1 1 1
+.\"  Sedalia, MO--Tulsa, OK
+  313 290 311 285 308 278 304 271 300 263 296 255 293 248
+ 0 1 1 1 1 1 1
+.\"  Sedalia, MO--Topeka, KS
+  312 293 310 293 307 294 304 295 302 296 299 297 296 297
+ 0 1 1 1 1 1 1
+.\"  Sedalia, MO--Springfield, MO
+  314 289 314 286 314 283 314 279 314 274 314 270 314 267
+ 0 1 1 1 1 1 1
+.\"  Sedalia, MO--Springfield, IL
+  317 294 320 296 325 299 330 302 336 306 341 309 345 312
+ 0 1 1 1 1 1 1
+.\"  Seattle, WA--Yakima, WA
+  32 472 33 470 34 469 35 467 37 466 38 465 39 463
+ 0 1 1 1 1 1 1
+.\"  Seattle, WA--Wenatchee, WA
+  36 479 37 479 38 479 39 478 39 478 40 478 41 478
+ 0 1 1 1 1 1 1
+.\"  Seattle, WA--Walla Walla, WA
+  33 473 38 469 44 465 49 461 54 457 58 453 61 451
+ 0 1 1 1 1 1 1
+.\"  Seattle, WA--Vancouver, BC
+  21 494 20 496 20 498 19 500 19 502 18 504 18 506
+ 0 1 1 1 1 1 1
+.\"  Seattle, WA--Tacoma, WA
+  22 474 22 474 22 474 22 474 22 474 22 474 22 474
+ 0 1 1 1 1 1 1
+.\"  Seattle, WA--Spokane, WA
+  36 482 41 482 46 482 51 482 56 482 61 483 65 483
+ 0 1 1 1 1 1 1
+.\"  Scranton, PA--Worcester, MA
+  495 352 499 354 503 356 508 358 513 361 518 363 522 365
+ 0 1 1 1 1 1 1
+.\"  Scranton, PA--Winchester, VA
+  487 344 484 339 480 331 476 324 472 316 469 309 466 305
+ 0 1 1 1 1 1 1
+.\"  Scranton, PA--Wilmington, DE
+  490 344 490 340 490 336 491 332 491 327 491 323 491 320
+ 0 1 1 1 1 1 1
+.\"  Scranton, PA--Williamsport, PA
+  485 348 484 348 483 348 482 348 482 347 481 347 480 347
+ 0 1 1 1 1 1 1
+.\"  Scranton, PA--Watertown, NY
+  490 355 489 362 489 370 489 379 488 388 488 395 488 401
+ 0 1 1 1 1 1 1
+.\"  Scranton, PA--Waterbury, CT
+  496 350 498 350 500 351 503 351 505 351 508 352 510 352
+ 0 1 1 1 1 1 1
+.\"  Scranton, PA--Washington, DC
+  489 344 488 340 486 334 485 328 483 322 482 316 480 310
+ 0 1 1 1 1 1 1
+.\"  Scranton, PA--Warren, PA
+  485 351 480 352 475 353 470 355 465 356 461 357 457 358
+ 0 1 1 1 1 1 1
+.\"  Scranton, PA--Utica, NY
+  491 355 491 359 492 363 492 368 493 373 493 377 494 381
+ 0 1 1 1 1 1 1
+.\"  Scranton, PA--Trenton, NJ
+  492 344 493 342 494 339 495 337 495 334 496 332 497 330
+ 0 1 1 1 1 1 1
+.\"  Scranton, PA--Syracuse, NY
+  489 355 489 358 488 362 488 366 487 370 487 373 486 377
+ 0 1 1 1 1 1 1
+.\"  Scranton, PA--Stroudsburg, PA
+  493 345 493 344 493 344 493 343 494 343 494 342 494 342
+ 0 1 1 1 1 1 1
+.\"  Scranton, PA--Springfield, MA
+  495 352 498 353 501 355 504 356 508 358 511 360 514 361
+ 0 1 1 1 1 1 1
+.\"  Scottsbluff, NE--Sterling, CO
+  210 357 211 354 212 350 212 346 213 342 214 338 214 335
+ 0 1 1 1 1 1 1
+.\"  Schenectady, NY--Worcester, MA
+  511 377 513 376 515 375 517 374 519 373 521 372 522 371
+ 0 1 1 1 1 1 1
+.\"  Schenectady, NY--Wilmington, DE
+  506 375 504 367 502 358 499 347 497 336 494 327 492 319
+ 0 1 1 1 1 1 1
+.\"  Schenectady, NY--Williamsport, PA
+  504 376 501 372 496 368 492 362 487 357 483 353 479 349
+ 0 1 1 1 1 1 1
+.\"  Schenectady, NY--Watertown, NY
+  504 383 502 386 499 389 497 393 494 396 492 399 490 402
+ 0 1 1 1 1 1 1
+.\"  Schenectady, NY--Waterbury, CT
+  509 375 510 373 510 370 511 367 512 364 513 361 514 358
+ 0 1 1 1 1 1 1
+.\"  Schenectady, NY--Utica, NY
+  503 382 502 382 502 382 501 383 500 383 500 383 499 384
+ 0 1 1 1 1 1 1
+.\"  Schenectady, NY--Trenton, NJ
+  507 375 506 369 504 361 503 353 502 344 501 336 500 330
+ 0 1 1 1 1 1 1
+.\"  Schenectady, NY--Syracuse, NY
+  503 381 501 381 499 381 498 382 496 382 494 382 493 383
+ 0 1 1 1 1 1 1
+.\"  Schenectady, NY--Stroudsburg, PA
+  506 375 504 370 502 364 500 358 498 351 497 346 495 342
+ 0 1 1 1 1 1 1
+.\"  Schenectady, NY--Springfield, MA
+  510 376 511 375 512 374 513 373 514 372 515 371 516 370
+ 0 1 1 1 1 1 1
+.\"  Schenectady, NY--Scranton, PA
+  505 375 503 372 501 369 499 365 497 361 495 358 493 355
+ 0 1 1 1 1 1 1
+.\"  Savannah, GA--Wilmington, NC
+  440 157 443 162 448 168 452 174 456 180 460 186 464 191
+ 0 1 1 1 1 1 1
+.\"  Savannah, GA--Waycross, GA
+  432 145 431 143 429 141 428 139 427 138 426 136 425 135
+ 0 1 1 1 1 1 1
+.\"  Savannah, GA--Valdosta, GA
+  431 145 429 142 426 139 423 135 421 132 418 129 416 127
+ 0 1 1 1 1 1 1
+.\"  Savannah, GA--Tallahassee, FL
+  431 145 427 141 423 137 419 132 415 128 411 124 408 120
+ 0 1 1 1 1 1 1
+.\"  Savannah, GA--Swainsboro, GA
+  430 156 429 156 428 157 427 158 426 159 425 160 425 161
+ 0 1 1 1 1 1 1
+.\"  Savannah, GA--Sumter, SC
+  437 158 438 163 439 168 440 173 441 179 442 183 443 187
+ 0 1 1 1 1 1 1
+.\"  Sault Sainte Marie, MI--Traverse City, MI
+  403 456 401 452 399 446 397 439 395 433 393 427 391 423
+ 0 1 1 1 1 1 1
+.\"  Sarasota, FL--West Palm Beach, FL
+  425 48 428 46 431 45 434 43 437 42 440 40 442 39
+ 0 1 1 1 1 1 1
+.\"  Sarasota, FL--Valdosta, GA
+  421 54 420 62 419 74 418 87 416 101 415 112 414 120
+ 0 1 1 1 1 1 1
+.\"  Sarasota, FL--Tampa, FL
+  422 54 422 54 422 54 422 54 422 54 422 54 422 54
+ 0 1 1 1 1 1 1
+.\"  Sarasota, FL--Tallahassee, FL
+  420 54 418 61 416 71 413 82 410 93 407 103 405 111
+ 0 1 1 1 1 1 1
+.\"  Santa Rosa, CA--Stockton, CA
+  24 283 24 283 25 282 26 282 26 281 27 281 28 280
+ 0 1 1 1 1 1 1
+.\"  Santa Fe, NM--Trinidad, CO
+  189 231 191 235 193 240 195 245 197 250 199 254 201 257
+ 0 1 1 1 1 1 1
+.\"  Santa Ana, CA--Santa Barbara, CA
+  61 192 60 193 59 194 58 195 56 195 55 196 54 197
+ 0 1 1 1 1 1 1
+.\"  San Jose, CA--Stockton, CA
+  34 276 34 276 34 276 34 276 34 276 34 276 34 276
+ 0 1 1 1 1 1 1
+.\"  San Jose, CA--Santa Rosa, CA
+  23 277 23 277 22 278 22 279 22 280 22 280 21 281
+ 0 1 1 1 1 1 1
+.\"  San Jose, CA--Santa Barbara, CA
+  33 249 35 242 38 234 41 226 44 218 46 211 48 206
+ 0 1 1 1 1 1 1
+.\"  San Francisco, CA--Stockton, CA
+  34 276 34 276 34 276 34 276 34 276 34 276 34 276
+ 0 1 1 1 1 1 1
+.\"  San Francisco, CA--Santa Rosa, CA
+  20 286 20 286 20 286 20 286 20 286 20 286 20 286
+ 0 1 1 1 1 1 1
+.\"  San Francisco, CA--San Jose, CA
+  28 263 28 263 28 263 28 263 28 263 28 263 28 263
+ 0 1 1 1 1 1 1
+.\"  Sandusky, OH--Youngstown, OH
+  422 349 424 349 426 348 428 347 430 346 432 346 434 345
+ 0 1 1 1 1 1 1
+.\"  Sandusky, OH--Wheeling, WV
+  421 348 424 344 426 340 429 336 432 332 435 327 437 324
+ 0 1 1 1 1 1 1
+.\"  Sandusky, OH--Warren, PA
+  423 351 427 352 433 353 438 355 444 356 449 357 453 358
+ 0 1 1 1 1 1 1
+.\"  Sandusky, OH--Uniontown, PA
+  422 348 426 344 430 339 435 333 440 327 445 322 448 319
+ 0 1 1 1 1 1 1
+.\"  Sandusky, OH--Toledo, OH
+  417 352 417 352 416 352 416 352 416 352 416 352 416 352
+ 0 1 1 1 1 1 1
+.\"  Sandusky, OH--Steubenville, OH
+  422 348 424 345 427 342 430 339 433 335 436 332 438 330
+ 0 1 1 1 1 1 1
+.\"  Sandusky, OH--Springfield, OH
+  419 347 417 344 416 340 415 335 413 331 411 326 410 323
+ 0 1 1 1 1 1 1
+.\"  Sandusky, OH--South Bend, IN
+  416 351 413 351 409 352 404 353 399 353 394 354 390 354
+ 0 1 1 1 1 1 1
+.\"  San Diego, CA--Santa Barbara, CA
+  65 178 63 181 61 185 59 188 56 191 54 194 53 196
+ 0 1 1 1 1 1 1
+.\"  San Diego, CA--Santa Ana, CA
+  70 180 70 180 70 181 70 181 70 181 70 181 70 181
+ 0 1 1 1 1 1 1
+.\"  San Bernardino, CA--Santa Barbara, CA
+  68 196 65 196 63 197 61 197 59 198 57 199 55 199
+ 0 1 1 1 1 1 1
+.\"  San Bernardino, CA--Santa Ana, CA
+  70 189 70 189 70 189 70 189 70 189 69 189 69 188
+ 0 1 1 1 1 1 1
+.\"  San Bernardino, CA--San Diego, CA
+  74 188 74 187 74 186 74 185 74 184 74 183 74 182
+ 0 1 1 1 1 1 1
+.\"  San Antonio, TX--Waco, TX
+  266 109 268 114 269 118 270 123 271 127 273 131 274 134
+ 0 1 1 1 1 1 1
+.\"  San Antonio, TX--Victoria, TX
+  274 83 274 83 274 83 274 83 274 83 274 83 274 83
+ 0 1 1 1 1 1 1
+.\"  San Angelo, TX--Wichita Falls, TX
+  244 142 246 148 249 155 252 163 255 171 258 178 260 184
+ 0 1 1 1 1 1 1
+.\"  San Angelo, TX--Waco, TX
+  247 138 251 138 254 138 258 138 262 139 266 139 269 139
+ 0 1 1 1 1 1 1
+.\"  San Angelo, TX--San Antonio, TX
+  244 133 246 130 247 126 249 122 251 118 253 113 255 109
+ 0 1 1 1 1 1 1
+.\"  Salt Lake City, UT--Twin Falls, ID
+  124 342 120 347 117 352 113 358 109 363 106 368 104 371
+ 0 1 1 1 1 1 1
+.\"  Salisbury, MD--Winchester, VA
+  488 286 485 288 482 291 478 294 474 296 470 299 467 301
+ 0 1 1 1 1 1 1
+.\"  Salisbury, MD--Wilmington, DE
+  491 287 491 290 491 294 491 298 491 302 491 306 491 309
+ 0 1 1 1 1 1 1
+.\"  Salisbury, MD--Williamsport, PA
+  490 287 489 294 486 304 484 315 481 326 479 335 477 343
+ 0 1 1 1 1 1 1
+.\"  Salisbury, MD--Washington, DC
+  488 286 488 287 488 287 488 287 488 287 488 287 488 287
+ 0 1 1 1 1 1 1
+.\"  Salisbury, MD--Trenton, NJ
+  491 287 492 291 493 296 494 302 496 308 497 314 498 319
+ 0 1 1 1 1 1 1
+.\"  Salisbury, MD--Stroudsburg, PA
+  491 287 491 294 492 303 493 314 494 324 494 333 495 339
+ 0 1 1 1 1 1 1
+.\"  Salisbury, MD--Scranton, PA
+  491 288 491 294 490 303 490 314 490 325 490 336 490 344
+ 0 1 1 1 1 1 1
+.\"  Salinas, CA--Stockton, CA
+  31 254 31 256 31 258 32 261 32 264 33 267 33 269
+ 0 1 1 1 1 1 1
+.\"  Salinas, CA--Santa Rosa, CA
+  29 253 28 258 26 262 25 267 23 272 22 277 21 281
+ 0 1 1 1 1 1 1
+.\"  Salinas, CA--Santa Barbara, CA
+  32 244 34 238 37 232 40 225 43 217 46 211 48 205
+ 0 1 1 1 1 1 1
+.\"  Salinas, CA--San Jose, CA
+  29 254 29 254 29 254 29 254 29 254 29 254 29 254
+ 0 1 1 1 1 1 1
+.\"  Salinas, CA--San Francisco, CA
+  29 254 28 254 28 255 28 256 28 256 27 257 27 258
+ 0 1 1 1 1 1 1
+.\"  Salina, KS--Wichita, KS
+  271 291 271 289 271 288 272 286 272 284 272 282 272 280
+ 0 1 1 1 1 1 1
+.\"  Salina, KS--Tulsa, OK
+  272 291 273 286 275 280 277 272 280 264 282 256 284 249
+ 0 1 1 1 1 1 1
+.\"  Salina, KS--Topeka, KS
+  274 296 276 296 277 296 279 297 281 297 282 297 284 298
+ 0 1 1 1 1 1 1
+.\"  Salina, KS--Sedalia, MO
+  274 295 280 294 286 294 293 293 300 293 307 292 312 292
+ 0 1 1 1 1 1 1
+.\"  Salida, CO--Trinidad, CO
+  189 284 191 281 193 276 195 272 197 268 199 264 201 261
+ 0 1 1 1 1 1 1
+.\"  Salida, CO--Sterling, CO
+  189 292 192 297 197 304 201 312 206 319 210 326 213 331
+ 0 1 1 1 1 1 1
+.\"  Salida, CO--Santa Fe, NM
+  187 284 187 277 187 268 187 257 187 247 187 238 187 231
+ 0 1 1 1 1 1 1
+.\"  Salem, OR--Yakima, WA
+  20 429 23 433 26 438 30 443 33 448 36 453 39 457
+ 0 1 1 1 1 1 1
+.\"  Salem, OR--Walla Walla, WA
+  21 427 27 430 34 434 42 438 49 441 56 445 61 447
+ 0 1 1 1 1 1 1
+.\"  Salem, OR--Tacoma, WA
+  17 430 18 435 18 442 19 448 20 455 21 461 22 467
+ 0 1 1 1 1 1 1
+.\"  Salem, OR--Seattle, WA
+  17 430 18 435 18 442 19 448 20 455 21 462 22 469
+ 0 1 1 1 1 1 1
+.\"  Saint Paul, MN--Wisconsin Dells, WI
+  323 419 328 415 332 411 337 407 342 403 345 400 348 398
+ 0 1 1 1 1 1 1
+.\"  Saint Paul, MN--Wausau, WI
+  326 425 329 425 333 425 337 425 341 425 344 425 347 425
+ 0 1 1 1 1 1 1
+.\"  Saint Paul, MN--Watertown, SD
+  306 425 301 425 296 424 291 424 286 424 282 424 278 424
+ 0 1 1 1 1 1 1
+.\"  Saint Paul, MN--Waterloo, IA
+  317 415 318 409 319 403 320 396 321 389 322 383 323 378
+ 0 1 1 1 1 1 1
+.\"  Saint Paul, MN--Stevens Point, WI
+  325 423 329 421 333 420 338 419 342 418 346 417 348 416
+ 0 1 1 1 1 1 1
+.\"  Saint Paul, MN--Sioux Falls, SD
+  308 419 304 416 300 412 295 408 291 405 287 401 284 398
+ 0 1 1 1 1 1 1
+.\"  Saint Paul, MN--Sioux City, IA
+  311 417 307 410 302 403 297 396 293 389 289 382 285 377
+ 0 1 1 1 1 1 1
+.\"  Saint Louis, MO--Vincennes, IN
+  357 291 359 291 361 291 363 291 365 291 367 291 369 291
+ 0 1 1 1 1 1 1
+.\"  Saint Louis, MO--Terre Haute, IN
+  355 297 358 298 360 300 362 301 365 303 367 304 369 306
+ 0 1 1 1 1 1 1
+.\"  Saint Louis, MO--Springfield, MO
+  336 282 333 279 330 276 327 273 324 270 321 267 319 265
+ 0 1 1 1 1 1 1
+.\"  Saint Louis, MO--Springfield, IL
+  347 302 348 303 348 305 348 306 348 307 349 308 349 310
+ 0 1 1 1 1 1 1
+.\"  Saint Louis, MO--Sedalia, MO
+  333 291 330 291 327 291 324 291 321 292 319 292 317 292
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MO--Wichita, KS
+  296 310 293 306 291 301 287 295 284 289 281 284 278 279
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MO--Waterloo, IA
+  300 320 303 326 307 335 311 344 315 353 318 362 321 368
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MO--Topeka, KS
+  296 310 295 309 295 308 294 307 294 306 293 306 293 305
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MO--Springfield, MO
+  300 310 301 304 303 297 306 289 308 281 310 273 312 267
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MO--Sioux City, IA
+  297 320 295 326 293 334 291 344 288 353 286 361 284 368
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MO--Sedalia, MO
+  301 310 303 308 305 305 307 302 309 299 311 296 313 294
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MO--Salina, KS
+  294 311 291 309 287 307 283 304 280 301 276 299 273 297
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MI--Wisconsin Dells, WI
+  380 366 376 370 371 375 365 381 359 387 354 392 350 396
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MI--Waukegan, IL
+  380 365 379 365 378 366 376 366 375 367 374 367 373 368
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MI--Vincennes, IN
+  382 362 380 354 379 342 377 328 375 314 373 302 372 294
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MI--Traverse City, MI
+  382 367 383 373 385 382 386 393 388 403 389 412 390 419
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MI--Toledo, OH
+  384 364 386 363 388 362 391 361 395 360 398 359 401 358
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MI--Terre Haute, IN
+  382 362 381 356 379 348 378 338 376 329 375 320 373 313
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MI--Springfield, OH
+  383 362 386 358 390 351 394 343 398 335 403 328 406 322
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MI--Springfield, IL
+  381 362 377 357 373 350 368 342 362 334 357 326 353 320
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MI--South Bend, IN
+  382 362 382 362 383 362 383 362 383 361 383 361 383 361
+ 0 1 1 1 1 1 1
+.\"  Saint Joseph, MI--Sandusky, OH
+  384 363 388 362 394 360 400 358 406 355 412 353 417 351
+ 0 1 1 1 1 1 1
+.\"  Saint Johnsbury, VT--Worcester, MA
+  527 412 527 408 527 402 527 396 528 388 528 381 528 375
+ 0 1 1 1 1 1 1
+.\"  Saint Johnsbury, VT--Watertown, NY
+  525 413 521 412 515 411 509 409 502 408 496 406 491 405
+ 0 1 1 1 1 1 1
+.\"  Saint Johnsbury, VT--Waterbury, CT
+  526 412 525 407 524 398 522 388 520 377 519 367 517 359
+ 0 1 1 1 1 1 1
+.\"  Saint Johnsbury, VT--Utica, NY
+  525 412 522 410 518 406 513 402 507 397 503 393 498 389
+ 0 1 1 1 1 1 1
+.\"  Saint Johnsbury, VT--Springfield, MA
+  526 412 526 408 525 401 524 394 523 386 522 378 522 371
+ 0 1 1 1 1 1 1
+.\"  Saint Johnsbury, VT--Schenectady, NY
+  526 412 524 409 521 404 518 399 515 393 512 388 510 384
+ 0 1 1 1 1 1 1
+.\"  Saint Cloud, MN--Wisconsin Dells, WI
+  308 436 313 430 321 423 329 415 337 408 344 401 348 398
+ 0 1 1 1 1 1 1
+.\"  Saint Cloud, MN--Wausau, WI
+  309 437 314 436 321 434 328 431 336 429 342 427 347 426
+ 0 1 1 1 1 1 1
+.\"  Saint Cloud, MN--Watertown, SD
+  301 436 298 435 294 433 289 430 285 428 281 426 278 425
+ 0 1 1 1 1 1 1
+.\"  Saint Cloud, MN--Waterloo, IA
+  306 435 308 427 311 418 314 407 317 396 320 385 322 378
+ 0 1 1 1 1 1 1
+.\"  Saint Cloud, MN--Valley City, ND
+  302 440 297 444 291 449 284 454 278 459 272 463 268 466
+ 0 1 1 1 1 1 1
+.\"  Saint Cloud, MN--Stevens Point, WI
+  308 437 314 434 321 430 329 427 336 423 343 419 348 417
+ 0 1 1 1 1 1 1
+.\"  Saint Cloud, MN--Sioux Falls, SD
+  303 435 300 430 297 424 293 418 289 411 285 404 282 399
+ 0 1 1 1 1 1 1
+.\"  Saint Cloud, MN--Sioux City, IA
+  304 435 301 427 298 418 294 407 291 395 287 385 284 377
+ 0 1 1 1 1 1 1
+.\"  Saint Cloud, MN--Saint Paul, MN
+  307 435 308 435 308 434 308 434 309 433 309 433 310 433
+ 0 1 1 1 1 1 1
+.\"  Saint Augustine, FL--West Palm Beach, FL
+  434 102 435 95 437 85 439 73 442 61 444 50 445 41
+ 0 1 1 1 1 1 1
+.\"  Saint Augustine, FL--Waycross, GA
+  433 106 432 110 430 114 428 118 427 123 425 127 424 130
+ 0 1 1 1 1 1 1
+.\"  Saint Augustine, FL--Valdosta, GA
+  432 106 430 108 427 110 425 113 422 116 419 119 417 121
+ 0 1 1 1 1 1 1
+.\"  Saint Augustine, FL--Tampa, FL
+  433 102 432 98 431 94 429 89 428 83 426 77 425 72
+ 0 1 1 1 1 1 1
+.\"  Saint Augustine, FL--Tallahassee, FL
+  432 105 429 106 425 108 421 109 416 111 412 113 409 114
+ 0 1 1 1 1 1 1
+.\"  Saint Augustine, FL--Swainsboro, GA
+  433 107 432 113 430 123 428 134 426 145 425 154 424 160
+ 0 1 1 1 1 1 1
+.\"  Saint Augustine, FL--Savannah, GA
+  434 106 434 110 434 116 434 123 435 131 435 138 435 144
+ 0 1 1 1 1 1 1
+.\"  Saint Augustine, FL--Sarasota, FL
+  433 102 432 96 430 88 428 79 426 69 424 60 422 54
+ 0 1 1 1 1 1 1
+.\"  Saginaw, MI--Traverse City, MI
+  405 397 403 401 400 405 398 409 395 413 393 416 391 419
+ 0 1 1 1 1 1 1
+.\"  Saginaw, MI--Toronto, ON
+  413 393 416 393 420 394 425 394 429 395 434 395 439 396
+ 0 1 1 1 1 1 1
+.\"  Saginaw, MI--Toledo, OH
+  408 387 408 384 409 381 409 377 409 373 410 369 410 365
+ 0 1 1 1 1 1 1
+.\"  Saginaw, MI--Springfield, OH
+  407 387 408 379 408 367 408 355 408 343 408 332 409 323
+ 0 1 1 1 1 1 1
+.\"  Saginaw, MI--South Bend, IN
+  405 388 402 384 399 380 396 375 393 369 390 365 387 360
+ 0 1 1 1 1 1 1
+.\"  Saginaw, MI--Sault Sainte Marie, MI
+  407 398 406 406 406 417 405 428 404 439 404 449 403 456
+ 0 1 1 1 1 1 1
+.\"  Saginaw, MI--Sandusky, OH
+  409 388 410 383 412 376 414 370 416 363 417 358 419 353
+ 0 1 1 1 1 1 1
+.\"  Saginaw, MI--Saint Joseph, MI
+  404 389 401 385 397 381 393 376 389 372 386 369 383 366
+ 0 1 1 1 1 1 1
+.\"  Sacramento, CA--Weed, CA
+  30 299 29 307 28 317 26 327 25 336 24 343 23 348
+ 0 1 1 1 1 1 1
+.\"  Sacramento, CA--Stockton, CA
+  33 280 33 280 33 280 33 280 33 280 33 280 33 280
+ 0 1 1 1 1 1 1
+.\"  Sacramento, CA--Santa Rosa, CA
+  23 287 23 287 22 287 22 287 22 287 22 287 22 287
+ 0 1 1 1 1 1 1
+.\"  Sacramento, CA--San Jose, CA
+  30 280 30 279 30 279 30 279 30 278 30 278 30 277
+ 0 1 1 1 1 1 1
+.\"  Sacramento, CA--San Francisco, CA
+  27 281 27 281 27 281 27 281 27 281 27 280 27 280
+ 0 1 1 1 1 1 1
+.\"  Sacramento, CA--Salinas, CA
+  31 280 31 275 31 271 31 266 31 261 31 257 30 254
+ 0 1 1 1 1 1 1
+.\"  Rutland, VT--Worcester, MA
+  518 394 519 391 520 388 522 385 523 381 525 378 526 375
+ 0 1 1 1 1 1 1
+.\"  Rutland, VT--Watertown, NY
+  514 397 511 398 507 399 503 400 498 401 494 403 491 403
+ 0 1 1 1 1 1 1
+.\"  Rutland, VT--Waterbury, CT
+  517 394 517 389 517 384 517 377 517 370 516 364 516 359
+ 0 1 1 1 1 1 1
+.\"  Rutland, VT--Utica, NY
+  515 395 513 394 510 393 507 392 505 390 502 389 499 388
+ 0 1 1 1 1 1 1
+.\"  Rutland, VT--Trenton, NJ
+  516 394 514 386 512 376 509 363 506 351 503 339 500 330
+ 0 1 1 1 1 1 1
+.\"  Rutland, VT--Syracuse, NY
+  515 395 512 394 508 393 504 392 500 390 496 389 492 387
+ 0 1 1 1 1 1 1
+.\"  Rutland, VT--Stroudsburg, PA
+  516 394 513 387 510 378 505 367 501 357 498 348 495 342
+ 0 1 1 1 1 1 1
+.\"  Rutland, VT--Springfield, MA
+  517 394 518 391 518 387 519 383 519 379 520 375 520 371
+ 0 1 1 1 1 1 1
+.\"  Rutland, VT--Scranton, PA
+  516 394 513 389 509 383 505 375 500 368 496 360 493 355
+ 0 1 1 1 1 1 1
+.\"  Rutland, VT--Schenectady, NY
+  516 394 515 393 514 391 513 389 512 387 511 385 510 384
+ 0 1 1 1 1 1 1
+.\"  Rutland, VT--Saint Johnsbury, VT
+  518 399 519 401 521 403 522 406 523 408 525 410 526 412
+ 0 1 1 1 1 1 1
+.\"  Roswell, NM--Santa Fe, NM
+  200 182 199 188 197 195 194 203 192 211 190 218 188 223
+ 0 1 1 1 1 1 1
+.\"  Rocky Mount, NC--Winston-Salem, NC
+  465 234 463 234 461 234 458 234 456 235 453 235 451 235
+ 0 1 1 1 1 1 1
+.\"  Rocky Mount, NC--Winchester, VA
+  469 237 468 245 467 256 467 269 466 282 466 292 465 300
+ 0 1 1 1 1 1 1
+.\"  Rocky Mount, NC--Wilmington, NC
+  469 229 468 226 468 222 468 217 468 212 468 207 468 203
+ 0 1 1 1 1 1 1
+.\"  Rocky Mount, NC--Washington, DC
+  469 237 470 242 471 249 472 257 473 265 474 273 475 281
+ 0 1 1 1 1 1 1
+.\"  Rocky Mount, NC--Sumter, SC
+  467 230 464 225 460 218 456 211 452 204 448 198 445 193
+ 0 1 1 1 1 1 1
+.\"  Rocky Mount, NC--Staunton, VA
+  468 236 466 242 464 249 462 257 460 265 458 272 457 277
+ 0 1 1 1 1 1 1
+.\"  Rocky Mount, NC--Salisbury, MD
+  470 236 473 243 476 251 480 260 484 269 487 277 490 282
+ 0 1 1 1 1 1 1
+.\"  Rock Springs, WY--Salt Lake City, UT
+  152 352 150 350 147 348 144 346 140 344 137 342 134 340
+ 0 1 1 1 1 1 1
+.\"  Rockford, IL--Wisconsin Dells, WI
+  354 374 353 378 352 382 351 386 351 390 350 393 349 395
+ 0 1 1 1 1 1 1
+.\"  Rockford, IL--Wausau, WI
+  355 374 354 382 354 390 353 399 352 408 351 416 351 422
+ 0 1 1 1 1 1 1
+.\"  Rockford, IL--Waukegan, IL
+  362 369 363 369 363 369 363 369 363 369 364 369 364 369
+ 0 1 1 1 1 1 1
+.\"  Rockford, IL--Waterloo, IA
+  349 369 346 369 342 370 339 370 335 371 332 371 329 372
+ 0 1 1 1 1 1 1
+.\"  Rockford, IL--Terre Haute, IN
+  358 361 360 354 362 346 365 336 367 327 370 319 371 313
+ 0 1 1 1 1 1 1
+.\"  Rockford, IL--Stevens Point, WI
+  355 374 354 381 354 388 353 395 352 402 352 408 351 413
+ 0 1 1 1 1 1 1
+.\"  Rockford, IL--Springfield, IL
+  355 361 354 355 354 348 353 341 352 333 351 327 351 321
+ 0 1 1 1 1 1 1
+.\"  Rockford, IL--South Bend, IN
+  362 365 364 364 367 363 370 361 373 360 376 359 379 358
+ 0 1 1 1 1 1 1
+.\"  Rockford, IL--Saint Louis, MO
+  355 361 354 353 352 344 351 333 349 322 348 311 347 302
+ 0 1 1 1 1 1 1
+.\"  Rockford, IL--Saint Joseph, MI
+  362 367 365 367 369 366 372 366 375 365 377 365 380 365
+ 0 1 1 1 1 1 1
+.\"  Rochester, NY--Youngstown, OH
+  465 379 462 374 458 369 454 363 450 357 447 352 444 348
+ 0 1 1 1 1 1 1
+.\"  Rochester, NY--Williamsport, PA
+  472 378 473 373 473 368 474 363 475 358 476 353 476 350
+ 0 1 1 1 1 1 1
+.\"  Rochester, NY--Watertown, NY
+  477 393 479 395 480 396 481 398 483 399 484 401 485 402
+ 0 1 1 1 1 1 1
+.\"  Rochester, NY--Warren, PA
+  466 379 464 376 463 372 461 369 459 366 458 363 456 361
+ 0 1 1 1 1 1 1
+.\"  Rochester, NY--Utica, NY
+  480 386 481 386 483 386 485 386 486 386 488 386 489 386
+ 0 1 1 1 1 1 1
+.\"  Rochester, NY--Toronto, ON
+  463 392 463 392 462 392 462 392 462 392 462 392 462 392
+ 0 1 1 1 1 1 1
+.\"  Rochester, NY--Syracuse, NY
+  480 385 480 385 480 385 480 385 480 385 480 385 480 385
+ 0 1 1 1 1 1 1
+.\"  Rochester, NY--Stroudsburg, PA
+  475 379 478 372 482 365 486 358 489 351 492 346 494 342
+ 0 1 1 1 1 1 1
+.\"  Rochester, NY--Scranton, PA
+  475 379 477 375 479 370 481 366 484 362 486 358 487 354
+ 0 1 1 1 1 1 1
+.\"  Rochester, NY--Schenectady, NY
+  479 385 483 384 487 383 492 383 496 382 499 381 503 380
+ 0 1 1 1 1 1 1
+.\"  Rochester, NY--Rutland, VT
+  480 389 485 390 492 391 498 393 505 394 510 395 514 396
+ 0 1 1 1 1 1 1
+.\"  Rochester, MN--Wisconsin Dells, WI
+  327 404 330 403 334 401 338 400 342 399 346 398 348 397
+ 0 1 1 1 1 1 1
+.\"  Rochester, MN--Wausau, WI
+  326 408 329 410 333 413 337 416 341 419 345 421 348 423
+ 0 1 1 1 1 1 1
+.\"  Rochester, MN--Watertown, SD
+  318 407 312 409 305 412 297 415 290 418 283 421 278 423
+ 0 1 1 1 1 1 1
+.\"  Rochester, MN--Waterloo, IA
+  322 401 322 397 323 393 323 389 323 385 323 381 323 378
+ 0 1 1 1 1 1 1
+.\"  Rochester, MN--Stevens Point, WI
+  327 407 330 408 334 410 338 411 342 413 346 414 349 415
+ 0 1 1 1 1 1 1
+.\"  Rochester, MN--Sioux Falls, SD
+  318 404 313 403 307 402 301 400 295 399 289 397 284 396
+ 0 1 1 1 1 1 1
+.\"  Rochester, MN--Sioux City, IA
+  318 402 314 399 309 394 303 389 297 384 292 380 287 376
+ 0 1 1 1 1 1 1
+.\"  Rochester, MN--Saint Paul, MN
+  321 410 320 411 320 412 320 413 319 414 319 415 319 416
+ 0 1 1 1 1 1 1
+.\"  Rochester, MN--Saint Cloud, MN
+  320 409 318 413 316 417 313 422 311 427 309 431 307 435
+ 0 1 1 1 1 1 1
+.\"  Rochester, MN--Rockford, IL
+  325 402 329 398 333 393 338 388 343 382 347 377 351 373
+ 0 1 1 1 1 1 1
+.\"  Roanoke, VA--Winston-Salem, NC
+  447 256 446 254 446 251 446 249 446 247 445 245 445 243
+ 0 1 1 1 1 1 1
+.\"  Roanoke, VA--Winchester, VA
+  450 267 452 272 455 278 457 284 460 290 462 296 464 300
+ 0 1 1 1 1 1 1
+.\"  Roanoke, VA--Wilmington, NC
+  449 256 451 249 454 240 457 230 460 220 463 210 466 203
+ 0 1 1 1 1 1 1
+.\"  Roanoke, VA--Williamson, WV
+  442 263 439 264 436 266 433 267 430 268 427 269 425 270
+ 0 1 1 1 1 1 1
+.\"  Roanoke, VA--Washington, DC
+  451 266 453 268 456 271 458 274 461 278 464 281 467 285
+ 0 1 1 1 1 1 1
+.\"  Roanoke, VA--Uniontown, PA
+  448 267 448 274 448 283 448 292 449 301 449 309 449 315
+ 0 1 1 1 1 1 1
+.\"  Roanoke, VA--Sumter, SC
+  447 256 446 247 446 236 445 223 444 211 444 201 443 193
+ 0 1 1 1 1 1 1
+.\"  Roanoke, VA--Staunton, VA
+  450 266 451 268 451 270 452 272 453 274 454 276 455 278
+ 0 1 1 1 1 1 1
+.\"  Roanoke, VA--Rocky Mount, NC
+  451 257 453 254 456 250 459 246 462 242 464 239 466 236
+ 0 1 1 1 1 1 1
+.\"  Richmond, VA--Winston-Salem, NC
+  466 261 463 258 460 254 457 251 454 247 451 244 449 241
+ 0 1 1 1 1 1 1
+.\"  Richmond, VA--Winchester, VA
+  470 276 470 280 469 284 468 289 467 293 466 297 466 300
+ 0 1 1 1 1 1 1
+.\"  Richmond, VA--Wilmington, NC
+  472 258 471 250 470 241 470 230 469 220 468 211 468 203
+ 0 1 1 1 1 1 1
+.\"  Richmond, VA--Wilmington, DE
+  476 275 478 281 480 287 483 293 485 299 487 305 489 309
+ 0 1 1 1 1 1 1
+.\"  Richmond, VA--Washington, DC
+  473 276 474 276 474 277 474 278 474 279 474 280 474 281
+ 0 1 1 1 1 1 1
+.\"  Richmond, VA--Uniontown, PA
+  469 275 466 282 462 289 459 297 455 305 452 311 450 315
+ 0 1 1 1 1 1 1
+.\"  Richmond, VA--Trenton, NJ
+  476 275 479 282 483 290 487 298 490 306 494 313 497 319
+ 0 1 1 1 1 1 1
+.\"  Richmond, VA--Staunton, VA
+  465 273 464 274 463 275 461 276 460 277 459 278 458 278
+ 0 1 1 1 1 1 1
+.\"  Richmond, VA--Rocky Mount, NC
+  471 258 471 255 471 251 470 247 470 243 469 239 469 237
+ 0 1 1 1 1 1 1
+.\"  Richmond, VA--Roanoke, VA
+  464 265 462 265 460 264 458 264 456 263 455 263 453 263
+ 0 1 1 1 1 1 1
+.\"  Richmond, IN--Youngstown, OH
+  401 318 405 321 411 324 417 328 424 333 430 336 435 340
+ 0 1 1 1 1 1 1
+.\"  Richmond, IN--Williamson, WV
+  400 313 403 307 407 299 412 291 417 283 420 276 423 271
+ 0 1 1 1 1 1 1
+.\"  Richmond, IN--Wheeling, WV
+  401 316 406 317 412 318 419 318 425 319 431 320 436 321
+ 0 1 1 1 1 1 1
+.\"  Richmond, IN--Waukegan, IL
+  396 319 393 325 388 333 383 342 379 351 374 359 371 366
+ 0 1 1 1 1 1 1
+.\"  Richmond, IN--Vincennes, IN
+  395 313 392 310 388 307 384 303 380 299 376 296 373 293
+ 0 1 1 1 1 1 1
+.\"  Richmond, IN--Toledo, OH
+  399 319 400 323 402 327 403 331 405 336 406 340 408 344
+ 0 1 1 1 1 1 1
+.\"  Richmond, IN--Terre Haute, IN
+  394 315 392 314 389 313 386 312 383 311 380 310 377 310
+ 0 1 1 1 1 1 1
+.\"  Richmond, IN--Steubenville, OH
+  401 317 406 318 413 320 420 322 426 323 433 325 437 326
+ 0 1 1 1 1 1 1
+.\"  Richmond, IN--Springfield, OH
+  402 317 402 317 402 317 403 317 403 317 403 317 403 317
+ 0 1 1 1 1 1 1
+.\"  Richmond, IN--Springfield, IL
+  394 316 389 316 383 316 375 316 368 315 361 315 356 315
+ 0 1 1 1 1 1 1
+.\"  Richmond, IN--South Bend, IN
+  397 319 395 323 394 328 392 334 390 339 388 345 386 349
+ 0 1 1 1 1 1 1
+.\"  Richmond, IN--Sandusky, OH
+  400 319 402 323 405 328 409 333 412 339 415 344 418 347
+ 0 1 1 1 1 1 1
+.\"  Richmond, IN--Saint Joseph, MI
+  397 319 395 325 392 333 389 341 387 350 384 357 383 362
+ 0 1 1 1 1 1 1
+.\"  Richmond, IN--Saginaw, MI
+  398 320 399 328 401 340 402 353 404 366 406 378 407 388
+ 0 1 1 1 1 1 1
+.\"  Richfield, UT--Salt Lake City, UT
+  126 295 126 299 126 304 127 310 127 316 127 322 128 328
+ 0 1 1 1 1 1 1
+.\"  Rhinelander, WI--Wisconsin Dells, WI
+  352 438 352 433 351 426 351 418 350 410 349 403 349 398
+ 0 1 1 1 1 1 1
+.\"  Rhinelander, WI--Wausau, WI
+  352 438 352 436 352 435 352 433 351 431 351 430 351 428
+ 0 1 1 1 1 1 1
+.\"  Rhinelander, WI--Waukegan, IL
+  353 438 354 431 357 421 360 408 363 395 365 383 367 374
+ 0 1 1 1 1 1 1
+.\"  Rhinelander, WI--Stevens Point, WI
+  352 438 352 436 352 432 352 429 352 425 351 421 351 418
+ 0 1 1 1 1 1 1
+.\"  Rhinelander, WI--Saint Paul, MN
+  351 439 348 438 344 436 339 434 334 432 329 430 325 428
+ 0 1 1 1 1 1 1
+.\"  Rhinelander, WI--Saint Cloud, MN
+  351 440 346 439 339 439 331 439 322 439 315 438 309 438
+ 0 1 1 1 1 1 1
+.\"  Rhinelander, WI--Rockford, IL
+  353 438 353 432 353 421 354 409 354 396 355 384 355 374
+ 0 1 1 1 1 1 1
+.\"  Rhinelander, WI--Rochester, MN
+  351 438 348 435 344 430 339 424 334 419 329 413 325 409
+ 0 1 1 1 1 1 1
+.\"  Reno, NV--Stockton, CA
+  46 304 45 301 43 297 42 293 40 290 38 286 37 282
+ 0 1 1 1 1 1 1
+.\"  Reno, NV--Santa Rosa, CA
+  44 306 41 303 37 300 34 297 30 295 27 292 24 289
+ 0 1 1 1 1 1 1
+.\"  Reno, NV--San Jose, CA
+  46 304 45 300 43 296 41 291 38 286 36 281 34 276
+ 0 1 1 1 1 1 1
+.\"  Reno, NV--San Francisco, CA
+  45 305 43 302 41 299 39 295 36 292 34 288 31 285
+ 0 1 1 1 1 1 1
+.\"  Reno, NV--Sacramento, CA
+  45 305 44 304 43 303 42 301 41 300 39 298 38 297
+ 0 1 1 1 1 1 1
+.\"  Regina, SK--Williston, ND
+  202 534 203 528 205 520 206 513 208 506 209 500 210 495
+ 0 1 1 1 1 1 1
+.\"  Red Bluff, CA--Weed, CA
+  24 325 24 329 24 333 24 337 23 342 23 346 23 349
+ 0 1 1 1 1 1 1
+.\"  Red Bluff, CA--Stockton, CA
+  25 321 26 317 27 311 28 304 30 297 31 289 32 283
+ 0 1 1 1 1 1 1
+.\"  Red Bluff, CA--Santa Rosa, CA
+  24 321 24 318 23 313 22 307 21 302 21 296 20 291
+ 0 1 1 1 1 1 1
+.\"  Red Bluff, CA--San Jose, CA
+  24 321 25 317 25 310 26 302 26 294 27 285 27 277
+ 0 1 1 1 1 1 1
+.\"  Red Bluff, CA--San Francisco, CA
+  24 321 24 317 24 313 24 307 23 300 23 294 23 287
+ 0 1 1 1 1 1 1
+.\"  Red Bluff, CA--Salinas, CA
+  24 321 25 314 26 303 27 289 28 276 29 263 30 254
+ 0 1 1 1 1 1 1
+.\"  Red Bluff, CA--Sacramento, CA
+  25 321 25 318 26 315 27 311 28 307 29 303 30 299
+ 0 1 1 1 1 1 1
+.\"  Red Bluff, CA--Reno, NV
+  26 322 28 321 31 319 34 317 38 316 41 314 44 312
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Winchester, VA
+  484 323 481 320 478 317 475 313 472 310 469 307 467 304
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Wilmington, DE
+  489 321 489 321 489 321 489 320 489 320 490 320 490 319
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Williamsport, PA
+  485 331 484 333 483 335 482 337 480 339 479 341 478 343
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Waterbury, CT
+  491 330 494 333 498 336 501 339 505 342 509 346 512 348
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Washington, DC
+  486 322 485 320 484 318 484 316 483 314 482 312 481 310
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Warren, PA
+  484 330 480 334 475 339 470 345 464 350 460 354 457 357
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Utica, NY
+  488 332 489 338 490 347 491 356 492 365 493 374 494 381
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Uniontown, PA
+  482 325 478 324 472 323 466 321 460 320 455 319 452 318
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Trenton, NJ
+  492 326 493 326 493 326 493 325 493 325 493 325 494 325
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Syracuse, NY
+  487 332 487 338 487 345 486 354 486 362 486 370 485 377
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Stroudsburg, PA
+  490 331 491 332 491 334 492 335 493 337 493 338 494 339
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Steubenville, OH
+  482 327 477 327 470 327 462 327 455 327 449 327 444 327
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Staunton, VA
+  485 322 481 316 476 309 471 302 465 294 461 287 458 283
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Springfield, MA
+  491 330 494 334 498 339 503 344 508 349 512 354 516 359
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Scranton, PA
+  488 332 488 334 488 336 489 338 489 340 489 342 489 344
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Schenectady, NY
+  489 331 492 338 494 345 497 353 501 362 503 369 506 375
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Salisbury, MD
+  488 321 488 316 489 310 489 304 490 297 490 292 490 288
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Rochester, NY
+  486 332 484 338 482 345 480 354 477 362 475 371 473 378
+ 0 1 1 1 1 1 1
+.\"  Reading, PA--Richmond, VA
+  486 321 485 315 483 308 480 299 478 291 476 283 474 276
+ 0 1 1 1 1 1 1
+.\"  Ravenna, OH--Youngstown, OH
+  436 344 436 344 437 344 437 344 437 344 437 344 437 344
+ 0 1 1 1 1 1 1
+.\"  Ravenna, OH--Winchester, VA
+  436 342 439 338 444 331 449 324 455 316 460 309 464 304
+ 0 1 1 1 1 1 1
+.\"  Ravenna, OH--Williamsport, PA
+  436 344 441 344 447 345 454 345 461 345 468 346 473 346
+ 0 1 1 1 1 1 1
+.\"  Ravenna, OH--Wheeling, WV
+  435 342 435 340 436 337 437 334 437 331 438 327 439 325
+ 0 1 1 1 1 1 1
+.\"  Ravenna, OH--Warren, PA
+  436 345 438 347 441 349 445 351 448 354 451 356 453 358
+ 0 1 1 1 1 1 1
+.\"  Ravenna, OH--Uniontown, PA
+  435 342 437 339 439 335 442 331 444 326 447 322 448 319
+ 0 1 1 1 1 1 1
+.\"  Ravenna, OH--Toledo, OH
+  432 345 431 346 429 347 427 347 425 348 423 349 421 350
+ 0 1 1 1 1 1 1
+.\"  Ravenna, OH--Steubenville, OH
+  435 342 436 340 436 338 437 336 438 334 439 332 439 330
+ 0 1 1 1 1 1 1
+.\"  Ravenna, OH--Springfield, OH
+  433 342 430 340 427 336 423 333 419 329 415 325 412 322
+ 0 1 1 1 1 1 1
+.\"  Ravenna, OH--South Bend, IN
+  432 345 427 346 421 347 413 349 405 351 397 352 390 354
+ 0 1 1 1 1 1 1
+.\"  Ravenna, OH--Sandusky, OH
+  432 345 431 346 429 346 427 347 426 348 424 349 422 349
+ 0 1 1 1 1 1 1
+.\"  Ravenna, OH--Saginaw, MI
+  433 346 430 351 427 358 422 366 418 374 413 382 410 388
+ 0 1 1 1 1 1 1
+.\"  Ravenna, OH--Rochester, NY
+  436 346 439 350 444 355 449 361 454 368 460 374 465 380
+ 0 1 1 1 1 1 1
+.\"  Ravenna, OH--Richmond, IN
+  432 343 428 340 423 335 417 331 411 326 405 322 401 318
+ 0 1 1 1 1 1 1
+.\"  Youngstown, OH
+ellipse attrs1 fill wid 0.16667 ht 0.16667 at (6.11389,4.76264);
+.ps 8*\n(SFu/7500u
+" " at (438.72083,339.44693);
+.\"  Yankton, SD
+ellipse attrs1 fill wid 0.05556 ht 0.05556 at (3.78889,5.28927);
+" " at (271.32083,377.36464);
+.\"  Yakima, WA
+ellipse attrs1 fill wid 0.11111 ht 0.11111 at (0.57778,6.38988);
+" " at (40.12083,456.60839);
+.\"  Worcester, MA
+ellipse attrs1 fill wid 0.19444 ht 0.19444 at (7.34306,5.10880);
+" " at (527.22083,364.37037);
+.\"  Wisconsin Dells, WI
+ellipse attrs1 fill wid 0.02778 ht 0.02778 at (4.84722,5.51117);
+" " at (347.52083,393.34120);
+.\"  Winston-Salem, NC
+ellipse attrs1 fill wid 0.18056 ht 0.18056 at (6.16944,3.28333);
+" " at (442.72083,232.93652);
+.\"  Winnipeg, MB
+ellipse attrs1 fill wid 0.37500 ht 0.37500 at (3.82222,7.36031);
+" " at (273.72083,526.47922);
+.\"  Winchester, VA
+ellipse attrs1 fill wid 0.06944 ht 0.06944 at (6.45972,4.19754);
+" " at (463.62083,298.75995);
+.\"  Wilmington, NC
+ellipse attrs1 fill wid 0.18056 ht 0.18056 at (6.49306,2.73302);
+" " at (466.02083,193.31464);
+.\"  Wilmington, DE
+ellipse attrs1 fill wid 0.13889 ht 0.13889 at (6.82222,4.36322);
+" " at (489.72083,310.68912);
+.\"  Williston, ND
+ellipse attrs1 fill wid 0.05556 ht 0.05556 at (2.92361,6.84847);
+" " at (209.02083,489.62662);
+.\"  Williamsport, PA
+ellipse attrs1 fill wid 0.09722 ht 0.09722 at (6.62083,4.80702);
+" " at (475.22083,342.64225);
+.\"  Williamson, WV
+ellipse attrs1 fill wid 0.04167 ht 0.04167 at (5.88750,3.75079);
+" " at (422.42083,266.59381);
+.\"  Wichita Falls, TX
+ellipse attrs1 fill wid 0.15278 ht 0.15278 at (3.63611,2.63243);
+" " at (260.32083,186.07193);
+.\"  Wichita, KS
+ellipse attrs1 fill wid 0.26389 ht 0.26389 at (3.79583,3.75375);
+" " at (271.82083,266.80683);
+.\"  Wheeling, WV
+ellipse attrs1 fill wid 0.09722 ht 0.09722 at (6.10417,4.45790);
+" " at (438.02083,317.50579);
+.\"  West Palm Beach, FL
+ellipse attrs1 fill wid 0.12500 ht 0.12500 at (6.19722,0.50814);
+" " at (444.72083,33.12297);
+.\"  Wenatchee, WA
+ellipse attrs1 fill wid 0.06944 ht 0.06944 at (0.60417,6.63249);
+" " at (42.02083,474.07610);
+.\"  Weed, CA
+ellipse attrs1 fill wid 0.02778 ht 0.02778 at (0.31667,4.85731);
+" " at (21.32083,346.26360);
+.\"  Waycross, GA
+ellipse attrs1 fill wid 0.06944 ht 0.06944 at (5.87778,1.83952);
+" " at (421.72083,128.98235);
+.\"  Wausau, WI
+ellipse attrs1 fill wid 0.08333 ht 0.08333 at (4.86528,5.90467);
+" " at (348.82083,421.67297);
+.\"  Waukegan, IL
+ellipse attrs1 fill wid 0.12500 ht 0.12500 at (5.11667,5.13542);
+" " at (366.92083,366.28756);
+.\"  Watertown, SD
+ellipse attrs1 fill wid 0.06944 ht 0.06944 at (3.82778,5.88691);
+" " at (274.12083,420.39485);
+.\"  Watertown, NY
+ellipse attrs1 fill wid 0.08333 ht 0.08333 at (6.77083,5.61472);
+" " at (486.02083,400.79693);
+.\"  Waterloo, IA
+ellipse attrs1 fill wid 0.13889 ht 0.13889 at (4.49028,5.17684);
+" " at (321.82083,369.26985);
+.\"  Waterbury, CT
+ellipse attrs1 fill wid 0.16667 ht 0.16667 at (7.16944,4.89578);
+" " at (514.72083,349.03287);
+.\"  Washington, DC
+ellipse attrs1 fill wid 0.40278 ht 0.40278 at (6.61667,4.10878);
+" " at (474.92083,292.36933);
+.\"  Warren, PA
+ellipse attrs1 fill wid 0.05556 ht 0.05556 at (6.32361,4.98453);
+" " at (453.82083,355.42350);
+.\"  Walla Walla, WA
+ellipse attrs1 fill wid 0.08333 ht 0.08333 at (0.88056,6.23307);
+" " at (61.92083,445.31829);
+.\"  Waco, TX
+ellipse attrs1 fill wid 0.15278 ht 0.15278 at (3.82361,1.93715);
+" " at (273.82083,136.01204);
+.\"  Vincennes, IN
+ellipse attrs1 fill wid 0.06944 ht 0.06944 at (5.15833,4.04665);
+" " at (369.92083,287.89589);
+.\"  Victoria, TX
+ellipse attrs1 fill wid 0.11111 ht 0.11111 at (3.84167,1.12649);
+" " at (275.12083,77.64433);
+.\"  Vicksburg, MS
+ellipse attrs1 fill wid 0.08333 ht 0.08333 at (4.69306,2.17384);
+" " at (336.42083,153.05370);
+.\"  Vancouver, BC
+ellipse attrs1 fill wid 0.31944 ht 0.31944 at (0.21528,7.17983);
+" " at (14.02083,513.48495);
+.\"  Valley City, ND
+ellipse attrs1 fill wid 0.04167 ht 0.04167 at (3.70278,6.48456);
+" " at (265.12083,463.42506);
+.\"  Valdosta, GA
+ellipse attrs1 fill wid 0.09722 ht 0.09722 at (5.74861,1.72413);
+" " at (412.42083,120.67454);
+.\"  Utica, NY
+ellipse attrs1 fill wid 0.13889 ht 0.13889 at (6.86667,5.35732);
+" " at (492.92083,382.26412);
+.\"  Uniontown, PA
+ellipse attrs1 fill wid 0.05556 ht 0.05556 at (6.24167,4.40760);
+" " at (447.92083,313.88443);
+.\"  Tyler, TX
+ellipse attrs1 fill wid 0.13889 ht 0.13889 at (4.07917,2.17384);
+" " at (292.22083,153.05370);
+.\"  Twin Falls, ID
+ellipse attrs1 fill wid 0.08333 ht 0.08333 at (1.41667,5.19460);
+" " at (100.52083,370.54797);
+.\"  Tuscaloosa, AL
+ellipse attrs1 fill wid 0.13889 ht 0.13889 at (5.15278,2.42828);
+" " at (369.52083,171.37350);
+.\"  Tupelo, MS
+ellipse attrs1 fill wid 0.08333 ht 0.08333 at (4.99444,2.73894);
+" " at (358.12083,193.74068);
+.\"  Tulsa, OK
+ellipse attrs1 fill wid 0.30556 ht 0.30556 at (3.99444,3.30108);
+" " at (286.12083,234.21464);
+.\"  Tucson, AZ
+ellipse attrs1 fill wid 0.29167 ht 0.29167 at (1.90278,2.13538);
+" " at (135.52083,150.28443);
+.\"  Trinidad, CO
+ellipse attrs1 fill wid 0.05556 ht 0.05556 at (2.80000,3.59990);
+" " at (200.12083,255.72975);
+.\"  Trenton, NJ
+ellipse attrs1 fill wid 0.15278 ht 0.15278 at (6.93056,4.50524);
+" " at (497.52083,320.91412);
+.\"  Traverse City, MI
+ellipse attrs1 fill wid 0.05556 ht 0.05556 at (5.42222,5.84549);
+" " at (388.92083,417.41256);
+.\"  Toronto, ON
+ellipse attrs1 fill wid 0.38889 ht 0.38889 at (6.29028,5.51709);
+" " at (451.42083,393.76725);
+.\"  Topeka, KS
+ellipse attrs1 fill wid 0.16667 ht 0.16667 at (4.02778,4.15612);
+" " at (288.52083,295.77766);
+.\"  Toledo, OH
+ellipse attrs1 fill wid 0.29167 ht 0.29167 at (5.71250,4.92536);
+" " at (409.82083,351.16308);
+.\"  Texarkana, TX
+ellipse attrs1 fill wid 0.08333 ht 0.08333 at (4.25278,2.49337);
+" " at (304.72083,176.05995);
+.\"  Terre Haute, IN
+ellipse attrs1 fill wid 0.12500 ht 0.12500 at (5.17500,4.28038);
+" " at (371.12083,304.72454);
+.\"  Tampa, FL
+ellipse attrs1 fill wid 0.26389 ht 0.26389 at (5.86389,0.87205);
+" " at (420.72083,59.32454);
+.\"  Tallahassee, FL
+ellipse attrs1 fill wid 0.13889 ht 0.13889 at (5.60972,1.61170);
+" " at (402.42083,112.57975);
+.\"  Tacoma, WA
+ellipse attrs1 fill wid 0.19444 ht 0.19444 at (0.31111,6.57923);
+" " at (20.92083,470.24172);
+.\"  Syracuse, NY
+ellipse attrs1 fill wid 0.20833 ht 0.20833 at (6.73889,5.33957);
+" " at (483.72083,380.98600);
+.\"  Swainsboro, GA
+ellipse attrs1 fill wid 0.04167 ht 0.04167 at (5.87917,2.24781);
+" " at (421.82083,158.37922);
+.\"  Sumter, SC
+ellipse attrs1 fill wid 0.08333 ht 0.08333 at (6.15556,2.63835);
+" " at (441.72083,186.49797);
+.\"  Stroudsburg, PA
+ellipse attrs1 fill wid 0.04167 ht 0.04167 at (6.87222,4.73009);
+" " at (493.32083,337.10370);
+.\"  Stockton, CA
+ellipse attrs1 fill wid 0.19444 ht 0.19444 at (0.46944,3.83363);
+" " at (32.32083,272.55839);
+.\"  Stevens Point, WI
+ellipse attrs1 fill wid 0.06944 ht 0.06944 at (4.87500,5.77449);
+" " at (349.52083,412.30006);
+.\"  Steubenville, OH
+ellipse attrs1 fill wid 0.08333 ht 0.08333 at (6.11806,4.54370);
+" " at (439.02083,323.68339);
+.\"  Sterling, CO
+ellipse attrs1 fill wid 0.05556 ht 0.05556 at (2.97917,4.62062);
+" " at (213.02083,329.22193);
+.\"  Staunton, VA
+ellipse attrs1 fill wid 0.06944 ht 0.06944 at (6.33333,3.88984);
+" " at (454.52083,276.60579);
+.\"  Springfield, OH
+ellipse attrs1 fill wid 0.13889 ht 0.13889 at (5.67500,4.41352);
+" " at (407.12083,314.31047);
+.\"  Springfield, MO
+ellipse attrs1 fill wid 0.18056 ht 0.18056 at (4.35833,3.61469);
+" " at (312.32083,256.79485);
+.\"  Springfield, MA
+ellipse attrs1 fill wid 0.19444 ht 0.19444 at (7.23333,5.05850);
+" " at (519.32083,360.74902);
+.\"  Springfield, IL
+ellipse attrs1 fill wid 0.15278 ht 0.15278 at (4.86389,4.37802);
+" " at (348.72083,311.75422);
+.\"  Spokane, WA
+ellipse attrs1 fill wid 0.20833 ht 0.20833 at (1.00833,6.70645);
+" " at (71.12083,479.40162);
+.\"  South Bend, IN
+ellipse attrs1 fill wid 0.16667 ht 0.16667 at (5.33611,4.93424);
+" " at (382.72083,351.80214);
+.\"  Sioux Falls, SD
+ellipse attrs1 fill wid 0.13889 ht 0.13889 at (3.88056,5.48454);
+" " at (277.92083,391.42402);
+.\"  Sioux City, IA
+ellipse attrs1 fill wid 0.13889 ht 0.13889 at (3.92778,5.17389);
+" " at (281.32083,369.05683);
+.\"  Shreveport, LA
+ellipse attrs1 fill wid 0.22222 ht 0.22222 at (4.29444,2.22118);
+" " at (307.72083,156.46204);
+.\"  Sherman, TX
+ellipse attrs1 fill wid 0.08333 ht 0.08333 at (3.89722,2.55550);
+" " at (279.12083,180.53339);
+.\"  Sheridan, WY
+ellipse attrs1 fill wid 0.05556 ht 0.05556 at (2.45972,5.85733);
+" " at (175.62083,418.26464);
+.\"  Seminole, OK
+ellipse attrs1 fill wid 0.04167 ht 0.04167 at (3.88750,3.02593);
+" " at (278.42083,214.40370);
+.\"  Selma, AL
+ellipse attrs1 fill wid 0.08333 ht 0.08333 at (5.22917,2.19455);
+" " at (375.02083,154.54485);
+.\"  Sedalia, MO
+ellipse attrs1 fill wid 0.06944 ht 0.06944 at (4.36667,4.05553);
+" " at (312.92083,288.53495);
+.\"  Seattle, WA
+ellipse attrs1 fill wid 0.34722 ht 0.34722 at (0.32500,6.68574);
+" " at (21.92083,477.91047);
+.\"  Scranton, PA
+ellipse attrs1 fill wid 0.15278 ht 0.15278 at (6.80556,4.85435);
+" " at (488.52083,346.05058);
+.\"  Scottsbluff, NE
+ellipse attrs1 fill wid 0.05556 ht 0.05556 at (2.91806,4.99045);
+" " at (208.62083,355.84954);
+.\"  Schenectady, NY
+ellipse attrs1 fill wid 0.12500 ht 0.12500 at (7.04444,5.27152);
+" " at (505.72083,376.08652);
+.\"  Savannah, GA
+ellipse attrs1 fill wid 0.19444 ht 0.19444 at (6.05278,2.09396);
+" " at (434.32083,147.30214);
+.\"  Sault Sainte Marie, MI
+ellipse attrs1 fill wid 0.05556 ht 0.05556 at (5.60000,6.35734);
+" " at (401.72083,454.26516);
+.\"  Sarasota, FL
+ellipse attrs1 fill wid 0.11111 ht 0.11111 at (5.85278,0.69157);
+" " at (419.92083,46.33027);
+.\"  Santa Rosa, CA
+ellipse attrs1 fill wid 0.13889 ht 0.13889 at (0.27083,3.97564);
+" " at (18.02083,282.78339);
+.\"  Santa Fe, NM
+ellipse attrs1 fill wid 0.11111 ht 0.11111 at (2.60000,3.15906);
+" " at (185.72083,223.98964);
+.\"  Santa Barbara, CA
+ellipse attrs1 fill wid 0.13889 ht 0.13889 at (0.69028,2.78628);
+" " at (48.22083,197.14902);
+.\"  Santa Ana, CA
+ellipse attrs1 fill wid 0.22222 ht 0.22222 at (0.94444,2.59101);
+" " at (66.52083,183.08964);
+.\"  San Jose, CA
+ellipse attrs1 fill wid 0.40278 ht 0.40278 at (0.38750,3.65020);
+" " at (26.42083,259.35110);
+.\"  San Francisco, CA
+ellipse attrs1 fill wid 0.41667 ht 0.41667 at (0.31250,3.78037);
+" " at (21.02083,268.72402);
+.\"  Sandusky, OH
+ellipse attrs1 fill wid 0.08333 ht 0.08333 at (5.82778,4.86619);
+" " at (418.12083,346.90266);
+.\"  San Diego, CA
+ellipse attrs1 fill wid 0.47222 ht 0.47222 at (1.04444,2.28035);
+" " at (73.72083,160.72245);
+.\"  San Bernardino, CA
+ellipse attrs1 fill wid 0.16667 ht 0.16667 at (1.02222,2.69456);
+" " at (72.12083,190.54537);
+.\"  San Antonio, TX
+ellipse attrs1 fill wid 0.44444 ht 0.44444 at (3.63472,1.30697);
+" " at (260.22083,90.63860);
+.\"  San Angelo, TX
+ellipse attrs1 fill wid 0.13889 ht 0.13889 at (3.36528,1.91053);
+" " at (240.82083,134.09485);
+.\"  Salt Lake City, UT
+ellipse attrs1 fill wid 0.20833 ht 0.20833 at (1.77639,4.66204);
+" " at (126.42083,332.20422);
+.\"  Salisbury, MD
+ellipse attrs1 fill wid 0.06944 ht 0.06944 at (6.81528,3.95493);
+" " at (489.22083,281.29225);
+.\"  Salinas, CA
+ellipse attrs1 fill wid 0.13889 ht 0.13889 at (0.41944,3.45197);
+" " at (28.72083,245.07870);
+.\"  Salina, KS
+ellipse attrs1 fill wid 0.09722 ht 0.09722 at (3.75833,4.09399);
+" " at (269.12083,291.30422);
+.\"  Salida, CO
+ellipse attrs1 fill wid 0.11111 ht 0.11111 at (2.59306,4.00227);
+" " at (185.22083,284.70058);
+.\"  Salem, OR
+ellipse attrs1 fill wid 0.15278 ht 0.15278 at (0.22778,5.89875);
+" " at (14.92083,421.24693);
+.\"  Saint Paul, MN
+ellipse attrs1 fill wid 0.26389 ht 0.26389 at (4.38472,5.90171);
+" " at (314.22083,421.45995);
+.\"  Saint Louis, MO
+ellipse attrs1 fill wid 0.33333 ht 0.33333 at (4.78889,4.02890);
+" " at (343.32083,286.61777);
+.\"  Saint Joseph, MO
+ellipse attrs1 fill wid 0.13889 ht 0.13889 at (4.14306,4.36914);
+" " at (296.82083,311.11516);
+.\"  Saint Joseph, MI
+ellipse attrs1 fill wid 0.05556 ht 0.05556 at (5.30417,5.05850);
+" " at (380.42083,360.74902);
+.\"  Saint Johnsbury, VT
+ellipse attrs1 fill wid 0.04167 ht 0.04167 at (7.31250,5.74490);
+" " at (525.02083,410.16985);
+.\"  Saint Cloud, MN
+ellipse attrs1 fill wid 0.09722 ht 0.09722 at (4.23611,6.08514);
+" " at (303.52083,434.66725);
+.\"  Saint Augustine, FL
+ellipse attrs1 fill wid 0.05556 ht 0.05556 at (6.02083,1.44602);
+" " at (432.02083,100.65058);
+.\"  Saginaw, MI
+ellipse attrs1 fill wid 0.13889 ht 0.13889 at (5.65694,5.45200);
+" " at (405.82083,389.08079);
+.\"  Sacramento, CA
+ellipse attrs1 fill wid 0.26389 ht 0.26389 at (0.44167,4.02002);
+" " at (30.32083,285.97870);
+.\"  Rutland, VT
+ellipse attrs1 fill wid 0.06944 ht 0.06944 at (7.18056,5.50525);
+" " at (515.52083,392.91516);
+.\"  Roswell, NM
+ellipse attrs1 fill wid 0.09722 ht 0.09722 at (2.79722,2.48450);
+" " at (199.92083,175.42089);
+.\"  Rocky Mount, NC
+ellipse attrs1 fill wid 0.09722 ht 0.09722 at (6.50972,3.23599);
+" " at (467.22083,229.52818);
+.\"  Rock Springs, WY
+ellipse attrs1 fill wid 0.06944 ht 0.06944 at (2.14444,4.90761);
+" " at (152.92083,349.88495);
+.\"  Rockford, IL
+ellipse attrs1 fill wid 0.18056 ht 0.18056 at (4.94028,5.10880);
+" " at (354.22083,364.37037);
+.\"  Rochester, NY
+ellipse attrs1 fill wid 0.25000 ht 0.25000 at (6.53611,5.37211);
+" " at (469.12083,383.32922);
+.\"  Rochester, MN
+ellipse attrs1 fill wid 0.12500 ht 0.12500 at (4.47361,5.62656);
+" " at (320.62083,401.64902);
+.\"  Roanoke, VA
+ellipse attrs1 fill wid 0.15278 ht 0.15278 at (6.21250,3.62948);
+" " at (445.82083,257.85995);
+.\"  Richmond, VA
+ellipse attrs1 fill wid 0.23611 ht 0.23611 at (6.55833,3.70937);
+" " at (470.72083,263.61152);
+.\"  Richmond, IN
+ellipse attrs1 fill wid 0.09722 ht 0.09722 at (5.52500,4.38689);
+" " at (396.32083,312.39329);
+.\"  Richfield, UT
+ellipse attrs1 fill wid 0.04167 ht 0.04167 at (1.74722,4.07328);
+" " at (124.32083,289.81308);
+.\"  Rhinelander, WI
+ellipse attrs1 fill wid 0.04167 ht 0.04167 at (4.89583,6.10585);
+" " at (351.02083,436.15839);
+.\"  Reno, NV
+ellipse attrs1 fill wid 0.15278 ht 0.15278 at (0.67500,4.29518);
+" " at (47.12083,305.78964);
+.\"  Regina, SK
+ellipse attrs1 fill wid 0.20833 ht 0.20833 at (2.78056,7.52007);
+" " at (198.72083,537.98235);
+.\"  Red Bluff, CA
+ellipse attrs1 fill wid 0.05556 ht 0.05556 at (0.33750,4.49044);
+" " at (22.82083,319.84902);
+.\"  Reading, PA
+ellipse attrs1 fill wid 0.13889 ht 0.13889 at (6.76944,4.53482);
+" " at (485.92083,323.04433);
+.\"  Ravenna, OH
+ellipse attrs1 fill wid 0.05556 ht 0.05556 at (6.03194,4.78039);
+" " at (432.82083,340.72506);
+]
+.PE
+.\"  restore point size and font
+.ps \n(.S
+.ft \n(DF
