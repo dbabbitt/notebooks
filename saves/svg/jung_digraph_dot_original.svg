@@ -12,15 +12,15 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="785.26666pt"
-   height="565pt"
-   viewBox="0 0 784.98987 565.34211"
+   width="2420pt"
+   height="1249.9846pt"
+   viewBox="0 0 2420.0303 1249.9846"
    version="1.1"
-   id="svg22937"
-   sodipodi:docname="jung_digraph_neato.svg"
+   id="svg24997"
+   sodipodi:docname="jung_digraph_dot.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <metadata
-     id="metadata22943">
+     id="metadata25003">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -32,7 +32,7 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs22941" />
+     id="defs25001" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -44,46 +44,46 @@
      inkscape:pageshadow="2"
      inkscape:window-width="1832"
      inkscape:window-height="1057"
-     id="namedview22939"
+     id="namedview24999"
      showgrid="false"
      fit-margin-top="10"
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     inkscape:zoom="1.1787611"
-     inkscape:cx="523.51111"
-     inkscape:cy="376.66667"
+     inkscape:zoom="0.4175"
+     inkscape:cx="1613.3333"
+     inkscape:cy="833.32308"
      inkscape:window-x="1446"
      inkscape:window-y="174"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg22937" />
+     inkscape:current-layer="svg24997" />
   <g
      id="graph0"
      class="graph"
-     transform="translate(13.639165,551.33605)">
+     transform="translate(14.000125,1235.9924)">
     <polygon
        stroke="transparent"
-       points="761.73,-541.33 761.73,4 -4,4 -4,-541.33 "
-       id="polygon21919"
+       points="2396.03,-1226 2396.03,4 -4,4 -4,-1226 "
+       id="polygon23979"
        style="fill:#ffffff" />
     <!-- Carl Jung -->
     <g
        id="node1"
        class="node">
       <title
-         id="title21921">Carl Jung</title>
+         id="title23981">Carl Jung</title>
       <ellipse
-         cx="501.04001"
-         cy="-195.67999"
+         cx="1871.85"
+         cy="-369"
          rx="45"
          ry="18"
-         id="ellipse21923"
+         id="ellipse23983"
          style="fill:none;stroke:#000000" />
       <text
-         x="501.04001"
-         y="-191.98"
+         x="1871.85"
+         y="-365.29999"
          font-size="14.00"
-         id="text21925"
+         id="text23985"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Carl Jung</text>
     </g>
     <!-- Gaston Bachelard -->
@@ -91,19 +91,19 @@
        id="node2"
        class="node">
       <title
-         id="title21928">Gaston Bachelard</title>
+         id="title23988">Gaston Bachelard</title>
       <ellipse
-         cx="536.87"
-         cy="-278.89001"
+         cx="2073.8501"
+         cy="-623"
          rx="75.5"
          ry="18"
-         id="ellipse21930"
+         id="ellipse23990"
          style="fill:none;stroke:#000000" />
       <text
-         x="536.87"
-         y="-275.19"
+         x="2073.8501"
+         y="-619.29999"
          font-size="14.00"
-         id="text21932"
+         id="text23992"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Gaston Bachelard</text>
     </g>
     <!-- Carl Jung&#45;&gt;Gaston Bachelard -->
@@ -111,15 +111,15 @@
        id="edge1"
        class="edge">
       <title
-         id="title21935">Carl Jung-&gt;Gaston Bachelard</title>
+         id="title23995">Carl Jung-&gt;Gaston Bachelard</title>
       <path
-         d="m 508.81,-213.74 c 4.74,-11.01 10.9,-25.3 16.24,-37.7"
-         id="path21937"
+         d="m 1873.89,-387 c 3.43,-42.17 18,-148.03 78.96,-204 11.46,-10.53 26,-17.66 40.97,-22.48"
+         id="path23997"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="528.37,-250.3 521.94,-253.07 529.11,-260.87 "
-         id="polygon21939"
+         points="1995.05,-610.19 1993.12,-616.92 2003.69,-616.32 "
+         id="polygon23999"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Joseph Campbell -->
@@ -127,19 +127,19 @@
        id="node3"
        class="node">
       <title
-         id="title21942">Joseph Campbell</title>
+         id="title24002">Joseph Campbell</title>
       <ellipse
-         cx="610.75"
-         cy="-219.78"
+         cx="2073.8501"
+         cy="-531"
          rx="73.5"
          ry="18"
-         id="ellipse21944"
+         id="ellipse24004"
          style="fill:none;stroke:#000000" />
       <text
-         x="610.75"
-         y="-216.08"
+         x="2073.8501"
+         y="-527.29999"
          font-size="14.00"
-         id="text21946"
+         id="text24006"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Joseph Campbell</text>
     </g>
     <!-- Carl Jung&#45;&gt;Joseph Campbell -->
@@ -147,15 +147,15 @@
        id="edge2"
        class="edge">
       <title
-         id="title21949">Carl Jung-&gt;Joseph Campbell</title>
+         id="title24009">Carl Jung-&gt;Joseph Campbell</title>
       <path
-         d="m 540.65,-204.38 c 1.68,-0.37 3.39,-0.75 5.12,-1.13"
-         id="path21951"
+         d="m 1878.32,-387.08 c 9.88,-29.36 33.54,-87.12 74.53,-116.92 11.99,-8.72 26.32,-14.7 40.82,-18.78"
+         id="path24011"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="546.72,-202.13 545.22,-208.97 555.73,-207.7 "
-         id="polygon21953"
+         points="1994.87,-519.47 1993.16,-526.26 2003.71,-525.31 "
+         id="polygon24013"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Alan Watts -->
@@ -163,19 +163,19 @@
        id="node4"
        class="node">
       <title
-         id="title21956">Alan Watts</title>
+         id="title24016">Alan Watts</title>
       <ellipse
-         cx="573.70001"
-         cy="-239.95"
+         cx="2311.4399"
+         cy="-697"
          rx="51.5"
          ry="18"
-         id="ellipse21958"
+         id="ellipse24018"
          style="fill:none;stroke:#000000" />
       <text
-         x="573.70001"
-         y="-236.25"
+         x="2311.4399"
+         y="-693.29999"
          font-size="14.00"
-         id="text21960"
+         id="text24020"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Alan Watts</text>
     </g>
     <!-- Carl Jung&#45;&gt;Alan Watts -->
@@ -183,15 +183,15 @@
        id="edge3"
        class="edge">
       <title
-         id="title21963">Carl Jung-&gt;Alan Watts</title>
+         id="title24023">Carl Jung-&gt;Alan Watts</title>
       <path
-         d="m 526.04,-210.92 c 4.2,-2.55 8.61,-5.24 13,-7.91"
-         id="path21965"
+         d="m 1874.74,-387.02 c 5.06,-38.24 22.51,-127.55 78.11,-170.98 85.8,-67.02 154.47,26.75 242,-38 29.4,-21.75 8.56,-49.81 36,-74 7.23,-6.37 16.02,-11.26 25.1,-14.99"
+         id="path24025"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="541.19,-216.04 537.55,-222.02 547.91,-224.24 "
-         id="polygon21967"
+         points="2257.27,-681.75 2254.86,-688.32 2265.45,-688.48 "
+         id="polygon24027"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Philip K. Dick -->
@@ -199,19 +199,19 @@
        id="node5"
        class="node">
       <title
-         id="title21970">Philip K. Dick</title>
+         id="title24030">Philip K. Dick</title>
       <ellipse
-         cx="549.01001"
-         cy="-260.23999"
+         cx="2073.8501"
+         cy="-477"
          rx="61.990002"
          ry="18"
-         id="ellipse21972"
+         id="ellipse24032"
          style="fill:none;stroke:#000000" />
       <text
-         x="549.01001"
-         y="-256.54001"
+         x="2073.8501"
+         y="-473.29999"
          font-size="14.00"
-         id="text21974"
+         id="text24034"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Philip K. Dick</text>
     </g>
     <!-- Carl Jung&#45;&gt;Philip K. Dick -->
@@ -219,15 +219,15 @@
        id="edge4"
        class="edge">
       <title
-         id="title21977">Carl Jung-&gt;Philip K. Dick</title>
+         id="title24037">Carl Jung-&gt;Philip K. Dick</title>
       <path
-         d="m 513.89,-212.98 c 4.87,-6.55 10.52,-14.16 15.85,-21.33"
-         id="path21979"
+         d="m 1885.17,-386.43 c 14.17,-18.67 39.16,-47.75 67.68,-63.57 16.07,-8.91 34.89,-14.89 52.81,-18.89"
+         id="path24039"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="532.63,-232.33 527.01,-236.5 535.79,-242.44 "
-         id="polygon21981"
+         points="2006.41,-465.47 2004.99,-472.32 2015.49,-470.91 "
+         id="polygon24041"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Hermann Hesse -->
@@ -235,19 +235,19 @@
        id="node6"
        class="node">
       <title
-         id="title21984">Hermann Hesse</title>
+         id="title24044">Hermann Hesse</title>
       <ellipse
-         cx="547.51001"
-         cy="-221.23"
+         cx="2073.8501"
+         cy="-423"
          rx="67.690002"
          ry="18"
-         id="ellipse21986"
+         id="ellipse24046"
          style="fill:none;stroke:#000000" />
       <text
-         x="547.51001"
-         y="-217.53"
+         x="2073.8501"
+         y="-419.29999"
          font-size="14.00"
-         id="text21988"
+         id="text24048"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Hermann Hesse</text>
     </g>
     <!-- Carl Jung&#45;&gt;Hermann Hesse -->
@@ -255,15 +255,15 @@
        id="edge5"
        class="edge">
       <title
-         id="title21991">Carl Jung-&gt;Hermann Hesse</title>
+         id="title24051">Carl Jung-&gt;Hermann Hesse</title>
       <path
-         d="m 527.53,-210.25 c 0.08,-0.04 0.16,-0.09 0.24,-0.13"
-         id="path21993"
+         d="m 1905.69,-380.95 c 14.37,-5 31.49,-10.66 47.16,-15.05 18.21,-5.11 38.19,-9.91 56.53,-14.02"
+         id="path24053"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="520.94,-202.63 517.57,-208.76 528.02,-210.51 "
-         id="polygon21995"
+         points="2010.37,-406.65 2008.86,-413.49 2019.38,-412.22 "
+         id="polygon24055"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- James Hillman -->
@@ -271,19 +271,19 @@
        id="node7"
        class="node">
       <title
-         id="title21998">James Hillman</title>
+         id="title24058">James Hillman</title>
       <ellipse
-         cx="571.88"
-         cy="-193.53"
+         cx="2073.8501"
+         cy="-369"
          rx="62.5"
          ry="18"
-         id="ellipse22000"
+         id="ellipse24060"
          style="fill:none;stroke:#000000" />
       <text
-         x="571.88"
-         y="-189.83"
+         x="2073.8501"
+         y="-365.29999"
          font-size="14.00"
-         id="text22002"
+         id="text24062"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">James Hillman</text>
     </g>
     <!-- Carl Jung&#45;&gt;James Hillman -->
@@ -291,15 +291,15 @@
        id="edge6"
        class="edge">
       <title
-         id="title22005">Carl Jung-&gt;James Hillman</title>
+         id="title24065">Carl Jung-&gt;James Hillman</title>
       <path
-         d="m 546.3,-194.31 c 0.06,0.01 0.11,0.01 0.16,0.01"
-         id="path22007"
+         d="m 1917.23,-369 c 24.6,0 55.78,0 83.76,0"
+         id="path24067"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="536.52,-191.11 536.74,-198.1 546.63,-194.3 "
-         id="polygon22009"
+         points="2001.14,-365.5 2001.14,-372.5 2011.14,-369 "
+         id="polygon24069"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Terence McKenna -->
@@ -307,19 +307,19 @@
        id="node8"
        class="node">
       <title
-         id="title22012">Terence McKenna</title>
+         id="title24072">Terence McKenna</title>
       <ellipse
-         cx="550.59998"
-         cy="-175.49001"
+         cx="2073.8501"
+         cy="-315"
          rx="77.5"
          ry="18"
-         id="ellipse22014"
+         id="ellipse24074"
          style="fill:none;stroke:#000000" />
       <text
-         x="550.59998"
-         y="-171.78999"
+         x="2073.8501"
+         y="-311.29999"
          font-size="14.00"
-         id="text22016"
+         id="text24076"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Terence McKenna</text>
     </g>
     <!-- Carl Jung&#45;&gt;Terence McKenna -->
@@ -327,15 +327,15 @@
        id="edge7"
        class="edge">
       <title
-         id="title22019">Carl Jung-&gt;Terence McKenna</title>
+         id="title24079">Carl Jung-&gt;Terence McKenna</title>
       <path
-         d="m 532.7,-182.78 c 0.08,0.03 0.16,0.06 0.23,0.09"
-         id="path22021"
+         d="m 1905.69,-357.05 c 14.37,5 31.49,10.66 47.16,15.05 16.75,4.7 35,9.14 52.1,13.02"
+         id="path24081"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="522.58,-183.13 525.22,-189.61 533.16,-182.6 "
-         id="polygon22023"
+         points="2004.34,-325.53 2005.86,-332.36 2014.86,-326.77 "
+         id="polygon24083"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Erich Neumann (psychologist) -->
@@ -343,19 +343,19 @@
        id="node9"
        class="node">
       <title
-         id="title22026">Erich Neumann (psychologist)</title>
+         id="title24086">Erich Neumann (psychologist)</title>
       <ellipse
-         cx="551.72998"
-         cy="-104.71"
+         cx="2073.8501"
+         cy="-223"
          rx="121"
          ry="18"
-         id="ellipse22028"
+         id="ellipse24088"
          style="fill:none;stroke:#000000" />
       <text
-         x="551.72998"
-         y="-101.01"
+         x="2073.8501"
+         y="-219.3"
          font-size="14.00"
-         id="text22030"
+         id="text24090"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Erich Neumann (psychologist)</text>
     </g>
     <!-- Carl Jung&#45;&gt;Erich Neumann (psychologist) -->
@@ -363,15 +363,15 @@
        id="edge8"
        class="edge">
       <title
-         id="title22033">Carl Jung-&gt;Erich Neumann (psychologist)</title>
+         id="title24093">Carl Jung-&gt;Erich Neumann (psychologist)</title>
       <path
-         d="m 511.05,-177.71 c 7.31,13.12 17.35,31.13 25.62,45.98"
-         id="path22035"
+         d="m 1880.57,-350.99 c 11.82,25.35 36.79,71.21 72.28,95.99 8.86,6.19 18.86,11.19 29.2,15.21"
+         id="path24095"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="533.63,-129.99 539.75,-133.4 541.56,-122.96 "
-         id="polygon22037"
+         points="1981.03,-236.43 1983.39,-243.02 1991.63,-236.35 "
+         id="polygon24097"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Jordan Peterson -->
@@ -379,19 +379,19 @@
        id="node10"
        class="node">
       <title
-         id="title22040">Jordan Peterson</title>
+         id="title24100">Jordan Peterson</title>
       <ellipse
-         cx="574.28998"
-         cy="-149.32001"
+         cx="2311.4399"
+         cy="-265"
          rx="69.589996"
          ry="18"
-         id="ellipse22042"
+         id="ellipse24102"
          style="fill:none;stroke:#000000" />
       <text
-         x="574.28998"
-         y="-145.62"
+         x="2311.4399"
+         y="-261.29999"
          font-size="14.00"
-         id="text22044"
+         id="text24104"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Jordan Peterson</text>
     </g>
     <!-- Carl Jung&#45;&gt;Jordan Peterson -->
@@ -399,15 +399,15 @@
        id="edge9"
        class="edge">
       <title
-         id="title22047">Carl Jung-&gt;Jordan Peterson</title>
+         id="title24107">Carl Jung-&gt;Jordan Peterson</title>
       <path
-         d="m 525.43,-180.24 c 4.36,2.76 8.99,5.68 13.58,8.59"
-         id="path22049"
+         d="m 1884.24,-351.4 c 13.68,19.41 38.57,49.7 68.61,63.4 92.44,42.16 212.47,39.89 287.26,32.72"
+         id="path24109"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="537.42,-168.52 541.16,-174.43 547.74,-166.12 "
-         id="polygon22051"
+         points="2240.76,-251.83 2240.06,-258.79 2250.36,-256.32 "
+         id="polygon24111"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Ross Nichols -->
@@ -415,19 +415,19 @@
        id="node11"
        class="node">
       <title
-         id="title22054">Ross Nichols</title>
+         id="title24114">Ross Nichols</title>
       <ellipse
-         cx="549.25"
-         cy="-141.67999"
+         cx="2073.8501"
+         cy="-169"
          rx="60"
          ry="18"
-         id="ellipse22056"
+         id="ellipse24116"
          style="fill:none;stroke:#000000" />
       <text
-         x="549.25"
-         y="-137.98"
+         x="2073.8501"
+         y="-165.3"
          font-size="14.00"
-         id="text22058"
+         id="text24118"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Ross Nichols</text>
     </g>
     <!-- Carl Jung&#45;&gt;Ross Nichols -->
@@ -435,15 +435,15 @@
        id="edge10"
        class="edge">
       <title
-         id="title22061">Carl Jung-&gt;Ross Nichols</title>
+         id="title24121">Carl Jung-&gt;Ross Nichols</title>
       <path
-         d="m 516.29,-178.6 c 3.36,3.77 6.99,7.83 10.57,11.84"
-         id="path22063"
+         d="m 1875.81,-350.85 c 6.8,35.55 26.97,114.41 77.04,154.85 14.5,11.72 33.08,18.58 51.25,22.54"
+         id="path24123"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="524.32,-164.34 529.55,-169 533.59,-159.21 "
-         id="polygon22065"
+         points="2003.65,-169.98 2004.97,-176.86 2014.13,-171.54 "
+         id="polygon24125"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Robert Anton Wilson -->
@@ -451,19 +451,19 @@
        id="node12"
        class="node">
       <title
-         id="title22068">Robert Anton Wilson</title>
+         id="title24128">Robert Anton Wilson</title>
       <ellipse
-         cx="528.40002"
-         cy="-114.26"
+         cx="2073.8501"
+         cy="-115"
          rx="89.080002"
          ry="18"
-         id="ellipse22070"
+         id="ellipse24130"
          style="fill:none;stroke:#000000" />
       <text
-         x="528.40002"
-         y="-110.56"
+         x="2073.8501"
+         y="-111.3"
          font-size="14.00"
-         id="text22072"
+         id="text24132"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Robert Anton Wilson</text>
     </g>
     <!-- Carl Jung&#45;&gt;Robert Anton Wilson -->
@@ -471,15 +471,15 @@
        id="edge11"
        class="edge">
       <title
-         id="title22075">Carl Jung-&gt;Robert Anton Wilson</title>
+         id="title24135">Carl Jung-&gt;Robert Anton Wilson</title>
       <path
-         d="m 507.11,-177.61 c 3.51,10.44 7.99,23.78 11.94,35.53"
-         id="path22077"
+         d="m 1873.58,-350.77 c 2.78,43.24 16.02,152.55 79.27,208.77 8.24,7.33 18.05,12.8 28.45,16.87"
+         id="path24137"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="515.84,-140.64 522.48,-142.87 522.34,-132.28 "
-         id="polygon22079"
+         points="1980.4,-121.74 1982.69,-128.36 1991,-121.78 "
+         id="polygon24139"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Joseph Campbell&#45;&gt;Alan Watts -->
@@ -487,15 +487,15 @@
        id="edge12"
        class="edge">
       <title
-         id="title22082">Joseph Campbell-&gt;Alan Watts</title>
+         id="title24142">Joseph Campbell-&gt;Alan Watts</title>
       <path
-         d="m 580.5,-236.25 c -0.07,-0.03 -0.13,-0.07 -0.19,-0.1"
-         id="path22084"
+         d="m 2142.93,-537.17 c 18.73,-4.66 37.76,-12.55 51.92,-25.83 36.59,-34.33 0.56,-71.48 36,-107 6.8,-6.82 15.4,-11.92 24.4,-15.74"
+         id="path24144"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="590.58,-234.74 587.23,-228.59 580.12,-236.45 "
-         id="polygon22086"
+         points="2256.57,-682.49 2254.13,-689.05 2264.73,-689.26 "
+         id="polygon24146"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- George Lucas -->
@@ -503,19 +503,19 @@
        id="node13"
        class="node">
       <title
-         id="title22089">George Lucas</title>
+         id="title24149">George Lucas</title>
       <ellipse
-         cx="676.37"
-         cy="-163.14"
+         cx="2311.4399"
+         cy="-373"
          rx="61.990002"
          ry="18"
-         id="ellipse22091"
+         id="ellipse24151"
          style="fill:none;stroke:#000000" />
       <text
-         x="676.37"
-         y="-159.44"
+         x="2311.4399"
+         y="-369.29999"
          font-size="14.00"
-         id="text22093"
+         id="text24153"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">George Lucas</text>
     </g>
     <!-- Joseph Campbell&#45;&gt;George Lucas -->
@@ -523,15 +523,15 @@
        id="edge13"
        class="edge">
       <title
-         id="title22096">Joseph Campbell-&gt;George Lucas</title>
+         id="title24156">Joseph Campbell-&gt;George Lucas</title>
       <path
-         d="m 631.16,-202.17 c 5.48,4.73 11.51,9.93 17.32,14.95"
-         id="path22098"
+         d="m 2145.83,-527.15 c 17.71,4.01 35.48,11.05 49.02,23.15 36.46,32.6 1.3,69.52 36,104 5.33,5.3 11.75,9.57 18.59,12.99"
+         id="path24158"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="646.35,-184.43 650.93,-189.73 656.21,-180.55 "
-         id="polygon22100"
+         points="2248.41,-383.64 2251.22,-390.05 2258.98,-382.84 "
+         id="polygon24160"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Jim Morrison -->
@@ -539,19 +539,19 @@
        id="node14"
        class="node">
       <title
-         id="title22103">Jim Morrison</title>
+         id="title24163">Jim Morrison</title>
       <ellipse
-         cx="660.72998"
-         cy="-133.33"
+         cx="2311.4399"
+         cy="-319"
          rx="59.290001"
          ry="18"
-         id="ellipse22105"
+         id="ellipse24165"
          style="fill:none;stroke:#000000" />
       <text
-         x="660.72998"
-         y="-129.63"
+         x="2311.4399"
+         y="-315.29999"
          font-size="14.00"
-         id="text22107"
+         id="text24167"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Jim Morrison</text>
     </g>
     <!-- Joseph Campbell&#45;&gt;Jim Morrison -->
@@ -559,15 +559,15 @@
        id="edge14"
        class="edge">
       <title
-         id="title22110">Joseph Campbell-&gt;Jim Morrison</title>
+         id="title24170">Joseph Campbell-&gt;Jim Morrison</title>
       <path
-         d="m 621.11,-201.87 c 6.97,12.06 16.28,28.17 24.13,41.74"
-         id="path22112"
+         d="m 2146.74,-528.11 c 17.71,4.01 35.25,11.29 48.11,24.11 50.99,50.86 -12.24,104.52 36,158 5.36,5.94 12.07,10.58 19.32,14.19"
+         id="path24172"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="642.35,-158.13 648.41,-161.63 650.39,-151.22 "
-         id="polygon22114"
+         points="2249,-328.5 2251.77,-334.93 2259.57,-327.75 "
+         id="polygon24174"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Christopher Vogler -->
@@ -575,19 +575,19 @@
        id="node15"
        class="node">
       <title
-         id="title22117">Christopher Vogler</title>
+         id="title24177">Christopher Vogler</title>
       <ellipse
-         cx="640.71997"
-         cy="-316.23001"
+         cx="2311.4399"
+         cy="-643"
          rx="80.690002"
          ry="18"
-         id="ellipse22119"
+         id="ellipse24179"
          style="fill:none;stroke:#000000" />
       <text
-         x="640.71997"
-         y="-312.53"
+         x="2311.4399"
+         y="-639.29999"
          font-size="14.00"
-         id="text22121"
+         id="text24181"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Christopher Vogler</text>
     </g>
     <!-- Joseph Campbell&#45;&gt;Christopher Vogler -->
@@ -595,15 +595,15 @@
        id="edge15"
        class="edge">
       <title
-         id="title22124">Joseph Campbell-&gt;Christopher Vogler</title>
+         id="title24184">Joseph Campbell-&gt;Christopher Vogler</title>
       <path
-         d="m 616.39,-237.92 c 4.44,-14.28 10.69,-34.42 15.75,-50.7"
-         id="path22126"
+         d="m 2139.27,-539.36 c 19.14,-4.71 39.31,-12.09 55.58,-23.64 23.21,-16.48 13.34,-35.75 36,-53 4.76,-3.62 10.03,-6.78 15.54,-9.52"
+         id="path24186"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="635.49,-287.58 628.8,-289.66 635.11,-298.17 "
-         id="polygon22128"
+         points="2248.14,-622.47 2245.27,-628.86 2255.82,-629.76 "
+         id="polygon24188"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Dan Harmon -->
@@ -611,19 +611,19 @@
        id="node16"
        class="node">
       <title
-         id="title22131">Dan Harmon</title>
+         id="title24191">Dan Harmon</title>
       <ellipse
-         cx="661.28998"
-         cy="-294.57999"
+         cx="2311.4399"
+         cy="-589"
          rx="57.389999"
          ry="18"
-         id="ellipse22133"
+         id="ellipse24193"
          style="fill:none;stroke:#000000" />
       <text
-         x="661.28998"
-         y="-290.88"
+         x="2311.4399"
+         y="-585.29999"
          font-size="14.00"
-         id="text22135"
+         id="text24195"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Dan Harmon</text>
     </g>
     <!-- Joseph Campbell&#45;&gt;Dan Harmon -->
@@ -631,15 +631,15 @@
        id="edge16"
        class="edge">
       <title
-         id="title22138">Joseph Campbell-&gt;Dan Harmon</title>
+         id="title24198">Joseph Campbell-&gt;Dan Harmon</title>
       <path
-         d="m 622.99,-237.89 c 6.19,-9.16 13.82,-20.45 20.63,-30.54"
-         id="path22140"
+         d="m 2126.26,-543.66 c 38.28,-9.42 90.44,-22.26 129.49,-31.88"
+         id="path24200"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="646.65,-266.65 640.85,-270.57 649.35,-276.9 "
-         id="polygon22142"
+         points="2257.01,-572.24 2255.33,-579.04 2265.88,-578.03 "
+         id="polygon24202"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Senses Fail -->
@@ -647,19 +647,19 @@
        id="node17"
        class="node">
       <title
-         id="title22145">Senses Fail</title>
+         id="title24205">Senses Fail</title>
       <ellipse
-         cx="677.19"
-         cy="-266.60001"
+         cx="2311.4399"
+         cy="-535"
          rx="52"
          ry="18"
-         id="ellipse22147"
+         id="ellipse24207"
          style="fill:none;stroke:#000000" />
       <text
-         x="677.19"
-         y="-262.89999"
+         x="2311.4399"
+         y="-531.29999"
          font-size="14.00"
-         id="text22149"
+         id="text24209"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Senses Fail</text>
     </g>
     <!-- Joseph Campbell&#45;&gt;Senses Fail -->
@@ -667,15 +667,15 @@
        id="edge17"
        class="edge">
       <title
-         id="title22152">Joseph Campbell-&gt;Senses Fail</title>
+         id="title24212">Joseph Campbell-&gt;Senses Fail</title>
       <path
-         d="m 635.11,-236.95 c 3.5,-2.46 7.14,-5.03 10.76,-7.58"
-         id="path22154"
+         d="m 2147.45,-532.23 c 32.56,-0.56 70.54,-1.2 101.64,-1.73"
+         id="path24214"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="648,-241.75 643.97,-247.47 654.16,-250.37 "
-         id="polygon22156"
+         points="2249.42,-530.46 2249.3,-537.46 2259.36,-534.13 "
+         id="polygon24216"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Chuck Palahniuk -->
@@ -683,19 +683,19 @@
        id="node18"
        class="node">
       <title
-         id="title22159">Chuck Palahniuk</title>
+         id="title24219">Chuck Palahniuk</title>
       <ellipse
-         cx="686.22998"
-         cy="-232.95"
+         cx="2311.4399"
+         cy="-481"
          rx="71.5"
          ry="18"
-         id="ellipse22161"
+         id="ellipse24221"
          style="fill:none;stroke:#000000" />
       <text
-         x="686.22998"
-         y="-229.25"
+         x="2311.4399"
+         y="-477.29999"
          font-size="14.00"
-         id="text22163"
+         id="text24223"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Chuck Palahniuk</text>
     </g>
     <!-- Joseph Campbell&#45;&gt;Chuck Palahniuk -->
@@ -703,15 +703,15 @@
        id="edge18"
        class="edge">
       <title
-         id="title22166">Joseph Campbell-&gt;Chuck Palahniuk</title>
+         id="title24226">Joseph Campbell-&gt;Chuck Palahniuk</title>
       <path
-         d="m 670.96,-230.29 c 0.07,-0.01 0.14,-0.02 0.21,-0.03"
-         id="path22168"
+         d="m 2130.08,-519.28 c 34.69,7.36 79.56,16.89 115.88,24.59"
+         id="path24228"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="662.13,-225.19 660.92,-232.09 671.38,-230.36 "
-         id="polygon22170"
+         points="2245.45,-491.22 2246.9,-498.06 2255.96,-492.56 "
+         id="polygon24230"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Dave Carter -->
@@ -719,19 +719,19 @@
        id="node19"
        class="node">
       <title
-         id="title22173">Dave Carter</title>
+         id="title24233">Dave Carter</title>
       <ellipse
-         cx="685.76001"
-         cy="-196.86"
+         cx="2311.4399"
+         cy="-427"
          rx="54"
          ry="18"
-         id="ellipse22175"
+         id="ellipse24235"
          style="fill:none;stroke:#000000" />
       <text
-         x="685.76001"
-         y="-193.16"
+         x="2311.4399"
+         y="-423.29999"
          font-size="14.00"
-         id="text22177"
+         id="text24237"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Dave Carter</text>
     </g>
     <!-- Joseph Campbell&#45;&gt;Dave Carter -->
@@ -739,15 +739,15 @@
        id="edge19"
        class="edge">
       <title
-         id="title22180">Joseph Campbell-&gt;Dave Carter</title>
+         id="title24240">Joseph Campbell-&gt;Dave Carter</title>
       <path
-         d="m 656.98,-205.66 c 0.06,0.02 0.12,0.04 0.18,0.06"
-         id="path22182"
+         d="m 2142.74,-524.56 c 18,3.99 36.7,10.37 52.11,20.56 22.84,15.1 13.98,33.71 36,50 7.66,5.67 16.59,10.2 25.65,13.81"
+         id="path24242"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="646.75,-205.12 648.8,-211.82 657.34,-205.55 "
-         id="polygon22184"
+         points="2255.34,-436.89 2257.73,-443.47 2265.93,-436.76 "
+         id="polygon24244"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Erich Neumann (psychologist)&#45;&gt;Jordan Peterson -->
@@ -755,15 +755,15 @@
        id="edge20"
        class="edge">
       <title
-         id="title22187">Erich Neumann (psychologist)-&gt;Jordan Peterson</title>
+         id="title24247">Erich Neumann (psychologist)-&gt;Jordan Peterson</title>
       <path
-         d="m 560.9,-122.86 c 0.05,-0.08 0.09,-0.17 0.14,-0.26"
-         id="path22189"
+         d="m 2151.99,-236.75 c 29.65,-5.29 63.22,-11.27 91.8,-16.37"
+         id="path24249"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="563.8,-120.83 557.56,-123.99 565.19,-131.34 "
-         id="polygon22191"
+         points="2244.44,-249.68 2243.22,-256.57 2253.68,-254.88 "
+         id="polygon24251"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Camille Paglia -->
@@ -771,19 +771,19 @@
        id="node20"
        class="node">
       <title
-         id="title22194">Camille Paglia</title>
+         id="title24254">Camille Paglia</title>
       <ellipse
-         cx="560.89001"
-         cy="-18"
+         cx="2311.4399"
+         cy="-211"
          rx="61.990002"
          ry="18"
-         id="ellipse22196"
+         id="ellipse24256"
          style="fill:none;stroke:#000000" />
       <text
-         x="560.89001"
-         y="-14.3"
+         x="2311.4399"
+         y="-207.3"
          font-size="14.00"
-         id="text22198"
+         id="text24258"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Camille Paglia</text>
     </g>
     <!-- Erich Neumann (psychologist)&#45;&gt;Camille Paglia -->
@@ -791,15 +791,15 @@
        id="edge21"
        class="edge">
       <title
-         id="title22201">Erich Neumann (psychologist)-&gt;Camille Paglia</title>
+         id="title24261">Erich Neumann (psychologist)-&gt;Camille Paglia</title>
       <path
-         d="m 553.67,-86.32 c 1.23,11.69 2.86,27.05 4.25,40.25"
-         id="path22203"
+         d="m 2188.5,-217.21 c 17.74,0.9 35.6,1.81 51.97,2.65"
+         id="path24263"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="554.45,-45.64 561.41,-46.38 558.98,-36.07 "
-         id="polygon22205"
+         points="2240.29,-211.07 2240.65,-218.06 2250.46,-214.06 "
+         id="polygon24265"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Eugen Bleuler -->
@@ -807,19 +807,19 @@
        id="node21"
        class="node">
       <title
-         id="title22208">Eugen Bleuler</title>
+         id="title24268">Eugen Bleuler</title>
       <ellipse
-         cx="483.29999"
-         cy="-282.75"
+         cx="1671.85"
+         cy="-753"
          rx="60.5"
          ry="18"
-         id="ellipse22210"
+         id="ellipse24270"
          style="fill:none;stroke:#000000" />
       <text
-         x="483.29999"
-         y="-279.04999"
+         x="1671.85"
+         y="-749.29999"
          font-size="14.00"
-         id="text22212"
+         id="text24272"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Eugen Bleuler</text>
     </g>
     <!-- Eugen Bleuler&#45;&gt;Carl Jung -->
@@ -827,15 +827,15 @@
        id="edge22"
        class="edge">
       <title
-         id="title22215">Eugen Bleuler-&gt;Carl Jung</title>
+         id="title24275">Eugen Bleuler-&gt;Carl Jung</title>
       <path
-         d="m 486.97,-264.71 c 2.4,11.79 5.59,27.44 8.32,40.85"
-         id="path22217"
+         d="m 1718.4,-741.38 c 24.86,8.6 54.2,22.83 72.45,45.38 73.01,90.22 80.88,237.23 80.75,298.64"
+         id="path24277"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="491.94,-222.8 498.8,-224.2 497.37,-213.7 "
-         id="polygon22219"
+         points="1868.1,-397.29 1875.09,-397.22 1871.5,-387.25 "
+         id="polygon24279"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Auguste Forel -->
@@ -843,19 +843,19 @@
        id="node22"
        class="node">
       <title
-         id="title22222">Auguste Forel</title>
+         id="title24282">Auguste Forel</title>
       <ellipse
-         cx="516.34003"
-         cy="-377.35001"
+         cx="1433.65"
+         cy="-777"
          rx="61.990002"
          ry="18"
-         id="ellipse22224"
+         id="ellipse24284"
          style="fill:none;stroke:#000000" />
       <text
-         x="516.34003"
-         y="-373.64999"
+         x="1433.65"
+         y="-773.29999"
          font-size="14.00"
-         id="text22226"
+         id="text24286"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Auguste Forel</text>
     </g>
     <!-- Auguste Forel&#45;&gt;Eugen Bleuler -->
@@ -863,15 +863,15 @@
        id="edge23"
        class="edge">
       <title
-         id="title22229">Auguste Forel-&gt;Eugen Bleuler</title>
+         id="title24289">Auguste Forel-&gt;Eugen Bleuler</title>
       <path
-         d="m 509.97,-359.11 c -4.8,13.74 -11.47,32.83 -16.93,48.48"
-         id="path22231"
+         d="m 1492.13,-771.16 c 33.8,3.44 76.7,7.79 111.99,11.38"
+         id="path24291"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="489.64,-311.53 496.25,-309.22 489.65,-300.93 "
-         id="polygon22233"
+         points="1604.03,-756.27 1604.74,-763.23 1614.34,-758.74 "
+         id="polygon24293"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Sigmund Freud -->
@@ -879,19 +879,19 @@
        id="node23"
        class="node">
       <title
-         id="title22236">Sigmund Freud</title>
+         id="title24296">Sigmund Freud</title>
       <ellipse
-         cx="414.37"
-         cy="-256.67999"
+         cx="1433.65"
+         cy="-723"
          rx="67"
          ry="18"
-         id="ellipse22238"
+         id="ellipse24298"
          style="fill:none;stroke:#000000" />
       <text
-         x="414.37"
-         y="-252.98"
+         x="1433.65"
+         y="-719.29999"
          font-size="14.00"
-         id="text22240"
+         id="text24300"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Sigmund Freud</text>
     </g>
     <!-- Sigmund Freud&#45;&gt;Carl Jung -->
@@ -899,15 +899,15 @@
        id="edge24"
        class="edge">
       <title
-         id="title22243">Sigmund Freud-&gt;Carl Jung</title>
+         id="title24303">Sigmund Freud-&gt;Carl Jung</title>
       <path
-         d="m 438.51,-239.69 c 9.78,6.89 21.2,14.92 31.58,22.23"
-         id="path22245"
+         d="m 1495.67,-715.98 c 78.47,12.16 214.25,44.24 295.18,125.98 53.53,54.07 71.52,146.63 77.34,192.92"
+         id="path24305"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="468.32,-214.43 472.35,-220.15 478.51,-211.54 "
-         id="polygon22247"
+         points="1864.72,-396.68 1871.67,-397.48 1869.34,-387.15 "
+         id="polygon24307"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Sigmund Freud&#45;&gt;Eugen Bleuler -->
@@ -915,15 +915,15 @@
        id="edge25"
        class="edge">
       <title
-         id="title22250">Sigmund Freud-&gt;Eugen Bleuler</title>
+         id="title24310">Sigmund Freud-&gt;Eugen Bleuler</title>
       <path
-         d="m 453.26,-271.39 c 0.07,-0.02 0.13,-0.04 0.19,-0.07"
-         id="path22252"
+         d="m 1494.56,-730.61 c 33.96,-4.31 76.47,-9.71 111.24,-14.13"
+         id="path24312"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="445.52,-264.71 443.04,-271.26 453.63,-271.53 "
-         id="polygon22254"
+         points="1606.38,-741.28 1605.5,-748.23 1615.86,-746.02 "
+         id="polygon24314"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Franz Brentano -->
@@ -931,19 +931,19 @@
        id="node24"
        class="node">
       <title
-         id="title22257">Franz Brentano</title>
+         id="title24317">Franz Brentano</title>
       <ellipse
-         cx="420.01999"
-         cy="-324.60999"
+         cx="1178.46"
+         cy="-966"
          rx="66.5"
          ry="18"
-         id="ellipse22259"
+         id="ellipse24319"
          style="fill:none;stroke:#000000" />
       <text
-         x="420.01999"
-         y="-320.91"
+         x="1178.46"
+         y="-962.29999"
          font-size="14.00"
-         id="text22261"
+         id="text24321"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Franz Brentano</text>
     </g>
     <!-- Franz Brentano&#45;&gt;Sigmund Freud -->
@@ -951,15 +951,15 @@
        id="edge26"
        class="edge">
       <title
-         id="title22264">Franz Brentano-&gt;Sigmund Freud</title>
+         id="title24324">Franz Brentano-&gt;Sigmund Freud</title>
       <path
-         d="m 418.5,-306.4 c -0.54,6.55 -1.17,14.1 -1.77,21.31"
-         id="path22266"
+         d="m 1244.78,-967.71 c 24.89,2.77 51.6,10.46 69.68,28.71 60.19,60.74 -20.44,124.76 36,189 4.66,5.31 10.39,9.58 16.62,13.01"
+         id="path24326"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="413.23,-285.19 420.2,-284.61 415.89,-274.93 "
-         id="polygon22268"
+         points="1365.99,-733.64 1368.97,-739.97 1376.52,-732.54 "
+         id="polygon24328"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Josef Breuer -->
@@ -967,19 +967,19 @@
        id="node25"
        class="node">
       <title
-         id="title22271">Josef Breuer</title>
+         id="title24331">Josef Breuer</title>
       <ellipse
-         cx="392.82999"
-         cy="-318.87"
+         cx="1178.46"
+         cy="-858"
          rx="56"
          ry="18"
-         id="ellipse22273"
+         id="ellipse24333"
          style="fill:none;stroke:#000000" />
       <text
-         x="392.82999"
-         y="-315.17001"
+         x="1178.46"
+         y="-854.29999"
          font-size="14.00"
-         id="text22275"
+         id="text24335"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Josef Breuer</text>
     </g>
     <!-- Josef Breuer&#45;&gt;Sigmund Freud -->
@@ -987,15 +987,15 @@
        id="edge27"
        class="edge">
       <title
-         id="title22278">Josef Breuer-&gt;Sigmund Freud</title>
+         id="title24338">Josef Breuer-&gt;Sigmund Freud</title>
       <path
-         d="m 399.06,-300.88 c 1.77,5.11 3.74,10.8 5.66,16.35"
-         id="path22280"
+         d="m 1234.65,-858.38 c 26.61,2.46 57.51,9.53 79.81,27.38 30.76,24.62 6.77,54.58 36,81 5.52,4.99 11.97,9.05 18.8,12.37"
+         id="path24340"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="401.5,-283.14 408.11,-285.43 408.08,-274.84 "
-         id="polygon22282"
+         points="1368.17,-734.29 1370.93,-740.72 1378.74,-733.56 "
+         id="polygon24342"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Jean&#45;Martin Charcot -->
@@ -1003,19 +1003,19 @@
        id="node26"
        class="node">
       <title
-         id="title22285">Jean-Martin Charcot</title>
+         id="title24345">Jean-Martin Charcot</title>
       <ellipse
-         cx="373.07999"
-         cy="-285.16"
+         cx="1178.46"
+         cy="-804"
          rx="84.5"
          ry="18"
-         id="ellipse22287"
+         id="ellipse24347"
          style="fill:none;stroke:#000000" />
       <text
-         x="373.07999"
-         y="-281.45999"
+         x="1178.46"
+         y="-800.29999"
          font-size="14.00"
-         id="text22289"
+         id="text24349"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Jean-Martin Charcot</text>
     </g>
     <!-- Jean&#45;Martin Charcot&#45;&gt;Sigmund Freud -->
@@ -1023,15 +1023,15 @@
        id="edge28"
        class="edge">
       <title
-         id="title22292">Jean-Martin Charcot-&gt;Sigmund Freud</title>
+         id="title24352">Jean-Martin Charcot-&gt;Sigmund Freud</title>
       <path
-         d="m 398.05,-267.93 c 0.07,0.04 0.14,0.09 0.2,0.14"
-         id="path22294"
+         d="m 1253.11,-795.4 c 20.45,4.01 42.26,9.86 61.35,18.4 18.26,8.16 18.26,17.76 36,27 8.02,4.18 16.82,7.89 25.58,11.11"
+         id="path24354"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="388.24,-270.45 392.21,-276.22 398.46,-267.65 "
-         id="polygon22296"
+         points="1374.9,-735.58 1377.21,-742.18 1385.49,-735.58 "
+         id="polygon24356"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Charles Darwin -->
@@ -1039,19 +1039,19 @@
        id="node27"
        class="node">
       <title
-         id="title22299">Charles Darwin</title>
+         id="title24359">Charles Darwin</title>
       <ellipse
-         cx="317.89001"
-         cy="-286.38"
+         cx="1178.46"
+         cy="-912"
          rx="66.5"
          ry="18"
-         id="ellipse22301"
+         id="ellipse24361"
          style="fill:none;stroke:#000000" />
       <text
-         x="317.89001"
-         y="-282.67999"
+         x="1178.46"
+         y="-908.29999"
          font-size="14.00"
-         id="text22303"
+         id="text24363"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Charles Darwin</text>
     </g>
     <!-- Charles Darwin&#45;&gt;Sigmund Freud -->
@@ -1059,15 +1059,15 @@
        id="edge29"
        class="edge">
       <title
-         id="title22306">Charles Darwin-&gt;Sigmund Freud</title>
+         id="title24366">Charles Darwin-&gt;Sigmund Freud</title>
       <path
-         d="m 361.9,-272.83 c 0.08,0.03 0.17,0.05 0.26,0.08"
-         id="path22308"
+         d="m 1245.17,-912.91 c 24.5,2.96 50.82,10.57 69.29,27.91 45.27,42.5 -6.64,89.86 36,135 5.04,5.33 11.14,9.61 17.72,13.04"
+         id="path24368"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="359.68,-269.85 361.74,-276.54 370.27,-270.26 "
-         id="polygon22310"
+         points="1366.84,-733.72 1369.73,-740.1 1377.39,-732.78 "
+         id="polygon24370"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Charles Lyell -->
@@ -1075,19 +1075,19 @@
        id="node28"
        class="node">
       <title
-         id="title22313">Charles Lyell</title>
+         id="title24373">Charles Lyell</title>
       <ellipse
-         cx="281.42001"
-         cy="-374.01001"
+         cx="903.77002"
+         cy="-1004"
          rx="58"
          ry="18"
-         id="ellipse22315"
+         id="ellipse24375"
          style="fill:none;stroke:#000000" />
       <text
-         x="281.42001"
-         y="-370.31"
+         x="903.77002"
+         y="-1000.3"
          font-size="14.00"
-         id="text22317"
+         id="text24377"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Charles Lyell</text>
     </g>
     <!-- Charles Lyell&#45;&gt;Charles Darwin -->
@@ -1095,15 +1095,15 @@
        id="edge30"
        class="edge">
       <title
-         id="title22320">Charles Lyell-&gt;Charles Darwin</title>
+         id="title24380">Charles Lyell-&gt;Charles Darwin</title>
       <path
-         d="m 288.98,-355.85 c 5.04,12.1 11.75,28.24 17.44,41.91"
-         id="path22322"
+         d="m 932.68,-988.34 c 27.24,14.68 70.25,36.27 109.78,49.34 21.35,7.06 45.25,12.58 66.93,16.73"
+         id="path24382"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="303.27,-312.4 309.74,-315.09 310.35,-304.51 "
-         id="polygon22324"
+         points="1109.04,-918.77 1110.31,-925.66 1119.51,-920.4 "
+         id="polygon24384"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- James Hutton -->
@@ -1111,19 +1111,19 @@
        id="node29"
        class="node">
       <title
-         id="title22327">James Hutton</title>
+         id="title24387">James Hutton</title>
       <ellipse
-         cx="221.5"
-         cy="-441.64999"
+         cx="365.57999"
+         cy="-1058"
          rx="60"
          ry="18"
-         id="ellipse22329"
+         id="ellipse24389"
          style="fill:none;stroke:#000000" />
       <text
-         x="221.5"
-         y="-437.95001"
+         x="365.57999"
+         y="-1054.3"
          font-size="14.00"
-         id="text22331"
+         id="text24391"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">James Hutton</text>
     </g>
     <!-- James Hutton&#45;&gt;Charles Lyell -->
@@ -1131,15 +1131,15 @@
        id="edge31"
        class="edge">
       <title
-         id="title22334">James Hutton-&gt;Charles Lyell</title>
+         id="title24394">James Hutton-&gt;Charles Lyell</title>
       <path
-         d="m 236.93,-424.23 c 6.73,7.6 14.75,16.65 22.11,24.96"
-         id="path22336"
+         d="m 384.93,-1040.6 c 22.33,19.86 62.14,51.18 103.15,63.6 126.15,38.19 283.43,8.13 363.18,-12.23"
+         id="path24396"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="256.58,-396.77 261.82,-401.41 265.84,-391.6 "
-         id="polygon22338"
+         points="852.26,-985.87 850.49,-992.65 861.05,-991.78 "
+         id="polygon24398"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- John Playfair -->
@@ -1147,19 +1147,19 @@
        id="node30"
        class="node">
       <title
-         id="title22341">John Playfair</title>
+         id="title24401">John Playfair</title>
       <ellipse
-         cx="265.51001"
-         cy="-453.23001"
+         cx="626.58002"
+         cy="-1112"
          rx="58"
          ry="18"
-         id="ellipse22343"
+         id="ellipse24403"
          style="fill:none;stroke:#000000" />
       <text
-         x="265.51001"
-         y="-449.53"
+         x="626.58002"
+         y="-1108.3"
          font-size="14.00"
-         id="text22345"
+         id="text24405"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">John Playfair</text>
     </g>
     <!-- James Hutton&#45;&gt;John Playfair -->
@@ -1167,15 +1167,15 @@
        id="edge32"
        class="edge">
       <title
-         id="title22348">James Hutton-&gt;John Playfair</title>
+         id="title24408">James Hutton-&gt;John Playfair</title>
       <path
-         d="m 265.38,-453.2 c 0.02,-0.01 0.04,-0.01 0.06,-0.01"
-         id="path22350"
+         d="m 413.83,-1068.79 c 22.47,-5.05 49.71,-11.08 74.25,-16.21 25.84,-5.41 54.49,-11.08 78.92,-15.83"
+         id="path24410"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="256.7,-447.28 254.91,-454.05 265.48,-453.23 "
-         id="polygon22352"
+         points="567.69,-1097.4 566.35,-1104.27 576.84,-1102.73 "
+         id="polygon24412"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- John Playfair&#45;&gt;Charles Lyell -->
@@ -1183,15 +1183,15 @@
        id="edge33"
        class="edge">
       <title
-         id="title22355">John Playfair-&gt;Charles Lyell</title>
+         id="title24415">John Playfair-&gt;Charles Lyell</title>
       <path
-         d="m 269.12,-435.26 c 1.96,9.76 4.43,22.04 6.64,33.04"
-         id="path22357"
+         d="m 681.3,-1105.75 c 25.9,4.08 57.05,10.6 83.78,20.75 39.07,14.83 79.85,40.27 106.79,58.69"
+         id="path24417"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="272.37,-401.3 279.23,-402.68 277.77,-392.19 "
-         id="polygon22359"
+         points="869.9,-1023.42 873.89,-1029.18 880.12,-1020.6 "
+         id="polygon24419"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- John Walker (natural historian) -->
@@ -1199,19 +1199,19 @@
        id="node31"
        class="node">
       <title
-         id="title22362">John Walker (natural historian)</title>
+         id="title24422">John Walker (natural historian)</title>
       <ellipse
-         cx="189.05"
-         cy="-519.33002"
+         cx="121.54"
+         cy="-1058"
          rx="121.58"
          ry="18"
-         id="ellipse22364"
+         id="ellipse24424"
          style="fill:none;stroke:#000000" />
       <text
-         x="189.05"
-         y="-515.63"
+         x="121.54"
+         y="-1054.3"
          font-size="14.00"
-         id="text22366"
+         id="text24426"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">John Walker (natural historian)</text>
     </g>
     <!-- John Walker (natural historian)&#45;&gt;James Hutton -->
@@ -1219,15 +1219,15 @@
        id="edge34"
        class="edge">
       <title
-         id="title22369">John Walker (natural historian)-&gt;James Hutton</title>
+         id="title24429">John Walker (natural historian)-&gt;James Hutton</title>
       <path
-         d="m 196.58,-501.31 c 4.01,9.61 9.03,21.63 13.51,32.36"
-         id="path22371"
+         d="m 243.2,-1058 c 17.78,0 35.57,0 51.83,0"
+         id="path24431"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="206.93,-467.44 213.39,-470.14 214.01,-459.57 "
-         id="polygon22373"
+         points="295.48,-1054.5 295.48,-1061.5 305.48,-1058 "
+         id="polygon24433"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Jean&#45;Baptiste Lamarck -->
@@ -1235,19 +1235,19 @@
        id="node32"
        class="node">
       <title
-         id="title22376">Jean-Baptiste Lamarck</title>
+         id="title24436">Jean-Baptiste Lamarck</title>
       <ellipse
-         cx="302.5"
-         cy="-465.26001"
+         cx="626.58002"
+         cy="-1058"
          rx="93"
          ry="18"
-         id="ellipse22378"
+         id="ellipse24438"
          style="fill:none;stroke:#000000" />
       <text
-         x="302.5"
-         y="-461.56"
+         x="626.58002"
+         y="-1054.3"
          font-size="14.00"
-         id="text22380"
+         id="text24440"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Jean-Baptiste Lamarck</text>
     </g>
     <!-- Jean&#45;Baptiste Lamarck&#45;&gt;Charles Lyell -->
@@ -1255,15 +1255,15 @@
        id="edge35"
        class="edge">
       <title
-         id="title22383">Jean-Baptiste Lamarck-&gt;Charles Lyell</title>
+         id="title24443">Jean-Baptiste Lamarck-&gt;Charles Lyell</title>
       <path
-         d="m 298.33,-447.23 c -2.97,12.87 -7.03,30.44 -10.42,45.14"
-         id="path22385"
+         d="m 692.45,-1045.27 c 45.99,9.02 107.2,21.04 151.72,29.77"
+         id="path24445"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="284.42,-402.53 291.24,-400.95 285.58,-392 "
-         id="polygon22387"
+         points="843.77,-1012.01 845.12,-1018.88 854.26,-1013.52 "
+         id="polygon24447"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- William Buckland -->
@@ -1271,19 +1271,19 @@
        id="node33"
        class="node">
       <title
-         id="title22390">William Buckland</title>
+         id="title24450">William Buckland</title>
       <ellipse
-         cx="202.02"
-         cy="-394.23001"
+         cx="626.58002"
+         cy="-1004"
          rx="74.989998"
          ry="18"
-         id="ellipse22392"
+         id="ellipse24452"
          style="fill:none;stroke:#000000" />
       <text
-         x="202.02"
-         y="-390.53"
+         x="626.58002"
+         y="-1000.3"
          font-size="14.00"
-         id="text22394"
+         id="text24454"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">William Buckland</text>
     </g>
     <!-- William Buckland&#45;&gt;Charles Lyell -->
@@ -1291,15 +1291,15 @@
        id="edge36"
        class="edge">
       <title
-         id="title22397">William Buckland-&gt;Charles Lyell</title>
+         id="title24457">William Buckland-&gt;Charles Lyell</title>
       <path
-         d="m 253.65,-381.08 c 0.06,0.01 0.12,0.03 0.18,0.04"
-         id="path22399"
+         d="m 701.32,-1004 c 41.69,0 93.42,0 134.02,0"
+         id="path24459"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="243.45,-380.07 245.18,-386.86 254.01,-380.99 "
-         id="polygon22401"
+         points="835.4,-1000.5 835.4,-1007.5 845.4,-1004 "
+         id="polygon24461"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Alexander von Humboldt -->
@@ -1307,19 +1307,19 @@
        id="node34"
        class="node">
       <title
-         id="title22404">Alexander von Humboldt</title>
+         id="title24464">Alexander von Humboldt</title>
       <ellipse
-         cx="263.23999"
-         cy="-311.26001"
+         cx="903.77002"
+         cy="-912"
          rx="102.88"
          ry="18"
-         id="ellipse22406"
+         id="ellipse24466"
          style="fill:none;stroke:#000000" />
       <text
-         x="263.23999"
-         y="-307.56"
+         x="903.77002"
+         y="-908.29999"
          font-size="14.00"
-         id="text22408"
+         id="text24468"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Alexander von Humboldt</text>
     </g>
     <!-- Alexander von Humboldt&#45;&gt;Charles Darwin -->
@@ -1327,15 +1327,15 @@
        id="edge37"
        class="edge">
       <title
-         id="title22411">Alexander von Humboldt-&gt;Charles Darwin</title>
+         id="title24471">Alexander von Humboldt-&gt;Charles Darwin</title>
       <path
-         d="m 300.3,-294.39 c 0.08,0.04 0.15,0.07 0.23,0.1"
-         id="path22413"
+         d="m 1006.7,-912 c 31.39,0 65.39,0 94.73,0"
+         id="path24473"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="290.2,-295.14 293.1,-301.51 300.75,-294.18 "
-         id="polygon22415"
+         points="1101.6,-908.5 1101.6,-915.5 1111.6,-912 "
+         id="polygon24475"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Friedrich Wilhelm Joseph Schelling -->
@@ -1343,19 +1343,19 @@
        id="node35"
        class="node">
       <title
-         id="title22418">Friedrich Wilhelm Joseph Schelling</title>
+         id="title24478">Friedrich Wilhelm Joseph Schelling</title>
       <ellipse
-         cx="180.88"
-         cy="-350.48001"
+         cx="626.58002"
+         cy="-912"
          rx="138.5"
          ry="18"
-         id="ellipse22420"
+         id="ellipse24480"
          style="fill:none;stroke:#000000" />
       <text
-         x="180.88"
-         y="-346.78"
+         x="626.58002"
+         y="-908.29999"
          font-size="14.00"
-         id="text22422"
+         id="text24482"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Friedrich Wilhelm Joseph Schelling</text>
     </g>
     <!-- Friedrich Wilhelm Joseph Schelling&#45;&gt;Alexander von Humboldt -->
@@ -1363,15 +1363,15 @@
        id="edge38"
        class="edge">
       <title
-         id="title22425">Friedrich Wilhelm Joseph Schelling-&gt;Alexander von Humboldt</title>
+         id="title24485">Friedrich Wilhelm Joseph Schelling-&gt;Alexander von Humboldt</title>
       <path
-         d="m 217.72,-332.94 c 0.2,0.1 0.41,0.2 0.61,0.29"
-         id="path22427"
+         d="m 765.17,-912 c 8.51,0 17.01,0 25.38,0"
+         id="path24487"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="216.98,-329.41 219.99,-335.73 227.51,-328.27 "
-         id="polygon22429"
+         points="790.69,-908.5 790.69,-915.5 800.69,-912 "
+         id="polygon24489"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- John Herschel -->
@@ -1379,19 +1379,19 @@
        id="node36"
        class="node">
       <title
-         id="title22432">John Herschel</title>
+         id="title24492">John Herschel</title>
       <ellipse
-         cx="249.66"
-         cy="-269.67999"
+         cx="903.77002"
+         cy="-858"
          rx="61.990002"
          ry="18"
-         id="ellipse22434"
+         id="ellipse24494"
          style="fill:none;stroke:#000000" />
       <text
-         x="249.66"
-         y="-265.98001"
+         x="903.77002"
+         y="-854.29999"
          font-size="14.00"
-         id="text22436"
+         id="text24496"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">John Herschel</text>
     </g>
     <!-- John Herschel&#45;&gt;Charles Darwin -->
@@ -1399,15 +1399,15 @@
        id="edge39"
        class="edge">
       <title
-         id="title22439">John Herschel-&gt;Charles Darwin</title>
+         id="title24499">John Herschel-&gt;Charles Darwin</title>
       <path
-         d="m 297.05,-281.28 c 0.05,-0.01 0.09,-0.02 0.14,-0.03"
-         id="path22441"
+         d="m 955.42,-868.03 c 44.87,-8.88 110.55,-21.89 158.84,-31.45"
+         id="path24501"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="288.44,-275.56 286.78,-282.36 297.32,-281.34 "
-         id="polygon22443"
+         points="1115.16,-896.09 1113.8,-902.96 1124.29,-901.47 "
+         id="polygon24503"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- William Herschel -->
@@ -1415,19 +1415,19 @@
        id="node37"
        class="node">
       <title
-         id="title22446">William Herschel</title>
+         id="title24506">William Herschel</title>
       <ellipse
-         cx="173.12"
-         cy="-248.39"
+         cx="626.58002"
+         cy="-804"
          rx="72.290001"
          ry="18"
-         id="ellipse22448"
+         id="ellipse24508"
          style="fill:none;stroke:#000000" />
       <text
-         x="173.12"
-         y="-244.69"
+         x="626.58002"
+         y="-800.29999"
          font-size="14.00"
-         id="text22450"
+         id="text24510"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">William Herschel</text>
     </g>
     <!-- William Herschel&#45;&gt;John Herschel -->
@@ -1435,15 +1435,15 @@
        id="edge40"
        class="edge">
       <title
-         id="title22453">William Herschel-&gt;John Herschel</title>
+         id="title24513">William Herschel-&gt;John Herschel</title>
       <path
-         d="m 221.6,-261.87 c 0.06,-0.02 0.12,-0.04 0.18,-0.05"
-         id="path22455"
+         d="m 683.93,-815.06 c 46,-9.02 110.88,-21.75 158.04,-31.01"
+         id="path24515"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="213.26,-255.92 211.38,-262.66 221.95,-261.97 "
-         id="polygon22457"
+         points="842.91,-842.69 841.57,-849.56 852.05,-848.05 "
+         id="polygon24517"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Caroline Herschel -->
@@ -1451,19 +1451,19 @@
        id="node38"
        class="node">
       <title
-         id="title22460">Caroline Herschel</title>
+         id="title24520">Caroline Herschel</title>
       <ellipse
-         cx="168.35001"
-         cy="-308.85001"
+         cx="626.58002"
+         cy="-858"
          rx="75.5"
          ry="18"
-         id="ellipse22462"
+         id="ellipse24522"
          style="fill:none;stroke:#000000" />
       <text
-         x="168.35001"
-         y="-305.14999"
+         x="626.58002"
+         y="-854.29999"
          font-size="14.00"
-         id="text22464"
+         id="text24524"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Caroline Herschel</text>
     </g>
     <!-- Caroline Herschel&#45;&gt;John Herschel -->
@@ -1471,15 +1471,15 @@
        id="edge41"
        class="edge">
       <title
-         id="title22467">Caroline Herschel-&gt;John Herschel</title>
+         id="title24527">Caroline Herschel-&gt;John Herschel</title>
       <path
-         d="m 201.89,-292.69 c 2.1,1.01 4.22,2.03 6.35,3.06"
-         id="path22469"
+         d="m 702.41,-858 c 40.27,0 89.66,0 129.32,0"
+         id="path24529"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="206.98,-286.35 210.01,-292.66 217.51,-285.17 "
-         id="polygon22471"
+         points="831.86,-854.5 831.86,-861.5 841.86,-858 "
+         id="polygon24531"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Thomas Robert Malthus -->
@@ -1487,19 +1487,19 @@
        id="node39"
        class="node">
       <title
-         id="title22474">Thomas Robert Malthus</title>
+         id="title24534">Thomas Robert Malthus</title>
       <ellipse
-         cx="246.48"
-         cy="-200.25999"
+         cx="903.77002"
+         cy="-750"
          rx="99.5"
          ry="18"
-         id="ellipse22476"
+         id="ellipse24536"
          style="fill:none;stroke:#000000" />
       <text
-         x="246.48"
-         y="-196.56"
+         x="903.77002"
+         y="-746.29999"
          font-size="14.00"
-         id="text22478"
+         id="text24538"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Thomas Robert Malthus</text>
     </g>
     <!-- Thomas Robert Malthus&#45;&gt;Charles Darwin -->
@@ -1507,15 +1507,15 @@
        id="edge42"
        class="edge">
       <title
-         id="title22481">Thomas Robert Malthus-&gt;Charles Darwin</title>
+         id="title24541">Thomas Robert Malthus-&gt;Charles Darwin</title>
       <path
-         d="m 261.28,-218.1 c 10.25,-12.36 24.04,-28.99 35.44,-42.75"
-         id="path22483"
+         d="m 930.85,-767.34 c 21.73,-15.2 52.7,-38.73 75.61,-63.66 19.52,-21.24 12.03,-37.95 36,-54 17.58,-11.77 39.14,-18.63 59.83,-22.57"
+         id="path24543"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="299.43,-258.63 294.04,-263.09 303.12,-268.56 "
-         id="polygon22485"
+         points="1103.08,-904.15 1101.91,-911.05 1112.36,-909.27 "
+         id="polygon24545"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- David Ricardo -->
@@ -1523,19 +1523,19 @@
        id="node40"
        class="node">
       <title
-         id="title22488">David Ricardo</title>
+         id="title24548">David Ricardo</title>
       <ellipse
-         cx="223.23"
-         cy="-109.79"
+         cx="626.58002"
+         cy="-669"
          rx="63.889999"
          ry="18"
-         id="ellipse22490"
+         id="ellipse24550"
          style="fill:none;stroke:#000000" />
       <text
-         x="223.23"
-         y="-106.09"
+         x="626.58002"
+         y="-665.29999"
          font-size="14.00"
-         id="text22492"
+         id="text24552"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">David Ricardo</text>
     </g>
     <!-- David Ricardo&#45;&gt;Thomas Robert Malthus -->
@@ -1543,15 +1543,15 @@
        id="edge43"
        class="edge">
       <title
-         id="title22495">David Ricardo-&gt;Thomas Robert Malthus</title>
+         id="title24555">David Ricardo-&gt;Thomas Robert Malthus</title>
       <path
-         d="m 227.93,-128.1 c 3.25,-12.63 7.63,-29.66 11.32,-44.01"
-         id="path22497"
+         d="m 671.49,-681.92 c 45.76,-13.47 117.85,-34.69 169.38,-49.86"
+         id="path24557"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="242.69,-171.42 235.91,-173.17 241.79,-181.98 "
-         id="polygon22499"
+         points="841.96,-728.45 839.98,-735.17 850.56,-734.63 "
+         id="polygon24559"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Adam Smith -->
@@ -1559,19 +1559,19 @@
        id="node41"
        class="node">
       <title
-         id="title22502">Adam Smith</title>
+         id="title24562">Adam Smith</title>
       <ellipse
-         cx="152.83"
-         cy="-81.669998"
+         cx="365.57999"
+         cy="-669"
          rx="56"
          ry="18"
-         id="ellipse22504"
+         id="ellipse24564"
          style="fill:none;stroke:#000000" />
       <text
-         x="152.83"
-         y="-77.970001"
+         x="365.57999"
+         y="-665.29999"
          font-size="14.00"
-         id="text22506"
+         id="text24566"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Adam Smith</text>
     </g>
     <!-- Adam Smith&#45;&gt;David Ricardo -->
@@ -1579,15 +1579,15 @@
        id="edge44"
        class="edge">
       <title
-         id="title22509">Adam Smith-&gt;David Ricardo</title>
+         id="title24569">Adam Smith-&gt;David Ricardo</title>
       <path
-         d="m 188.03,-95.73 c 0.07,-0.03 0.14,-0.05 0.2,-0.08"
-         id="path22511"
+         d="m 421.82,-669 c 38.16,0 89.3,0 130.81,0"
+         id="path24571"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="180.45,-88.93 177.85,-95.43 188.44,-95.89 "
-         id="polygon22513"
+         points="552.68,-665.5 552.68,-672.5 562.68,-669 "
+         id="polygon24573"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Jean Charles Léonard de Sismondi -->
@@ -1595,19 +1595,19 @@
        id="node42"
        class="node">
       <title
-         id="title22516">Jean Charles Léonard de Sismondi</title>
+         id="title24576">Jean Charles Léonard de Sismondi</title>
       <ellipse
-         cx="158.72"
-         cy="-169.14"
+         cx="626.58002"
+         cy="-750"
          rx="136.5"
          ry="18"
-         id="ellipse22518"
+         id="ellipse24578"
          style="fill:none;stroke:#000000" />
       <text
-         x="158.72"
-         y="-165.44"
+         x="626.58002"
+         y="-746.29999"
          font-size="14.00"
-         id="text22520"
+         id="text24580"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Jean Charles Léonard de Sismondi</text>
     </g>
     <!-- Adam Smith&#45;&gt;Jean Charles Léonard de Sismondi -->
@@ -1615,15 +1615,15 @@
        id="edge45"
        class="edge">
       <title
-         id="title22523">Adam Smith-&gt;Jean Charles Léonard de Sismondi</title>
+         id="title24583">Adam Smith-&gt;Jean Charles Léonard de Sismondi</title>
       <path
-         d="m 154.05,-99.79 c 0.8,-11.85 1.85,-27.56 2.76,-41.04"
-         id="path22525"
+         d="m 406.48,-681.48 c 41.68,-13.04 107.66,-33.67 156.33,-48.89"
+         id="path24585"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="160.32,-140.82 153.33,-141.29 157.5,-151.04 "
-         id="polygon22527"
+         points="564.11,-727.11 562.02,-733.79 572.61,-733.44 "
+         id="polygon24587"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Jean Charles Léonard de Sismondi&#45;&gt;Thomas Robert Malthus -->
@@ -1631,15 +1631,15 @@
        id="edge46"
        class="edge">
       <title
-         id="title22530">Jean Charles Léonard de Sismondi-&gt;Thomas Robert Malthus</title>
+         id="title24590">Jean Charles Léonard de Sismondi-&gt;Thomas Robert Malthus</title>
       <path
-         d="m 206.45,-186.06 c 0.08,-0.03 0.16,-0.06 0.24,-0.09"
-         id="path22532"
+         d="m 763.16,-750 c 10.38,0 20.77,0 30.94,0"
+         id="path24592"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="198.68,-179.59 196.34,-186.19 206.94,-186.24 "
-         id="polygon22534"
+         points="794.19,-746.5 794.19,-753.5 804.19,-750 "
+         id="polygon24594"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Jeremy Bentham -->
@@ -1647,19 +1647,19 @@
        id="node43"
        class="node">
       <title
-         id="title22537">Jeremy Bentham</title>
+         id="title24597">Jeremy Bentham</title>
       <ellipse
-         cx="202"
-         cy="-18.790001"
+         cx="365.57999"
+         cy="-615"
          rx="70.389999"
          ry="18"
-         id="ellipse22539"
+         id="ellipse24599"
          style="fill:none;stroke:#000000" />
       <text
-         x="202"
-         y="-15.09"
+         x="365.57999"
+         y="-611.29999"
          font-size="14.00"
-         id="text22541"
+         id="text24601"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Jeremy Bentham</text>
     </g>
     <!-- Jeremy Bentham&#45;&gt;David Ricardo -->
@@ -1667,15 +1667,15 @@
        id="edge47"
        class="edge">
       <title
-         id="title22544">Jeremy Bentham-&gt;David Ricardo</title>
+         id="title24604">Jeremy Bentham-&gt;David Ricardo</title>
       <path
-         d="m 206.2,-36.77 c 2.97,-12.75 7.02,-30.13 10.43,-44.73"
-         id="path22546"
+         d="m 420.56,-626.25 c 42.09,-8.78 100.53,-20.96 144.25,-30.08"
+         id="path24606"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="220.11,-81 213.29,-82.59 218.97,-91.53 "
-         id="polygon22548"
+         points="565.67,-652.94 564.25,-659.79 574.75,-658.4 "
+         id="polygon24608"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Adam Ferguson -->
@@ -1683,19 +1683,19 @@
        id="node44"
        class="node">
       <title
-         id="title22551">Adam Ferguson</title>
+         id="title24611">Adam Ferguson</title>
       <ellipse
-         cx="76.790001"
-         cy="-182.49001"
+         cx="365.57999"
+         cy="-831"
          rx="69.589996"
          ry="18"
-         id="ellipse22553"
+         id="ellipse24613"
          style="fill:none;stroke:#000000" />
       <text
-         x="76.790001"
-         y="-178.78999"
+         x="365.57999"
+         y="-827.29999"
          font-size="14.00"
-         id="text22555"
+         id="text24615"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Adam Ferguson</text>
     </g>
     <!-- Adam Ferguson&#45;&gt;Jean Charles Léonard de Sismondi -->
@@ -1703,15 +1703,15 @@
        id="edge48"
        class="edge">
       <title
-         id="title22558">Adam Ferguson-&gt;Jean Charles Léonard de Sismondi</title>
+         id="title24618">Adam Ferguson-&gt;Jean Charles Léonard de Sismondi</title>
       <path
-         d="m 135.9,-172.86 c 0.05,0.01 0.1,0.02 0.15,0.03"
-         id="path22560"
+         d="m 416.09,-818.48 c 12.1,3.9 24.77,8.72 35.99,14.48 17.79,9.14 17.73,18.87 36,27 10.31,4.59 21.41,8.4 32.66,11.57"
+         id="path24620"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="125.76,-170.97 126.89,-177.87 136.2,-172.81 "
-         id="polygon22562"
+         points="520.09,-761.98 521.88,-768.75 530.65,-762.81 "
+         id="polygon24622"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Jean&#45;Louis de Lolme -->
@@ -1719,19 +1719,19 @@
        id="node45"
        class="node">
       <title
-         id="title22565">Jean-Louis de Lolme</title>
+         id="title24625">Jean-Louis de Lolme</title>
       <ellipse
-         cx="86.5"
-         cy="-136.78"
+         cx="365.57999"
+         cy="-777"
          rx="86.5"
          ry="18"
-         id="ellipse22567"
+         id="ellipse24627"
          style="fill:none;stroke:#000000" />
       <text
-         x="86.5"
-         y="-133.08"
+         x="365.57999"
+         y="-773.29999"
          font-size="14.00"
-         id="text22569"
+         id="text24629"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Jean-Louis de Lolme</text>
     </g>
     <!-- Jean&#45;Louis de Lolme&#45;&gt;Jean Charles Léonard de Sismondi -->
@@ -1739,15 +1739,15 @@
        id="edge49"
        class="edge">
       <title
-         id="title22572">Jean-Louis de Lolme-&gt;Jean Charles Léonard de Sismondi</title>
+         id="title24632">Jean-Louis de Lolme-&gt;Jean Charles Léonard de Sismondi</title>
       <path
-         d="m 123.03,-153.15 c 0.07,-0.03 0.14,-0.06 0.21,-0.09"
-         id="path22574"
+         d="m 443.24,-769.01 c 20.56,2.15 43.28,4.51 65.49,6.83"
+         id="path24634"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="115.76,-146.05 112.89,-152.44 123.45,-153.34 "
-         id="polygon22576"
+         points="508.58,-758.68 509.31,-765.64 518.89,-761.12 "
+         id="polygon24636"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Niccolò Machiavelli -->
@@ -1755,19 +1755,19 @@
        id="node46"
        class="node">
       <title
-         id="title22579">Niccolò Machiavelli</title>
+         id="title24639">Niccolò Machiavelli</title>
       <ellipse
-         cx="110.45"
-         cy="-95.989998"
+         cx="365.57999"
+         cy="-723"
          rx="82.589996"
          ry="18"
-         id="ellipse22581"
+         id="ellipse24641"
          style="fill:none;stroke:#000000" />
       <text
-         x="110.45"
-         y="-92.290001"
+         x="365.57999"
+         y="-719.29999"
          font-size="14.00"
-         id="text22583"
+         id="text24643"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Niccolò Machiavelli</text>
     </g>
     <!-- Niccolò Machiavelli&#45;&gt;Jean Charles Léonard de Sismondi -->
@@ -1775,15 +1775,15 @@
        id="edge50"
        class="edge">
       <title
-         id="title22586">Niccolò Machiavelli-&gt;Jean Charles Léonard de Sismondi</title>
+         id="title24646">Niccolò Machiavelli-&gt;Jean Charles Léonard de Sismondi</title>
       <path
-         d="m 122.38,-114.07 c 5.69,-8.61 12.6,-19.09 18.86,-28.58"
-         id="path22588"
+         d="m 440.45,-730.7 c 21.23,-2.21 44.92,-4.68 68.08,-7.1"
+         id="path24648"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="144.17,-140.73 138.33,-144.59 146.76,-151.01 "
-         id="polygon22590"
+         points="509.18,-734.35 508.46,-741.31 518.76,-738.87 "
+         id="polygon24650"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Montesquieu -->
@@ -1791,19 +1791,19 @@
        id="node47"
        class="node">
       <title
-         id="title22593">Montesquieu</title>
+         id="title24653">Montesquieu</title>
       <ellipse
-         cx="82.220001"
-         cy="-223.57001"
+         cx="365.57999"
+         cy="-885"
          rx="58"
          ry="18"
-         id="ellipse22595"
+         id="ellipse24655"
          style="fill:none;stroke:#000000" />
       <text
-         x="82.220001"
-         y="-219.87"
+         x="365.57999"
+         y="-881.29999"
          font-size="14.00"
-         id="text22597"
+         id="text24657"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Montesquieu</text>
     </g>
     <!-- Montesquieu&#45;&gt;Jean Charles Léonard de Sismondi -->
@@ -1811,15 +1811,15 @@
        id="edge51"
        class="edge">
       <title
-         id="title22600">Montesquieu-&gt;Jean Charles Léonard de Sismondi</title>
+         id="title24660">Montesquieu-&gt;Jean Charles Léonard de Sismondi</title>
       <path
-         d="m 105.59,-206.94 c 6.24,4.44 13.1,9.33 19.77,14.07"
-         id="path22602"
+         d="m 417.3,-876.61 c 12.47,4 25.03,9.9 34.78,18.61 29.38,26.25 5.2,56.44 36,81 5.88,4.69 12.35,8.65 19.18,11.97"
+         id="path24662"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="123.46,-189.93 127.51,-195.63 133.63,-186.99 "
-         id="polygon22604"
+         points="506.21,-761.67 509.01,-768.09 516.77,-760.88 "
+         id="polygon24664"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Gilbert White -->
@@ -1827,19 +1827,19 @@
        id="node48"
        class="node">
       <title
-         id="title22607">Gilbert White</title>
+         id="title24667">Gilbert White</title>
       <ellipse
-         cx="335.51001"
-         cy="-384.92001"
+         cx="903.77002"
+         cy="-1158"
          rx="60"
          ry="18"
-         id="ellipse22609"
+         id="ellipse24669"
          style="fill:none;stroke:#000000" />
       <text
-         x="335.51001"
-         y="-381.22"
+         x="903.77002"
+         y="-1154.3"
          font-size="14.00"
-         id="text22611"
+         id="text24671"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Gilbert White</text>
     </g>
     <!-- Gilbert White&#45;&gt;Charles Darwin -->
@@ -1847,15 +1847,15 @@
        id="edge52"
        class="edge">
       <title
-         id="title22614">Gilbert White-&gt;Charles Darwin</title>
+         id="title24674">Gilbert White-&gt;Charles Darwin</title>
       <path
-         d="m 332.28,-366.84 c -2.62,14.63 -6.35,35.49 -9.36,52.31"
-         id="path22616"
+         d="m 921.44,-1140.76 c 21.85,23.33 60.28,66.96 85.02,109.76 21.97,38.01 2.35,63.79 36,92 16.53,13.85 38.17,21.29 59.27,25.12"
+         id="path24676"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="319.48,-315.13 326.37,-313.9 321.16,-304.67 "
-         id="polygon22618"
+         points="1101.27,-910.41 1102.35,-917.32 1111.69,-912.32 "
+         id="polygon24678"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- John Ray -->
@@ -1863,19 +1863,19 @@
        id="node49"
        class="node">
       <title
-         id="title22621">John Ray</title>
+         id="title24681">John Ray</title>
       <ellipse
-         cx="332.72"
-         cy="-478.04001"
+         cx="365.57999"
+         cy="-1181"
          rx="45"
          ry="18"
-         id="ellipse22623"
+         id="ellipse24683"
          style="fill:none;stroke:#000000" />
       <text
-         x="332.72"
-         y="-474.34"
+         x="365.57999"
+         y="-1177.3"
          font-size="14.00"
-         id="text22625"
+         id="text24685"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">John Ray</text>
     </g>
     <!-- John Ray&#45;&gt;Gilbert White -->
@@ -1883,15 +1883,15 @@
        id="edge53"
        class="edge">
       <title
-         id="title22628">John Ray-&gt;Gilbert White</title>
+         id="title24688">John Ray-&gt;Gilbert White</title>
       <path
-         d="m 333.27,-459.64 c 0.4,13.22 0.94,31.3 1.39,46.36"
-         id="path22630"
+         d="m 410.46,-1179.12 c 93.25,4 311.78,13.38 423.66,18.18"
+         id="path24690"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="331.17,-412.85 338.17,-413.06 334.97,-402.96 "
-         id="polygon22632"
+         points="834.14,-1157.44 834.44,-1164.43 844.28,-1160.51 "
+         id="polygon24692"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- William Derham -->
@@ -1899,19 +1899,19 @@
        id="node50"
        class="node">
       <title
-         id="title22635">William Derham</title>
+         id="title24695">William Derham</title>
       <ellipse
-         cx="378.37"
-         cy="-478.16"
+         cx="626.58002"
+         cy="-1204"
          rx="69"
          ry="18"
-         id="ellipse22637"
+         id="ellipse24697"
          style="fill:none;stroke:#000000" />
       <text
-         x="378.37"
-         y="-474.45999"
+         x="626.58002"
+         y="-1200.3"
          font-size="14.00"
-         id="text22639"
+         id="text24699"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">William Derham</text>
     </g>
     <!-- John Ray&#45;&gt;William Derham -->
@@ -1919,15 +1919,15 @@
        id="edge54"
        class="edge">
       <title
-         id="title22642">John Ray-&gt;William Derham</title>
+         id="title24702">John Ray-&gt;William Derham</title>
       <path
-         d="m 377.86,-478.16 c 0.08,0 0.16,0 0.22,0"
-         id="path22644"
+         d="m 409.64,-1184.82 c 38.38,-3.41 95.4,-8.48 141.21,-12.54"
+         id="path24704"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="368.25,-474.63 368.23,-481.63 378.24,-478.16 "
-         id="polygon22646"
+         points="551.39,-1193.9 550.77,-1200.87 561.04,-1198.27 "
+         id="polygon24706"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- William Derham&#45;&gt;Gilbert White -->
@@ -1935,15 +1935,15 @@
        id="edge55"
        class="edge">
       <title
-         id="title22649">William Derham-&gt;Gilbert White</title>
+         id="title24709">William Derham-&gt;Gilbert White</title>
       <path
-         d="m 370.11,-460.18 c -6.29,13.67 -15.04,32.71 -22.17,48.22"
-         id="path22651"
+         d="m 685.27,-1194.36 c 45.52,7.61 108.89,18.2 155.49,25.99"
+         id="path24711"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="344.74,-413.39 351.1,-410.46 343.75,-402.84 "
-         id="polygon22653"
+         points="840.29,-1164.89 841.45,-1171.8 850.73,-1166.7 "
+         id="polygon24713"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Gustav Fechner -->
@@ -1951,19 +1951,19 @@
        id="node51"
        class="node">
       <title
-         id="title22656">Gustav Fechner</title>
+         id="title24716">Gustav Fechner</title>
       <ellipse
-         cx="364.67001"
-         cy="-177.67"
+         cx="1178.46"
+         cy="-642"
          rx="68.489998"
          ry="18"
-         id="ellipse22658"
+         id="ellipse24718"
          style="fill:none;stroke:#000000" />
       <text
-         x="364.67001"
-         y="-173.97"
+         x="1178.46"
+         y="-638.29999"
          font-size="14.00"
-         id="text22660"
+         id="text24720"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Gustav Fechner</text>
     </g>
     <!-- Gustav Fechner&#45;&gt;Sigmund Freud -->
@@ -1971,15 +1971,15 @@
        id="edge56"
        class="edge">
       <title
-         id="title22663">Gustav Fechner-&gt;Sigmund Freud</title>
+         id="title24723">Gustav Fechner-&gt;Sigmund Freud</title>
       <path
-         d="m 375.95,-195.6 c 6.42,-10.2 14.58,-23.17 21.73,-34.54"
-         id="path22665"
+         d="m 1238.36,-650.73 c 23.93,-4.33 51.65,-10.36 76.1,-18.27 27.04,-8.75 56.1,-21.97 78.63,-33.14"
+         id="path24725"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="400.78,-228.49 394.85,-232.22 403.14,-238.82 "
-         id="polygon22667"
+         points="1394.96,-699.16 1391.82,-705.42 1402.33,-706.78 "
+         id="polygon24727"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Immanuel Kant -->
@@ -1987,19 +1987,19 @@
        id="node52"
        class="node">
       <title
-         id="title22670">Immanuel Kant</title>
+         id="title24730">Immanuel Kant</title>
       <ellipse
-         cx="430.41"
-         cy="-149.83"
+         cx="903.77002"
+         cy="-538"
          rx="65.790001"
          ry="18"
-         id="ellipse22672"
+         id="ellipse24732"
          style="fill:none;stroke:#000000" />
       <text
-         x="430.41"
-         y="-146.13"
+         x="903.77002"
+         y="-534.29999"
          font-size="14.00"
-         id="text22674"
+         id="text24734"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Immanuel Kant</text>
     </g>
     <!-- Immanuel Kant&#45;&gt;Carl Jung -->
@@ -2007,15 +2007,15 @@
        id="edge57"
        class="edge">
       <title
-         id="title22677">Immanuel Kant-&gt;Carl Jung</title>
+         id="title24737">Immanuel Kant-&gt;Carl Jung</title>
       <path
-         d="m 456.31,-166.64 c 3.91,-2.54 7.99,-5.19 12.03,-7.81"
-         id="path22679"
+         d="m 925.03,-520.75 c 25.49,20.5 71.49,53.71 117.43,67.75 159.18,48.64 590.23,-21.87 748.39,30 19.69,6.46 39.04,19.29 53.77,30.82"
+         id="path24739"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="470.54,-171.71 466.73,-177.58 477.02,-180.09 "
-         id="polygon22681"
+         points="1842.76,-389.18 1847.17,-394.62 1852.73,-385.6 "
+         id="polygon24741"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Immanuel Kant&#45;&gt;Gustav Fechner -->
@@ -2023,15 +2023,15 @@
        id="edge58"
        class="edge">
       <title
-         id="title22684">Immanuel Kant-&gt;Gustav Fechner</title>
+         id="title24744">Immanuel Kant-&gt;Gustav Fechner</title>
       <path
-         d="m 394.47,-165.05 c -0.06,-0.03 -0.12,-0.05 -0.18,-0.08"
-         id="path22686"
+         d="m 929.01,-554.66 c 26.66,-17.56 71.31,-44.78 113.45,-60.34 20.42,-7.54 43.4,-13.13 64.53,-17.21"
+         id="path24746"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="404.68,-164.52 401.95,-158.08 394.11,-165.2 "
-         id="polygon22688"
+         points="1107.67,-628.77 1106.4,-635.66 1116.87,-634.03 "
+         id="polygon24748"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Wilhelm Fliess -->
@@ -2039,19 +2039,19 @@
        id="node53"
        class="node">
       <title
-         id="title22691">Wilhelm Fliess</title>
+         id="title24751">Wilhelm Fliess</title>
       <ellipse
-         cx="356.82999"
-         cy="-235.10001"
+         cx="1178.46"
+         cy="-750"
          rx="63.889999"
          ry="18"
-         id="ellipse22693"
+         id="ellipse24753"
          style="fill:none;stroke:#000000" />
       <text
-         x="356.82999"
-         y="-231.39999"
+         x="1178.46"
+         y="-746.29999"
          font-size="14.00"
-         id="text22695"
+         id="text24755"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Wilhelm Fliess</text>
     </g>
     <!-- Wilhelm Fliess&#45;&gt;Sigmund Freud -->
@@ -2059,15 +2059,15 @@
        id="edge59"
        class="edge">
       <title
-         id="title22698">Wilhelm Fliess-&gt;Sigmund Freud</title>
+         id="title24758">Wilhelm Fliess-&gt;Sigmund Freud</title>
       <path
-         d="m 395.21,-249.49 c 0.08,-0.03 0.17,-0.06 0.25,-0.1"
-         id="path22700"
+         d="m 1238.18,-743.74 c 36.61,3.91 83.98,8.96 122.79,13.1"
+         id="path24760"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="387.57,-242.89 385.11,-249.44 395.7,-249.68 "
-         id="polygon22702"
+         points="1360.85,-727.14 1361.59,-734.1 1371.16,-729.56 "
+         id="polygon24762"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Karl Robert Eduard von Hartmann -->
@@ -2075,19 +2075,19 @@
        id="node54"
        class="node">
       <title
-         id="title22705">Karl Robert Eduard von Hartmann</title>
+         id="title24765">Karl Robert Eduard von Hartmann</title>
       <ellipse
-         cx="460.82001"
-         cy="-243.89"
+         cx="1178.46"
+         cy="-588"
          rx="136"
          ry="18"
-         id="ellipse22707"
+         id="ellipse24767"
          style="fill:none;stroke:#000000" />
       <text
-         x="460.82001"
-         y="-240.19"
+         x="1178.46"
+         y="-584.29999"
          font-size="14.00"
-         id="text22709"
+         id="text24769"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Karl Robert Eduard von Hartmann</text>
     </g>
     <!-- Karl Robert Eduard von Hartmann&#45;&gt;Carl Jung -->
@@ -2095,15 +2095,15 @@
        id="edge60"
        class="edge">
       <title
-         id="title22712">Karl Robert Eduard von Hartmann-&gt;Carl Jung</title>
+         id="title24772">Karl Robert Eduard von Hartmann-&gt;Carl Jung</title>
       <path
-         d="m 475.79,-225.94 c 1.46,1.74 2.95,3.52 4.44,5.32"
-         id="path22714"
+         d="m 1314.71,-587.96 c 156.15,2.52 401.15,14.85 476.14,65.96 43.17,29.42 64.63,89.7 73.94,125.18"
+         id="path24774"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="477.62,-218.29 483,-222.77 486.72,-212.85 "
-         id="polygon22716"
+         points="1861.4,-395.95 1868.19,-397.63 1867.2,-387.09 "
+         id="polygon24776"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Karl Robert Eduard von Hartmann&#45;&gt;Sigmund Freud -->
@@ -2111,15 +2111,15 @@
        id="edge61"
        class="edge">
       <title
-         id="title22719">Karl Robert Eduard von Hartmann-&gt;Sigmund Freud</title>
+         id="title24779">Karl Robert Eduard von Hartmann-&gt;Sigmund Freud</title>
       <path
-         d="m 414.5,-256.64 c -0.02,-0.01 -0.04,-0.01 -0.05,-0.02"
-         id="path22721"
+         d="m 1276.04,-600.61 c 13.3,-3.65 26.48,-8.34 38.42,-14.39 39.83,-20.17 76.2,-57.55 97.78,-82.6"
+         id="path24781"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="424.98,-257.37 423.11,-250.62 414.4,-256.67 "
-         id="polygon22723"
+         points="1414.94,-695.36 1409.59,-699.88 1418.71,-705.26 "
+         id="polygon24783"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Johann Friedrich Herbart -->
@@ -2127,19 +2127,19 @@
        id="node55"
        class="node">
       <title
-         id="title22726">Johann Friedrich Herbart</title>
+         id="title24786">Johann Friedrich Herbart</title>
       <ellipse
-         cx="353.39001"
-         cy="-204.10001"
+         cx="1178.46"
+         cy="-696"
          rx="100.98"
          ry="18"
-         id="ellipse22728"
+         id="ellipse24788"
          style="fill:none;stroke:#000000" />
       <text
-         x="353.39001"
-         y="-200.39999"
+         x="1178.46"
+         y="-692.29999"
          font-size="14.00"
-         id="text22730"
+         id="text24790"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Johann Friedrich Herbart</text>
     </g>
     <!-- Johann Friedrich Herbart&#45;&gt;Sigmund Freud -->
@@ -2147,15 +2147,15 @@
        id="edge62"
        class="edge">
       <title
-         id="title22733">Johann Friedrich Herbart-&gt;Sigmund Freud</title>
+         id="title24793">Johann Friedrich Herbart-&gt;Sigmund Freud</title>
       <path
-         d="m 374.04,-221.9 c 3.96,-3.41 8.16,-7.04 12.31,-10.61"
-         id="path22735"
+         d="m 1265.53,-705.18 c 31.04,-3.31 65.7,-7 95.38,-10.17"
+         id="path24795"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="388.87,-230.07 384.3,-235.37 394.16,-239.25 "
-         id="polygon22737"
+         points="1361.62,-711.9 1360.87,-718.87 1371.19,-716.45 "
+         id="polygon24797"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Friedrich Nietzsche -->
@@ -2163,19 +2163,19 @@
        id="node56"
        class="node">
       <title
-         id="title22740">Friedrich Nietzsche</title>
+         id="title24800">Friedrich Nietzsche</title>
       <ellipse
-         cx="446.32999"
-         cy="-222.05"
+         cx="1178.46"
+         cy="-534"
          rx="81.489998"
          ry="18"
-         id="ellipse22742"
+         id="ellipse24802"
          style="fill:none;stroke:#000000" />
       <text
-         x="446.32999"
-         y="-218.35001"
+         x="1178.46"
+         y="-530.29999"
          font-size="14.00"
-         id="text22744"
+         id="text24804"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Friedrich Nietzsche</text>
     </g>
     <!-- Friedrich Nietzsche&#45;&gt;Carl Jung -->
@@ -2183,15 +2183,15 @@
        id="edge63"
        class="edge">
       <title
-         id="title22747">Friedrich Nietzsche-&gt;Carl Jung</title>
+         id="title24807">Friedrich Nietzsche-&gt;Carl Jung</title>
       <path
-         d="m 480.35,-205.65 c 0.05,0.02 0.09,0.04 0.13,0.06"
-         id="path22749"
+         d="m 1259.25,-536.12 c 144.63,-2.48 443.31,-0.98 531.6,50.12 34.52,19.98 57.39,61.57 69.53,89.39"
+         id="path24809"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="470.08,-206.72 473.13,-213.03 480.61,-205.53 "
-         id="polygon22751"
+         points="1857.29,-394.93 1863.75,-397.63 1864.37,-387.05 "
+         id="polygon24811"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Friedrich Nietzsche&#45;&gt;Sigmund Freud -->
@@ -2199,15 +2199,15 @@
        id="edge64"
        class="edge">
       <title
-         id="title22754">Friedrich Nietzsche-&gt;Sigmund Freud</title>
+         id="title24814">Friedrich Nietzsche-&gt;Sigmund Freud</title>
       <path
-         d="m 429.97,-239.77 c -0.06,-0.07 -0.12,-0.13 -0.18,-0.2"
-         id="path22756"
+         d="m 1256.43,-539.33 c 20.04,-3.99 40.81,-10.66 58.03,-21.67 51.96,-33.23 88.61,-98.06 106.25,-134.83"
+         id="path24816"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="438.96,-235.2 433.82,-230.45 429.61,-240.17 "
-         id="polygon22758"
+         points="1423.92,-694.43 1417.58,-697.39 1424.99,-704.97 "
+         id="polygon24818"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Plato -->
@@ -2215,19 +2215,19 @@
        id="node57"
        class="node">
       <title
-         id="title22761">Plato</title>
+         id="title24821">Plato</title>
       <ellipse
-         cx="453.59"
-         cy="-341.35999"
+         cx="1178.46"
+         cy="-1074"
          rx="29.5"
          ry="18"
-         id="ellipse22763"
+         id="ellipse24823"
          style="fill:none;stroke:#000000" />
       <text
-         x="453.59"
-         y="-337.66"
+         x="1178.46"
+         y="-1070.3"
          font-size="14.00"
-         id="text22765"
+         id="text24825"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Plato</text>
     </g>
     <!-- Plato&#45;&gt;Sigmund Freud -->
@@ -2235,15 +2235,15 @@
        id="edge65"
        class="edge">
       <title
-         id="title22768">Plato-&gt;Sigmund Freud</title>
+         id="title24828">Plato-&gt;Sigmund Freud</title>
       <path
-         d="m 445.46,-323.81 c -5.29,11.42 -12.3,26.57 -18.33,39.59"
-         id="path22770"
+         d="m 1207.51,-1077.11 c 30.94,-1.73 79.91,0.91 106.95,30.11 90.34,97.56 -48.33,194.2 36,297 4.42,5.38 9.93,9.7 15.99,13.17"
+         id="path24830"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="423.78,-285.33 430.14,-282.39 422.76,-274.78 "
-         id="polygon22772"
+         points="1365.15,-733.58 1368.22,-739.87 1375.68,-732.35 "
+         id="polygon24832"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Arthur Schopenhauer -->
@@ -2251,19 +2251,19 @@
        id="node58"
        class="node">
       <title
-         id="title22775">Arthur Schopenhauer</title>
+         id="title24835">Arthur Schopenhauer</title>
       <ellipse
-         cx="431.26001"
-         cy="-203.78"
+         cx="1178.46"
+         cy="-480"
          rx="88.5"
          ry="18"
-         id="ellipse22777"
+         id="ellipse24837"
          style="fill:none;stroke:#000000" />
       <text
-         x="431.26001"
-         y="-200.08"
+         x="1178.46"
+         y="-476.29999"
          font-size="14.00"
-         id="text22779"
+         id="text24839"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Arthur Schopenhauer</text>
     </g>
     <!-- Arthur Schopenhauer&#45;&gt;Carl Jung -->
@@ -2271,15 +2271,15 @@
        id="edge66"
        class="edge">
       <title
-         id="title22782">Arthur Schopenhauer-&gt;Carl Jung</title>
+         id="title24842">Arthur Schopenhauer-&gt;Carl Jung</title>
       <path
-         d="m 500.99,-195.69 c 0,0 0.01,0 0.02,0"
-         id="path22784"
+         d="m 1264.16,-484.58 c 145.37,-6.55 435.52,-13.59 526.69,28.58 27.74,12.83 50.28,40.19 64.28,60.82"
+         id="path24844"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="490.67,-193.42 491.51,-200.37 501.02,-195.68 "
-         id="polygon22786"
+         points="1852.38,-392.99 1858.24,-396.82 1860.78,-386.53 "
+         id="polygon24846"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Arthur Schopenhauer&#45;&gt;Sigmund Freud -->
@@ -2287,15 +2287,15 @@
        id="edge67"
        class="edge">
       <title
-         id="title22789">Arthur Schopenhauer-&gt;Sigmund Freud</title>
+         id="title24849">Arthur Schopenhauer-&gt;Sigmund Freud</title>
       <path
-         d="m 425.45,-221.98 c -0.73,-2.27 -1.48,-4.63 -2.24,-7.01"
-         id="path22791"
+         d="m 1263.42,-485.16 c 18.09,-4.16 36.21,-10.94 51.04,-21.84 64.69,-47.54 98.07,-141.57 111.27,-188.3"
+         id="path24851"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="426.51,-230.16 419.84,-228.03 420.14,-238.62 "
-         id="polygon22793"
+         points="1429.13,-694.48 1422.38,-696.32 1428.38,-705.05 "
+         id="polygon24853"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- William Shakespeare -->
@@ -2303,19 +2303,19 @@
        id="node59"
        class="node">
       <title
-         id="title22796">William Shakespeare</title>
+         id="title24856">William Shakespeare</title>
       <ellipse
-         cx="429.39001"
-         cy="-348.51999"
+         cx="1178.46"
+         cy="-1020"
          rx="86"
          ry="18"
-         id="ellipse22798"
+         id="ellipse24858"
          style="fill:none;stroke:#000000" />
       <text
-         x="429.39001"
-         y="-344.82001"
+         x="1178.46"
+         y="-1016.3"
          font-size="14.00"
-         id="text22800"
+         id="text24860"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">William Shakespeare</text>
     </g>
     <!-- William Shakespeare&#45;&gt;Sigmund Freud -->
@@ -2323,15 +2323,15 @@
        id="edge68"
        class="edge">
       <title
-         id="title22803">William Shakespeare-&gt;Sigmund Freud</title>
+         id="title24863">William Shakespeare-&gt;Sigmund Freud</title>
       <path
-         d="m 426.42,-330.38 c -2.12,12.96 -5.01,30.64 -7.43,45.44"
-         id="path22805"
+         d="m 1264.47,-1018.91 c 18.69,4.22 36.81,12.05 49.99,25.91 75.23,79.12 -34.35,159.51 36,243 4.55,5.4 10.21,9.73 16.4,13.2"
+         id="path24865"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="415.49,-285.22 422.4,-284.09 417.33,-274.78 "
-         id="polygon22807"
+         points="1365.73,-733.46 1368.75,-739.78 1376.27,-732.32 "
+         id="polygon24867"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Gottlieb Burckhardt -->
@@ -2339,19 +2339,19 @@
        id="node60"
        class="node">
       <title
-         id="title22810">Gottlieb Burckhardt</title>
+         id="title24870">Gottlieb Burckhardt</title>
       <ellipse
-         cx="545.34003"
-         cy="-364.01001"
+         cx="1433.65"
+         cy="-831"
          rx="83.389999"
          ry="18"
-         id="ellipse22812"
+         id="ellipse24872"
          style="fill:none;stroke:#000000" />
       <text
-         x="545.34003"
-         y="-360.31"
+         x="1433.65"
+         y="-827.29999"
          font-size="14.00"
-         id="text22814"
+         id="text24874"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Gottlieb Burckhardt</text>
     </g>
     <!-- Gottlieb Burckhardt&#45;&gt;Eugen Bleuler -->
@@ -2359,15 +2359,15 @@
        id="edge69"
        class="edge">
       <title
-         id="title22817">Gottlieb Burckhardt-&gt;Eugen Bleuler</title>
+         id="title24877">Gottlieb Burckhardt-&gt;Eugen Bleuler</title>
       <path
-         d="m 531.57,-345.98 c -8.41,11.02 -19.31,25.29 -28.61,37.48"
-         id="path22819"
+         d="m 1480.31,-816.02 c 11.89,3.9 24.7,8.12 36.54,12.02 34.72,11.45 73.83,24.41 103.95,34.39"
+         id="path24879"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="500.1,-310.52 505.66,-306.28 496.81,-300.45 "
-         id="polygon22821"
+         points="1620.05,-766.17 1622.26,-772.81 1630.65,-766.34 "
+         id="polygon24881"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Carl Gustav Carus -->
@@ -2375,19 +2375,19 @@
        id="node61"
        class="node">
       <title
-         id="title22824">Carl Gustav Carus</title>
+         id="title24884">Carl Gustav Carus</title>
       <ellipse
-         cx="518.22998"
-         cy="-249.49001"
+         cx="1671.85"
+         cy="-396"
          rx="78"
          ry="18"
-         id="ellipse22826"
+         id="ellipse24886"
          style="fill:none;stroke:#000000" />
       <text
-         x="518.22998"
-         y="-245.78999"
+         x="1671.85"
+         y="-392.29999"
          font-size="14.00"
-         id="text22828"
+         id="text24888"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Carl Gustav Carus</text>
     </g>
     <!-- Carl Gustav Carus&#45;&gt;Carl Jung -->
@@ -2395,15 +2395,15 @@
        id="edge70"
        class="edge">
       <title
-         id="title22831">Carl Gustav Carus-&gt;Carl Jung</title>
+         id="title24891">Carl Gustav Carus-&gt;Carl Jung</title>
       <path
-         d="m 512.41,-231.27 c -0.78,2.45 -1.6,5.02 -2.42,7.59"
-         id="path22833"
+         d="m 1739.33,-386.93 c 25.95,3.53 55.25,7.53 79.61,10.85"
+         id="path24893"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="506.56,-224.47 513.23,-222.34 506.85,-213.88 "
-         id="polygon22835"
+         points="1818.66,-372.58 1819.61,-379.52 1829.04,-374.7 "
+         id="polygon24895"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Théodore Flournoy -->
@@ -2411,19 +2411,19 @@
        id="node62"
        class="node">
       <title
-         id="title22838">Théodore Flournoy</title>
+         id="title24898">Théodore Flournoy</title>
       <ellipse
-         cx="466.92999"
-         cy="-163.59"
+         cx="1671.85"
+         cy="-342"
          rx="82"
          ry="18"
-         id="ellipse22840"
+         id="ellipse24900"
          style="fill:none;stroke:#000000" />
       <text
-         x="466.92999"
-         y="-159.89"
+         x="1671.85"
+         y="-338.29999"
          font-size="14.00"
-         id="text22842"
+         id="text24902"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Théodore Flournoy</text>
     </g>
     <!-- Théodore Flournoy&#45;&gt;Carl Jung -->
@@ -2431,15 +2431,15 @@
        id="edge71"
        class="edge">
       <title
-         id="title22845">Théodore Flournoy-&gt;Carl Jung</title>
+         id="title24905">Théodore Flournoy-&gt;Carl Jung</title>
       <path
-         d="m 485.58,-181.14 c 0.06,-0.06 0.13,-0.11 0.19,-0.17"
-         id="path22847"
+         d="m 1741.82,-351.41 c 25.28,-3.44 53.44,-7.28 76.99,-10.49"
+         id="path24907"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="481.07,-172.08 476.27,-177.18 485.95,-181.49 "
-         id="polygon22849"
+         points="1819.5,-358.47 1818.55,-365.4 1828.93,-363.28 "
+         id="polygon24909"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Johann Wolfgang von Goethe -->
@@ -2447,19 +2447,19 @@
        id="node63"
        class="node">
       <title
-         id="title22852">Johann Wolfgang von Goethe</title>
+         id="title24912">Johann Wolfgang von Goethe</title>
       <ellipse
-         cx="507.87"
-         cy="-143.84"
+         cx="1671.85"
+         cy="-288"
          rx="119"
          ry="18"
-         id="ellipse22854"
+         id="ellipse24914"
          style="fill:none;stroke:#000000" />
       <text
-         x="507.87"
-         y="-140.14"
+         x="1671.85"
+         y="-284.29999"
          font-size="14.00"
-         id="text22856"
+         id="text24916"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Johann Wolfgang von Goethe</text>
     </g>
     <!-- Johann Wolfgang von Goethe&#45;&gt;Carl Jung -->
@@ -2467,15 +2467,15 @@
        id="edge72"
        class="edge">
       <title
-         id="title22859">Johann Wolfgang von Goethe-&gt;Carl Jung</title>
+         id="title24919">Johann Wolfgang von Goethe-&gt;Carl Jung</title>
       <path
-         d="m 505.48,-161.97 c -0.23,-1.73 -0.46,-3.51 -0.7,-5.3"
-         id="path22861"
+         d="m 1750.65,-301.5 c 13.68,-3.58 27.57,-8.02 40.2,-13.5 18.63,-8.08 37.55,-20.62 52.31,-31.58"
+         id="path24921"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="508.21,-168.02 501.27,-167.1 503.44,-177.47 "
-         id="polygon22863"
+         points="1845.5,-343.96 1841.26,-349.53 1851.34,-352.8 "
+         id="polygon24923"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Heraclius -->
@@ -2483,19 +2483,19 @@
        id="node64"
        class="node">
       <title
-         id="title22866">Heraclius</title>
+         id="title24926">Heraclius</title>
       <ellipse
-         cx="468.76001"
-         cy="-131.02"
+         cx="1671.85"
+         cy="-234"
          rx="44.389999"
          ry="18"
-         id="ellipse22868"
+         id="ellipse24928"
          style="fill:none;stroke:#000000" />
       <text
-         x="468.76001"
-         y="-127.32"
+         x="1671.85"
+         y="-230.3"
          font-size="14.00"
-         id="text22870"
+         id="text24930"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Heraclius</text>
     </g>
     <!-- Heraclius&#45;&gt;Carl Jung -->
@@ -2503,15 +2503,15 @@
        id="edge73"
        class="edge">
       <title
-         id="title22873">Heraclius-&gt;Carl Jung</title>
+         id="title24933">Heraclius-&gt;Carl Jung</title>
       <path
-         d="m 477.58,-148.69 c 3.01,-6.03 6.45,-12.92 9.75,-19.54"
-         id="path22875"
+         d="m 1715.8,-236.57 c 23.72,-3.12 52.8,-9.88 75.05,-24.43 30.82,-20.16 54.05,-56.51 67.32,-81.43"
+         id="path24935"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="490.67,-167.07 484.4,-170.2 492,-177.58 "
-         id="polygon22877"
+         points="1861.31,-340.87 1855.08,-344.07 1862.77,-351.36 "
+         id="polygon24937"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- William James -->
@@ -2519,19 +2519,19 @@
        id="node65"
        class="node">
       <title
-         id="title22880">William James</title>
+         id="title24940">William James</title>
       <ellipse
-         cx="438.82999"
-         cy="-120.77"
+         cx="1671.85"
+         cy="-180"
          rx="62.5"
          ry="18"
-         id="ellipse22882"
+         id="ellipse24942"
          style="fill:none;stroke:#000000" />
       <text
-         x="438.82999"
-         y="-117.07"
+         x="1671.85"
+         y="-176.3"
          font-size="14.00"
-         id="text22884"
+         id="text24944"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">William James</text>
     </g>
     <!-- William James&#45;&gt;Carl Jung -->
@@ -2539,15 +2539,15 @@
        id="edge74"
        class="edge">
       <title
-         id="title22887">William James-&gt;Carl Jung</title>
+         id="title24947">William James-&gt;Carl Jung</title>
       <path
-         d="m 453.57,-138.52 c 8.02,-9.66 18.06,-21.75 26.84,-32.33"
-         id="path22889"
+         d="m 1733.43,-183.51 c 19.96,-3.71 41.17,-10.66 57.42,-23.49 43.12,-34.06 64.69,-97.38 74.01,-133.96"
+         id="path24949"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="483.13,-168.64 477.75,-173.12 486.83,-178.57 "
-         id="polygon22891"
+         points="1868.33,-340.41 1861.52,-342.05 1867.27,-350.95 "
+         id="polygon24951"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Pierre Janet -->
@@ -2555,19 +2555,19 @@
        id="node66"
        class="node">
       <title
-         id="title22894">Pierre Janet</title>
+         id="title24954">Pierre Janet</title>
       <ellipse
-         cx="458.37"
-         cy="-101.4"
+         cx="1671.85"
+         cy="-126"
          rx="52"
          ry="18"
-         id="ellipse22896"
+         id="ellipse24956"
          style="fill:none;stroke:#000000" />
       <text
-         x="458.37"
-         y="-97.699997"
+         x="1671.85"
+         y="-122.3"
          font-size="14.00"
-         id="text22898"
+         id="text24958"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Pierre Janet</text>
     </g>
     <!-- Pierre Janet&#45;&gt;Carl Jung -->
@@ -2575,15 +2575,15 @@
        id="edge75"
        class="edge">
       <title
-         id="title22901">Pierre Janet-&gt;Carl Jung</title>
+         id="title24961">Pierre Janet-&gt;Carl Jung</title>
       <path
-         d="m 466.59,-119.58 c 6.3,-13.91 15.09,-33.32 22.21,-49.06"
-         id="path22903"
+         d="m 1723.98,-127 c 22.82,-2.93 48.63,-9.99 66.87,-26 56.03,-49.2 72.88,-141.33 77.9,-187.75"
+         id="path24963"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="492.05,-167.33 485.67,-170.21 492.98,-177.88 "
-         id="polygon22905"
+         points="1872.23,-340.43 1865.27,-341.1 1869.72,-350.72 "
+         id="polygon24965"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Meister Eckhart -->
@@ -2591,19 +2591,19 @@
        id="node67"
        class="node">
       <title
-         id="title22908">Meister Eckhart</title>
+         id="title24968">Meister Eckhart</title>
       <ellipse
-         cx="483.54999"
-         cy="-96.940002"
+         cx="1671.85"
+         cy="-72"
          rx="67.690002"
          ry="18"
-         id="ellipse22910"
+         id="ellipse24970"
          style="fill:none;stroke:#000000" />
       <text
-         x="483.54999"
-         y="-93.239998"
+         x="1671.85"
+         y="-68.300003"
          font-size="14.00"
-         id="text22912"
+         id="text24972"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Meister Eckhart</text>
     </g>
     <!-- Meister Eckhart&#45;&gt;Carl Jung -->
@@ -2611,15 +2611,15 @@
        id="edge76"
        class="edge">
       <title
-         id="title22915">Meister Eckhart-&gt;Carl Jung</title>
+         id="title24975">Meister Eckhart-&gt;Carl Jung</title>
       <path
-         d="m 486.76,-115.05 c 2.61,-14.75 6.35,-35.84 9.34,-52.74"
-         id="path22917"
+         d="m 1738.72,-74.75 c 18.83,-3.81 38.03,-11.02 52.13,-24.25 69.17,-64.94 79.44,-186.58 80.36,-241.64"
+         id="path24977"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="499.55,-167.23 492.66,-168.45 497.85,-177.69 "
-         id="polygon22919"
+         points="1874.71,-340.7 1867.71,-340.75 1871.28,-350.72 "
+         id="polygon24979"
          style="fill:#000000;stroke:#000000" />
     </g>
     <!-- Friedrich Schiller -->
@@ -2627,19 +2627,19 @@
        id="node68"
        class="node">
       <title
-         id="title22922">Friedrich Schiller</title>
+         id="title24982">Friedrich Schiller</title>
       <ellipse
-         cx="507.31"
-         cy="-98.610001"
+         cx="1671.85"
+         cy="-18"
          rx="73"
          ry="18"
-         id="ellipse22924"
+         id="ellipse24984"
          style="fill:none;stroke:#000000" />
       <text
-         x="507.31"
-         y="-94.910004"
+         x="1671.85"
+         y="-14.3"
          font-size="14.00"
-         id="text22926"
+         id="text24986"
          style="font-size:14px;font-family:'Times New Roman', serif;text-anchor:middle">Friedrich Schiller</text>
     </g>
     <!-- Friedrich Schiller&#45;&gt;Carl Jung -->
@@ -2647,15 +2647,15 @@
        id="edge77"
        class="edge">
       <title
-         id="title22929">Friedrich Schiller-&gt;Carl Jung</title>
+         id="title24989">Friedrich Schiller-&gt;Carl Jung</title>
       <path
-         d="m 506.13,-116.87 c -0.92,-14.23 -2.21,-34.26 -3.27,-50.56"
-         id="path22931"
+         d="m 1743.71,-21.36 c 17.31,-4.02 34.47,-11.19 47.14,-23.64 42.44,-41.72 68.28,-225.16 76.83,-295.97"
+         id="path24991"
          inkscape:connector-curvature="0"
          style="fill:none;stroke:#000000" />
       <polygon
-         points="506.35,-167.75 499.36,-167.3 502.21,-177.51 "
-         id="polygon22933"
+         points="1871.17,-340.61 1864.21,-341.43 1868.86,-350.95 "
+         id="polygon24993"
          style="fill:#000000;stroke:#000000" />
     </g>
   </g>

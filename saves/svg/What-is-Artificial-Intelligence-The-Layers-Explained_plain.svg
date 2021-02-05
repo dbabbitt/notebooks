@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg-wiaitle"
+   viewBox="0 0 3367.8 1623.2"
+   version="1.1">
+  <metadata
+	 id="metadata-wiaitle">
+	<rdf:RDF>
+	  <cc:Work
+		 rdf:about="">
+		<dc:format>image/svg+xml</dc:format>
+		<dc:type
+		   rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+		<dc:title></dc:title>
+	  </cc:Work>
+	</rdf:RDF>
+  </metadata>
+  <defs
+	 id="defs-wiaitle">
+	<marker
+	   orient="auto"
+	   overflow="visible"
+	   id="triangleMarkerEnding">
+	  <path
+		 id="path-line-ending"
+		 stroke-width="1pt"
+		 stroke="#fff"
+		 fill-rule="evenodd"
+		 fill="#fff"
+		 d="m5.77 0-8.65 5v-10z"
+		 transform="scale(.2)" />
+	</marker>
+	<circle
+	   fill="#fff"
+	   r="30"
+	   id="whiteDot" />
+	<symbol
+	   orient="auto"
+	   overflow="visible"
+	   id="greyDashedLine">
+	  <path
+		 d="m 0,0 h 922"
+		 class="greyDashedLineStyle"
+		 id="path-grey-dashed-line" />
+	</symbol>
+  </defs>
+  <style
+	 id="style-wiaitle"
+	 type="text/css">
+		.greyDashedLineStyle {
+			fill: none;
+			stroke: #969696;
+			stroke-width: 10;
+			stroke-linecap: butt;
+			stroke-linejoin: round;
+			stroke-opacity: 1;
+			font-variant-east_asian: normal;
+			opacity: 1;
+			vector-effect: none;
+			fill-opacity: 1;
+			stroke-miterlimit: 4;
+			stroke-dasharray: 60, 60;
+			stroke-dashoffset: 0;
+		}
+		.mlStyle {
+			fill: none;
+			stroke: #ffffff;
+			stroke-width: 4;
+			stroke-linejoin: round;
+		}
+		.explanationText {
+			fill: #646464;
+			font-family: sans-serif;
+			font-feature-settings: normal;
+			font-size: 53.33300018px;
+			font-variant-alternates: normal;
+			font-variant-caps: normal;
+			font-variant-ligatures: normal;
+			font-variant-numeric: normal;
+			font-variant-position: normal;
+			font-weight: bold;
+			letter-spacing: 0px;
+			line-height: 1.25;
+			shape-padding: 0;
+			text-decoration-color: #000000;
+			text-decoration-line: none;
+			text-decoration-style: solid;
+			text-indent: 0;
+			text-orientation: mixed;
+			text-transform: none;
+			white-space: normal;
+			word-spacing: 0px;
+		}
+		.headerText {
+			dominant-baseline: auto;
+			font-family: sans-serif;
+			font-feature-settings: normal;
+			font-size: 64px;
+			font-variant-alternates: normal;
+			font-variant-caps: normal;
+			font-variant-ligatures: normal;
+			font-variant-numeric: normal;
+			font-variant-position: normal;
+			font-weight: bold;
+			letter-spacing: 0px;
+			line-height: 1.25;
+			shape-padding: 0;
+			text-align: center;
+			text-anchor: left;
+			text-decoration-line: none;
+			text-decoration-style: solid;
+			text-indent: 0;
+			text-orientation: mixed;
+			text-transform: none;
+			white-space: normal;
+			word-spacing: 0px;
+		}
+		.normalText {
+			font-feature-settings: normal;
+			font-variant-caps: normal;
+			font-variant-ligatures: normal;
+			font-variant-numeric: normal;
+			line-height: 1.25;
+		}
+		.labelText {
+			fill: #ffffff;
+			font-family: 'Bookman Old Style';
+			font-size: 58.667px;
+			font-weight: 600;
+			letter-spacing: 0px;
+			text-align: center;
+			text-anchor: middle;
+			word-spacing: 0px;
+		}
+		.aiColor {
+			fill: #09436f;
+			text-decoration-color: #09436f;
+		}
+		.mlColor {
+			fill: #096181;
+			text-decoration-color: #096181;
+		}
+		.nnColor {
+			fill: #097f93;
+			text-decoration-color: #097f93;
+		}
+		.dlColor {
+			fill: #099da5;
+			text-decoration-color: #099da5;
+		}
+	</style>
+  <g
+	 id="venn-diagram"
+	 stroke-width="4"
+	 stroke="#fff">
+	<circle
+	   id="circle-artificial-intelligence"
+	   class="aiColor"
+	   r="800"
+	   cy="802"
+	   cx="802" />
+	<circle
+	   id="circle-machine-learning"
+	   class="mlColor"
+	   r="600"
+	   cy="1002"
+	   cx="802" />
+	<circle
+	   id="circle-neural-network"
+	   class="nnColor"
+	   r="400"
+	   cy="1202"
+	   cx="802" />
+	<circle
+	   id="circle-deep-learning"
+	   class="dlColor"
+	   r="200"
+	   cy="1402"
+	   cx="802" />
+  </g>
+  <use
+	 id="dashed-line-ai"
+	 y="118"
+	 x="900"
+	 xlink:href="#greyDashedLine" />
+  <use
+	 id="dot-ai"
+	 xlink:href="#whiteDot"
+	 y="118"
+	 x="900" />
+  <g
+	 id="text-explanation-ai"
+	 class="explanationText">
+	<text
+	   id="text-A-technique"
+	   y="175"
+	   x="1822">A technique which enables machines</text>
+	<text
+	   id="text-to-mimic"
+	   y="241"
+	   x="1822">to mimic human behavior</text>
+  </g>
+  <text
+	 id="header-explanation-ai"
+	 class="headerText aiColor"
+	 word-spacing="0px"
+	 text-anchor="left"
+	 text-align="center"
+	 letter-spacing="0px"
+	 font-weight="bold"
+	 font-size="64px"
+	 font-family="sans-serif"
+	 dominant-baseline="auto"
+	 y="118"
+	 x="1822">Artificial Intelligence (AI)</text>
+  <text
+	 id="label-ai"
+	 class="normalText labelText"
+	 y="250.63123"
+	 x="802.97412">Artificial Intelligence</text>
+  <g
+	 id="brain-icon-ai"
+	 stroke-width="2.9141">
+	<path
+	   id="background-icon-ai"
+	   class="aiColor"
+	   d="m802.88 136.79h-2.3313c-29.141 0-52.746-23.896-52.746-52.746v-15.736c0-24.77 20.399-45.169 45.169-45.169h18.068c24.77 0 45.169 20.399 45.169 45.169v15.736c-0.29141 28.85-24.187 52.746-53.329 52.746z" />
+	<path
+	   id="right-hemisphere-icon-ai"
+	   class="mlColor"
+	   d="m802 37.131v42.255h-45.46v-24.187l11.365-15.445 19.816-8.7424" />
+	<path
+	   id="left-hemisphere-icon-ai"
+	   class="dlColor"
+	   d="m802 37.131v42.255h45.46v-24.187l-11.365-15.445-19.816-8.7424" />
+  </g>
+  <g
+	 id="faceplate-icon-ai"
+	 stroke-miterlimit="10"
+	 stroke="#fff">
+	<path
+	   id="brain-circuitry-icon-ai"
+	   stroke-width="3.7359"
+	   stroke-linejoin="round"
+	   stroke-linecap="round"
+	   fill="none"
+	   d="m802 36.548-11.074-4.3712c-1.7485-1.4571-4.0798-1.4571-6.1197-0.58282l-15.736 7.8681c-1.1656 0.29141-1.7485 0.87424-2.6227 1.7485l-9.3252 12.239c-0.87423 1.1657-1.4571 2.6227-1.4571 4.0798v22.147h92.669v-22.147c0-1.4571-0.58282-2.9141-1.4571-4.0798l-9.3252-12.239c-0.58283-0.87424-1.4571-1.4571-2.3313-2.0399l-15.736-7.5767c-2.0399-0.87424-4.3712-0.87424-6.1197 0.58282z" />
+	<circle
+	   id="right-eye-icon-ai"
+	   stroke-width="3.4532"
+	   class="aiColor"
+	   r="7.5767"
+	   cy="98.91"
+	   cx="781.02" />
+	<circle
+	   id="left-eye-icon-ai"
+	   stroke-width="3.4532"
+	   class="aiColor"
+	   r="7.5767"
+	   cy="98.91"
+	   cx="822.69" />
+	<circle
+	   id="center-node-icon-ai"
+	   stroke-width="2.987"
+	   fill="#fff"
+	   r="5.5368"
+	   cy="63.649"
+	   cx="802" />
+  </g>
+  <g
+	 id="left-circuitry-icon-ai"
+	 stroke-miterlimit="10"
+	 stroke="#fff"
+	 fill="none">
+	<path
+	   id="center-wire-icon-ai"
+	   stroke-width="2.987"
+	   d="m802 36.548v20.982" />
+	<circle
+	   id="top-node-left-hemisphere-icon-ai"
+	   stroke-width="2.9025"
+	   r="4.3712"
+	   cy="49.661"
+	   cx="819.2" />
+	<circle
+	   id="bottom-node-left-hemisphere-icon-ai"
+	   stroke-width="2.9025"
+	   r="4.3712"
+	   cy="62.192"
+	   cx="834.06" />
+	<path
+	   id="left-hemisphere-wires-icon-ai"
+	   stroke-width="2.4187"
+	   d="m827.65 37.131-6.4111 8.7424m16.611 14.279 9.0338-4.0798" />
+  </g>
+  <g
+	 id="right-hemisphere-nodes-icon-ai"
+	 stroke-miterlimit="10"
+	 stroke="#fff">
+	<circle
+	   id="top-node-right-hemisphere-icon-ai"
+	   stroke-width="2.9025"
+	   fill="#fff"
+	   r="4.3712"
+	   cy="49.661"
+	   cx="784.23" />
+	<circle
+	   id="bottom-node-right-hemisphere-icon-ai"
+	   stroke-width="2.4187"
+	   fill="#fff"
+	   r="3.7884"
+	   cy="62.192"
+	   cx="769.66" />
+	<path
+	   id="right-hemisphere-wires-icon-ai"
+	   stroke-width="2.4187"
+	   fill="none"
+	   d="m776.07 37.131 6.1197 8.7424m-25.644 10.199 9.3252 4.0798" />
+  </g>
+  <path
+	 id="mouth-icon-ai"
+	 stroke-width="2.9141"
+	 fill="#fff"
+	 d="m811.62 124.56h-19.525c-1.1656 0-2.0399-0.87423-2.0399-2.0399v-0.58282c0-1.1656 0.87424-2.0399 2.0399-2.0399h19.525c1.1656 0 2.0399 0.87424 2.0399 2.0399v0.58282c0 1.1657-0.87424 2.0399-2.0399 2.0399z" />
+  <use
+	 id="dashed-line-ml"
+	 y="534"
+	 x="900"
+	 xlink:href="#greyDashedLine" />
+  <use
+	 id="dot-ml"
+	 xlink:href="#whiteDot"
+	 y="534"
+	 x="900" />
+  <g
+	 id="text-explanation-ml"
+	 class="explanationText">
+	<text
+	   id="text-An-AI"
+	   y="591"
+	   x="1822">An AI technique which uses</text>
+	<text
+	   id="text-statistical-methods"
+	   y="657"
+	   x="1822">statistical methods to enable machines</text>
+	<text
+	   id="text-to-improve"
+	   y="723"
+	   x="1822">to improve with experience</text>
+  </g>
+  <text
+	 id="header-explanation-ml"
+	 class="headerText mlColor"
+	 y="534"
+	 x="1822">Machine Learning (ML)</text>
+  <text
+	 id="label-ml"
+	 class="normalText labelText"
+	 y="633.81763"
+	 x="800.79706">Machine Learning</text>
+  <g
+	 id="icon-ml"
+	 stroke-linejoin="round"
+	 stroke="#fff"
+	 fill="none">
+	<path
+	   id="top-curve-icon-ml"
+	   stroke-width="4.9836"
+	   d="m852.37 482.27c-6.2296-21.679-26.538-37.627-50.335-37.627-23.797 0.12459-43.731 16.072-50.086 37.627"
+	   class="mlStyle" />
+	<path
+	   id="top-arrowhead-icon-ml"
+	   stroke-width="4"
+	   stroke-opacity="null"
+	   stroke-linecap="null"
+	   fill-opacity="null"
+	   d="m859.6 463.71-7.2263 18.564-17.817-6.8525" />
+	<path
+	   id="bottom-curve-icon-ml"
+	   stroke-width="4.9836"
+	   d="m752.2 511.68c6.3542 21.679 26.663 37.627 50.335 37.627s43.732-16.072 50.086-37.627"
+	   class="mlStyle" />
+	<path
+	   id="bottom-arrowhead-icon-ml"
+	   stroke-width="4"
+	   stroke-opacity="null"
+	   stroke-linecap="null"
+	   fill-opacity="null"
+	   d="m744.4 524.58 5.8-14.9 14.3 5.5" />
+	<g
+	   id="gear-icon-ml"
+	   stroke-width="4.9836">
+	  <circle
+		 id="gear-ring-icon-ml"
+		 r="10.341"
+		 cy="496.98"
+		 cx="802.29"
+		 class="mlStyle" />
+	  <path
+		 id="gear-teeth-icon-ml"
+		 d="m797.43 516.91 1.1213 7.6001c2.4918 0.24918 5.1082 0.24918 7.6001 0l1.1213-7.6001c2.118-0.49837 3.9869-1.3705 5.8558-2.4918l5.9804 4.6099c1.9935-1.4951 3.8623-3.364 5.482-5.482l-4.6099-5.9804c1.1213-1.8689 1.8689-3.8623 2.4918-5.8558l7.6001-1.1213c0.24918-2.6164 0.24918-5.1082 0-7.6001l-7.6001-0.99673c-0.49836-2.118-1.3705-3.9869-2.4918-5.9804l4.6099-5.9804c-1.4951-1.8689-3.2394-3.8623-5.482-5.482l-5.9804 4.6099c-1.8689-1.1213-3.8623-1.8689-5.9804-2.4918l-0.87214-7.2263c-2.4918-0.24919-5.1082-0.24919-7.6001 0l-1.1213 7.4755c-2.118 0.49836-3.9869 1.3705-5.9804 2.4918l-5.9804-4.6099c-1.9935 1.4951-3.8623 3.2394-5.482 5.482l4.6099 5.9804c-1.1213 1.8689-1.8689 3.8623-2.4918 5.9804l-7.7247 0.99673c-0.24918 2.4918-0.24918 5.1082 0 7.6001l7.6001 1.1213c0.49836 2.118 1.3705 3.9869 2.4918 5.8558l-4.6099 5.9804c1.4951 1.9935 3.364 3.8623 5.482 5.482l5.9804-4.6099c1.8689 0.99673 3.8623 1.8689 5.9804 2.2426z"
+		 class="mlStyle" />
+	</g>
+  </g>
+  <use
+	 id="dashed-line-nn"
+	 y="925"
+	 x="900"
+	 xlink:href="#greyDashedLine" />
+  <use
+	 id="white-dot-nn"
+	 xlink:href="#whiteDot"
+	 height="100%"
+	 width="100%"
+	 y="925"
+	 x="900" />
+  <g
+	 id="text-explanation-nn"
+	 class="explanationText">
+	<text
+	   id="text-An-ML"
+	   y="982"
+	   x="1822">An ML technique inspired by neurons in</text>
+	<text
+	   id="text-the-brain"
+	   y="1048"
+	   x="1822">the brain, solving for the weights of</text>
+	<text
+	   id="text-linear-equations"
+	   y="1114"
+	   x="1822">linear equations</text>
+  </g>
+  <text
+	 id="header-explanation-nn"
+	 class="headerText nnColor"
+	 y="925"
+	 x="1822">Artificial Neural Networks (ANN)</text>
+  <g
+	 id="label-nn"
+	 class="normalText labelText">
+	<text
+	   id="text-Artificial-Neural"
+	   y="1033.606"
+	   x="802.258">Artificial Neural</text>
+	<text
+	   id="text-Networks"
+	   y="1106.9392"
+	   x="802.258">Networks</text>
+  </g>
+  <path
+	 id="right-node-icon-nn"
+	 class="dlColor"
+	 d="m860.28 888.98c2e-3 6.5045-5.2702 11.778-11.775 11.778s-11.777-5.274-11.775-11.778c-2e-3 -6.5045 5.2702-11.778 11.775-11.778s11.777 5.274 11.775 11.778z" />
+  <path
+	 id="bottom-middle-to-right-edge-icon-nn"
+	 stroke-width="3.2784"
+	 stroke="#fff"
+	 marker-end="url(#triangleMarkerEnding)"
+	 fill="none"
+	 d="m806.37 936.7 34.958-38.842" />
+  <path
+	 id="bottom-middle-node-icon-nn"
+	 class="aiColor"
+	 d="m813.84 941.29c2e-3 6.5045-5.2702 11.778-11.775 11.778s-11.777-5.274-11.775-11.778c-2e-3 -6.5045 5.2702-11.778 11.775-11.778s11.777 5.274 11.775 11.778z" />
+  <path
+	 id="second-middle-to-right-edge-icon-nn"
+	 stroke-width="4.098"
+	 stroke="#fff"
+	 marker-end="url(#triangleMarkerEnding)"
+	 fill="none"
+	 d="m802.48 872.08 34.958 13.065" />
+  <path
+	 id="bottom-left-to-bottom-middle-edge-icon-nn"
+	 stroke-width="4.098"
+	 stroke="#fff"
+	 marker-end="url(#triangleMarkerEnding)"
+	 fill="none"
+	 d="m756.93 918.69 34.605 18.009" />
+  <path
+	 id="second-middle-node-icon-nn"
+	 class="aiColor"
+	 d="m813.84 871.71c2e-3 6.5045-5.2702 11.778-11.775 11.778s-11.777-5.274-11.775-11.778c-2e-3 -6.5045 5.2702-11.778 11.775-11.778s11.777 5.274 11.775 11.778z" />
+  <path
+	 id="bottom-left-to-second-middle-edge-icon-nn"
+	 stroke-width="2.049"
+	 stroke="#fff"
+	 marker-end="url(#triangleMarkerEnding)"
+	 fill="none"
+	 d="m757.28 917.99 36.018-38.489" />
+  <path
+	 id="third-middle-to-right-edge-icon-nn"
+	 stroke-width="2.049"
+	 stroke="#fff"
+	 marker-end="url(#triangleMarkerEnding)"
+	 fill="none"
+	 d="m805.31 904.92 33.193-12.359" />
+  <path
+	 id="third-middle-node-icon-nn"
+	 class="aiColor"
+	 d="m813.84 906.5c2e-3 6.5045-5.2702 11.778-11.775 11.778s-11.777-5.274-11.775-11.778c-2e-3 -6.5045 5.2702-11.778 11.775-11.778s11.777 5.274 11.775 11.778z" />
+  <path
+	 id="bottom-left-to-third-middle-edge-icon-nn"
+	 stroke-width="3.2784"
+	 stroke="#fff"
+	 marker-end="url(#triangleMarkerEnding)"
+	 fill="none"
+	 d="m757.64 919.04 32.486-9.5341" />
+  <path
+	 id="bottom-left-node-icon-nn"
+	 class="mlColor"
+	 d="m767.27 918.32c2e-3 6.5045-5.2702 11.778-11.775 11.778s-11.777-5.274-11.775-11.778c-2e-3 -6.5045 5.2702-11.778 11.775-11.778s11.777 5.274 11.775 11.778z" />
+  <path
+	 id="top-left-to-third-middle-edge-icon-nn"
+	 stroke-width="3.2784"
+	 stroke="#fff"
+	 marker-end="url(#triangleMarkerEnding)"
+	 fill="none"
+	 d="m758.34 862.9 34.958 34.252" />
+  <path
+	 id="top-middle-to-right-edge-icon-nn"
+	 stroke-width="2.049"
+	 stroke="#fff"
+	 marker-end="url(#triangleMarkerEnding)"
+	 fill="none"
+	 d="m804.25 838.53 37.077 41.314" />
+  <path
+	 id="top-middle-node-icon-nn"
+	 class="aiColor"
+	 d="m813.84 836.92c2e-3 6.5045-5.2702 11.778-11.775 11.778s-11.777-5.274-11.775-11.778c-2e-3 -6.5045 5.2702-11.778 11.775-11.778s11.777 5.274 11.775 11.778z" />
+  <path
+	 id="top-left-to-top-middle-edge-icon-nn"
+	 stroke-width="4.098"
+	 stroke="#fff"
+	 marker-end="url(#triangleMarkerEnding)"
+	 fill="none"
+	 d="m756.93 859.37 34.605-18.715" />
+  <path
+	 id="top-left-to-second-middle-edge-icon-nn"
+	 stroke-width="4.098"
+	 stroke="#fff"
+	 marker-end="url(#triangleMarkerEnding)"
+	 fill="none"
+	 d="m757.64 860.43 33.546 8.8278" />
+  <path
+	 id="top-left-node-icon-nn"
+	 class="mlColor"
+	 d="m767.27 860.01c2e-3 6.5045-5.2702 11.778-11.775 11.778s-11.777-5.274-11.775-11.778c-2e-3 -6.5045 5.2702-11.778 11.775-11.778s11.777 5.274 11.775 11.778z" />
+  <use
+	 id="dashed-line-dl"
+	 xlink:href="#greyDashedLine"
+	 y="1290"
+	 x="900" />
+  <use
+	 id="white-dot-dl"
+	 xlink:href="#whiteDot"
+	 y="1290"
+	 x="900" />
+  <g
+	 id="text-explanation-dl"
+	 class="explanationText">
+	<text
+	   id="text-An-ANN"
+	   y="1347"
+	   x="1822">An ANN technique which uses many</text>
+	<text
+	   id="text-hidden-layers"
+	   y="1413"
+	   x="1822">hidden layers to automate the</text>
+	<text
+	   id="text-building-of"
+	   y="1479"
+	   x="1822">building of a hierarchy of data</text>
+	<text
+	   id="text-representations"
+	   y="1545"
+	   x="1822">representations</text>
+  </g>
+  <text
+	 id="header-explanation-dl"
+	 class="headerText dlColor"
+	 y="1290"
+	 x="1822">Deep Learning (DL)</text>
+  <g
+	 id="label-dl"
+	 class="normalText labelText">
+	<text
+	   id="text-Deep"
+	   y="1369.9279"
+	   x="800.76843">Deep</text>
+	<text
+	   id="text-Learning"
+	   y="1443.2612"
+	   x="800.76843">Learning</text>
+  </g>
+  <g
+	 id="icon-deep-learning"
+	 stroke-width="1.4458">
+	<g
+	   id="right-nodes-icon-dl"
+	   class="aiColor">
+	  <circle
+		 id="fourth-right-node-icon-dl"
+		 r="2.8917"
+		 cy="1270.2"
+		 cx="836.62" />
+	  <circle
+		 id="fifth-right-node-icon-dl"
+		 r="2.8917"
+		 cy="1283.2"
+		 cx="836.62" />
+	  <circle
+		 id="sixth-right-node-icon-dl"
+		 r="2.8917"
+		 cy="1296.2"
+		 cx="836.62" />
+	  <circle
+		 id="bottom-right-node-icon-dl"
+		 r="2.8917"
+		 cy="1309.2"
+		 cx="836.62" />
+	  <circle
+		 id="third-right-node-icon-dl"
+		 r="2.8917"
+		 cy="1257.1"
+		 cx="836.62" />
+	  <circle
+		 id="second-right-node-icon-dl"
+		 r="2.8917"
+		 cy="1244.1"
+		 cx="836.62" />
+	  <circle
+		 id="top-right-node-icon-dl"
+		 r="2.8917"
+		 cy="1231.1"
+		 cx="836.62" />
+	</g>
+	<g
+	   id="left-dl-nodes"
+	   class="mlColor">
+	  <circle
+		 id="top-left-node-icon-dl"
+		 r="5.7833"
+		 cy="1232.6"
+		 cx="761.43" />
+	  <circle
+		 id="second-left-node-icon-dl"
+		 r="5.7833"
+		 cy="1251.4"
+		 cx="761.43" />
+	  <circle
+		 id="third-left-node-icon-dl"
+		 r="5.7833"
+		 cy="1270.2"
+		 cx="761.43" />
+	  <circle
+		 id="fourth-left-node-icon-dl"
+		 r="5.7833"
+		 cy="1289"
+		 cx="761.43" />
+	  <circle
+		 id="bottom-left-node-icon-dl"
+		 r="5.7833"
+		 cy="1307.8"
+		 cx="761.43" />
+	</g>
+	<g
+	   id="hidden-dl-nodes"
+	   class="aiColor">
+	  <circle
+		 id="top-hidden-node-icon-dl"
+		 r="5.7833"
+		 cy="1251.4"
+		 cx="786.01" />
+	  <circle
+		 id="second-hidden-node-icon-dl"
+		 r="5.7833"
+		 cy="1270.2"
+		 cx="786.01" />
+	  <circle
+		 id="bottom-hidden-node-icon-dl"
+		 r="5.7833"
+		 cy="1289"
+		 cx="786.01" />
+	</g>
+	<path
+	   id="summing-dl-bar"
+	   class="nnColor"
+	   d="m804.81 1296.2c-1.5976 0-2.8917-1.2941-2.8917-2.8917v-47.712c0-1.5976 1.294-2.8916 2.8917-2.8916s2.8916 1.294 2.8916 2.8916v47.712c0 1.5976-1.294 2.8917-2.8916 2.8917z" />
+	<g
+	   id="circuitry-icon-dl"
+	   fill="#fff">
+	  <path
+		 id="main-circuitry-icon-dl"
+		 d="m812.04 1249.9c0.38315 0 0.75183-0.1518 1.0222-0.4236l16.926-16.926h2.5591c0.59857 1.6786 2.189 2.8916 4.0714 2.8916 2.3914 0 4.3375-1.9461 4.3375-4.3375s-1.9461-4.3374-4.3375-4.3374c-1.8825 0-3.4729 1.213-4.0714 2.8916h-3.1577c-0.38315 0-0.75183 0.1518-1.0222 0.4236l-16.926 16.926h-2.2931v-1.4458c0-2.3914-1.9461-4.3375-4.3375-4.3375s-4.3375 1.9461-4.3375 4.3375v4.3375h-7.3752c-0.67231-3.2951-3.5914-5.7833-7.0831-5.7833-1.8102 0-3.4468 0.6925-4.7163 1.7957l-13.383-10.219c0.46555-0.9557 0.74894-2.0126 0.74894-3.1432 0-3.9862-3.243-7.2292-7.2291-7.2292s-7.2291 3.243-7.2291 7.2292c0 3.9861 3.243 7.2291 7.2291 7.2291 1.8102 0 3.4468-0.6926 4.7163-1.7957l13.383 10.219c-0.2617 0.5364-0.48002 1.0959-0.60291 1.6959h-10.413c-0.67231-3.2936-3.5929-5.7818-7.0831-5.7818-3.9862 0-7.2291 3.243-7.2291 7.2291 0 3.9862 3.243 7.2292 7.2291 7.2292 1.8102 0 3.4468-0.6926 4.7163-1.7958l5.1905 3.9645-5.1905 3.9645c-1.2694-1.1032-2.9061-1.7958-4.7163-1.7958-3.9862 0-7.2291 3.243-7.2291 7.2292 0 3.9861 3.243 7.2291 7.2291 7.2291 1.8102 0 3.4468-0.6925 4.7163-1.7957l5.1905 3.9644-5.1905 3.9645c-1.2694-1.1032-2.9061-1.7957-4.7163-1.7957-3.9862 0-7.2291 3.243-7.2291 7.2291 0 3.9862 3.243 7.2292 7.2291 7.2292 3.4902 0 6.4108-2.4883 7.0831-5.7833h10.413c0.12289 0.6 0.34121 1.1595 0.60291 1.6959l-13.383 10.219c-1.2694-1.1017-2.9061-1.7943-4.7163-1.7943-3.9862 0-7.2291 3.243-7.2291 7.2292 0 3.9861 3.243 7.2291 7.2291 7.2291s7.2291-3.243 7.2291-7.2291c0-1.1307-0.28339-2.1876-0.74894-3.1418l13.383-10.219c1.2694 1.1017 2.9061 1.7943 4.7163 1.7943 3.4902 0 6.4108-2.4883 7.0831-5.7833h7.3752v2.8916c0 2.3914 1.9461 4.3375 4.3375 4.3375s4.3375-1.9461 4.3375-4.3375h2.2931l16.926 16.926c0.27037 0.2718 0.63905 0.4236 1.0222 0.4236h3.1577c0.59857 1.6786 2.189 2.8917 4.0714 2.8917 2.3914 0 4.3375-1.9461 4.3375-4.3375s-1.9461-4.3375-4.3375-4.3375c-1.8825 0-3.4729 1.2131-4.0714 2.8917h-2.5591l-16.926-16.926c-0.27037-0.2718-0.63905-0.4236-1.0222-0.4236h-2.8916v-4.3375h6.6306l11.143 11.143c0.27037 0.2718 0.63906 0.4236 1.0222 0.4236h4.6035c0.59857 1.6786 2.189 2.8916 4.0714 2.8916 2.3914 0 4.3375-1.946 4.3375-4.3374s-1.9461-4.3375-4.3375-4.3375c-1.8825 0-3.4729 1.213-4.0714 2.8916h-4.005l-11.143-11.143c-0.27037-0.2718-0.63905-0.4236-1.0222-0.4236h-7.2291v-4.3375h12.414l5.3597 5.3597c0.27037 0.2718 0.63906 0.4236 1.0222 0.4236h4.6035c0.59857 1.6786 2.189 2.8917 4.0714 2.8917 2.3914 0 4.3375-1.9461 4.3375-4.3375s-1.9461-4.3375-4.3375-4.3375c-1.8825 0-3.4729 1.2131-4.0714 2.8917h-4.005l-5.3597-5.3597c-0.27037-0.2718-0.63905-0.4236-1.0222-0.4236h-13.012v-4.3375h23.399c0.59857 1.6786 2.189 2.8917 4.0714 2.8917 2.3914 0 4.3375-1.9461 4.3375-4.3375s-1.9461-4.3375-4.3375-4.3375c-1.8825 0-3.4729 1.213-4.0714 2.8916h-23.399v-4.3374h13.012c0.38315 0 0.75183-0.1519 1.0222-0.4237l5.3597-5.3596h4.005c0.59857 1.6786 2.189 2.8916 4.0714 2.8916 2.3914 0 4.3375-1.9461 4.3375-4.3375s-1.9461-4.3375-4.3375-4.3375c-1.8825 0-3.4729 1.2131-4.0714 2.8917h-4.6035c-0.38314 0-0.75183 0.1518-1.0222 0.4236l-5.3597 5.3597h-12.414v-4.3375h7.2291c0.38315 0 0.75183-0.1518 1.0222-0.4236l11.143-11.143h4.005c0.59857 1.6786 2.189 2.8917 4.0714 2.8917 2.3914 0 4.3375-1.9461 4.3375-4.3375s-1.9461-4.3375-4.3375-4.3375c-1.8825 0-3.4729 1.213-4.0714 2.8917h-4.6035c-0.38314 0-0.75183 0.1518-1.0222 0.4236l-11.143 11.143h-6.6306v-4.3375zm24.579-20.242c0.79666 0 1.4458 0.6477 1.4458 1.4458s-0.64917 1.4459-1.4458 1.4459c-0.79665 0-1.4458-0.6478-1.4458-1.4459s0.64917-1.4458 1.4458-1.4458zm0 78.075c0.79666 0 1.4458 0.6477 1.4458 1.4458s-0.64917 1.4458-1.4458 1.4458c-0.79665 0-1.4458-0.6477-1.4458-1.4458s0.64917-1.4458 1.4458-1.4458zm0-13.012c0.79666 0 1.4458 0.6478 1.4458 1.4459s-0.64917 1.4458-1.4458 1.4458c-0.79665 0-1.4458-0.6477-1.4458-1.4458s0.64917-1.4459 1.4458-1.4459zm0-13.012c0.79666 0 1.4458 0.6477 1.4458 1.4458s-0.64917 1.4458-1.4458 1.4458c-0.79665 0-1.4458-0.6477-1.4458-1.4458s0.64917-1.4458 1.4458-1.4458zm0-13.012c0.79666 0 1.4458 0.6478 1.4458 1.4459s-0.64917 1.4458-1.4458 1.4458c-0.79665 0-1.4458-0.6477-1.4458-1.4458s0.64917-1.4459 1.4458-1.4459zm0-13.012c0.79666 0 1.4458 0.6477 1.4458 1.4458s-0.64917 1.4459-1.4458 1.4459c-0.79665 0-1.4458-0.6478-1.4458-1.4459s0.64917-1.4458 1.4458-1.4458zm0-13.012c0.79666 0 1.4458 0.6477 1.4458 1.4458s-0.64917 1.4458-1.4458 1.4458c-0.79665 0-1.4458-0.6477-1.4458-1.4458s0.64917-1.4458 1.4458-1.4458zm-43.521 10.121h7.3752v15.904h-7.3752c-0.67231-3.295-3.5914-5.7833-7.0831-5.7833-1.8102 0-3.4468 0.6926-4.7163 1.7958l-5.1905-3.9645 5.1905-3.9645c1.2694 1.1032 2.9061 1.7958 4.7163 1.7958 3.4902 0 6.4108-2.4883 7.0831-5.7834zm-11.421 17.35c0-2.3914 1.9461-4.3375 4.3375-4.3375s4.3375 1.9461 4.3375 4.3375-1.9461 4.3375-4.3375 4.3375-4.3375-1.9461-4.3375-4.3375zm4.3375-23.133c2.3914 0 4.3375 1.9461 4.3375 4.3375s-1.9461 4.3375-4.3375 4.3375-4.3375-1.9461-4.3375-4.3375 1.9461-4.3375 4.3375-4.3375zm-24.579-10.121c-2.3914 0-4.3375-1.946-4.3375-4.3374s1.9461-4.3375 4.3375-4.3375 4.3375 1.9461 4.3375 4.3375-1.9461 4.3374-4.3375 4.3374zm0 18.796c-2.3914 0-4.3375-1.9461-4.3375-4.3375s1.9461-4.3375 4.3375-4.3375 4.3375 1.9461 4.3375 4.3375-1.9461 4.3375-4.3375 4.3375zm6.4802-1.1957c0.26169-0.5364 0.48001-1.0959 0.60291-1.696h10.413c0.12289 0.6001 0.34121 1.1596 0.60291 1.696l-5.8093 4.4372zm11.619 12.512c-0.2617 0.5364-0.48002 1.0959-0.60291 1.6959h-10.413c-0.1229-0.6-0.34122-1.1595-0.60291-1.6959l5.8093-4.4358zm-18.099 7.4793c-2.3914 0-4.3375-1.9461-4.3375-4.3375s1.9461-4.3375 4.3375-4.3375 4.3375 1.9461 4.3375 4.3375-1.9461 4.3375-4.3375 4.3375zm6.4802-1.1957c0.26169-0.5364 0.48001-1.096 0.60291-1.696h10.413c0.12289 0.6 0.34121 1.1596 0.60291 1.696l-5.8093 4.4372zm11.016 14.208h-10.413c-0.1229-0.6-0.34122-1.1596-0.60291-1.696l5.8093-4.4358 5.8093 4.4358c-0.2617 0.5364-0.48002 1.096-0.60291 1.696zm-17.496 5.7833c-2.3914 0-4.3375-1.9461-4.3375-4.3375s1.9461-4.3375 4.3375-4.3375 4.3375 1.9461 4.3375 4.3375-1.9461 4.3375-4.3375 4.3375zm0 18.796c-2.3914 0-4.3375-1.9461-4.3375-4.3375s1.9461-4.3375 4.3375-4.3375 4.3375 1.9461 4.3375 4.3375-1.9461 4.3375-4.3375 4.3375zm24.579-18.796c-2.3914 0-4.3375-1.9461-4.3375-4.3375s1.9461-4.3375 4.3375-4.3375 4.3375 1.9461 4.3375 4.3375-1.9461 4.3375-4.3375 4.3375zm7.0831-5.7833c-0.67231-3.295-3.5914-5.7833-7.0831-5.7833-1.8102 0-3.4468 0.6925-4.7163 1.7957l-5.1905-3.9645 5.1905-3.9644c1.2694 1.1032 2.9061 1.7957 4.7163 1.7957 3.4902 0 6.4108-2.4883 7.0831-5.7833h7.3752v15.904zm13.158 5.7833c0 0.7981-0.64917 1.4458-1.4458 1.4458s-1.4458-0.6477-1.4458-1.4458v-47.712c0-0.7981 0.64918-1.4458 1.4458-1.4458s1.4458 0.6477 1.4458 1.4458z" />
+	  <path
+		 id="top-pin-icon-dl"
+		 d="m794.69 1257.1h2.8916v2.8917h-2.8916z" />
+	  <path
+		 id="second-pin-icon-dl"
+		 d="m794.69 1262.9h2.8916v2.8917h-2.8916z" />
+	  <path
+		 id="third-pin-icon-dl"
+		 d="m794.69 1274.5h2.8916v2.8916h-2.8916z" />
+	  <path
+		 id="bottom-pin-icon-dl"
+		 d="m794.69 1280.3h2.8916v2.8916h-2.8916z" />
+	</g>
+  </g>
+</svg>

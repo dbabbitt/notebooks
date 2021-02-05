@@ -12,9 +12,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="2400pt"
-   height="1230pt"
-   viewBox="0.00 0.00 2400.03 1230.00"
+   width="2420pt"
+   height="1249.9846pt"
+   viewBox="0 0 2420.0303 1249.9846"
    version="1.1"
    id="svg2961"
    sodipodi:docname="jung_digraph.svg"
@@ -47,19 +47,23 @@
      id="namedview2963"
      showgrid="false"
      inkscape:zoom="0.4175"
-     inkscape:cx="1600"
-     inkscape:cy="820"
+     inkscape:cx="1613.3333"
+     inkscape:cy="833.32408"
      inkscape:window-x="1446"
      inkscape:window-y="174"
      inkscape:window-maximized="1"
-     inkscape:current-layer="graph0" />
+     inkscape:current-layer="graph0"
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10" />
   <g
      id="graph0"
      class="graph"
-     transform="translate(4,1226)">
+     transform="translate(14.000125,1235.9917)">
     <polygon
        stroke="transparent"
-       points="-4,-1226 2396.03,-1226 2396.03,4 -4,4 "
+       points="2396.03,-1226 2396.03,4 -4,4 -4,-1226 "
        id="polygon1943"
        style="fill:#ffffff" />
     <!-- Carl Jung -->
