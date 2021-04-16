@@ -11,6 +11,7 @@
 !/sh
 !/tests
 !/json
+!/data
 
 # Ignore whole folders
 **/.git/
