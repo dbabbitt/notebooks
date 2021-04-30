@@ -1,5 +1,5 @@
 
-# C:\Users\dev\Documents\repositories\notebooks\.gitignore
+# D:\Documents\Repositories\notebooks\.gitignore
 
 # exclude everything except text-based OC directories
 /*
@@ -11,7 +11,7 @@
 !/sh
 !/tests
 !/json
-!/data
+!/coin-analytics
 
 # Ignore whole folders
 **/.git/
