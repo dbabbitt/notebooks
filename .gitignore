@@ -211,3 +211,5 @@ dmypy.json
 
 # Exclude Pyre type checker
 .pyre/
+coin-analytics/data/csv/BTC_USD_2013-10-01_2021-04-30-CoinDesk.csv
+coin-analytics/saves/csv/coinbaseUSD_df.csv
