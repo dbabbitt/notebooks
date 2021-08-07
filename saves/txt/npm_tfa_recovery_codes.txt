@@ -1,0 +1,20 @@
+
+
+npm
+Two-Factor Authentication
+
+2FA successfully enabled
+A waving wombat holding a cup of tea
+Recovery Codes
+
+Make sure to save these
+
+    f0973ea2f2cfc34a306cb34d950c70606fbd573853dcac29886b7a691433af6a
+    f1bf4f4dbee1d1e9453bfffa513a12a51476566fc9d09ff5e6a01f86e4f720f2
+    407026898a4adc9cf49de4cb5358290ca0bd6fab92c077141b5fd6ed38b25c22
+    7d9b8ce51ea797ed546854491251bc12eb3de4cd89cbe1f8f412d41326bf564c
+    1ee9f306fce8386d7f9d8ee1f7413e62f11a816b84efea644e8cb9fdb24f6269
+
+You risk losing access to your account if you lose your recovery codes. This will be the last time you will be able to save them.
+
+Please make sure you have saved your codes in a secure place before leaving this page.
