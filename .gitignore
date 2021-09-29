@@ -45,6 +45,7 @@ scikit_learn_data/mldata/mnist-original.mat
 # Exclude secrets
 **/json/*_secret*.json
 **/json/*credential*.json
+saves/json/secrets.json
 
 # Exclude pickles
 *.pickle
