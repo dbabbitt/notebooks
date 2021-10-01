@@ -37,6 +37,7 @@ def get_column_descriptions(df, column_list=None):
     for dtype, dtype_column_list in g.items():
         for column_name in dtype_column_list:
             if column_name in column_list:
+                mask_series = df[column_name].isnull()
                 
                 # Get input row in dictionary format; key = col_name
                 row_dict = {}
@@ -63,13 +64,13 @@ def get_column_descriptions(df, column_list=None):
                 
                 # Show the minimum value in the column
                 try:
-                    row_dict['min_value'] = df[column_name].min()
+                    row_dict['min_value'] = df[~mask_series][column_name].min()
                 except Exception:
                     row_dict['min_value'] = math.nan
                 
                 # Show the maximum value in the column
                 try:
-                    row_dict['max_value'] = df[column_name].max()
+                    row_dict['max_value'] = df[~mask_series][column_name].max()
                 except Exception:
                     row_dict['max_value'] = math.nan
                 
