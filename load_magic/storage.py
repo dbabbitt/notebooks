@@ -50,7 +50,10 @@ class Storage(object):
             csv_path = max([os.path.join(csv_folder, f) for f in os.listdir(csv_folder)],
                            key=os.path.getmtime)
         else:
-            csv_path = os.path.join(csv_folder, '{}.csv'.format(csv_name))
+            if csv_name.endswith('.csv'):
+                csv_path = os.path.join(csv_folder, csv_name)
+            else:
+                csv_path = os.path.join(csv_folder, f'{csv_name}.csv')
         data_frame = pd.read_csv(os.path.abspath(csv_path), encoding=self.encoding_type)
         
         return(data_frame)

@@ -1,6 +1,6 @@
 
 #!/usr/bin/env python
-# Utility Functions to Initialize Simulator Cells.
+# Utility Functions common to Web Scraping
 # Dave Babbitt <dave.babbitt@gmail.com>
 # Author: Dave Babbitt, Data Scientist
 # coding: utf-8

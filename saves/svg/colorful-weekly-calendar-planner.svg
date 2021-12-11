@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="126.99689mm"
+   height="91.247337mm"
+   viewBox="0 0 126.99689 91.24734"
+   version="1.1"
+   id="planner-svg"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="colorful-weekly-calendar-planner.svg"
+   inkscape:export-filename="D:\Documents\GitHub\notebooks\saves\png\colorful-weekly-calendar-planner.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="planner-defs" />
+  <sodipodi:namedview
+     id="planner-base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.6701857"
+     inkscape:cx="239.99412"
+     inkscape:cy="170.96242"
+     inkscape:document-units="mm"
+     inkscape:current-layer="svg8"
+     showgrid="false"
+     inkscape:window-width="1304"
+     inkscape:window-height="745"
+     inkscape:window-x="54"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="planner-metadata">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <style
+     type="text/css"
+     id="drawing-styles">
+	.general-style {
+		fill-opacity: 1;
+	}
+	.miter-style {
+		stroke-linecap: butt;
+		stroke-linejoin: miter;
+		stroke-opacity: 1;
+	}
+	.stroke-style {
+		stroke-width: 0.39687499;
+		stroke: #646464;
+	}
+	.dash-style {
+		font-variant-east_asian: normal;
+		opacity: 1;
+		stroke-dasharray: none;
+		stroke-dashoffset: 0;
+		stroke-miterlimit: 4;
+		vector-effect: none;
+	}
+	.border-style {
+		fill: #ffffff;
+	}
+	.header-style {
+		fill: #646464;
+	}
+	.t-style {
+		letter-spacing: 0px;
+		line-height: 1.25;
+		stroke: none;
+		word-spacing: 0px;
+	}
+	.line-style {
+		fill: none;
+		stroke-linecap: butt;
+		stroke-linejoin: miter;
+		stroke-opacity: 1;
+		stroke-width: 0.39687499;
+		stroke: #646464;
+	}
+	.text-style {
+		font-family: 'Agency FB';
+		font-feature-settings: normal;
+		font-stretch: condensed;
+		font-style: normal;
+		font-variant-caps: normal;
+		font-variant-ligatures: normal;
+		font-variant-numeric: normal;
+		font-variant: normal;
+		stroke-width: 0.26458332;
+		text-align: center;
+		writing-mode: lr;
+	}
+	.bold-text-style {
+		-inkscape-font-specification: 'Agency FB, Bold Condensed';
+		fill: #ffffff;
+		font-size: 5.64444444px;
+		font-weight: bold;
+		text-anchor: middle;
+	}
+	.condensed-text-style {
+		-inkscape-font-specification: 'Agency FB, Condensed';
+		font-size: 6.35px;
+		font-weight: normal;
+		text-anchor: middle;
+	}
+	.legend-text-style {
+		-inkscape-font-specification: 'Agency FB, Bold Condensed';
+		font-size: 3.52777767px;
+		font-weight: bold;
+		text-anchor: left;
+	}
+	.color-style {
+		display: inline;
+		stroke-linecap: butt;
+		stroke-linejoin: miter;
+		stroke-opacity: 1;
+		stroke-width: 0.52916664;
+		stroke: none;
+	}
+	.yellow-style {
+		fill: #feeca0;
+	}
+	.orange-style {
+		fill: #fec380;
+	}
+	.magenta-style {
+		fill: #e4a2cb;
+	}
+	.brown-style {
+		fill: #ddb59c;
+	}
+	.green-style {
+		fill: #d2ecb7;
+	}
+	.blue-style {
+		fill: #9ae5e4;
+	}
+	.purple-style {
+		fill: #b699de;
+	}
+	.red-style {
+		fill: #f49ba6;
+	}
+  </style>
+  <rect
+     id="todo-rect"
+     class="general-style miter-style stroke-style dash-style border-style"
+     width="34.850101"
+     height="31.456341"
+     x="0.1984375"
+     y="59.498436" />
+  <text
+     id="must-todo-text"
+     class="general-style t-style text-style header-style condensed-text-style"
+     x="17.581615"
+     y="67.978783">
+    <tspan
+       id="must-todo-tspan"
+       class="general-style t-style text-style header-style condensed-text-style"
+       x="17.581615"
+       y="67.978783">MUST TO DO:</tspan>
+  </text>
+  <path
+     id="must-todo-first-path"
+     class="miter-style stroke-style line-style"
+     d="M 5.1984375,72.198437 H 31.198437" />
+  <path
+     id="must-todo-second-path"
+     class="miter-style stroke-style line-style"
+     d="M 5.1984375,78.198437 H 31.198437" />
+  <path
+     id="must-todo-third-path"
+     class="miter-style stroke-style line-style"
+     d="M 5.1984375,84.198437 H 31.198437" />
+  <rect
+     id="notes-rect"
+     class="general-style miter-style stroke-style dash-style border-style"
+     width="34.850101"
+     height="31.456341"
+     x="41.498425"
+     y="59.498436" />
+  <text
+     id="notes-text"
+     class="general-style t-style text-style header-style condensed-text-style"
+     x="52.406567"
+     y="67.978783">
+    <tspan
+       id="notes-tspan"
+       class="general-style t-style text-style header-style condensed-text-style"
+       x="52.406567"
+       y="67.978783">NOTES:</tspan>
+  </text>
+  <path
+     id="notes-first-path"
+     class="miter-style stroke-style line-style"
+     d="m 45.898437,72.198437 h 26" />
+  <path
+     id="notes-second-path"
+     class="miter-style stroke-style line-style"
+     d="m 45.898437,78.198437 h 26" />
+  <path
+     id="notes-third-path"
+     class="miter-style stroke-style line-style"
+     d="m 45.898437,84.198437 h 26" />
+  <rect
+     id="legend-rect"
+     class="general-style miter-style stroke-style dash-style border-style"
+     width="44.741982"
+     height="31.456341"
+     x="82.056473"
+     y="59.59256" />
+  <rect
+     id="yellow-rect"
+     class="general-style dash-style color-style yellow-style"
+     width="3.8"
+     height="3.8"
+     x="84.398438"
+     y="62.765057" />
+  <text
+     id="yellow-legend-text"
+     class="yellow-style general-style t-style text-style legend-text-style"
+     x="90"
+     y="66.012955">
+    <tspan
+       id="yellow-legend-tspan"
+       class="yellow-style general-style t-style text-style legend-text-style"
+       x="90"
+       y="66.012955">QUERCETIN</tspan>
+  </text>
+  <rect
+     id="orange-rect"
+     class="general-style dash-style color-style orange-style"
+     width="3.8"
+     height="3.8"
+     x="84.398438"
+     y="69.865387" />
+  <text
+     id="orange-legend-text"
+     class="orange-style general-style t-style text-style legend-text-style"
+     x="90"
+     y="73.113285">
+    <tspan
+       id="orange-legend-tspan"
+       class="orange-style general-style t-style text-style legend-text-style"
+       x="90"
+       y="73.113285">IODORAL</tspan>
+  </text>
+  <rect
+     id="magenta-rect"
+     class="general-style dash-style color-style magenta-style"
+     width="3.8"
+     height="3.8"
+     x="84.398438"
+     y="76.965706" />
+  <text
+     id="magenta-legend-text"
+     class="magenta-style general-style t-style text-style legend-text-style"
+     x="90"
+     y="80.213604">
+    <tspan
+       id="magenta-legend-tspan"
+       class="magenta-style general-style t-style text-style legend-text-style"
+       x="90"
+       y="80.213604">D3 K2</tspan>
+  </text>
+  <rect
+     id="brown-rect"
+     class="general-style dash-style color-style brown-style"
+     width="3.8"
+     height="3.8"
+     x="84.398438"
+     y="84.066032" />
+  <text
+     id="brown-legend-text"
+     class="brown-style general-style t-style text-style legend-text-style"
+     x="90"
+     y="87.31393">
+    <tspan
+       id="brown-legend-tspan"
+       class="brown-style general-style t-style text-style legend-text-style"
+       x="90"
+       y="87.31393">VITAMIN C</tspan>
+  </text>
+  <rect
+     id="green-rect"
+     class="general-style dash-style color-style green-style"
+     width="3.8"
+     height="3.8"
+     x="106.09843"
+     y="62.765057" />
+  <text
+     id="green-legend-text"
+     class="green-style general-style t-style text-style legend-text-style"
+     x="111.4"
+     y="66.012955">
+    <tspan
+       id="green-legend-tspan"
+       class="green-style general-style t-style text-style legend-text-style"
+       x="111.4"
+       y="66.012955">NIACINE</tspan>
+  </text>
+  <rect
+     id="blue-rect"
+     class="general-style dash-style color-style blue-style"
+     width="3.8"
+     height="3.8"
+     x="106.09843"
+     y="69.865387" />
+  <text
+     id="blue-legend-text"
+     class="blue-style general-style t-style text-style legend-text-style"
+     x="111.4"
+     y="73.113285">
+    <tspan
+       id="blue-legend-tspan"
+       class="blue-style general-style t-style text-style legend-text-style"
+       x="111.4"
+       y="73.113285">NAC</tspan>
+  </text>
+  <rect
+     id="purple-rect"
+     class="general-style dash-style color-style purple-style"
+     width="3.8"
+     height="3.8"
+     x="106.09843"
+     y="76.965706" />
+  <rect
+     id="red-rect"
+     class="general-style dash-style color-style red-style"
+     width="3.8"
+     height="3.8"
+     x="106.09843"
+     y="84.066032" />
+  <rect
+     id="monday-rect"
+     class="general-style miter-style stroke-style dash-style border-style"
+     width="16.5"
+     height="55"
+     x="0.1984375"
+     y="0.1984375" />
+  <rect
+     id="monday-header-rect"
+     class="general-style miter-style stroke-style dash-style header-style"
+     width="16.5"
+     height="5"
+     x="0.1984375"
+     y="0.1984375" />
+  <path
+     id="monday-first-path"
+     class="miter-style stroke-style line-style"
+     d="M 0.1984375,10.198437 H 16.698437" />
+  <path
+     id="monday-second-path"
+     class="miter-style stroke-style line-style"
+     d="M 0.1984375,14.198437 H 16.698437" />
+  <path
+     id="monday-third-path"
+     class="miter-style stroke-style line-style"
+     d="M 0.1984375,18.198437 H 16.698437" />
+  <path
+     id="monday-fourth-path"
+     class="miter-style stroke-style line-style"
+     d="M 0.1984375,22.198437 H 16.698437" />
+  <path
+     id="monday-fifth-path"
+     class="miter-style stroke-style line-style"
+     d="M 0.1984375,26.198437 H 16.698437" />
+  <path
+     id="monday-sixth-path"
+     class="miter-style stroke-style line-style"
+     d="M 0.1984375,30.198437 H 16.698437" />
+  <path
+     id="monday-seventh-path"
+     class="miter-style stroke-style line-style"
+     d="M 0.1984375,34.198437 H 16.698437" />
+  <path
+     id="monday-eighth-path"
+     class="miter-style stroke-style line-style"
+     d="M 0.1984375,38.198437 H 16.698437" />
+  <path
+     id="monday-ninth-path"
+     class="miter-style stroke-style line-style"
+     d="M 0.1984375,42.198437 H 16.698437" />
+  <path
+     id="monday-tenth-path"
+     class="miter-style stroke-style line-style"
+     d="M 0.1984375,46.198437 H 16.698437" />
+  <path
+     id="monday-eleventh-path"
+     class="miter-style stroke-style line-style"
+     d="M 0.1984375,50.198437 H 16.698437" />
+  <text
+     id="monday-text"
+     class="general-style t-style text-style bold-text-style"
+     x="8.4525576"
+     y="4.8550692">
+    <tspan
+       id="monday-tspan"
+       class="general-style t-style text-style bold-text-style"
+       x="8.4525576"
+       y="4.8550692">MON</tspan>
+  </text>
+  <rect
+     id="tuesday-rect"
+     class="general-style miter-style stroke-style dash-style border-style"
+     width="16.5"
+     height="55"
+     x="18.548443"
+     y="0.1984375" />
+  <rect
+     id="tuesday-header-rect"
+     class="general-style miter-style stroke-style dash-style header-style"
+     width="16.5"
+     height="5"
+     x="18.548443"
+     y="0.1984375" />
+  <path
+     id="tuesday-first-path"
+     class="miter-style stroke-style line-style"
+     d="m 18.548447,10.198437 h 16.5" />
+  <path
+     id="tuesday-second-path"
+     class="miter-style stroke-style line-style"
+     d="m 18.548447,14.198437 h 16.5" />
+  <path
+     id="tuesday-third-path"
+     class="miter-style stroke-style line-style"
+     d="m 18.548447,18.198437 h 16.5" />
+  <path
+     id="tuesday-fourth-path"
+     class="miter-style stroke-style line-style"
+     d="m 18.548447,22.198437 h 16.5" />
+  <path
+     id="tuesday-fifth-path"
+     class="miter-style stroke-style line-style"
+     d="m 18.548447,26.198437 h 16.5" />
+  <path
+     id="tuesday-sixth-path"
+     class="miter-style stroke-style line-style"
+     d="m 18.548447,30.198437 h 16.5" />
+  <path
+     id="tuesday-seventh-path"
+     class="miter-style stroke-style line-style"
+     d="m 18.548447,34.198437 h 16.5" />
+  <path
+     id="tuesday-eighth-path"
+     class="miter-style stroke-style line-style"
+     d="m 18.548447,38.198437 h 16.5" />
+  <path
+     id="tuesday-ninth-path"
+     class="miter-style stroke-style line-style"
+     d="m 18.548447,42.198437 h 16.5" />
+  <path
+     id="tuesday-tenth-path"
+     class="miter-style stroke-style line-style"
+     d="m 18.548447,46.198437 h 16.5" />
+  <path
+     id="tuesday-eleventh-path"
+     class="miter-style stroke-style line-style"
+     d="m 18.548447,50.198437 h 16.5" />
+  <text
+     id="tuesday-text"
+     class="general-style t-style text-style bold-text-style"
+     x="26.802563"
+     y="4.8550692">
+    <tspan
+       id="tuesday-tspan"
+       class="general-style text-style bold-text-style"
+       x="26.802563"
+       y="4.8550692">TUE</tspan>
+  </text>
+  <rect
+     id="wednesday-rect"
+     class="general-style miter-style stroke-style dash-style border-style"
+     width="16.5"
+     height="55"
+     x="36.898449"
+     y="0.1984375" />
+  <rect
+     id="wednesday-header-rect"
+     class="general-style miter-style stroke-style dash-style header-style"
+     width="16.5"
+     height="5"
+     x="36.898449"
+     y="0.1984375" />
+  <path
+     id="wednesday-first-path"
+     class="miter-style stroke-style line-style"
+     d="m 36.898447,10.198437 h 16.5" />
+  <path
+     id="wednesday-second-path"
+     class="miter-style stroke-style line-style"
+     d="m 36.898447,14.198437 h 16.5" />
+  <path
+     id="wednesday-third-path"
+     class="miter-style stroke-style line-style"
+     d="m 36.898447,18.198437 h 16.5" />
+  <path
+     id="wednesday-fourth-path"
+     class="miter-style stroke-style line-style"
+     d="m 36.898447,22.198437 h 16.5" />
+  <path
+     id="wednesday-fifth-path"
+     class="miter-style stroke-style line-style"
+     d="m 36.898447,26.198437 h 16.5" />
+  <path
+     id="wednesday-sixth-path"
+     class="miter-style stroke-style line-style"
+     d="m 36.898447,30.198437 h 16.5" />
+  <path
+     id="wednesday-seventh-path"
+     class="miter-style stroke-style line-style"
+     d="m 36.898447,34.198437 h 16.5" />
+  <path
+     id="wednesday-eighth-path"
+     class="miter-style stroke-style line-style"
+     d="m 36.898447,38.198437 h 16.5" />
+  <path
+     id="wednesday-ninth-path"
+     class="miter-style stroke-style line-style"
+     d="m 36.898447,42.198437 h 16.5" />
+  <path
+     id="wednesday-tenth-path"
+     class="miter-style stroke-style line-style"
+     d="m 36.898447,46.198437 h 16.5" />
+  <path
+     id="wednesday-eleventh-path"
+     class="miter-style stroke-style line-style"
+     d="m 36.898447,50.198437 h 16.5" />
+  <text
+     id="wednesday-text"
+     class="general-style t-style text-style bold-text-style"
+     x="45.152569"
+     y="4.8550692">
+    <tspan
+       id="wednesday-tspan"
+       class="general-style t-style text-style bold-text-style"
+       x="45.152569"
+       y="4.8550692">WED</tspan>
+  </text>
+  <rect
+     id="thursday-rect"
+     class="general-style miter-style stroke-style dash-style border-style"
+     width="16.5"
+     height="55"
+     x="55.248425"
+     y="0.1984375" />
+  <rect
+     id="thursday-header-rect"
+     class="general-style miter-style stroke-style dash-style header-style"
+     width="16.5"
+     height="5"
+     x="55.248425"
+     y="0.1984375" />
+  <path
+     id="thursday-first-path"
+     class="miter-style stroke-style line-style"
+     d="m 55.248427,10.198437 h 16.5" />
+  <path
+     id="thursday-second-path"
+     class="miter-style stroke-style line-style"
+     d="m 55.248427,14.198437 h 16.5" />
+  <path
+     id="thursday-third-path"
+     class="miter-style stroke-style line-style"
+     d="m 55.248427,18.198437 h 16.5" />
+  <path
+     id="thursday-fourth-path"
+     class="miter-style stroke-style line-style"
+     d="m 55.248427,22.198437 h 16.5" />
+  <path
+     id="thursday-fifth-path"
+     class="miter-style stroke-style line-style"
+     d="m 55.248427,26.198437 h 16.5" />
+  <path
+     id="thursday-sixth-path"
+     class="miter-style stroke-style line-style"
+     d="m 55.248427,30.198437 h 16.5" />
+  <path
+     id="thursday-seventh-path"
+     class="miter-style stroke-style line-style"
+     d="m 55.248427,34.198437 h 16.5" />
+  <path
+     id="thursday-eighth-path"
+     class="miter-style stroke-style line-style"
+     d="m 55.248427,38.198437 h 16.5" />
+  <path
+     id="thursday-ninth-path"
+     class="miter-style stroke-style line-style"
+     d="m 55.248427,42.198437 h 16.5" />
+  <path
+     id="thursday-tenth-path"
+     class="miter-style stroke-style line-style"
+     d="m 55.248427,46.198437 h 16.5" />
+  <path
+     id="thursday-eleventh-path"
+     class="miter-style stroke-style line-style"
+     d="m 55.248427,50.198437 h 16.5" />
+  <text
+     id="thursday-text"
+     class="general-style t-style text-style bold-text-style"
+     x="63.502544"
+     y="4.8550692">
+    <tspan
+       id="thursday-tspan"
+       class="general-style t-style text-style bold-text-style"
+       x="63.502544"
+       y="4.8550692">THU</tspan>
+  </text>
+  <rect
+     id="friday-rect"
+     class="general-style miter-style stroke-style dash-style border-style"
+     width="16.5"
+     height="55"
+     x="73.598434"
+     y="0.1984375" />
+  <rect
+     id="friday-header-rect"
+     class="general-style miter-style stroke-style dash-style header-style"
+     width="16.5"
+     height="5"
+     x="73.598434"
+     y="0.1984375" />
+  <path
+     id="friday-first-path"
+     class="miter-style stroke-style line-style"
+     d="m 73.598427,10.198437 h 16.5" />
+  <path
+     id="friday-second-path"
+     class="miter-style stroke-style line-style"
+     d="m 73.598427,14.198437 h 16.5" />
+  <path
+     id="friday-third-path"
+     class="miter-style stroke-style line-style"
+     d="m 73.598427,18.198437 h 16.5" />
+  <path
+     id="friday-fourth-path"
+     class="miter-style stroke-style line-style"
+     d="m 73.598427,22.198437 h 16.5" />
+  <path
+     id="friday-fifth-path"
+     class="miter-style stroke-style line-style"
+     d="m 73.598427,26.198437 h 16.5" />
+  <path
+     id="friday-sixth-path"
+     class="miter-style stroke-style line-style"
+     d="m 73.598427,30.198437 h 16.5" />
+  <path
+     id="friday-seventh-path"
+     class="miter-style stroke-style line-style"
+     d="m 73.598427,34.198437 h 16.5" />
+  <path
+     id="friday-eighth-path"
+     class="miter-style stroke-style line-style"
+     d="m 73.598427,38.198437 h 16.5" />
+  <path
+     id="friday-ninth-path"
+     class="miter-style stroke-style line-style"
+     d="m 73.598427,42.198437 h 16.5" />
+  <path
+     id="friday-tenth-path"
+     class="miter-style stroke-style line-style"
+     d="m 73.598427,46.198437 h 16.5" />
+  <path
+     id="friday-eleventh-path"
+     class="miter-style stroke-style line-style"
+     d="m 73.598427,50.198437 h 16.5" />
+  <text
+     id="friday-text"
+     class="general-style t-style text-style bold-text-style"
+     x="81.852554"
+     y="4.8550692">
+    <tspan
+       id="friday-tspan"
+       class="general-style t-style text-style bold-text-style"
+       x="81.852554"
+       y="4.8550692">FRI</tspan>
+  </text>
+  <rect
+     id="saturday-rect"
+     class="general-style miter-style stroke-style dash-style border-style"
+     width="16.5"
+     height="55"
+     x="91.948441"
+     y="0.1984375" />
+  <rect
+     id="saturday-header-rect"
+     class="general-style miter-style stroke-style dash-style header-style"
+     width="16.5"
+     height="5"
+     x="91.948441"
+     y="0.1984375" />
+  <path
+     id="saturday-first-path"
+     class="miter-style stroke-style line-style"
+     d="M 91.948437,10.198437 H 108.44844" />
+  <path
+     id="saturday-second-path"
+     class="miter-style stroke-style line-style"
+     d="M 91.948437,14.198437 H 108.44844" />
+  <path
+     id="saturday-third-path"
+     class="miter-style stroke-style line-style"
+     d="M 91.948437,18.198437 H 108.44844" />
+  <path
+     id="saturday-fourth-path"
+     class="miter-style stroke-style line-style"
+     d="M 91.948437,22.198437 H 108.44844" />
+  <path
+     id="saturday-fifth-path"
+     class="miter-style stroke-style line-style"
+     d="M 91.948437,26.198437 H 108.44844" />
+  <path
+     id="saturday-sixth-path"
+     class="miter-style stroke-style line-style"
+     d="M 91.948437,30.198437 H 108.44844" />
+  <path
+     id="saturday-seventh-path"
+     class="miter-style stroke-style line-style"
+     d="M 91.948437,34.198437 H 108.44844" />
+  <path
+     id="saturday-eighth-path"
+     class="miter-style stroke-style line-style"
+     d="M 91.948437,38.198437 H 108.44844" />
+  <path
+     id="saturday-ninth-path"
+     class="miter-style stroke-style line-style"
+     d="M 91.948437,42.198437 H 108.44844" />
+  <path
+     id="saturday-tenth-path"
+     class="miter-style stroke-style line-style"
+     d="M 91.948437,46.198437 H 108.44844" />
+  <path
+     id="saturday-eleventh-path"
+     class="miter-style stroke-style line-style"
+     d="M 91.948437,50.198437 H 108.44844" />
+  <text
+     id="saturday-text"
+     class="general-style t-style text-style bold-text-style"
+     x="100.20256"
+     y="4.8550692">
+    <tspan
+       id="saturday-tspan"
+       class="general-style t-style text-style bold-text-style"
+       x="100.20256"
+       y="4.8550692">SAT</tspan>
+  </text>
+  <rect
+     id="sunday-rect"
+     class="general-style miter-style stroke-style dash-style border-style"
+     width="16.5"
+     height="55"
+     x="110.29845"
+     y="0.1984375" />
+  <rect
+     id="sunday-header-rect"
+     class="general-style miter-style stroke-style dash-style header-style"
+     width="16.5"
+     height="5"
+     x="110.29845"
+     y="0.1984375" />
+  <path
+     id="sunday-first-path"
+     class="miter-style stroke-style line-style"
+     d="m 110.29845,10.198437 h 16.5" />
+  <path
+     id="sunday-second-path"
+     class="miter-style stroke-style line-style"
+     d="m 110.29845,14.198437 h 16.5" />
+  <path
+     id="sunday-third-path"
+     class="miter-style stroke-style line-style"
+     d="m 110.29845,18.198437 h 16.5" />
+  <path
+     id="sunday-fourth-path"
+     class="miter-style stroke-style line-style"
+     d="m 110.29845,22.198437 h 16.5" />
+  <path
+     id="sunday-fifth-path"
+     class="miter-style stroke-style line-style"
+     d="m 110.29845,26.198437 h 16.5" />
+  <path
+     id="sunday-sixth-path"
+     class="miter-style stroke-style line-style"
+     d="m 110.29845,30.198437 h 16.5" />
+  <path
+     id="sunday-seventh-path"
+     class="miter-style stroke-style line-style"
+     d="m 110.29845,34.198437 h 16.5" />
+  <path
+     id="sunday-eighth-path"
+     class="miter-style stroke-style line-style"
+     d="m 110.29845,38.198437 h 16.5" />
+  <path
+     id="sunday-ninth-path"
+     class="miter-style stroke-style line-style"
+     d="m 110.29845,42.198437 h 16.5" />
+  <path
+     id="sunday-tenth-path"
+     class="miter-style stroke-style line-style"
+     d="m 110.29845,46.198437 h 16.5" />
+  <path
+     id="sunday-eleventh-path"
+     class="miter-style stroke-style line-style"
+     d="m 110.29845,50.198437 h 16.5" />
+  <text
+     id="sunday-text"
+     class="general-style t-style text-style bold-text-style"
+     x="118.55257"
+     y="4.8550692"><tspan
+       id="sunday-tspan"
+       class="general-style t-style text-style bold-text-style"
+       x="118.55257"
+       y="4.8550692">SUN</tspan></text>
+</svg>
