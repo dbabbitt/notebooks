@@ -220,3 +220,4 @@ dmypy.json
 
 # Exclude Pyre type checker
 .pyre/
+saves/csv/response_patterns_df.csv

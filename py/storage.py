@@ -50,10 +50,18 @@ class Storage(object):
             csv_path = max([os.path.join(csv_folder, f) for f in os.listdir(csv_folder)],
                            key=os.path.getmtime)
         else:
-            csv_path = os.path.join(csv_folder, '{}.csv'.format(csv_name))
-        data_frame = pd.read_csv(csv_path, encoding=self.encoding_type)
+            if csv_name.endswith('.csv'):
+                csv_path = os.path.join(csv_folder, csv_name)
+            else:
+                csv_path = os.path.join(csv_folder, f'{csv_name}.csv')
+        data_frame = pd.read_csv(os.path.abspath(csv_path), encoding=self.encoding_type)
         
         return(data_frame)
+
+    def pickle_exists(self, pickle_name):
+        pickle_path = os.path.join(self.saves_pickle_folder, '{}.pickle'.format(pickle_name))
+        
+        return os.path.isfile(pickle_path)
 
     def load_dataframes(self, **kwargs):
         frame_dict = {}
@@ -92,7 +100,7 @@ class Storage(object):
                 object = pd.read_csv(csv_path, low_memory=False,
                                      encoding=self.encoding_type)
             if isinstance(object, pd.DataFrame):
-                attempt_to_pickle(object, pickle_path, raise_exception=False)
+                self.attempt_to_pickle(object, pickle_path, raise_exception=False)
             else:
                 with open(pickle_path, 'wb') as handle:
                 
@@ -119,15 +127,16 @@ class Storage(object):
                                           index=include_index)
 
     # Classes, functions, and methods cannot be pickled
-    def store_objects(self, **kwargs):
+    def store_objects(self, verbose=True, **kwargs):
         for obj_name in kwargs:
             if hasattr(kwargs[obj_name], '__call__'):
                 raise RuntimeError('Functions cannot be pickled.')
             pickle_path = os.path.join(self.saves_pickle_folder, '{}.pickle'.format(obj_name))
             if isinstance(kwargs[obj_name], pd.DataFrame):
-                self.attempt_to_pickle(kwargs[obj_name], pickle_path, raise_exception=False)
+                self.attempt_to_pickle(kwargs[obj_name], pickle_path, raise_exception=False, verbose=verbose)
             else:
-                print('Pickling to {}'.format(os.path.abspath(pickle_path)))
+                if verbose:
+                    print('Pickling to {}'.format(os.path.abspath(pickle_path)))
                 with open(pickle_path, 'wb') as handle:
                 
                     # Protocal 4 is not handled in python 2
@@ -136,9 +145,10 @@ class Storage(object):
                     elif sys.version_info.major == 3:
                         pickle.dump(kwargs[obj_name], handle, pickle.HIGHEST_PROTOCOL)
 
-    def attempt_to_pickle(self, df, pickle_path, raise_exception=False):
+    def attempt_to_pickle(self, df, pickle_path, raise_exception=False, verbose=True):
         try:
-            print('Pickling to {}'.format(os.path.abspath(pickle_path)))
+            if verbose:
+                print('Pickling to {}'.format(os.path.abspath(pickle_path)))
         
             # Protocal 4 is not handled in python 2
             if sys.version_info.major == 2:
@@ -148,6 +158,7 @@ class Storage(object):
         
         except Exception as e:
             os.remove(pickle_path)
-            print(e, ": Couldn't save {:,} cells as a pickle.".format(df.shape[0]*df.shape[1]))
+            if verbose:
+                print(e, ": Couldn't save {:,} cells as a pickle.".format(df.shape[0]*df.shape[1]))
             if raise_exception:
                 raise
