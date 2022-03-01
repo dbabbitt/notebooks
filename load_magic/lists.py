@@ -4,7 +4,7 @@ import time
 import pandas as pd
 
 
-def conjunctify_list(noun_list):
+def conjunctify_nouns(noun_list):
     if len(noun_list) > 2:
         last_noun_str = noun_list[-1]
         but_last_nouns_str = ', '.join(noun_list[:-1])

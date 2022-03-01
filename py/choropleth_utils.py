@@ -327,7 +327,7 @@ class ChoroplethUtilities(object):
     
     
     
-    def conjunctify_list(self, noun_list):
+    def conjunctify_nouns(self, noun_list):
         if len(noun_list) > 2:
             list_str = ', and '.join([', '.join(noun_list[:-1])] + [noun_list[-1]])
         elif len(noun_list) == 2:
@@ -928,7 +928,7 @@ class ChoroplethUtilities(object):
     def get_google_suggestion_list(self, district_name):
         f_str = 'The whole list for {} is: {}.'
         suggestion_list = self.suggestion_list_dict[district_name]
-        conjunctified_str = self.conjunctify_list(suggestion_list)
+        conjunctified_str = self.conjunctify_nouns(suggestion_list)
         
         return(f_str.format(district_name, conjunctified_str))
     
