@@ -926,10 +926,7 @@ class ChoroplethUtilities(object):
             column_value = str(row_series[string_column_name]).strip()
             district_abbreviation = row_series.district_abbreviation
             outline_d = row_series.outline_d
-            if colors_keyed_to_district_abbreviation:
-                color = colors_dict.get(district_abbreviation, '#f9f9f9')
-            else:
-                color = colors_dict.get(column_value, '#f9f9f9')
+            color = colors_dict.get(column_value, '#f9f9f9')
             district_rgb_dict[district_name] = tuple(webcolors.hex_to_rgb(color))
             style_value = self.fill_style_prefix.format(self.get_fill_color(color))
             id_value = f'district-{self.indexize_string(district_name)}'

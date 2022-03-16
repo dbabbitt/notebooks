@@ -5,6 +5,9 @@ import pandas as pd
 
 
 def conjunctify_nouns(noun_list):
+    if noun_list is None:
+        
+        return ''
     if len(noun_list) > 2:
         last_noun_str = noun_list[-1]
         but_last_nouns_str = ', '.join(noun_list[:-1])
@@ -65,6 +68,13 @@ def similar(a, b):
 
 #Check the closest names for typos
 def check_for_typos(left_list, right_list, verbose=False):
+    '''
+    sd_set = set(some_dict.keys()).symmetric_difference(set(df.similar_key))
+    typos_df = check_for_typos(list(set(df.similar_key).intersection(sd_set)),
+                               list(set(some_dict.keys()).intersection(sd_set)), verbose=False)
+    for i, r in typos_df.sort_values(['max_similarity', 'left_item', 'right_item'], ascending=[False, True, True]).iterrows():
+        print(f'some_dict["{r.left_item}"] = some_dict.pop("{r.right_item}")')
+    '''
     if verbose:
         t0 = time.time()
     rows_list = []
