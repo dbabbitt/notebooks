@@ -87,10 +87,11 @@ class ChoroplethUtilities(object):
                                 'font-variant-ligatures': 'normal', 'font-variant-caps': 'normal',
                                 'font-variant-numeric': 'normal', 'font-feature-settings': 'normal',
                                 'text-align': 'center', 'letter-spacing': '0px', 'word-spacing': '0px',
-                                'writing-mode': 'lr-tb', 'text-anchor': 'middle', 'fill': self.get_fill_color(fill_color='#000000').split(':')[-1],
+                                'writing-mode': 'lr-tb', 'text-anchor': 'middle', 'fill': self.get_fill_color(fill_color='#000000'),
                                 'fill-opacity': '1', 'stroke': 'none'}
         self.text_style_list = self.get_style_list(self.text_style_dict.copy())
-        self.ts_str = '<tspan sodipodi:role="line" id="tspan-{}" x="{}" y="{}">{}</tspan>'
+        # self.ts_str = '<tspan sodipodi:role="line" id="tspan-{}" x="{}" y="{}">{}</tspan>'
+        self.ts_str = '<tspan sodipodi:role="line" id="tspan-{}" x="{}" dy="{}">{}</tspan>'# alignment-baseline="middle"
         self.label_line_style_list = self.get_style_list({'fill': 'none', 'fill-rule': 'evenodd', 'stroke': '#e00000',
                                                           'stroke-width': '2', 'stroke-linecap': 'butt', 'stroke-linejoin': 'miter',
                                                           'stroke-opacity': '1', 'font-variant-east_asian': 'normal', 'opacity': '1',
@@ -165,22 +166,17 @@ class ChoroplethUtilities(object):
             inkscape:connector-curvature="0" />
   </defs>
   <metadata id="metadata-main">
-        <rdf:RDF><cc:Work rdf:about="">
-            <dc:format>image/svg+xml</dc:format>
-            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-            <dc:title>File: {}</dc:title>
-        </cc:Work></rdf:RDF>
   </metadata>
   <rect
      height="{}"
      id="ocean-background"
-     style="display:inline;{}"
+     style="display:inline;fill:{};"
      width="{}"
      x="0"
      y="0"
      inkscape:label="Ocean Background" />'''
         self.html_style_str = '#{:02x}{:02x}{:02x}'
-        self.fill_style_prefix = 'stroke-width:1.0;{}'
+        self.fill_style_prefix = 'stroke-width:1.0;fill:{};'
         self.fill_style_str = self.fill_style_prefix.format(self.get_fill_color(self.html_style_str))
         self.district_path_str = '<path id="{}" d="{}" data-id="{}" data-name="{}" style="{}" inkscape:connector-curvature="0" />'
         self.svg_dir = os.path.abspath(os.path.join(s.saves_folder, 'svg'))
@@ -200,7 +196,7 @@ class ChoroplethUtilities(object):
                                       'font-variant-ligatures:normal', 'font-variant-caps:normal',
                                       'font-variant-numeric:normal', 'font-feature-settings:normal',
                                       'text-align:center', 'letter-spacing:0px', 'word-spacing:0px',
-                                      'writing-mode:lr-tb', 'text-anchor:middle', self.get_fill_color('#000000'), 'fill-opacity:1',
+                                      'writing-mode:lr-tb', 'text-anchor:middle', 'fill:' + self.get_fill_color('#000000'), 'fill-opacity:1',
                                       'stroke:none', 'stroke-width:0.75', 'stroke-linecap:butt',
                                       'stroke-linejoin:round']
         self.label_tspan_style_list = ['font-style:normal', 'font-variant:normal', 'font-weight:normal',
@@ -218,7 +214,7 @@ class ChoroplethUtilities(object):
        y="110.72276"
        id="text-{{}}"
        transform="rotate(-90)"
-       inkscape:label="239{{}} Text"><tspan
+       inkscape:label="{{}} Text"><tspan
          sodipodi:role="line"
          id="tspan-{{}}"
          style="{}"
@@ -247,7 +243,7 @@ class ChoroplethUtilities(object):
                                      'font-variant-ligatures:normal', 'font-variant-caps:normal',
                                      'font-variant-numeric:normal', 'font-feature-settings:normal',
                                      'text-align:center', 'letter-spacing:0px', 'word-spacing:0px',
-                                     'writing-mode:lr-tb', 'text-anchor:middle', self.get_fill_color('#000000'), 'fill-opacity:1',
+                                     'writing-mode:lr-tb', 'text-anchor:middle', 'fill:' + self.get_fill_color('#000000'), 'fill-opacity:1',
                                      'stroke:none', 'stroke-width:0.75', 'stroke-linecap:butt',
                                      'stroke-linejoin:round']
         self.tick_tspan_style_list = ['font-style:normal', 'font-variant:normal', 'font-weight:normal',
@@ -264,7 +260,7 @@ class ChoroplethUtilities(object):
              x="79.746887"
              y="{{}}"
              id="text-{{}}"
-             inkscape:label="285{{}} Text"><tspan
+             inkscape:label="{{}} Text"><tspan
                sodipodi:role="line"
                id="tspan-{{}}"
                style="{}"
@@ -295,7 +291,7 @@ class ChoroplethUtilities(object):
           </g>{}
         </g>'''
         self.hyphen_dict = pyphen.Pyphen(lang='en_US')
-        self.line_height = 15
+        self.line_height = 12
         self.width_ratio = -0.027663496798780152
         self.height_ratio = -0.0676069034160266
         self.nonword_regex = re.compile(r'\W+')
@@ -345,6 +341,7 @@ class ChoroplethUtilities(object):
     def get_style_list(self, style_dict):
         style_list = []
         for key, value in style_dict.items():
+            value = str(value)
             if ' ' in value:
                 style_list.append("{}:'{}'".format(key, value))
             else:
@@ -452,10 +449,7 @@ class ChoroplethUtilities(object):
         # Trim the legend xml
         self.trim_d_path(file_path)
         root = et.parse(file_path).getroot()
-        # print(et.tostring(root, encoding='unicode')[:500])
         self.strip_namespaces(root)
-        # print(et.tostring(root, encoding='unicode')[:500])
-        # raise
         for figure_1_xml in root.iter():
             if (figure_1_xml.tag == 'g'):
                 id = figure_1_xml.attrib['id']
@@ -494,7 +488,7 @@ class ChoroplethUtilities(object):
                     id = legend_1_xml.attrib['id']
                     if id == 'legend_1':
                         key = 'style'
-                        value = self.get_fill_color('#000000') + ';fill-opacity:1'
+                        value = 'fill:' + self.get_fill_color('#000000') + ';fill-opacity:1'
                         legend_1_xml.attrib[key] = value
                         defs_xml_str = '<defs>'
                         for path_str in path_strs_list:
@@ -534,32 +528,14 @@ class ChoroplethUtilities(object):
                 figure_1_xml.remove(patch_element)
                 break
         legend_xml = et.tostring(figure_1_xml, encoding='unicode')
-        # legend_xml = re.sub(r'\bid="figure_1"\s*>',
-                            # 'id="figure_1" transform="{}">'.format(self.settings_dict.get('legend_transform', 'translate(-12.768599,191.52893)')),
-                            # legend_xml)
         colors_dict = {label: color for label, color in zip(labels_list, colors_list)}
 
         return legend_xml, colors_dict
 
 
-
     def get_colorbar_xml(self, column_name, cmap='viridis', min=None, max=None):
-        fig, ax = plt.subplots(figsize=(1, 6))
-        fig.subplots_adjust(left=0.5)
-
-        if min is None:
-            min = self.one_country_df[column_name].min()
-        if max is None:
-            max = self.one_country_df[column_name].max()
-        cmap = mpl.cm.get_cmap(cmap)
-        norm = mpl.colors.Normalize(vmin=min, vmax=max)
-
-        cb1 = mpl.colorbar.ColorbarBase(ax, cmap=cmap, norm=norm,
-                                        orientation='vertical')
-        cb1.set_label(self.get_column_description(column_name))
+        cb1 = self.show_colorbar(column_name, cmap=cmap, min=min, max=max)
         file_path = os.path.join(self.svg_dir, 'colorbar.svg')
-        plt.savefig(file_path)
-        plt.close(fig)
         
         # Trim the colorbar xml
         self.trim_d_path(file_path)
@@ -581,7 +557,7 @@ class ChoroplethUtilities(object):
                     id = matplotlib_element.attrib['id']
                     if id == 'matplotlib.axis_2':
                         key = 'style'
-                        value = self.get_fill_color('#000000') + ';fill-opacity:1'
+                        value = 'fill:' + self.get_fill_color('#000000') + ';fill-opacity:1;'
                         matplotlib_element.attrib[key] = value
                         break
                 break
@@ -631,18 +607,27 @@ class ChoroplethUtilities(object):
         return color_distance
 
     def get_fill_color(self, fill_color='#000000', backround_hex_str='#ffffff'):
-        if backround_hex_str == '#ffffff':
-            fill_str = f'fill:{fill_color}'
-        else:
+        if backround_hex_str != '#ffffff':
             rbg_tuple = tuple(webcolors.hex_to_rgb(backround_hex_str))
             text_colors_list = []
             for color in ['white', 'black']:
                 color_tuple = (self.color_distance_from(color, rbg_tuple), color)
                 text_colors_list.append(color_tuple)
             text_color = sorted(text_colors_list, key=lambda x: x[0])[-1][1]
-            fill_str = webcolors.name_to_hex(text_color)
+            fill_color = webcolors.name_to_hex(text_color)
 
-        return fill_str
+        return fill_color
+
+    def get_fill_color_rgb(self, fill_color_rgb=(0, 0, 0), backround_rgb=(255, 255, 255)):
+        if backround_rgb != (255, 255, 255):
+            text_colors_list = []
+            for color in ['white', 'black']:
+                color_tuple = (self.color_distance_from(color, backround_rgb), color)
+                text_colors_list.append(color_tuple)
+            text_color = sorted(text_colors_list, key=lambda x: x[0])[-1][1]
+            fill_color_rgb = webcolors.name_to_rgb(text_color)
+
+        return fill_color_rgb
 
     def add_docname(self, attributes_set, docname_str):
         attributes_set.add(f'sodipodi:docname="{docname_str}"')
@@ -675,13 +660,17 @@ class ChoroplethUtilities(object):
         with open(text_file_path, 'w') as f:
             print('', file=f)
         
-        if string_column_name is None:
-            mask_series = one_country_df['text_x'].isnull() | one_country_df['text_y'].isnull()
-        else:
-            mask_series = one_country_df[string_column_name].isnull()
-        text_style_dict = self.text_style_dict.copy()
+        mask_series = one_country_df['centroid_id'].isnull()
+        if string_column_name is not None:
+            mask_series = mask_series | one_country_df[string_column_name].isnull()
         for district_name, row_series in one_country_df[~mask_series].sort_index(axis='index', ascending=False).iterrows():
             text_id = self.indexize_string(district_name)
+            centroid_id = row_series.centroid_id
+            if str(centroid_id) == 'nan':
+                centroid_id = f'path-{text_id}'
+            group_id = row_series.get('svg_id', text_id)
+            if str(group_id) == 'nan':
+                group_id = text_id
             if string_column_name is None:
                 label = '{} Index'.format(district_name)
             else:
@@ -699,18 +688,44 @@ class ChoroplethUtilities(object):
             tspan_list = self.get_tspan_list(column_value)
             tspan_str = ''
             for i, column_value_str in enumerate(tspan_list):
-                tspan_str += self.ts_str.format(text_id+str(i), x, y+self.line_height*i, column_value_str)
+                if str(row_series.dy) == 'nan':
+                    tspan_str += self.ts_str.format(text_id+str(i), x, self.line_height*i, column_value_str)
+                else:
+                    tspan_str += self.ts_str.format(text_id+str(i), x, row_series.dy*i, column_value_str)
             
             # Update the background color and font size
+            # fill: rgb(0, 0, 0); font-size: 380%;
             if str(row_series.label_line_d) != 'nan':
-                backround_hex_str = self.light_grey_hex_str
+                backround_hex_str = self.ocean_blue_hex_str
+                backround_rgb = webcolors.hex_to_rgb(self.ocean_blue_hex_str)
             else:
-                backround_hex_str = webcolors.rgb_to_hex(district_rgb_dict.get(district_name, (255, 255, 255)))
-            text_style_dict['fill'] = self.get_fill_color(backround_hex_str=backround_hex_str).split(':')[-1]
-            text_style_dict['font-size'] = '{}px'.format(row_series.font_size)
+                backround_hex_str = webcolors.rgb_to_hex(district_rgb_dict.get(district_name, (128, 128, 128)))
+                backround_rgb = district_rgb_dict.get(district_name, (128, 128, 128))
+            text_style_dict = {}
+            text_style_dict['fill'] = self.get_fill_color(backround_hex_str=backround_hex_str)
+            # text_style_dict['fill'] = f'rgb{self.get_fill_color_rgb(backround_rgb=backround_rgb)}'
+            if str(row_series.font_size) != 'nan':
+                text_style_dict['font-size'] = row_series.font_size
+            elif str(row_series.dy) == 'nan':
+                text_style_dict['font-size'] = '1em'
             
-            style_str = ';'.join(self.get_style_list(text_style_dict))
-            text_str = f'<text x="{x}" y="{y}" id="text-{text_id}" style="{style_str}" inkscape:label="{label}">{tspan_str}</text>'
+            style_str = ';'.join(self.get_style_list(text_style_dict)) + ';'
+            # text_str = f'<text x="{x}" y="{y}" id="text-{text_id}" style="{style_str}" inkscape:label="{label}" dominant-baseline="middle" text-anchor="middle">{tspan_str}</text>'
+            text_str = f'''
+  <style id="style-{group_id}">.{group_id}{{fill:rgb{backround_rgb};}}</style>
+  <text x="{x}" y="{y}" id="text-{text_id}" style="{style_str}" inkscape:label="{label}" dominant-baseline="text-after-edge" text-anchor="middle">{tspan_str}</text>'''
+            if str(row_series.dy) == 'nan':
+                text_str += f'''
+  <script type="application/ecmascript" id="script-{text_id}">
+		
+		// Get path size
+		var groupNode = document.getElementById(&quot;{centroid_id}&quot;);
+		var pathBB = groupNode.getBBox();
+		
+		// Scale the font size and line height of the text
+		scaleTextNode(pathBB, &quot;text-{text_id}&quot;);
+        
+  </script>'''
             with open(text_file_path, 'a') as f:
                 print(text_str.encode(s.encoding_type, errors=s.encoding_error).decode(encoding=s.decoding_type,
                                                                                        errors=s.decoding_error), file=f)
@@ -725,7 +740,7 @@ class ChoroplethUtilities(object):
             attributes_set = self.add_docname(set(self.svg_attributes_list), svg_file_name)
             svg_prefix = self.svg_prefix_str.format(' '.join(list(attributes_set)),
                                                     ' '.join(self.namedview_attributes_list),
-                                                    self.copy_file_name, self.svg_height, self.get_fill_color(self.ocean_blue_hex_str),
+                                                    self.svg_height, self.get_fill_color(self.ocean_blue_hex_str),
                                                     self.svg_width)
             print(svg_prefix, file=f)
         
@@ -997,7 +1012,7 @@ class ChoroplethUtilities(object):
                     tspan_list = self.get_tspan_list(suggestion)
                     tspan_str = ''
                     for i, suggestion_str in enumerate(tspan_list):
-                        tspan_str += self.ts_str.format(text_id+str(i), x, y+self.line_height*i, suggestion_str)
+                        tspan_str += self.ts_str.format(text_id+str(i), x, self.line_height*i, suggestion_str)
                     style_str = ';'.join(self.text_style_list)
                     text_str = f'<text x="{x}" y="{y}" id="text-{text_id}" style="{style_str}" inkscape:label="{label}">{tspan_str}</text>'
                     with open(text_file_path, 'a') as f:
@@ -1179,28 +1194,28 @@ class ChoroplethUtilities(object):
             self.suggestion_list_dict[new_key] = self.suggestion_list_dict.pop(old_key)
 
 
-
-    def show_colorbar(self, column_name, cmap='viridis'):
+    def show_colorbar(self, column_name, cmap='viridis', min=None, max=None):
         '''
         column_name = 'Total_Gun_Murder_Deaths_2010'
-        cb1 = show_colorbar(column_name)
+        cb1 = c.show_colorbar(column_name)
         print(['cb1.ax.{}'.format(fn) for fn in dir(cb1.ax) if 'get_y' in fn.lower()])
         '''
         fig, ax = plt.subplots(figsize=(1, 6))
         fig.subplots_adjust(left=0.5)
 
-        min = self.one_country_df[column_name].min()
-        max = self.one_country_df[column_name].max()
+        if min is None:
+            min = self.one_country_df[column_name].min()
+        if max is None:
+            max = self.one_country_df[column_name].max()
         cmap = mpl.cm.get_cmap(cmap)
         norm = mpl.colors.Normalize(vmin=min, vmax=max)
 
-        cb1 = mpl.colorbar.ColorbarBase(ax, cmap=cmap,
-                                        norm=norm,
+        cb1 = mpl.colorbar.ColorbarBase(ax, cmap=cmap, norm=norm,
                                         orientation='vertical')
         cb1.set_label(self.get_column_description(column_name))
         file_path = os.path.join(self.svg_dir, 'colorbar.svg')
         plt.savefig(file_path)
-        self.trim_d_path(file_path)
+        plt.close(fig)
 
         return cb1
 
