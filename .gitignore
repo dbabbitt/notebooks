@@ -46,6 +46,9 @@ saves/tar/gsoy-latest.tar
 scikit_learn_data/mldata/mnist-original.mat
 saves/csv/response_patterns_df.csv
 
+# Exclude Notepad++ backup files
+*.bak
+
 # Exclude executables
 *.exe
 
