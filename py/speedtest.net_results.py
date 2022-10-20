@@ -2,6 +2,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+
+
+# Soli Deo gloria
+
+
+
 # Run this something like:
 # cd C:\Users\dev\Documents\Repositories\notebooks\py
 # C:\Users\dev\anaconda3\python.exe speedtest.net_results.py

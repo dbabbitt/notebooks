@@ -1,6 +1,12 @@
 
 # coding: utf-8
 
+
+
+# Soli Deo gloria
+
+
+
 # This is one of the 100 recipes of the [IPython Cookbook](
 # http://ipython-books.github.io/), the definitive guide to high-performance 
 # scientific computing and data science in Python.   3.7. Processing webcam 

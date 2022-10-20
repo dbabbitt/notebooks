@@ -4,6 +4,9 @@
 # Dave Babbitt <dave.babbitt@gmail.com>
 # Author: Dave Babbitt, Data Scientist
 # coding: utf-8
+
+# Soli Deo gloria
+
 """
 A set of utility functions specific to convert PDFs %load ../../load_magic/pdfs.py only
 """

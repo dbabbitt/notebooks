@@ -233,7 +233,11 @@
     <text
        x="1822"
        y="241"
-       id="text-to-mimic">to mimic human behavior</text>
+       id="text-to-mimic">to mimic human behavior (most</text>
+    <text
+       x="1822"
+       y="307"
+       id="text-to-mimic">importantly, human intelligence)</text>
   </g>
   <text
      x="1822"

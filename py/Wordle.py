@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+
+
+# Soli Deo gloria
+
+
+
 # From Anaconda Prompt (anaconda3), type:
 # D:
 # cd D:\Documents\GitHub\notebooks\py

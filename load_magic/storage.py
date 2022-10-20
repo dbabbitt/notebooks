@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+
+
+# Soli Deo gloria
+
+
+
 try:
     import pickle5 as pickle
 except:
@@ -48,8 +54,15 @@ class Storage(object):
         # Handy list of the different types of encodings
         self.encoding_type = ['latin1', 'iso8859-1', 'utf-8'][2]
     
-    def csv_exists(self, csv_name):
-        csv_path = os.path.join(self.saves_csv_folder, '{}.csv'.format(csv_name))
+    def csv_exists(self, csv_name, folder_path=None, verbose=False):
+        if folder_path is None:
+            csv_folder = self.saves_csv_folder
+        if csv_name.endswith('.csv'):
+            csv_path = os.path.join(folder_path, csv_name)
+        else:
+            csv_path = os.path.join(folder_path, f'{csv_name}.csv')
+        if verbose:
+            print(os.path.abspath(csv_path))
 
         return os.path.isfile(csv_path)
 

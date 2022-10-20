@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+
+
+# Soli Deo gloria
+
+
+
 from math import sqrt
 from matplotlib import cm
 from shutil import copyfile

@@ -3,6 +3,18 @@
 
 
 
+
+
+
+
+# Soli Deo gloria
+
+
+
+
+
+
+
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report

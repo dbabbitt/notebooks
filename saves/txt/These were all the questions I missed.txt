@@ -1,0 +1,21 @@
+
+These were all the questions I missed:
+
+Category: CDA - Deployment
+1) A serverless application consists of multiple Lambda Functions and a DynamoDB table. The application must be deployed by calling the CloudFormation APIs using AWS CLI. The CloudFormation template and the files containing the code for all the Lambda functions are located on a local computer. What should the Developer do to deploy the application?
+
+
+Category: CDA - Development with AWS Services
+1) A serverless architecture running a state machine is composed of multiple Lambda functions invoking one another. The development team has to make significant code changes whenever they update the state machine. The team wants to improve its workflow by refactoring the architecture. Which service should the team use?
+2) A transcoding media service is being developed on Amazon Cloud. Photos uploaded to Amazon S3 will trigger a Lambda function. The Lambda function will cause the Step Functions to coordinate a series of processes that will do the image analysis tasks. The input of each function should be preserved on the result to conform to the application's logic flow. What should the developer do?
+4) A full-stack developer has developed an application written in Node.js to host an upcoming mobile game tournament. The developer has decided to deploy the application using AWS Elastic Beanstalk because of its ease-of-use. Upon experimenting, he learned that he could configure the webserver environment with several resources. Which of the following services can the developer configure with Elastic Beanstalk? (Select THREE.)
+
+Category: CDA - Monitoring and Troubleshooting
+1) A company has launched a new serverless application using AWS Lambda. The app ran smoothly for a few weeks until it was featured on a popular website. As its popularity grew, so did the number of users receiving an error. Upon viewing the Lambda function’s monitoring graph, the developer discovered a lot of throttled invocation requests. What can the developer do to troubleshoot this issue? (Select THREE.)
+2) A code that runs on a Lambda function performs a GetItem call from a DynamoDB table. The function runs three times every week. You noticed that the application kept receiving a ProvisionedThroughputExceededException error for 10 seconds most of the time. How should you handle this error?
+
+Category: CDA - Refactoring
+1) A lead developer is looking for a way to decrease data retrieval latency from a MySQL database. The database is hosted on Amazon RDS. He wants to leverage AWS to implement a caching solution that supports Multi-AZ replication with sub-millisecond response times. What must the developer do that requires the LEAST amount of effort?
+
+Category: CDA - Security
+1) Highly classified documents are regularly stored in an Elastic Block Store. These technical documents contain specifications about electronic products. There is a legal agreement that this information should never be public. You need to explore the capabilities of AWS KMS to improve the security of the data to comply with the strict policy. Which of the following will provide the MOST secure solution?

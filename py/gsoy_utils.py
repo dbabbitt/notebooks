@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+
+
+# Soli Deo gloria
+
+
+
 # cd C:\Users\daveb\OneDrive\Documents\GitHub\notebooks\py
 
 from tqdm.notebook import tqdm

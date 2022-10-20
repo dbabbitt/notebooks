@@ -4,6 +4,9 @@
 # Dave Babbitt <dave.babbitt@gmail.com>
 # Author: Dave Babbitt, Data Scientist
 # coding: utf-8
+
+# Soli Deo gloria
+
 """
 ScrapingUtilities: A set of utility functions common to web scraping
 """

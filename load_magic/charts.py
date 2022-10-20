@@ -13,7 +13,7 @@ import random
 import seaborn as sns
 
 # Use the following only if you are on a high definition device
-from IPython.display import set_matplotlib_formats
+from matplotlib_inline.backend_inline import set_matplotlib_formats
 set_matplotlib_formats('retina')
 
 colormaps_list = ['Accent', 'Accent_r', 'Blues', 'Blues_r', 'BrBG', 'BrBG_r', 'BuGn', 'BuGn_r', 'BuPu', 'BuPu_r', 'CMRmap',
@@ -124,11 +124,11 @@ def first_order_linear_scatterplot(df, xname, yname,
     
     return fig
 
-def save_fig_as_various(fig, chart_name, verbose=False):
+def save_fig_as_various(fig, chart_name, dir_names_list=['pgf', 'png', 'svg'], verbose=False):
     """
     save_fig_as_various(fig, 'relative_search_strength_of_unprecedented', verbose=True)
     """
-    for dir_name in ['pgf', 'png', 'svg']:
+    for dir_name in dir_names_list:
         try:
             dir_path = os.path.join('../saves', dir_name)
             os.makedirs(name=dir_path, exist_ok=True)
