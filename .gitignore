@@ -49,13 +49,10 @@ saves/csv/response_patterns_df.csv
 # Exclude Notepad++ backup files
 *.bak
 
-# Exclude executables
+# Exclude executables and other binaries
 *.exe
 
-# Exclude secrets
-**/json/*_secret*.json
-**/json/*credential*.json
-saves/json/secrets.json
+# Exlude JPEGs and GIMP files
 
 # Exclude pickles
 #*.pkl
@@ -64,6 +61,12 @@ courses-master/platforms/bokeh/baby_names/yob.pkl
 saves/pkl/climates_df.pkl
 saves/pkl/nuforc_reports.pkl
 saves/pkl/wordle_response_patterns_df.pkl
+
+# Exclude secrets
+**/json/*secret*.json
+**/json/*credential*.json
+saves/json/secrets.json
+data/json/secrets.json
 
 # Exclude notebooks that I didn't make
 ipynb/Channel_Attribution_Building_Blocks_of_Interpretability.ipynb
@@ -231,3 +234,4 @@ dmypy.json
 
 # Exclude Pyre type checker
 .pyre/
+ipynb/J and G Cash Flow Sankey.ipynb

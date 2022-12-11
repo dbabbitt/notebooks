@@ -1,11 +1,16 @@
 #!/usr/bin/env python
+# Utility Functions to store objects as pickles.
+# Use it something like this:
+#
+# %run ../load_magic/storage.py
+#
+# s = Storage()
+#
+# Dave Babbitt <dave.babbitt@gmail.com>
+# Author: Dave Babbitt, Data Scientist
 # coding: utf-8
 
-
-
 # Soli Deo gloria
-
-
 
 try:
     import pickle5 as pickle
@@ -17,7 +22,9 @@ import sys
 import csv
 
 class Storage(object):
-    """Storage class."""
+    """
+    A set of utility functions specific to storing objects as pickles
+    """
     
     def __init__(self, verbose=False):
         
