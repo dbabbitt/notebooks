@@ -72,7 +72,9 @@ data/json/secrets.json
 ipynb/Channel_Attribution_Building_Blocks_of_Interpretability.ipynb
 ipynb/Google Drive.ipynb
 ipynb/HW2.ipynb
+ipynb/J and G Cash Flow Sankey.ipynb
 ipynb/Linear Regression with Gradient Descent.ipynb
+ipynb/Stevez Strength Training.ipynb
 ipynb/Upload YouTube Videos to the Reading Material Folder.ipynb
 ipynb/_Untitled_.ipynb
 ipynb/_Untitled_1.ipynb
@@ -234,4 +236,3 @@ dmypy.json
 
 # Exclude Pyre type checker
 .pyre/
-ipynb/J and G Cash Flow Sankey.ipynb
