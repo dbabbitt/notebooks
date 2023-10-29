@@ -1068,6 +1068,7 @@ class NotebookUtilities(object):
         tables_url = 'https://en.wikipedia.org/wiki/Provinces_of_Afghanistan'
         page_tables_list = nu.get_page_tables(tables_url)
         """
+        if self.filepath_regex.fullmatch(tables_url_or_filepath): assert osp.isfile(tables_url_or_filepath), f"{tables_url_or_filepath} doesn't exist"
         if self.url_regex.fullmatch(tables_url_or_filepath) or self.filepath_regex.fullmatch(tables_url_or_filepath):
             tables_df_list = pd.read_html(tables_url_or_filepath)
         else:
