@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<NotepadPlus>
+	<FindHistory
+		directionDown="yes"
+		dlgAlwaysVisible="no"
+		dotMatchesNewline="no"
+		fifFilterFollowsDoc="no"
+		fifFolderFollowsDoc="yes"
+		fifInHiddenFolder="no"
+		fifRecuisive="no"
+		isSearch2ButtonsMode="no"
+		matchCase="no"
+		matchWord="no"
+		nbMaxFindHistoryFilter="10"
+		nbMaxFindHistoryFind="10"
+		nbMaxFindHistoryPath="10"
+		nbMaxFindHistoryReplace="10"
+		regexBackward4PowerUser="no"
+		searchMode="2"
+		transparency="150"
+		transparencyMode="1"
+		wrap="yes"
+	>
+		<Path
+			name="C:\Users\dev\Documents\repositories\notebooks\job-hunting\saves\html"
+		/>
+		<Path
+			name="C:\Users\dev\Documents\repositories\notebooks\job-hunting\saves\txt"
+		/>
+		<Path
+			name="C:\Users\dev\Documents\repositories\notebooks\RPC"
+		/>
+		<Path
+			name="C:\Users\dev\Documents\repositories\notebooks\RPC\py"
+		/>
+		<Path
+			name="C:\users\dev\Anaconda3\Lib\site-packages\networkx"
+		/>
+		<Path
+			name="C:\ProgramData\Anaconda3\Lib\site-packages\networkx"
+		/>
+		<Path
+			name="C:\ProgramData\Anaconda3\Lib\site-packages\pydrive"
+		/>
+		<Filter name="*.html;" />
+		<Filter name="*.txt;" />
+		<Filter name="*.py;*.ipynb;" />
+		<Filter name="*.py;" />
+		<Find name="\.parse_tables" />
+		<Find name="_parse_tables" />
+		<Find name="_parse" />
+		<Find name="re[fl]" />
+		<Find name="wait" />
+		<Find name="post" />
+		<Find name="&apos;users.csv&apos;" />
+		<Find name="books" />
+		<Find name="books.db" />
+		<Find name="_options" />
+		<Replace name="delete" />
+		<Replace name="DATA_PATH" />
+		<Replace name="modules" />
+		<Replace name=" =" />
+		<Replace name="&apos;" />
+		<Replace name="  - " />
+		<Replace name="  -" />
+		<Replace name="    " />
+		<Replace name="/" />
+		<Replace name="flask" />
+	</FindHistory>
+	<FileBrowser
+		latestSelectedItem="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg"
+	>
+		<root
+			foldername="C:\Users\dev\Anaconda3\Lib\site-packages\pysvg"
+		/>
+	</FileBrowser>
+	<History
+		customLength="-1"
+		inSubMenu="no"
+		nbMaxFile="10"
+	>
+		<File
+			filename="C:\Users\dev\Documents\repositories\notebooks\flask\saves\html\report.html"
+		/>
+		<File
+			filename="C:\Users\dev\AppData\Roaming\jupyter\kernels\flask\kernel.json"
+		/>
+		<File
+			filename="C:\Users\dev\Documents\repositories\notebooks\flask\tests\test_post_delete_headers_body_json.py"
+		/>
+		<File
+			filename="C:\Users\dev\Documents\repositories\notebooks\flask\data\csv\users.csv"
+		/>
+		<File
+			filename="C:\Users\dev\Documents\repositories\notebooks\flask\ps1\create_flask_conda_environment.ps1"
+		/>
+		<File
+			filename="C:\Users\dev\Documents\repositories\notebooks\flask\api\csv_api.py"
+		/>
+		<File
+			filename="C:\Users\dev\AppData\Roaming\PostmanAgent\logs\main.log"
+		/>
+		<File
+			filename="C:\Users\dev\Documents\repositories\notebooks\flask\environment.yml"
+		/>
+		<File
+			filename="C:\Users\dev\Documents\repositories\notebooks\rpc\PythonFilesSession.xml"
+		/>
+		<File
+			filename="C:\Users\dev\anaconda3\Lib\site-packages\pandas\io\html.py"
+		/>
+	</History>
+	<ProjectPanels>
+		<ProjectPanel id="0" workSpaceFile="" />
+		<ProjectPanel id="1" workSpaceFile="" />
+		<ProjectPanel id="2" workSpaceFile="" />
+	</ProjectPanels>
+	<GUIConfigs>
+		<GUIConfig
+			name="ToolBar"
+			visible="yes"
+		>standard</GUIConfig>
+		<GUIConfig
+			name="StatusBar"
+		>show</GUIConfig>
+		<GUIConfig
+			closeButton="yes"
+			doubleClick2Close="no"
+			dragAndDrop="yes"
+			drawInactiveTab="yes"
+			drawTopBar="yes"
+			hide="no"
+			multiLine="yes"
+			name="TabBar"
+			quitOnEmpty="no"
+			reduce="yes"
+			vertical="no"
+		/>
+		<GUIConfig
+			name="ScintillaViewsSplitter"
+		>vertical</GUIConfig>
+		<GUIConfig
+			name="UserDefineDlg"
+			position="undocked">hide</GUIConfig>
+		<GUIConfig
+			name="TabSetting"
+			replaceBySpace="yes" size="4" />
+		<GUIConfig
+			height="616"
+			isMaximized="yes"
+			name="AppPosition"
+			width="594"
+			x="0"
+			y="0"
+		/>
+		<GUIConfig
+			bottom="534"
+			left="1049"
+			name="FindWindowPosition"
+			right="1638"
+			top="170"
+		/>
+		<GUIConfig
+			name="FinderConfig"
+			wrappedLines="no"
+		/>
+		<GUIConfig
+			intervalDays="15"
+			name="noUpdate"
+			nextUpdateDate="20201121"
+		>no</GUIConfig>
+		<GUIConfig
+			name="Auto-detection"
+		>yes</GUIConfig>
+		<GUIConfig
+			name="CheckHistoryFiles"
+		>no</GUIConfig>
+		<GUIConfig name="TrayIcon">no</GUIConfig>
+		<GUIConfig
+			name="MaitainIndent"
+		>yes</GUIConfig>
+		<GUIConfig
+			HighLightNonHtmlZone="no"
+			TagAttrHighLight="yes"
+			name="TagsMatchHighLight"
+		>yes</GUIConfig>
+		<GUIConfig
+			name="RememberLastSession"
+		>yes</GUIConfig>
+		<GUIConfig
+			name="DetectEncoding"
+		>yes</GUIConfig>
+		<GUIConfig
+			codepage="-1"
+			encoding="4"
+			format="0"
+			lang="0"
+			name="NewDocDefaultSettings"
+			openAnsiAsUTF8="yes"
+		/>
+		<GUIConfig
+			gr0="254"
+			gr10="31"
+			gr11="0"
+			gr12="0"
+			gr1="110"
+			gr2="191"
+			gr3="255"
+			gr4="255"
+			gr5="111"
+			gr6="159"
+			gr7="249"
+			gr8="255"
+			gr9="255"
+			langMenuCompact="no"
+			name="langsExcluded"
+		/>
+		<GUIConfig
+			footerFontName=""
+			footerFontSize="0"
+			footerFontStyle="0"
+			footerLeft=""
+			footerMiddle=""
+			footerRight=""
+			headerFontName=""
+			headerFontSize="0"
+			headerFontStyle="0"
+			headerLeft=""
+			headerMiddle=""
+			headerRight=""
+			lineNumber="yes"
+			margeBottom="0"
+			margeLeft="0"
+			margeRight="0"
+			margeTop="0"
+			name="Print"
+			printOption="3"
+		/>
+		<GUIConfig
+			action="0"
+			dir=""
+			isSnapshotMode="yes"
+			name="Backup"
+			snapshotBackupTiming="7000"
+			useCustumDir="no"
+		/>
+		<GUIConfig name="TaskList">yes</GUIConfig>
+		<GUIConfig name="MRU">yes</GUIConfig>
+		<GUIConfig name="URL">2</GUIConfig>
+		<GUIConfig
+			bg="no"
+			bold="no"
+			fg="no"
+			font="no"
+			fontSize="no"
+			italic="no"
+			name="globalOverride"
+			underline="no"
+		/>
+		<GUIConfig
+			autoCAction="0"
+			autoCIgnoreNumbers="no"
+			funcParams="yes"
+			name="auto-completion"
+			triggerFromNbChar="1"
+		/>
+		<GUIConfig
+			name="auto-insert"
+			parentheses="no"
+			brackets="no"
+			curlyBrackets="no"
+			quotes="no"
+			doubleQuotes="no"
+			htmlXmlTag="no"
+		/>
+		<GUIConfig name="sessionExt"></GUIConfig>
+		<GUIConfig name="workspaceExt"></GUIConfig>
+		<GUIConfig name="MenuBar">show</GUIConfig>
+		<GUIConfig
+			blinkRate="600"
+			name="Caret"
+			width="1"
+		/>
+		<GUIConfig
+			enableMultiSelection="no"
+			name="ScintillaGlobalSettings"
+		/>
+		<GUIConfig
+			defaultDirPath=""
+			name="openSaveDir"
+			value="0"
+		/>
+		<GUIConfig
+			name="titleBar"
+			short="no"
+		/>
+		<GUIConfig
+			name="stylerTheme"
+			path="C:\Users\dev\Documents\repositories\notebooks\Miscellaneous\saves\xml\stylers.xml"
+		/>
+		<GUIConfig
+			charsAdded=""
+			name="wordCharList"
+			useDefault="yes"
+		/>
+		<GUIConfig
+			delimiterSelectionOnEntireDocument="no"
+			leftmostDelimiter="40"
+			name="delimiterSelection"
+			rightmostDelimiter="41"
+		/>
+		<GUIConfig
+			name="multiInst"
+			setting="0"
+		/>
+		<GUIConfig
+			backSlashIsEscapeCharacterForSql="yes"
+			docPeekOnMap="no"
+			docPeekOnTab="no"
+			fileSwitcherWithoutExtColumn="no"
+			isFolderDroppedOpenFiles="no"
+			name="MISC"
+			newStyleSaveDlg="no"
+			writeTechnologyEngine="0"
+		/>
+		<GUIConfig
+			confirmReplaceInAllOpenDocs="yes"
+			findDlgAlwaysVisible="no"
+			monospacedFontFindDlg="no"
+			name="Searching"
+			stopFillingFindField="no"
+		/>
+		<GUIConfig
+			name="searchEngine"
+			searchEngineChoice="2"
+			searchEngineCustom=""
+		/>
+		<GUIConfig
+			matchCase="no"
+			name="SmartHighLight"
+			onAnotherView="no"
+			useFindSettings="no"
+			wholeWordOnly="yes"
+		>yes</GUIConfig>
+		<GUIConfig
+			Wrap="yes"
+			bookMarkMargin="show"
+			borderEdge="yes"
+			borderWidth="2"
+			currentLineHilitingShow="show"
+			disableAdvancedScrolling="no"
+			edgeMultiColumnPos=""
+			eolShow="hide"
+			folderMarkStyle="box"
+			indentGuideLine="show"
+			isEdgeBgMode="no"
+			lineNumberMargin="show"
+			lineWrapMethod="aligned"
+			name="ScintillaPrimaryView"
+			rightClickKeepsSelection="no"
+			scrollBeyondLastLine="no"
+			smoothFont="no"
+			whiteSpaceShow="show"
+			wrapSymbolShow="hide"
+			zoom2="0"
+			zoom="3"
+		/>
+		<GUIConfig
+			name="DockingManager"
+			leftWidth="200"
+			rightWidth="200"
+			topHeight="200"
+			bottomHeight="250"
+		>
+			<PluginDlg
+				curr="3"
+				id="0"
+				isVisible="no"
+				pluginName="Notepad++::InternalFunction"
+				prev="-1"
+			/>
+			<PluginDlg
+				curr="1"
+				id="44080"
+				isVisible="no"
+				pluginName="Notepad++::InternalFunction"
+				prev="-1"
+			/>
+			<PluginDlg
+				curr="0"
+				id="44085"
+				isVisible="no"
+				pluginName="Notepad++::InternalFunction"
+				prev="-1"
+			/>
+			<PluginDlg
+				curr="1"
+				id="42051"
+				isVisible="no"
+				pluginName="Notepad++::InternalFunction"
+				prev="-1"
+			/>
+			<PluginDlg
+				curr="1"
+				id="0"
+				isVisible="no"
+				pluginName="MarkdownViewer++"
+				prev="-1"
+			/>
+			<PluginDlg
+				curr="3"
+				id="0"
+				isVisible="no"
+				pluginName="dummy"
+				prev="-1"
+			/>
+			<PluginDlg
+				curr="1"
+				id="-1"
+				isVisible="no"
+				pluginName="Snippets"
+				prev="-1"
+			/>
+			<PluginDlg
+				curr="1"
+				id="11"
+				isVisible="no"
+				pluginName="ComparePlugin.dll"
+				prev="-1"
+			/>
+			<ActiveTabs cont="0" activeTab="-1" />
+			<ActiveTabs cont="1" activeTab="-1" />
+			<ActiveTabs cont="2" activeTab="-1" />
+			<ActiveTabs cont="3" activeTab="-1" />
+		</GUIConfig>
+	</GUIConfigs>
+</NotepadPlus>

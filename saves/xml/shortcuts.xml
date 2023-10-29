@@ -1,23 +1,95 @@
 <NotepadPlus>
-    <InternalCommands>
-        <Shortcut id="42059" Ctrl="no" Alt="no" Shift="no" Key="120" />
-    </InternalCommands>
-    <Macros>
-        <Macro name="Trim Trailing Space and Save" Ctrl="no" Alt="yes" Shift="yes" Key="83">
-            <Action type="2" message="0" wParam="42024" lParam="0" sParam="" />
-            <Action type="2" message="0" wParam="41006" lParam="0" sParam="" />
-        </Macro>
-    </Macros>
-    <UserDefinedCommands>
-        <Command name="Launch in Firefox" Ctrl="yes" Alt="yes" Shift="yes" Key="88">firefox &quot;$(FULL_CURRENT_PATH)&quot;</Command>
-        <Command name="Launch in IE" Ctrl="yes" Alt="yes" Shift="yes" Key="73">iexplore &quot;$(FULL_CURRENT_PATH)&quot;</Command>
-        <Command name="Launch in Chrome" Ctrl="yes" Alt="yes" Shift="yes" Key="82">chrome &quot;$(FULL_CURRENT_PATH)&quot;</Command>
-        <Command name="Launch in Safari" Ctrl="yes" Alt="yes" Shift="yes" Key="65">safari &quot;$(FULL_CURRENT_PATH)&quot;</Command>
-        <Command name="Get php help" Ctrl="no" Alt="yes" Shift="no" Key="112">http://www.php.net/$(CURRENT_WORD)</Command>
-        <Command name="Wikipedia Search" Ctrl="no" Alt="yes" Shift="no" Key="114">https://en.wikipedia.org/wiki/Special:Search?search=$(CURRENT_WORD)</Command>
-        <Command name="Open file in another instance" Ctrl="no" Alt="yes" Shift="no" Key="117">$(NPP_FULL_FILE_PATH) $(CURRENT_WORD) -nosession -multiInst</Command>
-        <Command name="Send via Outlook" Ctrl="yes" Alt="yes" Shift="yes" Key="79">outlook /a &quot;$(FULL_CURRENT_PATH)&quot;</Command>
-    </UserDefinedCommands>
-    <PluginCommands />
-    <ScintillaKeys />
+	<InternalCommands>
+		<Shortcut
+			Alt="no"
+			Ctrl="no"
+			Key="120"
+			Shift="no"
+			id="42059"
+		/>
+	</InternalCommands>
+	<Macros>
+		<Macro
+			Alt="yes"
+			Ctrl="no"
+			Key="83"
+			Shift="yes"
+			name="Trim Trailing Space and Save"
+		>
+			<Action
+				lParam="0"
+				message="0"
+				sParam=""
+				type="2"
+				wParam="42024"
+			/>
+			<Action
+				lParam="0"
+				message="0"
+				sParam=""
+				type="2"
+				wParam="41006"
+			/>
+		</Macro>
+	</Macros>
+	<UserDefinedCommands>
+		<Command
+			Alt="yes"
+			Ctrl="yes"
+			Key="88"
+			Shift="yes"
+			name="Launch in Firefox"
+		>firefox &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+		<Command
+			Alt="yes"
+			Ctrl="yes"
+			Key="73"
+			Shift="yes"
+			name="Launch in IE"
+		>iexplore &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+		<Command
+			Alt="yes"
+			Ctrl="yes"
+			Key="82"
+			Shift="yes"
+			name="Launch in Chrome"
+		>chrome &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+		<Command
+			Alt="yes"
+			Ctrl="yes"
+			Key="65"
+			Shift="yes"
+			name="Launch in Safari"
+		>safari &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+		<Command
+			Alt="yes"
+			Ctrl="no"
+			Key="112"
+			Shift="no"
+			name="Get php help"
+		>http://www.php.net/$(CURRENT_WORD)</Command>
+		<Command
+			Alt="yes"
+			Ctrl="no"
+			Key="114"
+			Shift="no"
+			name="Wikipedia Search"
+		>https://en.wikipedia.org/wiki/Special:Search?search=$(CURRENT_WORD)</Command>
+		<Command
+			Alt="yes"
+			Ctrl="no"
+			Key="117"
+			Shift="no"
+			name="Open file in another instance"
+		>$(NPP_FULL_FILE_PATH) $(CURRENT_WORD) -nosession -multiInst</Command>
+		<Command
+			Alt="yes"
+			Ctrl="yes"
+			Key="79"
+			Shift="yes"
+			name="Send via Outlook"
+		>outlook /a &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+	</UserDefinedCommands>
+	<PluginCommands />
+	<ScintillaKeys />
 </NotepadPlus>

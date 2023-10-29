@@ -52,7 +52,7 @@ class ScrapingUtilities(object):
     --------
     
     >>> import scraping_utils
-    >>> u = scraping_utils.ScrapingUtilities()
+    >>> su = scraping_utils.ScrapingUtilities()
     """
     
     def __init__(self):
@@ -935,3 +935,75 @@ class ScrapingUtilities(object):
             speaker_str = 'Andrew Franklin Davis'
         
         return speaker_str
+
+
+
+    def spider_infoboxes(self, jung_digraph, wiki_page, updown='both'):
+        wiki_soup = bs(wiki_page.html(), 'html.parser')
+        wiki_title = wiki_page.title
+        for param_th in wiki_soup.find_all('th', scope='row'):
+            if (param_th.text.strip()=='Baptised') or (param_th.text.strip()=='Born'):
+                born_td = param_th.find_next_sibling('td')
+                born_list = born_regex.findall(born_td.text)
+                if len(born_list) > 0:
+                    born_x = max(born_list, key=lambda x: len(x[0]))[0]
+                    born_x = int(BC_REGEX.sub(r'-\2', born_x))
+                    born_x = recalculate_born_year(born_x)
+                    born_pos = np.array((born_x, y_supply.pop()))
+                    born_pos = born_pos.astype(np.float32)
+                    pos_dict[wiki_title] = born_pos
+            if (param_th.text.strip()=='Influences') and ((updown=='both') or (updown=='up')):
+                influences_td = param_th.find_next_sibling('td')
+                for influences_link in influences_td.find_all('a', title=True):
+                    influences_title = influences_link['title']
+
+                    # Compensate for redirects
+                    try:
+                        if influences_title in PAGEID_DICT:
+                            influences_page = wikipedia.page(pageid=PAGEID_DICT[influences_title])
+                        else:
+                            influences_page = wikipedia.page(title=influences_title)
+                        influences_title = influences_page.title
+
+                        if influences_title not in NODE_LIST:
+                            jung_digraph.add_node(influences_title)
+                        jung_digraph.add_edge(influences_title, wiki_title)
+                        if influences_title not in NODE_LIST:
+                            jung_digraph = self.spider_infoboxes(jung_digraph, influences_page, updown='up')
+                            NODE_LIST.append(influences_title)
+                    except Exception as e:
+                        print(str(e).strip())
+                        PAGEID_DICT[influences_title] = influences_title
+            if (param_th.text.strip()=='Influenced') and ((updown=='both') or (updown=='down')):
+                influenced_td = param_th.find_next_sibling('td')
+                for influenced_link in influenced_td.find_all('a', title=True):
+                    influenced_title = influenced_link['title']
+
+                    # Compensate for redirects
+                    try:
+                        if influenced_title in PAGEID_DICT:
+                            influenced_page = wikipedia.page(pageid=PAGEID_DICT[influenced_title])
+                        else:
+                            influenced_page = wikipedia.page(title=influenced_title)
+                        influenced_title = influenced_page.title
+
+                        if influenced_title not in NODE_LIST:
+                            jung_digraph.add_node(influenced_title)
+                        jung_digraph.add_edge(wiki_title, influenced_title)
+                        if influenced_title not in NODE_LIST:
+                            jung_digraph = self.spider_infoboxes(jung_digraph, influenced_page, updown='down')
+                            NODE_LIST.append(influenced_title)
+                    except Exception as e:
+                        print(str(e).strip())
+                        PAGEID_DICT[influenced_title] = influenced_title
+        if wiki_title not in pos_dict:
+            birth_search_regex = re.compile(wiki_title + r' \(([^\)]+)\)')
+            match_obj = birth_search_regex.search(wiki_page.content)
+            if match_obj:
+                born_x = int(re.findall(r'\d{3,4}', match_obj.group(1))[0])
+                born_x = recalculate_born_year(born_x)
+                born_pos = np.array((born_x, y_supply.pop()))
+                born_pos = born_pos.astype(np.float32)
+                pos_dict[wiki_title] = born_pos
+
+        return jung_digraph

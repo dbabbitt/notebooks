@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="226.91109mm"
+   height="148.00928mm"
+   viewBox="0 0 226.91108 148.00927"
+   version="1.1"
+   id="svg1425"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="blooms_taxonomy.svg"
+   inkscape:export-filename="C:\Users\daveb\OneDrive\Documents\GitHub\notebooks\saves\png\chatgpt_taxonomy.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1427"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.73268357"
+     inkscape:cx="329.61023"
+     inkscape:cy="452.44634"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g-chatgpt"
+     objecttolerance="2.1"
+     showguides="true" />
+  <defs
+     id="defs-pyramid">
+    <!-- Artificial Intelligence -->
+    <rect
+       x="190.93753"
+       y="10.339578"
+       width="43.335327"
+       height="23.02923"
+       id="rect-ai-face-label" />
+    <rect
+       x="65"
+       y="5"
+       width="75"
+       height="7.5"
+       id="rect-ai-flag-header" />
+    <rect
+       x="65"
+       y="10"
+       width="150"
+       height="40"
+       id="rect-ai-flag-description" />
+    <!-- Machine Learning -->
+    <rect
+       x="190.93753"
+       y="10.339578"
+       width="43.335327"
+       height="23.02923"
+       id="rect-ml-face-label" />
+    <rect
+       x="74.25"
+       y="21.75"
+       width="75"
+       height="7.5"
+       id="rect-ml-flag-header" />
+    <rect
+       x="74.25"
+       y="26.75"
+       width="135"
+       height="40"
+       id="rect-ml-flag-description" />
+    <!-- Artificial Neural Network -->
+    <rect
+       x="190.93753"
+       y="10.339578"
+       width="47.459587"
+       height="23.02923"
+       id="rect-ann-face-label" />
+    <rect
+       x="83.5"
+       y="38.5"
+       width="75"
+       height="7.5"
+       id="rect-ann-flag-header" />
+    <rect
+       x="83.5"
+       y="43.5"
+       width="120"
+       height="40"
+       id="rect-ann-flag-description" />
+    <!-- Deep Learning -->
+    <rect
+       x="190.93753"
+       y="10.339578"
+       width="149.3877"
+       height="50.72068"
+       id="rect-dl-face-label" />
+    <rect
+       x="92.75"
+       y="55.25"
+       width="75"
+       height="7.5"
+       id="rect-dl-flag-header" />
+    <rect
+       x="92.75"
+       y="60.25"
+       width="105"
+       height="40"
+       id="rect-dl-flag-description" />
+    <!-- Transformer -->
+    <rect
+       x="190.93753"
+       y="10.339578"
+       width="149.3877"
+       height="50.72068"
+       id="rect-t-face-label" />
+    <rect
+       x="102"
+       y="72"
+       width="75"
+       height="7.5"
+       id="rect-t-flag-header" />
+    <rect
+       x="102"
+       y="77"
+       width="105"
+       height="40"
+       id="rect-t-flag-description" />
+    <!-- Generative Pre-trained Transformer -->
+    <rect
+       x="190.93753"
+       y="10.339578"
+       width="246.60236"
+       height="50.1315"
+       id="rect-gpt-face-label" />
+    <rect
+       x="111.25"
+       y="88.75"
+       width="75"
+       height="7.5"
+       id="rect-gpt-flag-header" />
+    <rect
+       x="111.25"
+       y="93.75"
+       width="100"
+       height="40"
+       id="rect-gpt-flag-description" />
+    <!-- Large Language Model -->
+    <rect
+       x="190.93753"
+       y="10.339578"
+       width="170.00899"
+       height="51.30986"
+       id="rect-llm-face-label" />
+    <rect
+       x="120.5"
+       y="105.5"
+       width="75"
+       height="7.5"
+       id="rect-llm-flag-header" />
+    <rect
+       x="120.5"
+       y="110.5"
+       width="90"
+       height="40"
+       id="rect-llm-flag-description" />
+    <!-- ChatGPT -->
+    <rect
+       x="190.93753"
+       y="10.339578"
+       width="170.00899"
+       height="51.30986"
+       id="rect-chatgpt-face-label" />
+    <rect
+       x="129.75"
+       y="122.25"
+       width="75"
+       height="7.5"
+       id="rect-chatgpt-flag-header" />
+    <rect
+       x="129.75"
+       y="127.25"
+       width="80"
+       height="40"
+       id="rect-chatgpt-flag-description" />
+  </defs>
+  <style
+     type="text/css"
+     id="style-pyramid">
+        .pathStyle {
+            -inkscape-stroke:none;
+            display:inline;
+            fill-opacity:1;
+            font-variation-settings:normal;
+            stop-color:#000000;
+            stop-opacity:1;
+            stroke-dasharray:none;
+            stroke-dashoffset:0;
+            stroke-linecap:butt;
+            stroke-linejoin:miter;
+            stroke-miterlimit:4;
+            stroke-opacity:1;
+            stroke-width:0.264583px;
+            stroke:#000000;
+            vector-effect:none;
+        }
+        .faceStyle {
+            opacity:0.67;
+        }
+        .flagStyle {
+            opacity:0.33;
+        }
+        .normalText {
+            font-family:sans-serif;
+            font-stretch:normal;
+            font-style:normal;
+            font-variant-caps:normal;
+            font-variant-east-asian:normal;
+            font-variant-ligatures:none;
+            font-variant-numeric:normal;
+            font-variant:normal;
+            line-height:1.25;
+            white-space:pre;
+        }
+        .labelText {
+            -inkscape-font-specification:'sans-serif, Bold';
+            font-size:18.0px;
+            font-weight:bold;
+            text-align:center;
+        }
+        .headerText {
+            -inkscape-font-specification:'sans-serif, Bold';
+            font-size:3.52778px;
+            font-weight:bold;
+            text-align:start;
+        }
+        .descriptionText {
+            -inkscape-font-specification:'sans-serif, Normal';
+            font-size:3.52778px;
+            font-weight:normal;
+            text-align:start;
+        }
+        .groupStyle {
+            display:inline;
+        }
+		
+        /* Artificial Intelligence */
+        .aiColor {
+            fill: #e85747;
+        }
+        .aiLabelText {
+            shape-inside:url(#rect-ai-face-label);
+        }
+        .aiHeaderText {
+            shape-inside:url(#rect-ai-flag-header);
+        }
+        .aiDescriptionText {
+            shape-inside:url(#rect-ai-flag-description);
+        }
+		
+        /* Machine Learning */
+        .mlColor {
+            fill: #e48e2a;
+        }
+        .mlLabelText {
+            shape-inside:url(#rect-ml-face-label);
+        }
+        .mlHeaderText {
+            shape-inside:url(#rect-ml-flag-header);
+        }
+        .mlDescriptionText {
+            shape-inside:url(#rect-ml-flag-description);
+        }
+		
+        /* Artificial Neural Network */
+        .annColor {
+            fill: #e1c428;
+        }
+        .annLabelText {
+            shape-inside:url(#rect-ann-face-label);
+        }
+        .annHeaderText {
+            shape-inside:url(#rect-ann-flag-header);
+        }
+        .annDescriptionText {
+            shape-inside:url(#rect-ann-flag-description);
+        }
+		
+        /* Deep Learning */
+        .dlColor {
+            fill: #81b827;
+        }
+        .dlLabelText {
+            shape-inside:url(#rect-dl-face-label);
+        }
+        .dlHeaderText {
+            shape-inside:url(#rect-dl-flag-header);
+        }
+        .dlDescriptionText {
+            shape-inside:url(#rect-dl-flag-description);
+        }
+		
+        /* Transformer */
+        .tColor {
+            fill: #4ba7cc;
+        }
+        .tLabelText {
+            shape-inside:url(#rect-t-face-label);
+        }
+        .tHeaderText {
+            shape-inside:url(#rect-t-flag-header);
+        }
+        .tDescriptionText {
+            shape-inside:url(#rect-t-flag-description);
+        }
+		
+        /* Generative Pre-trained Transformer */
+        .gptColor {
+            fill: #b046c0;
+        }
+        .gptLabelText {
+            shape-inside:url(#rect-gpt-face-label);
+        }
+        .gptHeaderText {
+            shape-inside:url(#rect-gpt-flag-header);
+        }
+        .gptDescriptionText {
+            shape-inside:url(#rect-gpt-flag-description);
+        }
+		
+        /* Large Language Model */
+        .llmColor {
+            fill: #d40000;
+        }
+        .llmLabelText {
+            shape-inside:url(#rect-llm-face-label);
+        }
+        .llmHeaderText {
+            shape-inside:url(#rect-llm-flag-header);
+        }
+        .llmDescriptionText {
+            shape-inside:url(#rect-llm-flag-description);
+        }
+		
+        /* ChatGPT */
+        .chatGPTColor {
+            fill: #00d4aa;
+        }
+        .chatGPTLabelText {
+            shape-inside:url(#rect-chatgpt-face-label);
+        }
+        .chatGPTHeaderText {
+            shape-inside:url(#rect-chatgpt-flag-header);
+        }
+        .chatGPTDescriptionText {
+            shape-inside:url(#rect-chatgpt-flag-description);
+        }
+		
+    </style>
+  <g
+     inkscape:groupmode="layer"
+     id="layer-pyramid"
+     transform="translate(16.778798,-3.80357)">
+    <g
+       id="g-ai"
+       class="groupStyle">
+      <path
+         class="pathStyle faceStyle aiColor"
+         d="M 56.537383,4.1947091 53.801705,19.332138 64.744425,19.149759 Z"
+         id="path-ai-face" />
+      <path
+         class="pathStyle aiColor"
+         d="M 56.537383,4.0123305 47.60083,18.96738 l 6.200875,0.364758 z"
+         id="path-ai-side" />
+      <path
+         class="pathStyle flagStyle aiColor"
+         d="M 210,4.0123305 H 56.537383 L 64.744425,19.149759 H 210 Z"
+         id="path-ai-flag" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,2.3148061,10.912656)"
+         id="text-ai-face-label"
+         class="normalText labelText aiLabelText"
+         x="0"
+         y="0"><tspan
+           x="200.70508"
+           y="26.761789"
+           id="tspan458696">AI</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text-ai-flag-header"
+         class="normalText headerText aiHeaderText"><tspan
+           x="65"
+           y="8.2185007"
+           id="tspan458698">Artificial Intelligence</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text-ai-flag-description"
+         class="normalText descriptionText aiDescriptionText"><tspan
+           x="65"
+           y="13.218501"
+           id="tspan458700">A technique that enables machines to mimic human behavior, most importantly </tspan><tspan
+           x="65"
+           y="17.628226"
+           id="tspan458702">human intelligence, in order to solve problems and make decisions.</tspan></text>
+    </g>
+    <g
+       id="g-ml"
+       class="groupStyle">
+      <path
+         class="pathStyle faceStyle mlColor"
+         d="M 65.656316,20.791167 53.619325,21.338303 50.701267,37.387625 73.863355,36.110973 Z"
+         id="path-ml-face" />
+      <path
+         class="pathStyle mlColor"
+         d="m 53.619325,21.338303 -7.295147,-0.729515 -8.571796,14.407913 12.948885,2.370924 z"
+         id="path-ml-side" />
+      <path
+         class="pathStyle flagStyle mlColor"
+         d="M 210,21.200652 65.656316,20.791167 73.863355,36.110973 H 210 Z"
+         id="path-ml-flag" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,4.739841,24.360577)"
+         id="text-ml-face-label"
+         class="normalText labelText mlLabelText"
+         x="0"
+         y="0"><tspan
+           x="198.34082"
+           y="26.761789"
+           id="tspan458704">ML</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text-ml-flag-header"
+         class="normalText headerText mlHeaderText"><tspan
+           x="74.25"
+           y="24.968501"
+           id="tspan458706">Machine Learning</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text-ml-flag-description"
+         class="normalText descriptionText mlDescriptionText"><tspan
+           x="74.25"
+           y="29.968501"
+           id="tspan458708">An AI technique that uses statistics to enable machines to improve with </tspan><tspan
+           x="74.25"
+           y="34.378226"
+           id="tspan458710">experience and make predictions without being explicitly programmed.</tspan></text>
+    </g>
+    <g
+       id="g-ann"
+       class="groupStyle">
+      <path
+         class="pathStyle faceStyle annColor"
+         d="M 74.77525,37.934762 50.15413,39.211411 47.236072,55.990249 82.982288,53.072188 Z"
+         id="path-ann-face" />
+      <path
+         class="pathStyle annColor"
+         d="m 50.15413,39.211411 -13.6784,-2.370923 -7.842281,14.225537 18.602623,4.924224 z"
+         id="path-ann-side" />
+      <path
+         class="pathStyle flagStyle annColor"
+         d="M 210,37.855413 74.775248,37.934763 82.982286,53.07219 H 210 Z"
+         id="path-ann-flag" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,6.8278792,41.385152)"
+         id="text-ann-face-label"
+         class="normalText labelText annLabelText"
+         x="0"
+         y="0"><tspan
+           x="192.43945"
+           y="26.761789"
+           id="tspan458712">ANN</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text-ann-flag-header"
+         class="normalText headerText annHeaderText"><tspan
+           x="83.5"
+           y="41.718501"
+           id="tspan458714">Artificial Neural Network</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text-ann-flag-description"
+         class="normalText descriptionText annDescriptionText"><tspan
+           x="83.5"
+           y="46.718501"
+           id="tspan458716">An ML technique inspired by neurons that uses layers of weighted, </tspan><tspan
+           x="83.5"
+           y="51.128226"
+           id="tspan458718">inter-connected nodes to learn patterns and relationships in data.</tspan></text>
+    </g>
+    <g
+       id="g-dl"
+       class="groupStyle">
+      <path
+         class="pathStyle faceStyle dlColor"
+         d="M 84.07656,54.895977 47.053693,57.631655 43.770878,74.957629 92.283602,70.033406 Z"
+         id="path-dl-face" />
+      <path
+         class="pathStyle dlColor"
+         d="m 47.053693,57.631655 -20.06165,-4.924224 -7.842284,13.86078 24.621119,8.389416 z"
+         id="path-dl-side" />
+      <path
+         class="pathStyle flagStyle dlColor"
+         d="M 210,54.575479 84.076558,54.895976 92.2836,70.033405 H 210 Z"
+         id="path-dl-flag" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-2.3079569,59.398063)"
+         id="text-dl-face-label"
+         class="normalText labelText dlLabelText"
+         x="0"
+         y="0"><tspan
+           x="252.42627"
+           y="26.761789"
+           id="tspan458720">DL</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text-dl-flag-header"
+         class="normalText headerText dlHeaderText"><tspan
+           x="92.75"
+           y="58.468501"
+           id="tspan458722">Deep Learning</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text-dl-flag-description"
+         class="normalText descriptionText dlDescriptionText"><tspan
+           x="92.75"
+           y="63.468501"
+           id="tspan458724">An ANN technique that uses many hidden layers to </tspan><tspan
+           x="92.75"
+           y="67.87823"
+           id="tspan458726">automatically learn complex hierarchical representations.</tspan></text>
+    </g>
+    <g
+       id="g-t">
+      <path
+         class="pathStyle faceStyle tColor"
+         d="M 93.377873,71.857192 43.40612,76.963793 40.305683,94.654522 101.58491,87.176998 Z"
+         id="path-t-face" />
+      <path
+         class="pathStyle tColor"
+         d="M 43.40612,76.963793 17.873109,68.02724 10.030826,81.52326 40.305683,94.65452 Z"
+         id="path-t-side" />
+      <path
+         class="pathStyle flagStyle tColor"
+         d="M 210,71.703349 93.377871,71.857191 101.58491,87.176997 H 210 Z"
+         id="path-t-flag" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,0.7154041,77.144815)"
+         id="text-t-face-label"
+         class="normalText labelText tLabelText"
+         x="0"
+         y="0"><tspan
+           x="259.49707"
+           y="26.761789"
+           id="tspan458728">T</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text-t-flag-header"
+         class="normalText headerText tHeaderText"><tspan
+           x="102"
+           y="75.218501"
+           id="tspan458730">Transformer</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text-t-flag-description"
+         class="normalText descriptionText tDescriptionText"><tspan
+           x="102"
+           y="80.218501"
+           id="tspan458732">A DL technique that uses self-attention to process </tspan><tspan
+           x="102"
+           y="84.62823"
+           id="tspan458734">sequential data, capturing long-range dependencies.</tspan></text>
+    </g>
+    <g
+       id="g-gpt">
+      <path
+         class="pathStyle faceStyle gptColor"
+         d="M 102.49681,88.818407 39.940925,96.843068 36.840488,114.71617 110.52147,103.77346 Z"
+         id="path-gpt-face" />
+      <path
+         class="pathStyle gptColor"
+         d="M 39.940925,96.843066 8.9365541,82.799911 1.6414079,95.748794 36.840488,114.71617 Z"
+         id="path-gpt-side" />
+      <path
+         class="pathStyle flagStyle gptColor"
+         d="m 210,88.627319 -107.05226,0.191087 8.02466,14.955054 H 210 Z"
+         id="path-gpt-flag" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-8.6049481,95.970037)"
+         id="text-gpt-face-label"
+         class="normalText labelText gptLabelText"
+         x="0"
+         y="0"><tspan
+           x="294.20801"
+           y="26.761789"
+           id="tspan458736">GPT</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text-gpt-flag-header"
+         class="normalText headerText gptHeaderText"><tspan
+           x="111.25"
+           y="91.968501"
+           id="tspan458738">Generative Pre-trained Transformer</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text-gpt-flag-description"
+         class="normalText descriptionText gptDescriptionText"><tspan
+           x="111.25"
+           y="96.968501"
+           id="tspan458740">A transformer technique of pre-training on a large </tspan><tspan
+           x="111.25"
+           y="101.37823"
+           id="tspan458742">corpus of text data and fine-tuning on a specific task.</tspan></text>
+    </g>
+    <g
+       id="g-llm">
+      <path
+         class="pathStyle faceStyle llmColor"
+         d="M 111.43336,105.59724 36.293353,116.1752 33.92243,131.13026 119.45802,119.82278 Z"
+         id="path-llm-face" />
+      <path
+         class="pathStyle llmColor"
+         d="M 36.293353,116.1752 0.54713597,97.207825 -7.477525,111.25098 33.92243,131.13026 Z"
+         id="path-llm-side" />
+      <path
+         class="pathStyle flagStyle llmColor"
+         d="m 210,105.59724 h -98.56664 l 8.02466,14.22554 H 210 Z"
+         id="path-llm-flag"
+         sodipodi:nodetypes="ccccc" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,4.4238192,112.30957)"
+         id="text-llm-face-label"
+         class="normalText labelText llmLabelText"
+         x="0"
+         y="0"><tspan
+           x="255.94287"
+           y="26.761789"
+           id="tspan458744">LLM</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text-llm-flag-header"
+         class="normalText headerText llmHeaderText"><tspan
+           x="120.5"
+           y="108.7185"
+           id="tspan458746">Large Language Model</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text-llm-flag-description"
+         class="normalText descriptionText llmDescriptionText"><tspan
+           x="120.5"
+           y="113.7185"
+           id="tspan458748">A GPT technique utilizing self-supervised learning </tspan><tspan
+           x="120.5"
+           y="118.12823"
+           id="tspan458750">and unsupervised pre-training.</tspan></text>
+    </g>
+    <!-- Artificial Intelligence -->
+    <g
+       id="g-chatgpt">
+      <path
+         class="pathStyle faceStyle chatGPTColor"
+         d="m 119.82278,121.5 -86.447485,11.85461 -3.100958,18.25367 98.586193,-13.3964 z"
+         id="path-chatgpt-face"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         class="pathStyle chatGPTColor"
+         d="m 33.375295,133.13642 -42.3118491,-20.24403 -7.6599039,13.31364 46.870795,25.40225 z"
+         id="path-chatgpt-side"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         class="pathStyle flagStyle chatGPTColor"
+         d="m 210,121.5 h -90.17722 l 9.03775,16.71188 H 210 Z"
+         id="path-chatgpt-flag"
+         sodipodi:nodetypes="ccccc" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,7.1926628,131.51233)"
+         id="text-chatgpt-face-label"
+         class="normalText labelText chatGPTLabelText"
+         x="0"
+         y="0"><tspan
+           x="232.87598"
+           y="26.761789"
+           id="tspan458752">ChatGPT</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text-chatgpt-flag-header"
+         class="normalText headerText chatGPTHeaderText"><tspan
+           x="129.75"
+           y="125.4685"
+           id="tspan458754">ChatGPT</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text-chatgpt-flag-description"
+         class="normalText descriptionText chatGPTDescriptionText"><tspan
+           x="129.75"
+           y="130.4685"
+           id="tspan458756">A specific large language model developed </tspan><tspan
+           x="129.75"
+           y="134.87823"
+           id="tspan458758">by OpenAI.</tspan></text>
+    </g>
+  </g>
+</svg>

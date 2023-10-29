@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-05-06">
+    <creator>NetworkX 2.8.4</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Rationality" label="Rationality" />
+      <node id="Self-Governance" label="Self-Governance" />
+      <node id="Self-Consciousness" label="Self-Consciousness" />
+      <node id="Introspection" label="Introspection" />
+      <node id="reducing&#10;self-deception" label="reducing&#10;self-deception" />
+      <node id="petitioning future&#10;rational agents" label="petitioning future&#10;rational agents" />
+      <node id="&quot;need for cognition&quot;" label="&quot;need for cognition&quot;" />
+      <node id="aspire to become&#10;more rational" label="aspire to become&#10;more rational" />
+      <node id="aspiring to a&#10;love of wisdom" label="aspiring to a&#10;love of wisdom" />
+      <node id="disruptive strategies&#10;to prevent overfitting" label="disruptive strategies&#10;to prevent overfitting" />
+      <node id="Autopoiesis&#10;(capable of caring)" label="Autopoiesis&#10;(capable of caring)" />
+      <node id="care about&#10;deceiving others" label="care about&#10;deceiving others" />
+      <node id="care about&#10;rational precedence" label="care about&#10;rational precedence" />
+      <node id="Caring about&#10;Realness" label="Caring about&#10;Realness" />
+      <node id="...broadly construed in an&#10;Agent/Arena relationship" label="...broadly construed in an&#10;Agent/Arena relationship" />
+      <node id="...being in touch with reality" label="...being in touch with reality" />
+      <node id="Religio" label="Religio" />
+      <node id="Truth" label="Truth" />
+      <node id="Propositions" label="Propositions" />
+      <node id="Power" label="Power" />
+      <node id="Procedures" label="Procedures" />
+      <node id="Presence" label="Presence" />
+      <node id="Perspectives" label="Perspectives" />
+      <node id="Belonging" label="Belonging" />
+      <node id="Participations" label="Participations" />
+      <node id="Caring about&#10;Accountability" label="Caring about&#10;Accountability" />
+      <node id="Authority" label="Authority" />
+      <node id="what do you recognize&#10;you`re responsible to" label="what do you recognize&#10;you`re responsible to" />
+      <node id="being responsible for&#10;and responsible to&#10;normative standards" label="being responsible for&#10;and responsible to&#10;normative standards" />
+      <node id="what you&#10;stand for" label="what you&#10;stand for" />
+      <node id="a higher version of Life" label="a higher version of Life" />
+      <node id="generate standards that&#10;you then bind yourself to" label="generate standards that&#10;you then bind yourself to" />
+      <node id="ability to self-&#10;explicate, self-explain" label="ability to self-&#10;explicate, self-explain" />
+      <node id="deep recognition of finitude,&#10;fallibility, unreliability&#10;and self-deception" label="deep recognition of finitude,&#10;fallibility, unreliability&#10;and self-deception" />
+      <node id="Self-Observation" label="Self-Observation" />
+      <node id="dreaming,&#10;mind-wandering,&#10;psychedelics, etc." label="dreaming,&#10;mind-wandering,&#10;psychedelics, etc." />
+      <node id="care about madness,&#10;despair, insanity, etc." label="care about madness,&#10;despair, insanity, etc." />
+      <node id="Intelligence" label="Intelligence" />
+      <node id="...reliably giving you&#10;semantically meaningful&#10;information" label="...reliably giving you&#10;semantically meaningful&#10;information" />
+      <node id="...important to your ongoing&#10;survival, existence, etc." label="...important to your ongoing&#10;survival, existence, etc." />
+      <node id="Greg Enriquez`s&#10;&quot;just victory work&quot;" label="Greg Enriquez`s&#10;&quot;just victory work&quot;" />
+      <node id="long-term&#10;planning trajectory" label="long-term&#10;planning trajectory" />
+      <node id="Confabulation" label="Confabulation" />
+    </nodes>
+    <edges>
+      <edge source="Rationality" target="Autopoiesis&#10;(capable of caring)" id="0" />
+      <edge source="Rationality" target="long-term&#10;planning trajectory" id="1" />
+      <edge source="Self-Governance" target="Rationality" id="2" />
+      <edge source="Introspection" target="Rationality" id="3" />
+      <edge source="reducing&#10;self-deception" target="Rationality" id="4" />
+      <edge source="petitioning future&#10;rational agents" target="Rationality" id="5" />
+      <edge source="&quot;need for cognition&quot;" target="Rationality" id="6" />
+      <edge source="aspire to become&#10;more rational" target="Rationality" id="7" />
+      <edge source="aspiring to a&#10;love of wisdom" target="Rationality" id="8" />
+      <edge source="disruptive strategies&#10;to prevent overfitting" target="Rationality" id="9" />
+      <edge source="Autopoiesis&#10;(capable of caring)" target="Caring about&#10;Realness" id="10" />
+      <edge source="Autopoiesis&#10;(capable of caring)" target="Caring about&#10;Accountability" id="11" />
+      <edge source="care about&#10;deceiving others" target="Autopoiesis&#10;(capable of caring)" id="12" />
+      <edge source="care about&#10;rational precedence" target="Autopoiesis&#10;(capable of caring)" id="13" />
+      <edge source="Caring about&#10;Realness" target="Truth" id="14" />
+      <edge source="Caring about&#10;Realness" target="Power" id="15" />
+      <edge source="Caring about&#10;Realness" target="Presence" id="16" />
+      <edge source="Caring about&#10;Realness" target="Belonging" id="17" />
+      <edge source="...broadly construed in an&#10;Agent/Arena relationship" target="Caring about&#10;Realness" id="18" />
+      <edge source="...being in touch with reality" target="Caring about&#10;Realness" id="19" />
+      <edge source="Religio" target="Caring about&#10;Realness" id="20" />
+      <edge source="Truth" target="Propositions" id="21" />
+      <edge source="Power" target="Procedures" id="22" />
+      <edge source="Presence" target="Perspectives" id="23" />
+      <edge source="Belonging" target="Participations" id="24" />
+      <edge source="Authority" target="Caring about&#10;Accountability" id="25" />
+      <edge source="what do you recognize&#10;you`re responsible to" target="being responsible for&#10;and responsible to&#10;normative standards" id="26" />
+      <edge source="being responsible for&#10;and responsible to&#10;normative standards" target="Caring about&#10;Accountability" id="27" />
+      <edge source="what you&#10;stand for" target="Caring about&#10;Accountability" id="28" />
+      <edge source="a higher version of Life" target="Rationality" id="29" />
+      <edge source="generate standards that&#10;you then bind yourself to" target="a higher version of Life" id="30" />
+      <edge source="ability to self-&#10;explicate, self-explain" target="deep recognition of finitude,&#10;fallibility, unreliability&#10;and self-deception" id="31" />
+      <edge source="deep recognition of finitude,&#10;fallibility, unreliability&#10;and self-deception" target="reducing&#10;self-deception" id="32" />
+      <edge source="Self-Observation" target="deep recognition of finitude,&#10;fallibility, unreliability&#10;and self-deception" id="33" />
+      <edge source="dreaming,&#10;mind-wandering,&#10;psychedelics, etc." target="disruptive strategies&#10;to prevent overfitting" id="34" />
+      <edge source="care about madness,&#10;despair, insanity, etc." target="dreaming,&#10;mind-wandering,&#10;psychedelics, etc." id="35" />
+      <edge source="...reliably giving you&#10;semantically meaningful&#10;information" target="Religio" id="36" />
+      <edge source="...important to your ongoing&#10;survival, existence, etc." target="...reliably giving you&#10;semantically meaningful&#10;information" id="37" />
+      <edge source="Greg Enriquez`s&#10;&quot;just victory work&quot;" target="petitioning future&#10;rational agents" id="38" />
+      <edge source="Confabulation" target="care about&#10;deceiving others" id="39" />
+    </edges>
+  </graph>
+</gexf>

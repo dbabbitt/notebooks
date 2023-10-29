@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="2">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="2416" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="C:\Users\daveb\.jupyter\jupyter_notebook_config.py" backupFilePath="" originalFileLastModifTimestamp="1990132204" originalFileLastModifTimestampHigh="31028493" tabColourId="-1" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="2416" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="None (Normal Text)" encoding="-1" userReadOnly="no" filename="C:\Users\daveb\OneDrive\Documents\GitHub\notebooks\.gitignore" backupFilePath="" originalFileLastModifTimestamp="73163287" originalFileLastModifTimestampHigh="31003186" tabColourId="-1" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="512" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="2416" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="None (Normal Text)" encoding="-1" userReadOnly="no" filename="C:\Users\daveb\OneDrive\Documents\GitHub\notebooks\.git\info\exclude" backupFilePath="" originalFileLastModifTimestamp="-1688920537" originalFileLastModifTimestampHigh="30941591" tabColourId="-1" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="512" mapWrapIndentMode="-1" mapIsWrap="no" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>

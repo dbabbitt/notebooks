@@ -1,6 +1,6 @@
 
 # This should by imported something like this in your notebook:
-# %run ../../load_magic/charts.py
+# %run ../load_magic/charts.py
 #
 
 from cycler import cycler
@@ -162,8 +162,10 @@ def get_color_cycler(n):
 
 def ball_and_chain(ax, index, values, c):
     """
+    import matplotlib as mpl
+    
     colormap = r()
-    cmap = mpl.cm.get_cmap(colormap)
+    cmap = mpl.colormaps.get_cmap(colormap)
     norm = LogNorm(vmin=values.min(), vmax=values.max())
     ball_and_chain(ax, index, values, c=cmap(norm(values)))
     """

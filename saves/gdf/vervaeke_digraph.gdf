@@ -1,0 +1,194 @@
+nodedef> name VARCHAR,label VARCHAR,width DOUBLE,height DOUBLE,x DOUBLE,y DOUBLE,color VARCHAR
+Rationality,"Rationality",10.0,10.0,144.65817,-178.2715,'0,0,0'
+Self-Governance,"Self-Governance",10.0,10.0,-21.862026,-222.209,'0,0,0'
+Self-Consciousness,"Self-Consciousness",10.0,10.0,-750.33685,-486.1642,'0,0,0'
+Introspection,"Introspection",10.0,10.0,419.57703,-138.00854,'0,0,0'
+reducing
+self-deception,"reducing
+self-deception",10.0,10.0,783.93207,-87.59828,'0,0,0'
+petitioning future
+rational agents,"petitioning future
+rational agents",10.0,10.0,237.07538,-333.18802,'0,0,0'
+"need for cognition",""need for cognition"",10.0,10.0,260.00995,-87.3937,'0,0,0'
+aspire to become
+more rational,"aspire to become
+more rational",10.0,10.0,403.6887,-266.13107,'0,0,0'
+aspiring to a
+love of wisdom,"aspiring to a
+love of wisdom",10.0,10.0,115.13767,-36.459866,'0,0,0'
+disruptive strategies
+to prevent overfitting,"disruptive strategies
+to prevent overfitting",10.0,10.0,759.28723,-383.07043,'0,0,0'
+Autopoiesis
+(capable of caring),"Autopoiesis
+(capable of caring)",10.0,10.0,10.963671,111.89707,'0,0,0'
+care about
+deceiving others,"care about
+deceiving others",10.0,10.0,74.24307,161.2486,'0,0,0'
+care about
+rational precedence,"care about
+rational precedence",10.0,10.0,-369.7653,63.05833,'0,0,0'
+Caring about
+Realness,"Caring about
+Realness",10.0,10.0,-211.08981,300.64026,'0,0,0'
+...broadly construed in an
+Agent/Arena relationship,"...broadly construed in an
+Agent/Arena relationship",10.0,10.0,-194.34978,399.38168,'0,0,0'
+...being in touch with reality,"...being in touch with reality",10.0,10.0,8.46404,349.7785,'0,0,0'
+Religio,"Religio",10.0,10.0,-333.175,507.4512,'0,0,0'
+Truth,"Truth",10.0,10.0,-191.34077,473.38687,'0,0,0'
+Propositions,"Propositions",10.0,10.0,-185.38385,581.3933,'0,0,0'
+Power,"Power",10.0,10.0,-49.935722,443.96936,'0,0,0'
+Procedures,"Procedures",10.0,10.0,-37.669746,537.4537,'0,0,0'
+Presence,"Presence",10.0,10.0,-439.20685,353.01822,'0,0,0'
+Perspectives,"Perspectives",10.0,10.0,-495.3408,449.10394,'0,0,0'
+Belonging,"Belonging",10.0,10.0,-306.78314,251.32149,'0,0,0'
+Participations,"Participations",10.0,10.0,-403.6346,202.93953,'0,0,0'
+Caring about
+Accountability,"Caring about
+Accountability",10.0,10.0,-463.7595,14.137943,'0,0,0'
+Authority,"Authority",10.0,10.0,-214.47583,-172.76668,'0,0,0'
+what do you recognize
+you`re responsible to,"what do you recognize
+you`re responsible to",10.0,10.0,-733.64844,-232.35216,'0,0,0'
+being responsible for
+and responsible to
+normative standards,"being responsible for
+and responsible to
+normative standards",10.0,10.0,-724.9857,-123.51748,'0,0,0'
+what you
+stand for,"what you
+stand for",10.0,10.0,-412.07748,-73.616394,'0,0,0'
+a higher version of Life,"a higher version of Life",10.0,10.0,-243.09721,-282.7499,'0,0,0'
+generate standards that
+you then bind yourself to,"generate standards that
+you then bind yourself to",10.0,10.0,-284.93527,-424.20026,'0,0,0'
+ability to self-
+explicate, self-explain,"ability to self-
+explicate, self-explain",10.0,10.0,913.55444,-36.828617,'0,0,0'
+deep recognition of finitude,
+fallibility, unreliability
+and self-deception,"deep recognition of finitude,
+fallibility, unreliability
+and self-deception",10.0,10.0,695.19836,13.36585,'0,0,0'
+Self-Observation,"Self-Observation",10.0,10.0,710.12177,64.58261,'0,0,0'
+dreaming,
+mind-wandering,
+psychedelics, etc.,"dreaming,
+mind-wandering,
+psychedelics, etc.",10.0,10.0,433.97702,-524.80414,'0,0,0'
+care about madness,
+despair, insanity, etc.,"care about madness,
+despair, insanity, etc.",10.0,10.0,365.85593,-621.7988,'0,0,0'
+Intelligence,"Intelligence",10.0,10.0,916.9067,-572.9093,'0,0,0'
+...reliably giving you
+semantically meaningful
+information,"...reliably giving you
+semantically meaningful
+information",10.0,10.0,-420.37546,631.67053,'0,0,0'
+...important to your ongoing
+survival, existence, etc.,"...important to your ongoing
+survival, existence, etc.",10.0,10.0,-459.00208,697.90424,'0,0,0'
+Greg Enriquez`s
+"just victory work","Greg Enriquez`s
+"just victory work"",10.0,10.0,301.21106,-475.5941,'0,0,0'
+long-term
+planning trajectory,"long-term
+planning trajectory",10.0,10.0,611.8707,-209.89409,'0,0,0'
+Confabulation,"Confabulation",10.0,10.0,86.76691,204.89993,'0,0,0'
+edgedef> node1,node2,weight DOUBLE,directed BOOLEAN
+Rationality,Autopoiesis
+(capable of caring),1.0,true
+Rationality,long-term
+planning trajectory,1.0,true
+Self-Governance,Rationality,1.0,true
+Introspection,Rationality,1.0,true
+reducing
+self-deception,Rationality,1.0,true
+petitioning future
+rational agents,Rationality,1.0,true
+"need for cognition",Rationality,1.0,true
+aspire to become
+more rational,Rationality,1.0,true
+aspiring to a
+love of wisdom,Rationality,1.0,true
+disruptive strategies
+to prevent overfitting,Rationality,1.0,true
+Autopoiesis
+(capable of caring),Caring about
+Realness,1.0,true
+Autopoiesis
+(capable of caring),Caring about
+Accountability,1.0,true
+care about
+deceiving others,Autopoiesis
+(capable of caring),1.0,true
+care about
+rational precedence,Autopoiesis
+(capable of caring),1.0,true
+Caring about
+Realness,Truth,1.0,true
+Caring about
+Realness,Power,1.0,true
+Caring about
+Realness,Presence,1.0,true
+Caring about
+Realness,Belonging,1.0,true
+...broadly construed in an
+Agent/Arena relationship,Caring about
+Realness,1.0,true
+...being in touch with reality,Caring about
+Realness,1.0,true
+Religio,Caring about
+Realness,1.0,true
+Truth,Propositions,1.0,true
+Power,Procedures,1.0,true
+Presence,Perspectives,1.0,true
+Belonging,Participations,1.0,true
+Authority,Caring about
+Accountability,1.0,true
+what do you recognize
+you`re responsible to,being responsible for
+and responsible to
+normative standards,1.0,true
+being responsible for
+and responsible to
+normative standards,Caring about
+Accountability,1.0,true
+what you
+stand for,Caring about
+Accountability,1.0,true
+a higher version of Life,Rationality,1.0,true
+generate standards that
+you then bind yourself to,a higher version of Life,1.0,true
+ability to self-
+explicate, self-explain,deep recognition of finitude,
+fallibility, unreliability
+and self-deception,1.0,true
+deep recognition of finitude,
+fallibility, unreliability
+and self-deception,reducing
+self-deception,1.0,true
+Self-Observation,deep recognition of finitude,
+fallibility, unreliability
+and self-deception,1.0,true
+dreaming,
+mind-wandering,
+psychedelics, etc.,disruptive strategies
+to prevent overfitting,1.0,true
+care about madness,
+despair, insanity, etc.,dreaming,
+mind-wandering,
+psychedelics, etc.,1.0,true
+...reliably giving you
+semantically meaningful
+information,Religio,1.0,true
+...important to your ongoing
+survival, existence, etc.,...reliably giving you
+semantically meaningful
+information,1.0,true
+Greg Enriquez`s
+"just victory work",petitioning future
+rational agents,1.0,true
+Confabulation,care about
+deceiving others,1.0,true

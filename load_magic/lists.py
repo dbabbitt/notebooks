@@ -2,8 +2,9 @@
 from difflib import SequenceMatcher
 import time
 import pandas as pd
+import scraping_utils
 
-
+su = scraping_utils.ScrapingUtilities()
 def conjunctify_nouns(noun_list):
     if noun_list is None:
         
@@ -37,7 +38,7 @@ def check_4_doubles(item_list, verbose=False):
             second_item = item_list[j]
 
             # Assume the first item is never identical to the second item
-            this_similarity = similar(str(first_item), str(second_item))
+            this_similarity = su.similar(str(first_item), str(second_item))
             
             if this_similarity > max_similarity:
                 max_similarity = this_similarity
@@ -63,9 +64,6 @@ def check_4_doubles(item_list, verbose=False):
 
     return item_similarities_df
 
-def similar(a, b):
-    return SequenceMatcher(None, str(a), str(b)).ratio()
-
 #Check the closest names for typos
 def check_for_typos(left_list, right_list, verbose=False):
     '''
@@ -82,7 +80,7 @@ def check_for_typos(left_list, right_list, verbose=False):
         max_similarity = 0.0
         max_item = left_item
         for right_item in right_list:
-            this_similarity = similar(left_item, right_item)
+            this_similarity = su.similar(left_item, right_item)
             if this_similarity > max_similarity:
                 max_similarity = this_similarity
                 max_item = right_item

@@ -15,7 +15,7 @@ Write-Host "            Temporarily activating the ${EnvironmentName} environmen
 Write-Host "               Creating the temporary conda environment.yml file" -ForegroundColor Green
 Write-Host "                  Deactivating the ${EnvironmentName} environment" -ForegroundColor Green
 Write-Host "-------------------------------------------------------------------------------" -ForegroundColor Green
-$CommandString = "conda activate ${EnvironmentPath} & conda env export -f tmp_environment.yml & conda deactivate"
+$CommandString = "conda activate ${EnvironmentPath} & conda env export -f tmp_environment.yml --no-builds & conda deactivate"
 Write-Host $CommandString -ForegroundColor Yellow
 cmd /k $CommandString
 
