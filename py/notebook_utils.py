@@ -507,6 +507,24 @@ class NotebookUtilities(object):
         return rogue_fns_set
     
     
+    def get_utility_file_functions(self, util_path=None):
+        """
+        Gets a list of rogue functions already in utilities file
+        """
+        if util_path is None: util_path = '../py/notebook_utils.py'
+        utils_regex = re.compile(r'def ([a-z0-9_]+)\(')
+        with open(util_path, 'r', encoding='utf-8') as f:
+            lines_list = f.readlines()
+            utils_set = set()
+            for line in lines_list:
+                match_obj = utils_regex.search(line)
+                if match_obj:
+                    scraping_util = match_obj.group(1)
+                    utils_set.add(scraping_util)
+        
+        return utils_set
+    
+    
     def show_duplicated_util_fns_search_string(self, util_path=None, github_folder=None):
         """
         Search for duplicate utility function definitions in Jupyter notebooks within a specified GitHub repository folder.
@@ -523,18 +541,9 @@ class NotebookUtilities(object):
         Returns:
             None: The function prints the regular expression pattern to identify rogue utility function definitions.
         """
-
+        
         # Get a list of rogue functions already in utilities file
-        if util_path is None: util_path = '../py/notebook_utils.py'
-        utils_regex = re.compile(r'def ([a-z0-9_]+)\(')
-        with open(util_path, 'r', encoding='utf-8') as f:
-            lines_list = f.readlines()
-            utils_set = set()
-            for line in lines_list:
-                match_obj = utils_regex.search(line)
-                if match_obj:
-                    scraping_util = match_obj.group(1)
-                    utils_set.add(scraping_util)
+        utils_set = self.get_utility_file_functions(util_path=util_path)
 
         # Make a set of rogue util functions
         if github_folder is None: github_folder = osp.dirname(osp.abspath(osp.curdir))
