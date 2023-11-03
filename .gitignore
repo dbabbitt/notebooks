@@ -3,15 +3,25 @@
 
 # exclude everything except text-based OC directories
 /*
+!/algorithms
+!/cell_techniques
+!/coin-analytics
+!/coin-analyticsipynb
+!/curve_fitting
 !/ipynb
+!/json
+!/library_exploration
 !/load_magic
+!/maintenance
+!/mathematics
+!/programming_languages
 !/ps1
 !/py
+!/r_programming_language
 !/saves
-!/sh
-!/tests
-!/json
-!/coin-analytics
+!/statistics
+!/text_manipulation
+!/visualizations
 
 # Ignore whole folders
 **/.git/
