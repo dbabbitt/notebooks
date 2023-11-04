@@ -32,29 +32,20 @@ saves/mp4
 # Ignore big files (GitHub will warn you when pushing files larger than 50 MB. You will not be allowed to
 # push files larger than 100 MB.) Tip: If you regularly push large files to GitHub, consider introducing
 # Git Large File Storage (Git LFS) as part of your workflow.
-CMS_DRGs/data/shapefiles/USA_Counties.lpk
-CMS_DRGs/data/shapefiles/cb_2016_us_zcta510_500k.zip
-CMS_DRGs/data/shapefiles/cb_2016_us_zcta510_500k/cb_2016_us_zcta510_500k.shp
-CMS_DRGs/data/shapefiles/tl_2015_us_zcta510.zip
-CMS_DRGs/data/shapefiles/tl_2015_us_zcta510/tl_2015_us_zcta510.shp
-CMS_DRGs/data/shapefiles/tl_2016_us_county.zip
-CMS_DRGs/data/shapefiles/tl_2016_us_county/tl_2016_us_county.shp
-Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/.git/objects/pack/pack-199ce58360653f5ff55df22a1e283e3b90a8bd95.pack
-coin-analytics/data/csv/BTC_USD_2013-10-01_2021-04-30-CoinDesk.csv
-coin-analytics/data/csv/coinbaseUSD.csv
-coin-analytics/data/csv/coinbaseUSD_df.csv
+CMS_DRGs/data/shapefiles/
+coin-analytics/data/csv/
 coin-analytics/saves/csv/coinbaseUSD_df.csv
-courses-master/algorithms/nifty-onegram/all_words.tsv
-data/gz/coinbaseUSD.csv.gz
+courses-master/
+data/gz/
 rpc/data/mp3/2020_03_29_Redeemer_Sermon_Video_Kerr.mp4
 rpc/saves/mp4/Jonahsundayschoolzoomrecordingproject.mp4
 saves/Zoom Backgrounds/Zoom_Background_HD.mp4
 saves/csv/climates_df.csv
 saves/csv/nuforc_reports.csv
+saves/csv/response_patterns_df.csv
 saves/gz/gsoy-latest.tar.gz
 saves/tar/gsoy-latest.tar
-scikit_learn_data/mldata/mnist-original.mat
-saves/csv/response_patterns_df.csv
+scikit_learn_data/
 
 # Exclude Notepad++ backup files
 *.bak
@@ -67,7 +58,6 @@ saves/csv/response_patterns_df.csv
 # Exclude pickles
 #*.pkl
 coin-analytics/saves/pkl/coinbaseUSD_df.pkl
-courses-master/platforms/bokeh/baby_names/yob.pkl
 saves/pkl/climates_df.pkl
 saves/pkl/nuforc_reports.pkl
 saves/pkl/wordle_response_patterns_df.pkl

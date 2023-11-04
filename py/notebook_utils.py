@@ -7,23 +7,16 @@
 
 # Soli Deo gloria
 
-from bs4 import BeautifulSoup as bs
 from datetime import timedelta
-from pandas import DataFrame
-from pathlib import Path
+from os import listdir as listdir, makedirs as makedirs, path as osp
+from pandas import DataFrame, Series, concat, read_csv, read_html
 from pysan.elements import get_alphabet
 from typing import List, Optional
-from urllib.request import urlretrieve
-import csv
 import humanize
-import io
-import math
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-import os.path as osp
 import pandas as pd
-import random
 import re
 import subprocess
 import sys
@@ -66,7 +59,7 @@ class NotebookUtilities(object):
             self.data_folder = '../data'
         else:
             self.data_folder = data_folder_path
-        os.makedirs(self.data_folder, exist_ok=True)
+        makedirs(self.data_folder, exist_ok=True)
         if verbose: print('data_folder: {}'.format(osp.abspath(self.data_folder)), flush=True)
         
         # Create the saves folder if it doesn't exist
@@ -74,23 +67,25 @@ class NotebookUtilities(object):
             self.saves_folder = '../saves'
         else:
             self.saves_folder = saves_folder_path
-        os.makedirs(self.saves_folder, exist_ok=True)
+        makedirs(self.saves_folder, exist_ok=True)
         if verbose: print('saves_folder: {}'.format(osp.abspath(self.saves_folder)), flush=True)
         
         # Create the assumed directories
-        self.bin_folder = osp.join(self.data_folder, 'bin'); os.makedirs(self.bin_folder, exist_ok=True)
-        self.cache_folder = osp.join(self.data_folder, 'cache'); os.makedirs(self.cache_folder, exist_ok=True)
-        self.data_csv_folder = osp.join(self.data_folder, 'csv'); os.makedirs(name=self.data_csv_folder, exist_ok=True)
-        self.data_models_folder = osp.join(self.data_folder, 'models'); os.makedirs(name=self.data_models_folder, exist_ok=True)
-        self.db_folder = osp.join(self.data_folder, 'db'); os.makedirs(self.db_folder, exist_ok=True)
-        self.graphs_folder = osp.join(self.saves_folder, 'graphs'); os.makedirs(self.graphs_folder, exist_ok=True)
-        self.indices_folder = osp.join(self.saves_folder, 'indices'); os.makedirs(self.indices_folder, exist_ok=True)
-        self.saves_csv_folder = osp.join(self.saves_folder, 'csv'); os.makedirs(name=self.saves_csv_folder, exist_ok=True)
-        self.saves_mp3_folder = osp.join(self.saves_folder, 'mp3'); os.makedirs(name=self.saves_mp3_folder, exist_ok=True)
-        self.saves_pickle_folder = osp.join(self.saves_folder, 'pkl'); os.makedirs(name=self.saves_pickle_folder, exist_ok=True)
-        self.saves_text_folder = osp.join(self.saves_folder, 'txt'); os.makedirs(name=self.saves_text_folder, exist_ok=True)
-        self.saves_wav_folder = osp.join(self.saves_folder, 'wav'); os.makedirs(name=self.saves_wav_folder, exist_ok=True)
-        self.txt_folder = osp.join(self.data_folder, 'txt'); os.makedirs(self.txt_folder, exist_ok=True)
+        self.data_csv_folder = osp.join(self.data_folder, 'csv'); makedirs(name=self.data_csv_folder, exist_ok=True)
+        self.saves_csv_folder = osp.join(self.saves_folder, 'csv'); makedirs(name=self.saves_csv_folder, exist_ok=True)
+        self.saves_mp3_folder = osp.join(self.saves_folder, 'mp3'); makedirs(name=self.saves_mp3_folder, exist_ok=True)
+        self.saves_pickle_folder = osp.join(self.saves_folder, 'pkl'); makedirs(name=self.saves_pickle_folder, exist_ok=True)
+        self.saves_text_folder = osp.join(self.saves_folder, 'txt'); makedirs(name=self.saves_text_folder, exist_ok=True)
+        self.saves_wav_folder = osp.join(self.saves_folder, 'wav'); makedirs(name=self.saves_wav_folder, exist_ok=True)
+        self.txt_folder = osp.join(self.data_folder, 'txt'); makedirs(self.txt_folder, exist_ok=True)
+        
+        # Create the model directories
+        self.bin_folder = osp.join(self.data_folder, 'bin'); makedirs(self.bin_folder, exist_ok=True)
+        self.cache_folder = osp.join(self.data_folder, 'cache'); makedirs(self.cache_folder, exist_ok=True)
+        self.data_models_folder = osp.join(self.data_folder, 'models'); makedirs(name=self.data_models_folder, exist_ok=True)
+        self.db_folder = osp.join(self.data_folder, 'db'); makedirs(self.db_folder, exist_ok=True)
+        self.graphs_folder = osp.join(self.saves_folder, 'graphs'); makedirs(self.graphs_folder, exist_ok=True)
+        self.indices_folder = osp.join(self.saves_folder, 'indices'); makedirs(self.indices_folder, exist_ok=True)
         
         # Ensure the Scripts folder is in PATH
         self.anaconda_folder = osp.dirname(sys.executable)
@@ -148,19 +143,19 @@ class NotebookUtilities(object):
 
         return first_numeric
 
-    def format_timedelta(self, timedelta):
+    def format_timedelta(self, time_delta):
         """
-        Formats a timedelta object to a string in the
+        Formats a time delta object to a string in the
         format '0 sec', '30 sec', '1 min', '1:30', '2 min', etc.
         
         Args:
-          timedelta: A timedelta object.
+          time_delta: A time delta object.
         
         Returns:
           A string in the format '0 sec', '30 sec', '1 min',
           '1:30', '2 min', etc.
         """
-        seconds = timedelta.total_seconds()
+        seconds = time_delta.total_seconds()
         minutes = int(seconds // 60)
         seconds = int(seconds % 60)
         
@@ -246,9 +241,9 @@ class NotebookUtilities(object):
             row_dict['first_item'] = first_item
             row_dict['second_item'] = max_item
             row_dict['first_bytes'] = '-'.join(str(x) for x in bytearray(str(first_item),
-                                                                         encoding=self.encoding, errors="replace"))
+                                                                         encoding=self.encoding_type, errors="replace"))
             row_dict['second_bytes'] = '-'.join(str(x) for x in bytearray(str(max_item),
-                                                                          encoding=self.encoding, errors="replace"))
+                                                                          encoding=self.encoding_type, errors="replace"))
             row_dict['max_similarity'] = max_similarity
 
             rows_list.append(row_dict)
@@ -260,6 +255,79 @@ class NotebookUtilities(object):
             print(t1-t0, time.ctime(t1))
 
         return item_similarities_df
+
+    def check_for_typos(self, left_list, right_list, rename_dict={'left_item': 'left_item', 'right_item': 'right_item'}, verbose=False):
+        """
+        Check the closest names for typos by comparing items from left_list with
+        items from right_list and computing their similarities.
+        
+        Parameters:
+        ----------
+        left_list : list
+            List containing items to be compared (left side).
+        right_list : list
+            List containing items to be compared (right side).
+        rename_dict : dict, optional
+            Dictionary specifying custom column names in the output DataFrame.
+            Default is {'left_item': 'left_item', 'right_item': 'right_item'}.
+        verbose : bool, optional
+            If True, print the time taken for the computation. Default is False.
+        
+        Returns:
+        -------
+        pandas.DataFrame
+            DataFrame containing columns: 'left_item', 'right_item', and 'max_similarity'.
+        
+        Example:
+        -------
+        sd_set = set(some_dict.keys()).symmetric_difference(set(df.similar_key))
+        typos_df = check_for_typos(list(set(df.similar_key).intersection(sd_set)),
+                                   list(set(some_dict.keys()).intersection(sd_set)), verbose=False)
+        for i, r in typos_df.sort_values(['max_similarity', 'left_item', 'right_item'], ascending=[False, True, True]).iterrows():
+            print(f'some_dict["{r.left_item}"] = some_dict.pop("{r.right_item}")')
+        """
+        
+        # Initialize the time taken for the computation if verbose is True
+        if verbose: t0 = time.time()
+        
+        # Initialize an empty list to store rows of the output data frame
+        rows_list = []
+        
+        # Iterate through items in the left list
+        for left_item in left_list:
+            max_similarity = 0.0
+            max_item = left_item
+            
+            # Iterate through items in the right list and find the most similar item
+            for right_item in right_list:
+                this_similarity = self.compute_similarity(left_item, right_item)
+                if this_similarity > max_similarity:
+                    max_similarity = this_similarity
+                    max_item = right_item
+            
+            # Create a dictionary representing a row in the output data frame
+            row_dict = {
+                'left_item': left_item,
+                'right_item': max_item,
+                'max_similarity': max_similarity
+            }
+            
+            # Add the row dictionary to the list of rows
+            rows_list.append(row_dict)
+        
+        # Define the column names for the output data frame
+        column_list = ['left_item', 'right_item', 'max_similarity']
+        
+        # Create a data frame from the list of rows, rename columns if necessary
+        name_similarities_df = pd.DataFrame(rows_list, columns=column_list).rename(columns=rename_dict)
+        
+        # Print the time taken for the computation if verbose is True
+        if verbose:
+            t1 = time.time()
+            print(t1-t0, time.ctime(t1))
+        
+        # Return the resulting data frame
+        return name_similarities_df
 
     def get_jitter_list(self, ages_list):
         jitter_list = []
@@ -298,7 +366,7 @@ class NotebookUtilities(object):
             A sequence of integers.
             A string to integer map as dictionary.
         """
-        if alphabet_list is None: alphabet_list = list(get_alphabet(sequence))
+        if alphabet_list is None: alphabet_list = list(self.get_alphabet(sequence))
         
         # Create a dictionary to map strings to integers
         string_to_integer_map = {}
@@ -348,7 +416,7 @@ class NotebookUtilities(object):
         
         # Count the lengths of sequences in the dictionary to convert the sequence lengths list
         # into a pandas series to get the value counts of unique sequence lengths
-        value_counts = pd.Series([len(actions_list) for actions_list in tg_dict.values()]).value_counts()
+        value_counts = Series([len(actions_list) for actions_list in tg_dict.values()]).value_counts()
         
         # Filter value counts to show only counts of count to get the desired sequence length of exactly count sequences from the dictionary
         value_counts_list = value_counts[value_counts == count].index.tolist()
@@ -386,20 +454,43 @@ class NotebookUtilities(object):
     
     
     def split_row_indexes_list(self, splitting_indexes_list, large_indexes_list):
+        """
+        Splits a list of row indexes into a list of lists, where each inner list
+        contains a contiguous sequence of indexes that are not in the large indexes list.
+        
+        Args:
+            splitting_indexes_list: A list of row indexes to split.
+            large_indexes_list: A list of row indexes that should be considered "large".
+        
+        Returns:
+            A list of lists, where each inner list contains a contiguous sequence of indexes that are not in the `large_indexes_list`.
+        """
+        
+        # Initialize the output list
         split_list = []
+        
+        # Initialize the current list
         current_list = []
-        for i in range(len(splittin_indexes_list)):
-            current_idx = splittin_indexes_list[i]
-            if current_idx not in large_indexes_list:
-                current_list.append(current_idx)
+        
+        # Iterate over the splitting indexes list
+        for i in range(len(splitting_indexes_list)):
+            
+            # Get the current index
+            current_idx = splitting_indexes_list[i]
+            
+            # If the current index is not in the large indexes list, add it to the current list
+            if current_idx not in large_indexes_list: current_list.append(current_idx)
+            
+            # Otherwise, if the current list is not empty, add it to the split list and start a new current list
             else:
-                if current_list:
-                    split_list.append(current_list)
+                if current_list: split_list.append(current_list)
                 split_list.append([current_idx])
                 current_list = []
-        if current_list:
-            split_list.append(current_list)
+            
+        # If the current list is not empty, add it to the split list
+        if current_list: split_list.append(current_list)
         
+        # Return the split list
         return split_list
     
     
@@ -445,16 +536,16 @@ class NotebookUtilities(object):
         Example:
             def my_function(): pass
             file_path = nu.get_function_file_path(my_function)
-            print(os.path.abspath(file_path))
+            print(osp.abspath(file_path))
         """
         import inspect
         file_path = inspect.getfile(func)
 
         # If the function is defined in a Jupyter notebook, return the absolute file path
-        if file_path.startswith('<stdin>'): return os.path.abspath(file_path)
+        if file_path.startswith('<stdin>'): return osp.abspath(file_path)
 
         # Otherwise, return the relative file path
-        else: return os.path.relpath(file_path)
+        else: return osp.relpath(file_path)
     
     
     def get_notebook_functions_dictionary(self, github_folder=None):
@@ -479,7 +570,7 @@ class NotebookUtilities(object):
                 for file_name in files_list:
                     if file_name.endswith('.ipynb') and not ('Attic' in file_name):
                         file_path = osp.join(sub_directory, file_name)
-                        with open(file_path, 'r', encoding='utf-8') as f:
+                        with open(file_path, 'r', encoding=self.encoding_type) as f:
                             lines_list = f.readlines()
                             for line in lines_list:
                                 match_obj = fn_regex.search(line)
@@ -556,7 +647,7 @@ class NotebookUtilities(object):
 
     def list_dfs_in_folder(self, pickle_folder=None):
         if pickle_folder is None: pickle_folder = self.saves_pickle_folder
-        pickles_list = [file_name.split('.')[0] for file_name in os.listdir(pickle_folder) if (file_name.split('.')[1] in ['pkl', 'pickle'])]
+        pickles_list = [file_name.split('.')[0] for file_name in listdir(pickle_folder) if (file_name.split('.')[1] in ['pkl', 'pickle'])]
         dfs_list = [pickle_name for pickle_name in pickles_list if pickle_name.endswith('_df')]
         
         return dfs_list
@@ -565,7 +656,7 @@ class NotebookUtilities(object):
 
         # Get the absolute path to the file
         if ('~' in path_str): path_str = path_str.replace('~', dict(os.environ)[home_key])
-        absolute_path = os.path.abspath(path_str)
+        absolute_path = osp.abspath(path_str)
 
         # Open the absolute path to the file in Notepad
         # !"{text_editor_path}" "{absolute_path}"
@@ -601,14 +692,14 @@ class NotebookUtilities(object):
         else:
             csv_folder = osp.join(folder_path, 'csv')
         if csv_name is None:
-            csv_path = max([osp.join(csv_folder, f) for f in os.listdir(csv_folder)],
+            csv_path = max([osp.join(csv_folder, f) for f in listdir(csv_folder)],
                            key=osp.getmtime)
         else:
             if csv_name.endswith('.csv'):
                 csv_path = osp.join(csv_folder, csv_name)
             else:
                 csv_path = osp.join(csv_folder, f'{csv_name}.csv')
-        data_frame = pd.read_csv(osp.abspath(csv_path), encoding=self.encoding_type)
+        data_frame = read_csv(osp.abspath(csv_path), encoding=self.encoding_type)
 
         return(data_frame)
 
@@ -630,29 +721,39 @@ class NotebookUtilities(object):
 
         return osp.isfile(pickle_path)
 
-    def load_data_frames(self, **kwargs):
-        frame_dict = {}
-        for frame_name in kwargs:
-            pickle_path = osp.join(self.saves_pickle_folder, '{}.pkl'.format(frame_name))
-            print('Attempting to load {}.'.format(osp.abspath(pickle_path)), flush=True)
-            if not osp.isfile(pickle_path):
-                csv_name = '{}.csv'.format(frame_name)
-                csv_path = osp.join(self.saves_csv_folder, csv_name)
-                print('No pickle exists - attempting to load {}.'.format(osp.abspath(csv_path)), flush=True)
-                if not osp.isfile(csv_path):
-                    csv_path = osp.join(self.data_csv_folder, csv_name)
-                    print('No csv exists - trying {}.'.format(osp.abspath(csv_path)), flush=True)
-                    if not osp.isfile(csv_path):
-                        print('No csv exists - just forget it.', flush=True)
-                        frame_dict[frame_name] = None
-                    else:
-                        frame_dict[frame_name] = self.load_csv(csv_name=frame_name)
-                else:
-                    frame_dict[frame_name] = self.load_csv(csv_name=frame_name, folder_path=self.saves_folder)
-            else:
-                frame_dict[frame_name] = self.load_object(frame_name)
+    def attempt_to_pickle(self, df: DataFrame, pickle_path: str, raise_exception: bool = False, verbose: bool = True) -> None:
+        """
+        Attempts to pickle a DataFrame to a file.
 
-        return frame_dict
+        Parameters
+        ----------
+        df : DataFrame
+            The DataFrame to pickle.
+        pickle_path : str
+            The path to the pickle file.
+        raise_exception : bool, optional
+            Whether to raise an exception if the pickle fails. Defaults to False.
+        verbose : bool, optional
+            Whether to print status messages. Defaults to True.
+
+        Returns
+        -------
+        None
+
+        """
+        try:
+            if verbose: print('Pickling to {}'.format(osp.abspath(pickle_path)), flush=True)
+
+            # Protocol 4 is not handled in python 2
+            if sys.version_info.major == 2: df.to_pickle(pickle_path, protocol=2)
+
+            # Pickle protocol must be <= 4
+            elif sys.version_info.major == 3: df.to_pickle(pickle_path, protocol=min(4, pickle.HIGHEST_PROTOCOL))
+
+        except Exception as e:
+            os.remove(pickle_path)
+            if verbose: print(e, ": Couldn't save {:,} cells as a pickle.".format(df.shape[0]*df.shape[1]), flush=True)
+            if raise_exception: raise
 
     def load_object(self, obj_name: str, pickle_path: str = None, download_url: str = None, verbose: bool = False) -> object:
         """
@@ -681,10 +782,10 @@ class NotebookUtilities(object):
             csv_path = osp.join(self.saves_csv_folder, '{}.csv'.format(obj_name))
             if not osp.isfile(csv_path):
                 if verbose: print('No csv exists at {} - attempting to download from URL.'.format(osp.abspath(csv_path)), flush=True)
-                object = pd.read_csv(download_url, low_memory=False,
+                object = read_csv(download_url, low_memory=False,
                                      encoding=self.encoding_type)
             else:
-                object = pd.read_csv(csv_path, low_memory=False,
+                object = read_csv(csv_path, low_memory=False,
                                      encoding=self.encoding_type)
             if isinstance(object, DataFrame):
                 self.attempt_to_pickle(object, pickle_path, raise_exception=False)
@@ -707,6 +808,30 @@ class NotebookUtilities(object):
         if verbose: print('Loaded object {} from {}'.format(obj_name, pickle_path), flush=True)
 
         return(object)
+    
+    def load_data_frames(self, **kwargs):
+        frame_dict = {}
+        for frame_name in kwargs:
+            pickle_path = osp.join(self.saves_pickle_folder, '{}.pkl'.format(frame_name))
+            print('Attempting to load {}.'.format(osp.abspath(pickle_path)), flush=True)
+            if not osp.isfile(pickle_path):
+                csv_name = '{}.csv'.format(frame_name)
+                csv_path = osp.join(self.saves_csv_folder, csv_name)
+                print('No pickle exists - attempting to load {}.'.format(osp.abspath(csv_path)), flush=True)
+                if not osp.isfile(csv_path):
+                    csv_path = osp.join(self.data_csv_folder, csv_name)
+                    print('No csv exists - trying {}.'.format(osp.abspath(csv_path)), flush=True)
+                    if not osp.isfile(csv_path):
+                        print('No csv exists - just forget it.', flush=True)
+                        frame_dict[frame_name] = None
+                    else:
+                        frame_dict[frame_name] = self.load_csv(csv_name=frame_name)
+                else:
+                    frame_dict[frame_name] = self.load_csv(csv_name=frame_name, folder_path=self.saves_folder)
+            else:
+                frame_dict[frame_name] = self.load_object(frame_name)
+
+        return frame_dict
     
     def save_data_frames(self, include_index=False, verbose=True, **kwargs):
         """
@@ -770,40 +895,6 @@ class NotebookUtilities(object):
                     elif sys.version_info.major == 3:
                         pickle.dump(kwargs[obj_name], handle, min(4, pickle.HIGHEST_PROTOCOL))
 
-    def attempt_to_pickle(self, df: DataFrame, pickle_path: str, raise_exception: bool = False, verbose: bool = True) -> None:
-        """
-        Attempts to pickle a DataFrame to a file.
-
-        Parameters
-        ----------
-        df : DataFrame
-            The DataFrame to pickle.
-        pickle_path : str
-            The path to the pickle file.
-        raise_exception : bool, optional
-            Whether to raise an exception if the pickle fails. Defaults to False.
-        verbose : bool, optional
-            Whether to print status messages. Defaults to True.
-
-        Returns
-        -------
-        None
-
-        """
-        try:
-            if verbose: print('Pickling to {}'.format(osp.abspath(pickle_path)), flush=True)
-
-            # Protocol 4 is not handled in python 2
-            if sys.version_info.major == 2: df.to_pickle(pickle_path, protocol=2)
-
-            # Pickle protocol must be <= 4
-            elif sys.version_info.major == 3: df.to_pickle(pickle_path, protocol=min(4, pickle.HIGHEST_PROTOCOL))
-
-        except Exception as e:
-            os.remove(pickle_path)
-            if verbose: print(e, ": Couldn't save {:,} cells as a pickle.".format(df.shape[0]*df.shape[1]), flush=True)
-            if raise_exception: raise
-    
     ### Module Functions ###
 
     def get_dir_tree(self, module_name, contains_str=None, not_contains_str=None, verbose=False):
@@ -946,9 +1037,6 @@ class NotebookUtilities(object):
             The extracted filename from the URL.
         """
 
-        # Import the urllib module for URL parsing
-        import urllib
-
         # Parse the URL and extract the filename from the path
         file_name = urllib.parse.urlparse(url).path.split('/')[-1]
         
@@ -981,15 +1069,15 @@ class NotebookUtilities(object):
         if download_dir is None: download_dir = osp.join(self.data_folder, 'downloads')
 
         # Create the download directory if it does not exist
-        os.makedirs(download_dir, exist_ok=True)
+        makedirs(download_dir, exist_ok=True)
 
         # Compute the path to the downloaded file
         file_path = osp.join(download_dir, file_name)
 
         # If the file does not exist or if exist_ok is True, download the file
         if exist_ok or (not osp.isfile(file_path)):
-            import urllib
-            urllib.request.urlretrieve(url, file_path)
+            from urllib.request import urlretrieve
+            urlretrieve(url, file_path)
 
         return file_path
 
@@ -1015,9 +1103,10 @@ class NotebookUtilities(object):
         else:
 
             # If the page URL or filepath is not a URL, open it using open()
-            with open(page_url_or_filepath, 'r', encoding='utf-8') as f: page_html = f.read()
+            with open(page_url_or_filepath, 'r', encoding=self.encoding_type) as f: page_html = f.read()
 
         # Parse the page HTML using BeautifulSoup
+        from bs4 import BeautifulSoup as bs
         page_soup = bs(page_html, 'html.parser')
 
         # If verbose output is enabled, print the page URL or filepath
@@ -1025,6 +1114,28 @@ class NotebookUtilities(object):
 
         # Return the page soup object
         return page_soup
+    
+    def get_page_tables(self, tables_url_or_filepath, verbose=True):
+        """
+        import sys
+        sys.path.insert(1, '../py')
+        from notebook_utils import NotebookUtilities
+        import os.path as osp
+        nu = NotebookUtilities(data_folder_path=osp.abspath('../data'))
+        tables_url = 'https://en.wikipedia.org/wiki/Provinces_of_Afghanistan'
+        page_tables_list = nu.get_page_tables(tables_url)
+        """
+        if self.url_regex.fullmatch(tables_url_or_filepath) or self.filepath_regex.fullmatch(tables_url_or_filepath):
+            tables_df_list = read_html(tables_url_or_filepath)
+        else:
+            import io
+            f = io.StringIO(tables_url_or_filepath)
+            tables_df_list = read_html(f)
+        if verbose:
+            print(sorted([(i, df.shape) for (i, df) in enumerate(tables_df_list)],
+                         key=lambda x: x[1][0]*x[1][1], reverse=True))
+
+        return tables_df_list
     
     def get_wiki_tables(self, tables_url_or_filepath, verbose=True):
         """
@@ -1073,16 +1184,17 @@ class NotebookUtilities(object):
         sys.path.insert(1, '../py')
         from notebook_utils import NotebookUtilities
         import os
-        nu = NotebookUtilities(data_folder_path=os.path.abspath('../data'))
+        nu = NotebookUtilities(data_folder_path=osp.abspath('../data'))
         tables_url = 'https://en.wikipedia.org/wiki/Provinces_of_Afghanistan'
         page_tables_list = nu.get_page_tables(tables_url)
         """
         if self.filepath_regex.fullmatch(tables_url_or_filepath): assert osp.isfile(tables_url_or_filepath), f"{tables_url_or_filepath} doesn't exist"
         if self.url_regex.fullmatch(tables_url_or_filepath) or self.filepath_regex.fullmatch(tables_url_or_filepath):
-            tables_df_list = pd.read_html(tables_url_or_filepath)
+            tables_df_list = read_html(tables_url_or_filepath)
         else:
-            f = io.StringIO(tables_url_or_filepath)
-            tables_df_list = pd.read_html(f)
+            from io import StringIO
+            f = StringIO(tables_url_or_filepath)
+            tables_df_list = read_html(f)
         if verbose:
             print(sorted([(i, df.shape) for (i, df) in enumerate(tables_df_list)],
                          key=lambda x: x[1][0]*x[1][1], reverse=True))
@@ -1139,8 +1251,8 @@ class NotebookUtilities(object):
             # Iterate through the dictionary 
             for k, v, in value_obj.items():
                 
-                # Recursively call get_row_dictionary() with the dictionary key as part of the prefix
-                row_dict = get_row_dictionary(
+                # Recursively call get row dictionary with the dictionary key as part of the prefix
+                row_dict = self.get_row_dictionary(
                     v, row_dict=row_dict, key_prefix=f'{key_prefix}_{k}'
                 )
                 
@@ -1160,8 +1272,8 @@ class NotebookUtilities(object):
                 else:
                     i = str(i).zfill(digits_count)
                 
-                # Recursively call get_row_dictionary() with the list index as part of the prefix
-                row_dict = get_row_dictionary(
+                # Recursively call get row dictionary with the list index as part of the prefix
+                row_dict = self.get_row_dictionary(
                     v, row_dict=row_dict, key_prefix=f'{key_prefix}{i}'
                 )
                 
@@ -1176,15 +1288,13 @@ class NotebookUtilities(object):
         return row_dict
     
     def get_column_descriptions(self, df, column_list=None, verbose=False):
-        
-        if column_list is None:
-            column_list = df.columns
+        if column_list is None: column_list = df.columns
         g = df.columns.to_series().groupby(df.dtypes).groups
         rows_list = []
         for dtype, dtype_column_list in g.items():
             for column_name in dtype_column_list:
                 if column_name in column_list:
-                    mask_series = df[column_name].isnull()
+                    null_mask_series = df[column_name].isnull()
                     
                     # Get input row in dictionary format; key = col_name
                     row_dict = {}
@@ -1193,16 +1303,12 @@ class NotebookUtilities(object):
                     row_dict['count_blanks'] = df[column_name].isnull().sum()
                     
                     # Count how many unique numbers there are
-                    try:
-                        row_dict['count_uniques'] = len(df[column_name].unique())
-                    except Exception:
-                        row_dict['count_uniques'] = math.nan
+                    try: row_dict['count_uniques'] = len(df[column_name].unique())
+                    except Exception: row_dict['count_uniques'] = np.nan
                     
                     # Count how many zeroes the column has
-                    try:
-                        row_dict['count_zeroes'] = int((df[column_name] == 0).sum())
-                    except Exception:
-                        row_dict['count_zeroes'] = math.nan
+                    try: row_dict['count_zeroes'] = int((df[column_name] == 0).sum())
+                    except Exception: row_dict['count_zeroes'] = np.nan
                     
                     # Check to see if the column has any dates
                     date_series = pd.to_datetime(df[column_name], errors='coerce')
@@ -1210,22 +1316,16 @@ class NotebookUtilities(object):
                     row_dict['has_dates'] = (null_series.shape[0] < date_series.shape[0])
                     
                     # Show the minimum value in the column
-                    try:
-                        row_dict['min_value'] = df[~mask_series][column_name].min()
-                    except Exception:
-                        row_dict['min_value'] = math.nan
+                    try: row_dict['min_value'] = df[~null_mask_series][column_name].min()
+                    except Exception: row_dict['min_value'] = np.nan
                     
                     # Show the maximum value in the column
-                    try:
-                        row_dict['max_value'] = df[~mask_series][column_name].max()
-                    except Exception:
-                        row_dict['max_value'] = math.nan
+                    try: row_dict['max_value'] = df[~null_mask_series][column_name].max()
+                    except Exception: row_dict['max_value'] = np.nan
                     
                     # Show whether the column contains only integers
-                    try:
-                        row_dict['only_integers'] = (df[column_name].apply(lambda x: float(x).is_integer())).all()
-                    except Exception:
-                        row_dict['only_integers'] = float('nan')
+                    try: row_dict['only_integers'] = (df[column_name].apply(lambda x: float(x).is_integer())).all()
+                    except Exception: row_dict['only_integers'] = float('nan')
     
                     rows_list.append(row_dict)
     
@@ -1247,8 +1347,6 @@ class NotebookUtilities(object):
         A numpy array of booleans, where True indicates that the corresponding element
         of x_list and y_list is not inf or nan.
         """
-        
-        import numpy as np
         
         # Check if the input lists are empty.
         if not x_list or not y_list: return np.array([], dtype=bool)
@@ -1272,7 +1370,7 @@ class NotebookUtilities(object):
             row_df = DataFrame([row_dict], index=['mode'])
             
             # Append the row data frame to the df data frame
-            df = pd.concat([df, row_df], axis='index', ignore_index=False)
+            df = concat([df, row_df], axis='index', ignore_index=False)
         
         if ('median' not in df.index):
             
@@ -1283,7 +1381,7 @@ class NotebookUtilities(object):
             row_df = DataFrame([row_dict], index=['median'])
             
             # Append the row data frame to the df data frame
-            df = pd.concat([df, row_df], axis='index', ignore_index=False)
+            df = concat([df, row_df], axis='index', ignore_index=False)
         
         index_list = ['mean', 'mode', 'median', 'SD', 'min', '25%', '50%', '75%', 'max']
         mask_series = df.index.isin(index_list)
@@ -1296,11 +1394,37 @@ class NotebookUtilities(object):
         display(df)
     
     def modalize_columns(self, df, columns_list, new_column):
-        mask_series = (df[columns_list].apply(pd.Series.nunique, axis='columns') == 1)
+        mask_series = (df[columns_list].apply(Series.nunique, axis='columns') == 1)
         df.loc[~mask_series, new_column] = np.nan
         f = lambda srs: srs[srs.first_valid_index()]
         df.loc[mask_series, new_column] = df[mask_series][columns_list].apply(f, axis='columns')
     
+        return df
+    
+    def get_regexed_columns(self, df, search_regex=None, verbose=False):
+        """
+        Investigate the presence of references and report which columns they appear in.
+        """
+        assert (type(search_regex) == re.Pattern), "search_regex must be a compiled regular expression."
+        if search_regex is None: search_regex = re.compile('(Mike|Gary|Helga|Bob|Gloria|Lily)(_(0|1|2|3|4|5|6|7|8|9|10))? Root')
+        if verbose: print(type(search_regex))
+        srs = df.applymap(lambda x: bool(search_regex.search(str(x))), na_action='ignore').sum()
+        columns_list = srs[srs != 0].index.tolist()
+
+        return columns_list
+
+    def get_regexed_dataframe(self, filterable_df, columns_list, search_regex=None, verbose=False):
+        """
+        Get a row that displays an example of what search_regex is finding for each column in columns_list.
+        """
+        assert all(map(lambda cn: cn in filterable_df.columns, columns_list)), "Column names in columns_list must be in filterable_df.columns"
+        if search_regex is None: search_regex = re.compile('(Mike|Gary|Helga|Bob|Gloria|Lily)(_(0|1|2|3|4|5|6|7|8|9|10))? Root')
+        if verbose: print(type(search_regex))
+        df = DataFrame([])
+        for cn in columns_list:
+            mask_series = filterable_df[cn].map(lambda x: bool(search_regex.search(str(x))))
+            df = concat([df, filterable_df[mask_series].iloc[0:1]], axis='index')
+        
         return df
     
     def convert_to_df(self, row_index, row_series, verbose=True):
@@ -1351,8 +1475,10 @@ class NotebookUtilities(object):
             float: The Euclidean distance between the two points.
         """
         x1, x2, y1, y2, z1, z2 = self.get_coordinates(second_point, first_point=first_point)
+        import math
+        euclidean_distance = math.sqrt((x1 - x2)**2 + (y1 - y2)**2 + (z1 - z2)**2)
     
-        return math.sqrt((x1 - x2)**2 + (y1 - y2)**2 + (z1 - z2)**2)
+        return euclidean_distance
     
     def get_absolute_position(self, second_point, first_point=None):
         """
@@ -1395,13 +1521,14 @@ class NotebookUtilities(object):
             mask_series = True
             for cn, cv in zip(groupby_columns, bool_tuple): mask_series &= (sample_df[cn] == cv)
             
-            # Append a random single record from the filtered data frame
-            df = pd.concat([df, sample_df[mask_series].sample(1)], axis='index')
+            # Append a single record from the filtered data frame
+            df = concat([df, sample_df[mask_series].sample(1)], axis='index')
         
         return df
     
     def get_random_subdictionary(self, super_dict, n=5):
         keys = list(super_dict.keys())
+        import random
         random_keys = random.sample(keys, n)
         sub_dict = {}
         for key in random_keys: sub_dict[key] = super_dict[key]
@@ -1418,7 +1545,6 @@ class NotebookUtilities(object):
         """
         color_cycler = None
         from cycler import cycler
-        import numpy as np
         if n < 9:
             color_cycler = cycler('color', plt.cm.Accent(np.linspace(0, 1, n)))
         elif n < 11:
