@@ -167,7 +167,7 @@ class NotebookUtilities(object):
     ### List Functions ###
     
     
-    def conjunctify_nouns(self, noun_list, and_or='and', verbose=False):
+    def conjunctify_nouns(self, noun_list=None, and_or='and', verbose=False):
         """
         Concatenates a list of nouns into a grammatically correct string with specified conjunctions.
         
@@ -252,10 +252,10 @@ class NotebookUtilities(object):
         item_similarities_df = DataFrame(rows_list, columns=column_list)
         if verbose:
             t1 = time.time()
-            print(t1-t0, time.ctime(t1))
+            print(t1 - t0, time.ctime(t1))
 
         return item_similarities_df
-
+    
     def check_for_typos(self, left_list, right_list, rename_dict={'left_item': 'left_item', 'right_item': 'right_item'}, verbose=False):
         """
         Check the closest names for typos by comparing items from left_list with
@@ -413,7 +413,7 @@ class NotebookUtilities(object):
         Raises:
             AssertionError: If no sequences of the specified length are found in the dictionary.
         """
-        
+
         # Count the lengths of sequences in the dictionary to convert the sequence lengths list
         # into a pandas series to get the value counts of unique sequence lengths
         value_counts = Series([len(actions_list) for actions_list in tg_dict.values()]).value_counts()
@@ -632,7 +632,7 @@ class NotebookUtilities(object):
         Returns:
             None: The function prints the regular expression pattern to identify rogue utility function definitions.
         """
-        
+
         # Get a list of rogue functions already in utilities file
         utils_set = self.get_utility_file_functions(util_path=util_path)
 
@@ -808,7 +808,7 @@ class NotebookUtilities(object):
         if verbose: print('Loaded object {} from {}'.format(obj_name, pickle_path), flush=True)
 
         return(object)
-    
+
     def load_data_frames(self, **kwargs):
         frame_dict = {}
         for frame_name in kwargs:
@@ -894,13 +894,13 @@ class NotebookUtilities(object):
                     # Pickle protocol must be <= 4
                     elif sys.version_info.major == 3:
                         pickle.dump(kwargs[obj_name], handle, min(4, pickle.HIGHEST_PROTOCOL))
-
+    
     ### Module Functions ###
-
+    
     def get_dir_tree(self, module_name, contains_str=None, not_contains_str=None, verbose=False):
         """
         Gets a list of all attributes in a given module.
-
+        
         Parameters:
         -----------
         module_name : str
@@ -911,49 +911,49 @@ class NotebookUtilities(object):
             If provided, exclude printing attributes containing this substring (case-insensitive).
         verbose : bool, optional
             If True, print additional information during processing.
-
+        
         Returns:
         --------
         list[str]
             A list of attributes in the module that match the filtering criteria.
         """
-        
+    
         # Initialize sets for processed attributes and their suffixes
         dirred_set = set([module_name])
         suffix_set = set([module_name])
-        
+    
         # Initialize an unprocessed set of all attributes in the module_name module that don't start with an underscore
         import importlib
         module_obj = importlib.import_module(module_name)
         undirred_set = set([f'module_obj.{fn}' for fn in dir(module_obj) if not fn.startswith('_')])
-        
+    
         # Continue processing until the unprocessed set is empty
         while undirred_set:
-
+    
             # Pop the next function or submodule
             fn = undirred_set.pop()
-
+    
             # Extract the suffix of the function or submodule
             fn_suffix = fn.split('.')[-1]
-
+    
             # Check if the suffix has not been processed yet
             if fn_suffix not in suffix_set:
                 
                 # Add it to processed and suffix sets
                 dirred_set.add(fn)
                 suffix_set.add(fn_suffix)
-                
+    
                 try:
                     
                     # Evaluate the 'dir()' function for the attribute and update the unprocessed set with its function or submodule
                     dir_list = eval(f'dir({fn})')
-                    
+    
                     # Add all of the submodules of the function or submodule to undirred_set if they haven't been processed yet
                     undirred_set.update([f'{fn}.{fn1}' for fn1 in dir_list if not fn1.startswith('_')])
-                
+    
                 # If there is an error getting the dir() of the function or submodule, just continue to the next iteration
                 except: continue
-        
+                
         # Apply filtering criteria if provided
         if (not bool(contains_str)) and bool(not_contains_str):
             dirred_set = [fn for fn in dirred_set if (not_contains_str not in fn.lower())]
@@ -964,7 +964,7 @@ class NotebookUtilities(object):
         
         # Remove the importlib object variable name
         dirred_set = set([fn.replace('module_obj', module_name) for fn in dirred_set])
-
+        
         return sorted(dirred_set)
     
     def update_modules_list(self, modules_list: Optional[List[str]] = None, verbose: bool = False) -> None:
@@ -1078,7 +1078,7 @@ class NotebookUtilities(object):
         if exist_ok or (not osp.isfile(file_path)):
             from urllib.request import urlretrieve
             urlretrieve(url, file_path)
-
+    
         return file_path
 
     def get_page_soup(self, page_url_or_filepath, verbose=True):
@@ -1114,7 +1114,7 @@ class NotebookUtilities(object):
 
         # Return the page soup object
         return page_soup
-    
+
     def get_page_tables(self, tables_url_or_filepath, verbose=True):
         """
         import sys
@@ -1125,11 +1125,12 @@ class NotebookUtilities(object):
         tables_url = 'https://en.wikipedia.org/wiki/Provinces_of_Afghanistan'
         page_tables_list = nu.get_page_tables(tables_url)
         """
+        if self.filepath_regex.fullmatch(tables_url_or_filepath): assert osp.isfile(tables_url_or_filepath), f"{tables_url_or_filepath} doesn't exist"
         if self.url_regex.fullmatch(tables_url_or_filepath) or self.filepath_regex.fullmatch(tables_url_or_filepath):
             tables_df_list = read_html(tables_url_or_filepath)
         else:
-            import io
-            f = io.StringIO(tables_url_or_filepath)
+            from io import StringIO
+            f = StringIO(tables_url_or_filepath)
             tables_df_list = read_html(f)
         if verbose:
             print(sorted([(i, df.shape) for (i, df) in enumerate(tables_df_list)],
@@ -1539,7 +1540,7 @@ class NotebookUtilities(object):
     
     def get_color_cycler(self, n):
         """
-        color_cycler = self.get_color_cycler(len(possible_cause_list))
+        color_cycler = nu.get_color_cycler(len(possible_cause_list))
         for possible_cause, face_color_dict in zip(possible_cause_list, color_cycler()):
             face_color = face_color_dict['color']
         """
@@ -1937,7 +1938,7 @@ class NotebookUtilities(object):
         
         plt.show()
     
-    def plot_sequence(self, sequence, highlighted_ngrams=[], color_dict=None, suptitle=None, verbose=False):
+    def plot_sequence(self, sequence, highlighted_ngrams=[], color_dict=None, suptitle=None, first_element='SESSION_START', last_element='SESSION_END', verbose=False):
         """
         Creates a standard sequence plot where each element corresponds to a position on the y-axis.
         The optional highlighted_ngrams parameter can be one or more n-grams to be outlined in a red box.
@@ -1958,8 +1959,12 @@ class NotebookUtilities(object):
         np_sequence = np.array(sequence)
         
         # Get the unique characters in the sequence and potentially use them to set up the color dictionary
-        if highlighted_ngrams and (type(highlighted_ngrams[0]) is list): alphabet_list = list(get_alphabet(sequence+[el for sublist in highlighted_ngrams for el in sublist]))
-        else: alphabet_list = list(get_alphabet(sequence+highlighted_ngrams))
+        if highlighted_ngrams and (type(highlighted_ngrams[0]) is list): alphabet_list = sorted(get_alphabet(sequence+[el for sublist in highlighted_ngrams for el in sublist]))
+        else: alphabet_list = sorted(get_alphabet(sequence+highlighted_ngrams))
+        if last_element in alphabet_list:
+            alphabet_list.remove(last_element)
+            alphabet_list.append(last_element)
+        if first_element in alphabet_list: alphabet_list.insert(0, alphabet_list.pop(alphabet_list.index(first_element)))
         if color_dict is None: color_dict = {a: None for a in alphabet_list}
         
         # Get the length of the alphabet
