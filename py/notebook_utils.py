@@ -129,16 +129,45 @@ class NotebookUtilities(object):
         return SequenceMatcher(None, str(a), str(b)).ratio()
 
     def get_first_year_element(self, x):
+        """
+        Extracts the first year element from a given string, potentially containing multiple date or year formats.
+        
+        Parameters:
+            x (str): The input string containing potential year information.
+        
+        Returns:
+            int or float: The extracted first year element, or NaN if no valid year element is found.
+        """
+        
+        # Split the input string using various separators
         stripped_list = re.split(r'( |/|–|\\u2009|-|\[)', str(x), 0)
+        
+        # Remove non-numeric characters from each element in the stripped list
         stripped_list = [re.sub(r'\D+', '', x) for x in stripped_list]
+        
+        # Filter elements with lengths between 3 and 4, as likely to be years
         stripped_list = [x for x in stripped_list if (len(x) >= 3) and (len(x) <= 4)]
+        
         try:
+            
+            # Identify the index of the first numeric element in the stripped list
             numeric_list = [x.isnumeric() for x in stripped_list]
-            idx = numeric_list.index(True, 0)
-            first_numeric = int(stripped_list[idx])
+            
+            # If a numeric substring is found, extract the first numeric value
+            if True in numeric_list:
+                idx = numeric_list.index(True, 0)
+                first_numeric = int(stripped_list[idx])
+            
+            # If no numeric substring is found, raise an exception
+            else: raise Exception('No numeric year element found')
+        
+        # Handle exceptions and return the first substring if no numeric substring is found
         except Exception as e:
-            # print(f'Error processing stripped_list ({stripped_list}), numeric_list ({numeric_list}): {str(e).strip()}')
+            
+            # If there are any substrings, return the first one as the year element
             if stripped_list: first_numeric = int(stripped_list[0])
+            
+            # If there are no substrings, return NaN
             else: first_numeric = np.nan
 
         return first_numeric
@@ -148,7 +177,7 @@ class NotebookUtilities(object):
         Formats a time delta object to a string in the
         format '0 sec', '30 sec', '1 min', '1:30', '2 min', etc.
         
-        Args:
+        Parameters:
           time_delta: A time delta object.
         
         Returns:
@@ -330,27 +359,67 @@ class NotebookUtilities(object):
         return name_similarities_df
 
     def get_jitter_list(self, ages_list):
+        """
+        Generates a list of jitter values for plotting age data points with a scattered plot.
+        
+        Parameters:
+            ages_list (list): A list of ages for which jitter values are generated.
+        
+        Returns:
+            list of float: A list of jitter values corresponding to the input ages.
+        """
+        
+        # Initialize an empty list to store jitter values
         jitter_list = []
+        
+        # Iterate over the list of age groups
         for splits_list in get_splits_list(ages_list):
-            if len(splits_list) > 1:
-                jitter_list.extend(pd.cut(np.array([min(splits_list)-0.99, max(splits_list)+0.99]), len(splits_list)-1, retbins=True)[1])
-            else:
-                jitter_list.extend(splits_list)
-
+            
+            # If there are multiple ages in a group, calculate jitter values for each age in the group
+            if (len(splits_list) > 1):
+                
+                # Generate jitter values using the cut method and extend the jitter_list
+                jitter_list.extend(
+                    pd.cut(
+                        np.array([min(splits_list) - 0.99, max(splits_list) + 0.99]),
+                        len(splits_list) - 1,
+                        retbins=True
+                    )[1]
+                )
+            
+            # If there is only one age in a group, add that age as the jitter value
+            else: jitter_list.extend(splits_list)
+        
+        # Return the list of jitter values
         return jitter_list
 
     def get_splits_list(self, ages_list):
-        splits_list = []
-        current_list = []
-        previous_age = ages_list[0] - 1
+        """
+        Divides a list of ages into sublists based on gaps in the age sequence.
+        
+        Parameters:
+            ages_list (list of int or float): A list of ages to be split into sublists.
+    
+        Returns:
+            list of lists of int or float: A list of sublists, each containing consecutive ages.
+        """
+        splits_list = []  # List to store sublists of consecutive ages
+        current_list = []  # Temporary list to store the current consecutive ages
+        previous_age = ages_list[0] - 1  # Initialize with a value lower than the first age
+        
+        # Iterate over the list of ages
         for age in ages_list:
+            
+            # Check if there is a gap larger than 1 between the current age and the previous age
             if age - previous_age > 1:
-                splits_list.append(current_list)
-                current_list = []
-            current_list.append(age)
-            previous_age = age
-        splits_list.append(current_list)
-
+                splits_list.append(current_list)  # Append the current_list to splits_list
+                current_list = []  # Reset the current_list
+            current_list.append(age)  # Add the current age to the current_list
+            previous_age = age  # Update the previous_age
+        
+        splits_list.append(current_list)  # Append the last current_list to splits_list
+        
+        # Return the list of sublists of ages
         return splits_list
 
     
@@ -358,7 +427,7 @@ class NotebookUtilities(object):
         """
         Converts a sequence of strings to a sequence of integers.
         
-        Args:
+        Parameters:
             sequence: A sequence of strings.
             alphabet_list: A list of the unique elements of sequence.
         
@@ -385,7 +454,7 @@ class NotebookUtilities(object):
         """
         Counts how many times a given sequence of elements occurs in a list.
         
-        Args:
+        Parameters:
             actions_list: A list of elements.
             highlighted_ngrams: A sequence of elements to count.
         
@@ -432,7 +501,7 @@ class NotebookUtilities(object):
         """
         Returns the shape of a list of lists, assuming the sublists are all of the same length.
         
-        Args:
+        Parameters:
             list_of_lists: A list of lists.
         
         Returns:
@@ -458,7 +527,7 @@ class NotebookUtilities(object):
         Splits a list of row indexes into a list of lists, where each inner list
         contains a contiguous sequence of indexes that are not in the large indexes list.
         
-        Args:
+        Parameters:
             splitting_indexes_list: A list of row indexes to split.
             large_indexes_list: A list of row indexes that should be considered "large".
         
@@ -498,7 +567,7 @@ class NotebookUtilities(object):
         """
         Replaces consecutive elements in a list with a count of how many there are in a row.
         
-        Args:
+        Parameters:
             list1: A list of elements.
             element: The element to replace consecutive occurrences of.
         
@@ -527,7 +596,7 @@ class NotebookUtilities(object):
         """
         Returns the relative or absolute file path where the function is stored.
 
-        Args:
+        Parameters:
             func: A Python function.
 
         Returns:
@@ -600,16 +669,40 @@ class NotebookUtilities(object):
     
     def get_utility_file_functions(self, util_path=None):
         """
-        Gets a list of rogue functions already in utilities file
+        Extracts a set of function names already defined in the utility file.
+        
+        Parameters:
+            util_path (str, optional): The path to the utility file. Default is '../py/notebook_utils.py'.
+        
+        Returns:
+            set of str: A set containing the names of functions already defined in the utility file.
         """
+        
+        # Set the utility path if not provided
         if util_path is None: util_path = '../py/notebook_utils.py'
+        
+        # Compile the regular expression pattern for identifying function definitions
         utils_regex = re.compile(r'def ([a-z0-9_]+)\(')
+        
+        # Read the utility file and extract function names
         with open(util_path, 'r', encoding='utf-8') as f:
+            
+            # Read the file contents line by line
             lines_list = f.readlines()
+            
+            # Initialize an empty set to store function names
             utils_set = set()
+            
+            # Iterate over each line in the file
             for line in lines_list:
+                
+                # Search for function definitions using the regular expression
                 match_obj = utils_regex.search(line)
+                
+                # If a function definition is found, extract the function name and add it to the set
                 if match_obj:
+                    
+                    # Extract the function name from the match
                     scraping_util = match_obj.group(1)
                     utils_set.add(scraping_util)
         
@@ -645,63 +738,173 @@ class NotebookUtilities(object):
             print('\\s+"def (' + '|'.join(rogue_fns_list) + ')\(')
             print('Replace each of the calls to these definitions with calls the the nu. equivalent (and delete the definitions).')
 
+    
     def list_dfs_in_folder(self, pickle_folder=None):
+        """
+        List DataFrame names stored as pickles in a specified folder.
+        
+        Parameters:
+            pickle_folder (str, optional): The folder path where pickle files are stored.
+                If None, uses the default saves_pickle_folder. Default is None.
+        
+        Returns:
+            list of str: A list of DataFrame pickle file names.
+        """
+        
+        # Set the pickle folder if not provided
         if pickle_folder is None: pickle_folder = self.saves_pickle_folder
+        
+        # Filter the file names to include only pickle files (.pkl or .pickle extensions)
         pickles_list = [file_name.split('.')[0] for file_name in listdir(pickle_folder) if (file_name.split('.')[1] in ['pkl', 'pickle'])]
+        
+        # Filter the list to include only DataFrame names (ending with '_df')
         dfs_list = [pickle_name for pickle_name in pickles_list if pickle_name.endswith('_df')]
         
+        # Return the list of DataFrame pickle file names
         return dfs_list
 
+    
     def open_path_in_notepad(self, path_str, home_key='USERPROFILE', text_editor_path=r'C:\Program Files\Notepad++\notepad++.exe'):
-
-        # Get the absolute path to the file
+        """
+        Open a file in Notepad or a specified text editor.
+        
+        Parameters:
+            path_str (str): The path to the file to be opened.
+            home_key (str, optional): The environment variable key for the home directory. Default is 'USERPROFILE'.
+            text_editor_path (str, optional): The path to the text editor executable. Default is Notepad++.
+        
+        Returns:
+            None
+        
+        Notes:
+        The function uses subprocess to run the specified text editor with the provided file path.
+        
+        Example:
+        nu.open_path_in_notepad('C:/example.txt')
+        """
+        
+        # Expand '~' to the home directory in the file path
         if ('~' in path_str): path_str = path_str.replace('~', dict(os.environ)[home_key])
+        
+        # Get the absolute path to the file
         absolute_path = osp.abspath(path_str)
 
-        # Open the absolute path to the file in Notepad
+        # Open the absolute path to the file in Notepad or the specified text editor
         # !"{text_editor_path}" "{absolute_path}"
         import subprocess
         subprocess.run([text_editor_path, absolute_path])
 
+    
     def show_dupl_fn_defs_search_string(self, util_path=None, github_folder=None):
+        """
+        Identifies and reports duplicate function definitions in Jupyter notebooks and suggests how to consolidate them.
+        
+        Parameters:
+            util_path (str, optional): The path to the utility file where refactored functions will be added.
+                Defaults to '../py/notebook_utils.py'.
+            github_folder (str, optional): The path to the GitHub repository containing the Jupyter notebooks.
+                Default is the parent folder of the current directory.
+        
+        Returns:
+            None
+        
+        Notes:
+        The function prints a search string pattern that can be used to identify duplicate function definitions in Jupyter notebooks.
+        The pattern is based on the function names extracted from the notebook using `get_notebook_functions_dictionary()`.
+        
+        Example:
+            nu.show_dupl_fn_defs_search_string()
+        """
+        
+        # Set the utility path if not provided
         if util_path is None: util_path = '../py/notebook_utils.py'
+        
+        # Set the GitHub folder path if not provided
         if github_folder is None: github_folder = osp.dirname(osp.abspath(osp.curdir))
-        df = DataFrame([{'function_name': k, 'definition_count': v} for k, v in self.get_notebook_functions_dictionary().items()])
+        
+        # Get the function definitions dictionary
+        function_definitions_dict = self.get_notebook_functions_dictionary()
+        
+        # Convert the dictionary to a DataFrame
+        df = DataFrame([{'function_name': k, 'definition_count': v} for k, v in function_definitions_dict.items()])
+        
+        # Create a mask to filter functions with more than one definition
         mask_series = (df.definition_count > 1)
         duplicate_fns_list = df[mask_series].function_name.tolist()
 
+        # If there are duplicate function definitions, print a message and search string
         if duplicate_fns_list:
             print(f'Search for *.ipynb; file masks in the {github_folder} folder for this pattern:')
             print('\\s+"def (' + '|'.join(duplicate_fns_list) + ')\(')
             print(f'Consolidate these duplicate definitions and add the refactored one to {util_path} (and delete the definitions).')
 
+    
     ### Storage Functions ###
 
+    
     def csv_exists(self, csv_name, folder_path=None, verbose=False):
-        if folder_path is None:
-            folder_path = self.saves_csv_folder
+        """
+        Checks if a CSV file exists in the specified folder or the default CSV folder.
+        
+        Parameters:
+            csv_name (str): The name of the CSV file (with or without the '.csv' extension).
+            folder_path (str, optional): The path to the folder containing the CSV file.
+                If None, uses the default saves_csv_folder specified in the class.
+            verbose (bool, optional): If True, print the absolute path of the CSV file. Default is False.
+        
+        Returns:
+            bool: True if the CSV file exists, False otherwise.
+        """
+        
+        # Set folder path if not provided
+        if folder_path is None: folder_path = self.saves_csv_folder
+        
+        # Construct the full path to the CSV file, including the .csv extension if it's not already included
         if csv_name.endswith('.csv'): csv_path = osp.join(folder_path, csv_name)
         else: csv_path = osp.join(folder_path, f'{csv_name}.csv')
+        
+        # Optionally print the absolute path to the CSV file
         if verbose: print(osp.abspath(csv_path), flush=True)
 
+        # Check if the CSV file exists
         return osp.isfile(csv_path)
 
+    
     def load_csv(self, csv_name=None, folder_path=None):
-        if folder_path is None:
-            csv_folder = self.data_csv_folder
-        else:
-            csv_folder = osp.join(folder_path, 'csv')
+        """
+        Loads a CSV file from the specified folder or the default CSV folder,
+        returning the data as a pandas DataFrame.
+        
+        Parameters:
+            csv_name (str, optional): The name of the CSV file (with or without the '.csv' extension).
+                If None, loads the most recently modified CSV file in the specified or default folder.
+            folder_path (str, optional): The path to the folder containing the CSV file.
+                If None, uses the default data_csv_folder specified in the class.
+        
+        Returns:
+            pandas.DataFrame: The data from the CSV file as a pandas DataFrame.
+        """
+        
+        # Set folder path if not provided
+        if folder_path is None: csv_folder = self.data_csv_folder
+        else: csv_folder = osp.join(folder_path, 'csv')
+        
+        # Determine the CSV file path based on the provided name or the most recently modified file in the folder
         if csv_name is None:
-            csv_path = max([osp.join(csv_folder, f) for f in listdir(csv_folder)],
-                           key=osp.getmtime)
+            
+            # If no specific CSV file is named, load the most recently modified CSV file
+            csv_path = max([osp.join(csv_folder, f) for f in listdir(csv_folder)], key=osp.getmtime)
         else:
-            if csv_name.endswith('.csv'):
-                csv_path = osp.join(csv_folder, csv_name)
-            else:
-                csv_path = osp.join(csv_folder, f'{csv_name}.csv')
+            
+            # If a specific CSV file is named, construct the full path to the CSV file
+            if csv_name.endswith('.csv'): csv_path = osp.join(csv_folder, csv_name)
+            else: csv_path = osp.join(csv_folder, f'{csv_name}.csv')
+        
+        # Load the CSV file as a pandas DataFrame using the class-specific encoding
         data_frame = read_csv(osp.abspath(csv_path), encoding=self.encoding_type)
 
-        return(data_frame)
+        return data_frame
+
 
     def pickle_exists(self, pickle_name: str) -> bool:
         """
@@ -721,6 +924,7 @@ class NotebookUtilities(object):
 
         return osp.isfile(pickle_path)
 
+    
     def attempt_to_pickle(self, df: DataFrame, pickle_path: str, raise_exception: bool = False, verbose: bool = True) -> None:
         """
         Attempts to pickle a DataFrame to a file.
@@ -755,6 +959,7 @@ class NotebookUtilities(object):
             if verbose: print(e, ": Couldn't save {:,} cells as a pickle.".format(df.shape[0]*df.shape[1]), flush=True)
             if raise_exception: raise
 
+    
     def load_object(self, obj_name: str, pickle_path: str = None, download_url: str = None, verbose: bool = False) -> object:
         """
         Load an object from a pickle file.
@@ -809,35 +1014,60 @@ class NotebookUtilities(object):
 
         return(object)
 
+    
     def load_data_frames(self, **kwargs):
-        frame_dict = {}
-        for frame_name in kwargs:
+        """
+        Loads Pandas DataFrames from pickle or CSV files, potentially switching between folders if necessary.
+        
+        Parameters:
+            **kwargs (dict): Keyword arguments specifying the names of the data frames to load.
+                The frame_name is used to construct file paths for loading DataFrames.
+        
+        Returns:
+            dict: A dictionary where keys are frame_names and values are Pandas DataFrames.
+        """
+        frame_dict = {}  # Dictionary to store loaded DataFrames
+        
+        # Iterate over each frame_name provided in kwargs
+        for frame_name in kwParameters:
+            
+            # Attempt to load the data frame from a pickle file
             pickle_path = osp.join(self.saves_pickle_folder, '{}.pkl'.format(frame_name))
             print('Attempting to load {}.'.format(osp.abspath(pickle_path)), flush=True)
+            
+            # If the pickle file doesn't exist, check for a CSV file with the same name
             if not osp.isfile(pickle_path):
                 csv_name = '{}.csv'.format(frame_name)
                 csv_path = osp.join(self.saves_csv_folder, csv_name)
                 print('No pickle exists - attempting to load {}.'.format(osp.abspath(csv_path)), flush=True)
+                
+                # If the CSV file doesn't exist in the saves folder, check for it in the data folder
                 if not osp.isfile(csv_path):
                     csv_path = osp.join(self.data_csv_folder, csv_name)
                     print('No csv exists - trying {}.'.format(osp.abspath(csv_path)), flush=True)
+                    
+                    # If the CSV file doesn't exist anywhere, skip loading this data frame
                     if not osp.isfile(csv_path):
                         print('No csv exists - just forget it.', flush=True)
                         frame_dict[frame_name] = None
-                    else:
-                        frame_dict[frame_name] = self.load_csv(csv_name=frame_name)
-                else:
-                    frame_dict[frame_name] = self.load_csv(csv_name=frame_name, folder_path=self.saves_folder)
-            else:
-                frame_dict[frame_name] = self.load_object(frame_name)
+                    
+                    # If the CSV file exists in the data folder, load it from there
+                    else: frame_dict[frame_name] = self.load_csv(csv_name=frame_name)
+                
+                # If the CSV file exists in the saves folder, load it from there
+                else: frame_dict[frame_name] = self.load_csv(csv_name=frame_name, folder_path=self.saves_folder)
+            
+            # If the pickle file exists, load it using the load_object function
+            else: frame_dict[frame_name] = self.load_object(frame_name)
 
         return frame_dict
+    
     
     def save_data_frames(self, include_index=False, verbose=True, **kwargs):
         """
         Saves data frames to CSV files.
 
-        Args:
+        Parameters:
             include_index: Whether to include the index in the CSV files.
             verbose: Whether to print information about the saved files.
             **kwargs: A dictionary of data frames to save. The keys of the dictionary
@@ -860,6 +1090,7 @@ class NotebookUtilities(object):
                 # Save the data frame to a CSV file
                 kwargs[frame_name].to_csv(csv_path, sep=',', encoding=self.encoding_type,
                                           index=include_index)
+    
     
     def store_objects(self, verbose: bool = True, **kwargs: dict) -> None:
         """
@@ -895,7 +1126,9 @@ class NotebookUtilities(object):
                     elif sys.version_info.major == 3:
                         pickle.dump(kwargs[obj_name], handle, min(4, pickle.HIGHEST_PROTOCOL))
     
+    
     ### Module Functions ###
+    
     
     def get_dir_tree(self, module_name, contains_str=None, not_contains_str=None, verbose=False):
         """
@@ -967,6 +1200,7 @@ class NotebookUtilities(object):
         
         return sorted(dirred_set)
     
+    
     def update_modules_list(self, modules_list: Optional[List[str]] = None, verbose: bool = False) -> None:
         """
         Updates the list of modules that are installed.
@@ -989,6 +1223,7 @@ class NotebookUtilities(object):
         else: self.modules_list = modules_list
 
         if verbose: print('Updated modules list to {}'.format(self.modules_list), flush=True)
+    
     
     def ensure_module_installed(self, module_name: str, upgrade: bool = False, verbose: bool = True) -> None:
         """
@@ -1018,7 +1253,9 @@ class NotebookUtilities(object):
                 for line_str in output_str.splitlines(): print(line_str.decode(), flush=True)
             self.update_modules_list(verbose=verbose)
     
+    
     ### URL and Soup Functions ###
+    
     
     def get_filename_from_url(self, url, verbose=False):
         """
@@ -1045,11 +1282,12 @@ class NotebookUtilities(object):
 
         return file_name
     
+    
     def download_file(self, url, download_dir=None, exist_ok=False, verbose=False):
         """
         Downloads a file from the internet.
 
-        Args:
+        Parameters:
             url: The URL of the file to download.
             download_dir: The directory to download the file to. If None, the file
                           will be downloaded to the `downloads` subdirectory of the data folder.
@@ -1081,11 +1319,12 @@ class NotebookUtilities(object):
     
         return file_path
 
-    def get_page_soup(self, page_url_or_filepath, verbose=True):
+    
+    def get_page_soup(self, page_url_or_filepath, verbose=False):
         """
         Gets the BeautifulSoup soup object for a given page URL or filepath.
 
-        Args:
+        Parameters:
             page_url_or_filepath (str): The URL or filepath of the page to get the soup object for.
             verbose (bool, optional): Whether to print verbose output. Defaults to True.
 
@@ -1094,16 +1333,18 @@ class NotebookUtilities(object):
         """
 
         # Check if the page URL or filepath is a URL
-        match_obj = self.url_regex.search(page_url_or_filepath)
-        if match_obj:
+        if self.url_regex.fullmatch(page_url_or_filepath):
 
             # If the page URL or filepath is a URL, open it using urllib.request.urlopen()
             with urllib.request.urlopen(page_url_or_filepath) as response: page_html = response.read()
 
-        else:
-
-            # If the page URL or filepath is not a URL, open it using open()
+        # If the page URL or filepath is not a URL, ensure it exists and open it using open()
+        elif self.filepath_regex.fullmatch(page_url_or_filepath):
+            assert osp.isfile(page_url_or_filepath), f"{page_url_or_filepath} doesn't exist"
             with open(page_url_or_filepath, 'r', encoding=self.encoding_type) as f: page_html = f.read()
+
+        # The string is already in the format we want
+        else: page_html = page_url_or_filepath
 
         # Parse the page HTML using BeautifulSoup
         from bs4 import BeautifulSoup as bs
@@ -1115,34 +1356,68 @@ class NotebookUtilities(object):
         # Return the page soup object
         return page_soup
 
+    
     def get_page_tables(self, tables_url_or_filepath, verbose=True):
         """
-        import sys
-        sys.path.insert(1, '../py')
-        from notebook_utils import NotebookUtilities
-        import os.path as osp
-        nu = NotebookUtilities(data_folder_path=osp.abspath('../data'))
-        tables_url = 'https://en.wikipedia.org/wiki/Provinces_of_Afghanistan'
-        page_tables_list = nu.get_page_tables(tables_url)
+        Retrieves tables from a given URL or file path and returns a list of DataFrames.
+    
+        Parameters:
+            tables_url_or_filepath (str): The URL or file path of the page containing tables.
+            verbose (bool, optional): If True, print summary information about the retrieved tables, sorted by size. Default is True.
+    
+        Returns:
+            List[pandas.DataFrame]: A list of DataFrames containing tables from the specified source.
+        
+        Example:
+            
+            # Import necessary libraries and modules
+            import sys
+            sys.path.insert(1, '../py')  # Add the '../py' directory to the system path
+            from notebook_utils import NotebookUtilities
+            import os.path as osp
+            
+            # Create a NotebookUtilities instance with a specified data folder path
+            nu = NotebookUtilities(data_folder_path=osp.abspath('../data'))
+            
+            # Example usage of the function
+            tables_url = 'https://en.wikipedia.org/wiki/Provinces_of_Afghanistan'
+            page_tables_list = nu.get_page_tables(tables_url)
+            
         """
-        if self.filepath_regex.fullmatch(tables_url_or_filepath): assert osp.isfile(tables_url_or_filepath), f"{tables_url_or_filepath} doesn't exist"
+    
+        # Check if the input is a URL or a filepath
         if self.url_regex.fullmatch(tables_url_or_filepath) or self.filepath_regex.fullmatch(tables_url_or_filepath):
+            
+            # If it's a filepath, check if the file exists
+            if self.filepath_regex.fullmatch(tables_url_or_filepath): assert osp.isfile(tables_url_or_filepath), f"{tables_url_or_filepath} doesn't exist"
+    
+            # Read tables from the URL or file path
             tables_df_list = read_html(tables_url_or_filepath)
         else:
+            
+            # If it's not a URL or a filepath, assume it's a string representation of the tables
             from io import StringIO
+    
+            # Create a StringIO object from the string
             f = StringIO(tables_url_or_filepath)
+    
+            # Read the tables from the StringIO object using pandas.read_html()
             tables_df_list = read_html(f)
+    
+        # Print a summary of the tables if verbose is True
         if verbose:
             print(sorted([(i, df.shape) for (i, df) in enumerate(tables_df_list)],
-                         key=lambda x: x[1][0]*x[1][1], reverse=True))
+                          key=lambda x: x[1][0]*x[1][1], reverse=True))
 
+        # Return the list of pandas DataFrames containing the tables
         return tables_df_list
+    
     
     def get_wiki_tables(self, tables_url_or_filepath, verbose=True):
         """
         Gets a list of DataFrames from Wikipedia tables.
 
-        Args:
+        Parameters:
             tables_url_or_filepath: The URL or filepath to the Wikipedia page containing the tables.
             verbose: Whether to print verbose output.
 
@@ -1179,50 +1454,64 @@ class NotebookUtilities(object):
         # Return the list of DataFrames
         return table_dfs_list
 
-    def get_page_tables(self, tables_url_or_filepath, verbose=True):
-        """
-        import sys
-        sys.path.insert(1, '../py')
-        from notebook_utils import NotebookUtilities
-        import os
-        nu = NotebookUtilities(data_folder_path=osp.abspath('../data'))
-        tables_url = 'https://en.wikipedia.org/wiki/Provinces_of_Afghanistan'
-        page_tables_list = nu.get_page_tables(tables_url)
-        """
-        if self.filepath_regex.fullmatch(tables_url_or_filepath): assert osp.isfile(tables_url_or_filepath), f"{tables_url_or_filepath} doesn't exist"
-        if self.url_regex.fullmatch(tables_url_or_filepath) or self.filepath_regex.fullmatch(tables_url_or_filepath):
-            tables_df_list = read_html(tables_url_or_filepath)
-        else:
-            from io import StringIO
-            f = StringIO(tables_url_or_filepath)
-            tables_df_list = read_html(f)
-        if verbose:
-            print(sorted([(i, df.shape) for (i, df) in enumerate(tables_df_list)],
-                         key=lambda x: x[1][0]*x[1][1], reverse=True))
-
-        return tables_df_list
-
+    
     def get_style_column(self, tag_obj, verbose=False):
+        """
+        Extracts the style column from a given BeautifulSoup tag object and returns
+        the style column tag object.
+    
+        Parameters:
+            tag_obj (bs4.element.Tag): The BeautifulSoup tag object to extract the style column from.
+            verbose (bool, optional): If True, display intermediate steps for debugging. Default is False.
+    
+        Returns:
+            bs4.element.Tag: The modified BeautifulSoup tag object representing the style column.
+        """
+        
+        # Display the initial tag object if verbose is True
         if verbose: display(tag_obj)
+    
+        # Get the parent td tag object
         tag_obj = get_td_parent(tag_obj, verbose=verbose)
         if verbose: display(tag_obj)
+    
+        # Traverse the siblings of the table tag object backward until a style column is found
         from bs4.element import NavigableString
-        while (type(tag_obj) == NavigableString) or not tag_obj.has_attr('style'):
+        while isinstance(tag_obj, NavigableString) or not tag_obj.has_attr('style'):
             tag_obj = tag_obj.previous_sibling
             if verbose: display(tag_obj)
+    
+        # Display the text content of the found style column if verbose is True
         if verbose: display(tag_obj.text.strip())
 
+        # Return the style column tag object
         return tag_obj
 
+    
     def get_td_parent(self, tag_obj, verbose=False):
+        """
+        Finds and returns the closest ancestor of the given BeautifulSoup tag object that is a 'td' tag.
+    
+        Parameters:
+            tag_obj (bs4.element.Tag): The BeautifulSoup tag object whose 'td' ancestor needs to be found.
+            verbose (bool, optional): If True, display intermediate steps for debugging. Default is False.
+    
+        Returns:
+            bs4.element.Tag: The closest 'td' ancestor tag object.
+        """
         if verbose: display(tag_obj)
+        
+        # Traverse the parent tags upward until a table cell (<td>) is found
         while (tag_obj.name != 'td'):
             tag_obj = tag_obj.parent
             if verbose: display(tag_obj)
 
+        # Return the closest 'td' ancestor tag object
         return tag_obj
     
+    
     ### Pandas Functions ###
+    
     
     def get_row_dictionary(self, value_obj, row_dict={}, key_prefix=''):
         """
@@ -1247,7 +1536,7 @@ class NotebookUtilities(object):
         """
         
         # Check if the value is a dictionary
-        if type(value_obj) == dict:
+        if isinstance(value_obj, dict):
             
             # Iterate through the dictionary 
             for k, v, in value_obj.items():
@@ -1258,7 +1547,7 @@ class NotebookUtilities(object):
                 )
                 
         # Check if the value is a list
-        elif type(value_obj) == list:
+        elif isinstance(value_obj, list):
             
             # Get the minimum number of digits in the list length
             list_length = len(value_obj)
@@ -1288,59 +1577,102 @@ class NotebookUtilities(object):
         
         return row_dict
     
+    
     def get_column_descriptions(self, df, column_list=None, verbose=False):
+        """
+        Generate a DataFrame containing descriptive statistics for specified columns in a given DataFrame.
+    
+        Parameters:
+            df (pandas.DataFrame): The DataFrame to analyze.
+            column_list (list of str, optional): A list of specific columns to analyze.
+                If None, all columns will be analyzed. Defaults to None.
+            verbose (bool, optional): If True, display intermediate steps for debugging. Default is False.
+    
+        Returns:
+            pandas.DataFrame: A DataFrame containing the descriptive statistics of the analyzed columns.
+        """
+        
+        # If column_list is not provided, use all columns in the DataFrame
         if column_list is None: column_list = df.columns
-        g = df.columns.to_series().groupby(df.dtypes).groups
+        
+        # Group columns by data type
+        grouped_columns = df.columns.to_series().groupby(df.dtypes).groups
+        
+        # Initialize an empty list to store the descriptive statistics rows
         rows_list = []
-        for dtype, dtype_column_list in g.items():
+        
+        # Iterate over each data type and its corresponding column list
+        for dtype, dtype_column_list in grouped_columns.items():
             for column_name in dtype_column_list:
+                
+                # Check if the column is in the specified column list
                 if column_name in column_list:
+                    
+                    # Create a boolean mask for null values in the column
                     null_mask_series = df[column_name].isnull()
                     
-                    # Get input row in dictionary format; key = col_name
-                    row_dict = {}
-                    row_dict['column_name'] = column_name
-                    row_dict['dtype'] = str(dtype)
-                    row_dict['count_blanks'] = df[column_name].isnull().sum()
+                    # Dictionary to store column description
+                    row_dict = {
+                        'column_name': column_name,
+                        'dtype': str(dtype),
+                        'count_blanks': df[column_name].isnull().sum()
+                    }
                     
-                    # Count how many unique numbers there are
+                    # Count unique values in the column
                     try: row_dict['count_uniques'] = len(df[column_name].unique())
+                        
+                    # Set count of unique values to NaN if an error occurs
                     except Exception: row_dict['count_uniques'] = np.nan
                     
-                    # Count how many zeroes the column has
+                    # Count the number of zeros
                     try: row_dict['count_zeroes'] = int((df[column_name] == 0).sum())
+                    
+                    # Set count of zeros to NaN if an error occurs
                     except Exception: row_dict['count_zeroes'] = np.nan
                     
-                    # Check to see if the column has any dates
+                    # Check if the column contains any dates
                     date_series = pd.to_datetime(df[column_name], errors='coerce')
                     null_series = date_series[~date_series.notnull()]
                     row_dict['has_dates'] = (null_series.shape[0] < date_series.shape[0])
                     
-                    # Show the minimum value in the column
+                    # Find the minimum value
                     try: row_dict['min_value'] = df[~null_mask_series][column_name].min()
+                    
+                    # Set minimum value to NaN if an error occurs
                     except Exception: row_dict['min_value'] = np.nan
                     
-                    # Show the maximum value in the column
+                    # Find the maximum value
                     try: row_dict['max_value'] = df[~null_mask_series][column_name].max()
+                    
+                    # Set maximum value to NaN if an error occurs
                     except Exception: row_dict['max_value'] = np.nan
                     
-                    # Show whether the column contains only integers
+                    # Check if the column contains only integers
                     try: row_dict['only_integers'] = (df[column_name].apply(lambda x: float(x).is_integer())).all()
+                    
+                    # Set only_integers to NaN if an error occurs
                     except Exception: row_dict['only_integers'] = float('nan')
     
+                    # Append the row dictionary to the rows list
                     rows_list.append(row_dict)
     
-        columns_list = ['column_name', 'dtype', 'count_blanks', 'count_uniques', 'count_zeroes', 'has_dates',
-                        'min_value', 'max_value', 'only_integers']
+        # Define column order for the resulting DataFrame
+        columns_list = [
+            'column_name', 'dtype', 'count_blanks', 'count_uniques', 'count_zeroes', 'has_dates', 'min_value', 'max_value', 'only_integers'
+        ]
+
+        # Create a data frame from the list of dictionaries
         blank_ranking_df = DataFrame(rows_list, columns=columns_list)
         
-        return(blank_ranking_df)
+        # Return the data frame containing the descriptive statistics
+        return blank_ranking_df
+    
     
     def get_inf_nan_mask(self, x_list, y_list):
         """
         Returns a mask indicating which elements of x_list and y_list are not inf or nan.
         
-        Args:
+        Parameters:
         x_list: A list of numbers.
         y_list: A list of numbers.
         
@@ -1359,9 +1691,23 @@ class NotebookUtilities(object):
         # Return a mask indicating which elements of both x_list and y_list are not inf or nan.
         return np.logical_and(x_mask, y_mask)
 
+    
     def get_statistics(self, describable_df, columns_list):
+        """
+        Calculates and presents descriptive statistics for a given DataFrame's columns.
+    
+        Parameters:
+            describable_df (pandas.DataFrame): The DataFrame to calculate descriptive statistics for.
+            columns_list (list of str): A list of specific columns to calculate statistics for.
+    
+        Returns:
+            pandas.DataFrame: A DataFrame containing the descriptive statistics for the analyzed columns.
+        """
+    
+        # Compute basic descriptive statistics for the specified columns
         df = describable_df[columns_list].describe().rename(index={'std': 'SD'})
         
+        # If the mode is not already included in the statistics, calculate it
         if ('mode' not in df.index):
             
             # Create the mode row dictionary
@@ -1373,6 +1719,7 @@ class NotebookUtilities(object):
             # Append the row data frame to the df data frame
             df = concat([df, row_df], axis='index', ignore_index=False)
         
+        # If the median is not already included in the statistics, calculate it
         if ('median' not in df.index):
             
             # Create the median row dictionary
@@ -1384,56 +1731,179 @@ class NotebookUtilities(object):
             # Append the row data frame to the df data frame
             df = concat([df, row_df], axis='index', ignore_index=False)
         
+        # Define the desired index order for the resulting DataFrame
         index_list = ['mean', 'mode', 'median', 'SD', 'min', '25%', '50%', '75%', 'max']
+    
+        # Create a boolean mask to select rows with desired index values
         mask_series = df.index.isin(index_list)
+        df = df[mask_series].reindex(index_list)
         
-        return df[mask_series].reindex(index_list)
+        # Return the filtered DataFrame containing the selected statistics
+        return df
+    
     
     def show_time_statistics(self, describable_df, columns_list):
-        df = self.get_statistics(describable_df, columns_list).applymap(lambda x: self.format_timedelta(timedelta(milliseconds=int(x))), na_action='ignore').T
+        """
+        Display time-related statistics for specified columns in a DataFrame.
+        
+        Parameters:
+            describable_df (pandas.DataFrame): The DataFrame to calculate descriptive statistics for.
+            columns_list (list of str): A list of specific time-related columns to calculate statistics for.
+    
+        Returns:
+            pandas.DataFrame: A DataFrame containing the descriptive statistics for the analyzed time-related columns.
+        """
+        
+        # Get time-related statistics using the get_statistics method
+        df = self.get_statistics(describable_df, columns_list)
+
+        # Apply a formatting function to convert milliseconds to a formatted timedelta for all elements in the DataFrame
+        df = df.applymap(lambda x: self.format_timedelta(timedelta(milliseconds=int(x))), na_action='ignore').T
+
+        # Format the standard deviation (SD) column to include the '±' symbol
         df.SD = df.SD.map(lambda x: '±' + str(x))
+        
+        # Display the resulting DataFrame
         display(df)
     
+    
     def modalize_columns(self, df, columns_list, new_column):
+        """
+        Create a new column in a DataFrame representing the modal value of specified columns.
+        
+        Parameters:
+            df (pandas.DataFrame): The input DataFrame.
+            columns_list (list): The list of column names from which to calculate the modal value.
+            new_column (str): The name of the new column to create.
+        
+        Returns:
+            pandas.DataFrame: The modified DataFrame with the new column representing the modal value.
+        """
+        
+        # Create a mask series indicating rows with unique values across the specified columns
         mask_series = (df[columns_list].apply(Series.nunique, axis='columns') == 1)
+        
+        # Replace non-unique or missing values with NaN
         df.loc[~mask_series, new_column] = np.nan
+        
+        # Define a function to extract the first valid value in each row
         f = lambda srs: srs[srs.first_valid_index()]
+        
+        # For rows with identical values in specified columns, set the new column to the modal value
         df.loc[mask_series, new_column] = df[mask_series][columns_list].apply(f, axis='columns')
     
         return df
     
+    
     def get_regexed_columns(self, df, search_regex=None, verbose=False):
         """
-        Investigate the presence of references and report which columns they appear in.
+        Identify columns in a DataFrame that contain references based on a specified regex pattern.
+        
+        Parameters:
+            df (pd.DataFrame): The input DataFrame.
+            search_regex (re.Pattern, optional): The compiled regular expression pattern for identifying references.
+                If None, a default regex pattern is used to match names followed by '_Root'.
+            verbose (bool, optional): If True, print additional information during processing. Default is False.
+        
+        Returns:
+            list: A list of column names that contain references based on the specified regex pattern.
         """
-        assert (type(search_regex) == re.Pattern), "search_regex must be a compiled regular expression."
-        if search_regex is None: search_regex = re.compile('(Mike|Gary|Helga|Bob|Gloria|Lily)(_(0|1|2|3|4|5|6|7|8|9|10))? Root')
+        
+        # Ensure that the search_regex is a compiled regular expression object
+        assert (
+            isinstance(search_regex, re.Pattern)
+        ), "search_regex must be a compiled regular expression."
+        
+        # If no search_regex is provided, use the default pattern for detecting references
+        if search_regex is None:
+            search_regex = re.compile(
+                '(Mike|Gary|Helga|Bob|Gloria|Lily)(_(0|1|2|3|4|5|6|7|8|9|10))? Root'
+            )
+        
+        # Print the type of the search_regex if verbose mode is enabled
         if verbose: print(type(search_regex))
-        srs = df.applymap(lambda x: bool(search_regex.search(str(x))), na_action='ignore').sum()
+        
+        # Apply the search_regex to each element in the DataFrame and count occurrences for each column
+        srs = df.applymap(
+            lambda x: bool(search_regex.search(str(x))), na_action='ignore'
+        ).sum()
+        
+        # Extract column names where the count of occurrences is not zero
         columns_list = srs[srs != 0].index.tolist()
 
         return columns_list
 
+    
     def get_regexed_dataframe(self, filterable_df, columns_list, search_regex=None, verbose=False):
         """
-        Get a row that displays an example of what search_regex is finding for each column in columns_list.
+        Create a DataFrame that displays an example of what search_regex is finding for each column in columns_list.
+        
+        Parameters:
+            filterable_df (pandas.DataFrame): The input DataFrame to filter.
+            columns_list (list of str): The list of column names to investigate for matches.
+            search_regex (re.Pattern, optional): The compiled regular expression pattern for identifying matches.
+                If None, the default pattern for detecting references will be used.
+            verbose (bool, optional): If True, print additional information during processing. Default is False.
+        
+        Returns:
+            pandas.DataFrame: A DataFrame containing an example row for each column in columns_list that matches the regex pattern.
         """
-        assert all(map(lambda cn: cn in filterable_df.columns, columns_list)), "Column names in columns_list must be in filterable_df.columns"
-        if search_regex is None: search_regex = re.compile('(Mike|Gary|Helga|Bob|Gloria|Lily)(_(0|1|2|3|4|5|6|7|8|9|10))? Root')
+        
+        # Ensure that all column names in columns_list are in the filterable_df.columns
+        assert all(
+            map(lambda cn: cn in filterable_df.columns, columns_list)
+        ), "Column names in columns_list must be in filterable_df.columns"
+        
+        # Set default pattern for detecting references if not provided
+        if search_regex is None:
+            search_regex = re.compile(
+                '(Mike|Gary|Helga|Bob|Gloria|Lily)(_(0|1|2|3|4|5|6|7|8|9|10))? Root'
+            )
+        
+        # Print the debug info if verbose is True
         if verbose: print(type(search_regex))
+        
+        # Create an empty DataFrame to store the filtered rows
         df = DataFrame([])
+        
+        # For each column in columns_list, filter the filterable df and extract the first row that matches the search_regex
         for cn in columns_list:
-            mask_series = filterable_df[cn].map(lambda x: bool(search_regex.search(str(x))))
+            
+            # Create a mask to filter rows where the column matches the regex pattern
+            mask_series = filterable_df[cn].map(
+                lambda x: bool(search_regex.search(str(x)))
+            )
+            
+            # Concatenate the first matching row to the result DataFrame
             df = concat([df, filterable_df[mask_series].iloc[0:1]], axis='index')
         
         return df
     
+    
     def convert_to_df(self, row_index, row_series, verbose=True):
+        """
+        Convert a row represented as a Pandas Series into a single-row DataFrame.
+        
+        Parameters:
+            row_index (int): The index to be assigned to the new DataFrame row.
+            row_series (pandas.Series): The Pandas Series representing the row's data.
+            verbose (bool, optional): Whether to print debug info. Default is True.
+        
+        Returns:
+            pandas.DataFrame: A single-row DataFrame containing the data from the input Pandas Series.
+        """
+        
+        # Print the type of row_index if verbose is True and it is not an integer
         if verbose and (type(row_index) != int): print(type(row_index))
+        
+        # Create a new DataFrame with the data from the input Pandas Series and the specified index
         df = DataFrame(data=row_series.to_dict(), index=[row_index])
         
         return df
+    
+    
     ### 3D Point Functions ###
+    
     
     def get_coordinates(self, second_point, first_point=None):
         """
@@ -1468,6 +1938,7 @@ class NotebookUtilities(object):
     
         return x1, x2, y1, y2, z1, z2
     
+    
     def get_euclidean_distance(self, second_point, first_point=None):
         """
         Calculates the Euclidean distance between two 3D points.
@@ -1480,6 +1951,7 @@ class NotebookUtilities(object):
         euclidean_distance = math.sqrt((x1 - x2)**2 + (y1 - y2)**2 + (z1 - z2)**2)
     
         return euclidean_distance
+    
     
     def get_absolute_position(self, second_point, first_point=None):
         """
@@ -1502,13 +1974,15 @@ class NotebookUtilities(object):
     
         return (round(x1 + x2, 1), round(y1 + y2, 1), round(z1 + z2, 1))
     
+    
     ### Sub-sampling Functions ###
+    
     
     def get_minority_combinations(self, sample_df, groupby_columns):
         """
         Get the minority combinations of a DataFrame.
         
-        Args:
+        Parameters:
             sample_df: A Pandas DataFrame.
             groupby_columns: A list of column names to group by.
         
@@ -1527,46 +2001,77 @@ class NotebookUtilities(object):
         
         return df
     
+    
     def get_random_subdictionary(self, super_dict, n=5):
+        """
+        Extracts a random subdictionary with a specified number of key-value pairs from a given superdictionary.
+        
+        Parameters:
+            super_dict (dict): The dictionary from which to extract a random subdictionary.
+            n (int, optional): The number of key-value pairs to include in the sub-dictionary. Defaults to 5.
+        
+        Returns:
+            dict: A random subdictionary with n key-value pairs from the superdictionary.
+        """
+        
+        # Convert the dictionary's keys into a list
         keys = list(super_dict.keys())
+        
+        # Import the random module
         import random
+        
+        # Select a random sample of n keys from the list of keys
         random_keys = random.sample(keys, n)
+        
+        # Create an empty dictionary to store the sub-dictionary
         sub_dict = {}
+        
+        # Iterate over the randomly selected keys and add their corresponding values to the sub-dictionary
         for key in random_keys: sub_dict[key] = super_dict[key]
             
         return sub_dict
     
+    
     ### Plotting Functions ###
+    
     
     def get_color_cycler(self, n):
         """
-        color_cycler = nu.get_color_cycler(len(possible_cause_list))
-        for possible_cause, face_color_dict in zip(possible_cause_list, color_cycler()):
-            face_color = face_color_dict['color']
+        Generate a color cycler for plotting with a specified number of colors.
+        
+        Parameters:
+            n (int): The number of colors to include in the cycler.
+        
+        Returns:
+            cycler.Cycler: A color cycler object containing the specified number of colors.
+        
+        Example:
+            color_cycler = nu.get_color_cycler(len(possible_cause_list))
+            for possible_cause, face_color_dict in zip(possible_cause_list, color_cycler()):
+                face_color = face_color_dict['color']
         """
+        
+        # Initialize an empty color cycler object
         color_cycler = None
+        
+        # Import the `cycler` module from matplotlib
         from cycler import cycler
-        if n < 9:
-            color_cycler = cycler('color', plt.cm.Accent(np.linspace(0, 1, n)))
-        elif n < 11:
-            color_cycler = cycler('color', plt.cm.tab10(np.linspace(0, 1, n)))
-        elif n < 13:
-            color_cycler = cycler('color', plt.cm.Paired(np.linspace(0, 1, n)))
-        else:
-            color_cycler = cycler('color', plt.cm.tab20(np.linspace(0, 1, n)))
+        
+        # Choose a color map based on the number of colors needed
+        if n < 9: color_cycler = cycler('color', plt.cm.Accent(np.linspace(0, 1, n)))
+        elif n < 11: color_cycler = cycler('color', plt.cm.tab10(np.linspace(0, 1, n)))
+        elif n < 13: color_cycler = cycler('color', plt.cm.Paired(np.linspace(0, 1, n)))
+        else: color_cycler = cycler('color', plt.cm.tab20(np.linspace(0, 1, n)))
         
         return color_cycler
     
-    def first_order_linear_scatterplot(self, df, xname, yname,
-                                       xlabel_str='Overall Capitalism (explanatory variable)',
-                                       ylabel_str='World Bank Gini % (response variable)',
-                                       x_adj='capitalist', y_adj='unequal',
-                                       title='"Wealth inequality is huge in the capitalist societies"',
-                                       idx_reference='United States', annot_reference='most evil',
-                                       aspect_ratio=None,
-                                       least_x_xytext=(40, -10), most_x_xytext=(-150, 55),
-                                       least_y_xytext=(-200, -10), most_y_xytext=(45, 0),
-                                       reference_xytext=(-75, 25), color_list=None):
+    
+    def first_order_linear_scatterplot(
+        self, df, xname, yname, xlabel_str='Overall Capitalism (explanatory variable)', ylabel_str='World Bank Gini % (response variable)',
+        x_adj='capitalist', y_adj='unequal', title='"Wealth inequality is huge in the capitalist societies"', idx_reference='United States',
+        annot_reference='most evil', aspect_ratio=None, least_x_xytext=(40, -10), most_x_xytext=(-150, 55), least_y_xytext=(-200, -10),
+        most_y_xytext=(45, 0), reference_xytext=(-75, 25), color_list=None
+    ):
         """
         Create a first-order (linear) scatter plot assuming the data frame
         has an index labeled with strings.
@@ -1688,9 +2193,27 @@ class NotebookUtilities(object):
         
         return fig
     
+    
     def plot_line_with_error_bars(self, df, xname, xlabel, xtick_text_fn, yname, ylabel, ytick_text_fn, title):
+        """
+        Creates a line plot with error bars to visualize the mean and standard deviation of a numerical variable
+        grouped by another categorical variable.
         
-        # Drop rows with NaN values, group by patient ranking, and calculate mean and standard deviation
+        Parameters:
+            df (pandas.DataFrame): The input DataFrame containing the data to plot.
+            xname (str): The name of the categorical variable to group by and for the x-axis values.
+            xlabel (str): The label for the x-axis.
+            xtick_text_fn (function): A function to humanize x-axis tick labels.
+            yname (str): The column name for the y-axis values.
+            ylabel (str): The label for the y-axis.
+            ytick_text_fn (function): A function to humanize y-axis tick labels.
+            title (str): The title of the plot.
+        
+        Returns:
+            None: The function plots the graph directly using matplotlib.
+        """
+        
+        # Drop rows with NaN values, group by xname, and calculate mean and standard deviation
         groupby_list = [xname]
         columns_list = [xname, yname]
         aggs_list = ['mean', 'std']
@@ -1713,25 +2236,26 @@ class NotebookUtilities(object):
         ax.set_xlabel(xlabel)
         ax.set_ylabel(ylabel)
         
-        # Humanize x tick labels
+        # Humanize x-axis tick labels
         xticklabels_list = []
         for text_obj in ax.get_xticklabels():
             text_obj.set_text(xtick_text_fn(text_obj))
             xticklabels_list.append(text_obj)
         ax.set_xticklabels(xticklabels_list)
         
-        # Humanize y tick labels
+        # Humanize y-axis tick labels
         yticklabels_list = []
         for text_obj in ax.get_yticklabels():
             text_obj.set_text(ytick_text_fn(text_obj))
             yticklabels_list.append(text_obj)
         ax.set_yticklabels(yticklabels_list);
     
+    
     def plot_histogram(self, df, xname, xlabel, xtick_text_fn, title, ylabel=None, xticks_are_temporal=False, ax=None, color=None, bins=100):
         """
         Plots a histogram of a DataFrame column.
         
-        Args:
+        Parameters:
             df: A Pandas DataFrame.
             xname: The name of the column to plot the histogram of.
             xlabel: The label for the x-axis.
@@ -1798,15 +2322,47 @@ class NotebookUtilities(object):
         
         return ax
 
+    
     def plot_inauguration_age(
-        self, inauguration_df, groupby_column_name, xname, leader_designation, label_infix, label_suffix, info_df, title_prefix, inaugruation_verb='Inauguration', legend_tuple=None,
+        self,
+        inauguration_df,
+        groupby_column_name,
+        xname,
+        leader_designation,
+        label_infix,
+        label_suffix,
+        info_df,
+        title_prefix,
+        inaugruation_verb='Inauguration',
+        legend_tuple=None,
         verbose=False
     ):
+        """
+        Plot a scatter plot of leaders' ages at inauguration over time, with optional groupings and background shading.
+        
+        Parameters:
+            inauguration_df (pandas.DataFrame): DataFrame containing leadership inauguration data.
+            groupby_column_name (str): Column name for grouping leaders (e.g., country, party).
+            xname (str): The name of the x-axis variable, representing the year of inauguration.
+            leader_designation (str): The designation of the leaders, such as "President" or "Governor".
+            label_infix (str): Text to be inserted in the label between leader designation and groupby_column.
+            label_suffix (str): Text to be appended to the label.
+            info_df (pandas.DataFrame): DataFrame containing additional information about turning years.
+            title_prefix (str): A prefix to add to the plot title.
+            inaugruation_verb (str, optional): The verb to use for inauguration, such as "inauguration" or "swearing-in". Defaults to "Inauguration".
+            legend_tuple (tuple, optional): A tuple specifying the location of the legend, such as (0.02, 0.76). Defaults to None.
+            verbose (bool, optional): Whether to print debug info. Defaults to False.
+        
+        Returns:
+            None: The function plots the graph directly using matplotlib.
+        """
 
         # Configure the color dictionary
         color_cycler = self.get_color_cycler(info_df[groupby_column_name].unique().shape[0])
         face_color_dict = {}
-        for groupby_column, fc_dict in zip(info_df[groupby_column_name].unique(), color_cycler()):
+        for groupby_column, fc_dict in zip(
+            info_df[groupby_column_name].unique(), color_cycler()
+        ):
             face_color_dict[groupby_column] = fc_dict['color']
 
         # Plot and annotate the figure
@@ -1814,7 +2370,9 @@ class NotebookUtilities(object):
         fig, ax = plt.subplots(figsize=(figwidth, figwidth/self.twitter_aspect_ratio))
         used_list = []
         import textwrap
-        for groupby_column, df in inauguration_df.sort_values('office_rank').groupby(groupby_column_name):
+        for groupby_column, df in inauguration_df.sort_values('office_rank').groupby(
+            groupby_column_name
+        ):
             if groupby_column[0] in ['A', 'U']: ana = 'an'
             else: ana = 'a'
             label = f'{leader_designation.title()} {label_infix} {ana} {groupby_column} {label_suffix}'.strip()
@@ -1827,11 +2385,30 @@ class NotebookUtilities(object):
             for leader_name, row_series in df.iterrows():
                 if groupby_column not in used_list:
                     used_list.append(groupby_column)
-                    df.plot(x=xname, y='age_at_inauguration', kind='scatter', ax=ax, label=label, color=color)
-                else: df.plot(x=xname, y='age_at_inauguration', kind='scatter', ax=ax, color=color)
+                    df.plot(
+                        x=xname,
+                        y='age_at_inauguration',
+                        kind='scatter',
+                        ax=ax,
+                        label=label,
+                        color=color
+                    )
+                else:
+                    df.plot(
+                        x=xname,
+                        y='age_at_inauguration',
+                        kind='scatter',
+                        ax=ax,
+                        color=color
+                    )
                 plt.annotate(
-                    textwrap.fill(leader_name, width=10), (row_series[xname], row_series.age_at_inauguration), textcoords='offset points', xytext=(0, -4),
-                    ha='center', va='top', fontsize=6
+                    textwrap.fill(leader_name, width=10),
+                    (row_series[xname], row_series.age_at_inauguration),
+                    textcoords='offset points',
+                    xytext=(0, -4),
+                    ha='center',
+                    va='top',
+                    fontsize=6
                 )
 
         # Add 5 years to the height
@@ -1896,16 +2473,46 @@ class NotebookUtilities(object):
         ax.set_ylabel(f'Age at {inaugruation_verb}')
         text_obj = ax.set_title(f'{title_prefix} {inaugruation_verb} Age vs Year')
     
-    def plot_grouped_box_and_whiskers(self, transformable_df, x_column_name, y_column_name, x_label, y_label, transformer_name='min', is_y_temporal=True):    
+    
+    def plot_grouped_box_and_whiskers(
+        self,
+        transformable_df,
+        x_column_name,
+        y_column_name,
+        x_label,
+        y_label,
+        transformer_name='min',
+        is_y_temporal=True
+    ):    
+        """
+        Creates a grouped box plot visualization to compare the distribution of a numerical variable across different groups.
+        
+        Parameters:
+            transformable_df (pandas.DataFrame): DataFrame containing the data to be plotted.
+            x_column_name (str): The name of the categorical variable to group by and column name for the x-axis.
+            y_column_name (str): Column name for the y-axis.
+            x_label (str): Label for the x-axis.
+            y_label (str): Label for the y-axis.
+            transformer_name (str, optional): Name of the transformation applied to the y-axis values before plotting (default: 'min').
+            is_y_temporal (bool, optional): If True, y-axis labels will be formatted as temporal values (default: True).
+        
+        Returns:
+            None: The function plots the graph directly using seaborn and matplotlib.
+        """
         import seaborn as sns
         
         # Get the transformed data frame
         if transformer_name is None: transformed_df = transformable_df
         else:
             groupby_columns = ['session_uuid', 'scene_index']
-            transformed_df = transformable_df.groupby(groupby_columns).filter(
-                lambda df: not df[y_column_name].isnull().any()
-            ).groupby(groupby_columns).transform(transformer_name).reset_index(drop=False).sort_values(y_column_name)
+            transformed_df = (
+                transformable_df.groupby(groupby_columns)
+                .filter(lambda df: not df[y_column_name].isnull().any())
+                .groupby(groupby_columns)
+                .transform(transformer_name)
+                .reset_index(drop=False)
+                .sort_values(y_column_name)
+            )
         
         # Create a figure and subplots
         fig, ax = plt.subplots(1, 1, figsize=(9, 9))
@@ -1931,19 +2538,24 @@ class NotebookUtilities(object):
             yticklabels_list = []
             for text_obj in ax.get_yticklabels():
                 text_obj.set_text(
-                    humanize.precisedelta(timedelta(milliseconds=text_obj.get_position()[1])).replace(', ', ',\n').replace(' and ', ' and\n')
+                    humanize.precisedelta(
+                        timedelta(milliseconds=text_obj.get_position()[1])
+                    )
+                    .replace(', ', ',\n')
+                    .replace(' and ', ' and\n')
                 )
                 yticklabels_list.append(text_obj)
-            ax.set_yticklabels(yticklabels_list);
+            ax.set_yticklabels(yticklabels_list)
         
         plt.show()
+    
     
     def plot_sequence(self, sequence, highlighted_ngrams=[], color_dict=None, suptitle=None, first_element='SESSION_START', last_element='SESSION_END', verbose=False):
         """
         Creates a standard sequence plot where each element corresponds to a position on the y-axis.
         The optional highlighted_ngrams parameter can be one or more n-grams to be outlined in a red box.
         
-        Args:
+        Parameters:
             sequence: A list of strings or integers representing the sequence to plot.
             highlighted_ngrams: A list of n-grams to be outlined in a red box.
             color_dict: An optional dictionary whose keys are the alphabet list and whose values are
@@ -2069,28 +2681,63 @@ class NotebookUtilities(object):
         
         return fig
     
+    
     def plot_sequences(self, sequences, gap=True):
         """
         Creates a scatter-style sequence plot for a collection of sequences.
+        
+        Parameters:
+            sequences (list): A list of sequences to plot.
+            gap (bool, optional): Whether to leave a gap between different values in a sequence. Defaults to True.
+        
+        Returns:
+            plt.Figure: The matplotlib figure object.
         """
+        
+        # Determine the maximum sequence length
         max_sequence_length = max([len(s) for s in sequences])
+        
+        # Create a figure with appropriate dimensions
         plt.figure(figsize=[max_sequence_length*0.3,0.3 * len(sequences)])
         
         for y, sequence in enumerate(sequences):
+            
+            # Convert the sequence to a NumPy array
             np_sequence = np.array(sequence)
+            
+            # Determine the number of unique values in the sequence
             alphabet_len = len(get_alphabet(sequence))
             
+            # Disable automatic color cycling
             plt.gca().set_prop_cycle(None)
+            
+            # Get the unique values in the sequence
             unique_values = get_alphabet(sequence)
+            
             for i, value in enumerate(unique_values):
                 
+                # Plot the value positions as scatter points with labels
                 if gap:
                     points = np.where(np_sequence == value, y + 1, np.nan)
-                    plt.scatter(x=range(len(np_sequence)), y=points, marker='s', label=value, s=100)
+                    plt.scatter(
+                        x=range(len(np_sequence)),
+                        y=points,
+                        marker='s',
+                        label=value,
+                        s=100
+                    )
                 else:
                     points = np.where(np_sequence == value, 1, np.nan)
-                    plt.bar(range(len(points)), points, bottom=[y for x in range(len(points))], width=1, align='edge', label=value)
+                    plt.bar(
+                        range(len(points)),
+                        points,
+                        bottom=[y for x in range(len(points))],
+                        width=1,
+                        align='edge',
+                        label=value
+                    )
         
+        # Set the y-axis limits with or without gaps
         if gap:
             plt.ylim(0.4, len(sequences) + 0.6)
             plt.xlim(-0.6, max_sequence_length - 0.4)
@@ -2098,18 +2745,22 @@ class NotebookUtilities(object):
             plt.ylim(0, len(sequences))
             plt.xlim(0, max_sequence_length)
         
-        # Force the xticks to land on integers only (assume all sequences are of equal length)
+        # Force x-ticks to land on integers only (assume all sequences are of equal length)
         xtick_locations = range(len(sequences[0]))
         xtick_labels = [n+1 for n in xtick_locations]
         plt.xticks(ticks=xtick_locations, labels=xtick_labels, minor=False)
         
+        # Get the legend handles and labels
         handles, labels = plt.gca().get_legend_handles_labels()
-        by_label = dict(zip(labels, handles))
-        plt.legend(by_label.values(), by_label.keys(), bbox_to_anchor=(1.0, 1.1), loc='upper left')
-        plt.tick_params(
-            axis='y',
-            which='both',
-            left=False,
-            labelleft=False)
         
+        # Convert the legend handles and labels into a dictionary
+        by_label = dict(zip(labels, handles))
+        
+        # Place the legend in the upper left corner
+        plt.legend(by_label.values(), by_label.keys(), bbox_to_anchor=(1.0, 1.1), loc='upper left')
+        
+        # Hide the y-axis ticks and labels
+        plt.tick_params(axis='y', which='both', left=False, labelleft=False)
+        
+        # Return the matplotlib figure object
         return plt
