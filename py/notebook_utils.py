@@ -840,14 +840,33 @@ class NotebookUtilities(object):
     
     
     def delete_ipynb_checkpoint_folders(self, github_folder=None):
+        """
+        Deletes all '.ipynb_checkpoints' folders within the specified GitHub folder and its subdirectories.
+        
+        Parameters:
+            github_folder (str, optional): The path to the GitHub folder containing the '.ipynb_checkpoints' folders.
+                If not provided, the current working directory is used.
+        
+        Returns:
+            None
+        """
         
         # Set the GitHub folder path if not provided
         if github_folder is None: github_folder = osp.dirname(osp.abspath(osp.curdir))
         
+        # Import required libraries
         import shutil
+        
+        # Iterate over all subdirectories within the github_folder
         for sub_directory, directories_list, files_list in os.walk(github_folder):
+            
+            # Check if the directory 'ipynb_checkpoints' exists in the current subdirectory
             if '.ipynb_checkpoints' in directories_list:
+                
+                # Construct the full path to the '.ipynb_checkpoints' folder
                 folder_path = os.path.join(sub_directory, '.ipynb_checkpoints')
+                
+                # Remove the folder and its contents
                 shutil.rmtree(folder_path)
 
     
