@@ -50,7 +50,10 @@ class NotebookUtilities(object):
     def __init__(self, data_folder_path=None, saves_folder_path=None, verbose=False):
         self.verbose = verbose
         self.pip_command_str = f'{sys.executable} -m pip'
-        self.update_modules_list(verbose=verbose)
+        # self.update_modules_list(verbose=verbose)
+        
+        # Assume this is instantiated in a subfolder one below the main
+        self.github_folder = osp.dirname(osp.abspath(osp.curdir))
         
         # Create the data folder if it doesn't exist
         if data_folder_path is None:
@@ -620,7 +623,7 @@ class NotebookUtilities(object):
         """
         fn_regex = re.compile(r'\s+"def ([a-z0-9_]+)\(')
         black_list = ['.ipynb_checkpoints', '$Recycle.Bin']
-        if github_folder is None: github_folder = osp.dirname(osp.abspath(osp.curdir))
+        if github_folder is None: github_folder = self.github_folder
         rogue_fns_dict = {}
         for sub_directory, directories_list, files_list in os.walk(github_folder):
             if all(map(lambda x: x not in sub_directory, black_list)):
@@ -649,7 +652,7 @@ class NotebookUtilities(object):
         Returns:
             set: The set of function definitions.
         """
-        if github_folder is None: github_folder = osp.dirname(osp.abspath(osp.curdir))
+        if github_folder is None: github_folder = self.github_folder
         rogue_fns_set = set([k for k in self.get_notebook_functions_dictionary(github_folder=github_folder).keys()])
         
         return rogue_fns_set
@@ -718,7 +721,7 @@ class NotebookUtilities(object):
         utils_set = self.get_utility_file_functions(util_path=util_path)
 
         # Make a set of rogue util functions
-        if github_folder is None: github_folder = osp.dirname(osp.abspath(osp.curdir))
+        if github_folder is None: github_folder = self.github_folder
         rogue_fns_list = [fn for fn in self.get_notebook_functions_dictionary(github_folder=github_folder).keys() if fn in utils_set]
         
         if rogue_fns_list:
@@ -808,7 +811,7 @@ class NotebookUtilities(object):
         if util_path is None: util_path = '../py/notebook_utils.py'
         
         # Set the GitHub folder path if not provided
-        if github_folder is None: github_folder = osp.dirname(osp.abspath(osp.curdir))
+        if github_folder is None: github_folder = self.github_folder
         
         # Get the function definitions dictionary
         function_definitions_dict = self.get_notebook_functions_dictionary()
@@ -840,7 +843,7 @@ class NotebookUtilities(object):
         """
         
         # Set the GitHub folder path if not provided
-        if github_folder is None: github_folder = osp.dirname(osp.abspath(osp.curdir))
+        if github_folder is None: github_folder = self.github_folder
         
         # Import required libraries
         import shutil
@@ -948,10 +951,10 @@ class NotebookUtilities(object):
         Attempts to pickle a DataFrame to a file.
 
         Parameters:
-        df (DataFrame): The DataFrame to pickle.
-        pickle_path (str): The path to the pickle file.
-        raise_exception (bool, optional): Whether to raise an exception if the pickle fails. Defaults to False.
-        verbose (bool, optional): Whether to print status messages. Defaults to True.
+            df (DataFrame): The DataFrame to pickle.
+            pickle_path (str): The path to the pickle file.
+            raise_exception (bool, optional): Whether to raise an exception if the pickle fails. Defaults to False.
+            verbose (bool, optional): Whether to print status messages. Defaults to True.
         
         Returns:
             None
@@ -1139,11 +1142,11 @@ class NotebookUtilities(object):
         Gets a list of all attributes in a given module.
         
         Parameters::
-        module_name (str): The name of the module to get the directory list for.
-        contains_str (str, optional): If provided, only print attributes containing this substring (case-insensitive).
-        not_contains_str (str, optional): If provided, exclude printing attributes containing this
-            substring (case-insensitive).
-        verbose (bool, optional): If True, print additional information during processing.
+            module_name (str): The name of the module to get the directory list for.
+            contains_str (str, optional): If provided, only print attributes containing this substring (case-insensitive).
+            not_contains_str (str, optional): If provided, exclude printing attributes containing this
+                substring (case-insensitive).
+            verbose (bool, optional): If True, print additional information during processing.
         
         Returns:
             list[str]: A list of attributes in the module that match the filtering criteria.
