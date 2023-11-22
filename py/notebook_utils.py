@@ -35,18 +35,16 @@ class NotebookUtilities(object):
     functions needed to install and run GPTs and 
     also what is common to running Jupyter notebooks.
     
-    Examples
-    --------
-    
-    import sys
-    import os.path as osp
-    sys.path.insert(1, osp.abspath('../py'))
-    from notebook_utils import NotebookUtilities
-    
-    nu = NotebookUtilities(
-        data_folder_path=osp.abspath('../data'),
-        saves_folder_path=osp.abspath('../saves')
-    )
+    Example:
+        import sys
+        import os.path as osp
+        sys.path.insert(1, osp.abspath('../py'))
+        from notebook_utils import NotebookUtilities
+        
+        nu = NotebookUtilities(
+            data_folder_path=osp.abspath('../data'),
+            saves_folder_path=osp.abspath('../saves')
+        )
     """
     
     def __init__(self, data_folder_path=None, saves_folder_path=None, verbose=False):
@@ -110,19 +108,14 @@ class NotebookUtilities(object):
     
     def compute_similarity(self, a: str, b: str) -> float:
         """
-        Compute the similarity between two strings.
+        Calculates the similarity between two strings.
 
-        Parameters
-        ----------
-        a : str
-            The first string.
-        b : str
-            The second string.
+        Parameters:
+            a (str): The first string.
+            b (str): The second string.
 
-        Returns
-        -------
-        float
-            The similarity between the two strings, as a float between 0 and 1.
+        Returns:
+            float: The similarity between the two strings, as a float between 0 and 1.
         """
         from difflib import SequenceMatcher
 
@@ -285,35 +278,30 @@ class NotebookUtilities(object):
 
         return item_similarities_df
     
-    def check_for_typos(self, left_list, right_list, rename_dict={'left_item': 'left_item', 'right_item': 'right_item'}, verbose=False):
+    def check_for_typos(
+        self, left_list, right_list, rename_dict={'left_item': 'left_item', 'right_item': 'right_item'},
+        verbose=False
+    ):
         """
         Check the closest names for typos by comparing items from left_list with
         items from right_list and computing their similarities.
         
         Parameters:
-        ----------
-        left_list : list
-            List containing items to be compared (left side).
-        right_list : list
-            List containing items to be compared (right side).
-        rename_dict : dict, optional
-            Dictionary specifying custom column names in the output DataFrame.
-            Default is {'left_item': 'left_item', 'right_item': 'right_item'}.
-        verbose : bool, optional
-            If True, print the time taken for the computation. Default is False.
+            left_list (list): List containing items to be compared (left side).
+            right_list (list): List containing items to be compared (right side).
+            rename_dict (dict, optional): Dictionary specifying custom column names in the output DataFrame.
+                Default is {'left_item': 'left_item', 'right_item': 'right_item'}.
+            verbose (bool, optional): If True, print the time taken for the computation. Default is False.
         
         Returns:
-        -------
-        pandas.DataFrame
-            DataFrame containing columns: 'left_item', 'right_item', and 'max_similarity'.
+            pandas.DataFrame: DataFrame containing columns: 'left_item', 'right_item', and 'max_similarity'.
         
         Example:
-        -------
-        sd_set = set(some_dict.keys()).symmetric_difference(set(df.similar_key))
-        typos_df = check_for_typos(list(set(df.similar_key).intersection(sd_set)),
-                                   list(set(some_dict.keys()).intersection(sd_set)), verbose=False)
-        for i, r in typos_df.sort_values(['max_similarity', 'left_item', 'right_item'], ascending=[False, True, True]).iterrows():
-            print(f'some_dict["{r.left_item}"] = some_dict.pop("{r.right_item}")')
+            sd_set = set(some_dict.keys()).symmetric_difference(set(df.similar_key))
+            typos_df = check_for_typos(list(set(df.similar_key).intersection(sd_set)),
+                                       list(set(some_dict.keys()).intersection(sd_set)), verbose=False)
+            for i, r in typos_df.sort_values(['max_similarity', 'left_item', 'right_item'], ascending=[False, True, True]).iterrows():
+                print(f'some_dict["{r.left_item}"] = some_dict.pop("{r.right_item}")')
         """
         
         # Initialize the time taken for the computation if verbose is True
@@ -941,40 +929,32 @@ class NotebookUtilities(object):
         """
         Checks if a pickle file exists.
 
-        Parameters
-        ----------
-        pickle_name : str
-            The name of the pickle file.
+        Parameters:
+            pickle_name (str): The name of the pickle file.
 
-        Returns
-        -------
-        bool
-            True if the pickle file exists, False otherwise.
+        Returns:
+            bool: True if the pickle file exists, False otherwise.
         """
         pickle_path = osp.join(self.saves_pickle_folder, '{}.pkl'.format(pickle_name))
 
         return osp.isfile(pickle_path)
 
     
-    def attempt_to_pickle(self, df: DataFrame, pickle_path: str, raise_exception: bool = False, verbose: bool = True) -> None:
+    def attempt_to_pickle(
+        self, df: DataFrame, pickle_path: str, raise_exception: bool = False,
+        verbose: bool = True
+    ) -> None:
         """
         Attempts to pickle a DataFrame to a file.
 
-        Parameters
-        ----------
-        df : DataFrame
-            The DataFrame to pickle.
-        pickle_path : str
-            The path to the pickle file.
-        raise_exception : bool, optional
-            Whether to raise an exception if the pickle fails. Defaults to False.
-        verbose : bool, optional
-            Whether to print status messages. Defaults to True.
-
-        Returns
-        -------
-        None
-
+        Parameters:
+        df (DataFrame): The DataFrame to pickle.
+        pickle_path (str): The path to the pickle file.
+        raise_exception (bool, optional): Whether to raise an exception if the pickle fails. Defaults to False.
+        verbose (bool, optional): Whether to print status messages. Defaults to True.
+        
+        Returns:
+            None
         """
         try:
             if verbose: print('Pickling to {}'.format(osp.abspath(pickle_path)), flush=True)
@@ -991,25 +971,21 @@ class NotebookUtilities(object):
             if raise_exception: raise
 
     
-    def load_object(self, obj_name: str, pickle_path: str = None, download_url: str = None, verbose: bool = False) -> object:
+    def load_object(
+        self, obj_name: str, pickle_path: str = None, download_url: str = None,
+        verbose: bool = False
+    ) -> object:
         """
         Load an object from a pickle file.
 
-        Parameters
-        ----------
-        obj_name : str
-            The name of the object to load.
-        pickle_path : str, optional
-            The path to the pickle file. Defaults to None.
-        download_url : str, optional
-            The URL to download the pickle file from. Defaults to None.
-        verbose : bool, optional
-            Whether to print status messages. Defaults to False.
+        Parameters:
+            obj_name (str): The name of the object to load.
+            pickle_path (str, optional): The path to the pickle file. Defaults to None.
+            download_url (str, optional): The URL to download the pickle file from. Defaults to None.
+            verbose (bool, optional): Whether to print status messages. Defaults to False.
 
-        Returns
-        -------
-        object
-            The loaded object.
+        Returns:
+            object: The loaded object.
         """
         if pickle_path is None:
             pickle_path = osp.join(self.saves_pickle_folder, '{}.pkl'.format(obj_name))
@@ -1127,16 +1103,13 @@ class NotebookUtilities(object):
         """
         Store objects to pickle files.
 
-        Parameters
-        ----------
-        verbose : bool, optional
-            Whether to print status messages. Defaults to True.
-        **kwargs : dict
-            The objects to store. The keys of the dictionary are the names of the objects, and the values are the objects themselves.
+        Parameters:
+            verbose (bool, optional): Whether to print status messages. Defaults to True.
+            **kwargs (dict): The objects to store. The keys of the dictionary are the names of the objects,
+                and the values are the objects themselves.
 
-        Returns
-        -------
-        None
+        Returns:
+            None
 
         """
         for obj_name in kwargs:
@@ -1165,21 +1138,15 @@ class NotebookUtilities(object):
         """
         Gets a list of all attributes in a given module.
         
-        Parameters:
-        -----------
-        module_name : str
-            The name of the module to get the directory list for.
-        contains_str : str, optional
-            If provided, only print attributes containing this substring (case-insensitive).
-        not_contains_str : str, optional
-            If provided, exclude printing attributes containing this substring (case-insensitive).
-        verbose : bool, optional
-            If True, print additional information during processing.
+        Parameters::
+        module_name (str): The name of the module to get the directory list for.
+        contains_str (str, optional): If provided, only print attributes containing this substring (case-insensitive).
+        not_contains_str (str, optional): If provided, exclude printing attributes containing this
+            substring (case-insensitive).
+        verbose (bool, optional): If True, print additional information during processing.
         
         Returns:
-        --------
-        list[str]
-            A list of attributes in the module that match the filtering criteria.
+            list[str]: A list of attributes in the module that match the filtering criteria.
         """
     
         # Initialize sets for processed attributes and their suffixes
@@ -1232,20 +1199,19 @@ class NotebookUtilities(object):
         return sorted(dirred_set)
     
     
-    def update_modules_list(self, modules_list: Optional[List[str]] = None, verbose: bool = False) -> None:
+    def update_modules_list(
+        self, modules_list: Optional[List[str]] = None, verbose: bool = False
+    ) -> None:
         """
         Updates the list of modules that are installed.
 
-        Parameters
-        ----------
-        modules_list : Optional[List[str]], optional
-            The list of modules to update. If None, the list of installed modules will be used. Defaults to None.
-        verbose : bool, optional
-            Whether to print status messages. Defaults to False.
+        Parameters:
+            modules_list (Optional[List[str]], optional): The list of modules to update. If None,
+                the list of installed modules will be used. Defaults to None.
+            verbose (bool, optional): Whether to print status messages. Defaults to False.
 
-        Returns
-        -------
-        None
+        Returns:
+            None
         """
 
         if modules_list is None: self.modules_list = [
@@ -1260,18 +1226,14 @@ class NotebookUtilities(object):
         """
         Checks if a module is installed and installs it if it is not.
 
-        Parameters
-        ----------
-        module_name : str
-            The name of the module to check for.
-        upgrade : bool, optional
-            Whether to upgrade the module if it is already installed. Defaults to False.
-        verbose : bool, optional
-            Whether to print status messages. Defaults to True.
+        Parameters:
+            module_name (str): The name of the module to check for.
+            upgrade (bool, optional): Whether to upgrade the module if it is already installed.
+                Defaults to False.
+            verbose (bool, optional): Whether to print status messages. Defaults to True.
 
-        Returns
-        -------
-        None
+        Returns:
+            None
         """
 
         if module_name not in self.modules_list:
@@ -1293,16 +1255,11 @@ class NotebookUtilities(object):
         Extracts the filename from a given URL.
 
         Parameters:
-        -----------
-        url : str
-            The URL from which to extract the filename.
-        verbose : bool, optional
-            If True, print additional information (default is False).
+            url (str): The URL from which to extract the filename.
+            verbose (bool, optional): If True, print additional information (default is False).
 
         Returns:
-        --------
-        str
-            The extracted filename from the URL.
+            str: The extracted filename from the URL.
         """
 
         # Parse the URL and extract the filename from the path
@@ -1546,24 +1503,19 @@ class NotebookUtilities(object):
     
     def get_row_dictionary(self, value_obj, row_dict={}, key_prefix=''):
         """
-        This function takes a value_obj (either a dictionary, list or scalar value) and creates a flattened dictionary from it, where
-        keys are made up of the keys/indices of nested dictionaries and lists. The keys are constructed with a key_prefix
-        (which is updated as the function traverses the value_obj) to ensure uniqueness. The flattened dictionary is stored in the
-        row_dict argument, which is updated at each step of the function.
-
-        Parameters
-        ----------
-        value_obj : dict, list, scalar value
-            The object to be flattened into a dictionary.
-        row_dict : dict, optional
-            The dictionary to store the flattened object.
-        key_prefix : str, optional
-            The prefix for constructing the keys in the row_dict.
-
-        Returns
-        ----------
-        row_dict : dict
-            The flattened dictionary representation of the value_obj.
+        This function takes a value_obj (either a dictionary, list or scalar value) and creates a flattened
+        dictionary from it, where keys are made up of the keys/indices of nested dictionaries and lists. The
+        keys are constructed with a key_prefix (which is updated as the function traverses the value_obj) to
+        ensure uniqueness. The flattened dictionary is stored in the row_dict argument, which is updated at
+        each step of the function.
+        
+        Parameters:
+            value_obj (dict, list, scalar value): The object to be flattened into a dictionary.
+            row_dict (dict, optional): The dictionary to store the flattened object.
+            key_prefix (str, optional): The prefix for constructing the keys in the row_dict.
+        
+        Returns:
+            row_dict (dict): The flattened dictionary representation of the value_obj.
         """
         
         # Check if the value is a dictionary
@@ -1943,17 +1895,13 @@ class NotebookUtilities(object):
         """
         Get the coordinates of two 3D points.
     
-        Parameters
-        ----------
-        second_point : str
-            The coordinates of the second point as a string.
-        first_point : str, optional
-            The coordinates of the first point as a string. If not provided, the default values (0, 0, 0) will be used.
+        Parameters:
+            second_point (str): The coordinates of the second point as a string.
+            first_point (str, optional): The coordinates of the first point as a string. If not provided, the
+                default values (0, 0, 0) will be used.
     
-        Returns
-        -------
-        tuple of float
-            The coordinates of the two points.
+        Returns:
+            tuple of float: The coordinates of the two points.
     
         """
         if first_point is None:
@@ -1991,18 +1939,13 @@ class NotebookUtilities(object):
         """
         Calculates the absolute position of a point relative to another point.
     
-        Parameters
-        ----------
-        second_point : tuple
-            The coordinates of the second point.
-        first_point : tuple, optional
-            The coordinates of the first point. If not specified,
-            the origin is retrieved from get_coordinates.
+        Parameters:
+            second_point (tuple): The coordinates of the second point.
+            first_point (tuple, optional): The coordinates of the first point. If not specified,
+                the origin is retrieved from get_coordinates.
     
-        Returns
-        -------
-        tuple
-            The absolute coordinates of the second point.
+        Returns:
+            tuple: The absolute coordinates of the second point.
         """
         x1, x2, y1, y2, z1, z2 = self.get_coordinates(second_point, first_point=first_point)
     
@@ -2101,56 +2044,53 @@ class NotebookUtilities(object):
     
     
     def first_order_linear_scatterplot(
-        self, df, xname, yname, xlabel_str='Overall Capitalism (explanatory variable)', ylabel_str='World Bank Gini % (response variable)',
-        x_adj='capitalist', y_adj='unequal', title='"Wealth inequality is huge in the capitalist societies"', idx_reference='United States',
-        annot_reference='most evil', aspect_ratio=None, least_x_xytext=(40, -10), most_x_xytext=(-150, 55), least_y_xytext=(-200, -10),
+        self, df, xname, yname, xlabel_str='Overall Capitalism (explanatory variable)',
+        ylabel_str='World Bank Gini % (response variable)',
+        x_adj='capitalist', y_adj='unequal', title='"Wealth inequality is huge in the capitalist societies"',
+        idx_reference='United States',
+        annot_reference='most evil', aspect_ratio=None, least_x_xytext=(40, -10), most_x_xytext=(-150, 55),
+        least_y_xytext=(-200, -10),
         most_y_xytext=(45, 0), reference_xytext=(-75, 25), color_list=None
     ):
         """
         Create a first-order (linear) scatter plot assuming the data frame
         has an index labeled with strings.
         
-        Parameters
-        ----------
-        df : pandas.DataFrame
-            The data frame to be plotted.
-        xname : str
-            The name of the x-axis variable.
-        yname : str
-            The name of the y-axis variable.
-        xlabel_str : str, optional
-            The label for the x-axis. Defaults to 'Overall Capitalism (explanatory variable)'.
-        ylabel_str : str, optional
-            The label for the y-axis. Defaults to 'World Bank Gini % (response variable)'.
-        x_adj : str, optional
-            The adjective to use for the x-axis variable in the annotations. Default is 'capitalist'.
-        y_adj : str, optional
-            The adjective to use for the y-axis variable in the annotations. Default is 'unequal'.
-        title : str, optional
-            The title of the plot. Defaults to '"Wealth inequality is huge in the capitalist societies"'.
-        idx_reference : str, optional
-            The index of the data point to be used as the reference point for the annotations. Default is 'United States'.
-        annot_reference : str, optional
-            The reference text to be used for the annotation of the reference point. Default is 'most evil'.
-        aspect_ratio : float, optional
-            The aspect ratio of the plot. Default is the Facebook aspect ratio (1.91).
-        least_x_xytext : tuple[float, float], optional
-            The xytext position for the annotation of the least x-value data point. Default is (40, -10).
-        most_x_xytext : tuple[float, float], optional
-            The xytext position for the annotation of the most x-value data point. Default is (-150, 55).
-        least_y_xytext : tuple[float, float], optional
-            The xytext position for the annotation of the least y-value data point. Default is (-200, -10).
-        most_y_xytext : tuple[float, float], optional
-            The xytext position for the annotation of the most y-value data point. Default is (45, 0).
-        reference_xytext : tuple[float, float], optional
-            The xytext position for the annotation of the reference point. Default is (-75, 25).
-        color_list : list[str], optional
-            The list of colors to be used for the scatter plot. Default is None, which will use a default color scheme.
+        Parameters:
+            df (pandas.DataFrame): The data frame to be plotted.
+            xname (str): The name of the x-axis variable.
+            yname (str): The name of the y-axis variable.
+            xlabel_str (str, optional): The label for the x-axis. Defaults to
+                'Overall Capitalism (explanatory variable)'.
+            ylabel_str (str, optional): The label for the y-axis. Defaults to
+                'World Bank Gini % (response variable)'.
+            x_adj (str, optional): The adjective to use for the x-axis variable in the annotations.
+                Default is 'capitalist'.
+            y_adj (str, optional): The adjective to use for the y-axis variable in the annotations.
+                Default is 'unequal'.
+            title (str, optional): The title of the plot. Defaults to
+                '"Wealth inequality is huge in the capitalist societies"'.
+            idx_reference (str, optional): The index of the data point to be used as the reference point for
+                the annotations. Default is 'United States'.
+            annot_reference (str, optional): The reference text to be used for the annotation of the
+                reference point. Default is 'most evil'.
+            aspect_ratio (float, optional): The aspect ratio of the plot. Default is the Facebook aspect
+                ratio (1.91).
+            least_x_xytext (tuple[float, float], optional): The xytext position for the annotation of the
+                least x-value data point. Default is (40, -10).
+            most_x_xytext (tuple[float, float], optional): The xytext position for the annotation of the
+                most x-value data point. Default is (-150, 55).
+            least_y_xytext (tuple[float, float], optional): The xytext position for the annotation of
+                the least y-value data point. Default is (-200, -10).
+            most_y_xytext (tuple[float, float], optional): The xytext position for the annotation of the
+                most y-value data point. Default is (45, 0).
+            reference_xytext (tuple[float, float], optional): The xytext position for the annotation of
+                the reference point. Default is (-75, 25).
+            color_list (list[str], optional): The list of colors to be used for the scatter plot.
+                Default is None, which will use a default color scheme.
     
-        Returns
-        -------
-        figure: matplotlib.figure.Figure
-            The figure object for the generated scatter plot.
+        Returns:
+            figure(matplotlib.figure.Figure): The figure object for the generated scatter plot.
         """
     
         if aspect_ratio is None: aspect_ratio = self.facebook_aspect_ratio
