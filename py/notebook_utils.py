@@ -948,10 +948,10 @@ class NotebookUtilities(object):
         Attempts to pickle a DataFrame to a file.
 
         Parameters:
-        df (DataFrame): The DataFrame to pickle.
-        pickle_path (str): The path to the pickle file.
-        raise_exception (bool, optional): Whether to raise an exception if the pickle fails. Defaults to False.
-        verbose (bool, optional): Whether to print status messages. Defaults to True.
+            df (DataFrame): The DataFrame to pickle.
+            pickle_path (str): The path to the pickle file.
+            raise_exception (bool, optional): Whether to raise an exception if the pickle fails. Defaults to False.
+            verbose (bool, optional): Whether to print status messages. Defaults to True.
         
         Returns:
             None
@@ -1139,11 +1139,11 @@ class NotebookUtilities(object):
         Gets a list of all attributes in a given module.
         
         Parameters::
-        module_name (str): The name of the module to get the directory list for.
-        contains_str (str, optional): If provided, only print attributes containing this substring (case-insensitive).
-        not_contains_str (str, optional): If provided, exclude printing attributes containing this
-            substring (case-insensitive).
-        verbose (bool, optional): If True, print additional information during processing.
+            module_name (str): The name of the module to get the directory list for.
+            contains_str (str, optional): If provided, only print attributes containing this substring (case-insensitive).
+            not_contains_str (str, optional): If provided, exclude printing attributes containing this
+                substring (case-insensitive).
+            verbose (bool, optional): If True, print additional information during processing.
         
         Returns:
             list[str]: A list of attributes in the module that match the filtering criteria.
