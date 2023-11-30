@@ -414,6 +414,12 @@ class NotebookUtilities(object):
         return splits_list
 
     
+    def get_alphabet(self, sequence, verbose=False):
+        alphabet_set = set(sequence)
+        
+        return alphabet_set
+
+    
     def convert_strings_to_integers(self, sequence, alphabet_list=None):
         """
         Converts a sequence of strings to a sequence of integers.
@@ -437,8 +443,9 @@ class NotebookUtilities(object):
         for i, string in enumerate(sequence):
             if string not in string_to_integer_map: string_to_integer_map[string] = alphabet_list.index(string)
             new_sequence[i] = string_to_integer_map[string]
+        new_sequence = new_sequence.astype(int)
         
-        return new_sequence.astype(int), string_to_integer_map
+        return new_sequence, string_to_integer_map
     
     
     def count_ngrams(self, actions_list, highlighted_ngrams):
