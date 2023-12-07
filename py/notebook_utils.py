@@ -2435,7 +2435,7 @@ class NotebookUtilities(object):
                 )
                 ax.add_patch(rect)
                 plt.annotate(
-                    textwrap.fill(turning_name, width=wrap_width), (turning_year_begin+(width/2), top), textcoords='offset points', xytext=(0, -6),
+                    textwrap.fill(turning_name, width=wrap_width, break_long_words=False), (turning_year_begin+(width/2), top), textcoords='offset points', xytext=(0, -6),
                     ha='center', fontsize=7, va='top', rotation=-90
                 )
         
