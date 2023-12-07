@@ -1050,7 +1050,7 @@ class NotebookUtilities(object):
         frame_dict = {}  # Dictionary to store loaded DataFrames
         
         # Iterate over each frame_name provided in kwargs
-        for frame_name in kwParameters:
+        for frame_name in kwargs:
             
             # Attempt to load the data frame from a pickle file
             pickle_path = osp.join(self.saves_pickle_folder, '{}.pkl'.format(frame_name))
@@ -1988,7 +1988,7 @@ class NotebookUtilities(object):
             for cn, cv in zip(groupby_columns, bool_tuple): mask_series &= (sample_df[cn] == cv)
             
             # Append a single record from the filtered data frame
-            df = concat([df, sample_df[mask_series].sample(1)], axis='index')
+            if sample_df[mask_series].shape[0]: df = concat([df, sample_df[mask_series].sample(1)], axis='index')
         
         return df
     
