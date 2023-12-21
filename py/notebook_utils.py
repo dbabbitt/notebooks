@@ -1973,7 +1973,7 @@ class NotebookUtilities(object):
     
     
     @staticmethod
-    def convert_to_df(row_index, row_series, verbose=True):
+    def convert_to_data_frame(row_index, row_series, verbose=True):
         """
         Convert a row represented as a Pandas Series into a single-row DataFrame.
         
