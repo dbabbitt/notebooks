@@ -35,7 +35,6 @@ import os
 import pandas as pd
 import random
 import re
-import storage as s
 import time
 import urllib
 import wikipedia
@@ -55,8 +54,11 @@ class ScrapingUtilities(object):
     >>> su = scraping_utils.ScrapingUtilities()
     """
     
-    def __init__(self):
-        self.s = s.Storage()
+    def __init__(self, s=None, verbose=False):
+        if s is None:
+            from storage import Storage
+            self.s = Storage()
+        else: self.s = s
         
         # Obscuration error pattern
         self.obscure_regex = re.compile('<([^ ]+)[^>]*class="([^"]+)"[^>]*>')
@@ -66,10 +68,38 @@ class ScrapingUtilities(object):
     
     
     
-    def get_page_tables(self, url_or_filepath_or_html, verbose=True):
-        if self.url_regex.fullmatch(url_or_filepath_or_html) or self.filepath_regex.fullmatch(url_or_filepath_or_html):
-            tables_df_list = pd.read_html(url_or_filepath_or_html)
+    def get_page_tables(self, url_or_filepath_or_html, driver=None, pdf_file_name=None, verbose=True):
+        '''
+        tables_url = 'https://en.wikipedia.org/wiki/Provinces_of_Afghanistan'
+        page_tables_list = u.get_page_tables(tables_url)
+        
+        url = 'https://crashstats.nhtsa.dot.gov/Api/Public/Publication/812581'
+        file_name = '2016_State_Traffic_Data_CrashStats_NHTSA.pdf'
+        page_tables_list = u.get_page_tables(url, pdf_file_name=file_name)
+        '''
+        tables_df_list = []
+        if pdf_file_name is not None:
+            data_pdf_folder = os.path.join(self.s.data_folder, 'pdf')
+            os.makedirs(name=data_pdf_folder, exist_ok=True)
+            file_path = os.path.join(data_pdf_folder, pdf_file_name)
+            import requests
+            response = requests.get(url_or_filepath_or_html)
+            with open(file_path, 'wb') as f:
+                f.write(response.content)
+            import tabula
+            tables_df_list = tabula.read_pdf(file_path, pages='all')
+        elif self.url_regex.fullmatch(url_or_filepath_or_html) or self.filepath_regex.fullmatch(os.path.abspath(url_or_filepath_or_html)):
+            from urllib.error import HTTPError
+            try:
+                tables_df_list = pd.read_html(url_or_filepath_or_html)
+            except (ValueError, HTTPError) as e:
+                if verbose: print(str(e).strip())
+                page_soup = self.get_page_soup(url_or_filepath_or_html, driver=driver)
+                table_soups_list = page_soup.find_all('table')
+                for table_soup in table_soups_list:
+                    tables_df_list += self.get_page_tables(str(table_soup), driver=None, verbose=False)
         else:
+            import io
             f = io.StringIO(url_or_filepath_or_html)
             tables_df_list = pd.read_html(f)
         if verbose:
@@ -156,22 +186,22 @@ class ScrapingUtilities(object):
     
     
     def driver_get_url(self, driver, url_str, verbose=True):
-        if verbose:
-            print('Getting URL: {}'.format(url_str))
-        finished = 0
+        if verbose: print('Getting URL: {}'.format(url_str))
+        finished = False
         fails = 0
-        while finished == 0 and fails < 8:
+        
+        # Wait for 5 seconds between each attempt and try up to 8 times
+        while (not finished) and (fails < 8):
             try:
                 driver.get(url_str)
-                finished = 1
+                finished = True
             except Exception as e:
                 message = str(e).strip()
-                if verbose:
-                    print(message)
-                fails = fails + 1
-                
-                # Wait for 5 seconds
+                print(message)
+                fails += 1
                 self.wait_for(5, verbose=verbose)
+        
+        if (not finished): raise Exception('You are probably not even on the internet')
     
     
     
@@ -223,15 +253,18 @@ class ScrapingUtilities(object):
             #fp.set_preference(key, value)
             driver = webdriver.Firefox(
                 capabilities=None,
+                desired_capabilities=None,
                 executable_path=executable_path,
                 firefox_binary=None,
-                firefox_options=None,
                 firefox_profile=fp,
+                keep_alive=True,
+                log_path=None,
                 options=None,
                 proxy=None,
+                service=None,
+                service_args=None,
                 service_log_path=service_log_path,
-                timeout=30,
-                )
+            )
         elif browser_name == 'Chrome':
             co = webdriver.ChromeOptions()
             co.add_argument('--no-sandbox')
@@ -245,8 +278,9 @@ class ScrapingUtilities(object):
                 service_log_path=service_log_path,
             )
         
-        # Set timeout information
+        # Set timeout information and maximize window
         driver.set_page_load_timeout(20)
+        driver.maximize_window()
         
         return driver
     
@@ -351,7 +385,7 @@ class ScrapingUtilities(object):
     
     
     
-    def similar(self, a, b):
+    def compute_similarity(self, a, b):
         
         return SequenceMatcher(None, str(a), str(b)).ratio()
     
