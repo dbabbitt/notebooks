@@ -7,6 +7,7 @@
 
 # Soli Deo gloria
 
+from bs4 import BeautifulSoup as bs
 from datetime import timedelta
 from os import listdir as listdir, makedirs as makedirs, path as osp
 from pandas import DataFrame, Series, concat, read_csv, read_html
@@ -552,7 +553,7 @@ class NotebookUtilities(object):
         column_list = ['left_item', 'right_item', 'max_similarity']
         
         # Create a data frame from the list of rows, rename columns if necessary
-        name_similarities_df = pd.DataFrame(rows_list, columns=column_list).rename(columns=rename_dict)
+        name_similarities_df = DataFrame(rows_list, columns=column_list).rename(columns=rename_dict)
         
         # Print the time taken for the computation if verbose is True
         if verbose:
@@ -785,7 +786,7 @@ class NotebookUtilities(object):
             The function uses subprocess to run the specified text editor with the provided file path.
         
         Example:
-            nu.open_path_in_notepad('C:/example.txt')
+            nu.open_path_in_notepad(r'C:\example.txt')
         """
         
         # Expand '~' to the home directory in the file path
@@ -1562,12 +1563,14 @@ class NotebookUtilities(object):
         return file_path
 
     
-    def get_page_soup(self, page_url_or_filepath, verbose=False):
+    def get_page_soup(self, page_url_or_filepath, driver=None, verbose=False):
         """
         Gets the BeautifulSoup soup object for a given page URL or filepath.
 
         Parameters:
             page_url_or_filepath (str): The URL or filepath of the page to get the soup object for.
+            driver (selenium.webdriver, optional): Whether to get the page source from the Selenium
+                webpage. Defaults to None.
             verbose (bool, optional): Whether to print verbose output. Defaults to True.
 
         Returns:
@@ -1576,9 +1579,9 @@ class NotebookUtilities(object):
             
         # Check if the page URL or filepath is a URL
         if self.url_regex.fullmatch(page_url_or_filepath):
-
-            # If the page URL or filepath is a URL, open it using urllib.request.urlopen()
-            with urllib.request.urlopen(page_url_or_filepath) as response: page_html = response.read()
+            if driver is None:
+                with urllib.request.urlopen(page_url_or_filepath) as response: page_html = response.read()
+            else: page_html = driver.page_source
         
         # If the page URL or filepath is not a URL, ensure it exists and open it using open()
         elif self.filepath_regex.fullmatch(page_url_or_filepath):
@@ -1589,7 +1592,6 @@ class NotebookUtilities(object):
         else: page_html = page_url_or_filepath
 
         # Parse the page HTML using BeautifulSoup
-        from bs4 import BeautifulSoup as bs
         page_soup = bs(page_html, 'html.parser')
 
         # If verbose output is enabled, print the page URL or filepath
@@ -1698,6 +1700,61 @@ class NotebookUtilities(object):
 
         # Return the list of DataFrames
         return table_dfs_list
+    
+    
+    def get_wiki_infobox_data_frame(self, page_titles_list, verbose=True):
+        """
+        Gets a DataFrame of the key/value pairs from the infobox of a Wikipedia biographical entry.
+
+        Parameters:
+            page_titles_list: A list of titles of the Wikipedia pages containing the infoboxes.
+            verbose: Whether to print verbose output.
+
+        Returns:
+            A DataFrame containing the data from the Wikipedia infobox.
+        
+        Note:
+            It is assumed that the infobox contains no headers which would prefix any duplicate labels
+        """
+        import wikipedia
+        ascii_regex = re.compile('[^a-z0-9]+')
+        rows_list = []
+        def clean_text(parent_soup, verbose=False):
+            texts_list = []
+            for child_soup in parent_soup.children:
+                if '{' not in child_soup.text: texts_list.append(child_soup.text.strip())
+            parent_text = ' '.join(texts_list)
+            for this, with_that in zip([' )', ' ]', '( ', '[ '], [')', ']', '(', '[']):
+                parent_text = parent_text.replace(this, with_that)
+            parent_text = re.sub(r'[\s\u200b\xa0]+', ' ', parent_text).strip()
+            
+            return parent_text
+        if verbose:
+            from tqdm import tqdm_notebook as tqdm
+            page_titles_list = tqdm(page_titles_list)
+        for page_title in page_titles_list:
+            row_dict = {'page_title': page_title}
+            try:
+                bio_obj = wikipedia.WikipediaPage(title=page_title)
+                bio_html = bio_obj.html()
+                page_soup = bs(bio_html, 'html.parser')
+                infobox_soups_list = page_soup.find_all('table', attrs={'class': 'infobox'})
+                labels_list = []
+                for infobox_soup in infobox_soups_list:
+                    label_soups_list = infobox_soup.find_all('th', attrs={
+                        'scope': 'row', 'class': 'infobox-label', 'colspan': False
+                    })
+                    for infobox_label_soup in label_soups_list:
+                        key = ascii_regex.sub('_', clean_text(infobox_label_soup).lower()).strip('_')
+                        if key and (key not in labels_list):
+                            labels_list.append(key)
+                            value_soup = infobox_label_soup.find_next('td', attrs={'class': 'infobox-data'})
+                            row_dict[key] = clean_text(value_soup)
+            except: continue
+            rows_list.append(row_dict)
+        df = DataFrame(rows_list)
+        
+        return df
     
     
     ### Pandas Functions ###
@@ -1908,7 +1965,7 @@ class NotebookUtilities(object):
         Identify columns in a DataFrame that contain references based on a specified regex pattern.
         
         Parameters:
-            df (pd.DataFrame): The input DataFrame.
+            df (pandas.DataFrame): The input DataFrame.
             search_regex (re.Pattern, optional): The compiled regular expression pattern for identifying references.
                 If None, a default regex pattern is used to match names followed by '_Root'.
             verbose (bool, optional): If True, print additional information during processing. Default is False.
