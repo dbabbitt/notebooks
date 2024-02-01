@@ -73,6 +73,7 @@ class NotebookUtilities(object):
         self.saves_pickle_folder = osp.join(self.saves_folder, 'pkl'); makedirs(name=self.saves_pickle_folder, exist_ok=True)
         self.saves_text_folder = osp.join(self.saves_folder, 'txt'); makedirs(name=self.saves_text_folder, exist_ok=True)
         self.saves_wav_folder = osp.join(self.saves_folder, 'wav'); makedirs(name=self.saves_wav_folder, exist_ok=True)
+        self.saves_png_folder = osp.join(self.saves_folder, 'png'); makedirs(name=self.saves_png_folder, exist_ok=True)
         self.txt_folder = osp.join(self.data_folder, 'txt'); makedirs(self.txt_folder, exist_ok=True)
         
         # Create the model directories
@@ -769,7 +770,10 @@ class NotebookUtilities(object):
     
     
     @staticmethod
-    def open_path_in_notepad(path_str, home_key='USERPROFILE', text_editor_path=r'C:\Program Files\Notepad++\notepad++.exe', verbose=True):
+    def open_path_in_notepad(
+        path_str, home_key='USERPROFILE', text_editor_path=r'C:\Program Files\Notepad++\notepad++.exe',
+        continue_execution=True, verbose=True
+    ):
         """
         Open a file in Notepad or a specified text editor.
         
@@ -777,6 +781,8 @@ class NotebookUtilities(object):
             path_str (str): The path to the file to be opened.
             home_key (str, optional): The environment variable key for the home directory. Default is 'USERPROFILE'.
             text_editor_path (str, optional): The path to the text editor executable. Default is Notepad++.
+            continue_execution (bool, optional): If False, interacts with the subprocess and attempts to open the
+                parent folder in explorer if it gets a bad return code. Default is True.
             verbose (bool, optional): If True, prints debug output. Default is False.
         
         Returns:
@@ -803,10 +809,11 @@ class NotebookUtilities(object):
         # !"{text_editor_path}" "{absolute_path}"
         cmd = [text_editor_path, absolute_path]
         proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        out, err = proc.communicate()
-        if (proc.returncode != 0):
-            if verbose: print('Open attempt failed: ' + err.decode('utf8'))
-            subprocess.run(['explorer.exe', osp.dirname(absolute_path)])
+        if not continue_execution:
+            out, err = proc.communicate()
+            if (proc.returncode != 0):
+                if verbose: print('Open attempt failed: ' + err.decode('utf8'))
+                subprocess.run(['explorer.exe', osp.dirname(absolute_path)])
     
     
     @staticmethod
@@ -2267,20 +2274,33 @@ class NotebookUtilities(object):
         return x1, x2, y1, y2, z1, z2
     
     
-    def get_euclidean_distance(self, second_point, first_point=None):
+    @staticmethod
+    def get_euclidean_distance(first_point, second_point):
         """
-        Calculates the Euclidean distance between two 3D points.
-    
+        Calculates the Euclidean distance between two 2D or 3D points.
+        
+        Parameters:
+            first_point (tuple): The coordinates of the first point.
+            second_point (tuple): The coordinates of the second point.
+        
         Returns:
             float: The Euclidean distance between the two points.
         """
-        x1, x2, y1, y2, z1, z2 = self.get_coordinates(second_point, first_point=first_point)
-        euclidean_distance = math.sqrt((x1 - x2)**2 + (y1 - y2)**2 + (z1 - z2)**2)
-    
+        euclidean_distance = np.nan
+        if (len(first_point) == 3) and (len(second_point) == 3):
+            x1, y1, z1 = first_point
+            x2, y2, z2 = second_point
+            euclidean_distance = math.sqrt((x1 - x2)**2 + (y1 - y2)**2 + (z1 - z2)**2)
+        elif (len(first_point) == 2) and (len(second_point) == 2):
+            x1, z1 = first_point
+            x2, z2 = second_point
+            euclidean_distance = math.sqrt((x1 - x2)**2 + (z1 - z2)**2)
+
         return euclidean_distance
     
     
-    def get_absolute_position(self, second_point, first_point=None):
+    @staticmethod
+    def get_absolute_position(second_point, first_point=None):
         """
         Calculates the absolute position of a point relative to another point.
         
@@ -2295,6 +2315,29 @@ class NotebookUtilities(object):
         x1, x2, y1, y2, z1, z2 = self.get_coordinates(second_point, first_point=first_point)
     
         return (round(x1 + x2, 1), round(y1 + y2, 1), round(z1 + z2, 1))
+    
+    
+    def get_nearest_neighbor(self, base_point, neighbors_list):
+        """
+        Gets the point nearest in Euclidean distance between two 2D or 3D points,
+        the base_point and an item from the neighbors_list.
+        
+        Parameters:
+            base_point (tuple): The coordinates of the first point.
+            neighbors_list (list of tuples): A list of coordinates.
+        
+        Returns:
+            tuple: The coordinates of the nearest of the neighbors_list of points.
+        """
+        min_distance = math.inf
+        nearest_neighbor = None
+        for neighbor_point in neighbors_list:
+            distance = self.get_euclidean_distance(base_point, neighbor_point)
+            if distance < min_distance:
+                min_distance = distance
+                nearest_neighbor = neighbor_point
+        
+        return nearest_neighbor
     
     
     ### Sub-sampling Functions ###
@@ -2598,6 +2641,35 @@ class NotebookUtilities(object):
         plt.show()
     
     
+    def get_r_squared_value_latex(self, xdata, ydata):
+        inf_nan_mask = self.get_inf_nan_mask(xdata.tolist(), ydata.tolist())
+        from scipy.stats import pearsonr
+        pearson_r, p_value = pearsonr(xdata[inf_nan_mask], ydata[inf_nan_mask])
+        pearsonr_statement = str('%.2f' % pearson_r)
+        coefficient_of_determination_statement = str('%.2f' % pearson_r**2)
+        
+        if p_value < 0.0001: pvalue_statement = '<0.0001'
+        else: pvalue_statement = '=' + str('%.4f' % p_value)
+        
+        s_str = r'$r^2=' + coefficient_of_determination_statement + ',\ p' + pvalue_statement + '$'
+        
+        return s_str
+    
+    
+    @staticmethod
+    def get_spearman_rho_value_latex(xdata, ydata):
+        from scipy.stats import spearmanr
+        spearman_corr, p_value = spearmanr(xdata, ydata)
+        rank_correlation_coefficient_statement = str('%.2f' % spearman_corr)
+        
+        if p_value < 0.0001: pvalue_statement = '<0.0001'
+        else: pvalue_statement = '=' + str('%.4f' % p_value)
+        
+        s_str = r'$\rho=' + rank_correlation_coefficient_statement + ',\ p' + pvalue_statement + '$'
+        
+        return s_str
+    
+    
     def first_order_linear_scatterplot(
         self, df, xname, yname, xlabel_str='Overall Capitalism (explanatory variable)',
         ylabel_str='World Bank Gini % (response variable)',
@@ -2680,8 +2752,9 @@ class NotebookUtilities(object):
         most_y = ydata.max()
         least_y = ydata.min()
         
+        # Initialize all variables to False in a single line
         least_x_tried = most_x_tried = least_y_tried = most_y_tried = False
-    
+        
         for label, x, y in zip(df.index, xdata, ydata):
             if (x == least_x) and not least_x_tried:
                 annotation = plt.annotate('{} (least {})'.format(label, x_adj),
@@ -2705,19 +2778,8 @@ class NotebookUtilities(object):
     
         title_obj = fig.suptitle(t=title, x=0.5, y=0.91)
         
-        # Get r squared value
-        inf_nan_mask = self.get_inf_nan_mask(xdata.tolist(), ydata.tolist())
-        from scipy.stats import pearsonr
-        pearsonr_tuple = pearsonr(xdata[inf_nan_mask], ydata[inf_nan_mask])
-        pearson_r = pearsonr_tuple[0]
-        pearsonr_statement = str('%.2f' % pearson_r)
-        coefficient_of_determination_statement = str('%.2f' % pearson_r**2)
-        p_value = pearsonr_tuple[1]
-    
-        if p_value < 0.0001: pvalue_statement = '<0.0001'
-        else: pvalue_statement = '=' + str('%.4f' % p_value)
-    
-        s_str = r'$r^2=' + coefficient_of_determination_statement + ',\ p' + pvalue_statement + '$'
+        # Annotate r squared value
+        s_str = self.get_r_squared_value_latex(xdata, ydata)
         text_tuple = ax.text(0.75, 0.9, s_str, alpha=0.5, transform=ax.transAxes, fontsize='x-large')
         
         return fig
@@ -2875,6 +2937,31 @@ class NotebookUtilities(object):
         text_obj = ax.set_title(f'{title_prefix} {inaugruation_verb} Age vs Year')
     
     
+    @staticmethod
+    def get_color_cycled_list(alphabet_list, color_dict, verbose=False):
+        if verbose: print(f'alphabet_list = {alphabet_list}')
+        if verbose: print(f'color_dict = {color_dict}')
+        
+        # Match the colors with the color cycle and color dictionary
+        from itertools import cycle
+        
+        # Get the color cycle from rcParams
+        prop_cycle = plt.rcParams['axes.prop_cycle']
+        colors = cycle(prop_cycle.by_key()['color'])
+        
+        colors_list = []
+        for key in alphabet_list:
+            value = color_dict.get(key)
+            
+            # Get the next color in the cycle if missing from the dictionary
+            if (value is None): value = next(colors)
+            
+            colors_list.append(value)
+        if verbose: print(f'colors_list = {colors_list}')
+        
+        return colors_list
+    
+    
     def plot_sequence(self, sequence, highlighted_ngrams=[], color_dict=None, suptitle=None, first_element='SESSION_START', last_element='SESSION_END', alphabet_list=None, verbose=False):
         """
         Creates a standard sequence plot where each element corresponds to a position on the y-axis.
@@ -2894,7 +2981,7 @@ class NotebookUtilities(object):
             verbose: A boolean indicating whether to print verbose output.
         
         Returns:
-            A matplotlib figure object.
+            A matplotlib figure and axes objects.
         """
     
         # Convert the sequence to a NumPy array
@@ -2929,16 +3016,17 @@ class NotebookUtilities(object):
         # If the sequence is not already in integer format, convert it
         if (np_sequence.dtype.str not in ['<U21', '<U11']): int_sequence = np_sequence
         
-        # Create a figure
-        fig = plt.figure(figsize=[len(sequence)*0.3, alphabet_len * 0.3])
+        # Create a figure and axes
+        fig, ax = plt.subplots(figsize=[len(sequence) * 0.3, alphabet_len * 0.3])
         
         # Force the xticks to land on integers only
         xtick_locations = range(len(sequence))
-        xtick_labels = [n+1 for n in xtick_locations]
-        plt.xticks(ticks=xtick_locations, labels=xtick_labels, minor=False)
+        xtick_labels = [n + 1 for n in xtick_locations]
+        ax.set_xticks(ticks=xtick_locations)
+        ax.set_xticklabels(xtick_labels, minor=False)
         
         # Extend the edges of the plot
-        plt.xlim([-0.5, len(sequence)-0.5])
+        ax.set_xlim([-0.5, len(sequence) - 0.5])
         
         # Iterate over the alphabet and plot the points for each character
         for i, value in enumerate(alphabet_list):
@@ -2949,11 +3037,11 @@ class NotebookUtilities(object):
             # if verbose: print(range(len(np_sequence)))
             # if verbose: print(points)
             
-            # Plot the points
-            plt.scatter(x=range(len(np_sequence)), y=points, marker='s', label=value, s=35, color=color_dict[value])
+            # Plot the points on the axes
+            ax.scatter(x=range(len(np_sequence)), y=points, marker='s', label=value, s=35, color=color_dict[value])
             # if verbose:
                 # color_cycle = plt.rcParams['axes.prop_cycle']
-                # print('\nPrinting the colors in the color cycle:')
+                # print('\nPrinting the colors in the rcParams color cycle:')
                 # for color in color_cycle: print(color)
                 # print()
         
@@ -2961,29 +3049,14 @@ class NotebookUtilities(object):
         plt.yticks(range(alphabet_len), alphabet_list)
         
         # Match the label colors with the color cycle and color dictionary
-        from itertools import cycle
-        
-        # Get the color cycle from rcParams
-        prop_cycle = plt.rcParams['axes.prop_cycle']
-        colors = cycle(prop_cycle.by_key()['color'])
-        
-        colors_list = []
-        for key in alphabet_list:
-            value = color_dict[key]
-            
-            # Get the next color in the cycle
-            if (value is None):
-                color = next(colors)
-                colors_list.append(color)
-            
-            else: colors_list.append(value)
+        colors_list = self.get_color_cycled_list(alphabet_list, color_dict, verbose=verbose)
         # if verbose: print(f'colors_list = {colors_list}')
         
         # Set the yticks label color
         for label, color in zip(plt.gca().get_yticklabels(), colors_list): label.set_color(color)
         
-        # Set the y limits
-        plt.ylim(-1, alphabet_len)
+        # Set the y limits on the axes
+        ax.set_ylim(-1, alphabet_len)
         
         # Highlight any of the n-grams given
         if highlighted_ngrams != []:
@@ -3026,6 +3099,7 @@ class NotebookUtilities(object):
                     elif type(ngram[0]) is int: highlight_ngram(ngram)
                     else: raise Exception('Invalid data format', ngram)
         
+        # Set the suptitle on the figure
         if suptitle is not None:
             if (alphabet_len <= 6):
                 # from scipy.optimize import curve_fit
@@ -3053,8 +3127,13 @@ class NotebookUtilities(object):
                 if verbose: print(f'alphabet_len={alphabet_len}, y={y}')
             else: y = 0.95
             fig.suptitle(suptitle, y=y)
+            
+            # Save figure to PNG
+            file_path = osp.join(self.saves_png_folder, re.sub(r'\W+', '_', str(suptitle)).strip('_').lower() + '.png')
+            if verbose: print(f'Saving figure to {file_path}')
+            plt.savefig(file_path, bbox_inches='tight')
         
-        return fig
+        return fig, ax
     
     
     def plot_sequences(self, sequences, gap=True):
