@@ -58,7 +58,10 @@ Write-Host "--------------------------------------------------------------------
 Write-Host "                          Cleaning the staging area" -ForegroundColor Green
 Write-Host "-------------------------------------------------------------------------------" -ForegroundColor Green
 jupyter-lab clean
-$CommandString = "jupyter labextension list"
+
+# (Deprecated) Updating extensions with the jupyter labextension update command is now deprecated and will be removed
+# in a future major version of JupyterLab.
+<# $CommandString = "jupyter labextension list"
 $ExtensionsList = Invoke-Expression $CommandString
 if (!($ExtensionsList -Like "*No installed extensions*")) {
 	Write-Host ""
@@ -66,7 +69,8 @@ if (!($ExtensionsList -Like "*No installed extensions*")) {
 	Write-Host "                     Updating the Jupyter Lab extensions" -ForegroundColor Green
 	Write-Host "-------------------------------------------------------------------------------" -ForegroundColor Green
 	jupyter labextension update --all
-}
+} #>
+
 Write-Host ""
 Write-Host "-------------------------------------------------------------------------------" -ForegroundColor Green
 Write-Host "                       Rebuilding the Jupyter Lab assets" -ForegroundColor Green

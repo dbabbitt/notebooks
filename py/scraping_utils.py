@@ -287,15 +287,12 @@ class ScrapingUtilities(object):
     
     
     def get_element_contents(self, driver, xpath, verbose=True, scroll=True):
-        if verbose:
-            print('Getting text of {}'.format(xpath))
+        if verbose: print('Getting text of {}'.format(xpath))
         results_str = ''
         try:
-            if scroll:
-                driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')
+            if scroll: driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')
             web_element = self.get_web_element(driver, xpath)
-            if scroll:
-                driver.execute_script('arguments[0].scrollIntoView(true)', web_element)
+            if scroll: driver.execute_script('arguments[0].scrollIntoView(true)', web_element)
             results_str = web_element.text.strip()
         except Exception as e:
             message = str(e).strip()
@@ -306,11 +303,9 @@ class ScrapingUtilities(object):
                 while len(tag_list) == 2:
                     unobscure_element(driver, tag_list[1])
                     try:
-                        if scroll:
-                            driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')
+                        if scroll: driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')
                         web_element = self.get_web_element(driver, xpath)
-                        if scroll:
-                            driver.execute_script('arguments[0].scrollIntoView(true)', web_element)
+                        if scroll: driver.execute_script('arguments[0].scrollIntoView(true)', web_element)
                         results_str = web_element.text.strip()
                         message = ''
                     except Exception as e:

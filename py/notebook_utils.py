@@ -258,7 +258,7 @@ class NotebookUtilities(object):
         
         # Return the conjuncted noun list
         return list_str
-
+    
     
     @staticmethod
     def get_jitter_list(ages_list):
@@ -298,7 +298,7 @@ class NotebookUtilities(object):
 
     
     @staticmethod
-    def get_splits_list(ages_list):
+    def get_splits_list(ages_list, value_difference=1, verbose=False):
         """
         Divides a list of ages into sublists based on gaps in the age sequence.
         
@@ -310,13 +310,13 @@ class NotebookUtilities(object):
         """
         splits_list = []  # List to store sublists of consecutive ages
         current_list = []  # Temporary list to store the current consecutive ages
-        previous_age = ages_list[0] - 1  # Initialize with a value lower than the first age
+        previous_age = ages_list[0] - value_difference  # Initialize with a value lower than the first age
         
         # Iterate over the list of ages
         for age in ages_list:
             
-            # Check if there is a gap larger than 1 between the current age and the previous age
-            if age - previous_age > 1:
+            # Check if there is a gap (larger than value_difference) between the current age and the previous age
+            if age - previous_age > value_difference:
                 splits_list.append(current_list)  # Append the current_list to splits_list
                 current_list = []  # Reset the current_list
             current_list.append(age)  # Add the current age to the current_list
@@ -519,7 +519,7 @@ class NotebookUtilities(object):
             typos_df = check_for_typos(list(set(df.similar_key).intersection(sd_set)),
                                        list(set(some_dict.keys()).intersection(sd_set)), verbose=False)
             for i, r in typos_df.sort_values(['max_similarity', 'left_item', 'right_item'], ascending=[False, True, True]).iterrows():
-                print(f'some_dict[{r.left_item}] = some_dict.pop({r.right_item})')
+                print(f"some_dict['{r.left_item}'] = some_dict.pop('{r.right_item}')")
         """
         
         # Initialize the time taken for the computation if verbose is True
@@ -695,6 +695,20 @@ class NotebookUtilities(object):
         if (count > 0): result.append(f'{element} x{str(count)}')
         
         return(result)
+    
+    
+    @staticmethod
+    def get_clusters_dictionary(tuples_list, tuple_idx=-1, cluster_fn=lambda x: x, verbose=False):
+        
+        # Separate tuples based on cluster ID (tuple index value)
+        clusters_dict = {}
+        for cluster_tuple in tuples_list:
+            cluster_value = cluster_fn(cluster_tuple[tuple_idx])
+            if cluster_value not in clusters_dict: clusters_dict[cluster_value] = []
+            clusters_dict[cluster_value].append(cluster_tuple)
+        if verbose: print(f'\n\nclusters_dict: {clusters_dict}')
+        
+        return clusters_dict
     
     
     ### File Functions ###
@@ -1194,18 +1208,16 @@ class NotebookUtilities(object):
                         pickle.dump(object, handle, pickle.HIGHEST_PROTOCOL)
 
         else:
-            try:
-                object = pd.read_pickle(pickle_path)
+            try: object = pd.read_pickle(pickle_path)
             except:
-                with open(pickle_path, 'rb') as handle:
-                    object = pickle.load(handle)
+                with open(pickle_path, 'rb') as handle: object = pickle.load(handle)
 
         if verbose: print('Loaded object {} from {}'.format(obj_name, pickle_path), flush=True)
 
         return(object)
     
     
-    def load_data_frames(self, **kwargs):
+    def load_data_frames(self, verbose=True, **kwargs):
         """
         Loads Pandas DataFrames from pickle or CSV files, potentially switching between folders if necessary.
         
@@ -1228,12 +1240,12 @@ class NotebookUtilities(object):
                 
                 # If the pickle file exists, load it using the load_object function
                 if osp.isfile(pickle_path):
-                    print(f'Attempting to load {pickle_path}.', flush=True)
+                    if verbose: print(f'Attempting to load {pickle_path}.', flush=True)
                     try:
                         frame_dict[frame_name] = self.load_object(frame_name)
                         was_successful = True
                     except Exception as e:
-                        print(str(e).strip())
+                        if verbose: print(str(e).strip())
                         was_successful = False
             
             # If the pickle file doesn't exist, check for a CSV file with the same name
@@ -1243,12 +1255,12 @@ class NotebookUtilities(object):
                 
                 # If the CSV file exists in the saves folder, load it from there
                 if osp.isfile(csv_path):
-                    print(f'No pickle exists for {frame_name} - attempting to load {csv_path}.', flush=True)
+                    if verbose: print(f'No pickle exists for {frame_name} - attempting to load {csv_path}.', flush=True)
                     try:
                         frame_dict[frame_name] = self.load_csv(csv_name=frame_name, folder_path=self.saves_folder)
                         was_successful = True
                     except Exception as e:
-                        print(str(e).strip())
+                        if verbose: print(str(e).strip())
                         was_successful = False
             
             # If the CSV file doesn't exist in the saves folder, check for it in the data folder
@@ -1257,17 +1269,17 @@ class NotebookUtilities(object):
                 
                 # If the CSV file exists in the data folder, load it from there
                 if osp.isfile(csv_path):
-                    print(f'No csv exists for {frame_name} - trying {csv_path}.', flush=True)
+                    if verbose: print(f'No csv exists for {frame_name} - trying {csv_path}.', flush=True)
                     try:
                         frame_dict[frame_name] = self.load_csv(csv_name=frame_name)
                         was_successful = True
                     except Exception as e:
-                        print(str(e).strip())
+                        if verbose: print(str(e).strip())
                         was_successful = False
             
             # If the CSV file doesn't exist anywhere, skip loading this data frame
             if not was_successful:
-                print(f'No csv exists for {frame_name} - just forget it.', flush=True)
+                if verbose: print(f'No csv exists for {frame_name} - just forget it.', flush=True)
                 frame_dict[frame_name] = None
         
         return frame_dict
@@ -1401,6 +1413,37 @@ class NotebookUtilities(object):
         dirred_set = set([fn.replace('module_obj', module_name) for fn in dirred_set])
         
         return sorted(dirred_set)
+    
+    
+    @staticmethod
+    def add_staticmethod_decorations(verbose=True):
+        """
+        Find all the non-staticmethod-decorated functions and refactor if needed.
+        """
+        instance_defs_regex = re.compile(r'^    def ([a-z]+[a-z_]+)\(\s*self,\s+(?:[^\)]+)\):', re.MULTILINE)
+        self_regex = re.compile(r'\bself\b')
+        functions_list = []
+        black_list = ['.ipynb_checkpoints', '$Recycle.Bin']
+        this_folder = '../py'
+        if verbose: print()
+        for sub_directory, directories_list, files_list in os.walk(this_folder):
+            if all(map(lambda x: x not in sub_directory, black_list)):
+                for file_name in files_list:
+                    if file_name.endswith('.py'):
+                        file_path = osp.join(sub_directory, file_name)
+                        try:
+                            with open(file_path, 'r', encoding=nu.encoding_type) as f: file_text = f.read()
+                            fn_parts_list = instance_defs_regex.split(file_text)
+                            for fn_name, fn_body in zip(fn_parts_list[1::2], fn_parts_list[2::2]):
+                                if not self_regex.search(fn_body):
+                                    instance_def_regex = re.compile(rf'^    def {fn_name}\(\s*self,\s+(?:[^\)]+)\):', re.MULTILINE)
+                                    match_obj = instance_def_regex.search(file_text)
+                                    if match_obj: replaced_str = match_obj.group()
+                                    else: replaced_str = ''
+                                    replacing_str = '    @staticmethod\n' + replaced_str.replace('self, ', '')
+                                    file_text = file_text.replace(replaced_str, replacing_str)
+                                    with open(file_path, 'w', encoding=nu.encoding_type) as f: print(file_text.rstrip(), file=f)
+                        except Exception as e: print(f'{e.__class__} errror trying to read {file_name}: {str(e).strip()}')
     
     
     def update_modules_list(
@@ -1768,28 +1811,38 @@ class NotebookUtilities(object):
     
     
     @staticmethod
-    def get_inf_nan_mask(x_list, y_list):
+    def get_inf_nan_mask(X_train, y_train):
         """
-        Returns a mask indicating which elements of x_list and y_list are not inf or nan.
+        Returns a mask indicating which elements of X_train and y_train are not inf or nan.
         
         Parameters:
-        x_list: A list of numbers.
-        y_list: A list of numbers.
+            X_train: A NumPy array of numbers.
+            y_train: A NumPy array of numbers.
         
         Returns:
-        A numpy array of booleans, where True indicates that the corresponding element
-        of x_list and y_list is not inf or nan.
+            A numpy array of booleans, where True indicates that the corresponding element of X_train
+            and y_train is not inf or nan. This combined mask can be used on both X_train and y_train.
+        
+        Example:
+            inf_nan_mask = nu.get_inf_nan_mask(X_train, y_train)
+            X_train_filtered = X_train[inf_nan_mask]
+            y_train_filtered = y_train[inf_nan_mask]
         """
         
-        # Check if the input lists are empty.
-        if not x_list or not y_list: return np.array([], dtype=bool)
+        # Check if the input lists are empty
+        if (X_train.shape[0] == 0) or (y_train.shape[0] == 0): return np.array([], dtype=bool)
         
-        # Create masks indicating which elements of x_list and y_list are not inf or nan.
-        x_mask = np.logical_and(np.logical_not(np.isinf(x_list)), np.logical_not(np.isnan(x_list)))
-        y_mask = np.logical_and(np.logical_not(np.isinf(y_list)), np.logical_not(np.isnan(y_list)))
+        # Create separate masks for X_train and y_train (np.isfinite checks for both infinity (inf) and NaN values)
+        # X_finite_mask = np.isfinite(X_train)
+        # y_finite_mask = np.isfinite(y_train)
         
-        # Return a mask indicating which elements of both x_list and y_list are not inf or nan.
-        return np.logical_and(x_mask, y_mask)
+        # Combine masks using bitwise AND operation
+        # mask_series = X_finite_mask & y_finite_mask
+        
+        mask_series = pd.concat([y_train, X_train], axis='columns').applymap(pd.notna).all(axis='columns')
+        
+        # Return a mask indicating which elements of both X_train and y_train are not inf or nan
+        return mask_series
     
     
     @staticmethod
@@ -2074,6 +2127,25 @@ class NotebookUtilities(object):
         
         # Create a new DataFrame with the data from the input Pandas Series and the specified index
         df = DataFrame(data=row_series.to_dict(), index=[row_index])
+        
+        return df
+    
+    
+    @staticmethod
+    def one_hot_encode(df, columns):
+        '''
+        One-hot encodes the given columns in the given data frame.
+        
+        Args:
+            df: A data frame.
+            columns: A list of column names to encode.
+        
+        Returns:
+            A data frame with the encoded columns minus the given columns.
+        '''
+        
+        dummies = pd.get_dummies(df[columns], dummy_na=True)
+        df = pd.concat([df, dummies], axis='columns').drop(columns, axis='columns')
         
         return df
     
@@ -2403,6 +2475,42 @@ class NotebookUtilities(object):
     
     
     @staticmethod
+    def color_distance_from(from_color, to_rgb_tuple):
+        from math import sqrt
+        if from_color == 'white':
+            green_diff = 255 - to_rgb_tuple[0]
+            blue_diff = 255 - to_rgb_tuple[1]
+            red_diff = 255 - to_rgb_tuple[2]
+            color_distance = sqrt(green_diff**2 + blue_diff**2 + red_diff**2)
+        elif from_color == 'black':
+            color_distance = sqrt(to_rgb_tuple[0]**2 + to_rgb_tuple[1]**2 + to_rgb_tuple[2]**2)
+        else:
+            import webcolors
+            rbg_tuple = tuple(webcolors.hex_to_rgb(from_color))
+            green_diff = rbg_tuple[0] - to_rgb_tuple[0]
+            blue_diff = rbg_tuple[1] - to_rgb_tuple[1]
+            red_diff = rbg_tuple[2] - to_rgb_tuple[2]
+            color_distance = sqrt(green_diff**2 + blue_diff**2 + red_diff**2)
+
+        return color_distance
+    
+    
+    def get_text_color(self, text_color='white', bar_color_rgb=(0, 0, 0), verbose=False):
+        if bar_color_rgb != (0, 0, 0):
+            text_colors_list = []
+            for color in ['white', '#404040', 'black']:
+                color_tuple = (self.color_distance_from(color, bar_color_rgb), color)
+                text_colors_list.append(color_tuple)
+            if verbose: print(text_colors_list)
+            text_color = sorted(text_colors_list, key=lambda x: x[0])[-1][1]
+            import webcolors
+            try: text_color = webcolors.name_to_hex(text_color)
+            except: pass
+
+        return text_color
+    
+    
+    @staticmethod
     def get_color_cycler(n):
         """
         Generate a color cycler for plotting with a specified number of colors.
@@ -2637,8 +2745,35 @@ class NotebookUtilities(object):
                 )
                 yticklabels_list.append(text_obj)
             ax.set_yticklabels(yticklabels_list)
+    
+    
+    def get_r_squared_value_latex(self, xdata, ydata):
+        inf_nan_mask = self.get_inf_nan_mask(xdata, ydata)
+        from scipy.stats import pearsonr
+        pearson_r, p_value = pearsonr(xdata[inf_nan_mask], ydata[inf_nan_mask])
+        pearsonr_statement = str('%.2f' % pearson_r)
+        coefficient_of_determination_statement = str('%.2f' % pearson_r**2)
         
-        plt.show()
+        if p_value < 0.0001: pvalue_statement = '<0.0001'
+        else: pvalue_statement = '=' + str('%.4f' % p_value)
+        
+        s_str = r'$r^2=' + coefficient_of_determination_statement + ',\ p' + pvalue_statement + '$'
+        
+        return s_str
+    
+    
+    @staticmethod
+    def get_spearman_rho_value_latex(xdata, ydata):
+        from scipy.stats import spearmanr
+        spearman_corr, p_value = spearmanr(xdata, ydata)
+        rank_correlation_coefficient_statement = str('%.2f' % spearman_corr)
+        
+        if p_value < 0.0001: pvalue_statement = '<0.0001'
+        else: pvalue_statement = '=' + str('%.4f' % p_value)
+        
+        s_str = r'$\rho=' + rank_correlation_coefficient_statement + ',\ p' + pvalue_statement + '$'
+        
+        return s_str
     
     
     def get_r_squared_value_latex(self, xdata, ydata):
@@ -2677,7 +2812,7 @@ class NotebookUtilities(object):
         idx_reference='United States',
         annot_reference='most evil', aspect_ratio=None, least_x_xytext=(40, -10), most_x_xytext=(-150, 55),
         least_y_xytext=(-200, -10),
-        most_y_xytext=(45, 0), reference_xytext=(-75, 25), color_list=None
+        most_y_xytext=(45, 0), reference_xytext=(-75, 25), color_list=None, verbose=False
     ):
         """
         Create a first-order (linear) scatter plot assuming the data frame
@@ -2715,9 +2850,10 @@ class NotebookUtilities(object):
                 the reference point. Default is (-75, 25).
             color_list (list[str], optional): The list of colors to be used for the scatter plot.
                 Default is None, which will use a default color scheme.
+            verbose (bool, optional): Whether to print debug output. Defaults to False.
         
         Returns:
-            figure(matplotlib.figure.Figure): The figure object for the generated scatter plot.
+            tuple: The figure and axis object for the generated scatter plot.
         """
     
         if aspect_ratio is None: aspect_ratio = self.facebook_aspect_ratio
@@ -2740,41 +2876,57 @@ class NotebookUtilities(object):
         if not ylabel_str.endswith(' (response variable)'): ylabel_str = f'{ylabel_str} (response variable)'
         ylabel_text = plt.ylabel(ylabel_str)
     
-        kwargs = dict(textcoords='offset points', ha='left', va='bottom',
-                      bbox=dict(boxstyle='round,pad=0.5', fc='yellow', alpha=0.5),
-                      arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0'))
+        kwargs = dict(
+            textcoords='offset points', ha='left', va='bottom',
+            bbox=dict(boxstyle='round,pad=0.5', fc='yellow', alpha=0.5),
+            arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0')
+        )
         
         xdata = df[xname].values
         least_x = xdata.min()
+        if verbose: print(f'least_x = {least_x}')
         most_x = xdata.max()
+        if verbose: print(f'most_x = {most_x}')
         
         ydata = df[yname].values
         most_y = ydata.max()
+        if verbose: print(f'most_y = {most_y}')
         least_y = ydata.min()
+        if verbose: print(f'least_y = {least_y}')
+        
+        least_x_tried = False
+        most_x_tried = False
+        least_y_tried = False
+        most_y_tried = False
         
         # Initialize all variables to False in a single line
         least_x_tried = most_x_tried = least_y_tried = most_y_tried = False
         
         for label, x, y in zip(df.index, xdata, ydata):
             if (x == least_x) and not least_x_tried:
-                annotation = plt.annotate('{} (least {})'.format(label, x_adj),
-                                          xy=(x, y), xytext=least_x_xytext, **kwargs)
+                annotation = plt.annotate(
+                    '{} (least {})'.format(label, x_adj), xy=(x, y), xytext=least_x_xytext, **kwargs
+                )
                 least_x_tried = True
             elif (x == most_x) and not most_x_tried:
-                annotation = plt.annotate('{} (most {})'.format(label, x_adj),
-                                          xy=(x, y), xytext=most_x_xytext, **kwargs)
+                annotation = plt.annotate(
+                    '{} (most {})'.format(label, x_adj), xy=(x, y), xytext=most_x_xytext, **kwargs
+                )
                 most_x_tried = True
             elif (y == least_y) and not least_y_tried:
-                annotation = plt.annotate('{} (least {})'.format(label, y_adj),
-                                          xy=(x, y), xytext=least_y_xytext, **kwargs)
+                annotation = plt.annotate(
+                    '{} (least {})'.format(label, y_adj), xy=(x, y), xytext=least_y_xytext, **kwargs
+                )
                 least_y_tried = True
             elif (y == most_y) and not most_y_tried:
-                annotation = plt.annotate('{} (most {})'.format(label, y_adj),
-                                          xy=(x, y), xytext=most_y_xytext, **kwargs)
+                annotation = plt.annotate(
+                    '{} (most {})'.format(label, y_adj), xy=(x, y), xytext=most_y_xytext, **kwargs
+                )
                 most_y_tried = True
             elif (label == idx_reference):
-                annotation = plt.annotate('{} ({})'.format(label, annot_reference),
-                                          xy=(x, y), xytext=reference_xytext, **kwargs)
+                annotation = plt.annotate(
+                    '{} ({})'.format(label, annot_reference), xy=(x, y), xytext=reference_xytext, **kwargs
+                )
     
         title_obj = fig.suptitle(t=title, x=0.5, y=0.91)
         
@@ -2782,7 +2934,7 @@ class NotebookUtilities(object):
         s_str = self.get_r_squared_value_latex(xdata, ydata)
         text_tuple = ax.text(0.75, 0.9, s_str, alpha=0.5, transform=ax.transAxes, fontsize='x-large')
         
-        return fig
+        return fig, ax
     
     
     def plot_inauguration_age(
@@ -2818,7 +2970,7 @@ class NotebookUtilities(object):
         Returns:
             None: The function plots the graph directly using matplotlib.
         """
-
+        
         # Configure the color dictionary
         color_cycler = self.get_color_cycler(info_df[groupby_column_name].unique().shape[0])
         face_color_dict = {}
@@ -2838,11 +2990,11 @@ class NotebookUtilities(object):
             if groupby_column[0] in ['A', 'U']: ana = 'an'
             else: ana = 'a'
             label = f'{leader_designation.title()} {label_infix} {ana} {groupby_column} {label_suffix}'.strip()
-
+            
             # Convert the array to a 2-D array with a single row
             reshape_tuple = (1, -1)
             color = face_color_dict[groupby_column].reshape(reshape_tuple)
-
+            
             # Plot and annotate all points from the index
             for leader_name, row_series in df.iterrows():
                 if groupby_column not in used_list:
@@ -2880,7 +3032,7 @@ class NotebookUtilities(object):
         bottom, top = ax.get_ylim()
         height = top - bottom
 
-        # Get the background shading width
+        # Get the background shading wrap width
         left, right = ax.get_xlim()
         min_shading_width = 9999
         min_turning_name = ''
@@ -2893,7 +3045,7 @@ class NotebookUtilities(object):
                 min_shading_width = width
                 min_turning_name = row_series.turning_name
                 wrap_width = len(min_turning_name)
-
+        
         # Add the turning names as background shading
         from matplotlib.patches import Rectangle
         for row_index, row_series in info_df.iterrows():
@@ -2960,6 +3112,69 @@ class NotebookUtilities(object):
         if verbose: print(f'colors_list = {colors_list}')
         
         return colors_list
+    
+    
+    @staticmethod
+    def plot_grouped_pie_chart(df, column_name, slice_label, slice_cutoff=None, verbose=False):
+        
+        # Filter non-null values in the specified column
+        mark_series = ~df[column_name].isnull()  # Filter non-null values in the column
+        filtered_values = df[mark_series][column_name]
+        
+        # Count the occurrences of each unique value
+        value_counts = filtered_values.value_counts()
+        
+        # Group values with count equal to cutoff into one slice
+        if slice_cutoff is None: slice_cutoff = value_counts.sum()*0.02
+        grouped_value_counts = value_counts[value_counts > slice_cutoff]
+        other_slice = value_counts[value_counts <= slice_cutoff].sum()
+        if other_slice: grouped_value_counts[slice_label] = other_slice
+        
+        # Plot a pie chart
+        plt.figure(figsize=(8, 8))
+        plt.pie(grouped_value_counts, labels=grouped_value_counts.index, autopct='%1.1f%%', startangle=90)
+        plt.title(f'Distribution of {column_name}')
+        
+        # Return the matplotlib figure object
+        return plt
+    
+    
+    @staticmethod
+    def plot_right_circles(tuples_list, draw_a_two_circle_venn_diagram, verbose=False):
+        plot_count = len(tuples_list)
+        ncols = min(3, plot_count)
+        nrows = max(1, int(math.ceil(plot_count / ncols)))
+        fig, axes = plt.subplots(nrows, ncols, figsize=(12, 4))
+        if verbose: print(type(axes))
+        
+        for i, right_circle_tuple in enumerate(tuples_list):
+            col = (i % 3)
+            if verbose: print(i, col, ncols)
+            if (nrows > 1):
+                row = int(math.floor(i / 3))
+                ax = axes[row, col]
+            elif (plot_count == 1): ax = axes
+            else: ax = axes[col]
+            # import matplotlib
+            # assert type(ax) == matplotlib.axes.Subplot, f"ax is of type {type(ax)}, it should be matplotlib.axes.Subplot"
+            draw_a_two_circle_venn_diagram(right_circle_tuple, ax=ax)
+
+        # Hide the unused axes
+        for i in range(nrows * ncols, plot_count, -1):
+            col = (i - 1) % 3
+            if verbose: print(i, col, ncols)
+            if (nrows > 1):
+                row = (i - 1) // 3
+                ax = axes[row, col]
+            elif (plot_count == 1): ax = axes
+            else: ax = axes[i]
+            ax.axis('off')
+
+        # Adjust spacing between subplots
+        plt.tight_layout()
+        
+        # Return the matplotlib figure object
+        return plt
     
     
     def plot_sequence(self, sequence, highlighted_ngrams=[], color_dict=None, suptitle=None, first_element='SESSION_START', last_element='SESSION_END', alphabet_list=None, verbose=False):

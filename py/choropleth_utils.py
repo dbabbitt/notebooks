@@ -334,24 +334,74 @@ class ChoroplethUtilities(object):
     
     
     def indexize_string(self, indexable_str):
-        indexized_str = self.nonword_regex.sub(' ', indexable_str.lower()).strip().replace(' ', '-')
+        """
+        Indexizes a string by performing the following steps:
         
-        return indexized_str
+        1. Converts the string to lowercase.
+        2. Removes all non-word characters using a regular expression.
+        3. Strips leading and trailing whitespace.
+        4. Replaces all remaining whitespace characters with hyphens.
+        
+        Parameters:
+            indexable_str (str): The string to be indexed.
+        
+        Returns:
+            str: The indexed string.
+        """
+        
+        # Lowercase the string
+        lowercased_str = indexable_str.lower()
+        
+        # Remove non-word characters using the pre-defined nonword_regex attribute
+        cleaned_str = self.nonword_regex.sub(' ', lowercased_str)
+        
+        # Strip leading and trailing whitespace
+        stripped_str = cleaned_str.strip()
+        
+        # Replace remaining whitespace with hyphens
+        indexed_str = stripped_str.replace(' ', '-')
+        
+        return indexed_str
     
     
     
     def trim_d_path(self, file_path):
-        with open(file_path, 'r', encoding=self.s.encoding_type, errors='ignore') as f:
-            xml_str = f.read()
-            d_regex = re.compile('d="([^"\r\n]+)[\r\n]+')
-            while d_regex.search(xml_str):
-                xml_str = d_regex.sub(r'd="\g<1>', xml_str)
-            with open(file_path, 'w') as f:
-                print(
-                    xml_str.strip().encode(self.s.encoding_type, errors=self.s.encoding_error).decode(
-                        encoding=self.s.decoding_type, errors=self.s.decoding_error
-                    ), file=f
-                )
+        """
+        Trims the leading and trailing quotation marks from all `d` attributes
+        within an XML file. This function assumes the file encoding and error handling
+        settings are defined in the `self.s` attribute (assumed to be an object with 
+        `encoding_type`, `encoding_error`, `decoding_type`, and `decoding_error` attributes).
+        
+        Parameters:
+            file_path (str): The path to the XML file.
+        
+        Raises:
+            FileNotFoundError: If the specified file is not found.
+        """
+        
+        # Open the file for reading in the specified encoding and error handling mode
+        try:
+            with open(file_path, 'r', encoding=self.s.encoding_type, errors='ignore') as f:
+                xml_str = f.read()
+        except FileNotFoundError:
+            raise FileNotFoundError(f"File not found: {file_path}")
+        
+        # Compile the regular expression to match `d` attributes
+        d_regex = re.compile('d="([^"\r\n]+)[\r\n]+')
+        
+        # Replace all occurrences of `d="..."` with `d="\g"` to trim quotes
+        while d_regex.search(xml_str):
+            xml_str = d_regex.sub(r'd="\g<1>', xml_str)
+        
+        # Open the file again for writing in the specified encoding and error handling mode
+        with open(file_path, 'w') as f:
+            
+            # Encode the trimmed string, decode it back to the desired encoding, and then write to the file
+            print(
+                xml_str.strip().encode(self.s.encoding_type, errors=self.s.encoding_error).decode(
+                    encoding=self.s.decoding_type, errors=self.s.decoding_error
+                ), file=f
+            )
     
     
     
