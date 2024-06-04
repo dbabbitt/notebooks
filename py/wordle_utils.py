@@ -28,7 +28,7 @@ class WordleUtilities(object):
     --------
 
     >>> import sys
-    >>> sys.path.insert(1, '../py')
+    >>> if ('../py' not in sys.path): sys.path.insert(1, '../py')
     >>> import wordle_utils
     >>> w = wordle_utils.WordleUtilities()
     """

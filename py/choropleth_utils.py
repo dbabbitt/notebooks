@@ -46,7 +46,7 @@ class ChoroplethUtilities(object):
     --------
     
     import sys
-    sys.path.insert(1, '../py')
+    if ('../py' not in sys.path): sys.path.insert(1, '../py')
     from storage import Storage
     from choropleth_utils import ChoroplethUtilities
     
