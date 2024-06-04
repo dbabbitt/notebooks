@@ -1594,7 +1594,7 @@ class NotebookUtilities(object):
         parts_list = re.split('"""', source_code, 0)
         
         # Clean the docstring part so that only the top one-sentence paragraph is included
-        docstring = parts_list[1].strip().split('.')[0]
+        docstring = re.sub(r'\s+', ' ', parts_list[1].strip().split('.')[0])
         
         # Add this description header (with prefix) to the list
         comments_list.append(f'{docstring_prefix} {docstring.lower()} is as follows:')
@@ -3482,7 +3482,7 @@ class NotebookUtilities(object):
         
         # Force the xticks to land on integers only
         xtick_locations = range(len(sequence))
-        xtick_labels = [n + 1 for n in xtick_locations]
+        xtick_labels = [n+1 for n in xtick_locations]
         ax.set_xticks(ticks=xtick_locations)
         ax.set_xticklabels(xtick_labels, minor=False)
         
