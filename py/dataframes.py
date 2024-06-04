@@ -83,7 +83,7 @@ def get_column_descriptions(df, column_list=None):
                 
                 # Count how many unique numbers there are
                 try:
-                    row_dict['count_uniques'] = len(df[column_name].unique())
+                    row_dict['count_uniques'] = df[column_name].nunique()
                 except Exception:
                     row_dict['count_uniques'] = math.nan
                 

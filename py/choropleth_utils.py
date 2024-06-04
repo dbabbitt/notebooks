@@ -849,7 +849,7 @@ class ChoroplethUtilities(object):
         svg_file_path = self.create_svg_file_beginning(svg_file_name)
         
         # Create the outline paths
-        ListedColormap_obj = cm.get_cmap(cmap, len(one_country_df[numeric_column_name].unique()))
+        ListedColormap_obj = cm.get_cmap(cmap, one_country_df[numeric_column_name].nunique())
         min = one_country_df[numeric_column_name].min()
         max = one_country_df[numeric_column_name].max()
         mask_series = one_country_df[numeric_column_name].isnull()
@@ -924,7 +924,7 @@ class ChoroplethUtilities(object):
         svg_file_path = self.create_svg_file_beginning(svg_file_name)
         
         # Create the outline paths
-        ListedColormap_obj = cm.get_cmap(cmap, len(one_country_df[numeric_column_name].unique()))
+        ListedColormap_obj = cm.get_cmap(cmap, one_country_df[numeric_column_name].nunique())
         if min is None:
             min = one_country_df[numeric_column_name].min()
         if max is None:
