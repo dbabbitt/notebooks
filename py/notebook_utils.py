@@ -461,36 +461,72 @@ class NotebookUtilities(object):
     
     def check_4_doubles(self, item_list, verbose=False):
         """
-        Check for similar items in the given list.
-
+        Find and compare items within a list to identify similar pairs.
+        
+        This method compares each item in the list with every other item 
+        to find the most similar item based on a computed similarity 
+        metric. The results are returned in a DataFrame containing pairs 
+        of items and their similarity scores and byte representations.
+        
         Parameters:
-            item_list (list): List of items to be compared.
-            verbose (bool, optional): If True, print the execution time. Default is False.
-
+            item_list (list):
+                The list of items to be compared for similarity.
+            verbose (bool, optional):
+                If True, print debug information. Default is False.
+        
         Returns:
-            pandas.DataFrame: DataFrame containing similar item pairs and their similarities.
+            pandas.DataFrame:
+                A DataFrame containing columns for the first item, second item, 
+                their byte representations, and the maximum similarity score found 
+                for each pair.
+        
+        Notes:
+            The function assumes that 'self.compute_similarity' is a method 
+            defined elsewhere that computes the similarity between two 
+            strings. The 'encoding_type' used in byte representation is also 
+            assumed to be defined in the class.
         """
-        if verbose: t0 = time.time()
+        
+        # Start the timer if verbose is enabled
+        if verbose:
+            t0 = time.time()
+        
         rows_list = []
         n = len(item_list)
+        
+        # Iterate over each item in the list
         for i in range(n-1):
+            
+            # Get the current item to compare with others
             first_item = item_list[i]
+            
+            # Initialize the maximum similarity score
             max_similarity = 0.0
+            
+            # Initialize the item with the highest similarity to the current item
             max_item = first_item
+            
+            # Compare the current item with the rest of the items in the list
             for j in range(i+1, n):
+                
+                # Get the item to compare against
                 second_item = item_list[j]
-
-                # Assume the first item is never identical to the second item
-                this_similarity = self.compute_similarity(str(first_item), str(second_item))
-
-                if this_similarity > max_similarity:
-                    max_similarity = this_similarity
-                    max_item = second_item
-
-            # Get input row in dictionary format; key = col_name
-            row_dict = {}
-            row_dict['first_item'] = first_item
-            row_dict['second_item'] = max_item
+                
+                # Ensure items are not identical before similarity calculation
+                if first_item != second_item:
+                    
+                    # Compute the similarity between the two items
+                    this_similarity = self.compute_similarity(str(first_item), str(second_item))
+                    
+                    # Update the maximum similarity and corresponding item if a higher similarity is found
+                    if this_similarity > max_similarity:
+                        max_similarity = this_similarity
+                        max_item = second_item
+            
+            # Create a row dictionary to store information for each similar item pair
+            row_dict = {'first_item': first_item, 'second_item': max_item}
+            
+            # Convert items to byte arrays and join them with '-' for string representation
             row_dict['first_bytes'] = '-'.join(str(x) for x in bytearray(
                 str(first_item), encoding=self.encoding_type, errors='replace'
             ))
@@ -498,17 +534,23 @@ class NotebookUtilities(object):
                 str(max_item), encoding=self.encoding_type, errors='replace'
             ))
             row_dict['max_similarity'] = max_similarity
-
+            
+            # Add the row dictionary to the list of rows
             rows_list.append(row_dict)
-
+        
+        # Define the column names for the resulting DataFrame
         column_list = ['first_item', 'second_item', 'first_bytes', 'second_bytes', 'max_similarity']
+        
+        # Create the DataFrame from the list of row dictionaries
         item_similarities_df = DataFrame(rows_list, columns=column_list)
+        
+        # Display end time for performance measurement (if verbose)
         if verbose:
             t1 = time.time()
-            print(t1 - t0, time.ctime(t1))
-
+            print(f"Finished in {t1 - t0:.2f} seconds ({time.ctime(t1)})")
+        
         return item_similarities_df
-
+    
     
     def check_for_typos(
         self, left_list, right_list, rename_dict={'left_item': 'left_item', 'right_item': 'right_item'},
