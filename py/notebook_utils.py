@@ -72,7 +72,6 @@ class NotebookUtilities(object):
     
     def __init__(self, data_folder_path=None, saves_folder_path=None, verbose=False):
         self.pip_command_str = f'{sys.executable} -m pip'
-        # self.update_modules_list(verbose=verbose)
         
         # Assume this is instantiated in a subfolder one below the main
         self.github_folder = osp.dirname(osp.abspath(osp.curdir))
@@ -106,14 +105,6 @@ class NotebookUtilities(object):
         self.db_folder = osp.join(self.data_folder, 'db'); makedirs(self.db_folder, exist_ok=True)
         self.graphs_folder = osp.join(self.saves_folder, 'graphs'); makedirs(self.graphs_folder, exist_ok=True)
         self.indices_folder = osp.join(self.saves_folder, 'indices'); makedirs(self.indices_folder, exist_ok=True)
-        
-        # Various model paths
-        self.lora_path = osp.abspath(osp.join(self.bin_folder, 'gpt4all-lora-quantized.bin'))
-        self.gpt4all_model_path = osp.abspath(osp.join(self.bin_folder, 'gpt4all-lora-q-converted.bin'))
-        self.ggjt_model_path = osp.abspath(osp.join(
-            self.cache_folder, 'models--LLukas22--gpt4all-lora-quantized-ggjt', 'snapshots', '2e7367a8557085b8267e1f3b27c209e272b8fe6c',
-            'ggjt-model.bin'
-        ))
         
         # Ensure the Scripts folder is in PATH
         self.anaconda_folder = osp.dirname(sys.executable)
@@ -1121,35 +1112,62 @@ class NotebookUtilities(object):
     
     
     @staticmethod
-    def attempt_to_pickle(
-        df: DataFrame, pickle_path: str, raise_exception: bool = False,
-        verbose: bool = True
-    ) -> None:
+    def attempt_to_pickle(df: DataFrame, pickle_path, raise_exception=False, verbose=True):
         """
-        Attempts to pickle a DataFrame to a file.
+        Attempt to pickle a DataFrame to a file while handling potential exceptions.
+        
+        This method attempts to save a given DataFrame to the specified 
+        file path. It uses a pickle protocol of 4 or lower for broader 
+        compatibility. If the operation fails, it optionally raises an 
+        exception and/or prints an error message.
         
         Parameters:
-            df (DataFrame): The DataFrame to pickle.
-            pickle_path (str): The path to the pickle file.
-            raise_exception (bool, optional): Whether to raise an exception if the pickle fails. Defaults to False.
-            verbose (bool, optional): Whether to print status messages. Defaults to True.
+            df (pandas.DataFrame):
+                The DataFrame to pickle.
+            pickle_path (str):
+                The path to the pickle file.
+            raise_exception (bool, optional):
+                Whether to raise an exception if the pickle fails. Defaults to False.
+            verbose (bool, optional):
+                Whether to print debug messages. Defaults to True.
         
         Returns:
             None
+        
+        Raises:
+            Exception
+                If `raise_exception` is True and pickling the DataFrame fails.
+        
+        Notes:
+            This method attempts to pickle a DataFrame using the highest possible
+            protocol supported by the installed version of Python, up to a maximum
+            of 4. If pickling fails, it will remove the partially written file
+            and, if `verbose` is True, print an error message. If `raise_exception`
+            is True, it will re-raise the exception after cleaning up.
         """
+        
+        # Try to compress and store the dataframe with a pickle protocol <= 4
         try:
-            if verbose: print('Pickling to {}'.format(osp.abspath(pickle_path)), flush=True)
+            
+            # Print the absolute path to the pickle file if verbose is enabled
+            if verbose: 
+                print('Pickling to {}'.format(osp.abspath(pickle_path)), flush=True)
+            
+            df.to_pickle(pickle_path, protocol=min(4, pickle.HIGHEST_PROTOCOL))
 
-            # Protocol 4 is not handled in python 2
-            if sys.version_info.major == 2: df.to_pickle(pickle_path, protocol=2)
-
-            # Pickle protocol must be <= 4
-            elif sys.version_info.major == 3: df.to_pickle(pickle_path, protocol=min(4, pickle.HIGHEST_PROTOCOL))
-
+        # Catch any exception that occurs during the pickling process
         except Exception as e:
+            
+            # Remove the pickle file if it was partially created
             remove(pickle_path)
-            if verbose: print(e, ": Couldn't save {:,} cells as a pickle.".format(df.shape[0]*df.shape[1]), flush=True)
-            if raise_exception: raise
+            
+            # Print the exception message and the number of cells that failed to be pickled if verbose is enabled
+            if verbose:
+                print(f"{e}: Couldn't save {df.shape[0] * df.shape[1]:,} cells as a pickle.", flush=True)
+            
+            # Re-raise the exception if specified
+            if raise_exception:
+                raise
     
     
     def csv_exists(self, csv_name, folder_path=None, verbose=False):
@@ -1477,34 +1495,96 @@ class NotebookUtilities(object):
     
     
     @staticmethod
-    def add_staticmethod_decorations(verbose=True):
+    def add_staticmethod_decorations(python_folder='../py', verbose=True):
         """
-        Find all the non-staticmethod-decorated functions and refactor if needed.
+        Scan a Python folder structure and automatically add @staticmethod 
+        decorators to non-staticmethod-decorated instance methods.
+        
+        This method searches through all Python files in a specified 
+        folder, excluding certain blacklisted directories, and refactors 
+        functions that do not reference the 'self' variable to be static 
+        methods by adding the '@staticmethod' decorator.
+        
+        Parameters:
+            python_folder (str, optional):
+                Relative path to the folder to scan for Python files
+            verbose (bool, optional):
+                Whether to print debug messages during processing. Defaults to True.
+        
+        Returns:
+            None
+        
+        Note:
+            This function modifies files in-place. It's recommended to back 
+            up the folder structure before running it.
         """
+        
+        # Create a regular expression for finding instance methods and self usage
         instance_defs_regex = re.compile(r'^    def ([a-z]+[a-z_]+)\(\s*self,\s+(?:[^\)]+)\):', MULTILINE)
+        
+        # Create a regular expression to search for 'self' references within function bodies
         self_regex = re.compile(r'\bself\b')
+        
+        # Create a list to store functions that will be refactored
         functions_list = []
+        
+        # Create a list of directories to exclude from the search
         black_list = ['.ipynb_checkpoints', '$Recycle.Bin']
-        this_folder = '../py'
-        if verbose: print()
-        for sub_directory, directories_list, files_list in walk(this_folder):
+        
+        # Print starting message if verbose
+        if verbose:
+            print("Scanning Python folder structure to add staticmethod decorations...")
+        
+        # Walk through the directory tree
+        for sub_directory, directories_list, files_list in walk(python_folder):
+            
+            # Skip blacklisted directories
             if all(map(lambda x: x not in sub_directory, black_list)):
+                
+                # Process each Python file in the directory
                 for file_name in files_list:
                     if file_name.endswith('.py'):
+                        
+                        # Construct the full path to the Python file
                         file_path = osp.join(sub_directory, file_name)
                         try:
-                            with open(file_path, 'r', encoding=nu.encoding_type) as f: file_text = f.read()
+                            
+                            # Open the file and read its contents
+                            with open(file_path, 'r', encoding=nu.encoding_type) as f:
+                                file_text = f.read()
+                            
+                            # Split the file text into function parts
                             fn_parts_list = instance_defs_regex.split(file_text)
+                            
+                            # Iterate over function names and bodies
                             for fn_name, fn_body in zip(fn_parts_list[1::2], fn_parts_list[2::2]):
+                                
+                                # Check if the function body does not use 'self'
                                 if not self_regex.search(fn_body):
+                                    
+                                    # Create a new regex specific to the method name
                                     instance_def_regex = re.compile(rf'^    def {fn_name}\(\s*self,\s+(?:[^\)]+)\):', MULTILINE)
+                                    
+                                    # Search for the method definition in the file text
                                     match_obj = instance_def_regex.search(file_text)
-                                    if match_obj: replaced_str = match_obj.group()
-                                    else: replaced_str = ''
-                                    replacing_str = '    @staticmethod\n' + replaced_str.replace('self, ', '')
-                                    file_text = file_text.replace(replaced_str, replacing_str)
-                                    with open(file_path, 'w', encoding=nu.encoding_type) as f: print(file_text.rstrip(), file=f)
-                        except Exception as e: print(f'{e.__class__} errror trying to read {file_name}: {str(e).strip()}')
+                                    
+                                    # Update file text if method is not decorated
+                                    if match_obj:
+                                        replaced_str = match_obj.group()
+                                        
+                                        # Prepare the replacement string with the '@staticmethod' decorator
+                                        replacing_str = '    @staticmethod\n' + replaced_str.replace('self, ', '')
+                                        
+                                        # Replace the original method definition with the refactored one
+                                        file_text = file_text.replace(replaced_str, replacing_str)
+                            
+                            # Write the modified text back to the file
+                            with open(file_path, 'w', encoding=nu.encoding_type) as f:
+                                print(file_text.rstrip(), file=f)
+                        
+                        # Handle any exceptions during file read/write
+                        except Exception as e:
+                            print(f'{e.__class__.__name__} error trying to read {file_name}: {str(e).strip()}')
     
     
     def update_modules_list(
@@ -1583,31 +1663,34 @@ class NotebookUtilities(object):
         # Import required libraries not already imported for the class
         import roman
         
-        # Extract the source code and initialize the comments list
-        source_code = inspect.getsource(function_obj)
-        comments_list = []
-        
-        # Compile regex to find all unprefixed comments in the source code
-        comment_regex = re.compile('^ *# ([^\r\n]+)', re.MULTILINE)
-        
-        # Split the source code to separate docstring and function body
-        parts_list = re.split('"""', source_code, 0)
-        
-        # Clean the docstring part so that only the top one-sentence paragraph is included
-        docstring = re.sub(r'\s+', ' ', parts_list[1].strip().split('.')[0])
-        
-        # Add this description header (with prefix) to the list
-        comments_list.append(f'{docstring_prefix} {docstring.lower()} is as follows:')
-        
-        # Extract the comments which are not debug statements and add them to the list (prefixed with Roman numerals)
-        for i, comment_str in enumerate(
-            [comment_str for comment_str in comment_regex.findall(source_code) if comment_str and ('verbose' not in comment_str)]
-        ):
-            comments_list.append(f'    {roman.toRoman(i+1).lower()}. {comment_str}.')
-        
-        # If there are any comments in the list, print its procedure description and comments on their own lines
-        if len(comments_list) > 1:
-            print('\n'.join(comments_list))
+        # Check if the function object is any kind of function or method
+        if inspect.isroutine(function_obj):
+            
+            # Extract the source code and initialize the comments list
+            source_code = inspect.getsource(function_obj)
+            comments_list = []
+            
+            # Compile regex to find all unprefixed comments in the source code
+            comment_regex = re.compile('^ *# ([^\r\n]+)', re.MULTILINE)
+            
+            # Split the source code to separate docstring and function body
+            parts_list = re.split('"""', source_code, 0)
+            
+            # Clean the docstring part so that only the top one-sentence paragraph is included
+            docstring = re.sub(r'\s+', ' ', parts_list[1].strip().split('.')[0])
+            
+            # Add this description header (with prefix) to the list
+            comments_list.append(f'{docstring_prefix} {docstring.lower()} is as follows:')
+            
+            # Extract the comments which are not debug statements and add them to the list (prefixed with Roman numerals)
+            for i, comment_str in enumerate(
+                [comment_str for comment_str in comment_regex.findall(source_code) if comment_str and ('verbose' not in comment_str)]
+            ):
+                comments_list.append(f'    {roman.toRoman(i+1).lower()}. {comment_str}.')
+            
+            # If there are any comments in the list, print its procedure description and comments on their own lines
+            if len(comments_list) > 1:
+                print('\n'.join(comments_list))
     
     
     ### URL and Soup Functions ###
