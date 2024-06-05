@@ -1998,20 +1998,6 @@ class NotebookUtilities(object):
             List[pandas.DataFrame]: A list of DataFrames containing tables from the specified source.
         
         Example:
-            
-            # Import necessary libraries and modules
-            import sys
-            if ('../py' not in sys.path): sys.path.insert(1, '../py')  # Add the '../py' directory to the system path
-            from notebook_utils import NotebookUtilities
-            import os.path as osp
-            
-            # Create a NotebookUtilities instance with a specified data folder path
-            nu = NotebookUtilities(
-                data_folder_path=osp.abspath('../data'),
-                saves_folder_path=osp.abspath('../saves')
-            )
-            
-            # Example usage of the function
             tables_url = 'https://en.wikipedia.org/wiki/Provinces_of_Afghanistan'
             page_tables_list = nu.get_page_tables(tables_url)
             
@@ -3244,80 +3230,129 @@ class NotebookUtilities(object):
     
     
     def first_order_linear_scatterplot(
-        self, df, xname, yname, xlabel_str='Overall Capitalism (explanatory variable)',
+        self, df, xname, yname,
+        xlabel_str='Overall Capitalism (explanatory variable)',
         ylabel_str='World Bank Gini % (response variable)',
-        x_adj='capitalist', y_adj='unequal', title='"Wealth inequality is huge in the capitalist societies"',
-        idx_reference='United States',
-        annot_reference='most evil', aspect_ratio=None, least_x_xytext=(40, -10), most_x_xytext=(-150, 55),
-        least_y_xytext=(-200, -10),
-        most_y_xytext=(45, 0), reference_xytext=(-75, 25), color_list=None, verbose=False
+        x_adj='capitalist', y_adj='unequal',
+        title='"Wealth inequality is huge in the capitalist societies"',
+        idx_reference='United States', annot_reference='most evil',
+        aspect_ratio=None, least_x_xytext=(40, -10),
+        most_x_xytext=(-150, 55), least_y_xytext=(-200, -10),
+        most_y_xytext=(45, 0), reference_xytext=(-75, 25),
+        color_list=None, verbose=False
     ):
         """
-        Create a first-order (linear) scatter plot assuming the data frame
-        has an index labeled with strings.
+        Create a first-order linear scatterplot with annotations.
+        
+        This function generates a scatterplot for a provided DataFrame 
+        (`df`) using specified column names (`xname` and `yname`) for the 
+        x and y axes. It also adds custom labels, annotations for extreme 
+        data points, and an R-squared value.
         
         Parameters:
-            df (pandas.DataFrame): The data frame to be plotted.
-            xname (str): The name of the x-axis variable.
-            yname (str): The name of the y-axis variable.
-            xlabel_str (str, optional): The label for the x-axis. Defaults to
-                'Overall Capitalism (explanatory variable)'.
-            ylabel_str (str, optional): The label for the y-axis. Defaults to
-                'World Bank Gini % (response variable)'.
-            x_adj (str, optional): The adjective to use for the x-axis variable in the annotations.
-                Default is 'capitalist'.
-            y_adj (str, optional): The adjective to use for the y-axis variable in the annotations.
-                Default is 'unequal'.
-            title (str, optional): The title of the plot. Defaults to
-                'Wealth inequality is huge in the capitalist societies'.
-            idx_reference (str, optional): The index of the data point to be used as the reference point for
-                the annotations. Default is 'United States'.
-            annot_reference (str, optional): The reference text to be used for the annotation of the
-                reference point. Default is 'most evil'.
-            aspect_ratio (float, optional): The aspect ratio of the plot. Default is the Facebook aspect
-                ratio (1.91).
-            least_x_xytext (tuple[float, float], optional): The xytext position for the annotation of the
-                least x-value data point. Default is (40, -10).
-            most_x_xytext (tuple[float, float], optional): The xytext position for the annotation of the
-                most x-value data point. Default is (-150, 55).
-            least_y_xytext (tuple[float, float], optional): The xytext position for the annotation of
-                the least y-value data point. Default is (-200, -10).
-            most_y_xytext (tuple[float, float], optional): The xytext position for the annotation of the
-                most y-value data point. Default is (45, 0).
-            reference_xytext (tuple[float, float], optional): The xytext position for the annotation of
-                the reference point. Default is (-75, 25).
-            color_list (list[str], optional): The list of colors to be used for the scatter plot.
-                Default is None, which will use a default color scheme.
-            verbose (bool, optional): Whether to print debug output. Defaults to False.
+            df (pandas.DataFrame):
+                The DataFrame containing the data for the scatterplot.
+            xname (str):
+                The name of the column to be used for the x-axis.
+            yname (str):
+                The name of the column to be used for the y-axis.
+            xlabel_str (str, optional):
+                The label for the x-axis. Defaults to "Overall Capitalism 
+                (explanatory variable)".
+            ylabel_str (str, optional):
+                The label for the y-axis. Defaults to "World Bank Gini % (response 
+                variable)".
+            x_adj (str, optional):
+                Adjective to describe the x-axis variable (used in annotations). 
+                Defaults to "capitalist".
+            y_adj (str, optional):
+                Adjective to describe the y-axis variable (used in annotations). 
+                Defaults to "unequal".
+            title (str, optional):
+                The title for the plot. Defaults to '"Wealth inequality is huge in 
+                the capitalist societies"'.
+            idx_reference (str, optional):
+                The index label to use for a reference annotation. Defaults to 
+                "United States".
+            annot_reference (str, optional):
+                The reference text for the reference annotation. Defaults to "most 
+                evil".
+            aspect_ratio (float, optional):
+                The aspect ratio of the figure. Defaults to using a pre-defined 
+                value from self.facebook_aspect_ratio.
+            least_x_xytext (tuple[float, float], optional):
+                The position for the "least x" annotation relative to the data 
+                point. Defaults to (40, -10).
+            most_x_xytext (tuple[float, float], optional):
+                The position for the "most x" annotation relative to the data 
+                point. Defaults to (-150, 55).
+            least_y_xytext (tuple[float, float], optional):
+                The position for the "least y" annotation relative to the data 
+                point. Defaults to (-200, -10).
+            most_y_xytext (tuple[float, float], optional):
+                The position for the "most y" annotation relative to the data 
+                point. Defaults to (45, 0).
+            reference_xytext (tuple[float, float], optional):
+                The position for the reference point annotation relative to the 
+                data point. Defaults to (-75, 25).
+            color_list (list[str], optional):
+                A list of colors to use for the data points. Defaults to None 
+                (using default scatter plot colors).
+            verbose (bool, optional):
+                Whether to print debug output. Defaults to False.
         
         Returns:
             tuple: The figure and axis object for the generated scatter plot.
         """
-    
-        if aspect_ratio is None: aspect_ratio = self.facebook_aspect_ratio
+        
+        # Ensure the dataframe index is string-typed for annotations
+        assert pd.api.types.is_string_dtype(df.index) and all(
+            isinstance(x, str) for x in df.index
+        ), "df must have an index labeled with strings"
+        
+        # Set the aspect ratio if not provided
+        if aspect_ratio is None:
+            aspect_ratio = self.facebook_aspect_ratio
+        
+        # Calculate figure dimensions based on aspect ratio
         fig_width = 18
         fig_height = fig_width / aspect_ratio
+        
+        # Create figure and axis objects for the plot
         fig = plt.figure(figsize=(fig_width, fig_height))
         ax = fig.add_subplot(111, autoscale_on=True)
+        
+        # Define line properties for the regression line
         line_kws = dict(color='k', zorder=1, alpha=.25)
-    
+        
+        # Set scatter plot properties, including color list if provided
         if color_list is None: scatter_kws = dict(s=30, lw=.5, edgecolors='k', zorder=2)
         else: scatter_kws = dict(s=30, lw=.5, edgecolors='k', zorder=2, color=color_list)
+        
+        # Create the scatter plot with regression line
         merge_axes_subplot = sns.regplot(x=xname, y=yname, scatter=True, data=df, ax=ax,
                                          scatter_kws=scatter_kws, line_kws=line_kws)
-    
+        
+        # Append explanatory variable text to x-axis label if not present
         if not xlabel_str.endswith(' (explanatory variable)'): xlabel_str = f'{xlabel_str} (explanatory variable)'
+        
+        # Set the x-axis label
         xlabel_text = plt.xlabel(xlabel_str)
-    
+        
+        # Append response variable text to y-axis label if not present
         if not ylabel_str.endswith(' (response variable)'): ylabel_str = f'{ylabel_str} (response variable)'
+        
+        # Set the y-axis label
         ylabel_text = plt.ylabel(ylabel_str)
-    
+        
+        # Define common annotation properties
         kwargs = dict(
             textcoords='offset points', ha='left', va='bottom',
             bbox=dict(boxstyle='round,pad=0.5', fc='yellow', alpha=0.5),
             arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0')
         )
         
+        # Extract x and y data for annotations
         xdata = df[xname].values
         least_x = xdata.min()
         if verbose: print(f'least_x = {least_x}')
@@ -3330,14 +3365,13 @@ class NotebookUtilities(object):
         least_y = ydata.min()
         if verbose: print(f'least_y = {least_y}')
         
+        # Initialize flags to ensure each annotation is only added once
         least_x_tried = False
         most_x_tried = False
         least_y_tried = False
         most_y_tried = False
         
-        # Initialize all variables to False in a single line
-        least_x_tried = most_x_tried = least_y_tried = most_y_tried = False
-        
+        # Annotate specific data points based on their values
         for label, x, y in zip(df.index, xdata, ydata):
             if (x == least_x) and not least_x_tried:
                 annotation = plt.annotate(
@@ -3363,10 +3397,11 @@ class NotebookUtilities(object):
                 annotation = plt.annotate(
                     '{} ({})'.format(label, annot_reference), xy=(x, y), xytext=reference_xytext, **kwargs
                 )
-    
+        
+        # Set the plot title with specified title string
         title_obj = fig.suptitle(t=title, x=0.5, y=0.91)
         
-        # Annotate r squared value
+        # Annotate the r-squared value on the plot
         s_str = self.get_r_squared_value_latex(xdata, ydata)
         text_tuple = ax.text(0.75, 0.9, s_str, alpha=0.5, transform=ax.transAxes, fontsize='x-large')
         
