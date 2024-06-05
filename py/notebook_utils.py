@@ -164,7 +164,7 @@ class NotebookUtilities(object):
     @staticmethod
     def get_first_year_element(x):
         """
-        Extracts the first year element from a given string, potentially containing multiple date or year formats.
+        Extract the first year element from a given string, potentially containing multiple date or year formats.
         
         Parameters:
             x (str): The input string containing potential year information.
@@ -210,7 +210,7 @@ class NotebookUtilities(object):
     @staticmethod
     def format_timedelta(time_delta):
         """
-        Formats a time delta object to a string in the
+        Format a time delta object to a string in the
         format '0 sec', '30 sec', '1 min', '1:30', '2 min', etc.
         
         Parameters:
@@ -235,7 +235,7 @@ class NotebookUtilities(object):
     @staticmethod
     def conjunctify_nouns(noun_list=None, and_or='and', verbose=False):
         """
-        Concatenates a list of nouns into a grammatically correct string with specified conjunctions.
+        Concatenate a list of nouns into a grammatically correct string with specified conjunctions.
         
         Parameters:
             noun_list (list or str): A list of nouns to be concatenated.
@@ -257,17 +257,28 @@ class NotebookUtilities(object):
         if (noun_list is None): return ''
         if not isinstance(noun_list, list): noun_list = list(noun_list)
         
-        # If there are more than two nouns in the list, join the last two nouns with `and_or`
-        # Otherwise, join all of the nouns with `and_or`
+        # If there are more than two nouns in the list
         if (len(noun_list) > 2):
+            
+            # Create a noun string of the last element in the list
             last_noun_str = noun_list[-1]
+            
+            # Create a comma-delimited but-last string out of the rest of the elements
             but_last_nouns_str = ', '.join(noun_list[:-1])
+            
+            # Join the comma-delimited but-last string and the last noun string with `and_or`
             list_str = f', {and_or} '.join([but_last_nouns_str, last_noun_str])
+        
+        # If there are just two nouns in the list, join the nouns with `and_or`
         elif (len(noun_list) == 2): list_str = f' {and_or} '.join(noun_list)
+        
+        # If there is just one noun in the list, make that the returned string
         elif (len(noun_list) == 1): list_str = noun_list[0]
+        
+        # Otherwise, make a blank the returned string
         else: list_str = ''
         
-        # Print debug output if requested
+        # Print debug output if verbose
         if verbose: print(f'noun_list="{noun_list}", and_or="{and_or}", list_str="{list_str}"')
         
         # Return the conjuncted noun list
@@ -277,7 +288,7 @@ class NotebookUtilities(object):
     @staticmethod
     def get_jitter_list(ages_list):
         """
-        Generates a list of jitter values for plotting age data points with a scattered plot.
+        Generate a list of jitter values for plotting age data points with a scattered plot.
         
         Parameters:
             ages_list (list): A list of ages for which jitter values are generated.
@@ -314,7 +325,7 @@ class NotebookUtilities(object):
     @staticmethod
     def split_list_by_gap(ages_list, value_difference=1, verbose=False):
         """
-        Divides a list of ages into sublists based on gaps in the age sequence.
+        Divide a list of ages into sublists based on gaps in the age sequence.
         
         Parameters:
             ages_list (list of int or float): A list of ages to be split into sublists.
@@ -345,19 +356,45 @@ class NotebookUtilities(object):
     @staticmethod
     def count_ngrams(actions_list, highlighted_ngrams):
         """
-        Counts how many times a given sequence of elements occurs in a list.
+        Count the occurrences of a sequence of elements (n-grams) in a list.
+        
+        This static method traverses through the `actions_list` and counts 
+        how many times the sequence `highlighted_ngrams` appears. It is 
+        useful for analyzing the frequency of specific patterns within a 
+        list of actions or tokens.
         
         Parameters:
-            actions_list: A list of elements.
-            highlighted_ngrams: A sequence of elements to count.
+            actions_list (list):
+                A list of elements in which to count the occurrences of the n-gram.
+            highlighted_ngrams (list):
+                The sequence of elements (n-gram) to count occurrences of.
         
         Returns:
-            The number of times the given sequence of elements occurs in the list.
+            int:
+                The count of how many times `highlighted_ngrams` occurs in `actions_list`.
+        
+        Examples:
+            >>> actions = ['jump', 'run', 'jump', 'run', 'jump']
+            >>> ngrams = ['jump', 'run']
+            >>> SomeClass.count_ngrams(actions, ngrams)
+            2
         """
+        
+        # Initialize the count of n-gram occurrences
         count = 0
-        for i in range(len(actions_list) - len(highlighted_ngrams) + 1):
-            if (actions_list[i:i + len(highlighted_ngrams)] == highlighted_ngrams): count += 1
+        
+        # Calculate the range for the loop to avoid IndexErrors
+        range_limit = len(actions_list) - len(highlighted_ngrams) + 1
+        
+        # Loop over the actions_list at that window size to find occurrences
+        for i in range(range_limit):
             
+            # Check if the current slice matches the highlighted_ngrams
+            if actions_list[i:i + len(highlighted_ngrams)] == highlighted_ngrams:
+                
+                # Increment the count if a match is found
+                count += 1
+        
         return count
     
     
@@ -394,7 +431,7 @@ class NotebookUtilities(object):
     @staticmethod
     def get_shape(list_of_lists):
         """
-        Returns the shape of a list of lists, assuming the sublists are all of the same length.
+        Return the shape of a list of lists, assuming the sublists are all of the same length.
         
         Parameters:
             list_of_lists: A list of lists.
@@ -420,7 +457,7 @@ class NotebookUtilities(object):
     @staticmethod
     def split_list_by_exclusion(splitting_indices_list, excluded_indices_list=[]):
         """
-        Splits a list of row indices into a list of lists, where each inner list
+        Split a list of row indices into a list of lists, where each inner list
         contains a contiguous sequence of indices that are not in the excluded indices list.
         
         Parameters:
@@ -621,33 +658,57 @@ class NotebookUtilities(object):
         return name_similarities_df
     
     
-    def convert_strings_to_integers(self, sequence, alphabet_list=None):
+    @staticmethod
+    def convert_strings_to_integers(sequence, alphabet_list=None):
         """
-        Converts a sequence of strings to a sequence of integers.
+        Convert a sequence of strings into a sequence of integers and a 
+        mapping dictionary.
+        
+        This method converts each string in the input sequence to an 
+        integer based on its position in an alphabet list. If the alphabet 
+        list is not provided, it is generated from the unique elements of 
+        the sequence. The method returns a new sequence where each string 
+        is replaced by its corresponding integer, and a dictionary mapping 
+        strings to integers.
         
         Parameters:
-            sequence: A sequence of strings.
-            alphabet_list: A list of the unique elements of sequence,
-                           passed in to stabilize the order.
+            sequence (iterable):
+                A sequence of strings to be converted.
+            alphabet_list (list, optional):
+                A list of the unique elements of sequence, passed in to stabilize 
+                the order. If None (default), the alphabet is derived from the 
+                `sequence`.
         
         Returns:
-            A sequence of integers.
-            A string to integer map as dictionary.
+            tuple:
+                A tuple containing two elements:
+                - new_sequence (numpy.ndarray): An array of integers representing 
+                the converted sequence.
+                - string_to_integer_map (dict): A dictionary mapping the original 
+                strings to their corresponding integer codes.
+        
+        Note:
+            Strings not present in the alphabet are mapped to -1 in the 
+            dictionary.
+        
+        Examples:
+            >>> sequence = ['apple', 'banana', 'apple', 'cherry']
+            >>> new_sequence, mapping = nu.convert_strings_to_integers(sequence)
+            >>> new_sequence
+            array([0, 1, 0, 2])
+            >>> mapping
+            {'apple': 0, 'banana': 1, 'cherry': 2}
         """
-        if alphabet_list is None: alphabet_list = list(self.get_alphabet(sequence))
         
-        # Create a dictionary to map strings to integers
-        string_to_integer_map = {}
-    
-        # Create a new integer array with the same length as sequence but with no elements in it
-        new_sequence = np.zeros_like(sequence, dtype=int)
+        # Create an alphabet from the sequence if not provided
+        if alphabet_list is None:
+            alphabet_list = sorted(set(sequence))
         
-        for i, string in enumerate(sequence):
-            if string not in string_to_integer_map:
-                if string not in alphabet_list: string_to_integer_map[string] = -1
-                else: string_to_integer_map[string] = alphabet_list.index(string)
-            new_sequence[i] = string_to_integer_map[string]
-        new_sequence = new_sequence.astype(int)
+        # Initialize the string to integer map with an enumeration of the alphabet
+        string_to_integer_map = {string: index for index, string in enumerate(alphabet_list)}
+        
+        # Convert the sequence of strings to a sequence of integers, assigning -1 for unknown strings
+        new_sequence = np.array([string_to_integer_map.get(string, -1) for string in sequence])
         
         return new_sequence, string_to_integer_map
     
@@ -693,7 +754,7 @@ class NotebookUtilities(object):
     
     def get_turbulence(self, sequence, verbose=False):
         """
-        Computes turbulence for a given sequence, based on
+        Compute turbulence for a given sequence, based on
         [Elzinga & Liefbroer's 2007 definition](https://www.researchgate.net/publication/225402919_De-standardization_of_Family-Life_Trajectories_of_Young_Adults_A_Cross-National_Comparison_Using_Sequence_Analysis)
         which is also implemented in the [TraMineR](http://traminer.unige.ch/doc/seqST.html) sequence analysis library.
 
@@ -729,7 +790,7 @@ class NotebookUtilities(object):
     @staticmethod
     def replace_consecutive_elements(actions_list, element):
         """
-        Replaces consecutive elements in a list with a count of how many there are in a row.
+        Replace consecutive elements in a list with a count of how many there are in a row.
         
         Parameters:
             list1: A list of elements.
@@ -770,8 +831,9 @@ class NotebookUtilities(object):
     @staticmethod
     def count_swaps_to_perfect_order(ideal_list, compared_list, verbose=False):
         """
-        Counts the number of swaps required to make compared_list identical to ideal_list
-        without penalizing lists with repeated elements.
+        Count the number of swaps required to make a compared list 
+        identical to the ideal list without penalizing lists with repeated 
+        elements.
         
         Parameters:
             ideal_list (list): The list representing the ideal order.
@@ -800,9 +862,11 @@ class NotebookUtilities(object):
                 
                 # Find the correct position of the element in ideal_list
                 correct_index = ideal_indices[compared_list[i]]
-    
+                
                 # Swap the elements
                 compared_list[i], compared_list[correct_index] = compared_list[correct_index], compared_list[i]
+                
+                # Add that swap to the count
                 swaps += 1
     
         return swaps
@@ -814,7 +878,7 @@ class NotebookUtilities(object):
     @staticmethod
     def get_function_file_path(func):
         """
-        Returns the relative or absolute file path where the function is stored.
+        Return the relative or absolute file path where the function is stored.
 
         Parameters:
             func: A Python function.
@@ -839,7 +903,7 @@ class NotebookUtilities(object):
     @staticmethod
     def get_utility_file_functions(util_path=None):
         """
-        Extracts a set of function names already defined in the utility file.
+        Extract a set of function names already defined in the utility file.
         
         Parameters:
             util_path (str, optional): The path to the utility file. Default is '../py/notebook_utils.py'.
@@ -929,7 +993,7 @@ class NotebookUtilities(object):
     @staticmethod
     def get_top_level_folder_paths(folder_path, verbose=False):
         """
-        Gets all top-level folder paths within a given directory.
+        Get all top-level folder paths within a given directory.
         
         Parameters:
             folder_path (str): The path to the directory to scan for top-level folders.
@@ -972,7 +1036,7 @@ class NotebookUtilities(object):
     
     def get_notebook_functions_dictionary(self, github_folder=None):
         """
-        Gets a dictionary of all functions defined within notebooks in the github folder,
+        Get a dictionary of all functions defined within notebooks in the github folder,
         with the key being the function name,
         and the value being the count of how many times the function has been defined.
 
@@ -1005,7 +1069,7 @@ class NotebookUtilities(object):
     
     def get_notebook_functions_set(self, github_folder=None):
         """
-        Gets a set of all functions defined within notebooks in the github folder.
+        Get a set of all functions defined within notebooks in the github folder.
 
         Parameters:
             github_folder (str, optional): The path of the root folder of the GitHub repository containing the notebooks.
@@ -1077,7 +1141,7 @@ class NotebookUtilities(object):
 
     def show_dupl_fn_defs_search_string(self, util_path=None, github_folder=None):
         """
-        Identifies and reports duplicate function definitions in Jupyter notebooks and suggests how to consolidate them.
+        Identify and report duplicate function definitions in Jupyter notebooks and suggests how to consolidate them.
         
         Parameters:
             util_path (str, optional): The path to the utility file where refactored functions will be added.
@@ -1121,7 +1185,7 @@ class NotebookUtilities(object):
     
     def delete_ipynb_checkpoint_folders(self, github_folder=None):
         """
-        Deletes all '.ipynb_checkpoints' folders within the specified GitHub folder and its subdirectories.
+        Delete all dot-ipynb_checkpoints folders within the specified GitHub folder and its subdirectories.
         
         Parameters:
             github_folder (str, optional): The path to the GitHub folder containing the '.ipynb_checkpoints' folders.
@@ -1130,17 +1194,15 @@ class NotebookUtilities(object):
         Returns:
             None
         """
+        import shutil
         
         # Set the GitHub folder path if not provided
         if github_folder is None: github_folder = self.github_folder
         
-        # Import required libraries
-        import shutil
-        
         # Iterate over all subdirectories within the github_folder
         for sub_directory, directories_list, files_list in walk(github_folder):
             
-            # Check if the directory 'ipynb_checkpoints' exists in the current subdirectory
+            # Check if the directory '.ipynb_checkpoints' exists in the current subdirectory
             if '.ipynb_checkpoints' in directories_list:
                 
                 # Construct the full path to the '.ipynb_checkpoints' folder
@@ -1214,7 +1276,7 @@ class NotebookUtilities(object):
     
     def csv_exists(self, csv_name, folder_path=None, verbose=False):
         """
-        Checks if a CSV file exists in the specified folder or the default CSV folder.
+        Check if a CSV file exists in the specified folder or the default CSV folder.
         
         Parameters:
             csv_name (str): The name of the CSV file (with or without the '.csv' extension).
@@ -1233,7 +1295,7 @@ class NotebookUtilities(object):
         if csv_name.endswith('.csv'): csv_path = osp.join(folder_path, csv_name)
         else: csv_path = osp.join(folder_path, f'{csv_name}.csv')
         
-        # Optionally print the absolute path to the CSV file
+        # Optionally print the absolute path to the CSV file (verbose)
         if verbose: print(osp.abspath(csv_path), flush=True)
         
         # Check if the CSV file exists
@@ -1242,7 +1304,7 @@ class NotebookUtilities(object):
     
     def load_csv(self, csv_name=None, folder_path=None):
         """
-        Loads a CSV file from the specified folder or the default CSV folder,
+        Load a CSV file from the specified folder or the default CSV folder,
         returning the data as a pandas DataFrame.
         
         Parameters:
@@ -1278,7 +1340,7 @@ class NotebookUtilities(object):
     
     def pickle_exists(self, pickle_name: str) -> bool:
         """
-        Checks if a pickle file exists.
+        Check if a pickle file exists.
 
         Parameters:
             pickle_name (str): The name of the pickle file.
@@ -1342,7 +1404,7 @@ class NotebookUtilities(object):
     
     def load_data_frames(self, verbose=True, **kwargs):
         """
-        Loads Pandas DataFrames from pickle or CSV files, potentially switching between folders if necessary.
+        Load Pandas DataFrames from pickle or CSV files, potentially switching between folders if necessary.
         
         Parameters:
             **kwargs (dict): Keyword arguments specifying the names of the data frames to load.
@@ -1410,7 +1472,7 @@ class NotebookUtilities(object):
     
     def save_data_frames(self, include_index=False, verbose=True, **kwargs):
         """
-        Saves data frames to CSV files.
+        Save data frames to CSV files.
 
         Parameters:
             include_index: Whether to include the index in the CSV files.
@@ -1473,7 +1535,7 @@ class NotebookUtilities(object):
     @staticmethod
     def get_dir_tree(module_name, contains_str=None, not_contains_str=None, verbose=False):
         """
-        Gets a list of all attributes in a given module.
+        Get a list of all attributes in a given module.
         
         Parameters::
             module_name (str): The name of the module to get the directory list for.
@@ -1633,13 +1695,13 @@ class NotebookUtilities(object):
         self, modules_list: Optional[List[str]] = None, verbose: bool = False
     ) -> None:
         """
-        Updates the list of modules that are installed.
-
+        Update the list of modules that are installed.
+        
         Parameters:
             modules_list (Optional[List[str]], optional): The list of modules to update. If None,
                 the list of installed modules will be used. Defaults to None.
             verbose (bool, optional): Whether to print status messages. Defaults to False.
-
+        
         Returns:
             None
         """
@@ -1652,29 +1714,62 @@ class NotebookUtilities(object):
         if verbose: print('Updated modules list to {}'.format(self.modules_list), flush=True)
     
     
-    def ensure_module_installed(self, module_name: str, upgrade: bool = False, verbose: bool = True) -> None:
+    def ensure_module_installed(self, module_name, upgrade=False, update_first=False, verbose=True):
         """
-        Checks if a module is installed and installs it if it is not.
+        Ensure a Python module is installed, upgrading it and/or updating the modules list first if specified.
+        
+        This method checks if a specified Python module is in the 
+        `modules_list`. If the module is not found, it installs the module 
+        using pip, with options to upgrade the module to the latest 
+        version, update the modules list before checking, and control the 
+        verbosity of the output during the installation process.
         
         Parameters:
-            module_name (str): The name of the module to check for.
-            upgrade (bool, optional): Whether to upgrade the module if it is already installed.
-                Defaults to False.
-            verbose (bool, optional): Whether to print status messages. Defaults to True.
+            module_name (str):
+                The name of the Python module to check and potentially install.
+            upgrade (bool, optional):
+                Whether to upgrade the module to the latest version if it is 
+                already installed. Defaults to False.
+            update_first (bool, optional):
+                Whether to update the modules list before checking if the module 
+                is installed. Defaults to False.
+            verbose (bool, optional):
+                Whether to print status messages. Defaults to True.
         
         Returns:
             None
         """
-
+        
+        # Update the internal list of modules if requested
+        if update_first:
+            self.update_modules_list(verbose=False)
+        
+        # Check if the module is not in the current list of installed modules
         if module_name not in self.modules_list:
+            
+            # Construct the pip command string for installation/upgrade
             command_str = f'{self.pip_command_str} install {module_name}'
-            if upgrade: command_str += ' --upgrade'
-            if verbose: print(command_str, flush=True)
-            else: command_str += ' --quiet'
-            output_str = subprocess.check_output(command_str.split(' '))
+            
+            # Append the upgrade flag to the command if needed
+            if upgrade:
+                command_str += ' --upgrade'
+            
+            # Print the command if status messages requested, otherwise add quiet flag
             if verbose:
-                for line_str in output_str.splitlines(): print(line_str.decode(), flush=True)
-            self.update_modules_list(verbose=verbose)
+                print(command_str, flush=True)
+            else:
+                command_str += ' --quiet'
+            
+            # Execute the pip command and capture the output
+            output_str = subprocess.check_output(command_str.split(' '))
+            
+            # Print the output if status messages requested
+            if verbose:
+                for line_str in output_str.splitlines():
+                    print(line_str.decode(), flush=True)
+            
+            # Update the internal list of installed modules after installation
+            self.update_modules_list(verbose=False)
     
     
     @staticmethod
@@ -1701,8 +1796,6 @@ class NotebookUtilities(object):
             singular present tense). The function also assumes that comments don't end with 
             punctuation and will ignore comments containing the word 'verbose'.
         """
-        
-        # Import required libraries not already imported for the class
         import roman
         
         # Check if the function object is any kind of function or method
@@ -1717,22 +1810,23 @@ class NotebookUtilities(object):
             
             # Split the source code to separate docstring and function body
             parts_list = re.split('"""', source_code, 0)
-            
-            # Clean the docstring part so that only the top one-sentence paragraph is included
-            docstring = re.sub(r'\s+', ' ', parts_list[1].strip().split('.')[0])
-            
-            # Add this description header (with prefix) to the list
-            comments_list.append(f'{docstring_prefix} {docstring.lower()} is as follows:')
-            
-            # Extract the comments which are not debug statements and add them to the list (prefixed with Roman numerals)
-            for i, comment_str in enumerate(
-                [comment_str for comment_str in comment_regex.findall(source_code) if comment_str and ('verbose' not in comment_str)]
-            ):
-                comments_list.append(f'    {roman.toRoman(i+1).lower()}. {comment_str}.')
-            
-            # If there are any comments in the list, print its procedure description and comments on their own lines
-            if len(comments_list) > 1:
-                print('\n'.join(comments_list))
+            if parts_list:
+                
+                # Clean the docstring part so that only the top one-sentence paragraph is included
+                docstring = re.sub(r'\s+', ' ', parts_list[1].strip().split('.')[0])
+                
+                # Add this description header (with prefix) to the list
+                comments_list.append(f'{docstring_prefix} {docstring.lower()} is as follows:')
+                
+                # Extract the comments which are not debug statements and add them to the list (prefixed with Roman numerals)
+                for i, comment_str in enumerate(
+                    [comment_str for comment_str in comment_regex.findall(source_code) if comment_str and ('verbose' not in comment_str)]
+                ):
+                    comments_list.append(f'    {roman.toRoman(i+1).lower()}. {comment_str}.')
+                
+                # If there are any comments in the list, print its procedure description and comments on their own lines
+                if len(comments_list) > 1:
+                    print('\n'.join(comments_list))
     
     
     ### URL and Soup Functions ###
@@ -1741,7 +1835,7 @@ class NotebookUtilities(object):
     @staticmethod
     def get_filename_from_url(url, verbose=False):
         """
-        Extracts the filename from a given URL.
+        Extract the filename from a given URL.
         
         Parameters:
             url (str): The URL from which to extract the filename.
@@ -1763,7 +1857,7 @@ class NotebookUtilities(object):
     @staticmethod
     def get_style_column(tag_obj, verbose=False):
         """
-        Extracts the style column from a given Wikipedia infobox BeautifulSoup'd
+        Extract the style column from a given Wikipedia infobox BeautifulSoup'd
         tag object and returns the style column tag object.
     
         Parameters:
@@ -1797,7 +1891,7 @@ class NotebookUtilities(object):
     @staticmethod
     def get_td_parent(tag_obj, verbose=False):
         """
-        Finds and returns the closest ancestor of the given BeautifulSoup tag object that is a 'td' tag.
+        Find and return the closest ancestor of the given BeautifulSoup tag object that is a 'td' tag.
     
         Parameters:
             tag_obj (bs4.element.Tag): The BeautifulSoup tag object whose 'td' ancestor needs to be found.
@@ -1819,7 +1913,7 @@ class NotebookUtilities(object):
     
     def download_file(self, url, download_dir=None, exist_ok=False, verbose=False):
         """
-        Downloads a file from the internet.
+        Download a file from the internet.
 
         Parameters:
             url: The URL of the file to download.
@@ -1856,7 +1950,7 @@ class NotebookUtilities(object):
     
     def get_page_soup(self, page_url_or_filepath, driver=None, verbose=False):
         """
-        Gets the BeautifulSoup soup object for a given page URL or filepath.
+        Get the BeautifulSoup soup object for a given page URL or filepath.
 
         Parameters:
             page_url_or_filepath (str): The URL or filepath of the page to get the soup object for.
@@ -1894,7 +1988,7 @@ class NotebookUtilities(object):
     
     def get_page_tables(self, tables_url_or_filepath, verbose=True):
         """
-        Retrieves tables from a given URL or file path and returns a list of DataFrames.
+        Retrieve tables from a given URL or file path and returns a list of DataFrames.
     
         Parameters:
             tables_url_or_filepath (str): The URL or file path of the page containing tables.
@@ -1953,7 +2047,7 @@ class NotebookUtilities(object):
     
     def get_wiki_tables(self, tables_url_or_filepath, verbose=True):
         """
-        Gets a list of DataFrames from Wikipedia tables.
+        Get a list of DataFrames from Wikipedia tables.
         
         Parameters:
             tables_url_or_filepath: The URL or filepath to the Wikipedia page containing the tables.
@@ -1995,7 +2089,7 @@ class NotebookUtilities(object):
     
     def get_wiki_infobox_data_frame(self, page_titles_list, verbose=True):
         """
-        Gets a DataFrame of the key/value pairs from the infobox of a Wikipedia biographical entry.
+        Get a DataFrame of the key/value pairs from the infobox of a Wikipedia biographical entry.
 
         Parameters:
             page_titles_list: A list of titles of the Wikipedia pages containing the infoboxes.
@@ -2054,7 +2148,7 @@ class NotebookUtilities(object):
     @staticmethod
     def get_inf_nan_mask(X_train, y_train):
         """
-        Returns a mask indicating which elements of X_train and y_train are not inf or nan.
+        Return a mask indicating which elements of X_train and y_train are not inf or nan.
         
         Parameters:
             X_train: A NumPy array of numbers.
@@ -2252,7 +2346,11 @@ class NotebookUtilities(object):
         """
         
         # Ensure that all columns are in the data frame
-        columns_list = list(set(df.columns).intersection(set(columns_list)))
+        columns_list = sorted(set(df.columns).intersection(set(columns_list)))
+        
+        # Check that there is only one unique column value for all our columns
+        mask_series = (df[columns_list].apply(Series.nunique, axis='columns') <= 1)
+        assert mask_series.all(), f"\n\nYou have more than one {new_column_name} in your columns:\n{df[~mask_series][columns_list]}"
         
         # Create a mask series indicating rows with one unique value across the specified columns
         mask_series = (df[columns_list].apply(Series.nunique, axis='columns') == 1)
@@ -2623,83 +2721,6 @@ class NotebookUtilities(object):
         return split_dfs
     
     
-    ### LLM Functions ###
-    
-    
-    def download_lora_model(self, verbose=False):
-        """
-        Download the LoRA model file from a specified URL and save it to the local file system.
-        
-        Parameters:
-            verbose (bool, optional): Whether to print debug information. Defaults to False.
-        
-        Returns:
-            None
-        """
-        
-        # Check if the local file already exists
-        if not osp.exists(self.lora_path):
-            
-            # Construct the download URL
-            download_url = f'https://the-eye.eu/public/AI/models/downloadnomic-ai/gpt4all/{osp.basename(self.lora_path)}'
-            
-            # Download the model file from the URL
-            import requests
-            response = requests.get(download_url)
-            
-            # Create the necessary directories if they don't exist
-            makedirs(osp.dirname(self.lora_path), exist_ok=True)
-            
-            # Save the downloaded model file to disk
-            with open(self.lora_path, 'wb') as f: f.write(response.content)
-            
-            # Print a message if verbose mode is enabled
-            if verbose: print(f'LoRA model downloaded and saved to: {self.lora_path}')
-        
-        # Print a message if verbose mode is enabled and the file already exists
-        elif verbose: print(f'LoRA model already exists at: {self.lora_path}. Skipping download.')
-    
-    
-    def convert_lora_model_to_gpt4all(self, verbose=False):
-        """
-        Converts a LoRA model to a GPT-4all model.
-        
-        Parameters:
-            verbose (bool, optional): Whether to print debug output. Defaults to False.
-        
-        Raises:
-            OSError: If the GPT-4all model path does not exist.
-            subprocess.CalledProcessError: If the conversion process fails.
-        """
-        
-        # Check if the GPT-4-All model path exists
-        if not osp.exists(self.gpt4all_model_path):
-            
-            # Check if the LoRA model path exists
-            if not osp.exists(self.lora_path): raise FileNotFoundError(f"LoRA model path '{self.lora_path}' does not exist.")
-            
-            # Check if the PyLLamaC++ converter executable exists
-            converter_path = osp.abspath(osp.join(self.scripts_folder, 'pyllamacpp-convert-gpt4all.exe'))
-            if not osp.exists(converter_path): raise FileNotFoundError(f"PyLLamaC++ converter executable '{converter_path}' does not exist.")
-            
-            # Check if the tokenizer model file exists
-            llama_file = osp.abspath(osp.join(llama_folder, 'tokenizer.model'))
-            if not osp.exists(llama_file): raise FileNotFoundError(f"Llama tokenizer model file '{llama_file}' does not exist.")
-            
-            # Construct the conversion command
-            command_str = f'{converter_path} {self.lora_path} {llama_file} {self.gpt4all_model_path}'
-            
-            # Print verbose output if requested
-            if verbose: print(command_str, flush=True)
-            
-            # Execute the conversion process
-            output_str = subprocess.check_output(command_str.split(' '))
-            
-            # Print verbose conversion output if requested
-            if verbose:
-                for line_str in output_str.splitlines(): print(line_str.decode(), flush=True)
-    
-    
     ### 3D Point Functions ###
     
     
@@ -2779,7 +2800,7 @@ class NotebookUtilities(object):
     
     def get_nearest_neighbor(self, base_point, neighbors_list):
         """
-        Gets the point nearest in Euclidean distance between two 2D or 3D points,
+        Get the point nearest in Euclidean distance between two 2D or 3D points,
         the base_point and an item from the neighbors_list.
         
         Parameters:
@@ -2831,7 +2852,7 @@ class NotebookUtilities(object):
     @staticmethod
     def get_random_subdictionary(super_dict, n=5):
         """
-        Extracts a random subdictionary with a specified number of key-value pairs from a given superdictionary.
+        Extract a random subdictionary with a specified number of key-value pairs from a given superdictionary.
         
         Parameters:
             super_dict (dict): The dictionary from which to extract a random subdictionary.
@@ -2864,22 +2885,66 @@ class NotebookUtilities(object):
     
     @staticmethod
     def color_distance_from(from_color, to_rgb_tuple):
+        """
+        Calculate the Euclidean distance between two colors in RGB space.
+        
+        This function computes the color distance between the RGB 
+        values of a specified color and another RGB tuple. It supports 
+        colors specified as 'white', 'black', or a hexadecimal string.
+        
+        Parameters:
+            from_color (str):
+                The starting color, which can be 'white', 'black', or a 
+                hexadecimal string.
+            to_rgb_tuple (tuple):
+                The target RGB tuple (length 3) representing the color to compare 
+                to.
+        
+        Returns:
+            float:
+                The Euclidean distance between the from_color and the to_rgb_tuple 
+                in RGB space.
+        
+        Raises:
+            ValueError:
+                If the from_color is not 'white', 'black', or a valid hexadecimal 
+                color string.
+        
+        Examples:
+            >>> nu.color_distance_from('white', (255, 0, 0))
+            360.62445840513925
+        
+            >>> nu.color_distance_from('#0000FF', (255, 0, 0))
+            360.62445840513925
+        """
         from math import sqrt
+        
+        # If from_color is 'white', compute the Euclidean distance from white (255, 255, 255)
         if from_color == 'white':
             green_diff = 255 - to_rgb_tuple[0]
             blue_diff = 255 - to_rgb_tuple[1]
             red_diff = 255 - to_rgb_tuple[2]
             color_distance = sqrt(green_diff**2 + blue_diff**2 + red_diff**2)
+        
+        # If from_color is 'black', compute the Euclidean distance from black (0, 0, 0)
         elif from_color == 'black':
             color_distance = sqrt(to_rgb_tuple[0]**2 + to_rgb_tuple[1]**2 + to_rgb_tuple[2]**2)
+        
+        # Otherwise, treat from_color as a hexadecimal string
         else:
             import webcolors
-            rbg_tuple = tuple(webcolors.hex_to_rgb(from_color))
-            green_diff = rbg_tuple[0] - to_rgb_tuple[0]
-            blue_diff = rbg_tuple[1] - to_rgb_tuple[1]
-            red_diff = rbg_tuple[2] - to_rgb_tuple[2]
-            color_distance = sqrt(green_diff**2 + blue_diff**2 + red_diff**2)
-
+            try:
+                rgb_tuple = tuple(webcolors.hex_to_rgb(from_color))
+                green_diff = rgb_tuple[0] - to_rgb_tuple[0]
+                blue_diff = rgb_tuple[1] - to_rgb_tuple[1]
+                red_diff = rgb_tuple[2] - to_rgb_tuple[2]
+                
+                # And compute the Euclidean distance from its RGB conversion
+                color_distance = sqrt(green_diff**2 + blue_diff**2 + red_diff**2)
+                
+            except ValueError as e:
+                raise ValueError(f"Invalid color value: {from_color}") from e
+        
         return color_distance
     
     
@@ -2933,7 +2998,7 @@ class NotebookUtilities(object):
     @staticmethod
     def plot_line_with_error_bars(df, xname, xlabel, xtick_text_fn, yname, ylabel, ytick_text_fn, title):
         """
-        Creates a line plot with error bars to visualize the mean and standard deviation of a numerical variable
+        Create a line plot with error bars to visualize the mean and standard deviation of a numerical variable
         grouped by another categorical variable.
         
         Parameters:
@@ -2991,7 +3056,7 @@ class NotebookUtilities(object):
     @staticmethod
     def plot_histogram(df, xname, xlabel, title, xtick_text_fn=None, ylabel=None, xticks_are_temporal=False, ax=None, color=None, bins=100):
         """
-        Plots a histogram of a DataFrame column.
+        Plot a histogram of a DataFrame column.
         
         Parameters:
             df: A Pandas DataFrame.
@@ -3073,7 +3138,7 @@ class NotebookUtilities(object):
         is_y_temporal=True
     ):    
         """
-        Creates a grouped box plot visualization to compare the distribution of a numerical variable across different groups.
+        Create a grouped box plot visualization to compare the distribution of a numerical variable across different groups.
         
         Parameters:
             transformable_df (pandas.DataFrame): DataFrame containing the data to be plotted.
@@ -3550,7 +3615,7 @@ class NotebookUtilities(object):
     
     def plot_sequence(self, sequence, highlighted_ngrams=[], color_dict=None, suptitle=None, first_element='SESSION_START', last_element='SESSION_END', alphabet_list=None, verbose=False):
         """
-        Creates a standard sequence plot where each element corresponds to a position on the y-axis.
+        Create a standard sequence plot where each element corresponds to a position on the y-axis.
         The optional highlighted_ngrams parameter can be one or more n-grams to be outlined in a red box.
         
         Parameters:
@@ -3724,7 +3789,7 @@ class NotebookUtilities(object):
     
     def plot_sequences(self, sequences, gap=True, color_dict=None):
         """
-        Creates a scatter-style sequence plot for a collection of sequences.
+        Create a scatter-style sequence plot for a collection of sequences.
         
         Parameters:
             sequences (list): A list of sequences to plot.
