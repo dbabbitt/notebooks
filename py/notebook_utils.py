@@ -214,19 +214,33 @@ class NotebookUtilities(object):
         format '0 sec', '30 sec', '1 min', '1:30', '2 min', etc.
         
         Parameters:
-          time_delta: A time delta object.
+          time_delta: A time delta object representing a duration.
         
         Returns:
-          A string in the format '0 sec', '30 sec', '1 min',
-          '1:30', '2 min', etc.
+            A string representing the formatted time delta in a human-readable 
+            format: '0 sec', '30 sec', '1 min', '1:30', '2 min', etc.
         """
+        
+        # Extract total seconds from the time delta object
         seconds = time_delta.total_seconds()
+        
+        # Calculate the number of whole minutes
         minutes = int(seconds // 60)
+        
+        # Calculate the remaining seconds after accounting for minutes
         seconds = int(seconds % 60)
         
-        if minutes == 0: return f'{seconds} sec'
-        elif seconds > 0: return f'{minutes}:{seconds:02}'
-        else: return f'{minutes} min'
+        # Format the output string for zero minutes, showing only seconds
+        if minutes == 0:
+            return f"{seconds} sec"
+        
+        # If there are minutes and seconds, return in 'min:sec' format
+        elif seconds > 0:
+            return f"{minutes}:{seconds:02}"
+        
+        # If there are only minutes, return in 'min' format
+        else:
+            return f"{minutes} min"
     
     
     ### List Functions ###
