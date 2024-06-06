@@ -829,20 +829,6 @@ class NotebookUtilities(object):
     
     
     @staticmethod
-    def get_clusters_dictionary(tuples_list, tuple_idx=-1, cluster_fn=lambda x: x, verbose=False):
-        
-        # Separate tuples based on cluster ID (tuple index value)
-        clusters_dict = {}
-        for cluster_tuple in tuples_list:
-            cluster_value = cluster_fn(cluster_tuple[tuple_idx])
-            if cluster_value not in clusters_dict: clusters_dict[cluster_value] = []
-            clusters_dict[cluster_value].append(cluster_tuple)
-        if verbose: print(f'\n\nclusters_dict: {clusters_dict}')
-        
-        return clusters_dict
-    
-    
-    @staticmethod
     def count_swaps_to_perfect_order(ideal_list, compared_list, verbose=False):
         """
         Count the number of swaps required to make a compared list 
@@ -1787,7 +1773,7 @@ class NotebookUtilities(object):
     
     
     @staticmethod
-    def describe_procedure(function_obj, docstring_prefix='The procedure to'):
+    def describe_procedure(function_obj, docstring_prefix='The procedure to', verbose=False):
         """
         Generate a step-by-step description of how to perform a function by hand from its comments.
         
@@ -1800,6 +1786,8 @@ class NotebookUtilities(object):
                 The function object whose procedure needs to be described.
             docstring_prefix (str, optional):
                 A prefix to prepend to the procedure description. Default is 'The procedure to'.
+            verbose (bool, optional):
+                Whether to print debug messages. Defaults to False.
         
         Returns:
             None
@@ -1824,7 +1812,8 @@ class NotebookUtilities(object):
             
             # Split the source code to separate docstring and function body
             parts_list = re.split('"""', source_code, 0)
-            if parts_list:
+            if verbose: print(len(parts_list), parts_list)
+            if len(parts_list) > 1:
                 
                 # Clean the docstring part so that only the top one-sentence paragraph is included
                 docstring = re.sub(r'\s+', ' ', parts_list[1].strip().split('.')[0])
@@ -2783,19 +2772,36 @@ class NotebookUtilities(object):
     @staticmethod
     def get_relative_position(second_point, first_point=None):
         """
-        Calculate the absolute position of a point relative to another point.
+        Calculate the position of a point relative to another point.
+        
+        This static method calculates the relative position of a second 
+        point (`second_point`) based on a reference point (`first_point`). 
+        If `first_point` is not provided, it assumes the origin (0, 0, 0) 
+        by calling a separate function `get_coordinates` (assumed to be 
+        implemented elsewhere).
         
         Parameters:
-            second_point (tuple): The coordinates of the second point.
-            first_point (tuple, optional): The coordinates of the first point. If not specified,
-                the origin is retrieved from get_coordinates.
+            second_point (tuple):
+                A tuple containing the x, y, and z coordinates of the second point.
+            first_point (tuple, optional):
+                A tuple containing the x, y, and z coordinates of the reference 
+                point. If not specified, the origin is retrieved from 
+                get_coordinates.
         
         Returns:
-            tuple: The absolute coordinates of the second point.
+            tuple:
+                A tuple containing the x, y, and z coordinates of the second point 
+                relative to the reference point.
         """
+        
+        # Retrieve the coordinates for both points, defaulting to the origin for the first point if not provided
         x1, x2, y1, y2, z1, z2 = self.get_coordinates(second_point, first_point=first_point)
-    
-        return (round(x1 + x2, 1), round(y1 + y2, 1), round(z1 + z2, 1))
+        
+        # Calculate the relative position by adding corresponding coordinates and rounding to one decimal place
+        relative_position = (round(x1 + x2, 1), round(y1 + y2, 1), round(z1 + z2, 1))
+        
+        # Return the calculated relative position as a tuple
+        return relative_position
     
     
     def get_nearest_neighbor(self, base_point, neighbors_list):
@@ -3576,26 +3582,58 @@ class NotebookUtilities(object):
     
     @staticmethod
     def get_color_cycled_list(alphabet_list, color_dict, verbose=False):
-        if verbose: print(f'alphabet_list = {alphabet_list}')
-        if verbose: print(f'color_dict = {color_dict}')
+        """
+        Get a list of colors cycled from the given color dictionary and the default color cycle.
         
-        # Match the colors with the color cycle and color dictionary
+        This method matches each alphabet in the input list with a color 
+        from the input color dictionary. If a color is not specified for 
+        an alphabet, it assigns the next color from the matplotlib color 
+        cycle.
+        
+        Parameters:
+            alphabet_list (list of str):
+                A list of keys for which colors are to be matched.
+            color_dict (dict):
+                A dictionary mapping elements from the alphabet to desired colors.
+            verbose (bool, optional):
+                If True, print debug information. Default is False.
+        
+        Returns:
+            list of str
+                A list of colors, where the length matches the alphabet list. 
+                Colors are assigned based on the color dictionary and the 
+                Matplotlib color cycle for missing entries.
+        """
+        
+        # Print the input alphabet list and color dictionary if verbose mode is on
+        if verbose:
+            print(f'alphabet_list = {alphabet_list}')
+            print(f'color_dict = {color_dict}')
+        
+        # Import the cycle iterator from itertools
         from itertools import cycle
         
-        # Get the color cycle from rcParams
+        # Get the color cycle from matplotlib's rcParams
         prop_cycle = plt.rcParams['axes.prop_cycle']
         colors = cycle(prop_cycle.by_key()['color'])
         
+        # Initialize an empty list to store the resulting colors
         colors_list = []
-        for key in alphabet_list:
-            value = color_dict.get(key)
-            
-            # Get the next color in the cycle if missing from the dictionary
-            if (value is None): value = next(colors)
-            
-            colors_list.append(value)
-        if verbose: print(f'colors_list = {colors_list}')
         
+        # Iterate over each key in the alphabet list
+        for key in alphabet_list:
+            
+            # Assign color from dictionary if available, otherwise use next color from the cycle
+            value = color_dict.get(key, next(colors))
+            
+            # Append the color to the colors list
+            colors_list.append(value)
+        
+        # Print the resulting colors list if verbose mode is on
+        if verbose:
+            print(f'colors_list = {colors_list}')
+        
+        # Return the final list of colors
         return colors_list
     
     
