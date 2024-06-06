@@ -2722,31 +2722,49 @@ class NotebookUtilities(object):
     @staticmethod
     def get_coordinates(second_point, first_point=None):
         """
-        Get the coordinates of two 3D points.
+        Extract and return the 3D coordinates of two points from provided strings.
+        
+        This static method parses two strings representing 3D point 
+        coordinates (`second_point` and `first_point`). If `first_point` 
+        is not provided, it assumes the origin (0, 0, 0) as the first 
+        point.
         
         Parameters:
-            second_point (str): The coordinates of the second point as a string.
-            first_point (str, optional): The coordinates of the first point as a string. If not provided, the
-                default values (0, 0, 0) will be used.
+            second_point (str):
+                A string containing the x, y, and z coordinates of the second 
+                point separated by commas (e.g., "(-1.2,3.4,5.6)").
+            first_point (str, optional):
+                A string containing the x, y, and z coordinates of the first point 
+                separated by commas (e.g., "(-1.2,3.4,5.6)"). Defaults to None 
+                (origin).
         
         Returns:
-            tuple of float: The coordinates of the two points.
-        
+            tuple of float
+                A tuple containing six floating-point values representing the x, 
+                y, and z coordinates of the first point followed by the x, y, and 
+                z coordinates of the second point.
         """
+        
+        # Handle the case where the first point is not provided (use origin)
         if first_point is None:
-            x1 = 0.0  # The x-coordinate of the first point
-            y1 = 0.0  # The y-coordinate of the first point
-            z1 = 0.0  # The z-coordinate of the first point
+            x1 = 0.0  # The x-coordinate of the first point (origin)
+            y1 = 0.0  # The y-coordinate of the first point (origin)
+            z1 = 0.0  # The z-coordinate of the first point (origin)
+        
+        # Or, if provided, parse the coordinates from the string
         else:
             location_tuple = eval(first_point)
             x1 = location_tuple[0]  # The x-coordinate of the first point
             y1 = location_tuple[1]  # The y-coordinate of the first point
             z1 = location_tuple[2]  # The z-coordinate of the first point
+        
+        # Parse the coordinates of the second point from the string
         location_tuple = eval(second_point)
         x2 = location_tuple[0]  # The x-coordinate of the second point
         y2 = location_tuple[1]  # The y-coordinate of the second point
         z2 = location_tuple[2]  # The z-coordinate of the second point
-    
+        
+        # Return the coordinates of the two points
         return x1, x2, y1, y2, z1, z2
     
     
