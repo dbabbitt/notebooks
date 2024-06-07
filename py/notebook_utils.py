@@ -2482,21 +2482,21 @@ class NotebookUtilities(object):
         # Ensure that all columns are in the data frame
         columns_list = sorted(set(df.columns).intersection(set(columns_list)))
         
-        # Check that there is only one unique column value for all our columns
-        mask_series = (df[columns_list].apply(Series.nunique, axis='columns') <= 1)
+        # Create a mask series indicating rows with one unique value across the specified columns
+        singular_series = (df[columns_list].apply(Series.nunique, axis='columns') == 1)
+        
+        # Check that there is less than two unique column value for all our columns
+        mask_series = singular_series | (df[columns_list].apply(Series.nunique, axis='columns') < 1)
         assert mask_series.all(), f"\n\nYou have more than one {new_column_name} in your columns:\n{df[~mask_series][columns_list]}"
         
-        # Create a mask series indicating rows with one unique value across the specified columns
-        mask_series = (df[columns_list].apply(Series.nunique, axis='columns') == 1)
-        
         # Replace non-unique or missing values with NaN
-        df.loc[~mask_series, new_column_name] = nan
+        df.loc[~singular_series, new_column_name] = nan
         
         # Define a function to extract the first valid value in each row
         f = lambda srs: srs[srs.first_valid_index()]
         
         # For rows with identical values in specified columns, set the new column to the modal value
-        df.loc[mask_series, new_column_name] = df[mask_series][columns_list].apply(f, axis='columns')
+        df.loc[singular_series, new_column_name] = df[singular_series][columns_list].apply(f, axis='columns')
     
         return df
     
