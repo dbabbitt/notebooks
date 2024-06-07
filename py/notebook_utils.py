@@ -948,6 +948,167 @@ class NotebookUtilities(object):
         return swaps
     
     
+    @staticmethod
+    def get_numbered_text(numbering_format, current_number_dict={'1': 1, 'A': 1, 'a': 1, 'i': 1, 'I': 1}):
+        """
+        Apply numbering based on a format string and a current number.
+        
+        This static method takes a numbering format string 
+        (`numbering_format`) and a current number dictionary 
+        (`current_number_dict`) as inputs. It then parses the format 
+        string to identify numbering placeholders (letters 'A', 'a', '1', 
+        'I', or 'i') and replaces them with the corresponding numbered 
+        representation based on the current number of that placeholder.
+        
+        The function supports the following numbering formats:
+        - '1': Sequential numbering, starting from 1 (e.g., 'Step 1' 
+        becomes 'Step 2').
+        - 'A': Uppercase alphabetic numbering, starting from A (e.g., 
+        'Part A' becomes 'Part B').
+        - 'a': Lowercase alphabetic numbering, starting from a (e.g., 
+        'Section a' becomes 'Section b').
+        - 'i': Roman numeral numbering, starting from i (e.g., 'Point i' 
+        becomes 'Point ii').
+        - 'I': Roman numeral numbering, starting from I (e.g., 'Epoch I' 
+        becomes 'Epoch II').
+        
+        Parameters:
+            numbering_format (str):
+                The numbering format string, which should contain one of the 
+                following characters: 'A', '1', 'a', 'I', or 'i'. These characters 
+                represent the place in the string where the current number should 
+                be inserted, and their case and type represent the format that the 
+                number should be in.
+            current_number_dict (dict with strs as keys and ints as values, 
+            optional):
+                The current number based on the format codes to replace the 
+                placeholder in the numbering format. Defaults to {'1': 1, 'A': 1, 
+                'a': 1, 'i': 1, 'I': 1}.
+        
+        Returns:
+            str
+                The formatted string with the current number inserted in place of 
+                the placeholder.
+        
+        Raises:
+            AssertionError
+                If the `numbering_format` string does not contain any of the 
+                supported numbering placeholders (A, a, 1, I, or i).
+        """
+        if isinstance(current_number_dict, int):
+            current_number_dict = {
+                '1': current_number_dict, 'A': current_number_dict,
+                'a': current_number_dict, 'i': current_number_dict,
+                'I': current_number_dict
+            }
+        
+        # Extract the format codes by keeping only 'A', '1', 'a', 'I', or 'i'
+        format_codes = re.sub('[^A1aiI]+', '', numbering_format)
+        
+        # If the format codes are empty, return the numbering_format as is
+        if not format_codes:
+            return numbering_format
+        
+        # Extract each character as the numbering code
+        for format_code in format_codes:
+            
+            # If '1', apply sequential numbering (replace '1' with current number)
+            if format_code == '1':
+                numbering_format = numbering_format.replace(format_code, str(current_number_dict[format_code]))
+            
+            # If 'i', apply lowercase roman numeral numbering (use roman library)
+            elif format_code == 'i':
+                import roman
+                numbering_format = numbering_format.replace(format_code, roman.toRoman(current_number_dict[format_code]).lower())
+            
+            # If 'I', apply uppercase roman numeral numbering (use roman library)
+            elif format_code == 'I':
+                import roman
+                numbering_format = numbering_format.replace(format_code, roman.toRoman(current_number_dict[format_code]).upper())
+            
+            # Otherwise, apply alphabetic numbering, offset by the ASCII value of the format code
+            else:
+                
+                # Adjust the ASCII code by the difference between current number and 1 (zero-based indexing)
+                new_char_code = ord(format_code) + current_number_dict[format_code] - 1
+                numbering_format = numbering_format.replace(format_code, chr(new_char_code))
+        
+        return numbering_format
+    
+    
+    def apply_multilevel_numbering(
+        self, text_list, level_map={0: "", 4: "A. ", 8: "1. ", 12: "a) ", 16: "i) "}, add_indent_back_in=False, verbose=False
+    ):
+        """
+        Take a list of strings with indentation and infix or prefix them 
+        with the appropriate numbering text based on a multi-level list 
+        style.
+        
+        Parameters:
+            text_list:
+                A list of strings, where each string may be prepended
+                with 0, 4, 8, 12, or 16 spaces representing indentation levels.
+            level_map:
+                A dictionary that maps indentation to numbering format. Defaults 
+                to {0: "", 4: "A. ", 8: "1. ", 12: "a) ", 16: "i) "}.
+            add_indent_back_in:
+                Whether to prepend the indention
+        
+        Returns:
+            A new list of strings with numbering text prepended based on indentation.
+        
+        Example:
+            text_list = [' ' * (i*4) + f'This is level {i}' for i in range(5)]
+            text_list += [' ' * (i*4) + f'This is level {i} again' for i in range(4, -1, -1)]
+            numbered_list = apply_multilevel_numbering(text_list)
+            for line in numbered_list:
+                print(line)
+        """
+        
+        # Initialize current_level to track current indentation level
+        current_level = 0
+        
+        # Initialize current_number_map to track current number within a level
+        current_number_map = {0: 0, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+        
+        numbered_text_list = []
+        
+        # Loop through each sentence in text_list
+        for text in text_list:
+            
+            # Get the level by the indent
+            indent = len(text) - len(text.lstrip())
+            if verbose:
+                print(f'indent = {indent}')
+            new_level = indent // 4
+            if verbose:
+                print(f'new_level = {new_level}')
+            
+            # Handle level changes and update numbering
+            if new_level > current_level:
+                current_level = new_level
+                current_number_map[current_level] = 1
+            elif new_level < current_level:
+                current_level = new_level
+                current_number_map[current_level] = current_number_map.get(current_level, 0) + 1
+            else:
+                current_number_map[current_level] = current_number_map.get(current_level, 0) + 1
+            if verbose:
+                print(f'current_number_map[current_level] = current_number_map[{current_level}] = {current_number_map[current_level]}')
+            
+            # Generate numbering text and prepend it to the string
+            numbered_text = self.get_numbered_text(level_map[indent], current_number_dict=current_number_map[current_level])
+            if verbose:
+                print(f'numbered_text = "{numbered_text}"')
+            if add_indent_back_in:
+                level_str = '    ' * (current_level-1) + numbered_text + text.lstrip()
+            else:
+                level_str = numbered_text + text.lstrip()
+            numbered_text_list.append(level_str)
+        
+        return numbered_text_list
+    
+    
     ### File Functions ###
     
     
@@ -1376,7 +1537,7 @@ class NotebookUtilities(object):
             raise_exception (bool, optional):
                 Whether to raise an exception if the pickle fails. Defaults to False.
             verbose (bool, optional):
-                Whether to print debug messages. Defaults to True.
+                Whether to print debug or status messages. Defaults to True.
         
         Returns:
             None
@@ -1496,53 +1657,90 @@ class NotebookUtilities(object):
         return osp.isfile(pickle_path)
     
     
-    def load_object(
-        self, obj_name: str, pickle_path: str = None, download_url: str = None,
-        verbose: bool = False
-    ) -> object:
+    def load_object(self, obj_name, pickle_path=None, download_url=None, verbose=False):
         """
-        Load an object from a pickle file.
-
+        Load an object from a pickle file, CSV file, or download it from a URL.
+        
         Parameters:
-            obj_name (str): The name of the object to load.
-            pickle_path (str, optional): The path to the pickle file. Defaults to None.
-            download_url (str, optional): The URL to download the pickle file from. Defaults to None.
-            verbose (bool, optional): Whether to print status messages. Defaults to False.
-
+            obj_name (str):
+                The name of the object to load.
+            pickle_path (str, optional):
+                The path to the pickle file containing the object. Defaults to 
+                None. If None, the function attempts to construct the path based 
+                on the object name and the `saves_pickle_folder` attribute.
+            download_url (str, optional):
+                The URL to download the object from. Defaults to None. If no 
+                pickle file is found and a download URL is provided, the object 
+                will be downloaded and saved as a CSV file.
+            verbose (bool, optional):
+                Whether to print debug or status messages. Defaults to False.
+        
         Returns:
-            object: The loaded object.
+            object
+                The loaded object.
+        
+        Raises:
+            Exception
+                If the object cannot be loaded from any source (pickle, CSV, or download).
         """
+        
+        # If no pickle path is provided, construct the default path using the object name
         if pickle_path is None:
             pickle_path = osp.join(self.saves_pickle_folder, '{}.pkl'.format(obj_name))
+        
+        # Check if the pickle file exists at the specified path
         if not osp.isfile(pickle_path):
-            if verbose: print('No pickle exists at {} - attempting to load as csv.'.format(osp.abspath(pickle_path)), flush=True)
+            
+            # If the pickle file does not exist and verbose is True, print a message
+            if verbose:
+                print('No pickle exists at {} - attempting to load as csv.'.format(osp.abspath(pickle_path)), flush=True)
+            
+            # If pickle doesn't exist, try loading from CSV
             csv_path = osp.join(self.saves_csv_folder, '{}.csv'.format(obj_name))
+            
+            # Check if the CSV file exists at the specified path
             if not osp.isfile(csv_path):
-                if verbose: print('No csv exists at {} - attempting to download from URL.'.format(osp.abspath(csv_path)), flush=True)
-                object = read_csv(download_url, low_memory=False,
-                                     encoding=self.encoding_type)
+                if verbose:
+                    print('No csv exists at {} - attempting to download from URL.'.format(osp.abspath(csv_path)), flush=True)
+                
+                # Download object as CSV if URL provided and no CSV exists
+                object = read_csv(download_url, low_memory=False, encoding=self.encoding_type)
+            
+            # If the CSV file exists, read the object from the CSV file
             else:
-                object = read_csv(csv_path, low_memory=False,
-                                     encoding=self.encoding_type)
+                
+                # Load object from existing CSV file
+                object = read_csv(csv_path, low_memory=False, encoding=self.encoding_type)
+            
+            # If loaded object is a DataFrame, attempt to save it as pickle for future use
             if isinstance(object, DataFrame):
                 self.attempt_to_pickle(object, pickle_path, raise_exception=False)
+            
+            # Otherwise, pickle the object using the appropriate protocol for the Python version
             else:
                 with open(pickle_path, 'wb') as handle:
-
-                    # Protocol 4 is not handled in python 2
                     if sys.version_info.major == 2:
                         pickle.dump(object, handle, 2)
                     elif sys.version_info.major == 3:
                         pickle.dump(object, handle, pickle.HIGHEST_PROTOCOL)
-
+        
         else:
-            try: object = read_pickle(pickle_path)
+            
+            # If the pickle file exists, try to load the object from the pickle file
+            try:
+                object = read_pickle(pickle_path)
+            
+            # If reading the pickle file fails, fall back to the pickle module
             except:
-                with open(pickle_path, 'rb') as handle: object = pickle.load(handle)
-
-        if verbose: print('Loaded object {} from {}'.format(obj_name, pickle_path), flush=True)
-
-        return(object)
+                with open(pickle_path, 'rb') as handle:
+                    object = pickle.load(handle)
+        
+        # If verbose is True, print a message indicating the object was loaded successfully
+        if verbose:
+            print('Loaded object {} from {}'.format(obj_name, pickle_path), flush=True)
+        
+        # Return the loaded object
+        return object
     
     
     def load_data_frames(self, verbose=True, **kwargs):
@@ -1915,8 +2113,7 @@ class NotebookUtilities(object):
             self.update_modules_list(verbose=False)
     
     
-    @staticmethod
-    def describe_procedure(function_obj, docstring_prefix='The procedure to', verbose=False):
+    def describe_procedure(self, function_obj, docstring_prefix='The procedure to', verbose=False):
         """
         Generate a step-by-step description of how to perform a function by hand from its comments.
         
@@ -1930,7 +2127,7 @@ class NotebookUtilities(object):
             docstring_prefix (str, optional):
                 A prefix to prepend to the procedure description. Default is 'The procedure to'.
             verbose (bool, optional):
-                Whether to print debug messages. Defaults to False.
+                Whether to print debug or status messages. Defaults to False.
         
         Returns:
             None
@@ -1951,7 +2148,7 @@ class NotebookUtilities(object):
             comments_list = []
             
             # Compile regex to find all unprefixed comments in the source code
-            comment_regex = re.compile('^ *# ([^\r\n]+)', re.MULTILINE)
+            comment_regex = re.compile('^( *)# ([^\r\n]+)', re.MULTILINE)
             
             # Split the source code to separate docstring and function body
             parts_list = re.split('"""', source_code, 0)
@@ -1965,13 +2162,17 @@ class NotebookUtilities(object):
                 comments_list.append(f'{docstring_prefix} {docstring.lower()} is as follows:')
                 
                 # Extract the comments which are not debug statements and add them to the list (prefixed with Roman numerals)
-                for i, comment_str in enumerate(
-                    [comment_str for comment_str in comment_regex.findall(source_code) if comment_str and ('verbose' not in comment_str)]
-                ):
-                    comments_list.append(f'    {roman.toRoman(i+1).lower()}. {comment_str}.')
+                for i, comment_tuple in enumerate(comment_regex.findall(source_code)):
+                    if verbose:
+                        display(comment_tuple)
+                    indent_str, comment_str = comment_tuple
+                    if 'verbose' in comment_str:
+                        continue
+                    comments_list.append(indent_str + comment_str)
                 
                 # If there are any comments in the list, print its procedure description and comments on their own lines
                 if len(comments_list) > 1:
+                    comments_list = self.apply_multilevel_numbering(comments_list, add_indent_back_in=True)
                     print('\n'.join(comments_list))
     
     
@@ -2687,21 +2888,41 @@ class NotebookUtilities(object):
     
     @staticmethod
     def one_hot_encode(df, columns, dummy_na=True):
-        '''
-        One-hot encodes the given columns in the given data frame.
+        """
+        One-hot encode the specified columns in the provided DataFrame.
         
-        Args:
-            df: A data frame.
-            columns: A list of column names to encode.
+        This function performs one-hot encoding on a subset of columns 
+        within a DataFrame. One-hot encoding is a technique for 
+        representing categorical variables as binary features. Each 
+        category maps to a new column with a value of 1 for that category 
+        and 0 for all other categories.
+        
+        Parameters:
+            df (pandas.DataFrame):
+                The DataFrame containing the columns to be encoded.
+            columns (list of str):
+                A list of column names to encode as one-hot features.
+            dummy_na (bool, optional):
+                Whether to add a column to indicate NaNs. Defaults to True.
         
         Returns:
-            A data frame with the encoded columns minus the given columns.
-        '''
+            pandas.DataFrame:
+                A data frame with the encoded columns minus the original columns.
+        """
         
+        # Create one-hot encoded representation of the specified columns using pandas.get_dummies
         dummies = get_dummies(df[columns], dummy_na=dummy_na)
-        columns_list = sorted(set(dummies.columns).difference(set(df.columns)))
-        df = concat([df, dummies[columns_list]], axis='columns').drop(columns, axis='columns')
         
+        # Create a list of the dummy variable column names that are not already in the data frame
+        columns_list = sorted(set(dummies.columns).difference(set(df.columns)))
+        
+        # Concatenate the data frame with the dummy variables
+        df = concat([df, dummies[columns_list]], axis='columns')
+        
+        # Drop the original encoded columns from the DataFrame
+        df = df.drop(columns, axis='columns')
+        
+        # Return the DataFrame with the one-hot encoded features
         return df
     
     
