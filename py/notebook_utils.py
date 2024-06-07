@@ -433,11 +433,10 @@ class NotebookUtilities(object):
             AssertionError: If no sequences of the specified length are found in the dictionary.
         """
         
-        # Count the lengths of sequences in the dictionary to convert the sequence lengths list
-        # into a pandas series to get the value counts of unique sequence lengths
+        # Convert the sequence lengths in the dictionary values into a pandas series to get the value counts of unique sequence lengths
         value_counts = Series([len(actions_list) for actions_list in tg_dict.values()]).value_counts()
         
-        # Filter value counts to show only counts of count to get the desired sequence length of exactly count sequences from the dictionary
+        # Filter value counts to show only count to get the desired sequence length of exactly count sequences from the dictionary
         value_counts_list = value_counts[value_counts == count].index.tolist()
         assert value_counts_list, f"You don't have exactly {count} sequences of the same length in the dictionary"
         sequences = [
@@ -459,17 +458,17 @@ class NotebookUtilities(object):
             A tuple representing the shape of the list of lists.
         """
         
-        # Check if the list of lists is empty.
+        # Check if the list of lists is empty
         if not list_of_lists: return ()
         
-        # Get the length of the first sublist.
+        # Get the length of the first sublist
         num_cols = len(list_of_lists[0])
         
-        # Check if all of the sublists are the same length.
+        # Check if all of the sublists are the same length
         for sublist in list_of_lists:
             if len(sublist) != num_cols: raise ValueError('All of the sublists must be the same length.')
         
-        # Return a tuple representing the shape of the list of lists.
+        # Return a tuple representing the shape of the list of lists
         return (len(list_of_lists), num_cols)
     
     
@@ -734,75 +733,147 @@ class NotebookUtilities(object):
     
     def get_ndistinct_subsequences(self, sequence, verbose=False):
         """
+        Calculate the number of distinct subsequences in a given sequence.
+        
+        This function implements an algorithm to count the number of 
+        distinct subsequences (non-contiguous substrings) that can be 
+        formed from a given input sequence (`sequence`). The current 
+        implementation assumes the sequence consists of characters.
+        
+        Parameters:
+            sequence (str or list):
+                The input sequence to analyze. If not a string, it will be 
+                converted to a string.
+            verbose (bool, optional):
+                If True, print debug information. Default is False.
+        
+        Returns:
+            int
+                The number of distinct subsequences in the input sequence.
+        
         Note:
-            This replaces from pysan import get_ndistinct_subsequences
+            This function replaces the functionality of 
+            `get_ndistinct_subsequences` from the `pysan` package.
         """
-
-        # This implementation works on strings, so parse non-strings to strings
-        if (type(sequence) is not str) or (not all([(len(str(e)) == 1) for e in sequence])):
+        
+        # Handle non-string inputs and convert them to strings (if possible)
+        if (not isinstance(sequence, str)) or (not all([(len(str(e)) == 1) for e in sequence])):
+            
+            # Convert non-string sequences to strings
             new_sequence, string_to_integer_map = self.convert_strings_to_integers(sequence, alphabet_list=None)
             sequence = []
-            for e in new_sequence: sequence.append(e)
-        if verbose: print('sequence', sequence)
-
-        # Create an array to store index of last
-        last = [-1 for i in range(256 + 1)] # hard-coded value needs explaining -ojs
-
-        # Length of input string
+            for e in new_sequence:
+                sequence.append(e)
+        
+        if verbose:
+            print(f'sequence: {sequence}')
+        
+        # Create an array to store index of last occurrence of each character, supporting extended ASCII characters
+        last = [-1 for i in range(256 + 1)]
+        
+        # Get length of input string
         sequence_length = len(sequence)
-
-        # dp[i] is going to store count of discount subsequence of length of i
-        dp = [-2 for i in range(sequence_length + 1)]
-
-        # Empty substring has only one subseqence
+        
+        # Create an array to store counts of distinct subsequences
+        dp = [-2] * (sequence_length + 1)
+        
+        # Create the base case: the empty substring has one subsequence
         dp[0] = 1
-
-        # Traverse through all lengths from 1 to n 
+        
+        # Traverse through all lengths from 1 to sequence_length
         for i in range(1, sequence_length + 1):
-
-            # Number of subseqence with substring str[0...i-1]
+            
+            # Set the number of subsequences for the current substring length
             dp[i] = 2 * dp[i - 1]
-
-            # If current character has appeared before, then remove all subseqences ending with previous occurrence
-            if last[sequence[i - 1]] != -1: dp[i] = dp[i] - dp[last[sequence[i - 1]]]
-
+            
+            # If current character has appeared before, remove all subsequences ending with previous occurrence
+            if last[sequence[i - 1]] != -1:
+                dp[i] = dp[i] - dp[last[sequence[i - 1]]]
+            
+            # Update the last occurrence of the current character
             last[sequence[i - 1]] = i - 1
-
+        
+        # Return the count of distinct subsequences for the entire sequence
         return dp[sequence_length]
     
     
-    def get_turbulence(self, sequence, verbose=False):
+    @staticmethod
+    def get_turbulence(sequence, verbose=False):
         """
-        Compute turbulence for a given sequence, based on
-        [Elzinga & Liefbroer's 2007 definition](https://www.researchgate.net/publication/225402919_De-standardization_of_Family-Life_Trajectories_of_Young_Adults_A_Cross-National_Comparison_Using_Sequence_Analysis)
-        which is also implemented in the [TraMineR](http://traminer.unige.ch/doc/seqST.html) sequence analysis library.
-
+        Compute turbulence for a given sequence.
+        
+        This function computes the turbulence of a sequence based on the 
+        definition provided by Elzinga & Liefbroer (2007). Turbulence is a 
+        measure of variability in sequences, often used in sequence 
+        analysis.
+        
+        Parameters:
+            sequence (list):
+                The input sequence for which turbulence is to be computed.
+            verbose (bool, optional):
+                If True, print debug information. Default is False.
+        
+        Returns:
+            float
+                The computed turbulence value for the given sequence.
+        
         Note:
-            This replaces from pysan import get_turbulence
+            This function replaces `get_turbulence` from the `pysan` package.
+        
+        References:
+            - Elzinga, C. H., & Liefbroer, A. C. (2007). De-standardization of 
+              Family-Life Trajectories of Young Adults: A Cross-National Comparison 
+              Using Sequence Analysis. https://www.researchgate.net/publication/225402919
+            - TraMineR sequence analysis library. http://traminer.unige.ch/doc/seqST.html
         """
+        
+        # Import necessary modules
         import statistics
-        phi = self.get_ndistinct_subsequences(sequence, verbose=verbose)
-        if verbose: print('phi', phi)
-        
         from pysan.statistics import get_spells
+        import math
+        
+        # Compute the number of distinct subsequences in the sequence (phi)
+        phi = self.get_ndistinct_subsequences(sequence, verbose=verbose)
+        if verbose:
+            print('phi:', phi)
+        
+        # Compute the durations of each state in the sequence
         state_durations = [value for key, value in get_spells(sequence)]
-        if verbose: print('durations', state_durations)
-        if verbose: print('mean duration', statistics.mean(state_durations))
+        if verbose:
+            print('durations:', state_durations)
+            print('mean duration:', statistics.mean(state_durations))
         
-        try: variance_of_state_durations = statistics.variance(state_durations)
-        except: variance_of_state_durations = 0.0
-        if verbose: print('variance', variance_of_state_durations)
+        # Compute the variance of state durations
+        try:
+            variance_of_state_durations = statistics.variance(state_durations)
         
+        # If variance computation fails (e.g., due to insufficient data), set variance to 0
+        except:
+            variance_of_state_durations = 0.0
+        
+        if verbose:
+            print('variance:', variance_of_state_durations)
+        
+        # Compute the mean of state durations (tbar)
         tbar = statistics.mean(state_durations)
         
+        # Compute the maximum state duration variance (smax)
         maximum_state_duration_variance = (len(sequence) - 1) * (1 - tbar) ** 2
-        if verbose: print('smax', maximum_state_duration_variance)
+        if verbose:
+            print('smax:', maximum_state_duration_variance)
         
+        # Compute the top right part of the formula
         top_right = maximum_state_duration_variance + 1
-        bot_right = variance_of_state_durations + 1
-        turbulence = math.log2(phi * (top_right / bot_right))
-        if verbose: print('turbulence', turbulence)
         
+        # Compute the bottom right part of the formula
+        bot_right = variance_of_state_durations + 1
+        
+        # Compute the turbulence value using the provided formula
+        turbulence = math.log2(phi * (top_right / bot_right))
+        if verbose:
+            print('turbulence:', turbulence)
+        
+        # Return the computed turbulence value
         return turbulence
     
     
@@ -884,23 +955,25 @@ class NotebookUtilities(object):
     def get_function_file_path(func):
         """
         Return the relative or absolute file path where the function is stored.
-
+        
         Parameters:
             func: A Python function.
-
+        
         Returns:
             A string representing the relative or absolute file path where the function is stored.
-
+        
         Example:
             def my_function(): pass
             file_path = nu.get_function_file_path(my_function)
             print(osp.abspath(file_path))
         """
+        
+        # Work out which source or compiled file an object was defined in using inspect
         file_path = inspect.getfile(func)
-
+        
         # If the function is defined in a Jupyter notebook, return the absolute file path
         if file_path.startswith('<stdin>'): return osp.abspath(file_path)
-
+        
         # Otherwise, return the relative file path
         else: return osp.relpath(file_path)
     
@@ -1041,51 +1114,116 @@ class NotebookUtilities(object):
     
     def get_notebook_functions_dictionary(self, github_folder=None):
         """
-        Get a dictionary of all functions defined within notebooks in the github folder,
-        with the key being the function name,
-        and the value being the count of how many times the function has been defined.
-
+        Get a dictionary of all functions defined within notebooks in a 
+        GitHub folder and their definition counts.
+        
+        This function scans a specified GitHub folder (or the parent 
+        directory by default) for Jupyter notebooks (`.ipynb` files). It 
+        then parses each notebook and identifies function definitions 
+        using a regular expression. The function name is used as the key 
+        in a dictionary, and the value stores the count of how many times 
+        that function is defined across all the notebooks.
+        
         Parameters:
-            github_folder (str, optional): The path of the root folder of the GitHub repository containing the notebooks.
-                                           Defaults to the parent directory of the current working directory.
-
+            github_folder (str, optional):
+                The path of the root folder of the GitHub repository containing 
+                the notebooks. Defaults to the parent directory of the current 
+                working directory.
+        
         Returns:
-            dict: The dictionary of function definitions with the count of their occurances.
+            dict
+                The dictionary of function definitions with the count of their 
+                occurrences.
         """
+        
+        # Create a regular expression pattern to match function definitions (def + function_name + opening parenthesis)
         fn_regex = re.compile(r'\s+"def ([a-z0-9_]+)\(')
+        
+        # Create a list of directories/files to exclude during the search (e.g., checkpoints, recycle bin)
         black_list = ['.ipynb_checkpoints', '$Recycle.Bin']
-        if github_folder is None: github_folder = self.github_folder
+        
+        # If no github_folder is provided, use the default one
+        if github_folder is None:
+            github_folder = self.github_folder
+        
+        # Initialize an empty dictionary to store function names and their counts
         rogue_fns_dict = {}
+        
+        # Walk through the directory structure
         for sub_directory, directories_list, files_list in walk(github_folder):
+            
+            # Skip blacklisted directories
             if all(map(lambda x: x not in sub_directory, black_list)):
+                
+                # Iterate through files in the current directory
                 for file_name in files_list:
+                    
+                    # Process only Jupyter notebook files, excluding those with 'Attic' in the name
                     if file_name.endswith('.ipynb') and not ('Attic' in file_name):
+                        
+                        # Construct the full file path
                         file_path = osp.join(sub_directory, file_name)
+                        
+                        # Open and read the notebook file
                         with open(file_path, 'r', encoding=self.encoding_type) as f:
+                            
+                            # Read the file contents line by line
                             lines_list = f.readlines()
+                            
+                            # Loop through each line in the notebook
                             for line in lines_list:
+                                
+                                # Search for function definitions using the regular expression
                                 match_obj = fn_regex.search(line)
+                                
+                                # Check if a function definition is found
                                 if match_obj:
+                                    
+                                    # Extract the function name from the match
                                     fn = match_obj.group(1)
+                                    
+                                    # Increment the function count in the dictionary
                                     rogue_fns_dict[fn] = rogue_fns_dict.get(fn, 0) + 1
         
+        # Return the dictionary of function names and their counts
         return rogue_fns_dict
     
     
     def get_notebook_functions_set(self, github_folder=None):
         """
-        Get a set of all functions defined within notebooks in the github folder.
-
-        Parameters:
-            github_folder (str, optional): The path of the root folder of the GitHub repository containing the notebooks.
-                                           Defaults to the parent directory of the current working directory.
-
-        Returns:
-            set: The set of function definitions.
-        """
-        if github_folder is None: github_folder = self.github_folder
-        rogue_fns_set = set([k for k in self.get_notebook_functions_dictionary(github_folder=github_folder).keys()])
+        Get a set of all functions defined within notebooks in a GitHub 
+        folder.
         
+        This function leverages the `get_notebook_functions_dictionary` to 
+        retrieve a dictionary containing function names and their 
+        occurrence counts across notebooks in the specified GitHub folder 
+        (or the parent directory by default). It then extracts a set 
+        containing only the unique function names, effectively eliminating 
+        duplicates.
+        
+        Parameters:
+            github_folder (str, optional):
+                The path to the root folder of the GitHub repository containing 
+                the notebooks. Defaults to the parent directory of the current 
+                working directory.
+        
+        Returns:
+            set
+                A set containing all unique function names defined within the 
+                processed notebooks.
+        """
+        
+        # If no GitHub folder is provided, use the default folder path
+        if github_folder is None:
+            github_folder = self.github_folder
+        
+        # Get the dictionary of function names and their counts from the get_notebook_functions_dictionary function
+        rogue_fns_dict = self.get_notebook_functions_dictionary(github_folder=github_folder)
+        
+        # Extract a set containing only the unique function names (keys from the dictionary)
+        rogue_fns_set = set(rogue_fns_dict.keys())
+        
+        # Return the set of unique function names
         return rogue_fns_set
     
     
@@ -1865,30 +2003,33 @@ class NotebookUtilities(object):
     @staticmethod
     def get_style_column(tag_obj, verbose=False):
         """
-        Extract the style column from a given Wikipedia infobox BeautifulSoup'd
-        tag object and returns the style column tag object.
-    
+        Extract the style column from a given Wikipedia infobox 
+        BeautifulSoup'd tag object and return the style column tag object.
+        
         Parameters:
-            tag_obj (bs4.element.Tag): The BeautifulSoup tag object to extract the style column from.
-            verbose (bool, optional): If True, display intermediate steps for debugging. Default is False.
-    
+            tag_obj (bs4.element.Tag):
+                The BeautifulSoup tag object to extract the style column from.
+            verbose (bool, optional):
+                If True, display intermediate steps for debugging. Default is False.
+        
         Returns:
-            bs4.element.Tag: The modified BeautifulSoup tag object representing the style column.
+            bs4.element.Tag
+                The modified BeautifulSoup tag object representing the style column.
         """
         
         # Display the initial tag object if verbose is True
         if verbose: display(tag_obj)
-    
+        
         # Get the parent td tag object
         tag_obj = get_td_parent(tag_obj, verbose=verbose)
         if verbose: display(tag_obj)
-    
+        
         # Traverse the siblings of the table tag object backward until a style column is found
         from bs4.element import NavigableString
         while isinstance(tag_obj, NavigableString) or not tag_obj.has_attr('style'):
             tag_obj = tag_obj.previous_sibling
             if verbose: display(tag_obj)
-    
+        
         # Display the text content of the found style column if verbose is True
         if verbose: display(tag_obj.text.strip())
         
@@ -1970,19 +2111,22 @@ class NotebookUtilities(object):
             BeautifulSoup: The BeautifulSoup soup object for the given page.
         """
             
-        # Check if the page URL or filepath is a URL
+        # If the page URL or filepath is a URL, get the page HTML
         if self.url_regex.fullmatch(page_url_or_filepath):
             if driver is None:
-                with urllib.request.urlopen(page_url_or_filepath) as response: page_html = response.read()
+                with urllib.request.urlopen(page_url_or_filepath) as response:
+                    page_html = response.read()
             else: page_html = driver.page_source
         
-        # If the page URL or filepath is not a URL, ensure it exists and open it using open()
+        # If the page URL or filepath is not a URL, ensure it exists and open it using open() and get the page HTML that way
         elif self.filepath_regex.fullmatch(page_url_or_filepath):
             assert osp.isfile(page_url_or_filepath), f"{page_url_or_filepath} doesn't exist"
-            with open(page_url_or_filepath, 'r', encoding=self.encoding_type) as f: page_html = f.read()
+            with open(page_url_or_filepath, 'r', encoding=self.encoding_type) as f:
+                page_html = f.read()
 
-        # The string is already in the format we want
-        else: page_html = page_url_or_filepath
+        # If the string is already in the format we want, it IS the page HTML
+        else:
+            page_html = page_url_or_filepath
 
         # Parse the page HTML using BeautifulSoup
         page_soup = bs(page_html, 'html.parser')
@@ -1996,7 +2140,7 @@ class NotebookUtilities(object):
     
     def get_page_tables(self, tables_url_or_filepath, verbose=True):
         """
-        Retrieve tables from a given URL or file path and returns a list of DataFrames.
+        Retrieve tables from a given URL or file path and return a list of DataFrames.
     
         Parameters:
             tables_url_or_filepath (str): The URL or file path of the page containing tables.
@@ -2149,8 +2293,9 @@ class NotebookUtilities(object):
             y_train: A NumPy array of numbers.
         
         Returns:
-            A numpy array of booleans, where True indicates that the corresponding element of X_train
-            and y_train is not inf or nan. This combined mask can be used on both X_train and y_train.
+            A numpy array of booleans, where True indicates that the 
+            corresponding element of X_train and y_train is not inf or nan. 
+            This combined mask can be used on both X_train and y_train.
         
         Example:
             inf_nan_mask = nu.get_inf_nan_mask(X_train, y_train)
@@ -2161,16 +2306,10 @@ class NotebookUtilities(object):
         # Check if the input lists are empty
         if (X_train.shape[0] == 0) or (y_train.shape[0] == 0): return np.array([], dtype=bool)
         
-        # Create separate masks for X_train and y_train (np.isfinite checks for both infinity (inf) and NaN values)
-        # X_finite_mask = np.isfinite(X_train)
-        # y_finite_mask = np.isfinite(y_train)
-        
-        # Combine masks using bitwise AND operation
-        # mask_series = X_finite_mask & y_finite_mask
-        
+        # Create a mask across the X_train and y_train columns (notnull checking for both inf and NaN values)
         mask_series = concat([y_train, X_train], axis='columns').applymap(notnull).all(axis='columns')
         
-        # Return a mask indicating which elements of both X_train and y_train are not inf or nan
+        # Return the mask indicating which elements of both X_train and y_train are not inf or nan
         return mask_series
     
     
@@ -2525,7 +2664,7 @@ class NotebookUtilities(object):
         # Check if the value is a list
         elif isinstance(value_obj, list):
             
-            # Get the minimum number of digits in the list length
+            # Get the minimum number of digits in the list length for prefixing zeroes
             list_length = len(value_obj)
             digits_count = min(len(str(list_length)), 2)
             
@@ -2543,10 +2682,8 @@ class NotebookUtilities(object):
                     v, row_dict=row_dict, key_prefix=f'{key_prefix}{i}'
                 )
                 
-        # If value is neither a dictionary nor a list
+        # If value is neither a dictionary nor a list, add the value to the row dictionary
         else:
-            
-            # Add the value to the row dictionary
             if key_prefix.startswith('_') and (key_prefix[1:] not in row_dict):
                 key_prefix = key_prefix[1:]
             row_dict[key_prefix] = value_obj
@@ -2585,16 +2722,19 @@ class NotebookUtilities(object):
         Identify numeric columns in a DataFrame.
         
         Parameters:
-            df (pandas.DataFrame): The DataFrame to search for numeric columns.
-            is_na_dropped (bool, optional): Whether to drop columns with all NaN values. Default is True.
+            df (pandas.DataFrame):
+                The DataFrame to search for numeric columns.
+            is_na_dropped (bool, optional):
+                Whether to drop columns with all NaN values. Default is True.
         
         Returns:
-            list: A list of column names containing numeric values.
+            list
+                A list of column names containing numeric values.
         
         Notes:
-            This function identifies numeric columns by checking if the data in each column
-            can be interpreted as numeric. It checks for integer, floating-point, and numeric-like
-            objects.
+            This function identifies numeric columns by checking if the data 
+            in each column can be interpreted as numeric. It checks for 
+            integer, floating-point, and numeric-like objects.
         
         Examples:
             import pandas as pd
@@ -2602,18 +2742,20 @@ class NotebookUtilities(object):
             nu.get_numeric_columns(df)
             ['A', 'B']
         """
-
+        
         # Initialize an empty list to store numeric column names
         numeric_columns = []
-
+        
         # Iterate over DataFrame columns to identify numeric columns
         for cn in df.columns:
+            
+            # Append elements to the list if they are integers or floats based on the pandas.core.arrays.numeric functions
             if is_integer(df[cn]) or is_float(df[cn]):
                 numeric_columns.append(cn)
-
+        
         # Optionally drop columns with all NaN values
         if is_na_dropped: numeric_columns = df[numeric_columns].dropna(axis='columns', how='all').columns
-
+        
         # Sort and return the list of numeric column names
         return sorted(numeric_columns)
     
@@ -2773,23 +2915,49 @@ class NotebookUtilities(object):
         """
         Calculate the Euclidean distance between two 2D or 3D points.
         
+        This static method calculates the Euclidean distance between two 
+        points (`first_point` and `second_point`). It supports both 2D (x, 
+        y) and 3D (x, y, z) coordinates.
+        
         Parameters:
-            first_point (tuple): The coordinates of the first point.
-            second_point (tuple): The coordinates of the second point.
+            first_point (tuple):
+                A tuple containing the coordinates of the first point.
+            second_point (tuple):
+                A tuple containing the coordinates of the second point.
         
         Returns:
-            float: The Euclidean distance between the two points.
+            float
+                The Euclidean distance between the two points, or numpy.nan if the 
+                points have mismatched dimensions.
         """
-        euclidean_distance = np.nan
+        
+        # Initialize the Euclidean distance to NaN
+        euclidean_distance = nan
+        
+        # Check if both points have the same dimensions (2D or 3D)
+        assert len(first_point) != len(second_point), f"Mismatched dimensions: {len(first_point)} != {len(second_point)}"
+        
+        # Check if the points are in 3D
         if (len(first_point) == 3) and (len(second_point) == 3):
+            
+            # Unpack the coordinates of the first and second points
             x1, y1, z1 = first_point
             x2, y2, z2 = second_point
+            
+            # Calculate the Euclidean distance for 3D points
             euclidean_distance = math.sqrt((x1 - x2)**2 + (y1 - y2)**2 + (z1 - z2)**2)
+        
+        # Check if both points are 2D
         elif (len(first_point) == 2) and (len(second_point) == 2):
+            
+            # Unpack the coordinates of the first and second points
             x1, z1 = first_point
             x2, z2 = second_point
+            
+            # Calculate the Euclidean distance for 2D points
             euclidean_distance = math.sqrt((x1 - x2)**2 + (z1 - z2)**2)
-
+        
+        # Return the calculated Euclidean distance
         return euclidean_distance
     
     
@@ -2830,24 +2998,47 @@ class NotebookUtilities(object):
     
     def get_nearest_neighbor(self, base_point, neighbors_list):
         """
-        Get the point nearest in Euclidean distance between two 2D or 3D points,
-        the base_point and an item from the neighbors_list.
+        Get the point nearest in Euclidean distance between two 2D or 3D 
+        points, the base_point and an item from the neighbors_list.
+        
+        This function finds the neighbor in `neighbors_list` that is 
+        closest (minimum Euclidean distance) to the `base_point`.
         
         Parameters:
-            base_point (tuple): The coordinates of the first point.
-            neighbors_list (list of tuples): A list of coordinates.
+            base_point (tuple):
+                A tuple containing the coordinates of the base point.
+            neighbors_list (list of tuples):
+                A list of tuples representing the coordinates of neighboring 
+                points.
         
         Returns:
-            tuple: The coordinates of the nearest of the neighbors_list of points.
+            tuple
+                The coordinates of the nearest neighbor in the `neighbors_list`, 
+                or None if the list is empty.
         """
+        
+        # Initialize the minimum distance to infinity
         min_distance = math.inf
+        
+        # Initialize the nearest neighbor to None
         nearest_neighbor = None
+        
+        # Iterate over each point in the neighbors list
         for neighbor_point in neighbors_list:
+            
+            # Calculate the Euclidean distance between the base point and the current neighbor point
             distance = self.get_euclidean_distance(base_point, neighbor_point)
+            
+            # Update nearest neighbor and minimum distance if closer neighbor found
             if distance < min_distance:
+                
+                # Update the minimum distance to the calculated distance
                 min_distance = distance
+                
+                # Update the nearest neighbor to the current neighbor point
                 nearest_neighbor = neighbor_point
         
+        # Return the nearest neighbor (or None if the list is empty)
         return nearest_neighbor
     
     
@@ -2866,7 +3057,11 @@ class NotebookUtilities(object):
         Returns:
             A Pandas DataFrame containing a single sample row of each of the four smallest groups.
         """
+        
+        # Create an empty data frame with sample_df columns
         df = DataFrame([], columns=sample_df.columns)
+        
+        # Loop through the four smallest data frames by their groupby key/values pairs
         for bool_tuple in sample_df.groupby(groupby_columns).size().sort_values().index.tolist()[:4]:
             
             # Filter the name in the column to the corresponding value of the tuple
@@ -2876,6 +3071,7 @@ class NotebookUtilities(object):
             # Append a single record from the filtered data frame
             if mask_series.any(): df = concat([df, sample_df[mask_series].sample(1)], axis='index')
         
+        # Return the data frame with the four sample rows
         return df
     
     
@@ -2979,17 +3175,75 @@ class NotebookUtilities(object):
     
     
     def get_text_color(self, text_color='white', bar_color_rgb=(0, 0, 0), verbose=False):
+        """
+        Determine an appropriate text color based on the background color 
+        for improved readability.
+        
+        This function calculates the most suitable text color to be used 
+        on a given background color (`bar_color_rgb`). It compares the 
+        distance of the background color to predefined text colors 
+        ('white', '#404040', 'black') and selects the most distinct color. 
+        The default text color is 'white'.
+        
+        Parameters:
+            text_color (str, optional):
+                The default text color to be used if the background color is 
+                black. Defaults to 'white'.
+            bar_color_rgb (tuple, optional):
+                A tuple representing the RGB values of the background color. 
+                Defaults to (0, 0, 0), which is black.
+            verbose (bool, optional):
+                Whether to print debug output.
+        
+        Returns:
+            str
+                The chosen text color as a valid HTML/CSS color string (e.g., 
+                'white', '#404040', '#000000').
+        
+        Note:
+            This function uses the `color_distance_from` method to compute the 
+            distance between colors and the `webcolors` library to convert 
+            color names to hex codes.
+        """
+        
+        # Check if a non-black background color is provided
         if bar_color_rgb != (0, 0, 0):
+            
+            # Initialize the list to store the distances for each color
             text_colors_list = []
+            
+            # Iterate through predefined readable colors
             for color in ['white', '#404040', 'black']:
-                color_tuple = (self.color_distance_from(color, bar_color_rgb), color)
+                
+                # Calculate the distance between the current text color and the background color
+                color_distance = self.color_distance_from(color, bar_color_rgb)
+                color_tuple = (color_distance, color)
+                
+                # Append the color and its distance to the list
                 text_colors_list.append(color_tuple)
-            if verbose: print(text_colors_list)
-            text_color = sorted(text_colors_list, key=lambda x: x[0])[-1][1]
-            import webcolors
-            try: text_color = webcolors.name_to_hex(text_color)
-            except: pass
-
+            
+            # Print the list of color distances if verbose is True
+            if verbose:
+                print(text_colors_list)
+            
+            # Select the color with the maximum distance from the background color
+            sorted_list = sorted(text_colors_list, key=lambda x: x[0])
+            text_color = sorted_list[-1][1]
+            
+            # Attempt to convert the text color to a valid HTML/CSS hex code (optional)
+            try:
+                
+                # Import the webcolors module
+                import webcolors
+                
+                # Try to convert the color name to hex format
+                text_color = webcolors.name_to_hex(text_color)
+            
+            # If the color name is not recognized, pass
+            except:
+                pass
+        
+        # Return the selected or default text color
         return text_color
     
     
@@ -3251,45 +3505,110 @@ class NotebookUtilities(object):
     
     
     def get_r_squared_value_latex(self, xdata, ydata):
+        """
+        Calculate the R-squared value and its p-value, and format them in 
+        LaTeX.
+        
+        This function computes the Pearson correlation coefficient between 
+        two input data arrays (`xdata` and `ydata`). It then calculates 
+        the R-squared value (coefficient of determination) as the square 
+        of the Pearson coefficient. The function also retrieves the 
+        p-value associated with the correlation test.
+        
+        The results are formatted into a LaTeX string suitable for 
+        scientific reports. The string includes the R-squared value 
+        (rounded to two decimal places), a comma, and the p-value 
+        (formatted according to significance level: '<0.0001' for p-value 
+        less than 0.0001, otherwise displayed with four decimal places).
+        
+        Parameters:
+            xdata (array-like):
+                The explanatory variable data.
+            ydata (array-like):
+                The response variable data.
+        
+        Returns:
+            str
+                A LaTeX string representing the R-squared value and its 
+                corresponding p-value.
+        """
+        
+        # Get a mask to filter out infinite and NaN values from the data
         inf_nan_mask = self.get_inf_nan_mask(xdata, ydata)
+        
+        # Import the Pearson correlation function from scipy.stats
         from scipy.stats import pearsonr
+        
+        # Calculate Pearson's r and the associated p-value
         pearson_r, p_value = pearsonr(xdata[inf_nan_mask], ydata[inf_nan_mask])
-        pearsonr_statement = str('%.2f' % pearson_r)
-        coefficient_of_determination_statement = str('%.2f' % pearson_r**2)
         
-        if p_value < 0.0001: pvalue_statement = '<0.0001'
-        else: pvalue_statement = '=' + str('%.4f' % p_value)
+        # Format R-squared value (coefficient of determination) to two decimal places
+        coefficient_of_determination_statement = str('%.2f' % (pearson_r**2))
         
-        s_str = r'$r^2=' + coefficient_of_determination_statement + ',\ p' + pvalue_statement + '$'
+        # Format p-value based on significance level
+        if p_value < 0.0001:
+            pvalue_statement = '<0.0001'
+        else:
+            pvalue_statement = '=' + str('%.4f' % p_value)
         
+        # Construct the LaTeX string for the R-squared value and p-value
+        s_str = r'$r^2=' + coefficient_of_determination_statement + r',\ p' + pvalue_statement + r'$'
+        
+        # Return the formatted LaTeX string
         return s_str
     
     
     @staticmethod
     def get_spearman_rho_value_latex(xdata, ydata):
+        """
+        Calculate the Spearman's rank correlation coefficient and its 
+        p-value, and format them in LaTeX.
+        
+        This function computes the Spearman's rank correlation coefficient 
+        between two input data arrays (`xdata` and `ydata`). Spearman's 
+        rank correlation measures the monotonic relationship between two 
+        variables, unlike Pearson's correlation which assumes a linear 
+        relationship. The function also retrieves the p-value associated 
+        with the correlation test.
+        
+        The results are formatted into a LaTeX string suitable for 
+        scientific reports. The string includes the Spearman's rank 
+        correlation coefficient (rounded to two decimal places), a comma, 
+        and the p-value (formatted according to significance level:
+        '<0.0001' for p-value less than 0.0001, otherwise displayed with 
+        four decimal places).
+        
+        Parameters:
+            xdata (array-like):
+                The explanatory variable data.
+            ydata (array-like):
+                The response variable data.
+        
+        Returns:
+            str
+                A LaTeX string representing the Spearman's rank correlation 
+                coefficient and its corresponding p-value.
+        """
+        
+        # Import the Spearman's rank correlation function from scipy.stats
         from scipy.stats import spearmanr
+        
+        # Calculate Spearman's rank correlation and the associated p-value
         spearman_corr, p_value = spearmanr(xdata, ydata)
+        
+        # Format Spearman's rank correlation coefficient to two decimal places
         rank_correlation_coefficient_statement = str('%.2f' % spearman_corr)
         
-        if p_value < 0.0001: pvalue_statement = '<0.0001'
-        else: pvalue_statement = '=' + str('%.4f' % p_value)
+        # Format p-value based on significance level
+        if p_value < 0.0001:
+            pvalue_statement = '<0.0001'
+        else:
+            pvalue_statement = '=' + str('%.4f' % p_value)
         
+        # Construct the LaTeX string for the Spearman's rank correlation coefficient and p-value
         s_str = r'$\rho=' + rank_correlation_coefficient_statement + ',\ p' + pvalue_statement + '$'
         
-        return s_str
-    
-    
-    @staticmethod
-    def get_spearman_rho_value_latex(xdata, ydata):
-        from scipy.stats import spearmanr
-        spearman_corr, p_value = spearmanr(xdata, ydata)
-        rank_correlation_coefficient_statement = str('%.2f' % spearman_corr)
-        
-        if p_value < 0.0001: pvalue_statement = '<0.0001'
-        else: pvalue_statement = '=' + str('%.4f' % p_value)
-        
-        s_str = r'$\rho=' + rank_correlation_coefficient_statement + ',\ p' + pvalue_statement + '$'
-        
+        # Return the formatted LaTeX string
         return s_str
     
     
@@ -3631,10 +3950,9 @@ class NotebookUtilities(object):
         """
         Get a list of colors cycled from the given color dictionary and the default color cycle.
         
-        This method matches each alphabet in the input list with a color 
-        from the input color dictionary. If a color is not specified for 
-        an alphabet, it assigns the next color from the matplotlib color 
-        cycle.
+        This method matches each alphabet in the input list with a color from
+        the input color dictionary. If a color is not specified for an
+        alphabet, it assigns the next color from the matplotlib color cycle.
         
         Parameters:
             alphabet_list (list of str):
