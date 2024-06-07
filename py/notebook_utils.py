@@ -2227,56 +2227,128 @@ class NotebookUtilities(object):
     
     def get_wiki_infobox_data_frame(self, page_titles_list, verbose=True):
         """
-        Get a DataFrame of the key/value pairs from the infobox of a Wikipedia biographical entry.
-
+        Get a DataFrame of key/value pairs from the infobox of Wikipedia 
+        biographical entries.
+        
+        This function retrieves the infobox data from Wikipedia pages and 
+        constructs a DataFrame where each row corresponds to a page and 
+        each column corresponds to an infobox attribute.
+        
         Parameters:
-            page_titles_list: A list of titles of the Wikipedia pages containing the infoboxes.
-            verbose: Whether to print verbose output.
-
+            page_titles_list (list of str):
+                A list of titles of the Wikipedia pages containing the infoboxes.
+            verbose (bool, optional):
+                Whether to print debug output.
+        
         Returns:
-            A DataFrame containing the data from the Wikipedia infobox.
+            pandas.DataFrame
+                A DataFrame containing the extracted infobox data with page titles 
+                as the first column and infobox labels/values as separate columns. 
+                Returns an empty DataFrame if no data is found.
         
         Note:
-            It is assumed that the infobox contains no headers which would prefix any duplicate labels
+            - This function assumes a specific infobox structure and may 
+            require adjustments for different Wikipedia page formats.
+            - It is assumed that the infobox contains no headers which would 
+            prefix any duplicate labels.
         """
+        
+        # Import necessary modules not already imported in the class
         import wikipedia
+        
+        # Compile a regex pattern to match non-alphanumeric characters
         ascii_regex = re.compile('[^a-z0-9]+')
+        
+        # Initialize an empty list to store rows of data
         rows_list = []
+        
+        # Define a helper function to clean text
         def clean_text(parent_soup, verbose=False):
+            
+            # Initialize a list to store text from child elements
             texts_list = []
             for child_soup in parent_soup.children:
-                if '{' not in child_soup.text: texts_list.append(child_soup.text.strip())
+                if '{' not in child_soup.text:
+                    
+                    # Add stripped text to the list if it doesn't contain '{'
+                    texts_list.append(child_soup.text.strip())
+            
+            # Join the list of texts into a single string
             parent_text = ' '.join(texts_list)
+            
+            # Replace various enclosing parentheses/brackets with standardized versions
             for this, with_that in zip([' )', ' ]', '( ', '[ '], [')', ']', '(', '[']):
                 parent_text = parent_text.replace(this, with_that)
+            
+            # Remove extra whitespace characters and non-breaking spaces
             parent_text = sub(r'[\s\u200b\xa0]+', ' ', parent_text).strip()
             
             return parent_text
+        
+        # Use a progress bar if verbose is True
         if verbose:
             from tqdm import tqdm_notebook as tqdm
             page_titles_list = tqdm(page_titles_list)
+        
+        # Iterate over each page title in the list
         for page_title in page_titles_list:
+            
+            # Initialize a dictionary to store the data for the current page
             row_dict = {'page_title': page_title}
             try:
+                
+                # Retrieve the Wikipedia page object
                 bio_obj = wikipedia.WikipediaPage(title=page_title)
+                
+                # Get the HTML content of the page
                 bio_html = bio_obj.html()
+                
+                # Parse the HTML content using BeautifulSoup
                 page_soup = bs(bio_html, 'html.parser')
+                
+                # Find all infobox tables with specific class attributes
                 infobox_soups_list = page_soup.find_all('table', attrs={'class': 'infobox'})
+                
+                # Initialize a list to store labels
                 labels_list = []
+                
+                # Iterate over each infobox table
                 for infobox_soup in infobox_soups_list:
+                    
+                    # Find label elements within the infobox with specific attributes
                     label_soups_list = infobox_soup.find_all('th', attrs={
                         'scope': 'row', 'class': 'infobox-label', 'colspan': False
                     })
+                    
+                    # Iterate over each label cell
                     for infobox_label_soup in label_soups_list:
+                        
+                        # Clean and format label text, ensuring unique keys
                         key = ascii_regex.sub('_', clean_text(infobox_label_soup).lower()).strip('_')
                         if key and (key not in labels_list):
+                            
+                            # Add the label to the list if it's not a duplicate
                             labels_list.append(key)
+                            
+                            # Find the corresponding value cell
                             value_soup = infobox_label_soup.find_next('td', attrs={'class': 'infobox-data'})
+                            
+                            # Add the key-value pair to the dictionary
                             row_dict[key] = clean_text(value_soup)
-            except: continue
+            except Exception as e:
+                
+                # Continue to the next page if an error occurs
+                if verbose:
+                    print(f"{e.__class__.__name__} error processing {page_title}: {str(e).strip()}")
+                continue
+            
+            # Add the dictionary to the list of rows
             rows_list.append(row_dict)
+        
+        # Create a dataframe from the list of rows
         df = DataFrame(rows_list)
         
+        # Return the dataframe
         return df
     
     
