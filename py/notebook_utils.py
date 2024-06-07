@@ -1184,7 +1184,7 @@ class NotebookUtilities(object):
     
     @staticmethod
     def open_path_in_notepad(
-        path_str, home_key='USERPROFILE', text_editor_path=r'C:\Program Files\Notepad++\notepad++.exe',
+        path_str, home_key='USERPROFILE', text_editor_path=None,
         continue_execution=True, verbose=True
     ):
         """
@@ -1208,6 +1208,13 @@ class NotebookUtilities(object):
             nu.open_path_in_notepad(r'C:\example.txt')
         """
         
+        # Establish the text_editor_path in this operating system, if needed
+        if text_editor_path is None:
+            if os.name == 'nt':
+                text_editor_path = r'C:\Program Files\Notepad++\notepad++.exe'
+            else:
+                text_editor_path = '/mnt/c/Program Files/Notepad++/notepad++.exe'
+        
         # Expand '~' to the home directory in the file path
         environ_dict = dict(os.environ)
         if ('~' in path_str):
@@ -1216,10 +1223,11 @@ class NotebookUtilities(object):
         
         # Get the absolute path to the file
         absolute_path = osp.abspath(path_str)
+        if os.name != 'nt':
+            absolute_path = absolute_path.replace('/mnt/c/', 'C:\\').replace('/', '\\')
         if verbose: print(f'Attempting to open {absolute_path}')
 
         # Open the absolute path to the file in Notepad or the specified text editor
-        # !"{text_editor_path}" "{absolute_path}"
         cmd = [text_editor_path, absolute_path]
         proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         if not continue_execution:
