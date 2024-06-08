@@ -352,21 +352,36 @@ class NotebookUtilities(object):
             list of lists of int or float
                 A list of sublists, each containing consecutive ages.
         """
-        splits_list = []  # List to store sublists of consecutive ages
-        current_list = []  # Temporary list to store the current consecutive ages
-        previous_age = ages_list[0] - value_difference  # Initialize with a value lower than the first age
+        
+        # List to store sublists of consecutive ages
+        splits_list = [] 
+        
+        # Temporary list to store the current consecutive ages
+        current_list = [] 
+        
+        # Initialize with a value lower than the first age
+        previous_age = ages_list[0] - value_difference 
         
         # Iterate over the list of ages
         for age in ages_list:
             
             # Check if there is a gap (larger than value_difference) between the current age and the previous age
             if age - previous_age > value_difference:
-                splits_list.append(current_list)  # Append the current_list to splits_list
-                current_list = []  # Reset the current_list
-            current_list.append(age)  # Add the current age to the current_list
-            previous_age = age  # Update the previous_age
+                
+                # Append the current_list to splits_list
+                splits_list.append(current_list) 
+                
+                # Reset the current_list
+                current_list = [] 
+            
+            # Add the current age to the current_list
+            current_list.append(age) 
+            
+            # Update the previous_age
+            previous_age = age 
         
-        splits_list.append(current_list)  # Append the last current_list to splits_list
+        # Append the last current_list to splits_list
+        splits_list.append(current_list) 
         
         # Return the list of sublists of ages
         return splits_list
@@ -880,28 +895,65 @@ class NotebookUtilities(object):
     @staticmethod
     def replace_consecutive_elements(actions_list, element):
         """
-        Replace consecutive elements in a list with a count of how many there are in a row.
+        Replace consecutive elements in a list with a count of how many 
+        there are in a row.
+        
+        This function iterates through a list (`actions_list`) and 
+        replaces consecutive occurrences of a specified element 
+        (`element`) with a string representation indicating the element 
+        and its count. For example, if the list contains ['a', 'a', 'b', 
+        'a', 'a'], the function would return ['a x2', 'b', 'a x2'].
         
         Parameters:
-            list1: A list of elements.
-            element: The element to replace consecutive occurrences of.
+            actions_list (list):
+                A list of elements.
+            element (any):
+                The element to replace consecutive occurrences of.
         
         Returns:
-            A list with the consecutive elements replaced with a count of how many there are in a row.
+            list
+                A new list with consecutive elements replaced by count strings 
+                (e.g., 'element xN').
         """
+        
+        # Initialize an empty result list to store the modified elements
         result = []
+        
+        # Initialize a count to keep track of consecutive occurrences of the element
         count = 0
+        
+        # Loop through each element in the input list
         for i in range(len(actions_list)):
-            if (actions_list[i] == element): count += 1
+            
+            # If the current element is the target element, increment the count
+            if actions_list[i] == element:
+                
+                # Increment the count if it's the target element
+                count += 1
+            
+            # If a new element is encountered (not the target element)
             else:
-                if (count > 0): result.append(f'{element} x{str(count)}')
+                
+                # Check if there were consecutive elements before
+                if count > 0:
+                    
+                    # Append a string representation of the previous element and its count
+                    result.append(f'{element} x{str(count)}')
+                
+                # Add the current element to the result list
                 result.append(actions_list[i])
+                
+                # Reset the count for the new element
                 count = 0
         
-        # Handle the last element
-        if (count > 0): result.append(f'{element} x{str(count)}')
+        # Handle the last element if there was a sequence at the end
+        if count > 0:
+            
+            # Append the last counted element with its count to the result list
+            result.append(f'{element} x{str(count)}')
         
-        return(result)
+        # Return the modified list with counts replacing consecutive elements
+        return result
     
     
     @staticmethod
@@ -1244,7 +1296,8 @@ class NotebookUtilities(object):
         
         Parameters:
             folder_path (str): The path to the directory to scan for top-level folders.
-            verbose (bool, optional): Whether to print debug information about the process. Defaults to False.
+            verbose (bool, optional):
+                Whether to print debug or status messages. Defaults to False.
         
         Returns:
             list[str]: A list of absolute paths to all top-level folders within the provided directory.
@@ -1453,20 +1506,25 @@ class NotebookUtilities(object):
 
     def show_dupl_fn_defs_search_string(self, util_path=None, github_folder=None):
         """
-        Identify and report duplicate function definitions in Jupyter notebooks and suggests how to consolidate them.
+        Identify and report duplicate function definitions in Jupyter 
+        notebooks and suggest how to consolidate them.
         
         Parameters:
-            util_path (str, optional): The path to the utility file where refactored functions will be added.
-                Defaults to '../py/notebook_utils.py'.
-            github_folder (str, optional): The path to the GitHub repository containing the Jupyter notebooks.
-                Default is the parent folder of the current directory.
+            util_path (str, optional):
+                The path to the utility file where refactored functions will be 
+                added. Defaults to '../py/notebook_utils.py'.
+            github_folder (str, optional):
+                The path to the GitHub repository containing the Jupyter 
+                notebooks. Default is the parent folder of the current directory.
         
         Returns:
             None
         
         Notes:
-        The function prints a search string pattern that can be used to identify duplicate function definitions in Jupyter notebooks.
-        The pattern is based on the function names extracted from the notebook using `get_notebook_functions_dictionary()`.
+            The function prints a search string pattern that can be used to 
+            identify duplicate function definitions in Jupyter notebooks. The 
+            pattern is based on the function names extracted from the 
+            notebook using `get_notebook_functions_dictionary()`.
         
         Example:
             nu.show_dupl_fn_defs_search_string()
@@ -1660,8 +1718,11 @@ class NotebookUtilities(object):
         Returns:
             bool: True if the pickle file exists, False otherwise.
         """
+        
+        # Construct the pickle path using the pickle_name and the class's saves_pickle_folder
         pickle_path = osp.join(self.saves_pickle_folder, '{}.pkl'.format(pickle_name))
-
+        
+        # Return if the pickle file exists at the specified path
         return osp.isfile(pickle_path)
     
     
@@ -1825,7 +1886,8 @@ class NotebookUtilities(object):
 
         Parameters:
             include_index: Whether to include the index in the CSV files.
-            verbose: Whether to print information about the saved files.
+            verbose:
+                Whether to print debug or status messages. Defaults to True.
             **kwargs: A dictionary of data frames to save. The keys of the dictionary
                       are the names of the CSV files to save the data frames to.
 
@@ -1835,6 +1897,8 @@ class NotebookUtilities(object):
 
         # Iterate over the data frames in the kwargs dictionary and save them to CSV files
         for frame_name in kwargs:
+            
+            # Check if it's a dataframe
             if isinstance(kwargs[frame_name], DataFrame):
                 
                 # Generate the path to the CSV file
@@ -1848,32 +1912,50 @@ class NotebookUtilities(object):
                                           index=include_index)
     
     
-    def store_objects(self, verbose: bool = True, **kwargs: dict) -> None:
+    def store_objects(self, verbose=True, **kwargs):
         """
         Store objects to pickle files.
-
+        
+        This function iterates through keyword arguments (**kwargs) and 
+        attempts to pickle each provided object to a separate file. The 
+        keys in the dictionary are used as filenames (with a `.pkl` 
+        extension) within the `self.saves_pickle_folder` directory.
+        
         Parameters:
-            verbose (bool, optional): Whether to print status messages. Defaults to True.
-            **kwargs (dict): The objects to store. The keys of the dictionary are the names of the objects,
-                and the values are the objects themselves.
-
+            verbose (bool, optional):
+                Whether to print debug or status messages. Defaults to True.
+            **kwargs (dict):
+                The objects to store. The keys of the dictionary are the names of 
+                the objects, and the values are the objects themselves.
+        
         Returns:
             None
-
         """
+        
+        # Iterate over each object in kwargs
         for obj_name in kwargs:
+            
+            # Construct the path where the object will be pickled
             pickle_path = osp.join(self.saves_pickle_folder, '{}.pkl'.format(obj_name))
+            
+            # If the object is a dataframe, use the attempt_to_pickle method
             if isinstance(kwargs[obj_name], DataFrame):
                 self.attempt_to_pickle(kwargs[obj_name], pickle_path, raise_exception=False, verbose=verbose)
+            
             else:
-                if verbose: print('Pickling to {}'.format(osp.abspath(pickle_path)), flush=True)
+                
+                # For non-dataframe objects, print a message if verbose mode is enabled
+                if verbose:
+                    print('Pickling to {}'.format(osp.abspath(pickle_path)), flush=True)
+                
+                # Open the pickle file for writing
                 with open(pickle_path, 'wb') as handle:
-
-                    # Protocol 4 is not handled in python 2
+                    
+                    # If the Python version is 2, use protocol 2 to pickle the object
                     if sys.version_info.major == 2:
                         pickle.dump(kwargs[obj_name], handle, 2)
-
-                    # Pickle protocol must be <= 4
+                    
+                    # If the Python version is 3, use the highest protocol up to 4 to pickle the object
                     elif sys.version_info.major == 3:
                         pickle.dump(kwargs[obj_name], handle, min(4, pickle.HIGHEST_PROTOCOL))
     
@@ -1962,7 +2044,7 @@ class NotebookUtilities(object):
             python_folder (str, optional):
                 Relative path to the folder to scan for Python files
             verbose (bool, optional):
-                Whether to print debug messages during processing. Defaults to True.
+                Whether to print debug or status messages. Defaults to True.
         
         Returns:
             None
@@ -2040,27 +2122,33 @@ class NotebookUtilities(object):
                             print(f'{e.__class__.__name__} error trying to read {file_name}: {str(e).strip()}')
     
     
-    def update_modules_list(
-        self, modules_list: Optional[List[str]] = None, verbose: bool = False
-    ) -> None:
+    def update_modules_list(self, modules_list=None, verbose=False):
         """
         Update the list of modules that are installed.
         
         Parameters:
-            modules_list (Optional[List[str]], optional): The list of modules to update. If None,
-                the list of installed modules will be used. Defaults to None.
-            verbose (bool, optional): Whether to print status messages. Defaults to False.
+            modules_list (list of str, optional):
+                The list of modules to update. If None, the list of installed 
+                modules will be used. Defaults to None.
+            verbose (bool, optional):
+                Whether to print debug or status messages. Defaults to False.
         
         Returns:
             None
         """
-
-        if modules_list is None: self.modules_list = [
-            o.decode().split(' ')[0] for o in subprocess.check_output(f'{self.pip_command_str} list'.split(' ')).splitlines()[2:]
-            ]
-        else: self.modules_list = modules_list
-
-        if verbose: print('Updated modules list to {}'.format(self.modules_list), flush=True)
+        
+        # Create the modules list with pip if not supplied
+        if modules_list is None:
+            self.modules_list = [
+                o.decode().split(' ')[0] for o in subprocess.check_output(f'{self.pip_command_str} list'.split(' ')).splitlines()[2:]
+                ]
+        
+        # Set the class variable if it is
+        else:
+            self.modules_list = modules_list
+        
+        if verbose:
+            print('Updated modules list to {}'.format(self.modules_list), flush=True)
     
     
     def ensure_module_installed(self, module_name, upgrade=False, update_first=False, verbose=True):
@@ -2083,7 +2171,7 @@ class NotebookUtilities(object):
                 Whether to update the modules list before checking if the module 
                 is installed. Defaults to False.
             verbose (bool, optional):
-                Whether to print status messages. Defaults to True.
+                Whether to print debug or status messages. Defaults to True.
         
         Returns:
             None
@@ -2176,11 +2264,13 @@ class NotebookUtilities(object):
                     indent_str, comment_str = comment_tuple
                     if 'verbose' in comment_str:
                         continue
-                    comments_list.append(indent_str + comment_str)
+                    comments_list.append(indent_str + comment_str + '.')
                 
                 # If there are any comments in the list, print its procedure description and comments on their own lines
                 if len(comments_list) > 1:
-                    comments_list = self.apply_multilevel_numbering(comments_list, add_indent_back_in=True)
+                    comments_list = self.apply_multilevel_numbering(
+                        comments_list, level_map={0: "", 4: "A. ", 8: "1. ", 12: "a) ", 16: "1) ", 20: "i) "}, add_indent_back_in=True
+                    )
                     print('\n'.join(comments_list))
     
     
@@ -2314,7 +2404,8 @@ class NotebookUtilities(object):
             page_url_or_filepath (str): The URL or filepath of the page to get the soup object for.
             driver (selenium.webdriver, optional): Whether to get the page source from the Selenium
                 webpage. Defaults to None.
-            verbose (bool, optional): Whether to print verbose output. Defaults to True.
+            verbose (bool, optional):
+                Whether to print debug or status messages. Defaults to True.
 
         Returns:
             BeautifulSoup: The BeautifulSoup soup object for the given page.
@@ -2398,7 +2489,8 @@ class NotebookUtilities(object):
         
         Parameters:
             tables_url_or_filepath: The URL or filepath to the Wikipedia page containing the tables.
-            verbose: Whether to print verbose output.
+            verbose:
+                Whether to print debug or status messages. Defaults to True.
         
         Returns:
             A list of DataFrames containing the data from the Wikipedia tables.
@@ -2447,7 +2539,7 @@ class NotebookUtilities(object):
             page_titles_list (list of str):
                 A list of titles of the Wikipedia pages containing the infoboxes.
             verbose (bool, optional):
-                Whether to print debug output.
+                Whether to print debug or status messages. Defaults to True.
         
         Returns:
             pandas.DataFrame
@@ -2879,7 +2971,8 @@ class NotebookUtilities(object):
         Parameters:
             row_index (int): The index to be assigned to the new DataFrame row.
             row_series (pandas.Series): The Pandas Series representing the row's data.
-            verbose (bool, optional): Whether to print debug info. Default is True.
+            verbose (bool, optional):
+                Whether to print debug or status messages. Default is True.
         
         Returns:
             pandas.DataFrame: A single-row DataFrame containing the data from the input Pandas Series.
@@ -3080,7 +3173,7 @@ class NotebookUtilities(object):
             indices_list (pandas.index or list):
                 A list of row indices where the DataFrame should be split.
             verbose (bool, optional):
-                Whether to print debug output.
+                Whether to print debug or status messages. Defaults to False.
         
         Returns:
             list of pandas.DataFrame:
@@ -3124,7 +3217,7 @@ class NotebookUtilities(object):
     def split_df_by_iloc(df, indices_list, verbose=False):
         """
         Split a DataFrame into a list of smaller DataFrames based on specified
-        iloc indexer start integers.
+        iloc-indexer start integers.
         
         This static method takes a DataFrame (`df`), a list of indices (`indices_list`), and an
         optional `verbose` flag. It splits the DataFrame into sub-DataFrames based on the provided
@@ -3137,7 +3230,7 @@ class NotebookUtilities(object):
             indices_list (list or array of integers):
                 the iloc indexer start integers to split on.
             verbose (bool, optional):
-                Whether to print debug output.
+                Whether to print debug or status messages. Defaults to False.
         
         Returns:
             List[DataFrame]:
@@ -3494,7 +3587,7 @@ class NotebookUtilities(object):
                 A tuple representing the RGB values of the background color. 
                 Defaults to (0, 0, 0), which is black.
             verbose (bool, optional):
-                Whether to print debug output.
+                Whether to print debug or status messages. Defaults to False.
         
         Returns:
             str
@@ -3658,26 +3751,37 @@ class NotebookUtilities(object):
     
     
     @staticmethod
-    def plot_histogram(df, xname, xlabel, title, xtick_text_fn=None, ylabel=None, xticks_are_temporal=False, ax=None, color=None, bins=100):
+    def plot_histogram(
+        df, xname, xlabel, title, xtick_text_fn=None, ylabel=None,
+        xticks_are_temporal=False, ax=None, color=None, bins=100
+    ):
         """
         Plot a histogram of a DataFrame column.
         
         Parameters:
-            df: A Pandas DataFrame.
-            xname: The name of the column to plot the histogram of.
-            xlabel: The label for the x-axis.
-            title: The title of the plot.
-            xtick_text_fn: A function that takes a text object as input and returns a new
+            df:
+                A Pandas DataFrame.
+            xname:
+                The name of the column to plot the histogram of.
+            xlabel:
+                The label for the x-axis.
+            title:
+                The title of the plot.
+            xtick_text_fn:
+                A function that takes a text object as input and returns a new 
                 text object to be used as the tick label. Defaults to None.
-            ylabel: The label for the y-axis.
-            ax: A matplotlib axis object. If None, a new figure and axis will be created.
+            ylabel:
+                The label for the y-axis.
+            ax:
+                A matplotlib axis object. If None, a new figure and axis will be created.
         
         Returns:
             A matplotlib axis object.
         """
         
         # Create the figure and subplot
-        if ax is None: fig, ax = plt.subplots(figsize=(18, 9))
+        if ax is None:
+            fig, ax = plt.subplots(figsize=(18, 9))
         
         # Plot the histogram with centered bars
         df[xname].hist(ax=ax, bins=bins, align='mid', edgecolor='black', color=color)
@@ -3686,9 +3790,11 @@ class NotebookUtilities(object):
         plt.grid(False)
         ax.set_title(title)
         ax.set_xlabel(xlabel)
-        if ylabel is None: ylabel = 'Count of Instances in Bin'
+        if ylabel is None:
+            ylabel = 'Count of Instances in Bin'
         ax.set_ylabel(ylabel)
-
+        
+        # Check if the xticks are temporal
         if xticks_are_temporal:
         
             # Set the minor x-axis tick labels to every 30 seconds
@@ -3696,19 +3802,19 @@ class NotebookUtilities(object):
             minor_ticks = np.arange(0, df[xname].max() + thirty_seconds, thirty_seconds)
             ax.set_xticks(minor_ticks, minor=True)
             
-            # Set the major x-axis tick labels to every 5 minutes
+            # If there are more than 84 minor ticks, set the major x-axis tick labels to every 5 minutes
             if (len(minor_ticks) > 84):
                 five_minutes = 1_000 * 60 * 5
                 major_ticks = np.arange(0, df[xname].max() + five_minutes, five_minutes)
                 ax.set_xticks(major_ticks)
             
-            # Set the major x-axis tick labels to every 60 seconds
+            # Otherwise, set the major x-axis tick labels to every 60 seconds
             else:
                 sixty_seconds = 1_000 * 60
                 major_ticks = np.arange(0, df[xname].max() + sixty_seconds, sixty_seconds)
                 ax.set_xticks(major_ticks)
         
-        # Humanize x tick labels
+        # Humanize the x tick labels if there is an xtick text funtion
         if xtick_text_fn is not None:
             xticklabels_list = []
             for text_obj in ax.get_xticklabels():
@@ -3717,11 +3823,10 @@ class NotebookUtilities(object):
                 text_obj.set_text(xtick_text_fn(text_obj))
                 
                 xticklabels_list.append(text_obj)
-            # print(len(xticklabels_list))
             if (len(xticklabels_list) > 17): ax.set_xticklabels(xticklabels_list, rotation=90)
             else: ax.set_xticklabels(xticklabels_list)
         
-        # Humanize y tick labels
+        # Humanize the y tick labels
         yticklabels_list = []
         for text_obj in ax.get_yticklabels():
             text_obj.set_text(humanize.intword(int(text_obj.get_position()[1])))
@@ -3983,7 +4088,7 @@ class NotebookUtilities(object):
                 A list of colors to use for the data points. Defaults to None 
                 (using default scatter plot colors).
             verbose (bool, optional):
-                Whether to print debug output. Defaults to False.
+                Whether to print debug or status messages. Defaults to False.
         
         Returns:
             tuple
@@ -4121,7 +4226,8 @@ class NotebookUtilities(object):
             title_prefix (str): A prefix to add to the plot title.
             inaugruation_verb (str, optional): The verb to use for inauguration, such as "inauguration" or "swearing-in". Defaults to "Inauguration".
             legend_tuple (tuple, optional): A tuple specifying the location of the legend, such as (0.02, 0.76). Defaults to None.
-            verbose (bool, optional): Whether to print debug info. Defaults to False.
+            verbose (bool, optional):
+                Whether to print debug or status messages. Defaults to False.
         
         Returns:
             None
@@ -4304,23 +4410,78 @@ class NotebookUtilities(object):
     
     @staticmethod
     def plot_grouped_pie_chart(df, column_name, slice_label, slice_cutoff=None, verbose=False):
+        """
+        Create a grouped pie chart to visualize the distribution of 
+        values in a DataFrame column.
         
-        # Filter non-null values in the specified column
-        mark_series = ~df[column_name].isnull()  # Filter non-null values in the column
+        This function generates a pie chart representing the distribution 
+        of unique values within a specified column (`column_name`) of a 
+        pandas DataFrame (`df`). It filters out any missing values (NaN) 
+        before counting the occurrences of each unique value.
+        
+        The function allows grouping less frequent values into a single 
+        slice labeled according to the provided `slice_label`. This helps 
+        focus on the most prominent categories while still acknowledging 
+        the presence of less frequent ones. The grouping threshold 
+        (`slice_cutoff`) can be customized, or it defaults to 2% of the 
+        total count.
+        
+        Parameters:
+            df (pandas.DataFrame):
+                The DataFrame containing the column to be plotted.
+            column_name (str):
+                The name of the column to be visualized.
+            slice_label (str):
+                The label for the slice grouping less frequent values (defaults to 
+                'Other').
+            slice_cutoff (int or float, optional):
+                The count cutoff for grouping values into one slice. If None, defaults to 2% of the total count.
+            verbose (bool, optional):
+                Whether to print debug or status messages. Defaults to False.
+        
+        Returns:
+            matplotlib.pyplot.Figure:
+                The matplotlib figure object representing the generated pie chart.
+        """
+        
+        # Filter for non-null values in the specified column
+        mark_series = ~df[column_name].isnull()
         filtered_values = df[mark_series][column_name]
+        
+        if verbose:
+            print(f"Total number of rows in DataFrame: {len(df)}")
+            print(f"Number of non-null values in column '{column_name}': {len(filtered_values)}")
         
         # Count the occurrences of each unique value
         value_counts = filtered_values.value_counts()
         
-        # Group values with count equal to cutoff into one slice
-        if slice_cutoff is None: slice_cutoff = value_counts.sum()*0.02
-        grouped_value_counts = value_counts[value_counts > slice_cutoff]
-        other_slice = value_counts[value_counts <= slice_cutoff].sum()
-        if other_slice: grouped_value_counts[slice_label] = other_slice
+        # Determine the cutoff for grouping smaller slices
+        if slice_cutoff is None:
+            slice_cutoff = value_counts.sum()*0.02
+        if verbose:
+            print(f"Slice cutoff for grouping less frequent values: {slice_cutoff}")
         
-        # Plot a pie chart
+        # Group values below cutoff and create a new slice for them
+        grouped_value_counts = value_counts[value_counts > slice_cutoff]
+        
+        # Sum the values below the cutoff
+        other_slice = value_counts[value_counts <= slice_cutoff].sum()
+        
+        # Add the grouped slice to the counts
+        if other_slice:
+            grouped_value_counts[slice_label] = other_slice
+        
+        # Print the grouped value counts if verbose
+        if verbose:
+            print("Grouped value counts:\n", grouped_value_counts)
+        
+        # Set the figure size
         plt.figure(figsize=(8, 8))
+        
+        # Plot the pie chart
         plt.pie(grouped_value_counts, labels=grouped_value_counts.index, autopct='%1.1f%%', startangle=90)
+        
+        # Set the title of the chart
         plt.title(f'Distribution of {column_name}')
         
         # Return the matplotlib figure object
@@ -4329,39 +4490,106 @@ class NotebookUtilities(object):
     
     @staticmethod
     def plot_right_circles(tuples_list, draw_a_two_circle_venn_diagram, verbose=False):
-        plot_count = len(tuples_list)
-        ncols = min(3, plot_count)
-        nrows = max(1, int(math.ceil(plot_count / ncols)))
-        fig, axes = plt.subplots(nrows, ncols, figsize=(12, 4))
-        if verbose: print(type(axes))
+        """
+        Plot a series of two-circle Venn diagrams in a grid layout.
         
+        This function takes a list of tuples, where each tuple contains 
+        data for a two-circle Venn diagram. It creates a subplot for each 
+        Venn diagram and displays them in a grid layout.
+        
+        Parameters:
+            tuples_list (list of tuples):
+                A list of tuples, each containing the data for one Venn diagram.
+            draw_a_two_circle_venn_diagram (function):
+                A function that draws a two-circle Venn diagram given a tuple of 
+                data and an axes object.
+            verbose (bool, optional):
+                Whether to print debug or status messages. Defaults to False.
+        
+        Returns:
+            matplotlib.figure.Figure
+                The matplotlib figure object of the grid of Venn diagrams.
+        """
+        
+        # Get the number of plots to create
+        plot_count = len(tuples_list)
+        
+        # Determine the optimal grid layout to have a maximum of 3 columns per row
+        ncols = min(3, plot_count)
+        
+        # Determine the optimal grid layout to have at least 1 row
+        nrows = max(1, int(math.ceil(plot_count / ncols)))
+        
+        # Create the Matplotlib figure and subplots
+        fig, axes = plt.subplots(nrows, ncols, figsize=(12, 4))
+        
+        # Print type information for debugging if verbose flag is set
+        if verbose:
+            print(f"axes type: {type(axes)}")
+        
+        # Loop through data tuples and corresponding subplots
         for i, right_circle_tuple in enumerate(tuples_list):
-            col = (i % 3)
-            if verbose: print(i, col, ncols)
-            if (nrows > 1):
-                row = int(math.floor(i / 3))
+            
+            # Calculate column index based on loop counter and number of columns
+            col = i % ncols
+            
+            # Print debugging information if verbose flag is set
+            if verbose:
+                print(f"Index: {i}, Column: {col}, Columns: {ncols}")
+            
+            # Determine subplot based on number of rows and plot count
+            if nrows > 1:
+                
+                # If more than one row, base the row index on loop counter and columns
+                row = int(math.floor(i / ncols))
+                
+                # Access the specific subplot
                 ax = axes[row, col]
-            elif (plot_count == 1): ax = axes
-            else: ax = axes[col]
-            # import matplotlib
-            # assert type(ax) == matplotlib.axes.Subplot, f"ax is of type {type(ax)}, it should be matplotlib.axes.Subplot"
+            
+            # If only one plot, axes is not an array
+            elif plot_count == 1:
+                ax = axes
+            
+            # If only one row, access by column index
+            else:
+                ax = axes[col]
+            
+            # Assert expected type for the subplot object
+            import matplotlib
+            assert isinstance(ax, matplotlib.axes.SubplotBase), f"ax is of type {type(ax)}, it should be matplotlib.axes.SubplotBase"
+            
+            # Draw the Venn diagram on the current axes
             draw_a_two_circle_venn_diagram(right_circle_tuple, ax=ax)
-
-        # Hide the unused axes
+        
+        # Hide any unused subplots in the grid
         for i in range(nrows * ncols, plot_count, -1):
-            col = (i - 1) % 3
-            if verbose: print(i, col, ncols)
-            if (nrows > 1):
+            
+            # Calculate column index based on loop counter and number of columns (in reverse order)
+            col = (i - 1) % ncols
+            
+            # Print debugging information if verbose flag is set
+            if verbose:
+                print(f"Index: {i}, Column: {col}, Columns: {ncols}")
+            
+            # If there are more than one rows, determine the subplot based on number of rows and plot count (in reverse order)
+            if nrows > 1:
                 row = (i - 1) // 3
                 ax = axes[row, col]
-            elif (plot_count == 1): ax = axes
-            else: ax = axes[i]
+            
+            # If its a single, the plot occupies the entire figure
+            elif plot_count == 1:
+                ax = axes
+            
+            else:
+                ax = axes[i]
+            
+            # Turn off axis visibility for unused subplots
             ax.axis('off')
-
-        # Adjust spacing between subplots
+        
+        # Adjust spacing between subplots for better presentation
         plt.tight_layout()
         
-        # Return the matplotlib figure object
+        # Return the Matplotlib figure object containing the generated plots
         return plt
     
     
@@ -4442,11 +4670,11 @@ class NotebookUtilities(object):
             
             # Plot the points on the axes
             ax.scatter(x=range(len(np_sequence)), y=points, marker='s', label=value, s=35, color=color_dict[value])
-            # if verbose:
-                # color_cycle = plt.rcParams['axes.prop_cycle']
-                # print('\nPrinting the colors in the rcParams color cycle:')
-                # for color in color_cycle: print(color)
-                # print()
+            if verbose:
+                color_cycle = plt.rcParams['axes.prop_cycle']
+                print('\nPrinting the colors in the rcParams color cycle:')
+                for color in color_cycle: print(color)
+                print()
         
         # Set the yticks label values
         plt.yticks(range(alphabet_len), alphabet_list)
@@ -4505,27 +4733,28 @@ class NotebookUtilities(object):
         # Set the suptitle on the figure
         if suptitle is not None:
             if (alphabet_len <= 6):
-                # from scipy.optimize import curve_fit
-                # import matplotlib.pyplot as plt
-                # import numpy as np
-                # x = np.array([1, 4, 6])
-                # y = np.array([1.95, 1.08, 1.0])
-                # def linear_func(x, m, b): return m * x + b
-                # def exp_decay_func(x, a, b, c): return a * np.exp(-b * x) + c
-                # popt, pcov = curve_fit(linear_func, x, y)
-                # popt, pcov = curve_fit(exp_decay_func, x, y)
-                # m, b = popt
-                # a, b, c = popt
-                # fitted_equation = f'y = {m:.2f}*alphabet_len + {b:.2f}'
-                # fitted_equation = f'y = {a:.2f} * np.exp(-{b:.2f} * alphabet_len) + {c:.2f}'
-                # print(fitted_equation)
-                # plt.plot(x, y, 'o', label='Data points')
-                # plt.plot(x, linear_func(x, *popt), label='Linear line')
-                # plt.plot(x, exp_decay_func(x, *popt), label='Exponential Decay line')
-                # plt.xlabel('x')
-                # plt.ylabel('y')
-                # plt.legend()
-                # plt.show()
+                if verbose:
+                    from scipy.optimize import curve_fit
+                    import matplotlib.pyplot as plt
+                    import numpy as np
+                    x = np.array([1, 4, 6])
+                    y = np.array([1.95, 1.08, 1.0])
+                    def linear_func(x, m, b): return m * x + b
+                    def exp_decay_func(x, a, b, c): return a * np.exp(-b * x) + c
+                    popt, pcov = curve_fit(linear_func, x, y)
+                    popt, pcov = curve_fit(exp_decay_func, x, y)
+                    m, b = popt
+                    a, b, c = popt
+                    fitted_equation = f'y = {m:.2f}*alphabet_len + {b:.2f}'
+                    fitted_equation = f'y = {a:.2f} * np.exp(-{b:.2f} * alphabet_len) + {c:.2f}'
+                    print(fitted_equation)
+                    plt.plot(x, y, 'o', label='Data points')
+                    plt.plot(x, linear_func(x, *popt), label='Linear line')
+                    plt.plot(x, exp_decay_func(x, *popt), label='Exponential Decay line')
+                    plt.xlabel('x')
+                    plt.ylabel('y')
+                    plt.legend()
+                    plt.show()
                 y = 2.06 * np.exp(-0.75 * alphabet_len) + 0.98
                 if verbose: print(f'alphabet_len={alphabet_len}, y={y}')
             else: y = 0.95
