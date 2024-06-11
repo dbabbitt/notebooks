@@ -2176,7 +2176,7 @@ class NotebookUtilities(object):
                 Whether to update the modules list before checking if the module 
                 is installed. Defaults to False.
             verbose (bool, optional):
-                Whether to print debug or status messages. Defaults to False.
+                Whether to print debug or status messages. Defaults to True.
         
         Returns:
             None
@@ -2499,7 +2499,7 @@ class NotebookUtilities(object):
         Parameters:
             tables_url_or_filepath: The URL or filepath to the Wikipedia page containing the tables.
             verbose (bool, optional):
-                Whether to print debug or status messages. Defaults to False.
+                Whether to print debug or status messages. Defaults to True.
         
         Returns:
             A list of DataFrames containing the data from the Wikipedia tables.
@@ -2548,7 +2548,7 @@ class NotebookUtilities(object):
             page_titles_list (list of str):
                 A list of titles of the Wikipedia pages containing the infoboxes.
             verbose (bool, optional):
-                Whether to print debug or status messages. Defaults to False.
+                Whether to print debug or status messages. Defaults to True.
         
         Returns:
             pandas.DataFrame
@@ -2985,7 +2985,7 @@ class NotebookUtilities(object):
             row_index (int): The index to be assigned to the new DataFrame row.
             row_series (pandas.Series): The Pandas Series representing the row's data.
             verbose (bool, optional):
-                Whether to print debug or status messages. Defaults to False.
+                Whether to print debug or status messages. Defaults to True.
         
         Returns:
             pandas.DataFrame: A single-row DataFrame containing the data from the input Pandas Series.
