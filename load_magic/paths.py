@@ -7,17 +7,17 @@ import subprocess
 
 
 
-def print_all_files_ending_starting_with(root_dir=r'D:\Documents\Repositories', ends_with='.yml', starts_with='install_config_',
+def print_all_files_ending_starting_with(root_dir=r'D:\Documents\GitHub', ends_with='.yml', starts_with='install_config_',
                                          black_list=['$RECYCLE.BIN', '$Recycle.Bin']):
-    if type(root_dir) == list:
+    if isinstance(root_dir, list):
         root_dir_list = root_dir
     else:
         root_dir_list = [root_dir]
-    if type(ends_with) == list:
+    if isinstance(ends_with, list):
         endswith_list = ends_with
     else:
         endswith_list = [ends_with]
-    if type(starts_with) == list:
+    if isinstance(starts_with, list):
         startswith_list = starts_with
     else:
         startswith_list = [starts_with]
@@ -40,11 +40,11 @@ def print_all_files_ending_starting_with(root_dir=r'D:\Documents\Repositories', 
 
 def print_all_files_starting_with(root_dir=r'D:\Vagrant_Projects\local-vagrant', starts_with='host',
                                   black_list=['$RECYCLE.BIN', '$Recycle.Bin']):
-    if type(root_dir) == list:
+    if isinstance(root_dir, list):
         root_dir_list = root_dir
     else:
         root_dir_list = [root_dir]
-    if type(starts_with) == list:
+    if isinstance(starts_with, list):
         startswith_list = starts_with
     else:
         startswith_list = [starts_with]
@@ -63,11 +63,11 @@ def print_all_files_starting_with(root_dir=r'D:\Vagrant_Projects\local-vagrant',
 
 
 def print_all_files_ending_with(root_dir=r'D:\\', ends_with='.box', black_list=['$RECYCLE.BIN', '$Recycle.Bin']):
-    if type(root_dir) == list:
+    if isinstance(root_dir, list):
         root_dir_list = root_dir
     else:
         root_dir_list = [root_dir]
-    if type(ends_with) == list:
+    if isinstance(ends_with, list):
         endswith_list = ends_with
     else:
         endswith_list = [ends_with]
@@ -84,7 +84,7 @@ def print_all_files_ending_with(root_dir=r'D:\\', ends_with='.box', black_list=[
 
 
 
-def get_git_lfs_track_commands(repository_name, repository_dir=r'D:\Documents\Repositories'):
+def get_git_lfs_track_commands(repository_name, repository_dir=r'D:\Documents\GitHub'):
     black_list = [os.path.join(repository_dir, repository_name, '.git')]
     file_types_set = set()
     for sub_directory, directories_list, files_list in os.walk(os.path.join(repository_dir, repository_name)):
@@ -102,7 +102,7 @@ def get_git_lfs_track_commands(repository_name, repository_dir=r'D:\Documents\Re
 
 #repository_dir = r'D:\Vagrant_Projects'
 #text_editor_path = r'C:\Program Files\Sublime Text 3\sublime_text.exe'
-def get_specific_gitignore_files(repository_name, repository_dir=r'D:\Documents\Repositories',
+def get_specific_gitignore_files(repository_name, repository_dir=r'D:\Documents\GitHub',
                                  text_editor_path=r'C:\Program Files\Notepad++\notepad++.exe'):
     print('''# Ignore big files (GitHub will warn you when pushing files larger than 50 MB. You will not be allowed to
 # push files larger than 100 MB.) Tip: If you regularly push large files to GitHub, consider introducing
