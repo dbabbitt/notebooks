@@ -4216,8 +4216,8 @@ class NotebookUtilities(object):
         line_kws = dict(color='k', zorder=1, alpha=.25)
         
         # Set scatter plot properties, including color list if provided
-        if color_list is None: scatter_kws = dict(s=30, lw=.5, edgecolors='k', zorder=2)
-        else: scatter_kws = dict(s=30, lw=.5, edgecolors='k', zorder=2, color=color_list)
+        if color_list is None: scatter_kws = dict(s=30, linewidths=.5, edgecolors='k', zorder=2)
+        else: scatter_kws = dict(s=30, linewidths=.5, edgecolors='k', zorder=2, color=color_list)
         
         # Create the scatter plot with regression line
         merge_axes_subplot = sns.regplot(x=xname, y=yname, scatter=True, data=df, ax=ax,
@@ -4292,7 +4292,7 @@ class NotebookUtilities(object):
         title_obj = fig.suptitle(t=title, x=0.5, y=0.91)
         
         # Annotate the r-squared value on the plot
-        s_str = self.get_r_squared_value_latex(xdata, ydata)
+        s_str = self.get_r_squared_value_latex(df[xname], df[yname])
         text_tuple = ax.text(0.75, 0.9, s_str, alpha=0.5, transform=ax.transAxes, fontsize='x-large')
         
         return fig, ax
