@@ -1712,7 +1712,7 @@ class NotebookUtilities(object):
         return data_frame
 
     
-    def pickle_exists(self, pickle_name: str) -> bool:
+    def pickle_exists(self, pickle_name):
         """
         Check if a pickle file exists.
 
@@ -2689,7 +2689,7 @@ class NotebookUtilities(object):
         if (X_train.shape[0] == 0) or (y_train.shape[0] == 0): return np.array([], dtype=bool)
         
         # Create a mask across the X_train and y_train columns (notnull checking for both inf and NaN values)
-        mask_series = concat([y_train, X_train], axis='columns').applymap(notnull).all(axis='columns')
+        mask_series = concat([DataFrame(y_train), DataFrame(X_train)], axis='columns').applymap(notnull).all(axis='columns')
         
         # Return the mask indicating which elements of both X_train and y_train are not inf or nan
         return mask_series
@@ -3065,7 +3065,8 @@ class NotebookUtilities(object):
                 
                 # Recursively call get row dictionary with the dictionary key as part of the prefix
                 row_dict = self.get_flattened_dictionary(
-                    v, row_dict=row_dict, key_prefix=f'{key_prefix}_{k}'
+                    v, row_dict=row_dict,
+                    key_prefix=f'{key_prefix}{"_" if key_prefix else ""}{k}'
                 )
                 
         # Check if the value is a list
@@ -4216,8 +4217,8 @@ class NotebookUtilities(object):
         line_kws = dict(color='k', zorder=1, alpha=.25)
         
         # Set scatter plot properties, including color list if provided
-        if color_list is None: scatter_kws = dict(s=30, linewidths=.5, edgecolors='k', zorder=2)
-        else: scatter_kws = dict(s=30, linewidths=.5, edgecolors='k', zorder=2, color=color_list)
+        if color_list is None: scatter_kws = dict(s=30, lw=.5, edgecolors='k', zorder=2)
+        else: scatter_kws = dict(s=30, lw=.5, edgecolors='k', zorder=2, color=color_list)
         
         # Create the scatter plot with regression line
         merge_axes_subplot = sns.regplot(x=xname, y=yname, scatter=True, data=df, ax=ax,
@@ -4292,7 +4293,7 @@ class NotebookUtilities(object):
         title_obj = fig.suptitle(t=title, x=0.5, y=0.91)
         
         # Annotate the r-squared value on the plot
-        s_str = self.get_r_squared_value_latex(df[xname], df[yname])
+        s_str = self.get_r_squared_value_latex(xdata, ydata)
         text_tuple = ax.text(0.75, 0.9, s_str, alpha=0.5, transform=ax.transAxes, fontsize='x-large')
         
         return fig, ax
