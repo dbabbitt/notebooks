@@ -141,11 +141,54 @@ class NotebookUtilities(object):
         except: self.get_alphabet = lambda sequence: set(sequence)
 
     
+    ### Numeric Functions ###
+    
+    
+    @staticmethod
+    def float_to_ratio(value, tolerance=0.01):
+        """
+        Convert a float to a ratio of two integers, approximating the float 
+        within a specified tolerance.
+        
+        Parameters:
+            value (float): The float to convert.
+            tolerance (float, optional): The acceptable difference between 
+                                         the float and the ratio. Default is 0.01.
+        
+        Returns:
+            tuple: A tuple of two integers (numerator, denominator) representing 
+                   the ratio that approximates the float.
+        """
+        from fractions import Fraction
+        def is_within_tolerance(numerator, denominator, value, tolerance):
+            """Helper function to check if the fraction is within tolerance."""
+            return abs((numerator / denominator) - value) <= tolerance
+        
+        # Validate input
+        if not isinstance(value, (float, int)):
+            raise TypeError("Input value must be a float or an integer.")
+        if not isinstance(tolerance, float) or tolerance <= 0:
+            raise ValueError("Tolerance must be a positive float.")
+        
+        # Use the Fraction module to find an approximate fraction
+        fraction = Fraction(value).limit_denominator()
+        numerator, denominator = fraction.numerator, fraction.denominator
+        
+        # Adjust the fraction only if needed
+        while not is_within_tolerance(numerator, denominator, value, tolerance):
+            numerator += 1
+            if is_within_tolerance(numerator, denominator, value, tolerance):
+                break
+            denominator += 1
+        
+        return (numerator, denominator)
+    
+    
     ### String Functions ###
     
     
     @staticmethod
-    def compute_similarity(a: str, b: str) -> float:
+    def compute_similarity(a, b):
         """
         Calculate the similarity between two strings.
         
@@ -1693,6 +1736,7 @@ class NotebookUtilities(object):
         
         # Set folder path if not provided
         if folder_path is None: csv_folder = self.data_csv_folder
+        elif folder_path.endswith('csv'): csv_folder = folder_path
         else: csv_folder = osp.join(folder_path, 'csv')
         
         # Determine the CSV file path based on the provided name or the most recently modified file in the folder
@@ -4217,8 +4261,8 @@ class NotebookUtilities(object):
         line_kws = dict(color='k', zorder=1, alpha=.25)
         
         # Set scatter plot properties, including color list if provided
-        if color_list is None: scatter_kws = dict(s=30, lw=.5, edgecolors='k', zorder=2)
-        else: scatter_kws = dict(s=30, lw=.5, edgecolors='k', zorder=2, color=color_list)
+        if color_list is None: scatter_kws = dict(s=30, linewidths=.5, edgecolors='k', zorder=2)
+        else: scatter_kws = dict(s=30, linewidths=.5, edgecolors='k', zorder=2, color=color_list)
         
         # Create the scatter plot with regression line
         merge_axes_subplot = sns.regplot(x=xname, y=yname, scatter=True, data=df, ax=ax,
@@ -4293,7 +4337,7 @@ class NotebookUtilities(object):
         title_obj = fig.suptitle(t=title, x=0.5, y=0.91)
         
         # Annotate the r-squared value on the plot
-        s_str = self.get_r_squared_value_latex(xdata, ydata)
+        s_str = self.get_r_squared_value_latex(df[xname], df[yname])
         text_tuple = ax.text(0.75, 0.9, s_str, alpha=0.5, transform=ax.transAxes, fontsize='x-large')
         
         return fig, ax
