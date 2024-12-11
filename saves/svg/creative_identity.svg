@@ -1,85 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   id="svg-wiaitle"
-   viewBox="0 0 3004 2804.0001"
-   version="1.1"
-   sodipodi:docname="creative_identity.svg"
-   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
-   width="3004"
-   height="2804"
-   inkscape:export-filename="C:\Users\daveb\OneDrive\Documents\GitHub\notebooks\saves\png\creative_identity.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <sodipodi:namedview
-     id="namedview122"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     showgrid="false"
-     inkscape:zoom="0.25893651"
-     inkscape:cx="1502.2988"
-     inkscape:cy="1403.819"
-     inkscape:window-width="1920"
-     inkscape:window-height="991"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg-wiaitle" />
-  <metadata
-     id="metadata-wiaitle">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <defs
-     id="defs-wiaitle">
-    <marker
-       orient="auto"
-       overflow="visible"
-       id="triangleMarkerEnding">
-      <path
-         id="path-line-ending"
-         stroke-width="1pt"
-         stroke="#ffffff"
-         fill-rule="evenodd"
-         fill="#ffffff"
-         d="M 5.77,0 -2.88,5 V -5 Z"
-         transform="scale(0.2)" />
-    </marker>
-    <circle
-       fill="#ffffff"
-       r="30"
-       id="whiteDot"
-       cx="0"
-       cy="0" />
-    <symbol
-       orient="auto"
-       overflow="visible"
-       id="greyDashedLine">
-      <path
-         d="M 0,0 H 922"
-         class="greyDashedLineStyle"
-         id="path-grey-dashed-line" />
-    </symbol>
-  </defs>
-  <style
-     id="style-wiaitle"
-     type="text/css">
+<?xml version="1.0" encoding="utf-8"?>
+<svg:svg height="2804" id="svg-wiaitle" inkscape:export-filename="C:\Users\daveb\OneDrive\Documents\GitHub\notebooks\saves\png\creative_identity.png" inkscape:export-xdpi="96" inkscape:export-ydpi="96" inkscape:version="1.1.2 (b8e25be833, 2022-02-05)" sodipodi:docname="creative_identity.svg" version="1.1" viewBox="0 0 3004 2804.0001" width="3004" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg">
+<sodipodi:namedview bordercolor="#666666" borderopacity="1.0" id="namedview122" inkscape:current-layer="svg-wiaitle" inkscape:cx="1502.2988" inkscape:cy="1403.819" inkscape:pagecheckerboard="0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:window-height="991" inkscape:window-maximized="1" inkscape:window-width="1920" inkscape:window-x="-9" inkscape:window-y="-9" inkscape:zoom="0.25893651" pagecolor="#ffffff" showgrid="false"/>
+<svg:metadata id="metadata-wiaitle">
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+</cc:Work>
+</rdf:RDF>
+</svg:metadata>
+<svg:defs id="defs-wiaitle">
+<svg:marker id="triangleMarkerEnding" orient="auto" overflow="visible">
+<svg:path d="M 5.77,0 -2.88,5 V -5 Z" fill="#ffffff" fill-rule="evenodd" id="path-line-ending" stroke="#ffffff" stroke-width="1pt" transform="scale(0.2)"/>
+</svg:marker>
+<svg:circle cx="0" cy="0" fill="#ffffff" id="whiteDot" r="30"/>
+<svg:symbol id="greyDashedLine" orient="auto" overflow="visible">
+<svg:path class="greyDashedLineStyle" d="M 0,0 H 922" id="path-grey-dashed-line"/>
+</svg:symbol>
+</svg:defs>
+<svg:style id="style-wiaitle" type="text/css">
         .greyDashedLineStyle {
             fill: none;
             stroke: #969696;
@@ -193,135 +132,23 @@
             fill: #099da5;
             text-decoration-color: #099da5;
         }
-    </style>
-  <!-- &quot;The universe is bigger than your life; your life is bigger than your self; your self is bigger than your self-expression; your self-expression is bigger than your signaled preferences, your signaled preferences are bigger than your politics, your politics are bigger than your creative identity.&quot; Venkatesh Rao -->
-  <rect
-     id="rect-universe"
-     class="universeColor"
-     x="2"
-     y="2"
-     width="3000"
-     height="2800"
-     style="stroke:#000000;stroke-width:4" />
-  <text
-     id="label-universe"
-     class="normalText labelText"
-     x="1502.9596"
-     y="224.43396"><tspan
-       sodipodi:role="line"
-       id="tspan901"
-       x="1502.9596"
-       y="224.43396">The Universe</tspan></text>
-  <circle
-     id="circle-life"
-     class="lifeColor"
-     r="1200"
-     cy="1609.4999"
-     cx="1502"
-     style="stroke:#ffffff;stroke-width:4" />
-  <text
-     id="label-life"
-     class="normalText labelText"
-     x="1501.8281"
-     y="632.88684"><tspan
-       sodipodi:role="line"
-       id="tspan-life"
-       x="1501.8281"
-       y="632.88684">Life</tspan></text>
-  <circle
-     id="circle-self"
-     class="selfColor"
-     r="1000"
-     cy="1809.5"
-     cx="1502"
-     style="stroke:#ffffff;stroke-width:4" />
-  <text
-     id="label-self"
-     class="normalText labelText"
-     x="1498.1041"
-     y="1039.3397"
-     style="stroke:#ffffff;stroke-width:4"><tspan
-       sodipodi:role="line"
-       id="tspan874"
-       x="1498.1041"
-       y="1039.3397">Self</tspan></text>
-  <circle
-     id="circle-self-expression"
-     class="expressionColor"
-     r="800"
-     cy="2009.5"
-     cx="1502"
-     style="stroke:#ffffff;stroke-width:4" />
-  <text
-     id="label-self-expression"
-     class="normalText labelText"
-     y="1435.704"
-     x="1501.6992"
-     style="stroke:#ffffff;stroke-width:4"><tspan
-       sodipodi:role="line"
-       id="tspan4740"
-       x="1501.6992"
-       y="1435.704">Self-expression</tspan></text>
-  <circle
-     id="circle-signaled-preferences"
-     class="signalColor"
-     r="600"
-     cy="2209.5"
-     cx="1502"
-     style="stroke:#ffffff;stroke-width:4" />
-  <text
-     id="label-signaled-preferences"
-     class="normalText labelText"
-     y="1843.8418"
-     x="1501.6562"
-     style="stroke:#ffffff;stroke-width:4"><tspan
-       sodipodi:role="line"
-       id="tspan4719"
-       x="1501.6562"
-       y="1843.8418">Signaled Preferences</tspan></text>
-  <circle
-     id="circle-political-identity"
-     class="politicalColor"
-     r="400"
-     cy="2409.5"
-     cx="1502"
-     style="stroke:#ffffff;stroke-width:4" />
-  <text
-     id="label-political-identity"
-     class="normalText labelText"
-     y="2254.0942"
-     x="1500.9974"><tspan
-       sodipodi:role="line"
-       id="tspan1962"
-       x="1500.9974"
-       y="2254.0942">Political Identity</tspan></text>
-  <circle
-     id="circle-creative-identity"
-     class="creativeColor"
-     r="200"
-     cy="2609.5"
-     cx="1502"
-     style="stroke:#ffffff;stroke-width:4" />
-  <g
-     id="label-creative-identity"
-     class="normalText labelText"
-     transform="translate(701.21724,1217.2858)"
-     style="stroke:#ffffff;stroke-width:4">
-    <text
-       id="text-Deep"
-       y="1369.9279"
-       x="800.76843"><tspan
-         sodipodi:role="line"
-         id="tspan4557"
-         x="800.76843"
-         y="1369.9279">Creative</tspan></text>
-    <text
-       id="text-Learning"
-       y="1443.2612"
-       x="800.76843"><tspan
-         sodipodi:role="line"
-         id="tspan4536"
-         x="800.76843"
-         y="1443.2612">Identity</tspan></text>
-  </g>
-</svg>
+    </svg:style>
+<!-- &quot;The universe is bigger than your life; your life is bigger than your self; your self is bigger than your self-expression; your self-expression is bigger than your signaled preferences, your signaled preferences are bigger than your politics, your politics are bigger than your creative identity.&quot; Venkatesh Rao -->
+<svg:rect class="universeColor" height="2800" id="rect-universe" style="stroke:#000000;stroke-width:4" width="3000" x="2" y="2"/>
+<svg:text class="normalText labelText" id="label-universe" x="1502.9596" y="224.43396"><svg:tspan id="tspan901" sodipodi:role="line" x="1502.9596" y="224.43396">The Universe</svg:tspan></svg:text>
+<svg:circle class="lifeColor" cx="1502" cy="1609.4999" id="circle-life" r="1200" style="stroke:#ffffff;stroke-width:4"/>
+<svg:text class="normalText labelText" id="label-life" x="1501.8281" y="632.88684"><svg:tspan id="tspan-life" sodipodi:role="line" x="1501.8281" y="632.88684">Life</svg:tspan></svg:text>
+<svg:circle class="selfColor" cx="1502" cy="1809.5" id="circle-self" r="1000" style="stroke:#ffffff;stroke-width:4"/>
+<svg:text class="normalText labelText" id="label-self" style="stroke:#ffffff;stroke-width:4" x="1498.1041" y="1039.3397"><svg:tspan id="tspan874" sodipodi:role="line" x="1498.1041" y="1039.3397">Self</svg:tspan></svg:text>
+<svg:circle class="expressionColor" cx="1502" cy="2009.5" id="circle-self-expression" r="800" style="stroke:#ffffff;stroke-width:4"/>
+<svg:text class="normalText labelText" id="label-self-expression" style="stroke:#ffffff;stroke-width:4" x="1501.6992" y="1435.704"><svg:tspan id="tspan4740" sodipodi:role="line" x="1501.6992" y="1435.704">Self-expression</svg:tspan></svg:text>
+<svg:circle class="signalColor" cx="1502" cy="2209.5" id="circle-signaled-preferences" r="600" style="stroke:#ffffff;stroke-width:4"/>
+<svg:text class="normalText labelText" id="label-signaled-preferences" style="stroke:#ffffff;stroke-width:4" x="1501.6562" y="1843.8418"><svg:tspan id="tspan4719" sodipodi:role="line" x="1501.6562" y="1843.8418">Signaled Preferences</svg:tspan></svg:text>
+<svg:circle class="politicalColor" cx="1502" cy="2409.5" id="circle-political-identity" r="400" style="stroke:#ffffff;stroke-width:4"/>
+<svg:text class="normalText labelText" id="label-political-identity" x="1500.9974" y="2254.0942"><svg:tspan id="tspan1962" sodipodi:role="line" x="1500.9974" y="2254.0942">Political Identity</svg:tspan></svg:text>
+<svg:circle class="creativeColor" cx="1502" cy="2609.5" id="circle-creative-identity" r="200" style="stroke:#ffffff;stroke-width:4"/>
+<svg:g class="normalText labelText" id="label-creative-identity" style="stroke:#ffffff;stroke-width:4" transform="translate(701.21724,1217.2858)">
+<svg:text id="text-Deep" x="800.76843" y="1369.9279"><svg:tspan id="tspan4557" sodipodi:role="line" x="800.76843" y="1369.9279">Creative</svg:tspan></svg:text>
+<svg:text id="text-Learning" x="800.76843" y="1443.2612"><svg:tspan id="tspan4536" sodipodi:role="line" x="800.76843" y="1443.2612">Identity</svg:tspan></svg:text>
+</svg:g>
+</svg:svg>

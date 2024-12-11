@@ -1,185 +1,38 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   width="543"
-   height="591"
-   version="1.1"
-   id="svg52"
-   sodipodi:docname="Political_chart.svg"
-   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs56" />
-  <sodipodi:namedview
-     id="namedview54"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     showgrid="false"
-     inkscape:zoom="1.2165821"
-     inkscape:cx="271.25174"
-     inkscape:cy="295.5"
-     inkscape:window-width="1920"
-     inkscape:window-height="991"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg52" />
-  <path
-     fill="#C8E4BC"
-     d="M17.279 294.291h253.817v253.817H17.279z"
-     id="path2" />
-  <path
-     fill="#F9BABA"
-     d="M17.279 38.474h253.817v253.817H17.279z"
-     id="path4" />
-  <path
-     fill="#92D9F8"
-     d="M273.097 38.474h253.817v253.817H273.097z"
-     id="path6" />
-  <path
-     fill="#E1C6DF"
-     d="M273.097 294.291h253.817v253.817H273.097z"
-     id="path8" />
-  <path
-     fill="#010101"
-     d="M271.097 25.229v536.156h2V25.229h-2z"
-     id="path10" />
-  <path
-     fill="#010101"
-     d="M263.211 46.602l8.839-24.037 8.839 24.037c-5.219-3.841-12.359-3.818-17.678 0zM280.959 540.01l-8.839 24.037-8.839-24.037c5.219 3.84 12.359 3.818 17.678 0zM4.003 292.291v2h536.156v-2H4.003z"
-     id="path12" />
-  <path
-     fill="#010101"
-     d="M518.789 284.432l24.037 8.839-24.037 8.839c3.84-5.219 3.818-12.359 0-17.678zM25.38 302.18l-24.037-8.839 24.037-8.839c-3.839 5.219-3.817 12.358 0 17.678z"
-     id="path14" />
-  <text
-     font-size="20.431"
-     x="29.305"
-     y="279.722"
-     fill="#010101"
-     font-family="Arial-BoldMT"
-     id="text16">
+<?xml version="1.0" encoding="utf-8"?>
+<svg:svg height="591" id="svg52" inkscape:version="1.1.2 (b8e25be833, 2022-02-05)" sodipodi:docname="Political_chart.svg" version="1.1" width="543" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg">
+<svg:defs id="defs56"/>
+<sodipodi:namedview bordercolor="#666666" borderopacity="1.0" id="namedview54" inkscape:current-layer="svg52" inkscape:cx="271.25174" inkscape:cy="295.5" inkscape:pagecheckerboard="0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:window-height="991" inkscape:window-maximized="1" inkscape:window-width="1920" inkscape:window-x="-9" inkscape:window-y="-9" inkscape:zoom="1.2165821" pagecolor="#ffffff" showgrid="false"/>
+<svg:path d="M17.279 294.291h253.817v253.817H17.279z" fill="#C8E4BC" id="path2"/>
+<svg:path d="M17.279 38.474h253.817v253.817H17.279z" fill="#F9BABA" id="path4"/>
+<svg:path d="M273.097 38.474h253.817v253.817H273.097z" fill="#92D9F8" id="path6"/>
+<svg:path d="M273.097 294.291h253.817v253.817H273.097z" fill="#E1C6DF" id="path8"/>
+<svg:path d="M271.097 25.229v536.156h2V25.229h-2z" fill="#010101" id="path10"/>
+<svg:path d="M263.211 46.602l8.839-24.037 8.839 24.037c-5.219-3.841-12.359-3.818-17.678 0zM280.959 540.01l-8.839 24.037-8.839-24.037c5.219 3.84 12.359 3.818 17.678 0zM4.003 292.291v2h536.156v-2H4.003z" fill="#010101" id="path12"/>
+<svg:path d="M518.789 284.432l24.037 8.839-24.037 8.839c3.84-5.219 3.818-12.359 0-17.678zM25.38 302.18l-24.037-8.839 24.037-8.839c-3.839 5.219-3.817 12.358 0 17.678z" fill="#010101" id="path14"/>
+<svg:text fill="#010101" font-family="Arial-BoldMT" font-size="20.431" id="text16" x="29.305" y="279.722">
     Economic-
-  </text>
-  <text
-     font-size="20.431px"
-     x="524.63605"
-     y="279.793"
-     fill="#010101"
-     font-family="Arial-BoldMT"
-     id="text18"
-     style="text-anchor:end;text-align:end">Economic-</text>
-  <text
-     transform="translate(219.213,581.302)"
-     fill="#010101"
-     font-family="Arial-BoldMT"
-     font-size="20.431px"
-     id="text20"
-     x="53.342068"
-     y="0"
-     style="text-anchor:middle;text-align:center">Libertarian</text>
-  <text
-     transform="translate(207.875,20.083)"
-     fill="#010101"
-     font-family="Arial-BoldMT"
-     font-size="20.431px"
-     id="text22"
-     x="66.161324"
-     y="0"
-     style="text-anchor:middle;text-align:center">Authoritarian</text>
-  <g
-     fill="#00aad4"
-     font-family="Arial-BoldMT"
-     font-size="20.431px"
-     id="g28">
-    <text
-       transform="translate(336.567,158.154)"
-       id="text24"
-       x="66.161324"
-       y="0"
-       style="text-anchor:middle;text-align:center">Authoritarian</text>
-    <text
-       transform="translate(373.295,182.936)"
-       id="text26"
-       x="25.553715"
-       y="0"
-       style="text-anchor:middle;text-align:center">Right</text>
-  </g>
-  <g
-     fill="#f37f81"
-     font-family="Arial-BoldMT"
-     font-size="20.431px"
-     id="g34">
-    <text
-       transform="translate(80.75,158.154)"
-       id="text30"
-       x="66.161324"
-       y="0"
-       style="text-align:center;text-anchor:middle">Authoritarian</text>
-    <text
-       transform="translate(124.85,182.936)"
-       id="text32"
-       x="18.181395"
-       y="0"
-       style="text-align:center;text-anchor:middle">Left</text>
-  </g>
-  <g
-     fill="#be89bd"
-     font-family="Arial-BoldMT"
-     font-size="20.431px"
-     id="g40">
-    <text
-       transform="translate(347.905,413.972)"
-       id="text36"
-       x="53.342068"
-       y="0"
-       style="text-anchor:middle;text-align:center">Libertarian</text>
-    <text
-       transform="translate(373.295,438.753)"
-       id="text38"
-       x="25.553715"
-       y="0"
-       style="text-anchor:middle;text-align:center">Right</text>
-  </g>
-  <g
-     fill="#4ab749"
-     font-family="Arial-BoldMT"
-     font-size="20.431px"
-     id="g46">
-    <text
-       transform="translate(92.088,416.002)"
-       id="text42"
-       x="53.342068"
-       y="0"
-       style="text-anchor:middle;text-align:center">Libertarian</text>
-    <text
-       transform="translate(124.85,440.782)"
-       id="text44"
-       x="18.181395"
-       y="0"
-       style="text-anchor:middle;text-align:center">Left</text>
-  </g>
-  <text
-     y="315.96701"
-     x="495.85843"
-     font-size="20.431px"
-     fill="#010101"
-     font-family="Arial-BoldMT"
-     id="text48"
-     style="text-anchor:end;text-align:end">Right</text>
-  <text
-     font-size="20.431"
-     x="44.378"
-     y="314.198"
-     fill="#010101"
-     font-family="Arial-BoldMT"
-     id="text50">
+  </svg:text>
+<svg:text fill="#010101" font-family="Arial-BoldMT" font-size="20.431px" id="text18" style="text-anchor:end;text-align:end" x="524.63605" y="279.793">Economic-</svg:text>
+<svg:text fill="#010101" font-family="Arial-BoldMT" font-size="20.431px" id="text20" style="text-anchor:middle;text-align:center" transform="translate(219.213,581.302)" x="53.342068" y="0">Libertarian</svg:text>
+<svg:text fill="#010101" font-family="Arial-BoldMT" font-size="20.431px" id="text22" style="text-anchor:middle;text-align:center" transform="translate(207.875,20.083)" x="66.161324" y="0">Authoritarian</svg:text>
+<svg:g fill="#00aad4" font-family="Arial-BoldMT" font-size="20.431px" id="g28">
+<svg:text id="text24" style="text-anchor:middle;text-align:center" transform="translate(336.567,158.154)" x="66.161324" y="0">Authoritarian</svg:text>
+<svg:text id="text26" style="text-anchor:middle;text-align:center" transform="translate(373.295,182.936)" x="25.553715" y="0">Right</svg:text>
+</svg:g>
+<svg:g fill="#f37f81" font-family="Arial-BoldMT" font-size="20.431px" id="g34">
+<svg:text id="text30" style="text-align:center;text-anchor:middle" transform="translate(80.75,158.154)" x="66.161324" y="0">Authoritarian</svg:text>
+<svg:text id="text32" style="text-align:center;text-anchor:middle" transform="translate(124.85,182.936)" x="18.181395" y="0">Left</svg:text>
+</svg:g>
+<svg:g fill="#be89bd" font-family="Arial-BoldMT" font-size="20.431px" id="g40">
+<svg:text id="text36" style="text-anchor:middle;text-align:center" transform="translate(347.905,413.972)" x="53.342068" y="0">Libertarian</svg:text>
+<svg:text id="text38" style="text-anchor:middle;text-align:center" transform="translate(373.295,438.753)" x="25.553715" y="0">Right</svg:text>
+</svg:g>
+<svg:g fill="#4ab749" font-family="Arial-BoldMT" font-size="20.431px" id="g46">
+<svg:text id="text42" style="text-anchor:middle;text-align:center" transform="translate(92.088,416.002)" x="53.342068" y="0">Libertarian</svg:text>
+<svg:text id="text44" style="text-anchor:middle;text-align:center" transform="translate(124.85,440.782)" x="18.181395" y="0">Left</svg:text>
+</svg:g>
+<svg:text fill="#010101" font-family="Arial-BoldMT" font-size="20.431px" id="text48" style="text-anchor:end;text-align:end" x="495.85843" y="315.96701">Right</svg:text>
+<svg:text fill="#010101" font-family="Arial-BoldMT" font-size="20.431" id="text50" x="44.378" y="314.198">
     Left
-  </text>
-</svg>
+  </svg:text>
+</svg:svg>

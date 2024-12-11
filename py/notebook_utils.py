@@ -1303,7 +1303,7 @@ class NotebookUtilities(object):
             The function uses subprocess to run the specified text editor with the provided file path.
         
         Example:
-            nu.open_path_in_notepad(r'C:\example.txt')
+            nu.open_path_in_notepad(r'C:\this_example.txt')
         """
         
         # Establish the text_editor_path in this operating system, if needed
@@ -1336,48 +1336,45 @@ class NotebookUtilities(object):
     
     
     @staticmethod
-    def get_top_level_folder_paths(folder_path, verbose=False):
+    def modify_inkscape_labels(
+        file_path, output_path=r"C:\Users\daveb\Downloads\scratchpad.svg", verbose=False
+    ):
         """
-        Get all top-level folder paths within a given directory.
+        Modify an SVG file by changing the 'id' attribute to the value of the
+        'inkscape:label' and removing the 'inkscape:label' attribute.
         
         Parameters:
-            folder_path (str): The path to the directory to scan for top-level folders.
-            verbose (bool, optional):
-                Whether to print debug or status messages. Defaults to False.
+            file_path (str): Path to the SVG file to modify.
+            output_path (str): Path to save the modified SVG file.
         
         Returns:
-            list[str]: A list of absolute paths to all top-level folders within the provided directory.
-        
-        Raises:
-            FileNotFoundError: If the provided folder path does not exist.
-            NotADirectoryError: If the provided folder path points to a file or non-existing directory.
-        
-        Notes:
-            This function does not recursively scan for subfolders within the top-level folders.
-            If `verbose` is True, it will print the number of discovered top-level folders.
+            None
         """
+        if not osp.exists(file_path):
+            raise FileNotFoundError(f"The file at {file_path} does not exist.")
         
-        # Make sure the provided folder exists and is a directory
-        if not osp.exists(folder_path): raise FileNotFoundError(f'Directory {folder_path} does not exist.')
-        if not osp.isdir(folder_path): raise NotADirectoryError(f'Path {folder_path} is not a directory.')
+        # Open and parse the SVG file
+        with open(file_path, 'r', encoding='utf-8') as file:
+            svg_content = file.read()
+        soup = bs(svg_content, 'xml')  # Use 'xml' parser for SVG
         
-        # Initialize an empty list to store top-level folder paths
-        top_level_folders = []
-        
-        # Iterate through items in the specified folder
-        for item in listdir(folder_path):
+        # Find all tags with 'inkscape:label' and 'id' attributes
+        for tag in soup.find_all(attrs={"inkscape:label": True, 'id': True}):
+            inkscape_label = tag.get('inkscape:label', '').strip()
+            tag_id = tag.get('id', '').strip()
             
-            # Construct the full path for each item
-            full_item_path = osp.join(folder_path, item)
-            
-            # Check if the item is a directory, and if so, add its path to the list
-            if osp.isdir(full_item_path): top_level_folders.append(full_item_path)
+            if inkscape_label and tag_id:
+                if verbose: print(f"Changing id '{tag_id}' to '{inkscape_label}'")
+                    
+                # Update 'id' attribute with the value of 'inkscape:label'
+                tag['id'] = inkscape_label
+                
+                # Remove the 'inkscape:label' attribute
+                del tag['inkscape:label']
         
-        # Optionally print information based on the `verbose` flag
-        if verbose: print(f'Found {len(top_level_folders)} top-level folders in {folder_path}.')
-        
-        # Return the list of top-level folder paths
-        return top_level_folders
+        # Save the modified SVG content to the output file
+        with open(output_path, 'w', encoding='utf-8') as output_file:
+            output_file.write(str(soup))
     
     
     def get_notebook_functions_dictionary(self, github_folder=None):
@@ -1405,7 +1402,7 @@ class NotebookUtilities(object):
         """
         
         # Create a regular expression pattern to match function definitions (def + function_name + opening parenthesis)
-        fn_regex = re.compile(r'\s+"def ([a-z0-9_]+)\(')
+        fn_regex = re.compile('\\s+"def ([a-z0-9_]+)\\(')
         
         # Create a list of directories/files to exclude during the search (e.g., checkpoints, recycle bin)
         black_list = ['.ipynb_checkpoints', '$Recycle.Bin']
@@ -1521,7 +1518,7 @@ class NotebookUtilities(object):
         
         if rogue_fns_list:
             print(f'Search for *.ipynb; file masks in the {github_folder} folder for this pattern:')
-            print('\\s+"def (' + '|'.join(rogue_fns_list) + ')\(')
+            print('\\s+"def (' + '|'.join(rogue_fns_list) + ')\\(')
             print('Replace each of the calls to these definitions with calls the the nu. equivalent (and delete the definitions).')
 
     
@@ -1595,7 +1592,7 @@ class NotebookUtilities(object):
         # If there are duplicate function definitions, print a message and search string
         if duplicate_fns_list:
             print(f'Search for *.ipynb; file masks in the {github_folder} folder for this pattern:')
-            print('\\s+"def (' + '|'.join(duplicate_fns_list) + ')\(')
+            print('\\s+"def (' + '|'.join(duplicate_fns_list) + ')\\(')
             print(f'Consolidate these duplicate definitions and add the refactored one to {util_path} (and delete the definitions).')
     
     
@@ -1626,6 +1623,264 @@ class NotebookUtilities(object):
                 
                 # Remove the folder and its contents
                 shutil.rmtree(folder_path)
+    
+    
+    ### Path Functions ###
+    
+    
+    @staticmethod
+    def get_top_level_folder_paths(folder_path, verbose=False):
+        """
+        Get all top-level folder paths within a given directory.
+        
+        Parameters:
+            folder_path (str): The path to the directory to scan for top-level folders.
+            verbose (bool, optional):
+                Whether to print debug or status messages. Defaults to False.
+        
+        Returns:
+            list[str]: A list of absolute paths to all top-level folders within the provided directory.
+        
+        Raises:
+            FileNotFoundError: If the provided folder path does not exist.
+            NotADirectoryError: If the provided folder path points to a file or non-existing directory.
+        
+        Notes:
+            This function does not recursively scan for subfolders within the top-level folders.
+            If `verbose` is True, it will print the number of discovered top-level folders.
+        """
+        
+        # Make sure the provided folder exists and is a directory
+        if not osp.exists(folder_path): raise FileNotFoundError(f'Directory {folder_path} does not exist.')
+        if not osp.isdir(folder_path): raise NotADirectoryError(f'Path {folder_path} is not a directory.')
+        
+        # Initialize an empty list to store top-level folder paths
+        top_level_folders = []
+        
+        # Iterate through items in the specified folder
+        for item in listdir(folder_path):
+            
+            # Construct the full path for each item
+            full_item_path = osp.join(folder_path, item)
+            
+            # Check if the item is a directory, and if so, add its path to the list
+            if osp.isdir(full_item_path): top_level_folders.append(full_item_path)
+        
+        # Optionally print information based on the `verbose` flag
+        if verbose: print(f'Found {len(top_level_folders)} top-level folders in {folder_path}.')
+        
+        # Return the list of top-level folder paths
+        return top_level_folders
+    
+    
+    @staticmethod
+    def print_all_files_ending_starting_with(
+        root_dir=r'D:\Documents\GitHub', ends_with='.yml', starts_with='install_config_',
+        black_list=['$RECYCLE.BIN', '$Recycle.Bin']
+    ):
+        if isinstance(root_dir, list):
+            root_dir_list = root_dir
+        else:
+            root_dir_list = [root_dir]
+        if isinstance(ends_with, list):
+            endswith_list = ends_with
+        else:
+            endswith_list = [ends_with]
+        if isinstance(starts_with, list):
+            startswith_list = starts_with
+        else:
+            startswith_list = [starts_with]
+        for root_dir in root_dir_list:
+            for sub_directory, directories_list, files_list in os.walk(root_dir):
+                if all(map(lambda x: x not in sub_directory, black_list)):
+                    for file_name in files_list:
+                        endswith_bool = False
+                        for ends_with in endswith_list:
+                            endswith_bool = endswith_bool or file_name.endswith(ends_with)
+                        startswith_bool = False
+                        for starts_with in startswith_list:
+                            startswith_bool = startswith_bool or file_name.startswith(starts_with)
+                        if endswith_bool and startswith_bool:
+                            file_path = os.path.join(sub_directory, file_name)
+                            print(file_path)
+    
+    
+    @staticmethod
+    def print_all_files_starting_with(
+        root_dir=r'D:\Vagrant_Projects\local-vagrant', starts_with='host',
+        black_list=['$RECYCLE.BIN', '$Recycle.Bin']
+    ):
+        if isinstance(root_dir, list):
+            root_dir_list = root_dir
+        else:
+            root_dir_list = [root_dir]
+        if isinstance(starts_with, list):
+            startswith_list = starts_with
+        else:
+            startswith_list = [starts_with]
+        for root_dir in root_dir_list:
+            for sub_directory, directories_list, files_list in os.walk(root_dir):
+                if all(map(lambda x: x not in sub_directory, black_list)):
+                    for file_name in files_list:
+                        startswith_bool = False
+                        for starts_with in startswith_list:
+                            startswith_bool = startswith_bool or file_name.startswith(starts_with)
+                        if startswith_bool:
+                            file_path = os.path.join(sub_directory, file_name)
+                            print(file_path)
+    
+    
+    @staticmethod
+    def print_all_files_ending_with(
+        root_dir=r'D:\\', ends_with='.box', black_list=['$RECYCLE.BIN', '$Recycle.Bin']
+    ):
+        if isinstance(root_dir, list):
+            root_dir_list = root_dir
+        else:
+            root_dir_list = [root_dir]
+        if isinstance(ends_with, list):
+            endswith_list = ends_with
+        else:
+            endswith_list = [ends_with]
+        for root_dir in root_dir_list:
+            for sub_directory, directories_list, files_list in os.walk(root_dir):
+                if all(map(lambda x: x not in sub_directory, black_list)):
+                    for file_name in files_list:
+                        endswith_bool = False
+                        for ends_with in endswith_list:
+                            endswith_bool = endswith_bool or file_name.endswith(ends_with)
+                        if endswith_bool:
+                            file_path = os.path.join(sub_directory, file_name)
+                            print(file_path)
+    
+    
+    @staticmethod
+    def get_git_lfs_track_commands(repository_name, repository_dir=r'D:\Documents\GitHub'):
+        black_list = [os.path.join(repository_dir, repository_name, '.git')]
+        file_types_set = set()
+        for sub_directory, directories_list, files_list in os.walk(os.path.join(repository_dir, repository_name)):
+                if all(map(lambda x: x not in sub_directory, black_list)):
+                    for file_name in files_list:
+                        file_path = os.path.join(sub_directory, file_name)
+                        bytes_count = os.path.getsize(file_path)
+                        if bytes_count > 50_000_000:
+                            file_types_set.add(file_name.split('.')[-1])
+        print('git lfs install')
+        for file_type in file_types_set:
+            print('git lfs track "*.{}"'.format(file_type))
+        print('git add .gitattributes')
+    
+    
+    @staticmethod
+    def get_specific_gitignore_files(
+        repository_name, repository_dir=r'D:\Documents\GitHub',
+        text_editor_path=r'C:\Program Files\Notepad++\notepad++.exe'
+    ):
+        print('''
+    # Ignore big files (GitHub will warn you when pushing files larger than 50 MB. You will not be allowed to
+    # push files larger than 100 MB.) Tip: If you regularly push large files to GitHub, consider introducing
+    # Git Large File Storage (Git LFS) as part of your workflow.''')
+        repository_path = os.path.join(repository_dir, repository_name)
+        black_list = [os.path.join(repository_path, '.git')]
+        for sub_directory, directories_list, files_list in os.walk(repository_path):
+                if all(map(lambda x: x not in sub_directory, black_list)):
+                    for file_name in files_list:
+                        file_path = os.path.join(sub_directory, file_name)
+                        bytes_count = os.path.getsize(file_path)
+                        if bytes_count > 50_000_000:
+                            print('/'.join(os.path.relpath(file_path, repository_path).split(os.sep)))
+        file_path = os.path.join(repository_dir, repository_name, '.gitignore')
+        print()
+        subprocess.run([text_editor_path, os.path.abspath(file_path)])
+    
+    
+    @staticmethod
+    def humanize_bytes(bytes_count, precision=1):
+        """Return a humanized string representation of a number of bytes.
+        
+        Assumes `from __future__ import division`.
+        
+        >>> humanize_bytes(1)
+        '1 byte'
+        >>> humanize_bytes(1024)
+        '1.0 kB'
+        >>> humanize_bytes(1024*123)
+        '123.0 kB'
+        >>> humanize_bytes(1024*12342)
+        '12.1 MB'
+        >>> humanize_bytes(1024*12342,2)
+        '12.05 MB'
+        >>> humanize_bytes(1024*1234,2)
+        '1.21 MB'
+        >>> humanize_bytes(1024*1234*1111,2)
+        '1.31 GB'
+        >>> humanize_bytes(1024*1234*1111,1)
+        '1.3 GB'
+        """
+        abbrevs = (
+            (1<<50, 'PB'),
+            (1<<40, 'TB'),
+            (1<<30, 'GB'),
+            (1<<20, 'MB'),
+            (1<<10, 'kB'),
+            (1, 'bytes')
+        )
+        if bytes_count == 1:
+            return '1 byte'
+        for factor, suffix in abbrevs:
+            if bytes_count >= factor:
+                break
+        
+        return '{0:.{1}f} {2}'.format(bytes_count / factor, precision, suffix)
+    
+    
+    @staticmethod
+    def remove_empty_folders(folder_path, remove_root=True):
+        '''Function to remove empty folders'''
+        if not os.path.isdir(folder_path):
+            
+            return
+        
+        # Remove empty subfolders
+        files = os.listdir(folder_path)
+        if len(files):
+            for f in files:
+                full_path = os.path.join(folder_path, f)
+                if os.path.isdir(full_path):
+                    remove_empty_folders(full_path)
+        
+        # If folder empty, delete it
+        files = os.listdir(folder_path)
+        if len(files) == 0 and remove_root:
+            print('Removing empty folder: {}'.format(folder_path))
+            os.rmdir(folder_path)
+    
+    
+    @staticmethod
+    def get_all_directories_containing(
+        root_dir=r'C:\Users\dev\anaconda3\envs', contains_str='activate', black_list=['$RECYCLE.BIN', '$Recycle.Bin', '.git']
+    ):
+        dir_path_list = []
+        if type(root_dir) == list:
+            root_dir_list = root_dir
+        else:
+            root_dir_list = [root_dir]
+        if type(contains_str) == list:
+            contains_list = contains_str
+        else:
+            contains_list = [contains_str]
+        for root_dir in root_dir_list:
+            for sub_directory, directories_list, files_list in os.walk(root_dir):
+                if all(map(lambda x: x not in sub_directory, black_list)):
+                    for dir_name in directories_list:
+                        contains_bool = False
+                        for contains_str in contains_list:
+                            contains_bool = contains_bool or (contains_str in dir_name)
+                        if contains_bool:
+                            dir_path = osp.join(sub_directory, dir_name)
+                            dir_path_list.append(dir_path)
+        
+        return dir_path_list
     
     
     ### Storage Functions ###
@@ -2134,7 +2389,7 @@ class NotebookUtilities(object):
                         try:
                             
                             # Open the file and read its contents
-                            with open(file_path, 'r', encoding=nu.encoding_type) as f:
+                            with open(file_path, 'r', encoding=self.encoding_type) as f:
                                 file_text = f.read()
                             
                             # Split the file text into function parts
@@ -2163,7 +2418,7 @@ class NotebookUtilities(object):
                                         file_text = file_text.replace(replaced_str, replacing_str)
                             
                             # Write the modified text back to the file
-                            with open(file_path, 'w', encoding=nu.encoding_type) as f:
+                            with open(file_path, 'w', encoding=self.encoding_type) as f:
                                 print(file_text.rstrip(), file=f)
                         
                         # Handle any exceptions during file read/write
@@ -3257,11 +3512,11 @@ class NotebookUtilities(object):
             if verbose:
                 print(f"Row Index: {row_index}")
                 display(row_series)
-                display(nu.convert_to_df(row_index, row_series))
+                display(self.convert_to_df(row_index, row_series))
                 raise Exception("Verbose debugging")
             
             # Append the current row to the current DataFrame
-            current_df = concat([current_df, nu.convert_to_df(row_index, row_series)], axis='index')
+            current_df = concat([current_df, self.convert_to_df(row_index, row_series)], axis='index')
         
         # Append the final dataframe chunk if it has rows
         if current_df.shape[0] > 0:
@@ -4103,7 +4358,7 @@ class NotebookUtilities(object):
             pvalue_statement = '=' + str('%.4f' % p_value)
         
         # Construct the LaTeX string for the R-squared value and p-value
-        s_str = r'$r^2=' + coefficient_of_determination_statement + r',\ p' + pvalue_statement + r'$'
+        s_str = r'$r^2=' + coefficient_of_determination_statement + ',\\ p' + pvalue_statement + r'$'
         
         # Return the formatted LaTeX string
         return s_str
@@ -4157,7 +4412,7 @@ class NotebookUtilities(object):
             pvalue_statement = '=' + str('%.4f' % p_value)
         
         # Construct the LaTeX string for the Spearman's rank correlation coefficient and p-value
-        s_str = r'$\rho=' + rank_correlation_coefficient_statement + ',\ p' + pvalue_statement + '$'
+        s_str = r'$\rho=' + rank_correlation_coefficient_statement + ',\\ p' + pvalue_statement + '$'
         
         # Return the formatted LaTeX string
         return s_str
@@ -5003,5 +5258,169 @@ class NotebookUtilities(object):
         
         # Return the matplotlib figure object
         return plt
+    
+    
+    def plot_semantic_distances_dendogram(
+        self, collection_name="collection", documents_list=[], ids_list=[],
+        plot_title='A Test Dendogram'
+    ):
+        
+        # Import the ChromaDB library for semantic search and document storage
+        import chromadb
+        
+        # Initialize the ChromaDB client
+        chroma_client = chromadb.Client()
+        
+        # Retrieve existing collections from ChromaDB
+        existing_collections = chroma_client.list_collections()
+        
+        # Check if the collection already exists; if not, create it
+        if any(collection.name == collection_name for collection in existing_collections):
+            collection = chroma_client.get_collection(collection_name)
+        
+        # Create a collection in ChromaDB and add documents
+        else:
+            collection = chroma_client.create_collection(name=collection_name)
+        
+        # Check if the document is already in the collection; if not, add it
+        existing_ids = collection.get()['ids']
+        map_obj = map(lambda id: id in existing_ids, ids_list)
+        if all(map_obj):
+            pass
+        elif any(map_obj):
+            for document, id in zip(documents_list, ids_list):
+                if id not in existing_ids:
+                    collection.add(
+                        documents=[document],
+                        ids=[id]
+                    )
+            existing_ids = collection.get()['ids']
+        
+        # Add all documents to the collection
+        else:
+            collection.add(
+                documents=documents_list,
+                ids=ids_list
+            )
+            existing_ids = collection.get()['ids']
+        
+        # Calculate semantic distances between documents in the collection
+        distance_matrix = []
+        for i, document_name in enumerate(existing_ids):
+            results = collection.query(
+                query_texts=[collection.get()['documents'][i]],
+                n_results=len(existing_ids)
+            )
+            distance_matrix.append(results['distances'][0])
+        distance_matrix = np.array(distance_matrix)
+        
+        # Perform hierarchical clustering on the semantic distance matrix
+        from scipy.cluster.hierarchy import dendrogram, linkage
+        import matplotlib.pyplot as plt
+        
+        # Generate a dendrogram to visualize the clustering
+        linked = linkage(distance_matrix, 'single')
+        fig, ax = plt.subplots(figsize=(18, 7))
+        dendrogram(linked, labels=existing_ids)
+        ax.set_ylabel("Semantic Distance")  # Label the y-axis
+        fig.suptitle(plot_title, fontsize=24)
+        plt.tight_layout()
+        plt.show()
+        
+        return collection, fig, ax
+    
+    
+    def show_subgraph(
+        self, sub_graph, suptitle='Within-function Function Calls',
+        nodes_list_list=None, node_color='b', verbose=False
+    ):
+        """
+        Visualize a subgraph with a custom layout and optional node grouping.
 
-# print(r'\b(' + '|'.join(dir()) + r')\b')
+        Parameters:
+            sub_graph : networkx.Graph
+                The input subgraph to be visualized.
+            suptitle : str, optional
+                The title of the graph visualization. Default is 'Within-function Function Calls'.
+            nodes_list_list : list of list of str, optional
+                A list of lists, where each inner list contains node names to be grouped
+                and colored separately. If None, all nodes are displayed with the same color.
+            node_color : str or ndarray, optional
+                The default color for all nodes if `nodes_list_list` is None. Default is 'b' (blue).
+            verbose : bool, optional
+                If True, prints additional debug information during execution. Default is False.
+
+        Returns:
+            None
+                The function generates a visualization and does not return any value.
+
+        Notes:
+            - The graph layout is adjusted for readability using `nx.spring_layout`.
+            - If `nodes_list_list` is provided, each group of nodes is colored differently.
+
+        Examples:
+            >>> import networkx as nx
+            >>> sub_graph = nx.erdos_renyi_graph(10, 0.3)
+            >>> show_subgraph(sub_graph)
+            >>> nodes_list_list = [['node1', 'node2'], ['node3', 'node4']]
+            >>> show_subgraph(sub_graph, nodes_list_list=nodes_list_list, verbose=True)
+        """
+        
+        # Vertically separate the labels for easier readability
+        import networkx as nx
+        layout_items = nx.spring_layout(sub_graph).items()
+        left_lim, right_lim = -1500, 1500
+        bottom_lim = left_lim * self.twitter_aspect_ratio
+        top_lim = right_lim * self.twitter_aspect_ratio
+        rows_list = [{
+            'node_name': node_name, 'layout_x': pos_array[0], 'layout_y': pos_array[1]
+        } for node_name, pos_array in layout_items]
+        df = DataFrame(rows_list).sort_values('layout_x')
+        df['adjusted_x'] = [int(round(el)) for el in pd.cut(
+            np.array([left_lim, right_lim]), len(sub_graph.nodes)+1, retbins=True
+        )[1]][1:-1]
+        df = df.sort_values('layout_y')
+        df['adjusted_y'] = [int(round(el)) for el in pd.cut(
+            np.array([bottom_lim, top_lim]), len(sub_graph.nodes)+1, retbins=True
+        )[1]][1:-1]
+        
+        # Create the layout dictionary
+        layout_dict = {}
+        for row_index, row_series in df.iterrows():
+            node_name = row_series.node_name
+            layout_x = row_series.adjusted_x
+            layout_y = row_series.adjusted_y
+            layout_dict[node_name] = np.array([float(layout_x), float(layout_y)])
+        
+        # Draw the graph using the layout
+        fig, ax = plt.subplots(figsize=(18, 7), facecolor='white')
+        
+        # Make the nodes the node_color
+        if nodes_list_list is None:
+            node_collection = nx.draw_networkx_nodes(
+                G=sub_graph, pos=layout_dict, alpha=0.33, node_color=node_color.reshape(1, -1), node_size=150, ax=ax
+            )
+            edge_collection = nx.draw_networkx_edges(G=sub_graph, pos=layout_dict, alpha=0.25, ax=ax)
+            labels_collection = nx.draw_networkx_labels(G=sub_graph, pos=layout_dict, font_size=10, ax=ax)
+        
+        # Color each nodes list differently
+        else:
+            if verbose: display(nodes_list_list)
+            color_cycler = self.get_color_cycler(len(nodes_list_list))
+            for nodes_list, fcd in zip(nodes_list_list, color_cycler()):
+                if verbose: display(fcd['color'])
+                node_color = fcd['color'].reshape(1, -1)
+                sub_subgraph = nx.subgraph(sub_graph, nodes_list)
+                node_collection = nx.draw_networkx_nodes(G=sub_subgraph, pos=layout_dict, alpha=0.5, node_color=node_color, node_size=300, ax=ax)
+                edge_collection = nx.draw_networkx_edges(G=sub_subgraph, pos=layout_dict, alpha=0.25, ax=ax)
+                labels_collection = nx.draw_networkx_labels(G=sub_subgraph, pos=layout_dict, font_size=9, ax=ax)
+        
+        plt.axis('off')
+        plt.xticks([], [])
+        plt.yticks([], [])
+        fig.suptitle(suptitle, fontsize=24)
+        plt.show()
+        
+        return layout_dict, fig, ax
+
+# print('\\b(' + '|'.join(dir()) + ')\\b')

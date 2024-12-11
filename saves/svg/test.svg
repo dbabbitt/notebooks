@@ -1,11 +1,12 @@
-<svg width="400" height="400">
-  <circle cx="100" cy="150" r="80" fill="none" stroke="black" stroke-width="2" />
-  <circle cx="250" cy="150" r="80" fill="none" stroke="black" stroke-width="2" />
-  <text x="65" y="120" font-size="16" font-weight="bold">Machine Learning</text>
-  <text x="225" y="120" font-size="16" font-weight="bold">Deep Learning</text>
-  <text x="175" y="185" font-size="16" font-weight="bold">Transformers</text>
-  <text x="70" y="215" font-size="16" font-weight="bold">Artificial Neural Networks</text>
-  <text x="235" y="215" font-size="16" font-weight="bold">GPT Architecture</text>
-  <text x="150" y="300" font-size="16" font-weight="bold">Large Language Models</text>
-  <text x="185" y="335" font-size="16" font-weight="bold">ChatGPT</text>
+<?xml version="1.0" encoding="utf-8"?>
+<svg height="400" width="400">
+<circle cx="100" cy="150" fill="none" r="80" stroke="black" stroke-width="2"/>
+<circle cx="250" cy="150" fill="none" r="80" stroke="black" stroke-width="2"/>
+<text font-size="16" font-weight="bold" x="65" y="120">Machine Learning</text>
+<text font-size="16" font-weight="bold" x="225" y="120">Deep Learning</text>
+<text font-size="16" font-weight="bold" x="175" y="185">Transformers</text>
+<text font-size="16" font-weight="bold" x="70" y="215">Artificial Neural Networks</text>
+<text font-size="16" font-weight="bold" x="235" y="215">GPT Architecture</text>
+<text font-size="16" font-weight="bold" x="150" y="300">Large Language Models</text>
+<text font-size="16" font-weight="bold" x="185" y="335">ChatGPT</text>
 </svg>
