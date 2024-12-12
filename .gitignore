@@ -237,3 +237,4 @@ dmypy.json
 # Exclude Pyre type checker
 .pyre/
 ps1/JupyterLab.ps1
+share
