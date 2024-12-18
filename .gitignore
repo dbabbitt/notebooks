@@ -1,12 +1,12 @@
 
 # C:\Users\daveb\OneDrive\Documents\GitHub\notebooks\.gitignore
 
-# exclude everything except text-based OC directories
+# Exclude everything except text-based OC or personal directories
 /*
 !/algorithms
+!/builders
 !/cell_techniques
 !/coin-analytics
-!/coin-analyticsipynb
 !/curve_fitting
 !/ipynb
 !/json
@@ -18,8 +18,10 @@
 !/ps1
 !/py
 !/r_programming_language
+!/sh
 !/saves
 !/statistics
+!/tests
 !/text_manipulation
 !/visualizations
 
