@@ -1,6 +1,0 @@
-
-import sys
-
-command_str = f'{sys.executable} -m pip install --upgrade xxxxxxx'
-print(command_str)
-!{command_str}
