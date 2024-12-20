@@ -49,7 +49,8 @@ saves/gz/gsoy-latest.tar.gz
 saves/tar/gsoy-latest.tar
 scikit_learn_data/
 
-# Exclude Notepad++ backup files
+# Exclude various backup files
+**/*_verbose.*
 *.bak
 
 # Exclude executables and other binaries
@@ -239,4 +240,3 @@ dmypy.json
 # Exclude Pyre type checker
 .pyre/
 ps1/JupyterLab.ps1
-share
