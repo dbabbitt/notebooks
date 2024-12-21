@@ -27,9 +27,10 @@
 
 # Ignore whole folders
 **/.git/
-saves/emails
-saves/gif
-saves/mp4
+/saves/emails
+/saves/gif
+/saves/mp4
+/saves/xcf
 
 # Ignore big files (GitHub will warn you when pushing files larger than 50 MB. You will not be allowed to
 # push files larger than 100 MB.) Tip: If you regularly push large files to GitHub, consider introducing
@@ -52,6 +53,8 @@ scikit_learn_data/
 # Exclude various backup files
 **/*_verbose.*
 *.bak
+ipynb/Attic.ipynb
+ipynb/Installs.ipynb
 
 # Exclude executables and other binaries
 *.exe
@@ -98,6 +101,7 @@ json/quickstart.py
 
 # Exclude PowerShell scripts that I didn't make
 ps1/autocrlf.ps1
+ps1/JupyterLab.ps1
 
 # Exclude other stuff I copied from someone else
 saves/csv/unresponses_df.csv
@@ -239,4 +243,3 @@ dmypy.json
 
 # Exclude Pyre type checker
 .pyre/
-ps1/JupyterLab.ps1
