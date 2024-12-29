@@ -48,13 +48,73 @@ for repo in "${REPOS[@]}"; do
     if [ -d "$repo/.git" ]; then
         # echo "Updating repository: $repo"
         cd "$repo" || continue
-        
+
         # Check if the submodule exists
         if [ -d "share" ]; then
             repo_name=$(basename "$repo")
-            echo "Updating submodule in repository: $repo_name..."
+
+            # Calculate the middle message
+            middle_message="Updating submodule in $repo_name repository"
+
+            # Check if the length of the middle message exceeds 60 characters
+            if [ ${#middle_message} -gt 60 ]; then
+
+                # Truncate the message to 60 characters and prepend with "..."
+                middle_message="...${middle_message: -57}"
+
+            fi
+
+            # Calculate the length of the (possibly truncated) middle message
+            line_length=${#middle_message}
+
+            # Generate a line of '=' characters with the same length as the middle message
+            separator=$(printf '=%.0s' $(seq 1 $line_length))
+
+            # Print the dynamically generated lines and the message
+            echo "$separator"
+            echo "$middle_message"
+            echo "$separator"
+
             git submodule update --remote --merge
         fi
-        
+
     fi
 done
+
+# Define source and destination paths in Unix-style
+SOURCE="$HOME/OneDrive/Documents/GitHub/notebooks/share"
+DESTINATION="$HOME/OneDrive/Documents/GitHub/color/share"
+
+# Check if the source folder exists
+if [ -d "$SOURCE" ]; then
+
+    # Convert Unix-style paths to Windows-style paths
+    WIN_SOURCE=$(cygpath -w "$SOURCE")
+    WIN_DESTINATION=$(cygpath -w "$DESTINATION")
+
+    # Extract parent and child directories for readability
+    PARENT_SOURCE=$(basename "$(dirname "$SOURCE")")/$(basename "$SOURCE")
+    PARENT_DESTINATION=$(basename "$(dirname "$DESTINATION")")/$(basename "$DESTINATION")
+
+    # Calculate the middle message
+    middle_message="Copying $PARENT_SOURCE to $PARENT_DESTINATION"
+
+    # Calculate the length of the middle message
+    line_length=${#middle_message}
+
+    # Generate a line of '=' characters with the same length as the middle message
+    separator=$(printf '=%.0s' $(seq 1 $line_length))
+
+    # Print the dynamically generated lines and the message
+    echo "$separator"
+    echo "$middle_message"
+    echo "$separator"
+
+    # Copy the folder, overriding any existing content in the destination
+    # robocopy "$WIN_SOURCE" "$WIN_DESTINATION" /NFL /NDL /NS /NC /NJH /NJS  # ERROR : Invalid Parameter #3 : "C:/Program Files/Git/NFL"
+    robocopy $WIN_SOURCE $WIN_DESTINATION
+    echo "Copy completed successfully."
+
+else
+    echo "Source folder $SOURCE does not exist. Skipping copy."
+fi
