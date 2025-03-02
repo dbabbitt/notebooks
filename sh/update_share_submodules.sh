@@ -41,6 +41,9 @@ REPOS=(
     "$HOME/OneDrive/Documents/GitHub/Wordle"
 )
 
+# Define the maximum message length as a variable
+MAX_MESSAGE_LENGTH=79
+
 # Loop through each repositories directory
 # echo "Loop through each repositories directory"
 for repo in "${REPOS[@]}"; do
@@ -56,11 +59,11 @@ for repo in "${REPOS[@]}"; do
             # Calculate the middle message
             middle_message="Updating submodule in $repo_name repository"
 
-            # Check if the length of the middle message exceeds 60 characters
-            if [ ${#middle_message} -gt 60 ]; then
+            # Check if the length of the middle message exceeds the maximum length
+            if [ ${#middle_message} -gt $MAX_MESSAGE_LENGTH ]; then
 
-                # Truncate the message to 60 characters and prepend with "..."
-                middle_message="...${middle_message: -57}"
+                # Truncate the message to the maximum length and prepend with "..."
+                middle_message="...${middle_message: -$((MAX_MESSAGE_LENGTH - 3))}"
 
             fi
 
