@@ -12,7 +12,6 @@ REPOS=(
     "$HOME/OneDrive/Documents/GitHub/data-science-5k"
     "$HOME/OneDrive/Documents/GitHub/dave-babbitt-technical-assessment"
     "$HOME/OneDrive/Documents/GitHub/glowing-octo-carnival"
-    "$HOME/OneDrive/Documents/GitHub/itm-analysis-reporting-1"
     "$HOME/OneDrive/Documents/GitHub/job-hunting"
     "$HOME/OneDrive/Documents/GitHub/joy-plots"
     "$HOME/OneDrive/Documents/GitHub/march-madness"
